@@ -12,11 +12,16 @@
 
 ## 02 — Sistemas
 - `02-sistemas/README.md` — Quadro de status, estrutura de pastas e mapa de dependências dos sistemas.
+- `02-sistemas/gameplay-core/README.md` — AetheriusGameplayCore: lógica autoritativa de gameplay, módulos, parâmetros e pendências.
+- `02-sistemas/gameplay-core/diario.md` — Diário do GameplayCore (sincronizações SYNC-1102 e SYNC-1114).
+- `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
+- `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 
 ## 03 — Decisões
 - `03-decisoes/README.md` — Registro de ADRs e seus status.
 - `03-decisoes/ADR-0000-adocao-do-acervo.md` — Adoção deste repositório e de suas regras.
 - `03-decisoes/ADR-0001-integracao-continua-por-ia.md` — IAs documentam o desenvolvimento continuamente via commit na main.
+- `03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md` — O que volta do servidor/cliente para os repos dos Cores e o que fica de fora.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.
@@ -24,6 +29,7 @@
 ## 05 — Processos
 - `05-processos/README.md` — Fluxos de trabalho do time.
 - `05-processos/integracao-ia.md` — Como a IA se integra ao acervo; bloco padrão para o AGENTS.md dos projetos.
+- `05-processos/sincronizacao-dos-cores.md` — Passo a passo para sincronizar GameplayCore e UI Core com as cópias oficiais.
 
 ## 06 — Referências
 - `06-referencias/README.md` — Resumos de material externo.
