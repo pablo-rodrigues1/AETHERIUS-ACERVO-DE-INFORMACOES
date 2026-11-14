@@ -1,0 +1,47 @@
+---
+titulo: Como funciona o lobisomem
+tipo: guia-staff
+status: rascunho
+responsaveis: [kdu]
+atualizado: 2026-11-14
+tags: [staff, sobrenatural, lobisomem]
+fonte_tecnica: [../../02-sistemas/lobisomem/README.md]
+relacionados: [../progresso.md]
+---
+
+# Como funciona o lobisomem
+
+> Em teste: ainda não está no servidor oficial.
+
+## Em uma frase
+O jogador lobisomem pode virar uma fera grande, e todo mundo em volta vê a transformação acontecer.
+
+## Como funciona
+1. O jogador ativa a transformação.
+2. Ele faz uma animação de cerca de 10 segundos, com sangue na tela e a câmera tremendo, e termina com um rugido.
+3. Ele vira a fera, uns 50% maior que uma pessoa.
+4. Enquanto é fera, quem está perto vê o nome "Lobisomem" em vez do nome do personagem.
+5. Quando ele volta ao normal, recupera a aparência de antes.
+
+## Exemplo prático
+> Um jogador vira lobisomem no meio da cidade. Quem está perto vê a transformação inteira e depois a fera com o nome "Lobisomem". Um guarda com espada de prata ataca: cada golpe dói 50% a mais na fera.
+
+## Tabela rápida
+| Item | Valor | Observação |
+|---|---|---|
+| Duração da transformação | ~10 segundos | o jogador fica parado durante a animação |
+| Tamanho da fera | ~50% maior | |
+| Dano de prata na fera | +50% | armas e flechas de prata |
+| Nome mostrado | "Lobisomem" | só para quem está perto |
+
+## Perguntas comuns de jogadores
+- **Os outros jogadores me veem transformado?** Sim, a transformação é igual para todos.
+- **Se o servidor reiniciar, continuo fera?** Sim, a forma é restaurada.
+- **A prata me mata mais rápido?** Causa 50% a mais de dano, mas o extra sozinho nunca dá o golpe final.
+
+## O que a Staff pode e não pode fazer
+- **Pode:** pedir aos devs para mudar o dano de prata ou o tempo da transformação (são opções do servidor).
+- **Não pode:** mudar essas opções sozinha; ainda não há comando de Staff para o lobisomem.
+
+## Quer o detalhe técnico?
+Veja [Lobisomem sincronizado](../../02-sistemas/lobisomem/README.md).
