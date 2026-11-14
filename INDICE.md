@@ -19,6 +19,8 @@
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/lobisomem/README.md` — Lobisomem sincronizado: forma controlada pelo servidor, animação própria, dano de prata.
 - `02-sistemas/lobisomem/diario.md` — Diário do Lobisomem sincronizado.
+- `02-sistemas/olhar-sincronizado/README.md` — Olhar sincronizado: o boneco de cada jogador olha para quem ele mira (head tracking no multiplayer).
+- `02-sistemas/olhar-sincronizado/diario.md` — Diário do Olhar sincronizado.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
@@ -71,6 +73,7 @@
 - `07-guia-da-staff/progressao/nivel-xp-e-atributos.md` — XP, XP em grupo, fadiga diária e pontos de atributo.
 - `07-guia-da-staff/dungeons/inimigos-e-masmorras.md` — Respawn no mundo aberto e gerações/reset das masmorras.
 - `07-guia-da-staff/itens/manutencao-de-equipamentos.md` — Kits de manutenção, cargas, penalidade e /manutencao.
+- `07-guia-da-staff/perguntas-frequentes/olhar-dos-jogadores.md` — Para onde os jogadores olham (em teste): a cabeça vira para quem o jogador mira.
 - `07-guia-da-staff/sobrenatural/lobisomem.md` — Como funciona o lobisomem (em teste): transformação, tamanho, prata.
 - `07-guia-da-staff/classes/ficha-conjuradores.md` — Skills, perks e feitiços por marco das 6 classes conjuradoras (do código).
 - `07-guia-da-staff/classes/ficha-guerreiros.md` — Skills, perks e feitiços por marco das 6 classes guerreiras (do código).

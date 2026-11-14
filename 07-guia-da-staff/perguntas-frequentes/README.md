@@ -2,4 +2,8 @@
 
 Dúvidas comuns de jogadores e as respostas oficiais.
 
-*Ainda sem guias. Use o modelo [`_modelos/GUIA-STAFF.md`](../../_modelos/GUIA-STAFF.md).*
+## Guias
+
+- [Para onde os jogadores olham](olhar-dos-jogadores.md): por que o personagem vira a cabeça para quem o jogador mira (em teste).
+
+Novos guias: use o modelo [`_modelos/GUIA-STAFF.md`](../../_modelos/GUIA-STAFF.md).
