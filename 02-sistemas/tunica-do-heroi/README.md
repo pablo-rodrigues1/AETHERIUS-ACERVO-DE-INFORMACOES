@@ -44,4 +44,3 @@ As 16 peças do mod Hero's Tunic (conjuntos do Herói, Goron, Zora e Sombrio) co
 ## Pendências conhecidas
 - Testar o cabelo com o gorro em jogo: cabelo volumoso pode atravessar o gorro.
 - Mercurius decidir patente e materiais e colar as receitas no catálogo.
-- Conferir a permissão dos arquivos do mod original para o modpack.

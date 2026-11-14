@@ -49,8 +49,7 @@ Item novo "Ocarina", tirado do mod Playable Ocarina SE, só com a parte musical:
 | Depende de | Por quê |
 |---|---|
 | Pandora (pelo MO2) | registra a animação nova |
-| Arquivos do Playable Ocarina SE | modelo, animação e sons (conferir a permissão antes de distribuir) |
+| Arquivos do Playable Ocarina SE | modelo, animação e sons (uso liberado pelo kdu) |
 
 ## Pendências conhecidas
 - Teste em jogo: animação, alcance do som e teclas.
-- Conferir a permissão dos arquivos do mod original para o modpack.
