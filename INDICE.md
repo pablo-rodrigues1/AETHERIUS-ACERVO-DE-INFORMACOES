@@ -14,6 +14,7 @@
 - `02-sistemas/README.md` — Quadro de status, estrutura de pastas e mapa de dependências dos sistemas.
 - `02-sistemas/gameplay-core/README.md` — AetheriusGameplayCore: lógica autoritativa de gameplay, módulos, parâmetros e pendências.
 - `02-sistemas/gameplay-core/diario.md` — Diário do GameplayCore (sincronizações SYNC-1102 e SYNC-1114).
+- `02-sistemas/gameplay-core/correcoes-de-dano.md` — Correções de dano no servidor: chaves por fase, armadura, resistências, pendências.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/lobisomem/README.md` — Lobisomem sincronizado: forma controlada pelo servidor, animação própria, dano de prata.

@@ -17,7 +17,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 
 | Sistema | Fase | Responsável | Repositório | Última atualização |
 |---|---|---|---|---|
-| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-14 |
+| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17, kdu | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-14 |
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
 | [Lobisomem sincronizado](lobisomem/README.md) | em-teste | kdu | pacote separado (patches sobre aetherius-server v0.38) | 2026-11-14 |
 | [Sincronização de NPCs](sincronizacao-de-npcs/README.md) | em-desenvolvimento | kdu | aetherius-client / aetherius-server | 2026-11-14 |

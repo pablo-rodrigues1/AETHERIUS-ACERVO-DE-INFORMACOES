@@ -16,7 +16,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 2 · 🟡 9 · 📝 1 · ⚪ 2 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 3 · 🟡 9 · 📝 1 · ⚪ 2 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -55,6 +55,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 |---|---|---|---|
 | Lobisomem sincronizado | 🟡 | Pronto no kit de teste; falta ver a versão final em jogo e testar com 2 jogadores | 14/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
+| Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), governança/Jarl, bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
@@ -62,6 +63,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Correções de dano do servidor documentadas (kdu entra no GameplayCore pela frente de dano).
 - **14/11/2026:** Lobisomem sincronizado e investigação dos NPCs travando entram no acervo; guia da Staff do lobisomem publicado.
 - **14/11/2026:** Classes: skills definidas pelo servidor, limite de invocações, ajuste de nível pelo painel da Staff e Anti-Mago com Maestria em Conjuração. Guias da Staff de classes, progressão, masmorras e manutenção publicados.
 - **14/11/2026:** Painel revisado a partir do código do servidor.

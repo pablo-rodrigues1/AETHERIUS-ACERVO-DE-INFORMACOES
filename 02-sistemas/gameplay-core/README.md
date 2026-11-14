@@ -3,12 +3,12 @@ titulo: AetheriusGameplayCore
 tipo: sistema
 status: ativo
 fase: em-desenvolvimento
-responsaveis: [mercurius17]
+responsaveis: [mercurius17, kdu]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
 atualizado: 2026-11-14
 tags: [gameplay, classes, combate, leveling, persistencia, servidor]
-relacionados: [diario.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
+relacionados: [diario.md, correcoes-de-dano.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
 
 # AetheriusGameplayCore
@@ -61,6 +61,9 @@ flowchart LR
 
 ## Decisões relacionadas
 - [ADR-0002](../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md): como as mudanças do servidor voltam para este repositório.
+
+## Frente de dano no servidor
+Correções da cadeia de dano no addon nativo do `aetherius-server`, ligadas por chave: ver [Correções de dano no servidor](correcoes-de-dano.md) (kdu).
 
 ## Diário
 Ver [`diario.md`](diario.md).

@@ -2,7 +2,7 @@
 titulo: Diário do AetheriusGameplayCore
 tipo: historico
 status: ativo
-responsaveis: [mercurius17]
+responsaveis: [mercurius17, kdu]
 atualizado: 2026-11-14
 tags: [diario, gameplay]
 relacionados: [README.md]
@@ -12,6 +12,11 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+
+## 2026-11-14, frente de dano (kdu / Claude Opus 5.5)
+- **Feito:** kdu entra como responsável no GameplayCore pela frente de dano (confirmado pelo mercurius17 em 14/11). Documentadas as correções de dano do servidor em [correcoes-de-dano.md](correcoes-de-dano.md): fases de ativação, chaves, tabela de armadura e resistências, pendências. Pacote entregue ao mercurius17 em 13/11 sobre a v0.38.
+- **Próximo:** confirmar as chaves ligadas no oficial; guia da Staff de dano quando a fase 1b for ligada.
+- **Bloqueios:** nenhum
 
 ## 2026-11-14, guia da Staff (mercurius17 / Claude Opus 5.5)
 - **Feito:** guias leigos em `07-guia-da-staff/`: classes, progressão (XP, grupo, fadiga, atributos), inimigos e masmorras, manutenção de equipamentos; glossário e painel de progresso atualizados. Fonte: configs do GameplayCore (`leveling-system/config`, `class-system/config/classes-config.json`, `durability-system/config`) e as portas do host no `aetherius-server` (painel F7, `enemy-spawns-service.js`, `durability-service.js`, `aetheriusCoreClassUi.ts`).
