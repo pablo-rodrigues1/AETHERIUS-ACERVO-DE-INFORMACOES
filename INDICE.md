@@ -21,6 +21,24 @@
 - `02-sistemas/lobisomem/diario.md` — Diário do Lobisomem sincronizado.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
+- `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
+- `02-sistemas/loja/diario.md` — Histórico documental de Loja e apoiadores, com a base de integração e o próximo passo.
+- `02-sistemas/residencias/README.md` — Compra, acesso, revenda e imposto das propriedades residenciais.
+- `02-sistemas/residencias/diario.md` — Histórico documental de Residências e IPTU, com a base de integração e o próximo passo.
+- `02-sistemas/painel-adm/README.md` — Operações de staff pelo F7, auditoria, inventário, PD e registro de compras.
+- `02-sistemas/painel-adm/diario.md` — Histórico documental de Painel administrativo, com a base de integração e o próximo passo.
+- `02-sistemas/governos/README.md` — Governos municipais, nomeação de Reis, portas dos castelos e tesouro.
+- `02-sistemas/governos/diario.md` — Histórico documental de Governos, Jarl e castelos, com a base de integração e o próximo passo.
+- `02-sistemas/expansao-dos-paineis/README.md` — Cinco projetos para bancos, comércios, quartos, portões e ritual de coleta.
+- `02-sistemas/expansao-dos-paineis/diario.md` — Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
+- `02-sistemas/expansao-dos-paineis/bancos-e-adm.md` — Empréstimos com juros para o Rei autorizado, com cobrança na conta institucional.
+- `02-sistemas/expansao-dos-paineis/alocar-comercio.md` — Cadastro de estabelecimentos, portas e responsável comercial.
+- `02-sistemas/expansao-dos-paineis/portoes-da-cidade.md` — Controle de portões municipais por jurisdição de Rei e Lorde.
+- `02-sistemas/expansao-dos-paineis/comercios-e-quartos.md` — Aluguel de quartos com direitos de entrada e uso do baú durante o contrato.
+- `02-sistemas/expansao-dos-paineis/ritual-de-coleta.md` — Ritual territorial de coleta iniciado pelo Rei com mago, alquimista e Companion.
+
+- `02-sistemas/governos/levantamento-dos-castelos.md` — Nove interiores e os 28 pares de portas por cidade.
+- `02-sistemas/painel-adm/continuidade-da-sessao.md` — Proposta de continuidade do F7 e contrato de renovação pendente.
 
 ## 03 — Decisões
 - `03-decisoes/README.md` — Registro de ADRs e seus status.
@@ -40,6 +58,10 @@
 ## 06 — Referências
 - `06-referencias/README.md` — Resumos de material externo.
 - `06-referencias/planilha-classes-efeitos-encantamentos.md` — Planilha de design de classes, leveling, raças, poções, encantamentos e maldições, conferida contra o código.
+- `06-referencias/documentacao-das-entregas.md` — Catálogo por revisão dos 123 documentos de origem em cinco repositórios.
+- `06-referencias/modulos-sociais.md` — A referência de integração do painel Jarl inclui murais, grupos, negociação, apresentação e acampamentos.
+- `06-referencias/estudos-de-integracao.md` — Histórico dos estudos de combate, login, interface e clima e de seus limites de validação.
+- `06-referencias/inventario-aetherius.md` — Mapa das entregas preparadas para integração ao servidor oficial e dos estudos e planejamentos que as acompanham.
 
 ## 07 — Guia da Staff
 - `07-guia-da-staff/README.md` — Explicações simples de mecânicas do jogo para toda a Staff.
@@ -57,3 +79,6 @@
 - `07-guia-da-staff/racas-e-pedras/racas-e-pedras-guardias.md` — Habilidade de cada raça e de cada pedra guardiã.
 - `07-guia-da-staff/itens/pocoes-e-encantamentos.md` — Design: poções e encantamentos do Alquimista e Encantador Mestre (não implementado).
 - `07-guia-da-staff/sobrenatural/maldicoes.md` — Design: vampirismo, licantropia e bruxaria em 6 estágios (não implementado).
+- `07-guia-da-staff/economia/loja-e-diademas.md` — O jogador usa Diademas na Loja do TAB e o Apoiador Beta pertence à conta.
+- `07-guia-da-staff/economia/casas-e-iptu.md` — O dono paga o imposto da casa em Septims a cada 15 dias e gerencia o acesso pelo TAB.
+- `07-guia-da-staff/economia/governos-e-castelos.md` — O Rei nomeado pode controlar as portas do castelo no painel de Casas.

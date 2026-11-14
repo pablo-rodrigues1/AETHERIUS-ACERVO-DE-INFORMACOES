@@ -16,7 +16,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 3 · 🟡 9 · 📝 2 · ⚪ 2 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 3 · 🟡 10 · 📝 4 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -35,19 +35,19 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 
 | # | Sistema | Status | Próximo passo | Atualizado |
 |---|---|---|---|---|
-| 1 | Painel de Admin (F7, com comandos) | 🟢 | Pronto no código; ligar por configuração no oficial | 14/11/2026 |
+| 1 | [Painel de Admin (F7)](../02-sistemas/painel-adm/README.md) | 🟢 | Conferir a base do F7 e homologar o registro de compras | 14/11/2026 |
 | 2 | Classes, Leveling, Inimigos e Dungeons | 🟡 | 18 classes e 9 marcos prontos; falta XP por abate e teste no oficial | 14/11/2026 |
 | 3 | Profissões | 🟡 | 9 profissões e 180 receitas no código; bloqueado até a nova interface | 14/11/2026 |
 | 4 | Loot | ⚪ | Sem código identificado | 14/11/2026 |
 | 5 | Durabilidade de equipamentos | 🟡 | Funciona via `/manutencao`; falta aba na interface e teste em jogo | 14/11/2026 |
 | 6 | Trade | 📝 | Estacionado: só o convite existe; falta a troca de itens/ouro | 14/11/2026 |
-| 7 | Apoiadores | 🟡 | Loja e benefícios no código; falta ativar e testar | 14/11/2026 |
+| 7 | [Apoiadores](economia/loja-e-diademas.md) | 🟡 | Loja e benefícios no código; falta ativar e testar | 14/11/2026 |
 | 8 | Sobrevivência | ✅ | — | 14/11/2026 |
 | 9 | Morte e Respawn | 🟢 | Pronto e testado no código; confirmar no oficial | 14/11/2026 |
-| 10 | Aluguel de casas | 🟡 | Residências e impostos por cidade no código; falta ativar e testar | 14/11/2026 |
-| 11 | Aluguel de quartos | ⚪ | Sem código separado identificado | 14/11/2026 |
+| 10 | [Residências e IPTU](../02-sistemas/residencias/README.md) | 🟡 | Homologar acesso, venda e recolhimento do IPTU | 14/11/2026 |
+| 11 | [Aluguel de quartos](../02-sistemas/expansao-dos-paineis/comercios-e-quartos.md) | 📝 | Definir o contrato de aluguel e a recuperação dos bens | 14/11/2026 |
 | 12 | Painel de informações | 🟡 | Painel do jogador no código; falta homologar | 14/11/2026 |
-| 13 | Loja de Diademas | 🟡 | Carteira de Diademas e loja no código; falta ativar e testar | 14/11/2026 |
+| 13 | [Loja de Diademas](../02-sistemas/loja/README.md) | 🟡 | Conferir a carteira e o vínculo do personagem na Loja 0.7.0 | 14/11/2026 |
 
 ## Em desenvolvimento fora da lista oficial
 
@@ -57,13 +57,16 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 | Maldições (vampirismo, licantropia, bruxaria) | 📝 | Progressão em 6 estágios desenhada na planilha; sem código (a transformação do lobisomem está em teste à parte) | 14/11/2026 |
+| [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
+| [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Definir regras de crédito, comércio e ritual | 14/11/2026 |
 
 ## Outros sistemas encontrados no código
-Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), governança/Jarl, bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
+Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Documentados Loja, IPTU, registro de compras, castelos e cinco projetos futuros. [Consultar entregas](../06-referencias/inventario-aetherius.md).
 - **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.
 - **14/11/2026:** Correções de dano do servidor documentadas (kdu entra no GameplayCore pela frente de dano).
 - **14/11/2026:** Lobisomem sincronizado e investigação dos NPCs travando entram no acervo; guia da Staff do lobisomem publicado.
@@ -73,4 +76,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **25/10/2026:** Classes: pacotes de integração do servidor e do cliente preparados; build e teste em jogo pendentes.
 - **12/10/2026:** Classes: entrega de perks validada em jogo no servidor local (162/162 marcos).
 - **01/10/2026:** Classes, Dano, Inimigos, Leveling e Durabilidade unificados no GameplayCore.
-- **11/09/2026:** Classes: efeitos de raças, pedras guardiãs e distribuição de classes prontos no código.
