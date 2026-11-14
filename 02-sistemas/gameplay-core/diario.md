@@ -18,6 +18,11 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Próximo:** confirmar as chaves ligadas no oficial; guia da Staff de dano quando a fase 1b for ligada.
 - **Bloqueios:** nenhum
 
+## 2026-11-14, planilha de design (mercurius17 / Claude Opus 5.5)
+- **Feito:** planilha "AETHERIUS - Classes, efeitos, encantamentos" conferida aba por aba contra o código ([referência](../../06-referencias/planilha-classes-efeitos-encantamentos.md)); vale o código ([ADR-0003](../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md)). Skills e feitiços por classe idênticos; perks diferem em Arqueiro (sem Steady Aim) e Anti-Mago. Leveling: a tabela "Delta" e o grupo nos chefes da planilha não valem. Fichas por classe geradas de `classes-config.json`, `perks-descriptions.json` e `spells-descriptions.json`. Raças/pedras, poções, encantamentos e maldições levados ao guia da Staff; os três últimos como design.
+- **Próximo:** decidir o total de XP das maldições (a planilha se contradiz: 46.500 ou 2 milhões).
+- **Bloqueios:** nenhum
+
 ## 2026-11-14, guia da Staff (mercurius17 / Claude Opus 5.5)
 - **Feito:** guias leigos em `07-guia-da-staff/`: classes, progressão (XP, grupo, fadiga, atributos), inimigos e masmorras, manutenção de equipamentos; glossário e painel de progresso atualizados. Fonte: configs do GameplayCore (`leveling-system/config`, `class-system/config/classes-config.json`, `durability-system/config`) e as portas do host no `aetherius-server` (painel F7, `enemy-spawns-service.js`, `durability-service.js`, `aetheriusCoreClassUi.ts`).
 - **Próximo:** atualizar os guias quando o XP por abate for ligado no oficial e quando a aba Manutenção entrar na interface.

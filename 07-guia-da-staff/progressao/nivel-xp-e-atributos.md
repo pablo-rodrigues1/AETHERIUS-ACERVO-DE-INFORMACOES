@@ -67,6 +67,8 @@ Raid (8 a 20 pessoas): de 60% com 8 até 40% com 20, caindo cerca de 1,7 ponto p
 ## Perguntas comuns de jogadores
 - **Preciso bater no inimigo para ganhar XP no grupo?** Não. Basta estar no grupo, online, na mesma área e perto.
 - **Parei de ganhar XP. Bugou?** Se o personagem é nível 15 ou mais, provavelmente bateu o limite diário. Volta às 06:00.
+- **Matar inimigo muito mais fraco dá zero XP?** Não. O corte máximo é 90%: sempre sobra pelo menos 10%. Também não existe bônus por enfrentar inimigo mais forte que o personagem (a planilha antiga previa; o servidor não faz).
+- **Chefe dá menos XP em grupo?** Não. Dragon Priest (500) e dragão (1.000) dão o valor cheio para cada jogador elegível.
 - **Por que ganho tão pouco XP aqui?** O lugar está abaixo do nível do personagem; o XP é cortado para incentivar conteúdo do nível dele.
 - **Errei a distribuição de pontos. Dá para refazer?** Os pontos só voltam numa troca de classe ou quando a Staff reduz o nível abaixo do que foi gasto.
 

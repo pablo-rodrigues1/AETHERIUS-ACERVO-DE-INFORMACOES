@@ -12,6 +12,7 @@ Situação atual de cada sistema, atualizada a cada mudança.
 | Tema | Do que trata |
 |---|---|
 | [`classes/`](classes/README.md) | Classes disponíveis, o que cada uma faz e como evoluir nelas. |
+| [`racas-e-pedras/`](racas-e-pedras/README.md) | Bônus de cada raça e de cada pedra guardiã. |
 | [`progressao/`](progressao/README.md) | Níveis, estágios de progressão e como o jogador avança. |
 | [`dungeons/`](dungeons/README.md) | Dungeons, dificuldade, recompensas e tempo de respawn. |
 | [`sobrenatural/`](sobrenatural/README.md) | Vampirismo, licantropia e outras condições sobrenaturais. |

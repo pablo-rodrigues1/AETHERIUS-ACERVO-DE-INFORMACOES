@@ -6,7 +6,7 @@ responsaveis: [mercurius17]
 atualizado: 2026-11-14
 tags: [staff, classes, perks, skills]
 fonte_tecnica: [../../02-sistemas/gameplay-core/README.md]
-relacionados: [../progressao/nivel-xp-e-atributos.md, ../progresso.md]
+relacionados: [../progressao/nivel-xp-e-atributos.md, ../progresso.md, ficha-conjuradores.md, ficha-guerreiros.md, ficha-especialistas.md, ../../06-referencias/planilha-classes-efeitos-encantamentos.md]
 ---
 
 # Como funcionam as classes
@@ -15,12 +15,12 @@ relacionados: [../progressao/nivel-xp-e-atributos.md, ../progresso.md]
 A classe é a "profissão de combate" do personagem: ela define quais habilidades (skills) ele domina e quais talentos (perks) ganha conforme sobe de nível.
 
 ## Como funciona
-1. O jogador escolhe **uma** das 18 classes. Elas são divididas em três grupos: Conjuradores, Guerreiros e Especialistas.
+1. O jogador escolhe **uma** das 18 classes, na aba CLASSE do menu (TAB). Elas são divididas em três grupos: Conjuradores, Guerreiros e Especialistas. Ele só escolhe sozinho **uma vez**, quando ainda não tem classe; depois disso, qualquer troca é feita pela Staff.
 2. Seis classes de magia (Elementalista, Criomante, Eletromante, Piromante, Invocador e Curandeiro) são **classes do Colégio de Winterhold**. O jogador **não consegue escolhê-las sozinho** na tela de classes: aparece "Esta classe exige autorização do Colégio de Winterhold. Fale com a staff." Só a Staff define essas classes, pelo painel.
 3. Cada classe tem **9 marcos**: níveis 1, 5, 10, 15, 20, 25, 30, 35 e 40. Ao chegar num marco, o servidor entrega os perks daquele marco e ajusta as skills da classe.
 4. As skills da classe são **definidas pelo servidor**: a skill fica no valor que o marco atual manda. Quem sobe de nível vê as skills subirem; quem desce de nível (por ação da Staff) vê elas voltarem ao valor do marco.
 5. **Feitiços não vêm de graça.** As classes de magia têm uma lista de feitiços autorizados, mas eles precisam ser aprendidos por roleplay no Colégio de Winterhold, com professores e livros.
-6. **Trocar de classe recomeça do zero:** nível volta a 1, XP zera e os pontos de atributo distribuídos são devolvidos. Os perks e skills da classe antiga saem. Escolher de novo a **mesma** classe não muda nada.
+6. **Trocar de classe recomeça do zero** (e só a Staff faz a troca, em qualquer nível): nível volta a 1, XP zera e os pontos de atributo distribuídos são devolvidos. Os perks e skills da classe antiga saem. Escolher de novo a **mesma** classe não muda nada.
 7. A fadiga do dia (limite diário de XP) **não** é zerada na troca de classe.
 
 ## Exemplo prático
@@ -46,6 +46,7 @@ A classe é a "profissão de combate" do personagem: ela define quais habilidade
 ## Perguntas comuns de jogadores
 - **Posso ter duas classes?** Não. Uma por personagem.
 - **Não consigo escolher Piromante (ou outra classe de magia). Por quê?** As seis classes do Colégio de Winterhold só são liberadas pela Staff, depois do roleplay no Colégio.
+- **Como troco de classe?** Falando com a Staff. A tela não deixa o jogador trocar sozinho depois da primeira escolha.
 - **Se eu trocar de classe, perco tudo?** Perde nível, XP, perks e pontos distribuídos da classe atual. A fadiga do dia continua contando.
 - **Por que não ganhei os feitiços da minha classe?** Feitiços se aprendem por roleplay no Colégio de Winterhold; a classe só diz quais são permitidos.
 - **Minha skill caiu sozinha. É bug?** A skill segue o marco da classe. Se o nível foi alterado pela Staff, ela volta ao valor daquele marco.
@@ -58,5 +59,11 @@ A classe é a "profissão de combate" do personagem: ela define quais habilidade
 - **Não pode:** dar feitiços de classe fora do roleplay, dar perks soltos pelo sistema de classes, nem dar pontos de atributo extras (os pontos sempre vêm do nível).
 - Antes de usar essas ações, combine com o jogador: elas não têm "desfazer" automático.
 
+## Fichas por classe
+O que cada classe recebe em cada marco (skills, perks com descrição e feitiços autorizados):
+- [Conjuradores](ficha-conjuradores.md)
+- [Guerreiros](ficha-guerreiros.md)
+- [Especialistas](ficha-especialistas.md)
+
 ## Quer o detalhe técnico?
-Veja [GameplayCore](../../02-sistemas/gameplay-core/README.md). A lista completa de perks por classe e marco está no repositório do GameplayCore, em `docs/classes/PERKS_POR_CLASSE.md`.
+Veja [GameplayCore](../../02-sistemas/gameplay-core/README.md). A planilha de design antiga e as diferenças dela para o código estão na [referência da planilha](../../06-referencias/planilha-classes-efeitos-encantamentos.md); onde divergem, vale o que está aqui.
