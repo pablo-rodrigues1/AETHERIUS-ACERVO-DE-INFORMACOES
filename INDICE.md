@@ -36,4 +36,5 @@
 
 ## 07 — Guia da Staff
 - `07-guia-da-staff/README.md` — Explicações simples de mecânicas do jogo para toda a Staff.
+- `07-guia-da-staff/progresso.md` — Painel com a situação atual de cada sistema.
 - `07-guia-da-staff/glossario.md` — Termos do jogo em linguagem leiga.

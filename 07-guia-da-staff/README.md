@@ -4,6 +4,9 @@ Explicações **simples e didáticas** de como o Aetherius funciona, para toda a
 
 > Não sabe um termo? Veja o [glossário](glossario.md). Precisa do detalhe técnico? Cada guia tem um link para a versão técnica em `02-sistemas/`.
 
+## 📊 [Progresso do desenvolvimento](progresso.md)
+Situação atual de cada sistema, atualizada a cada mudança.
+
 ## Temas
 
 | Tema | Do que trata |

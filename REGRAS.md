@@ -144,3 +144,13 @@ Pasta voltada a **toda a Staff**, incluindo pessoas leigas. Explica mecânicas d
 
 ### 11.3 Atualização pelas IAs
 Quando uma mudança em um sistema afetar algo que a Staff precisa saber (valores, tempos, itens, regras, novas classes/profissões), a IA **deve atualizar também o guia correspondente** no mesmo envio. Se o guia não existir, criá-lo.
+
+### 11.4 Painel de progresso (`07-guia-da-staff/progresso.md`)
+Página única e curta com a situação de todos os sistemas, para consulta rápida da Staff.
+- A IA atualiza a linha do sistema **a cada envio** (status, próximo passo, data) e recalcula a "Visão geral".
+- **Status permitidos:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado · ⚪ Pendente · ⛔ Travado. Para ⛔, dizer o motivo em poucas palavras no "Próximo passo".
+- "Próximo passo": no máximo uma frase curta, em linguagem simples.
+- "Em foco agora": até 3 itens com o que o time está priorizando.
+- "Últimas mudanças": no máximo 10 linhas, mais recentes primeiro; remover as mais antigas.
+- Sistema novo entra na tabela no primeiro envio, mesmo como 📝 ou ⚪.
+- Deve concordar com o quadro técnico de `02-sistemas/README.md`; se divergir, corrigir ambos.

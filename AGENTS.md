@@ -13,5 +13,6 @@ Este repositório é o **Acervo Aetherius**. Siga [`REGRAS.md`](REGRAS.md) integ
 
 ## Durante o desenvolvimento
 - Envie atualizações continuamente por commit direto na `main` (REGRAS 10.2).
+- A cada envio, atualize o painel `07-guia-da-staff/progresso.md` (REGRAS 11.4).
 - Se a mudança afeta o que a Staff precisa saber, atualize também o guia em `07-guia-da-staff/` em linguagem simples (REGRAS 11).
 - Apenas arquivos `.md`; use os modelos de [`_modelos/`](_modelos/); mantenha `INDICE.md` atualizado.

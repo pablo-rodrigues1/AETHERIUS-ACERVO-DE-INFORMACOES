@@ -22,3 +22,4 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - Processo de sincronização dos Cores ([ADR-0002](../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md)).
 - Verificação de sistema já existente com confirmação do dev (REGRAS 10.5.1).
 - Pasta `07-guia-da-staff/` com guias didáticos para toda a Staff (REGRAS 11).
+- Painel de progresso `07-guia-da-staff/progresso.md` (REGRAS 11.4).
