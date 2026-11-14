@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, guia da Staff (mercurius17 / Claude Opus 5.5)
+- **Feito:** guias leigos em `07-guia-da-staff/`: classes, progressão (XP, grupo, fadiga, atributos), inimigos e masmorras, manutenção de equipamentos; glossário e painel de progresso atualizados. Fonte: configs do GameplayCore (`leveling-system/config`, `class-system/config/classes-config.json`, `durability-system/config`) e as portas do host no `aetherius-server` (painel F7, `enemy-spawns-service.js`, `durability-service.js`, `aetheriusCoreClassUi.ts`).
+- **Próximo:** atualizar os guias quando o XP por abate for ligado no oficial e quando a aba Manutenção entrar na interface.
+- **Bloqueios:** nenhum
+
 ## 2026-11-14 (mercurius17 / Claude Opus 5.5)
 - **Feito:** sincronização SYNC-1114, commit `05f5a0f` na `main`, a partir da cópia `server/gameplay/core` do servidor oficial de 13/11 (entrega v0.37.0). Entrou:
   - skills de classe entregues ao cliente (`runtime/src/class-skills.ts`, `modules/class-progression-system/src/skills.ts`);

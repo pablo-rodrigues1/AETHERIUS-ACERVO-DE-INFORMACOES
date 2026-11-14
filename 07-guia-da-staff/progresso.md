@@ -55,6 +55,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Classes: skills definidas pelo servidor, limite de invocações, ajuste de nível pelo painel da Staff e Anti-Mago com Maestria em Conjuração. Guias da Staff de classes, progressão, masmorras e manutenção publicados.
 - **14/11/2026:** Painel revisado a partir do código do servidor.
 - **08/11/2026:** Profissões: execução no servidor implementada; ativação bloqueada até a nova interface.
 - **25/10/2026:** Classes: pacotes de integração do servidor e do cliente preparados; build e teste em jogo pendentes.

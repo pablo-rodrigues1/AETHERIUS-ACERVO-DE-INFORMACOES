@@ -38,3 +38,7 @@
 - `07-guia-da-staff/README.md` — Explicações simples de mecânicas do jogo para toda a Staff.
 - `07-guia-da-staff/progresso.md` — Painel com a situação atual de cada sistema.
 - `07-guia-da-staff/glossario.md` — Termos do jogo em linguagem leiga.
+- `07-guia-da-staff/classes/como-funcionam-as-classes.md` — As 18 classes, marcos, troca de classe, Winterhold e ações da Staff.
+- `07-guia-da-staff/progressao/nivel-xp-e-atributos.md` — XP, XP em grupo, fadiga diária e pontos de atributo.
+- `07-guia-da-staff/dungeons/inimigos-e-masmorras.md` — Respawn no mundo aberto e gerações/reset das masmorras.
+- `07-guia-da-staff/itens/manutencao-de-equipamentos.md` — Kits de manutenção, cargas, penalidade e /manutencao.

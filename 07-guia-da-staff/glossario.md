@@ -15,6 +15,17 @@ Palavras do jogo explicadas de forma simples. Ordem alfabética.
 
 | Termo | O que significa |
 |---|---|
+| Carga (de manutenção) | "Combustível" que mantém arma ou armadura de um material funcionando 100%. Vem dos kits e gasta lutando. |
+| Classe | A especialização de combate do personagem (ex.: Paladino). Define skills e perks. |
 | Dungeon | Área com inimigos e recompensas, que "renasce" depois de um tempo. |
+| Fadiga (de XP) | Limite de XP por dia a partir do nível 15. Recomeça às 06:00. |
+| Geração (de masmorra) | A "leva" de inimigos de uma masmorra, igual para todos até o reset. |
+| Kit de manutenção | Item que dá 50 cargas de manutenção de um material. |
+| Marco | Nível de classe que dá recompensa: 1, 5, 10, 15, 20, 25, 30, 35 e 40. |
+| Nível de combate | Força de um inimigo, de 1 a 100. Quanto maior, mais XP. |
+| Perk | Talento do Skyrim que melhora o personagem (ex.: mais dano com espada). |
+| Pontos de atributo | 15 por nível, para aumentar vida, magia ou vigor. |
+| Raid | Grupo grande, de 8 a 20 jogadores. |
 | Respawn | Quando inimigos ou itens reaparecem depois de derrotados ou coletados. |
+| Skill | Habilidade do Skyrim (ex.: Uma Mão, Destruição). Na classe, o valor é definido pelo servidor. |
 | RP (roleplay) | Interpretar o personagem como se fosse real, dentro da história do servidor. |
