@@ -14,10 +14,10 @@ relacionados: [diario.md, ../../07-guia-da-staff/sobrenatural/lobisomem.md]
 # Lobisomem sincronizado
 
 ## Resumo
-Transformação em lobisomem que todos os jogadores veem, com a forma controlada pelo servidor. A fera usa a raça do mod Manbeast, 50% maior, com animação de transformação própria (10,5 s, pés plantados), sangue e tremor na câmera. Armas de prata causam dano extra na fera.
+Transformação em lobisomem que todos os jogadores veem, com a forma controlada pelo servidor. A fera usa a raça do mod Manbeast, 50% maior, com animação de transformação própria (10,5 s, pés plantados), sangue, tremor na câmera, grito de dor masculino/feminino e coração acelerando; a tela fica vermelha no fim para esconder a pose final. Armas de prata causam dano extra na fera.
 
 ## Onde está o código
-- Entregue como pacote **separado** do pacotão de dano ("AETHERIUS - LOBISOMEM 14-11"): patches de servidor, cliente e perfis, mais o plugin `AETHERIUS - LOBISOMEM.esp` (ESL) e o mod de animação `AETHERIUS - LOBISOMEM TRANSFORMACAO`.
+- Entregue como pacote **separado** do pacotão de dano ("AETHERIUS - LOBISOMEM 14-11 (pacote)"): patches de servidor, cliente e perfis, mais o plugin `AETHERIUS - LOBISOMEM.esp` (ESL) e o mod de animação `AETHERIUS - LOBISOMEM TRANSFORMACAO` (com os sons). Também há o zip só do mod, pronto para o MO2 ("AETHERIUS - LOBISOMEM - MOD 14-11").
 - Servidor: `gamemode/werewolf-service.js` (dono da forma) e `gamemode/werewolf/client.js` (efeitos no cliente).
 - Cliente: `remoteServer.onUpdateAppearanceMessage` → troca de raça de criatura (`Actor.setRace`).
 - Registro persistente: `data/aetherius-werewolf.json`.
@@ -44,6 +44,11 @@ sequenceDiagram
 
 - O servidor é o dono da forma: a propriedade `aetheriusBeast` guarda a fase (`turning`/`beast`/`leaving`) e uma sequência; a raça original fica em `aetheriusBeastOriginal`.
 - Na forma de fera, a aparência leva o nome "Lobisomem"; a plaquinha do SkySocial mostra esse nome só para quem está perto (até 4096 unidades). Não há aviso geral.
+- Som e tela (só com a animação própria):
+  - grito de dor desde 0,3 s, com voz masculina ou feminina conforme o personagem (vozes de dor do próprio Skyrim), que vai ficando grave e vira rosnado, com carne rasgando e osso quebrando por baixo; termina ~1 s antes do uivo; toca no corpo, então quem está perto ouve;
+  - coração acelerando (14 batidas) só para quem transforma; em cada batida a tela pisca vermelho e a câmera dá um tranco, cada vez mais fortes;
+  - dos 9,5 s até a troca a tela fica toda vermelha; quando a fera surge, o vermelho some em 1 s;
+  - o plugin traz os efeitos de tela e os sons; se a tela vermelha ficar presa por algum erro, ela sai sozinha em 6 s.
 - Prata: acerto com arma de prata (keywords de material prata) ou munição de prata vestida aplica o multiplicador extra. O extra nunca mata sozinho (piso de 1% de vida) e não conta coronhada.
 
 ## Parâmetros e fórmulas
@@ -54,12 +59,16 @@ sequenceDiagram
 | `WEREWOLF_SILVER_MULT` | 1,5 | dano de prata na fera (+50%) |
 | Altura da fera | 1,69 (macho) / 1,50 (fêmea) | raça do Manbeast ~50% maior |
 | Alcance do nome "Lobisomem" | 4096 unidades | distância da plaquinha |
+| Tela vermelha | 9,5 s → 10,1 s (cobre), some em 1 s na fera | esconde a pose final |
+| Grito de dor | 0,3 s a ~9,5 s | masculino ou feminino pelo sexo do personagem |
+| Coração | 14 batidas de 0,3 s a ~9,1 s | pulso vermelho de 45% a 100% e tranco de 0,12 a 0,45 |
 
 ## Dependências
 | Depende de | Por quê |
 |---|---|
 | Mod Manbeast | raça da fera |
 | Pandora (comportamentos gerados pelo MO2) | registra a animação nova |
+| Sons do Moonlight Tales (carne/osso e coração) | usados com permissão do autor |
 | `aetherius-server` v0.38 | base dos patches |
 
 ## Decisões relacionadas
@@ -69,7 +78,7 @@ sequenceDiagram
 Ver [`diario.md`](diario.md).
 
 ## Pendências conhecidas
-- Versão mesclada (animação v4 + sangue na tela + gore) ainda não vista em jogo.
+- Grito, coração e carne/osso montados depois do último teste em jogo: falta ouvir.
 - Teste com 2 jogadores.
 - Interação com o script original do Manbeast.
 - Câmera pulando no momento da troca; estouros no corpo não conferidos (sala escura).

@@ -18,7 +18,7 @@ O jogador lobisomem pode virar uma fera grande, e todo mundo em volta vê a tran
 
 ## Como funciona
 1. O jogador ativa a transformação.
-2. Ele faz uma animação de cerca de 10 segundos, com sangue na tela e a câmera tremendo, e termina com um rugido.
+2. Ele faz uma animação de cerca de 10 segundos: grita de dor (voz de homem ou de mulher), o grito vira rosnado, o corpo sangra e a câmera treme. Quem se transforma ouve o coração disparando e vê a tela piscar vermelho; no fim a tela fica toda vermelha e ele termina com um uivo.
 3. Ele vira a fera, uns 50% maior que uma pessoa.
 4. Enquanto é fera, quem está perto vê o nome "Lobisomem" em vez do nome do personagem.
 5. Quando ele volta ao normal, recupera a aparência de antes.
@@ -33,6 +33,8 @@ O jogador lobisomem pode virar uma fera grande, e todo mundo em volta vê a tran
 | Tamanho da fera | ~50% maior | |
 | Dano de prata na fera | +50% | armas e flechas de prata |
 | Nome mostrado | "Lobisomem" | só para quem está perto |
+| Grito de dor | homem ou mulher | todo mundo perto ouve |
+| Coração e tela vermelha | só de quem se transforma | os outros não veem |
 
 ## Perguntas comuns de jogadores
 - **Os outros jogadores me veem transformado?** Sim, a transformação é igual para todos.

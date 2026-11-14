@@ -13,6 +13,15 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, tarde (kdu / Claude Opus 5.5)
+- **Feito:** visto em jogo pelo kdu e pelo Mercurius: a transformação funciona. Pedidos atendidos no mesmo dia:
+  - tela toda vermelha no fim (aprovada em 9,5 s depois de testar 8,5 s) para esconder a pose final;
+  - grito de dor masculino/feminino que vira rosnado, com carne/osso por baixo;
+  - coração acelerando com pulso vermelho e tranco de câmera.
+  Sons de dor e rosnados do próprio Skyrim; carne/osso e coração do Moonlight Tales (autor permite). Testes 29/29, também na v0.38 pura com o patch. Entregues o pacote e o zip só do mod; kit de teste v20.
+- **Próximo:** ouvir grito e coração em jogo; teste com 2 jogadores; aplicar no oficial.
+- **Bloqueios:** nenhum
+
 ## 2026-11-14 (kdu / Claude Opus 5.5)
 - **Feito:** mescla das duas versões (animação + efeitos). Animação própria `IdleAethLobisomem` (10,5 s, termina no rugido), pés plantados por cinemática inversa. Sangue na tela, tremor e gore em duas camadas, uma por vez. Sem clarão branco. Opção `WEREWOLF_ANIMATION` (`aeth`/`vanilla`). Testes do serviço 28/28; bot no servidor real 21/21; patch aplica na v0.38 pura e com o pacotão de dano.
 - **Próximo:** ver o conjunto em jogo; teste com 2 jogadores.
