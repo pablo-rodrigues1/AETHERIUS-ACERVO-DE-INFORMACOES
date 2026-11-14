@@ -16,3 +16,4 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 ## [Não lançado]
 ### Adicionado
 - Criação do acervo de informações ([ADR-0000](../03-decisoes/ADR-0000-adocao-do-acervo.md)).
+- Regras de integração contínua por IA, diário por sistema, quadro de status ([ADR-0001](../03-decisoes/ADR-0001-integracao-continua-por-ia.md)).

@@ -1,0 +1,32 @@
+name: Documentos parados
+on:
+  schedule:
+    - cron: '17 12 * * 1'   # segundas, 09:17 (Brasília)
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Procurar sistemas em desenvolvimento sem atualização há 30+ dias
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          limite=$(date -d '30 days ago' +%Y-%m-%d)
+          lista=""
+          for f in 02-sistemas/*/README.md; do
+            [ -f "$f" ] || continue
+            fm=$(sed -n '2,/^---$/p' "$f")
+            echo "$fm" | grep -q '^fase: em-desenvolvimento' || continue
+            data=$(echo "$fm" | sed -n 's/^atualizado: *//p' | cut -c1-10)
+            if [ -n "$data" ] && [[ "$data" < "$limite" ]]; then
+              lista="$lista"$'\n'"- \`$f\` (atualizado: $data)"
+            fi
+          done
+          if [ -n "$lista" ]; then
+            gh issue create --title "Documentos parados há mais de 30 dias ($(date +%Y-%m-%d))" \
+              --body "Sistemas em desenvolvimento sem atualização recente:$lista"$'\n\n'"Atualize o diário e o README de cada um (REGRAS.md 10.8)."
+          fi

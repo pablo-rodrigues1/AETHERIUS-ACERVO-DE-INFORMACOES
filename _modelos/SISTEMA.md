@@ -2,7 +2,10 @@
 titulo: <Nome do Sistema>
 tipo: sistema
 status: rascunho
+fase: planejado          # planejado | em-desenvolvimento | em-teste | em-producao
 responsaveis: []
+repositorio: <URL do repositório do código, ou "monorepo:<caminho>">
+depende_de: []           # ex.: [../atributos/README.md]
 atualizado: AAAA-MM-DD
 tags: []
 relacionados: []
@@ -12,6 +15,10 @@ relacionados: []
 
 ## Resumo
 <1–3 frases: o que o sistema faz e por que existe.>
+
+## Onde está o código
+- Repositório: <link>
+- Caminho / pontos de entrada: 
 
 ## Escopo
 - Inclui: 
@@ -24,16 +31,15 @@ relacionados: []
 | Parâmetro | Valor | Descrição |
 |---|---|---|
 
-## Integrações
-| Sistema / Repositório | Tipo de dependência |
+## Dependências
+| Depende de | Por quê |
 |---|---|
-
-## Implementação
-- Repositório e caminho: 
-- Pontos de entrada no código: 
 
 ## Decisões relacionadas
 - <link para ADRs>
+
+## Diário
+Ver [`diario.md`](diario.md).
 
 ## Pendências conhecidas
 - 

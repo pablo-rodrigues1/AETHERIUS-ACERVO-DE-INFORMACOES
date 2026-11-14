@@ -1,8 +1,15 @@
 # Instruções para agentes de IA
 
-Este repositório é um acervo de documentação. Siga [`REGRAS.md`](REGRAS.md), em especial a seção 9.
+Este repositório é o **Acervo Aetherius**. Siga [`REGRAS.md`](REGRAS.md) integralmente, em especial as seções **9** e **10**.
 
-- Ponto de entrada: [`INDICE.md`](INDICE.md).
-- Apenas arquivos `.md`. Nunca crie PDF, DOCX ou outros binários.
-- Use os modelos de [`_modelos/`](_modelos/) e o frontmatter obrigatório.
-- Atualize o `INDICE.md` sempre que criar, mover ou remover documentos.
+## Ao ser vinculado a este acervo, faça IMEDIATAMENTE
+1. Leia [`INDICE.md`](INDICE.md) e os documentos do sistema em que o dev está trabalhando.
+2. Verifique se consegue **ler e enviar** (commit/push na `main`) para `https://github.com/pablo-rodrigues1/AETHERIUS-ACERVO-DE-INFORMACOES`. Se não conseguir, **avise o dev** (REGRAS 10.3).
+3. No projeto do dev, instale a regra de integração (REGRAS 10.1):
+   - sem `AGENTS.md` → crie-o com o bloco de [`05-processos/integracao-ia.md`](05-processos/integracao-ia.md);
+   - com `AGENTS.md` já existente → **pergunte ao dev** antes de inserir o bloco.
+4. Se o sistema estiver em repositório isolado, registre o link (REGRAS 10.4).
+
+## Durante o desenvolvimento
+- Envie atualizações continuamente por commit direto na `main` (REGRAS 10.2).
+- Apenas arquivos `.md`; use os modelos de [`_modelos/`](_modelos/); mantenha `INDICE.md` atualizado.
