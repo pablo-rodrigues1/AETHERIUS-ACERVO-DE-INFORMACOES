@@ -13,6 +13,16 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, relatos do Akatosh (kdu / Claude Opus 5.5)
+- **Feito** (entregue em `missoes/2026-11-14-bugs-akatosh` do kdu, patches sobre a v0.38, não aplicado no repositório):
+  - Inventário: arma na mão mostrava "R›" com as letras sobrepostas (`letter-spacing:-3px`). Agora tudo na mão usa a marca da magia, `L`, `R` ou `L R`.
+  - FEITIÇOS: magia não desequipava. A tela já pedia, mas o servidor (`aetheriusInventoryService.ts`) não oferecia `unequipAbility` e a VM Papyrus não tinha `Actor.UnequipSpell`. Os dois foram feitos, com teste 4/4.
+  - Tela de loading: a view `loading.html` nunca aparece, porque a ponte a mostra numa task do SKSE que só roda depois do carregamento. A mesma imagem foi embutida no `loadingmenu.swf` do mod "MENU E LOGO", girando no canto.
+  - Constelação no `;`: no ABNT2 o `;` é o 0x35, e o controlmap do mod de compatibilidade liga o Quick Stats nele. A linha passou para 0xff.
+- **Testes:** suíte do ui-inventory igual antes e depois (65/13). Nada testado em jogo.
+- **Próximo:** o mercurius17 decidir se aplica; testar em jogo.
+- **Bloqueios:** nenhum
+
 ## 2026-11-14 (mercurius17 / Claude Opus 5.5)
 - **Feito:** sincronização SYNC-1114, commit `e9075d0` na `main`, a partir da cópia `client/ui-core` do cliente oficial de 13/11 (base anterior: `6658310`). Entrou:
   - criação de personagem que edita pelo RaceSexMenu e finaliza de verdade (`chargen-finish.js`, `native/src/chargen*`);

@@ -69,6 +69,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Relatos de 13/11 corrigidos em pacote: ícone girando no loading, `;` sem abrir a constelação, magia que desequipa, L/R legível, nórdico só para nórdicos e controle travando após trocar aparência. Invocação em análise.
 - **14/11/2026:** Ocarina (só música, item novo) e Túnica do Herói (roupas do alfaiate) em teste.
 - **14/11/2026:** Olhar dos jogadores: todo mundo vê para onde cada um olha, com a cabeça acompanhando a câmera de forma suave (em teste).
 - **14/11/2026:** Lobisomem visto em jogo e aprovado: tela vermelha no fim, grito de dor masculino/feminino que vira rosnado e coração acelerando. Pacote e mod entregues.
@@ -78,4 +79,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **14/11/2026:** Lobisomem sincronizado e investigação dos NPCs travando entram no acervo; guia da Staff do lobisomem publicado.
 - **14/11/2026:** Classes: skills definidas pelo servidor, limite de invocações, ajuste de nível pelo painel da Staff e Anti-Mago com Maestria em Conjuração. Guias da Staff de classes, progressão, masmorras e manutenção publicados.
 - **14/11/2026:** Painel revisado a partir do código do servidor.
-- **08/11/2026:** Profissões: execução no servidor implementada; ativação bloqueada até a nova interface.

@@ -78,6 +78,7 @@
 - `07-guia-da-staff/dungeons/inimigos-e-masmorras.md` — Respawn no mundo aberto e gerações/reset das masmorras.
 - `07-guia-da-staff/itens/manutencao-de-equipamentos.md` — Kits de manutenção, cargas, penalidade e /manutencao.
 - `07-guia-da-staff/perguntas-frequentes/olhar-dos-jogadores.md` — Para onde os jogadores olham (em teste): a cabeça vira para quem o jogador mira.
+- `07-guia-da-staff/perguntas-frequentes/tecla-ponto-e-virgula-constelacao.md` — A tecla ; abre a constelação: causa e o que fazer se continuar.
 - `07-guia-da-staff/sobrenatural/lobisomem.md` — Como funciona o lobisomem (em teste): transformação, tamanho, prata.
 - `07-guia-da-staff/classes/ficha-conjuradores.md` — Skills, perks e feitiços por marco das 6 classes conjuradoras (do código).
 - `07-guia-da-staff/classes/ficha-guerreiros.md` — Skills, perks e feitiços por marco das 6 classes guerreiras (do código).

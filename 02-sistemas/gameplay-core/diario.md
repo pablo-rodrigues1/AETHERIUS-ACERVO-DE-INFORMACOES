@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, raças e invocação (kdu / Claude Opus 5.5)
+- **Raças:** todo personagem tinha a resistência ao frio e o Grito de Batalha do nórdico. O jogo carrega como Nórdico, e a aparência só troca o campo de raça da base. O cliente agora tira as habilidades das outras raças jogáveis e põe as da raça do personagem a cada aparência aplicada. Patch em `missoes/2026-11-14-bugs-akatosh`.
+- **Invocação:** conferida sem o jogo, com addon e load order reais e um bot. O servidor cria o Familiar e o Atronach e eles ficam vivos. O "aparece e some" relatado é a cópia local do jogo, que a limpeza do cliente descarta. Falta descobrir no cliente por que a do servidor não aparece; precisa do log do cliente de uma tentativa.
+- **Bloqueios:** invocação aguardando log.
+
 ## 2026-11-14, frente de dano (kdu / Claude Opus 5.5)
 - **Feito:** kdu entra como responsável no GameplayCore pela frente de dano (confirmado pelo mercurius17 em 14/11). Documentadas as correções de dano do servidor em [correcoes-de-dano.md](correcoes-de-dano.md): fases de ativação, chaves, tabela de armadura e resistências, pendências. Pacote entregue ao mercurius17 em 13/11 sobre a v0.38.
 - **Próximo:** confirmar as chaves ligadas no oficial; guia da Staff de dano quando a fase 1b for ligada.
