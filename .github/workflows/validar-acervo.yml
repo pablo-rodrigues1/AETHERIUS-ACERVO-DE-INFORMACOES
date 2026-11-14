@@ -1,0 +1,25 @@
+name: Validar acervo
+on: [push, pull_request]
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bloquear formatos não permitidos
+        run: |
+          proibidos=$(git ls-files | grep -vE '\.md$' \
+            | grep -vE '^\.github/|^\.gitignore$|^\.gitattributes$|^\.editorconfig$' \
+            | grep -vE '/assets/[^/]+\.(png|svg)$' || true)
+          if [ -n "$proibidos" ]; then
+            echo "::error::Arquivos não permitidos (somente .md):"; echo "$proibidos"; exit 1
+          fi
+      - name: Verificar frontmatter
+        run: |
+          falhas=0
+          for f in $(git ls-files '*.md' | grep -vE '^(README|REGRAS|INDICE|AGENTS|CLAUDE)\.md$|/README\.md$|^_modelos/|^\.github/'); do
+            head -1 "$f" | grep -q '^---$' || { echo "::error file=$f::Frontmatter ausente"; falhas=1; continue; }
+            for campo in titulo tipo status atualizado; do
+              sed -n '2,/^---$/p' "$f" | grep -q "^$campo:" || { echo "::error file=$f::Campo '$campo' ausente"; falhas=1; }
+            done
+          done
+          exit $falhas
