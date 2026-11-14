@@ -17,8 +17,8 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 
 | Sistema | Fase | Responsável | Repositório | Última atualização |
 |---|---|---|---|---|
-| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17 | [mercurius17/AetheriusGameplayCore](https://github.com/mercurius17/AetheriusGameplayCore) | 2026-11-14 |
-| [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [mercurius17/AetheriusUI_Core](https://github.com/mercurius17/AetheriusUI_Core) | 2026-11-14 |
+| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-14 |
+| [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
 
 ## Mapa de dependências
 

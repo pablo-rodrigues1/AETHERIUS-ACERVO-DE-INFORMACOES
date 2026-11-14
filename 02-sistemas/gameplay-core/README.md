@@ -4,7 +4,7 @@ tipo: sistema
 status: ativo
 fase: em-desenvolvimento
 responsaveis: [mercurius17]
-repositorio: https://github.com/mercurius17/AetheriusGameplayCore
+repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
 atualizado: 2026-11-14
 tags: [gameplay, classes, combate, leveling, persistencia, servidor]
@@ -17,7 +17,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincr
 Monorepo TypeScript com a lógica autoritativa de gameplay do Aetherius (classes, perks, atributos, XP/nível, combate, inimigos, durabilidade), persistida em PostgreSQL. Roda dentro do servidor oficial como cópia em `server/gameplay/core`; este repositório é a fonte de desenvolvimento e recebe de volta as mudanças feitas no servidor.
 
 ## Onde está o código
-- Repositório: https://github.com/mercurius17/AetheriusGameplayCore (branch `main`)
+- Repositório: https://github.com/pablo-rodrigues1/AetheriusGameplayCore (branch `main`)
 - Cópia em produção: `AetheriusRP/aetherius-server`, pasta `server/gameplay/core` (o `PROVENANCE.md` de lá registra o commit de origem e as alterações locais)
 - Pontos de entrada:
   - `runtime/src/index.ts`: composição do runtime, modos por domínio (`off`/`canary`/`active`) e entrega ao cliente

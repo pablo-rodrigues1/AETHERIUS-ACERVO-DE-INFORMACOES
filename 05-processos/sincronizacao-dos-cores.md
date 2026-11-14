@@ -15,7 +15,7 @@ Passo a passo para trazer as mudanças das cópias `server/gameplay/core` e `cli
 
 ## Pré-requisitos
 - Checkouts atuais de `aetherius-server` e `aetherius-client`, lado a lado numa mesma pasta.
-- Clones de `mercurius17/AetheriusGameplayCore` e `mercurius17/AetheriusUI_Core` na mesma pasta (os testes procuram `../aetherius-server` e `../aetherius-client`).
+- Clones de `pablo-rodrigues1/AetheriusGameplayCore` e `pablo-rodrigues1/AetheriusUI_Core` na mesma pasta (os testes procuram `../aetherius-server` e `../aetherius-client`).
 - Node 22, `npm ci` no GameplayCore.
 
 ## Passos

@@ -16,7 +16,7 @@ relacionados: [../02-sistemas/gameplay-core/README.md, ../02-sistemas/ui-core/RE
 As cópias dentro de `aetherius-server` e `aetherius-client` são a versão mais atual do GameplayCore e do UI Core e voltam para os repositórios de origem arquivo a arquivo, com quatro exceções fixas: arquivos em que o Core está à frente, acoplamentos a código de fora do Core, catálogos assinados e módulos de outros sistemas.
 
 ## Contexto
-O GameplayCore roda como cópia em `server/gameplay/core` e o UI Core em `client/ui-core`. Os mantenedores do servidor e do cliente alteram essas cópias. Os repositórios `mercurius17/AetheriusGameplayCore` e `mercurius17/AetheriusUI_Core` precisam receber essas mudanças sem perder o que só existe neles e sem passar a depender do resto do servidor ou do cliente.
+O GameplayCore roda como cópia em `server/gameplay/core` e o UI Core em `client/ui-core`. Os mantenedores do servidor e do cliente alteram essas cópias. Os repositórios `pablo-rodrigues1/AetheriusGameplayCore` e `pablo-rodrigues1/AetheriusUI_Core` precisam receber essas mudanças sem perder o que só existe neles e sem passar a depender do resto do servidor ou do cliente.
 
 ## Opções consideradas
 | Opção | Prós | Contras |
