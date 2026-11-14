@@ -15,6 +15,6 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 
 ## 2026-11-14 (kdu / Claude Opus 5.5)
 - **Feito:** análise do teste da sala de dano (13/11): inimigos em laço, arqueiro sem reagir, guerreiro só bloqueando. Numa reprodução do Kdu (13/11), o cliente apagou e recriou o mesmo NPC a cada ~5,6 s pelo caminho `formView.destroy`. Cliente do kit de teste v19 instrumentado: grava em `Data\Platform\Logs\aetherius-cliente-logs.txt` o motivo de cada destruição de NPC, as mensagens de hospedagem (`HOST-START`), animações de ataque bloqueadas e pedidos de hospedagem por NPC parado. O script de coleta do kit junta esse arquivo.
-- **Descartado:** o NPC de apoio da sala de teste não é a causa (ele foi tirado da sala durante a luta no v19, só para isolar o teste).
+- **Descartado:** o NPC de apoio da sala de teste não é a causa (ele foi tirado da sala durante a luta no v19, só para isolar o teste). A sala de teste e o NPC de apoio são só do ambiente de teste local; não vão para o servidor oficial.
 - **Próximo:** reproduzir com o v19, ler os motivos no log e corrigir o ponto certo no cliente.
 - **Bloqueios:** aguardando reprodução com o cliente instrumentado.
