@@ -17,6 +17,7 @@ Repositório central de documentação técnica do servidor **Aetherius** (SkyMP
 | `04-historico/` | Changelog consolidado e notas de versão |
 | `05-processos/` | Fluxos de trabalho do time (deploy, revisão, testes) |
 | `06-referencias/` | Material de apoio externo resumido em .md (SkyMP, Papyrus, APIs) |
+| `07-guia-da-staff/` | Mecânicas do jogo explicadas de forma simples para toda a Staff |
 | `_modelos/` | Templates obrigatórios para novos documentos |
 
 ## Início rápido

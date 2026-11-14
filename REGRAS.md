@@ -127,3 +127,20 @@ Nunca enviar tokens, senhas, IPs de produção, dados de jogadores ou trechos de
 
 ### 10.8 Documentos parados
 Sistemas com `fase: em-desenvolvimento` sem atualização há mais de 30 dias são sinalizados semanalmente por uma issue automática (`.github/workflows/documentos-parados.yml`).
+
+## 11. Guia da Staff (`07-guia-da-staff/`)
+
+Pasta voltada a **toda a Staff**, incluindo pessoas leigas. Explica mecânicas do jogo (classes, progressão, dungeons, sobrenatural, profissões, itens, economia e o que mais for útil).
+
+### 11.1 Como escrever
+- Linguagem **didática e simples**: frases curtas, sem jargão, sem código, sem fórmulas cruas (transforme em tabela ou exemplo).
+- Todo guia segue [`_modelos/GUIA-STAFF.md`](_modelos/GUIA-STAFF.md): "Em uma frase", "Como funciona", "Exemplo prático", "Tabela rápida", "Perguntas comuns", "O que a Staff pode e não pode fazer".
+- Termos do jogo novos entram em `07-guia-da-staff/glossario.md`.
+- Teste: *alguém que nunca jogou entenderia?* Se não, simplifique.
+
+### 11.2 Fonte da verdade
+- O documento técnico em `02-sistemas/` é a fonte da verdade; o guia é a tradução dele para leigos. O campo `fonte_tecnica:` liga os dois.
+- Em caso de divergência, vale o técnico, e o guia deve ser corrigido.
+
+### 11.3 Atualização pelas IAs
+Quando uma mudança em um sistema afetar algo que a Staff precisa saber (valores, tempos, itens, regras, novas classes/profissões), a IA **deve atualizar também o guia correspondente** no mesmo envio. Se o guia não existir, criá-lo.

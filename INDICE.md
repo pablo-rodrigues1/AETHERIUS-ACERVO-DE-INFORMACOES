@@ -33,3 +33,7 @@
 
 ## 06 — Referências
 - `06-referencias/README.md` — Resumos de material externo.
+
+## 07 — Guia da Staff
+- `07-guia-da-staff/README.md` — Explicações simples de mecânicas do jogo para toda a Staff.
+- `07-guia-da-staff/glossario.md` — Termos do jogo em linguagem leiga.

@@ -21,3 +21,4 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - UI Core SYNC-1114 (`e9075d0`): criador de personagem que finaliza, descrições pela bridge, tela de carregamento, fonte Sovngarde ([diário](../02-sistemas/ui-core/diario.md)).
 - Processo de sincronização dos Cores ([ADR-0002](../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md)).
 - Verificação de sistema já existente com confirmação do dev (REGRAS 10.5.1).
+- Pasta `07-guia-da-staff/` com guias didáticos para toda a Staff (REGRAS 11).
