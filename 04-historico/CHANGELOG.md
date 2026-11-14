@@ -20,3 +20,4 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - GameplayCore SYNC-1114 (`05f5a0f`): skills de classe, capacidade de invocação, `class.level`, Anti-Mago com Maestria em Conjuração, chaves `character:<uuid>` ([diário](../02-sistemas/gameplay-core/diario.md)).
 - UI Core SYNC-1114 (`e9075d0`): criador de personagem que finaliza, descrições pela bridge, tela de carregamento, fonte Sovngarde ([diário](../02-sistemas/ui-core/diario.md)).
 - Processo de sincronização dos Cores ([ADR-0002](../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md)).
+- Verificação de sistema já existente com confirmação do dev (REGRAS 10.5.1).

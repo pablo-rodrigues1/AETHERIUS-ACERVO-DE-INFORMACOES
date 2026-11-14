@@ -106,6 +106,17 @@ Se o sistema é desenvolvido em repositório próprio:
 ### 10.5 Consultar antes de codar
 Antes de iniciar ou alterar um sistema, a IA lê `INDICE.md`, o sistema afetado, seus dependentes e os ADRs vigentes. Se o código for contrariar um ADR aceito, avisa o dev e propõe um novo ADR antes de seguir.
 
+### 10.5.1 Sistema já existente ou em andamento por outra pessoa
+Se o dev tentar criar, desenvolver ou alterar um sistema que **já existe no acervo** (mesmo nome, mesma função ou sobreposição clara de escopo), a IA **deve parar antes de escrever código ou documentação** e:
+1. **Explicar ao dev** o que já existe: link do sistema no acervo, `fase`, `responsaveis`, `repositorio`, data da última atualização e as entradas mais recentes do `diario.md`.
+2. **Pedir confirmação explícita**: *"O sistema <nome> já está no acervo, sob responsabilidade de <responsáveis> (fase: <fase>, última atualização: <data>). Deseja continuar mesmo assim, sabendo que outra pessoa está atuando nele?"*
+3. Só prosseguir após um "sim". Se o dev confirmar:
+   - adicioná-lo em `responsaveis` e registrar no `diario.md` que ele passou a atuar no sistema e com qual objetivo;
+   - recomendar que ele combine a divisão do trabalho com os demais responsáveis.
+4. Se o dev desistir, não alterar nada e, se útil, sugerir sistemas relacionados ou outra frente de trabalho.
+
+Esta verificação vale também quando o sistema está documentado como `planejado` ou foi apenas mencionado em um ADR.
+
 ### 10.6 Decisões, dependências e changelog
 - Toda escolha relevante durante o desenvolvimento vira ADR automaticamente.
 - Cada sistema declara `depende_de:` no frontmatter. Ao alterar um sistema, a IA verifica quem depende dele e registra o possível impacto no diário dos dependentes.

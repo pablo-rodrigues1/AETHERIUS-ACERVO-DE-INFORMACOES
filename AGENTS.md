@@ -9,6 +9,7 @@ Este repositório é o **Acervo Aetherius**. Siga [`REGRAS.md`](REGRAS.md) integ
    - sem `AGENTS.md` → crie-o com o bloco de [`05-processos/integracao-ia.md`](05-processos/integracao-ia.md);
    - com `AGENTS.md` já existente → **pergunte ao dev** antes de inserir o bloco.
 4. Se o sistema estiver em repositório isolado, registre o link (REGRAS 10.4).
+5. **Se o sistema já existir no acervo**, explique ao dev quem atua nele e em que fase está, e **peça confirmação** antes de continuar (REGRAS 10.5.1).
 
 ## Durante o desenvolvimento
 - Envie atualizações continuamente por commit direto na `main` (REGRAS 10.2).
