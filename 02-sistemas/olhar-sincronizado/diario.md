@@ -15,6 +15,7 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 
 ## 2026-11-14, fim da tarde (kdu / Claude Opus 5.5)
 - **Feito:** versão seamless, a pedido do kdu ("todo mundo ver pra onde cada um está olhando"): o PC manda o ponto para onde a câmera aponta (também para o vazio), e os outros PCs fazem o boneco olhar para um marcador invisível naquele ponto. Ainda só JavaScript, sem DLL. Testes 12/12. Servidor de teste reiniciado com a versão nova.
+- **Entrega:** pacote separado (patch sobre a v0.38 + arquivos soltos + LEIA-ME) enviado ao Mercurius. Aplica sozinho e junto com o pacotão de dano e o lobisomem, em qualquer ordem.
 - **Próximo:** teste com 2 jogadores.
 - **Bloqueios:** nenhum
 

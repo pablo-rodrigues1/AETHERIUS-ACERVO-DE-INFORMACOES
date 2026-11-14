@@ -4,7 +4,7 @@ tipo: sistema
 status: rascunho
 fase: em-teste
 responsaveis: [kdu]
-repositorio: "kit de teste local (servidor/gamemode/olhar-service.js); ainda não integrado ao oficial"
+repositorio: "pacote separado: patch sobre aetherius-server v0.38 (ainda não integrado ao oficial)"
 depende_de: []
 atualizado: 2026-11-14
 tags: [multiplayer, head-tracking, olhar, cliente, servidor, jogadores]
@@ -64,4 +64,4 @@ sequenceDiagram
 ## Pendências conhecidas
 - Teste em jogo com 2 jogadores: girar a câmera devagar e ver se a cabeça do outro acompanha suave. Se olhar para o lado oposto, ajustar a leitura de pontos atrás da câmera.
 - Conferir convivência com o head tracking do TDM no próprio PC: o sistema não mexe no jogador local, então não deve conflitar.
-- Decidir se entra no oficial e por qual pacote.
+- Aplicar no oficial (pacote separado entregue ao Mercurius em 14/11).
