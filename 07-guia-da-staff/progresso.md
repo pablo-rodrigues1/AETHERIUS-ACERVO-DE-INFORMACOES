@@ -54,7 +54,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | Sistema | Status | Próximo passo | Atualizado |
 |---|---|---|---|
 | Lobisomem sincronizado | 🟢 | Visto em jogo, com grito, coração e tela vermelha; falta teste com 2 jogadores e aplicar no oficial | 14/11/2026 |
-| [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: o boneco olha para quem o jogador mira, não para quem chega perto; falta teste com 2 jogadores | 14/11/2026 |
+| [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: todo mundo vê para onde cada um olha (câmera, pessoas e até o vazio), sem encarar quem chega perto; falta teste com 2 jogadores | 14/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 | Maldições (vampirismo, licantropia, bruxaria) | 📝 | Progressão em 6 estágios desenhada na planilha; sem código (a transformação do lobisomem está em teste à parte) | 14/11/2026 |
@@ -67,7 +67,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
-- **14/11/2026:** Olhar dos jogadores: cada boneco olha para quem o jogador mira, em vez de todos encararem quem chega perto (em teste).
+- **14/11/2026:** Olhar dos jogadores: todo mundo vê para onde cada um olha, com a cabeça acompanhando a câmera de forma suave (em teste).
 - **14/11/2026:** Lobisomem visto em jogo e aprovado: tela vermelha no fim, grito de dor masculino/feminino que vira rosnado e coração acelerando. Pacote e mod entregues.
 - **14/11/2026:** Documentados Loja, IPTU, registro de compras, castelos e cinco projetos futuros. [Consultar entregas](../06-referencias/inventario-aetherius.md).
 - **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.

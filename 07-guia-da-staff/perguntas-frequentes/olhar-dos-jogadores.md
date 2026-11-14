@@ -14,12 +14,12 @@ relacionados: [../progresso.md]
 > Em teste: ainda não está no servidor oficial.
 
 ## Em uma frase
-O personagem de cada jogador vira a cabeça para quem aquele jogador está mirando, e não fica mais encarando quem chega perto.
+Todo mundo vê para onde cada jogador está olhando: o personagem vira a cabeça para onde a câmera daquele jogador aponta, e não fica mais encarando quem chega perto.
 
 ## Como funciona
-1. Você mira em alguém (ou conversa com alguém).
-2. Na tela dos outros jogadores, o seu personagem vira a cabeça para essa pessoa.
-3. Se você não está mirando em ninguém, seu personagem olha para a frente.
+1. Você vira a câmera para algum lugar: uma pessoa, uma porta, o céu.
+2. Na tela dos outros jogadores, a cabeça do seu personagem acompanha, de forma suave.
+3. Se você olha para trás das costas do personagem, ele olha para a frente (o pescoço não gira tanto).
 
 ## Exemplo prático
 > Três jogadores conversam numa taverna. Antes, quando um quarto chegava, todos os bonecos viravam a cabeça para ele ao mesmo tempo. Agora cada um olha para quem o próprio jogador está mirando.
