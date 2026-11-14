@@ -12,13 +12,15 @@ relacionados: [../02-sistemas/README.md]
 
 ## Resumo
 Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio (REGRAS 11.4).
+Última revisão: **14/11/2026**, feita a partir do código do servidor (`aetherius-server`). Ela mostra o que existe no código. Se cada sistema está ligado no servidor oficial não foi verificado.
 
-**Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado · ⚪ Pendente · ⛔ Travado
+**Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 1 · 🟡 1 · 📝 2 · ⚪ 9 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 2 · 🟡 7 · 📝 1 · ⚪ 2 · ⛔ 0
 
 ## 🎯 Em foco agora
-- **Classes, Leveling, Inimigos e Dungeons:** testar mecânicas e colocar no servidor.
+- **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
+- **Profissões:** nova interface; depois, testes dentro do jogo.
 
 ## Infraestrutura
 
@@ -29,27 +31,33 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | Sincronização de mods cliente × servidor | ✅ | — | 11/09/2026 |
 
 ## Sistemas do jogo
-*Na ordem de implementação. ⚠️ = depende de algo externo.*
+*Na ordem de implementação.*
 
 | # | Sistema | Status | Próximo passo | Atualizado |
 |---|---|---|---|---|
-| 1 | Painel de Admin (com comandos) | 🟢 | Finalizar | 11/09/2026 |
-| 2 | Classes, Leveling, Inimigos e Dungeons ⚠️ | 🟡 | Testar mecânicas e implementar no servidor | 11/09/2026 |
-| 3 | Profissões | 📝 | Programar e integrar (conceito já documentado) | 11/09/2026 |
-| 4 | Loot | ⚪ | — | 11/09/2026 |
-| 5 | Durabilidade de equipamentos | 📝 | Programar e implementar (planejamento feito) | 11/09/2026 |
-| 6 | Trade | ⚪ | — | 11/09/2026 |
-| 7 | Apoiadores | ⚪ | — | 11/09/2026 |
-| 8 | Sobrevivência | ✅ | — | 11/09/2026 |
-| 9 | Morte e Respawn | ⚪ | — | 11/09/2026 |
-| 10 | Aluguel de casas | ⚪ | — | 11/09/2026 |
-| 11 | Aluguel de quartos | ⚪ | — | 11/09/2026 |
-| 12 | Painel de informações | ⚪ | — | 11/09/2026 |
-| 13 | Loja de Diademas | ⚪ | — | 11/09/2026 |
+| 1 | Painel de Admin (F7, com comandos) | 🟢 | Pronto no código; ligar por configuração no oficial | 14/11/2026 |
+| 2 | Classes, Leveling, Inimigos e Dungeons | 🟡 | 18 classes e 9 marcos prontos; falta XP por abate e teste no oficial | 14/11/2026 |
+| 3 | Profissões | 🟡 | 9 profissões e 180 receitas no código; bloqueado até a nova interface | 14/11/2026 |
+| 4 | Loot | ⚪ | Sem código identificado | 14/11/2026 |
+| 5 | Durabilidade de equipamentos | 🟡 | Funciona via `/manutencao`; falta aba na interface e teste em jogo | 14/11/2026 |
+| 6 | Trade | 📝 | Estacionado: só o convite existe; falta a troca de itens/ouro | 14/11/2026 |
+| 7 | Apoiadores | 🟡 | Loja e benefícios no código; falta ativar e testar | 14/11/2026 |
+| 8 | Sobrevivência | ✅ | — | 14/11/2026 |
+| 9 | Morte e Respawn | 🟢 | Pronto e testado no código; confirmar no oficial | 14/11/2026 |
+| 10 | Aluguel de casas | 🟡 | Residências e impostos por cidade no código; falta ativar e testar | 14/11/2026 |
+| 11 | Aluguel de quartos | ⚪ | Sem código separado identificado | 14/11/2026 |
+| 12 | Painel de informações | 🟡 | Painel do jogador no código; falta homologar | 14/11/2026 |
+| 13 | Loja de Diademas | 🟡 | Carteira de Diademas e loja no código; falta ativar e testar | 14/11/2026 |
+
+## Outros sistemas encontrados no código
+Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), governança/Jarl, bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Painel revisado a partir do código do servidor.
+- **08/11/2026:** Profissões: execução no servidor implementada; ativação bloqueada até a nova interface.
+- **25/10/2026:** Classes: pacotes de integração do servidor e do cliente preparados; build e teste em jogo pendentes.
+- **12/10/2026:** Classes: entrega de perks validada em jogo no servidor local (162/162 marcos).
+- **01/10/2026:** Classes, Dano, Inimigos, Leveling e Durabilidade unificados no GameplayCore.
 - **11/09/2026:** Classes: efeitos de raças, pedras guardiãs e distribuição de classes prontos no código.
-- **11/09/2026:** Profissões: conceito de funcionamento documentado.
-- **11/09/2026:** Durabilidade: planejamento concluído.
