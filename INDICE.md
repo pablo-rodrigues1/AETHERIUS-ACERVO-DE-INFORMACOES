@@ -21,6 +21,10 @@
 - `02-sistemas/lobisomem/diario.md` — Diário do Lobisomem sincronizado.
 - `02-sistemas/olhar-sincronizado/README.md` — Olhar sincronizado: o boneco de cada jogador olha para quem ele mira (head tracking no multiplayer).
 - `02-sistemas/olhar-sincronizado/diario.md` — Diário do Olhar sincronizado.
+- `02-sistemas/ocarina/README.md` — Ocarina só com música: notas, músicas, modo automático, sem poderes.
+- `02-sistemas/ocarina/diario.md` — Diário da Ocarina.
+- `02-sistemas/tunica-do-heroi/README.md` — Túnica do Herói: 16 peças para o alfaiate, gorro mostrando o cabelo.
+- `02-sistemas/tunica-do-heroi/diario.md` — Diário da Túnica do Herói.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
