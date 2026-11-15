@@ -50,5 +50,5 @@ Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especif
 
 ## Pendências
 - Aprovar os textos de Lobisomem e Bruxa ([proposta-textos.md](proposta-textos.md)).
-- Definir quando a Bruxa escolhe a Vertente e se Disciplina/Vertente podem ser trocadas.
+- ~~Vertente/troca~~: Vertente no estágio 1; nenhuma troca; 2ª Disciplina no Apoteótico.
 - Etapa 1 (telas do UI Core) ainda não iniciada.

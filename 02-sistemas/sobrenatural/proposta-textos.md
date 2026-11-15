@@ -1,6 +1,6 @@
 # Proposta de textos — Lobisomem, Bruxa e tela sem maldição
 
-Status: **PROPOSTA, aguardando aprovação do dev** (autor: Opus 5.5, 2026-11-15).
+Status: **PROPOSTA revisada, aguardando aprovação final do dev** (autor: Opus 5.5, 2026-11-15). Sobretítulos definidos pelo dev: **Corrupção do Sangue / Corrupção da Lua / Corrupção do Véu**. Nomes de feitiços, perks e poderes sempre **traduzidos para português**.
 Mesma estrutura da tela de Vampiro: sobretítulo, título, lema e cartões de estágio (descrição + frase). As descrições resumem o que a planilha concede em cada estágio.
 
 ## Tela sem maldição
@@ -11,11 +11,17 @@ Mesma estrutura da tela de Vampiro: sobretítulo, título, lema e cartões de es
 - Texto principal: **"Você não é portador de nenhuma praga."**
 - Lema (itálico, opcional): *"Seu sangue ainda pertence apenas a você."*
 
+## Vampiro — detalhes em Carmesim (definido na referência)
+
+- Sobretítulo: `CORRUPÇÃO DO SANGUE`
+- Título: `VAMPIRISMO`
+- Lema: *"A eternidade cobra seu preço em sangue."* (mantido; já pertinente)
+
 ## Lobisomem — detalhes em Âmbar
 
-- Sobretítulo: `O CHAMADO DE HIRCINE`
+- Sobretítulo: `CORRUPÇÃO DA LUA`
 - Título: `LICANTROPIA`
-- Lema: *"A lua não pede permissão para despertar a fera."*
+- Lema: *"Sob a lua cheia, a carne esquece que um dia foi humana."*
 
 | # | Estágio | Descrição | Frase |
 |---|---|---|---|
@@ -30,9 +36,9 @@ Seção equivalente às Disciplinas: `DONS DA CAÇADA` / `UIVOS E INSTINTOS`, li
 
 ## Bruxa — detalhes em Violeta
 
-- Sobretítulo: `PACTO DAS SOMBRAS`
+- Sobretítulo: `CORRUPÇÃO DO VÉU`
 - Título: `BRUXARIA`
-- Lema: *"Todo poder proibido cobra seu juramento."*
+- Lema: *"Quem rasga o véu jamais retorna inteiro do outro lado."*
 
 | # | Estágio | Descrição | Frase |
 |---|---|---|---|
@@ -51,8 +57,9 @@ Seção equivalente às Disciplinas: `CAMINHOS PROIBIDOS` / `VERTENTES` (uma esc
 | DAEMONES | Demonologia | *Oblívio sempre envia quem ousa pedir.* |
 | TENEBRAE | Umbramancia | *Onde a luz termina, seu domínio começa.* |
 
-## Pontos para o dev decidir
+## Decisões do dev (2026-11-15)
 
-1. Aprovar ou ajustar sobretítulos, lemas e frases.
-2. Os nomes dos feitiços nas descrições (Raio Sobrenatural = *Eldritch Blast*, Fogo Funesto = *Balefire*, Raio da Bruxa = *Witch Bolt*) são traduções minhas. Prefere manter os nomes em inglês do mod?
-3. O momento em que a Bruxa escolhe a vertente não está na planilha. Proponho: **no estágio 1 (Neófito)**, logo após a setagem, porque os feitiços da vertente já começam nesse estágio.
+1. Sobretítulos: Corrupção do Sangue (vampiro), Corrupção da Lua (lobisomem), Corrupção do Véu (bruxa). Os lemas foram refeitos para combinar com eles.
+2. Nomes de feitiços, perks e poderes **traduzidos para português** (ex.: Raio Sobrenatural = *Eldritch Blast*, Fogo Funesto = *Balefire*, Raio da Bruxa = *Witch Bolt*). O glossário de tradução será mantido junto da implementação da UI.
+3. A Bruxa escolhe a Vertente **no estágio 1 (Neófito)**.
+4. Disciplina e Vertente **não podem ser trocadas** pelo jogador. Exceção prevista no design: no **Apoteótico** o vampiro escolhe a **segunda** Disciplina, que se soma à primeira e não a substitui.

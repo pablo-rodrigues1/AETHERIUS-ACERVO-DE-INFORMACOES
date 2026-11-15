@@ -32,6 +32,7 @@ Fonte: planilha [AETHERIUS - Classes, efeitos, encantamentos](https://docs.googl
 - 4 telas: (1) sem maldição — elemento gráfico estilizado + "Você não é portador de nenhuma praga."; (2) Vampiro; (3) Lobisomem; (4) Bruxa.
 - Direção de arte, cores (Carmesim / Âmbar / Violeta) e análise da referência de UI: ver `DIRECAO-DE-ARTE.md`.
 - O servidor precisa guardar a **data da setagem** ("Portador desde DD/MM/AAAA").
+- Sobretítulos: **Corrupção do Sangue** (vampiro), **Corrupção da Lua** (lobisomem), **Corrupção do Véu** (bruxa). Nomes de feitiços, perks e poderes exibidos **em português**.
 - Trilha/cabeçalho exibe apenas **"Sobrenatural"** (nada de nome de personagem ou classe).
 - **Setagem pelo painel:** o servidor atribui a keyword, grava a data e **reseta a classe para o nível 1** automaticamente.
 - **Remoção pelo painel:** o servidor remove a keyword e **apaga todo o progresso da maldição** (XP, estágio, Disciplinas/Vertente, data).
@@ -47,7 +48,7 @@ Mod: **Curse of the Vampire**. MGEFs originais das poções que concediam podere
 | Dano desarmado extra | — | 5 | 10 | 15 | 20 | — |
 | Poder | — | Immeasurable Strength | Vampire Mist Form | Unnatural Celerity | Devouring Swarm | 2ª Disciplina |
 
-**Disciplinas** — escolhe UMA ao atingir Vampiro Pleno; a segunda no Apoteótico. Evoluem com a progressão (5 níveis). **Nível da disciplina = estágio − 1** (Vampiro Pleno = nível 1 … Apoteótico = nível 5), confirmado pela referência `VAMPIRISMO - DISCIPLINAS.png` (no Ancião: Celeridade +30%, Fortitude +100, Potência +15%). A 2ª disciplina, escolhida no Apoteótico, segue a mesma regra (já entra no nível 5). A escolha é registrada pelo servidor. (Proposta, a confirmar: o jogador não pode trocar a escolha; só a staff.)
+**Disciplinas** — escolhe UMA ao atingir Vampiro Pleno; a segunda no Apoteótico. Evoluem com a progressão (5 níveis). **Nível da disciplina = estágio − 1** (Vampiro Pleno = nível 1 … Apoteótico = nível 5), confirmado pela referência `VAMPIRISMO - DISCIPLINAS.png` (no Ancião: Celeridade +30%, Fortitude +100, Potência +15%). A 2ª disciplina, escolhida no Apoteótico, segue a mesma regra (já entra no nível 5). A escolha é registrada pelo servidor e **não pode ser trocada** pelo jogador. A 2ª Disciplina, escolhida no Apoteótico, soma-se à primeira e precisa ser diferente dela.
 - Celeridade: +10/20/30/40/50% velocidade de movimento
 - Fortitude: +25/50/100/150/200 vida máxima
 - Potência: +5/10/15/20/25% dano físico (inclui armas)
@@ -80,7 +81,7 @@ Integração: o Sobrenatural é construído **a partir do sistema de kdu**, em `
 
 ## 5. Bruxaria
 
-Mods: **Triumvirate, Mysticism, Vokrii**. Escolhe **uma vertente**: MORTUI, DAEMONES ou TENEBRAE. Perks e alguns feitiços são globais.
+Mods: **Triumvirate, Mysticism, Vokrii**. Escolhe **uma vertente** no **estágio 1 (Neófito)**, logo após a setagem: MORTUI, DAEMONES ou TENEBRAE. A escolha **não pode ser trocada**. Perks e alguns feitiços são globais.
 
 | | Neófito | Acólito | Feiticeiro Negro | Magus Diaboli | Alto Teurgo | Hierofante |
 |---|---|---|---|---|---|---|
