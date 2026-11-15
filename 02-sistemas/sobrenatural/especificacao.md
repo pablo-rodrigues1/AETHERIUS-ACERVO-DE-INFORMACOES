@@ -84,21 +84,32 @@ Integração: o Sobrenatural é construído **a partir do sistema de kdu**, em `
 
 ## 5. Bruxaria
 
-Mods: **Triumvirate, Mysticism, Vokrii**. Escolhe **uma vertente** no **estágio 1 (Neófito)**, logo após a setagem: MORTUI, DAEMONES ou TENEBRAE. A escolha **não pode ser trocada**. Perks e alguns feitiços são globais.
+(Revisado em 2026-11-15 com as coordenadas das células da aba "Maldições - Progressão", linhas 26–44. Substitui a versão anterior, que deduzia o estágio pela ordem das colunas.)
 
-| | Neófito | Acólito | Feiticeiro Negro | Magus Diaboli | Alto Teurgo | Hierofante |
+Mods: **Triumvirate, Mysticism, Vokrii e Shadow Spell Package** (novo). Escolhe **uma vertente** no **estágio 1 (Neófito)**: MORTUI, DAEMONES ou TENEBRAE; não pode trocar. Perks e alguns feitiços são globais e independem da vertente.
+
+| | Neófito (B) | Acólito (C) | Feiticeiro Negro (D) | Magus Diaboli (E) | Alto Teurgo (F) | Hierofante (G) |
 |---|---|---|---|---|---|---|
 | Alteração/Conjuração/Destruição/Ilusão | 30 | 40 | 50 | 60 | 60 | 60 |
-| Perks globais | Alteration/Conjuration/Destruction/Illusion Mastery | Necromancy, Rift Summoner 1–2, Atromancy; Raw Power 1 | Ghoul Frenzy, Oblivion Stone 1–2, Conjuration Dual Casting | Necromaster, Blood Zombie; Raw Power 2 | Twin Souls; Raw Power 3 | — |
-| Feitiços globais | Eldritch Blast | Balefire | Witch Bolt | Equilibrium* | | |
+| Perks globais | Alteration/Conjuration/Destruction/Illusion Mastery | Necromancy, Rift Summoner 1–2, Atromancy; Raw Power 1 | Ghoul Frenzy, Oblivion Stone 1–2, Conjuration Dual Casting | Necromaster, Blood Zombie; Raw Power 2 | — | Twin Souls; Raw Power 3 |
+| Feitiços globais | Raio Sobrenatural (Eldritch Blast) | Fogo Funesto (Balefire) | Raio da Bruxa (Witch Bolt) | Equilíbrio* | — | — |
 
-Vertentes (feitiços liberados por estágio, em ordem):
-- **MORTUI (Necromancia):** Conjure Skeleton, Reanimate Corpse, Oblivion's Embrace → Conjure Skeleton Archer, Conjure Skeleton Warrior, Conjure Keeper* → Conjure Boneman*, Revenant → Daedric Cure, Dread Zombie → Conjure Mistman*, Conjure Skeleton Champion → Conjure Wrathman*, Dead Thrall.
-- **DAEMONES (Demonologia):** Conjure Dremora Warrior, Weaken, Decrepify → Conjure Ravagor, Conjure Dremora Hunter → Conjure Dremora Warlock, Cloudkill → Daedric Cure, Frailty → Conjure Magister, Oblivion's Embrace → Conjure Leviathan.
-- **TENEBRAE (Umbramancia):** Draining Touch, Shadow Stride → Azra's Wrath, Gather Shadows → Darkness, Step Through Shadows → Possession, Pull Through Shadows → Draining Shroud, Nightfall → Draining Mist.
+### Vertentes — feitiços liberados por estágio (acumulam)
 
-> Mapeamento por estágio inferido da ordem das colunas; confirmar na planilha (células mescladas). `*` = marcado assim na planilha (significado a confirmar).
+| Vertente | Neófito | Acólito | Feiticeiro Negro | Magus Diaboli | Alto Teurgo | Hierofante |
+|---|---|---|---|---|---|---|
+| **MORTUI** (Necromancia) | Conjure Skeleton; Reanimate Corpse | Conjure Skeleton Archer; Conjure Skeleton Warrior | Conjure Boneman*; Revenant | Daedric Cure; Dread Zombie | Conjure Mistman*; Conjure Skeleton Champion; Oblivion's Embrace | Conjure Wrathman*; Dead Thrall; Conjure Keeper* |
+| **DAEMONES** (Demonologia) | Conjure Dremora Warrior | Conjure Ravagor; Weaken | Conjure Dremora Warlock; Conjure Dremora Hunter | Daedric Cure; Cloudkill | Conjure Magister; Frailty | Conjure Leviathan; Oblivion's Embrace; Decrepify |
+| **TENEBRAE** (Umbramancia, **Shadow Spell Package**) | Shadowbolt | Crushing Darkness; Shadow Stride | Curse of Exhaustion | Curse of Fragility; Shadowform | Conjure Shadow Atronach | Shadow Rend |
+
+**TENEBRAE — perks/efeitos por estágio** (linha 44): Acólito → upgrade do Shadowbolt (nível 50); Feiticeiro Negro → perk **Dark Arts: Shadow Mastery** (+25% no dano das magias de sombra de Destruição); Alto Teurgo → upgrade do Conjure Shadow Atronach (nível 75); Hierofante → upgrade do Shadowbolt (nível 75).
+
+**Regra do Shadow Spell Package** (Maldições - Informações, item 3): no mod, quase todos os feitiços de sombra sobem de nível sozinhos ao atingir 25/50/75 de Destruição (Sear, Drain Soul, Shadowbolt 50/75, Crushing Darkness 75, Conjure Shadow Atronach 50/75) ou por perk (Curse of Exhaustion, Curse of Fragility). A versão antiga do feitiço é removida e a nova é adicionada. No Aetherius, os upgrades da TENEBRAE seguem a **progressão da maldição** (linha 44), não os checkpoints de habilidade do mod. A forma de aplicar isso (dar o feitiço já melhorado no estágio certo, ou neutralizar o upgrade automático do mod) precisa ser verificada nos records/scripts do mod.
+
+Itens marcados com `*` estão assim na planilha; significado a confirmar. Feitiços que a nova TENEBRAE removeu da versão anterior: Draining Touch, Azra's Wrath, Darkness, Possession, Draining Shroud, Draining Mist, Gather Shadows, Step/Pull Through Shadows, Nightfall.
 
 ## Decisão do dev (2026-11-15): poder do Lorde Vampiro
 
 Na versão final, o poder **Forma de Lorde Vampiro** (`DLC1VampireChange`) **não** vem com a maldição nem com o estágio: só é atribuído por uma **função específica do Painel Administrativo**. **Por enquanto, para os testes, fica como está** (liberado desde o Neófito, `VAMPIRE_LORD_MIN_STAGE = 0` em `vampire-grants.js`).
+
+O Shadow Spell Package já está no modpack oficial (`ShadowSpellPackage.esp` + `Shadow Spell Package - Tweaks and Bug Fixes.esp`, ativos no perfil oficial).
