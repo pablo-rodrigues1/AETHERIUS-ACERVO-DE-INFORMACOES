@@ -3,7 +3,7 @@ titulo: AetheriusGameplayCore
 tipo: sistema
 status: ativo
 fase: em-desenvolvimento
-responsaveis: [mercurius17, kdu]
+responsaveis: [mercurius17, kdu, Melekyy]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
 atualizado: 2026-11-14
@@ -68,6 +68,10 @@ Correções da cadeia de dano no addon nativo do `aetherius-server`, ligadas por
 ## Feitiços das classes
 
 A [lista completa por classe, escola e tier](feiticos-por-classe.md) transcreve os 164 registros de Classes e documenta a sincronização de Classes - Progressão (B23:F40), de 14/11/2026. Registra também as divergências do código: `authorizedSpells` tem 128 entradas (127 associações únicas) e `allSpellsList` tem os 164 nomes, com seis tiers diferentes. Trata-se de conciliação documental/design; não modifica JSONs, catálogos ou runtime, conforme o ADR-0003.
+
+## Frente de conjuração
+
+Melekyy iniciou, com confirmação explícita do dev em 14/11/2026, uma frente limitada à conjuração: investigar o desaparecimento no cliente da v0.38, adaptar o acompanhamento normal e entre instâncias usado no privado e avaliar duas criaturas simultâneas. A versão anterior e o pacote acumulado de correções devem ser preservados. O encaixe no privado também foi solicitado. Esta entrada registra o início; não declara correção nem implantação concluída.
 
 ## Diário
 Ver [`diario.md`](diario.md).

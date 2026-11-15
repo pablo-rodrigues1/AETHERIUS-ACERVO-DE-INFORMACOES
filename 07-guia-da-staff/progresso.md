@@ -36,7 +36,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | # | Sistema | Status | Próximo passo | Atualizado |
 |---|---|---|---|---|
 | 1 | [Painel de Admin (F7)](../02-sistemas/painel-adm/README.md) | 🟢 | Conferir a base do F7 e homologar o registro de compras | 14/11/2026 |
-| 2 | Classes, Leveling, Inimigos e Dungeons | 🟡 | Alinhar as listas de feitiços no código, ligar XP por abate e testar no oficial | 14/11/2026 |
+| 2 | Classes, Leveling, Inimigos e Dungeons | 🟡 | Alinhar feitiços, XP por abate e conjuração; testar no oficial | 14/11/2026 |
 | 3 | Profissões | 🟡 | 9 profissões e 180 receitas no código; bloqueado até a nova interface | 14/11/2026 |
 | 4 | Loot | ⚪ | Sem código identificado | 14/11/2026 |
 | 5 | Durabilidade de equipamentos | 🟡 | Funciona via `/manutencao`; falta aba na interface e teste em jogo | 14/11/2026 |
@@ -70,6 +70,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
 - **14/11/2026:** Planilha e fichas completadas com os 164 registros de feitiços de Classes; diferenças do resumo do código documentadas, sem mudança no servidor.
 
 - **14/11/2026:** Melekyy está desenvolvendo Guildas (SkyGuilds); registrados Magos, Alquimistas e Companions, com integração oficial pendente.
@@ -80,4 +81,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **14/11/2026:** Documentados Loja, IPTU, registro de compras, castelos e cinco projetos futuros. [Consultar entregas](../06-referencias/inventario-aetherius.md).
 - **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.
 - **14/11/2026:** Correções de dano do servidor documentadas (kdu entra no GameplayCore pela frente de dano).
-- **14/11/2026:** Lobisomem sincronizado e investigação dos NPCs travando entram no acervo; guia da Staff do lobisomem publicado.

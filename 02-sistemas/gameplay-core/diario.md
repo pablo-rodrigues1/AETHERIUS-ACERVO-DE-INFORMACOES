@@ -2,7 +2,7 @@
 titulo: Diário do AetheriusGameplayCore
 tipo: historico
 status: ativo
-responsaveis: [mercurius17, kdu]
+responsaveis: [mercurius17, kdu, Melekyy]
 atualizado: 2026-11-14
 tags: [diario, gameplay]
 relacionados: [README.md]
@@ -12,6 +12,15 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+
+## 2026-11-14, início da frente de conjuração (Melekyy / Codex)
+
+- **Autorização:** o dev confirmou a atuação sobre a frente existente de mercurius17/kdu, conforme REGRAS 10.5.1. Melekyy entra apenas na comparação e correção da conjuração.
+- **Objetivo:** corrigir o desaparecimento; adaptar acompanhamento normal e entre instâncias do privado; avaliar o encaixe de duas criaturas simultâneas. Também foi solicitado instalar no privado após os testes, com backup anterior.
+- **Levantamento:** o pacote acumulado de 14/11 declara a invocação em aberto; seus patches tratam amizade do invocado e descarte de atores. O módulo privado tem acompanhamento e persistência próprios, mas está desativado e usa outra estrutura de código.
+- **Próximo:** localizar a base completa da v0.38, preservar fontes/pacotes anteriores e isolar a alteração de conjuração das demais correções. Conferir ambiente e processos antes da instalação privada.
+- **Bloqueios:** fontes completos da v0.38 ainda em localização. O teste com bot descrito por kdu comprova permanência no servidor, não a presença visual do ator no cliente.
+- **Escopo preservado:** nenhuma alteração de veneno, reanimação, lobisomem, custos de magicka ou listas de feitiços nesta frente. Recomendada a coordenação da divisão do trabalho com os responsáveis existentes.
 
 ## 2026-11-14, entrega da conciliação de feitiços (mercurius17 / Codex)
 - **Feito:** Classes - Progressão B23:F40 sincronizada com os 164 registros de Classes, em 12 das 18 classes. Nomes e tiers respeitam as mesclagens da origem; sem alteração das tabelas de perks/skills. Grafias corrigidas: Firebolt, Circle of Vitality, Trickster e Font of Vitality. Removidas do destino as entradas antigas sem equivalente na origem e a duplicação de Aura of Thorns.
