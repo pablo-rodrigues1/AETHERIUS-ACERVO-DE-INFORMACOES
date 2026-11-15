@@ -120,6 +120,8 @@
 - `07-guia-da-staff/regras-de-roleplay/guildas.md` — Explicação simples das Guildas em desenvolvimento por Melekyy e dos limites da atuação da Staff.
 - `07-guia-da-staff/economia/comercio-empresas-e-profissoes.md` — Guia da Staff sobre o planejamento comercial e os limites do que já foi decidido.
 
-- `02-sistemas/sobrenatural/formas-e-poderes.md` — Lote parcial de correções locais e bloqueios de formas/poderes, com revisão e reteste pendentes.
+- `02-sistemas/sobrenatural/formas-e-poderes.md` — Lote menor Fera/Lorde/raça/recarga pronto para reteste; poderes e origem de grants adiados.
 - `03-decisoes/ADR-0014-forma-besta-recarga-real.md` — Forma da Besta LesserPower com recarga autoritativa de 30 minutos reais e zero no laboratório.
 
+
+- `03-decisoes/ADR-0015-sobrenatural-lotes-js.md` — Lotes locais e Névoa/Força parciais sem extensão nativa.

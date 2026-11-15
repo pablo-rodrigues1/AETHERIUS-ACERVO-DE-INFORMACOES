@@ -68,3 +68,9 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Próximo:** revisão Terra e reteste humano, depois observador; Etapa 2 aberta.
 - **Bloqueios:** regen magicka/vigor da Névoa e perk temporária da Força exigem decisão sobre integração ao host; nada nativo alterado. Papyrus global segue bloqueado.
 
+
+## 2026-11-15 (pablo-rodrigues1 / Sol High) — lote menor pronto para reteste
+- **Feito:** commit local 4fc0034 fecha somente Fera, Lorde, raça/olhos/login/reversão e recarga; resolve achados Terra 1/2/3/5 com comando validado, preservação durável da original, callbacks canceláveis e fase após aparência confirmada. 50/50 Node e scripts de serviço/F7 passaram, builds sem addon e boot com 435 plugins/16 ativos/0 falhas; jogo fechado durante reinício.
+- **Decisão:** poderes restantes adiados, patch Visão desativado, Predator Vision continua vencedor; Névoa/regen e Força/dano parciais sem nativo, baseline COTV só provisório local (ADR-0015). Bruxaria é de outro worker; Sol fará depois a correção transversal de origem para lobisomem/vampiro e contrato de extensão.
+- **Próximo:** coordenador encaminha roteiro de jogo; confirmação Terra e reteste humano ainda não ocorreram. Diário local do orquestrador registra exceção do dev para testar o lote menor antes da confirmação Terra. Ver [relatório](formas-e-poderes.md).
+- **Bloqueios:** nenhum para iniciar o teste menor; resultados do motor, observador e origem dos grants pendentes, sem homologação oficial.

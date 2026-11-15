@@ -19,3 +19,5 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0012](ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md) | Portas do Colégio e funções incompatíveis nos Magos | aceito | 2026-11-15 |
 | [ADR-0013](ADR-0013-exclusividade-dos-cargos-dos-magos.md) | Exclusividade dos cargos de professor e bibliotecário dos Magos | aceito | 2026-11-15 |
 | [ADR-0014](ADR-0014-forma-besta-recarga-real.md) | Forma da Besta com recarga de tempo real | aceito | 2026-11-15 |
+
+| [ADR-0015](ADR-0015-sobrenatural-lotes-js.md) | Sobrenatural em lotes locais e poderes parciais em JS | aceito | 2026-11-15 |
