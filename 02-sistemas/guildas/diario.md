@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, exclusividade dos cargos de professor e bibliotecário iniciada (Melekyy / Codex)
+
+- **Pedido:** quem for professor ou bibliotecário dos Magos não pode ter outros cargos; preservar apenas o vínculo com a escola.
+- **Implementação prevista:** recusar cargos personalizados e liderança acumulados com essas funções, impedir professor em várias escolas e manter a incompatibilidade entre professor e bibliotecário. Validar ações, estado persistido e candidatos da interface.
+- **Migração privada:** preservar função e escola existentes; retirar somente cargos personalizados incompatíveis com registros detalhados. Não renomear cargos para tratá-los como escola, alterar inventário ou conceder outra escola automaticamente.
+- **Próximo:** testes dos dois sentidos de nomeação, persistência e interface, atualização suportada e verificação privada. Responsável Melekyy, sistema em desenvolvimento; homologação oficial pendente.
+
 ## 2026-11-15, R22 instalada: portas do Colégio e funções incompatíveis (Melekyy / Codex)
 
 - **Entrega:** aba Portas do Colégio exclusiva do líder/professores, com busca, áreas, estado e trancar/destrancar individualmente ou em lote. Trancas valem para entrada e saída, inclusive líder, professor e NPC. Sessão, nonce, revisão e autoridade revalidados no servidor; política e registros detalhados persistidos juntos. [ADR-0012](../../03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md).
