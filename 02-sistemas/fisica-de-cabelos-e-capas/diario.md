@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-15, noite (kdu / Claude Opus 5.5)
+- **Retorno da YuYu (17:25–17:34):** cabelo e roupas com física boa; alguns fios entram na armadura, principalmente a trança dentro do peitoral.
+- **Feito:** as barreiras do tronco e dos braços passaram a ficar 4 unidades mais longe do corpo (espessura de armadura); as da cabeça não mudaram. Kit v22 e zip da física refeitos.
+- **Próximo:** a YuYu conferir a trança de novo.
+- **Bloqueios:** nenhum
+
 ## 2026-11-15, tarde (kdu / Claude Fable 5.2)
 - **Feito:** barreiras contra o corpo, a pedido do kdu ("pra não atravessar nunca"). Cada osso solto do cabelo ganhou um plano preso à parte do corpo mais próxima; a capa ganhou planos presos ao quadril, coxas e panturrilhas. Limites de giro das juntas afrouxados (17° para 57° para fora), porque brigavam com as barreiras.
 - **Medido no simulador:** olhando 40° para cima/baixo e virando 70°, o osso entrava de 7 a 24 unidades no corpo sem barreiras e de 0,8 a 2,9 com elas, só durante o movimento rápido. O balanço ao correr não mudou.
