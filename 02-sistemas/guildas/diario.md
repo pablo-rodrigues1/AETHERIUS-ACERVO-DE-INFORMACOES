@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, insígnias R21 ativadas no privado (Melekyy / Codex)
+
+- **Autorização e instalação:** o dev confirmou que fechou o Skyrim privado e o MO2. Fechamento verificado; foi criado backup dos dados do mundo e dos arquivos afetados. Somente o servidor privado foi parado e reiniciado.
+- **Plugin:** cópia ESP completa do Elemental Vision II ativada no cliente e servidor, anexada ao fim da ordem sem deslocar os índices anteriores. Verificação de 115 plugins em paridade de ordem e hashes aprovada. Original do mod, bundles do cliente, núcleo nativo, fonte de Morte e configuração de conjuração preservados. Manifesto de terreno atualizado sem alterar a geografia.
+- **Entrega real:** o runtime privado carregou os cinco registros configurados e entregou exatamente uma insígnia correspondente à escola já cadastrada do personagem de teste, mesmo com ele desconectado. Presença em unidade única conferida também no inventário persistido em disco; todos os itens anteriores preservados. O personagem permanece membro comum, sem liderança, professor ou bibliotecário.
+- **Proteção e acesso:** adaptador de morte conectado no runtime; descarte da insígnia recusado pelo hook do servidor. Bancada continua exclusiva dos bibliotecários, e líder/professores usam os seletores de membro/escola na aba Professores.
+- **Evidências:** relatórios locais de instalação, reinício e verificação no runtime, além dos 104 testes e teste nativo isolado de entrega, transferência, morte/recuperação e expulsão. Servidor iniciou com os demais sistemas e voltou a responder ao canal privado.
+- **Limites:** esta entrega confirma os dados e a proteção no servidor real; o cliente estava fechado na verificação de entrega. Inspeção visual da insígnia, teste de morte no cliente real e homologação oficial permanecem pendentes. Não houve morte forçada do personagem do dev.
+- **Próximo:** reabrir o cliente para conferir visualmente a insígnia e seguir a homologação oficial. Nenhum bloqueio de instalação privada permanece.
+
 ## 2026-11-15, painel R21 aplicado e ativação das insígnias pendente (Melekyy / Codex)
 
 - **Aplicado sem reinício:** bloqueio da bancada para membros sem a função de bibliotecário e seletores de membro/escola em Professores. Nomeação de bibliotecários disponível ao líder nessa aba. O cliente conectado confirmou a fonte R21; a tentativa de abrir a bancada pelo personagem comum foi recusada pelo servidor e a interação deixou de constar no seu modelo.

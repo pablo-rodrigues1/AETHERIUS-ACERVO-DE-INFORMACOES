@@ -52,7 +52,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - Os 104 tomos atuais têm título e descrição em português na Biblioteca, com busca também pelo original. A tradução preserva os registros nativos e não renomeia itens do inventário. Valores ausentes nos textos dos mods não são inventados. O título da classe recebeu espaçamento próprio junto ao retorno.
 - A R20 detalha a aba **Registros**, exclusiva da liderança: nomes e IDs de perfil de autor e envolvidos, cargo ou função, substituições, revogações e diferenças antes/depois quando aplicáveis. Os dados são salvos no momento da ação e preservados após renomeações ou expulsões. Registros anteriores permanecem intactos, com aviso sobre os detalhes históricos não gravados. O limite existente é de 100 registros recentes exibidos por guilda e 5.000 retidos no estado global.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
-- A interface R21 aplicada no privado restringe a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. A entrega e proteção das insígnias do Elemental Vision II estão implementadas e testadas, mas sua ativação privada ainda aguarda fechamento do cliente/MO2 e instalação sincronizada do plugin, que continua desativado no runtime atual. A configuração de exemplo não habilita o mod automaticamente.
+- A R21 instalada no privado restringe a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. O Elemental Vision II está ativo no cliente/servidor privado, com entrega automática e proteção de inventário/morte conectadas; cinco registros reais conferidos. A configuração de exemplo não habilita o mod automaticamente, e a implantação oficial ainda precisa conferir dependências e adaptadores.
 
 ## Parâmetros e fórmulas
 
@@ -98,7 +98,7 @@ Ver [diario.md](diario.md).
 ## Pendências conhecidas
 
 - Conectar a autorização da Staff e o vínculo de Classes ao servidor oficial.
-- Confirmar os registros dos medalhões e as dependências de inventário da implantação.
+- Confirmar os registros dos medalhões e as dependências de inventário na implantação oficial; os cinco registros foram ativados e conferidos no privado.
 - Homologar com clientes reais: permissões, pertences, itens, conflitos com outros módulos e estabilidade nas transições de área.
 - Informar a URL do repositório do código.
 
