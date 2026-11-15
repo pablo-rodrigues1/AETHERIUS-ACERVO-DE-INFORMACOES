@@ -21,7 +21,8 @@ Melekyy atua apenas na conjuração, com confirmação explícita do dev para co
 
 - Fontes privados: projeto `Sistema de Sync Geral`, `src/summons/`, `src/retire-summons.js`, configuração `config/summons.json` e `native/SkySummonAI.cpp`.
 - Complemento v0.38: projeto `Sistema de Guildas 2`, diretório `conjuracao/`, com adaptador de companheiro, instalador, reversão e testes.
-- Não há URL de repositório configurada para esse código. A base completa da v0.38 pura não foi encontrada na máquina nem entre os repositórios acessíveis; não confundir os fontes locais privados com essa base.
+- Por escolha explícita de Melekyy em 15/11/2026, somente a documentação é publicada no acervo. Código, pacote de distribuição e backup anterior permanecem locais; não foi criado repositório de código nem enviada uma release. O campo `repositorio` permanece `null`.
+- A base completa da v0.38 pura não foi encontrada na máquina nem entre os repositórios acessíveis; não confundir os fontes locais privados com essa base.
 
 ## Escopo e preservação
 

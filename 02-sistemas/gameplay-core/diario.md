@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15, escopo da publicação (Melekyy / Codex)
+
+- **Pedido do dev:** subir somente a documentação no acervo. Código, ZIP candidato e backup anterior permanecem locais; não criar repositório de código nem publicar release nesta etapa.
+- **Feito:** documento de conjuração, quadro técnico e progresso alinhados a esse escopo. A instalação privada confirmada e as evidências anteriores permanecem registradas.
+- **Próximo:** obter os fontes completos oficiais e homologar a integração; a publicação documental não altera o estado de validação da candidata v0.38.
+- **Bloqueios:** permanecem a falta da base completa e os testes oficiais pendentes. Nenhuma mudança de código ou implantação nesta atualização documental.
+
 ## 2026-11-15, conjuração no privado e complemento v0.38 (Melekyy / Codex)
 
 - **Feito:** backup do pacote original e dos fontes/configuração/dados/arquivos privados anteriores. Conjuração reativada em execução com `skySummonActorV5`, limite de duas e acompanhamento nativo. A definição V4 arquivada foi preservada. Nenhum bundle/binário foi substituído, sem reiniciar jogo/servidor.

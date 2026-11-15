@@ -64,7 +64,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Definir regras de crédito, comércio e ritual | 14/11/2026 |
 | [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Conectar as permissões da Staff e de Classes e testar no oficial | 14/11/2026 |
-| [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Integrar os fontes completos e testar com dois jogadores no oficial | 15/11/2026 |
+| [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
@@ -72,7 +72,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
-- **15/11/2026:** Conjuração no privado: duas criaturas permanecem e acompanham, confirmado pelo usuário; complemento oficial separado, com versão anterior preservada e homologação pendente.
+- **15/11/2026:** Conjuração: duas criaturas acompanham no privado, confirmado pelo usuário; somente documentação publicada no acervo, com código/pacote locais e homologação oficial pendente.
 - **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
 - **14/11/2026:** Planilha e fichas completadas com os 164 registros de feitiços de Classes; diferenças do resumo do código documentadas, sem mudança no servidor.
 

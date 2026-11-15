@@ -18,7 +18,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | Sistema | Fase | Responsável | Repositório | Última atualização |
 |---|---|---|---|---|
 | [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17, kdu, Melekyy (conjuração) | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-15 |
-| [Conjuração](gameplay-core/conjuracao.md) | em-teste | Melekyy | Complemento separado; privado confirmado, oficial pendente | 2026-11-15 |
+| [Conjuração](gameplay-core/conjuracao.md) | em-teste | Melekyy | Documentação no acervo; código/pacote locais; oficial pendente | 2026-11-15 |
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
 | [Lobisomem sincronizado](lobisomem/README.md) | em-teste | kdu | pacote separado (patches sobre aetherius-server v0.38) | 2026-11-14 |
 | [Olhar sincronizado](olhar-sincronizado/README.md) | em-teste | kdu | kit de teste local (gamemode/olhar-service.js) | 2026-11-14 |
