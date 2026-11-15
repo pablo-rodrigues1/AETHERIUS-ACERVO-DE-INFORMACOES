@@ -24,11 +24,12 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 
 ## Escopo
 - Inclui: todos os cabelos do modpack que têm parte solta (Vanilla hair remake e addon, HammerHair, Apachii, KS Hairdos Lite, BeastHHBB, Khajiit) e as capas do Cloaks and Capes.
-- Não inclui: cabelos curtos ou presos (1.030 modelos, continuam parados); chifres, barbatanas e penas; perucas; colisão com o corpo; NPCs com rosto pré-gerado.
+- Não inclui: cabelos curtos ou presos (1.030 modelos, continuam parados); chifres, barbatanas e penas; perucas; colisão malha contra malha; NPCs com rosto pré-gerado.
 
 ## Funcionamento
 - Cabelo: a ferramenta separa o que está colado na cabeça do que está solto. O solto vira até 8 correntes de 1 a 6 ossos, penduradas no osso da cabeça. Os pesos da malha são refeitos; a posição dos vértices não muda.
 - Capa: os modelos já são presos a três ossos de saia traseira do esqueleto XPMSSE. A física solta esses três ossos; a malha não muda.
+- Barreiras: cada osso solto tem um plano preso à parte do corpo mais próxima (cabeça, costas, ombro; na capa, quadril, coxas e panturrilhas). O osso não passa do plano. Faz o papel da colisão com custo de uma conta por osso.
 - Nada foi copiado de mods de física de terceiros: ossos, pesos e arquivos de física saem da ferramenta.
 - Os dois mods andam juntos. O mod de cabelos sem o motor deixa os cabelos longos quebrados.
 
@@ -42,8 +43,9 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 | Inércia do osso | rigidez / 250 (mínimo 20) | O Bullet limita a rigidez pela inércia |
 | Amortecimento da mola | 2 × 2,0 × raiz(rigidez × inércia) | Para o cabelo parar rápido |
 | Massa / gravidade | 1,0 / 0,4 | O modelo já foi feito "caído" |
-| Limites por junta | 17° para fora, 3° para dentro, 14° de lado, 9° de torção | Faz o papel da colisão |
-| Capa | abre 31° para trás, 2° para o corpo, 13° de lado | Por junta, três juntas |
+| Limites por junta | 57° para fora, 6° para dentro, 46° de lado, 11° de torção | Folgados; quem segura o cabelo fora do corpo são as barreiras |
+| Barreiras do cabelo | até 14 de alcance; plano a 3,5 da pele; correção de 80% por passo | 3.948 barreiras em 477 cabelos |
+| Capa | abre 31° para trás, 2° para o corpo, 13° de lado; 9 barreiras | Por junta, três juntas |
 | Personagens com física | 10 | Limite do motor, ajustado pelo desempenho |
 
 ## Dependências
@@ -53,12 +55,13 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 | Address Library (já no modpack) | Exigido pelo FSMP |
 
 ## Decisões relacionadas
-- Sem colisão com o corpo, para ficar leve com muitos jogadores. Rever depois do teste em jogo.
+- Barreiras por osso em vez de colisão malha contra malha, para ficar leve com muitos jogadores. Rever depois do teste em jogo.
 
 ## Diário
 Ver [`diario.md`](diario.md).
 
 ## Pendências conhecidas
 - Nunca foi visto em jogo. Falta conferir o registro do FSMP, o visual e o desempenho com vários jogadores.
-- Capa não passou pelo simulador; pode atravessar as pernas ao correr.
+- Capa não passou pelo simulador; falta ver sentado, agachado e correndo.
+- As barreiras seguram os ossos; a malha entre eles e armaduras volumosas ainda podem raspar.
 - 19 modelos do addon do Vanilla hair remake já vêm quebrados do mod (pele sem ossos) e não foram tocados.
