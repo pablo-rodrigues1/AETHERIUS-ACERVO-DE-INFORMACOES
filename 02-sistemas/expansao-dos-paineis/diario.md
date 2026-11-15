@@ -14,6 +14,12 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, escolas e insígnias da Guilda dos Magos (Melekyy / Codex)
+
+- **Registro:** painel R21 dos Magos restringe bancada a bibliotecários e oferece escolha de membro/escola a líder e professores. Insígnias vinculadas e proteção na morte estão testadas e preparadas, com ativação privada do plugin ainda pendente.
+- **Impacto:** escola e insígnia não substituem a prova de classe/profissão exigida pelo ritual. A filiação Companion e os contratos do ritual continuam intactos.
+- **Próximo:** manter as validações autoritativas planejadas e a separação entre teste privado e oficial.
+
 ## 2026-11-15, permanência e remoção de membros de Guildas (Melekyy / Codex)
 
 - **Registro:** o dev confirmou que não existe saída voluntária; o líder remove o membro e a ação é registrada.

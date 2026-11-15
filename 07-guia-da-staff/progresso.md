@@ -65,14 +65,14 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
-| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R21 testada: fechar cliente privado para ativar as insígnias | 15/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Painel R21 aplicado; fechar cliente para ativar insígnias | 15/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
-- **15/11/2026:** Guildas R20 no privado: registros guardam nomes, IDs e detalhes de cada alteração; histórico anterior preservado. Testes e prévia aprovados; fonte recebida pelo cliente, com conferência visual no jogo pendente.
+- **15/11/2026:** Guildas R21 com bancada exclusiva e seleção de escola aplicada no privado; 104 testes e insígnias reais em servidor nativo isolado aprovados. Ativação das insígnias no jogo aguarda fechamento do cliente/MO2. Registros detalhados R20 preservados.
 - **15/11/2026:** Guildas R19 no privado com vários bibliotecários, fabricação de três segundos, três integrantes fictícios de teste e 104 tomos traduzidos no painel. 88 testes e servidor nativo isolado aprovados; inspeção visual interrompida por Esc, sem confirmação da animação em jogo nem homologação oficial.
 - **15/11/2026:** Guildas R18 com visual inspirado em Grupo e Reis, cores preservadas e Biblioteca por classe; aplicado no privado, com Magos observado no jogo e aceite visual pendente.
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*

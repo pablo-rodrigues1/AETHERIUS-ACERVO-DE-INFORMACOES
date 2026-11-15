@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, painel R21 aplicado e ativação das insígnias pendente (Melekyy / Codex)
+
+- **Aplicado sem reinício:** bloqueio da bancada para membros sem a função de bibliotecário e seletores de membro/escola em Professores. Nomeação de bibliotecários disponível ao líder nessa aba. O cliente conectado confirmou a fonte R21; a tentativa de abrir a bancada pelo personagem comum foi recusada pelo servidor e a interação deixou de constar no seu modelo.
+- **Preservado:** escola, participação como membro comum, inventário, histórico e demais dados. Nenhuma insígnia genérica foi concedida ou permissão de liderança restabelecida.
+- **Pendente:** ativar a cópia privada do plugin Elemental Vision II e a proteção de inventário/morte preparada para ele. Jogo e MO2 continuam abertos; solicitou-se ao dev fechá-los. A instalação sincronizada está pronta, mas ainda não foi executada. O servidor continua com o plugin desativado nesta etapa.
+- **Evidências locais:** relatório de atualização da interface, status R21 do cliente, 104 testes aprovados e teste nativo isolado dos cinco itens, com morte/recuperação e bloqueios. A conferência visual da tela de escola usa dados fictícios; não equivale a teste em cliente real.
+- **Próximo:** após o fechamento, ativar o plugin no cliente/servidor, reiniciar o privado e verificar a entrega correspondente à escola já cadastrada. Homologação oficial continua pendente.
+
 ## 2026-11-15, R21 preparada para ativação privada (Melekyy / Codex)
 
 - **Decisão:** [ADR-0011](../../03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md). Membro comum, professor e líder sem função de bibliotecário não recebem interação nem abrem a bancada. Nomeação de bibliotecários e seleção de membro/escola ficam acessíveis em Professores conforme as respectivas permissões.

@@ -27,7 +27,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
    O membro não pode sair sozinho: precisa ser removido pelo líder. Essa remoção fica nos Registros com o nome e o ID de quem removeu e de quem foi removido.
 4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e podem existir vários bibliotecários. Somente o líder nomeia ou revoga cada um.
 5. Somente bibliotecários nomeados fabricam pela **Biblioteca**, aberta pela bancada. O Arquimago também precisa ser nomeado bibliotecário para fabricar. Cada tomo exige 5 papéis e 1 pedra da alma.
-   Na R21 preparada, só bibliotecários abrem a bancada, inclusive para consultar. O líder nomeia bibliotecários pela aba Professores mesmo sem poder usar o craft.
+   Na interface R21 aplicada no privado, só bibliotecários abrem a bancada, inclusive para consultar. O líder nomeia bibliotecários pela aba Professores mesmo sem poder usar o craft.
 6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
 7. A Biblioteca abre primeiro a escolha de classe. Ao clicar em uma classe, aparecem seus tomos. Use Todas as classes para voltar. Um tomo compartilhado pode aparecer em mais de uma classe.
 8. Os três painéis receberam o mesmo acabamento visual dos painéis de Grupo e Reis, mantendo suas cores: azul para Magos, verde musgo para Alquimistas e marrom escuro para Companions. Os botões e permissões continuam com as mesmas funções.
