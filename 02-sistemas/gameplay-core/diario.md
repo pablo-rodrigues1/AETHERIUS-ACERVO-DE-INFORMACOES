@@ -13,6 +13,16 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, entrega da conciliação de feitiços (mercurius17 / Codex)
+- **Feito:** Classes - Progressão B23:F40 sincronizada com os 164 registros de Classes, em 12 das 18 classes. Nomes e tiers respeitam as mesclagens da origem; sem alteração das tabelas de perks/skills. Grafias corrigidas: Firebolt, Circle of Vitality, Trickster e Font of Vitality. Removidas do destino as entradas antigas sem equivalente na origem e a duplicação de Aura of Thorns.
+- **Documentação:** [catálogo por classe](feiticos-por-classe.md), fichas da Staff, referência da planilha, índices, quadros e changelog atualizados. Publicado no GameplayCore o commit `e64f094ad69d16cad6f1ee056ee45dd20b690105` (somente seis arquivos .md).
+- **Retificação:** a conferência anterior dizia que os feitiços eram idênticos ao código; isso só corresponde aos nomes de allSpellsList, normalizando espaços/apóstrofos. authorizedSpells tem 128 entradas (127 associações únicas), com omissões, nomes antigos e tiers divergentes; allSpellsList difere em seis tiers.
+- **Verificado:** releitura da origem sem mudança; releitura do destino com todos os 164 registros; valores de A/G:J e formatos de A:J preservados. Revisão visual pelo navegador indisponível; sem teste em jogo ou alteração de código.
+- **Dependentes:** UI Core e Guildas informados em seus diários; a apresentação e as permissões em execução permanecem as do código. Frente de dano de kdu preservada.
+- **Próximo:** alinhar os campos de feitiços e espelhos de UI numa tarefa de implementação autorizada, sem presumir liberação ou concessão automática.
+- **Bloqueios:** nenhum para a entrega documental. Git local sem rede; publicação feita pela conexão GitHub, com base na main relida e lease de SHA para preservar alterações simultâneas.
+- **Decisões:** aplicação do ADR-0003; nenhuma mudança nova de design ou arquitetura.
+
 ## 2026-11-14, início da conciliação de feitiços (mercurius17 / Codex)
 - **Feito:** leitura ao vivo das abas Classes e Classes - Progressão, incluindo mesclagens de tier; identificadas 164 associações classe/feitiço em 12 classes. Trabalho solicitado pelo dono: completar a progressão e as listas documentais.
 - **Próximo:** espelhar os nomes e tiers de Classes na seção de feitiços da progressão e publicar catálogo documental com diferenças para authorizedSpells/allSpellsList.

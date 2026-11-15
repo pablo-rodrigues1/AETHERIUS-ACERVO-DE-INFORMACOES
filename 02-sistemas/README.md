@@ -31,7 +31,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | A confirmar | Planejamento dos painéis | 2026-11-14 |
 | [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | Projeto local; URL do código a informar | 2026-11-14 |
 
-Conciliação de feitiços de classes em andamento (14/11/2026): planilha e documentação; GameplayCore continua em desenvolvimento. Ver [diário](gameplay-core/diario.md).
+Conciliação documental de feitiços concluída em 14/11/2026: 164 registros na planilha e nas fichas; [divergências dos JSONs](gameplay-core/feiticos-por-classe.md) permanecem pendentes de implementação. GameplayCore continua em desenvolvimento; ver [diário](gameplay-core/diario.md).
 
 ## Mapa de dependências
 

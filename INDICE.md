@@ -14,6 +14,7 @@
 - `02-sistemas/README.md` — Quadro de status, estrutura de pastas e mapa de dependências dos sistemas.
 - `02-sistemas/gameplay-core/README.md` — AetheriusGameplayCore: lógica autoritativa de gameplay, módulos, parâmetros e pendências.
 - `02-sistemas/gameplay-core/diario.md` — Diário do GameplayCore (sincronizações SYNC-1102 e SYNC-1114).
+- `02-sistemas/gameplay-core/feiticos-por-classe.md` — 164 registros de feitiços por classe, escola e tier; conciliação da planilha e divergências dos JSONs.
 - `02-sistemas/gameplay-core/correcoes-de-dano.md` — Correções de dano no servidor: chaves por fase, armadura, resistências, pendências.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
@@ -82,9 +83,9 @@
 - `07-guia-da-staff/perguntas-frequentes/olhar-dos-jogadores.md` — Para onde os jogadores olham (em teste): a cabeça vira para quem o jogador mira.
 - `07-guia-da-staff/perguntas-frequentes/tecla-ponto-e-virgula-constelacao.md` — A tecla ; abre a constelação: causa e o que fazer se continuar.
 - `07-guia-da-staff/sobrenatural/lobisomem.md` — Como funciona o lobisomem (em teste): transformação, tamanho, prata.
-- `07-guia-da-staff/classes/ficha-conjuradores.md` — Skills, perks e feitiços por marco das 6 classes conjuradoras (do código).
-- `07-guia-da-staff/classes/ficha-guerreiros.md` — Skills, perks e feitiços por marco das 6 classes guerreiras (do código).
-- `07-guia-da-staff/classes/ficha-especialistas.md` — Skills, perks e feitiços por marco das 6 classes especialistas (do código).
+- `07-guia-da-staff/classes/ficha-conjuradores.md` — Skills e perks por marco, com feitiços por tier da planilha, das 6 classes conjuradoras (do código).
+- `07-guia-da-staff/classes/ficha-guerreiros.md` — Skills e perks por marco, com feitiços por tier da planilha, das 6 classes guerreiras (do código).
+- `07-guia-da-staff/classes/ficha-especialistas.md` — Skills e perks por marco, com feitiços por tier da planilha, das 6 classes especialistas (do código).
 - `07-guia-da-staff/racas-e-pedras/README.md` — Tema: raças e pedras guardiãs.
 - `07-guia-da-staff/racas-e-pedras/racas-e-pedras-guardias.md` — Habilidade de cada raça e de cada pedra guardiã.
 - `07-guia-da-staff/itens/pocoes-e-encantamentos.md` — Design: poções e encantamentos do Alquimista e Encantador Mestre (não implementado).

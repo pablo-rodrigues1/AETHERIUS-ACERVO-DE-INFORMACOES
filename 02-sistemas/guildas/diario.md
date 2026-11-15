@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-14, referência de feitiços das classes (mercurius17 / Codex)
+
+- **Feito:** disponibilizado o [catálogo documental de feitiços](../gameplay-core/feiticos-por-classe.md), com 164 registros da planilha e diferenças dos JSONs do GameplayCore.
+- **Impacto:** biblioteca, tomos, permissões e vínculo de Classes do SkyGuilds não foram alterados. A lista documental não substitui o catálogo autorizado nem comprova uma ponte de integração.
+- **Próximo:** consultar a comparação ao integrar a política de magias ao GameplayCore; alinhar os contratos com Melekyy.
+- **Bloqueios:** nenhum para o registro documental; continuam as pendências de integração já descritas abaixo.
+
 ## 2026-11-14 (Melekyy / IA)
 
 - **Feito:** Melekyy confirmou que está desenvolvendo Guildas e autorizou o cadastro no acervo. Registrados o documento técnico, o guia da Staff e a atualização dos quadros e do índice. Instalado o bloco padrão do acervo no `AGENTS.md` do projeto local, que ainda não tinha esse arquivo.

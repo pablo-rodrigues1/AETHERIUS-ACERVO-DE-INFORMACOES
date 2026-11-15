@@ -8,7 +8,7 @@ repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
 atualizado: 2026-11-14
 tags: [gameplay, classes, combate, leveling, persistencia, servidor]
-relacionados: [diario.md, correcoes-de-dano.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
+relacionados: [diario.md, feiticos-por-classe.md, correcoes-de-dano.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
 
 # AetheriusGameplayCore
@@ -64,6 +64,10 @@ flowchart LR
 
 ## Frente de dano no servidor
 Correções da cadeia de dano no addon nativo do `aetherius-server`, ligadas por chave: ver [Correções de dano no servidor](correcoes-de-dano.md) (kdu).
+
+## Feitiços das classes
+
+A [lista completa por classe, escola e tier](feiticos-por-classe.md) transcreve os 164 registros de Classes e documenta a sincronização de Classes - Progressão (B23:F40), de 14/11/2026. Registra também as divergências do código: `authorizedSpells` tem 128 entradas (127 associações únicas) e `allSpellsList` tem os 164 nomes, com seis tiers diferentes. Trata-se de conciliação documental/design; não modifica JSONs, catálogos ou runtime, conforme o ADR-0003.
 
 ## Diário
 Ver [`diario.md`](diario.md).

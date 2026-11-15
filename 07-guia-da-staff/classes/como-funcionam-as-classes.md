@@ -60,7 +60,9 @@ A classe é a "profissão de combate" do personagem: ela define quais habilidade
 - Antes de usar essas ações, combine com o jogador: elas não têm "desfazer" automático.
 
 ## Fichas por classe
-O que cada classe recebe em cada marco (skills, perks com descrição e feitiços autorizados):
+Skills e perks do código em cada marco, e a relação documental de feitiços da planilha por tier. Desde 14/11/2026, a lista de feitiços inclui os 164 registros de Classes, espelhados em Classes - Progressão. **Tiers não são níveis de classe.** As [diferenças entre a lista e o código](../../02-sistemas/gameplay-core/feiticos-por-classe.md) continuam registradas: esta revisão não muda a autorização no servidor nem concede feitiços automaticamente.
+
+Fichas:
 - [Conjuradores](ficha-conjuradores.md)
 - [Guerreiros](ficha-guerreiros.md)
 - [Especialistas](ficha-especialistas.md)

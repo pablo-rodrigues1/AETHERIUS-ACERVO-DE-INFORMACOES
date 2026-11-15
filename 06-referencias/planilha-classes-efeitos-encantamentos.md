@@ -15,7 +15,7 @@ relacionados: [../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-desig
 Resumo da planilha de design de classes, leveling, raças, pedras guardiãs, poções, encantamentos e maldições, conferida aba por aba contra o código em 14/11/2026. Onde o código já define algo, **vale o código** ([ADR-0003](../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md)); a planilha só é fonte para o que ainda não existe no código.
 
 ## Pontos principais
-- Skills e feitiços autorizados por classe da planilha são **idênticos** ao código; perks diferem em poucos pontos (tabela abaixo).
+- Skills conferidas com o código; perks diferem em poucos pontos (tabela abaixo). **Retificação dos feitiços:** Classes contém 164 registros, e Classes - Progressão foi sincronizada com ela. O código mantém 128 entradas em authorizedSpells (127 associações únicas); allSpellsList contém os mesmos 164 nomes da origem, mas seis tiers diferem. Ver [catálogo e comparação completa](../02-sistemas/gameplay-core/feiticos-por-classe.md).
 - Leveling: curva, XP base e grupo iguais; a tabela de diferença de nível ("Delta") e o grupo aplicado a chefes **não** valem.
 - Raças e pedras: valores da planilha batem com os records conferidos.
 - Poções, encantamentos e maldições ainda não têm código: a planilha é o design atual.
@@ -54,6 +54,10 @@ Resumo da planilha de design de classes, leveling, raças, pedras guardiãs, po�
 | Anti-Mago, nível 1 | Sem Conjuration Mastery | Recebe Conjuration Mastery (pré-requisito do Mystic Binding do nível 10), desde 14/11 |
 | Anti-Mago, nível 30 | Magic Resistance (3), Void Brand | Só Magic Resistance (3) (Void Brand já vem no 25) |
 | Grafias | "Rune Mestre", "Heavy Armor Mestre", "One-Hand Mastery" | Rune Master, Heavy Armor Mastery, One-Handed Mastery (mesmos perks) |
+
+#### Feitiços — conciliação de 14/11/2026
+
+A origem foi a aba **Classes**, inclusive as mesclagens da coluna E; a seção de feitiços em **Classes - Progressão B23:F40** agora reproduz seus nomes e tiers. A lista completa por classe e escola e todas as diferenças para `authorizedSpells`/`allSpellsList` estão no [catálogo documental](../02-sistemas/gameplay-core/feiticos-por-classe.md). As fichas da Staff foram atualizadas para esta referência de design, com indicação explícita de que os JSONs e o runtime não foram modificados. A igualdade de feitiços declarada na conferência anterior estava incorreta para o resumo de autorizações.
 
 #### Leveling
 | Tema | Planilha | Código (vale) |

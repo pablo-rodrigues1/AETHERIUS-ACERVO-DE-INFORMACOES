@@ -15,7 +15,8 @@ relacionados: [como-funcionam-as-classes.md, ../../06-referencias/planilha-class
 O que cada classe do grupo Guerreiros (Guardião, Berserker, Cavaleiro Negro, Paladino, Mestre Espadachim, Druída) recebe em cada marco: skills, perks e feitiços que pode aprender.
 
 ## Como funciona
-- Os valores abaixo são os que **estão no código do servidor** (GameplayCore, `modules/class-system/config/classes-config.json`), com as descrições em português do próprio código.
+- **Skills e perks:** os valores abaixo vêm do código do servidor (GameplayCore, `modules/class-system/config/classes-config.json`), com as descrições em português do próprio código.
+- **Feitiços:** referência documental da aba Classes, sincronizada com Classes - Progressão em 14/11/2026. A lista foi completada, mas o código ainda tem diferenças; consultar o [catálogo técnico](../../02-sistemas/gameplay-core/feiticos-por-classe.md). Os nomes originais aparecem entre parênteses quando há tradução. Os tiers são independentes dos marcos de classe; esta revisão não altera o que o servidor autoriza ou entrega.
 - **Skills:** "Todas 20" vale para as skills principais da classe. Quando um marco não cita uma skill, ela fica no valor do marco anterior.
 - **Perks:** chegam sozinhos ao atingir o marco. Um número entre parênteses é o grau do perk (ex.: Armadura Mágica 2).
 - **Feitiços:** a classe só diz quais são permitidos. O jogador aprende por roleplay no Colégio de Winterhold.
@@ -54,9 +55,9 @@ O Guardião é a fortaleza inabalável na linha de frente, o baluarte que separa
 - **Nível 35:** Coração de Pedra (Você não pode ser desestabilizado por ataques de poder e pancadas enquanto bloqueia.); Golpes de Raspão (Imune a vantagens específicas de armas, como Golpes Deformantes e Ferimentos Mortais, se estiver vestindo apenas Armadura Pesada.)
 - **Nível 40:** Face da Montanha (Receber um ataque de poder ou pancada vestindo apenas Armadura Pesada sempre desestabiliza o atacante, com 25% de chance de derrubá-lo.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Berserker
 
@@ -86,9 +87,9 @@ O Berserker é uma força da natureza movida a sangue, adrenalina e fúria incon
 - **Nível 35:** Dançarino de Guerra (Seus ataques causam 20% a mais de dano e dano crítico ao vestir apenas Armadura Leve. Sofrer um golpe não bloqueado desativa este efeito por 10 segundos.); Lâmina em Gancho (Ataques de poder com machados de guerra quebram bloqueios, desferindo um golpe crítico com 3 vezes o dano crítico e derrubando o alvo.)
 - **Nível 40:** Investida em Rolamento (Acumula velocidade durante um ataque de poder em disparada a longa distância, desferindo um golpe crítico com 4 vezes o dano crítico se acumular velocidade suficiente.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Cavaleiro Negro
 
@@ -118,10 +119,10 @@ O Cavaleiro Negro é um guerreiro sombrio que carrega o fardo da escuridão e a 
 - **Nível 35:** Pele de Urso (Recebe 30% a menos de dano de ataque durante seus ataques de poder de duas mãos.); Resistência Mágica II (Aumenta a Resistência Mágica em 20%.)
 - **Nível 40:** Aclamação da Multidão (Matar um oponente com uma arma de duas mãos aumenta o dano de duas mãos em 20% por 20 segundos.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- **Adepto:** Dardo Vampírico (Vampiric Bolt)
-- **Mestre:** Abraço do Progenitor (Scion’s Embrace)
+- **Especialista:** Dardo Vampírico (Vampiric Bolt)
+- **Mestre:** Abraço do Progenitor (Scion's Embrace)
 
 ### Paladino
 
@@ -151,11 +152,11 @@ O Paladino é o bastião solar da justiça, um campeão sagrado ungido para erra
 - **Nível 35:** Conjunto Pesado Combinado (O índice de armadura das peças de Armadura Pesada aumenta em 15% se estiver usando um conjunto combinado de 3 ou mais peças de Armadura Pesada.); Ajuste de Armadura Pesada (O índice de armadura das peças de Armadura Pesada aumenta em 15% se estiver vestindo apenas Armadura Pesada.)
 - **Nível 40:** Inspirar (Aliados vivos a até 15 pés recebem 5 pontos de cura por segundo.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
 - **Novato:** Cura Básica (Healing)
 - **Aprendiz:** Expulsar Mortos-Vivos (Turn Undead)
-- **Adepto:** Círculo da Vida (Circle of Life); Expulsar Grandes Mortos-Vivos (Turn Greater Undead); Aura de Stendarr (Stendarr’s Aura); Barreira Maior (Greater Ward); Ruína dos Vampiros (Vampire’s Bane)
+- **Adepto:** Círculo de Vitalidade (Circle of Vitality); Expulsar Grandes Mortos-Vivos (Turn Greater Undead); Aura de Stendarr (Stendarr's Aura); Barreira Maior (Greater Ward); Ruína dos Vampiros (Vampire’s Bane)
 - **Mestre:** Fragmento Solar (Sun Shard)
 
 ### Mestre Espadachim
@@ -186,9 +187,9 @@ O Mestre Espadachim é a personificação da disciplina letal, um duelista puris
 - **Nível 35:** Executar (Ataques de poder com espadas executam alvos com menos de 20% de Vida, desferindo um golpe crítico com 10 vezes o dano crítico.); Dançarino das Lâminas (Recebe 30% a menos de dano de ataque enquanto realiza ataques de poder com duas armas.)
 - **Nível 40:** Ímpeto de Vitória (Matar um oponente com uma arma de uma mão restaura 150 pontos de Vigor.); Intocável (Move-se 15% mais rápido durante o combate vestindo apenas Armadura Leve. Sofrer um golpe não bloqueado desativa este efeito por 10 segundos.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Druída
 
@@ -218,13 +219,14 @@ O Druida vive em harmonia com os espíritos da natureza e seus animais, que lhe 
 - **Nível 35:** Luz Interior I (Regenera 1% adicional da sua Mágicka total por segundo.); Combatente Disciplinado (Ataques de poder de uma mão custam 25% a menos de Vigor.)
 - **Nível 40:** Almas Gêmeas (Permite invocar ou reanimar um lacaio adicional.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- **Novato:** Totem das Águas (Create Water Totem); Invocar Lobo Espectral (Conjure Spectral Wolf)
-- **Aprendiz:** Invocar Lobo Atroz Espectral (Conjure Spectral Dire Wolf); Pele de Pedra (Stoneflesh); Luz Mágica (Magelight); Detectar Vida (Detect Life); Cura Rápida (Fast Healing); Barreira Firme (Steadfast Ward)
-- **Adepto:** Invocar Tigre-dentes-de-sabre Espectral (Conjure Spectral Sabre Cat); Equilíbrio Vital (Equilibrium); Fardo Gravitacional (Burden); Manto do Turbilhão (Whirlwind Cloak); Círculo da Força (Circle of Strength); Círculo da Sabedoria (Circle of Wisdom)
-- **Especialista:** Invocar Urso Espectral (Conjure Spectral Bear); Pele de Ébano (Ebonyflesh)
+- **Novato:** Totem das Águas (Create Water Totem); Trapaceiro Ilusório (Trickster)
+- **Aprendiz:** Invocar Lobo Espectral (Conjure Spectral Wolf); Pele de Pedra (Stoneflesh); Luz Mágica (Magelight); Cura Rápida (Fast Healing); Barreira Firme (Steadfast Ward)
+- **Adepto:** Invocar Tigre-dentes-de-sabre Espectral (Conjure Spectral Sabre Cat); Detectar Vida (Detect Life); Equilíbrio Vital (Equilibrium); Fardo Gravitacional (Burden); Manto do Turbilhão (Whirlwind Cloak); Círculo da Força (Circle of Strength); Círculo da Sabedoria (Circle of Wisdom)
+- **Especialista:** Invocar Urso Espectral (Conjure Spectral Bear)
 - **Mestre:** Invocar Fera Espectral (Conjure Spectral Manbeast); Fonte da Força (Font of Strength)
+
 
 ## Perguntas comuns de jogadores
 - **Por que não recebi um feitiço da lista?** Feitiços são aprendidos por roleplay; a lista só mostra o que é permitido.

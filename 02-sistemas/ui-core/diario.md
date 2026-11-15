@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, impacto da conciliação documental de feitiços (mercurius17 / Codex)
+- **Feito:** registrada a [lista de 164 feitiços por classe](../gameplay-core/feiticos-por-classe.md), sincronizada entre as duas abas da planilha e as fichas da Staff.
+- **Impacto:** os dados/espelhos do ClassSystem e a interface não foram alterados. O resumo authorizedSpells continua divergente da lista detalhada; o novo catálogo documental não comprova atualização do grimório em execução.
+- **Próximo:** quando houver implementação autorizada, alinhar os campos de feitiços e os espelhos de UI com a política aprovada.
+- **Bloqueios:** nenhum para documentação; nenhuma mudança nos contratos ou na implementação do UI Core.
+
 ## 2026-11-14, relatos do Akatosh (kdu / Claude Opus 5.5)
 - **Feito** (entregue em `missoes/2026-11-14-bugs-akatosh` do kdu, patches sobre a v0.38, não aplicado no repositório):
   - Inventário: arma na mão mostrava "R›" com as letras sobrepostas (`letter-spacing:-3px`). Agora tudo na mão usa a marca da magia, `L`, `R` ou `L R`.

@@ -15,7 +15,8 @@ relacionados: [como-funcionam-as-classes.md, ../../06-referencias/planilha-class
 O que cada classe do grupo Especialistas (Arqueiro, Ranger, Viper, Assassino, Anti-Mago, Trapaceiro) recebe em cada marco: skills, perks e feitiços que pode aprender.
 
 ## Como funciona
-- Os valores abaixo são os que **estão no código do servidor** (GameplayCore, `modules/class-system/config/classes-config.json`), com as descrições em português do próprio código.
+- **Skills e perks:** os valores abaixo vêm do código do servidor (GameplayCore, `modules/class-system/config/classes-config.json`), com as descrições em português do próprio código.
+- **Feitiços:** referência documental da aba Classes, sincronizada com Classes - Progressão em 14/11/2026. A lista foi completada, mas o código ainda tem diferenças; consultar o [catálogo técnico](../../02-sistemas/gameplay-core/feiticos-por-classe.md). Os nomes originais aparecem entre parênteses quando há tradução. Os tiers são independentes dos marcos de classe; esta revisão não altera o que o servidor autoriza ou entrega.
 - **Skills:** "Todas 20" vale para as skills principais da classe. Quando um marco não cita uma skill, ela fica no valor do marco anterior.
 - **Perks:** chegam sozinhos ao atingir o marco. Um número entre parênteses é o grau do perk (ex.: Armadura Mágica 2).
 - **Feitiços:** a classe só diz quais são permitidos. O jogador aprende por roleplay no Colégio de Winterhold.
@@ -54,9 +55,9 @@ O Arqueiro é o fantasma da longa distância, um predador invisível que dita o 
 - **Nível 35:** Rolamento de Esquiva (Executar um rolamento silencioso faz com que todos os ataques e feitiços recebidos errem você por um breve momento.); Mira Mortal (Ataques furtivos com arcos causam 50% a mais de dano.)
 - **Nível 40:** Flecha no Joelho (Armas de longo alcance derrubam alvos que estejam em disparada, desferindo um golpe crítico com 2 vezes o dano crítico.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Ranger
 
@@ -86,9 +87,9 @@ O Ranger é um combatente de escaramuça veloz e dinâmico, mestre em manter o c
 - **Nível 35:** Disparo Imobilizante (Armas de longo alcance reduzem a velocidade do alvo em 15% por acerto durante 15 segundos.); Flecha no Joelho (Armas de longo alcance derrubam alvos que estejam em disparada, desferindo um golpe crítico com 2 vezes o dano crítico.)
 - **Nível 40:** Intocável (Move-se 15% mais rápido durante o combate vestindo apenas Armadura Leve. Sofrer um golpe não bloqueado desativa este efeito por 10 segundos.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Viper
 
@@ -118,9 +119,9 @@ O Viper é um mestre da guerra química e do combate insidioso. Especializado na
 - **Nível 35:** Médico da Peste (Oponentes próximos sofrem 25% de fraqueza a veneno e doenças.); Cobra-Cuspidora (Ataques de poder com adagas causam sangramento em seres vivos por 30 segundos, desferindo um golpe crítico com 3 vezes o dano crítico.)
 - **Nível 40:** Veneno Concentrado III (Venenos aplicados a armas duram por 6 acertos adicionais.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- Nenhum.
+- Nenhum listado na aba Classes.
 
 ### Assassino
 
@@ -150,7 +151,7 @@ O Assassino é a própria sombra encarnada, um mestre da infiltração que trans
 - **Nível 35:** Guerreiro das Sombras (Entrar em modo furtivo (recarga de 5 segundos) ou executar um rolamento silencioso em combate torna você invisível brevemente, forçando os oponentes a procurarem por você.); Conjuração Silenciosa (Todos os feitiços e brados de qualquer escola de magia são silenciosos para os outros.)
 - **Nível 40:** Ímpeto de Vitória (Matar um oponente com uma arma de uma mão restaura 150 pontos de Vigor.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
 - **Especialista:** Invisibilidade (Invisibility)
 
@@ -182,11 +183,12 @@ O Anti-Mago é o pesadelo supremo de qualquer praticante das artes arcanas. Imbu
 - **Nível 35:** Dançarino das Lâminas (Recebe 30% a menos de dano de ataque enquanto realiza ataques de poder com duas armas.); O Atronach (30% de chance de absorver feitiços recebidos, restaurando sua Mágicka.)
 - **Nível 40:** Intocável (Move-se 15% mais rápido durante o combate vestindo apenas Armadura Leve. Sofrer um golpe não bloqueado desativa este efeito por 10 segundos.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
-- **Novato:** Adaga Vinculada (Bound Dagger); Escudo Vinculado (Bound Shield)
+- **Novato:** Adaga Vinculada (Bound Dagger)
+- **Aprendiz:** Escudo Vinculado (Bound Shield)
 - **Adepto:** Dança das Sombras (Shadow Dance); Cúpula de Barreira Mágica (Magic Barrier); Lâmina Noturna (Nightblade)
-- **Poder:** Clone das Sombras (Shadow Clone)
+- **Mestre:** Trapaceiro Ilusório (Trickster)
 
 ### Trapaceiro
 
@@ -216,13 +218,14 @@ O Trapaceiro é o mestre do caos e da imprevisibilidade, transformando o campo d
 - **Nível 35:** Fuga de Hethoth (Uma vez a cada 10 minutos, paralisa um atacante corpo a corpo que esteja prestes a causar dano letal a você.); Estabilidade (Feitiços e efeitos de Alteração duram 25% a mais.)
 - **Nível 40:** Intocável (Move-se 15% mais rápido durante o combate vestindo apenas Armadura Leve. Sofrer um golpe não bloqueado desativa este efeito por 10 segundos.)
 
-**Feitiços autorizados (aprendidos por roleplay no Colégio):**
+**Feitiços da planilha por tier (aprendizado por roleplay no Colégio):**
 
 - **Novato:** Atronach Indomável (Unbound Atronach)
-- **Aprendiz:** Conceder Bênção (Bestow Gift); Troca Espacial (Switcheroo); Leveza da Pluma (Featherlight); Passo do Vento (Windwalker)
-- **Adepto:** Teletransporte (Teleportation); Fardo Gravitacional (Burden); Desintegrar Arma (Disintegrate Weapon); Corroer Armadura (Corrode Armor); Manto do Turbilhão (Whirlwind Cloak)
-- **Especialista:** Invisibilidade (Invisibility); Desvanecer (Fade); Vulnerabilidade ao Fogo (Weakness to Fire); Vulnerabilidade ao Gelo (Weakness to Frost); Vulnerabilidade ao Choque (Weakness to Shock); Vulnerabilidade ao Veneno (Weakness to Poison); Nuvem de Cinzas (Ash Cloud)
-- **Mestre:** Caos Generalizado (Mayhem); Devorador de Armaduras (Armoreater); Tempestade de Cinzas (Cinder Storm); Peso do Mundo (Weight of the World)
+- **Aprendiz:** Conceder Bênção (Bestow Gift); Troca Espacial (Switcheroo); Leveza da Pluma (Featherlight)
+- **Adepto:** Passo do Vento (Windwalker); Teletransporte (Teleportation); Fardo Gravitacional (Burden); Desintegrar Arma (Disintegrate Weapon); Corroer Armadura (Corrode Armor); Manto do Turbilhão (Whirlwind Cloak)
+- **Especialista:** Vulnerabilidade ao Gelo (Weakness to Frost); Vulnerabilidade ao Choque (Weakness to Shock); Vulnerabilidade ao Veneno (Weakness to Poison); Nuvem de Cinzas (Ash Cloud)
+- **Mestre:** Invisibilidade (Invisibility); Desvanecer (Fade); Caos Generalizado (Mayhem); Vulnerabilidade ao Fogo (Weakness to Fire); Devorador de Armaduras (Armoreater); Tempestade de Cinzas (Cinder Storm); Peso do Mundo (Weight of the World)
+
 
 ## Perguntas comuns de jogadores
 - **Por que não recebi um feitiço da lista?** Feitiços são aprendidos por roleplay; a lista só mostra o que é permitido.
