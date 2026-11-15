@@ -42,3 +42,7 @@ Ambiente: `C:\Code\Aetherius - Servidor Local` (commit do repositório raiz `e71
 - **XP de maldição** pelas mesmas ações da classe: falta o gancho no GameplayCore. Por enquanto só `/maldicao … xp N`.
 - **Reset de classe** na setagem: falta `globalThis.aetheriusClassReset` no AetheriusClassStore.
 - Achados 4 e 5 da revisão 1.2 (mensagens de recusa na UI) e revisão cruzada desta etapa.
+
+## Painel de teste (F8)
+
+Só no servidor local, para staff. `client-test-panel/supernatural-test.js` fica instalado só no mod MO2 `AETHERIUS - SERVIDOR LOCAL`. Ação `test` no servidor (`grant`/`remove`/`xp`/`status`), ligada por `AETHERIUS_SUPERNATURAL_TEST_PANEL=true`. A tecla é lida pelo trecho do cliente (`sp.Input.isKeyPressed(0x42)`), que manda `{type:"supernaturalHotkey"}` à página por `AetheriusUI.ToView`. A página abre a UI como o TAB e vai para o módulo. Não testado em jogo.

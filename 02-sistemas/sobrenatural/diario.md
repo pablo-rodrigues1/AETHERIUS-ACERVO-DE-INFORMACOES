@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 2: vampirismo e Lorde Vampiro
+- **Feito:** poderes e inatos do COTV por estágio; raça vampírica projetada; Lorde Vampiro sincronizado para todos (mesmo modelo da fera do kdu); cliente local com o patch de cliente do kdu; painel de teste F8. Detalhes: etapa-2-vampirismo.md.
+- **Próximo:** teste em jogo com 2 jogadores; estágio mínimo do Lorde; bônus numéricos via GameplayCore.
+- **Bloqueios:** bônus numéricos dependem do sistema de atributos do GameplayCore.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 2: lobisomem no servidor
 - **Feito:** base do kdu aplicada no servidor local; serviço Sobrenatural (estado autoritativo, keyword só no servidor, revision/grantId, UI snapshot/choose + push, comando /maldicao); perks e magias do Manbeast por estágio. Detalhes: etapa-2-lobisomem.md.
 - **Próximo:** teste em jogo; lado cliente do kdu; bônus que exigem plugin; revisão cruzada.
