@@ -52,7 +52,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - Os 104 tomos atuais têm título e descrição em português na Biblioteca, com busca também pelo original. A tradução preserva os registros nativos e não renomeia itens do inventário. Valores ausentes nos textos dos mods não são inventados. O título da classe recebeu espaçamento próprio junto ao retorno.
 - A R20 detalha a aba **Registros**, exclusiva da liderança: nomes e IDs de perfil de autor e envolvidos, cargo ou função, substituições, revogações e diferenças antes/depois quando aplicáveis. Os dados são salvos no momento da ação e preservados após renomeações ou expulsões. Registros anteriores permanecem intactos, com aviso sobre os detalhes históricos não gravados. O limite existente é de 100 registros recentes exibidos por guilda e 5.000 retidos no estado global.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
-- Medalhões têm implementação de vínculo e proteção, mas dependem do mod e dos registros configurados. A configuração de exemplo não habilita os registros.
+- A R21 preparada restringe também a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola; o servidor entrega e protege a insígnia correspondente do Elemental Vision II. A implantação privada aguarda fechamento do cliente/MO2; o mod original está disponível, mas seu plugin ainda estava desativado. A configuração de exemplo continua sem registros habilitados automaticamente.
 
 ## Parâmetros e fórmulas
 
@@ -88,6 +88,7 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 - [ADR-0008](../../03-decisoes/ADR-0008-visual-dos-paineis-de-guildas.md): acabamento visual das três guildas, preservando cores e comportamento.
 - [ADR-0009](../../03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md): vários bibliotecários, fabricação com duração e tradução da Biblioteca.
 - [ADR-0010](../../03-decisoes/ADR-0010-registros-detalhados-de-guildas.md): registros históricos com nomes, IDs e detalhes da alteração.
+- [ADR-0011](../../03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md): bancada exclusiva, seleção de escola e insígnias vinculadas, incluindo morte.
 - O registro inicial não introduz nova decisão de design ou arquitetura.
 
 ## Diário

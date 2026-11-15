@@ -14,6 +14,15 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, R21 preparada para ativação privada (Melekyy / Codex)
+
+- **Decisão:** [ADR-0011](../../03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md). Membro comum, professor e líder sem função de bibliotecário não recebem interação nem abrem a bancada. Nomeação de bibliotecários e seleção de membro/escola ficam acessíveis em Professores conforme as respectivas permissões.
+- **Insígnias:** entrega e reparo idempotentes com journal; bloqueios nativos de descarte, depósito e roubo e proteção no journal contra transferência/alteração. Adaptador do SkyGuilds mantém a insígnia no inventário durante espírito/recuperação e fora da penalidade dos demais equipamentos. Expulsão continua revogando o item.
+- **Verificado:** 104 testes automatizados aprovados. Servidor nativo isolado carregou os cinco itens reais do Elemental Vision II, confirmou entrega sem duplicatas, acesso da bancada, bloqueios, permanência na morte/recuperação e revogação por expulsão. Esses testes não tiveram clientes reais de jogo. A prévia de seleção de escola usa dados fictícios.
+- **Preparado:** instalador privado com backup, cópia ESP completa em override isolado, plugin ao fim da ordem nos dois lados, atualização do manifesto de terreno sem alterar geografia e verificação de cliente/servidor. Os arquivos originais do mod e os bundles devem permanecer intactos.
+- **Aguardando:** o dev fechar Skyrim privado e MO2 para aplicar a ativação e reiniciar somente o servidor privado. A implantação desta revisão ainda não foi realizada nesta entrada.
+- **Próximo:** instalar, verificar o recebimento da insígnia do personagem de teste e conferir as permissões após a reabertura. Homologação oficial pendente.
+
 ## 2026-11-15, bancada restrita e insígnias de escola iniciadas (Melekyy / Codex)
 
 - **Pedido confirmado:** membros comuns não abrem a bancada nem para consulta. Somente bibliotecários têm acesso. Líderes e professores selecionam um membro e sua escola no painel; o membro recebe automaticamente a insígnia correspondente do Elemental Vision no inventário.
