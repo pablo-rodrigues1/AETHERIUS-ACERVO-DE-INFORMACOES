@@ -24,7 +24,8 @@ Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais 
 - **Verificado:** 88 testes automatizados aprovados, incluindo interface e ausência de sobreposição em três larguras. Servidor nativo isolado com diário real confirmou fabricação simultânea, débito único, cancelamento por revogação e cobertura dos 104 tomos. Esse teste não teve clientes de jogo.
 - **Privado:** atualização sem reinício, com backup. Inventários, pertences, grupos, catálogo autorizado, núcleo nativo, conjuração e bundles do cliente preservados. Fonte R19 recebida e reportada pronta pelo cliente conectado.
 - **Limites:** usuário interrompeu a inspeção visual com Esc. Animação e disposição final no jogo, visão por outro jogador e homologação oficial permanecem sem confirmação nesta etapa.
-- **Próximo:** conferir a fabricação e as nomeações no cliente real; seguir integração oficial. Nenhum bloqueio de publicação.
+- **Publicação:** atualização enviada à `main` em `9081546`. A execução [Validar acervo](https://github.com/pablo-rodrigues1/AETHERIUS-ACERVO-DE-INFORMACOES/actions/runs/43730031323) falhou por ausência de frontmatter em oito documentos preexistentes de Sobrenatural. A conferência dos arquivos versionados confirmou que os documentos de Guildas têm o cabeçalho; não foram alterados os documentos do outro sistema nesta sessão.
+- **Próximo:** conferir a fabricação e as nomeações no cliente real; seguir integração oficial. Envio publicado; validação global do acervo depende da correção documental de Sobrenatural.
 
 ## 2026-11-15, fabricação animada e vários bibliotecários iniciados (Melekyy / Codex)
 
