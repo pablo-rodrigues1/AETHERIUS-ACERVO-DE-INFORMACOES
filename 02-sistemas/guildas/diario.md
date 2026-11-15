@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, registros detalhados iniciados (Melekyy / Codex)
+
+- **Pedido:** continuidade de Guildas por Melekyy, em desenvolvimento, para detalhar quem alterou o quê e quem foi afetado: nomes, IDs de perfil, cargos e funções.
+- **Direção:** gravar os dados no momento da ação pelo servidor, preservando nomes e cargos mesmo após remoção ou renomeação. Incluir diferenças antes/depois quando aplicáveis; manter a aba restrita à liderança.
+- **Histórico anterior:** não reconstruir nomes de funções nem alterações que os registros antigos não armazenaram; indicar essa limitação.
+- **Próximo:** implementar, testar persistência e autorização e atualizar o privado sem reinício. A homologação oficial continua pendente.
+
 ## 2026-11-15, Biblioteca R19 instalada no privado (Melekyy / Codex)
 
 - **Feito:** vários bibliotecários com nomeação e revogação individuais pelo líder; bibliotecário anterior preservado. Somente os nomeados fabricam. Três integrantes fictícios identificados foram adicionados exclusivamente ao painel privado, sem contas ou personagens no mundo.
