@@ -14,6 +14,13 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, continuidade da navegação de Guildas (Melekyy / Codex)
+
+- **Registro:** Biblioteca R17 organiza a consulta primeiro por classe e depois por tomo; [ADR-0007](../../03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md).
+- **Impacto:** nenhum contrato de elegibilidade, classe ou clã do ritual de coleta mudou; a escolha na interface não é prova de participação.
+- **Próximo:** manter a validação autoritativa prevista no planejamento do ritual.
+- **Bloqueios:** requisitos e integração do ritual continuam pendentes.
+
 ## 2026-11-15, impacto da Biblioteca de Guildas (Melekyy / Codex)
 
 - **Registro:** Guildas atualizou a Biblioteca dos Magos no privado para indicar classes, categorias e efeitos dos tomos; ver [diário de Guildas](../guildas/diario.md) e [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md).

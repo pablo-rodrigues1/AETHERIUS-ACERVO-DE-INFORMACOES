@@ -11,3 +11,4 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0004](ADR-0004-adaptacao-isolada-da-conjuracao.md) | Adaptação isolada da conjuração | aceito | 2026-11-15 |
 | [ADR-0005](ADR-0005-comercio-empresas-e-profissoes.md) | COMÉRCIO como empresas ligadas às profissões | aceito | 2026-11-15 |
 | [ADR-0006](ADR-0006-biblioteca-e-indicacoes-de-magias.md) | Biblioteca dos Magos e indicações de magias | aceito | 2026-11-15 |
+| [ADR-0007](ADR-0007-biblioteca-primeiro-a-classe.md) | Biblioteca primeiro por classe e depois por tomo | aceito | 2026-11-15 |

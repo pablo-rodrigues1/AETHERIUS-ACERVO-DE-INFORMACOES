@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, catálogo primeiro por classe entregue (Melekyy / Codex)
+
+- **Feito:** a Biblioteca R17 abre com as classes e suas quantidades de tomos. Ao escolher uma classe, mostra apenas os tomos associados; Todas as classes retorna ao início. Categorias e efeitos permanecem nos tomos.
+- **Decisão:** [ADR-0007](../../03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md), complementando a apresentação já autorizada, sem mudar regras de magia.
+- **Verificado:** 22 testes direcionados aprovados; a persistência da escolha na sessão foi acrescentada e os 11 testes de integração correspondentes passaram. Filtragem antes da paginação verificada com uma classe de 35 tomos e contagem sem duplicação por categoria.
+- **Privado:** R17 aplicada sem reinício, com backup e arquivos protegidos preservados. Runtime confirma 12 classes e 104 tomos autorizados; o cliente conectado informou renderização da R17. A navegação visual pelo jogador e a homologação oficial ainda não foram confirmadas.
+- **Impacto:** receita, inventários, permissões, efeitos e conjuração preservados. Nenhum contrato do Core ou do ritual de coleta foi alterado.
+- **Próximo:** conferir a navegação no jogo e seguir a integração oficial.
+- **Bloqueios:** nenhum de publicação; homologação oficial segue pendente.
+
 ## 2026-11-15, ajuste da ordem do catálogo iniciado (Melekyy / Codex)
 
 - **Pedido:** continuidade da alteração de Biblioteca já autorizada: apresentar primeiro as classes e, dentro da classe escolhida, seus tomos.

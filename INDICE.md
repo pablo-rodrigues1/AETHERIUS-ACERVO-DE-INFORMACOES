@@ -68,6 +68,7 @@
 
 - `03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md` — Aprovação do modelo COMÉRCIO, com Residência como referência e políticas ainda pendentes.
 - `03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md` — Biblioteca na bancada dos Magos com classes, categorias e efeitos das fontes existentes.
+- `03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md` — Escolha da classe antes da lista de tomos na Biblioteca.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

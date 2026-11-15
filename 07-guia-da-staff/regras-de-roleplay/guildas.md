@@ -27,6 +27,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e um bibliotecário.
 5. O bibliotecário usa a **Biblioteca**, aberta pela bancada de fabricação. A antiga aba Biblioteca foi retirada. Os tomos continuam exigindo os mesmos materiais e permissões.
 6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
+7. A Biblioteca abre primeiro a escolha de classe. Ao clicar em uma classe, aparecem seus tomos. Use Todas as classes para voltar. Um tomo compartilhado pode aparecer em mais de uma classe.
 
 ## Exemplo prático
 
