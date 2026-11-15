@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, ajuste da ordem do catálogo iniciado (Melekyy / Codex)
+
+- **Pedido:** continuidade da alteração de Biblioteca já autorizada: apresentar primeiro as classes e, dentro da classe escolhida, seus tomos.
+- **Decisão de apresentação:** separar escolha de classe e lista de tomos, com retorno à lista de classes; preservar categorias, efeitos, receita e autorização.
+- **Próximo:** implementar a navegação e validar filtragem e atualização privada sem reinício.
+- **Bloqueios:** nenhum nesta etapa; homologação oficial continua pendente.
+
 ## 2026-11-15, Biblioteca e indicações de magias entregues (Melekyy / Codex)
 
 - **Feito:** aba Biblioteca antiga retirada da interface; aba da produção renomeada para Biblioteca. Cada tomo mostra classes e categorias autorizadas e a descrição do efeito base, quando disponível. A liderança conserva a nomeação do bibliotecário na Biblioteca.
