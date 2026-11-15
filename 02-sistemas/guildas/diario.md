@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, separação dos arquivos de conjuração iniciada (Melekyy / Codex)
+
+- **Pedido:** conferir se os scripts de conjuração estão juntos aos painéis de Guildas e retirá-los desse projeto.
+- **Constatação:** o runtime dos painéis já não instala conjuração; o controlador privado está no SkySync. Contudo, a pasta candidata de adaptação e quatro ferramentas antigas de arquivamento/desativação conjunta ainda estavam no projeto de Guildas.
+- **Direção:** mover o complemento para o projeto local separado de Summons, preservar os arquivos e pacotes antigos com hashes e retirar as ferramentas conjuntas da distribuição de Guildas. Backups históricos não são módulos ativos. Não desativar nem reinstalar conjuração no privado.
+- **Próximo:** conferir dependências carregadas, testar o complemento no destino e inspecionar o novo pacote de Guildas. Melekyy continua responsável; homologação oficial pendente.
+
 ## 2026-11-15, R23 instalada: professor/bibliotecário sem cargos extras (Melekyy / Codex)
 
 - **Entrega:** especialistas dos Magos não acumulam cargos personalizados, liderança ou outra função; professor ocupa somente um posto de escola. O vínculo pessoal de escola permanece. Regra nos dois sentidos das ações, na validação persistente e nos seletores da interface. [ADR-0013](../../03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md).
