@@ -29,7 +29,8 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Residências e IPTU](residencias/README.md) | em-desenvolvimento | A confirmar | [aetherius-residencias](https://github.com/eksmurf/aetherius-residencias) | 2026-11-14 |
 | [Painel administrativo](painel-adm/README.md) | em-teste | A confirmar | [painel-oficial](https://github.com/eksmurf/painel-oficial) | 2026-11-14 |
 | [Governos, Jarl e castelos](governos/README.md) | em-desenvolvimento | A confirmar | [aetherius-painel-jarl](https://github.com/eksmurf/aetherius-painel-jarl) | 2026-11-14 |
-| [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | A confirmar | Planejamento dos painéis | 2026-11-14 |
+| [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | koy (planejamento); implementação a definir | Planejamento dos painéis | 2026-11-15 |
+| [COMÉRCIO: empresas e profissões](expansao-dos-paineis/comercio-empresas-e-profissoes.md) | planejado | koy (planejamento); implementação a definir | Documentação no Acervo | 2026-11-15 |
 | [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | Projeto local; URL do código a informar | 2026-11-14 |
 
 Conciliação documental de feitiços concluída em 14/11/2026: 164 registros na planilha e nas fichas; [divergências dos JSONs](gameplay-core/feiticos-por-classe.md) permanecem pendentes de implementação. GameplayCore continua em desenvolvimento; ver [diário](gameplay-core/diario.md).
@@ -50,4 +51,5 @@ flowchart LR
   guildas[Guildas / SkyGuilds] --> gameplay-core
   expansao --> painel
   expansao --> residencias
+  expansao --> gameplay-core
 ```

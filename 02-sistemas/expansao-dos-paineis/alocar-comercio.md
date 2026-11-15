@@ -3,9 +3,9 @@ titulo: Painel de residências e função Alocar Comércio
 tipo: referencia
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [planejamento]
-relacionados: [README.md]
+relacionados: [README.md, comercio-empresas-e-profissoes.md]
 fonte: Planejamento dos painéis de 13/11/2026, revisão 3
 ---
 
@@ -14,6 +14,10 @@ fonte: Planejamento dos painéis de 13/11/2026, revisão 3
 ## Resumo
 
 Cadastro de estabelecimentos, portas e responsável comercial. O escopo é planejado. Os [contratos compartilhados](README.md) descrevem as dependências dos cinco projetos.
+
+## Complemento de produto aprovado em 15/11/2026
+
+O [modelo COMÉRCIO](comercio-empresas-e-profissoes.md) acrescenta aquisição de estabelecimentos, contratação de profissionais, remuneração negociada e Imposto de Comércio mensal definido pelo Rei da jurisdição. Usa **Residência** como referência estrutural, com regras comerciais próprias. Este cadastro continua sendo a etapa de identificar espaços/acessos e responsáveis; não executa uma compra nem libera receitas automaticamente. Preços, calendário, arrendamento e consequências de inadimplência permanecem pendentes. Ver [ADR-0005](../../03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md).
 
 ## Fluxo proposto
 
@@ -44,7 +48,7 @@ Trocar responsável revoga imediatamente a gestão anterior sem apagar estabelec
 ## Decisões de produto
 
 - Quem aloca, transfere e encerra um comércio: S+, proprietário, Rei/Lorde ou outra autoridade?
-- O comércio será adquirido, concedido ou arrendado? Este projeto não inventa preço, taxa, prazo ou tributação.
+- O modelo aprovado prevê estabelecimentos adquiríveis; definir preço, condições de aquisição e eventual arrendamento. O imposto será mensal e definido pelo Rei; base, limites, vigência e significado de mês ainda estão pendentes.
 - Quem será o responsável e quais funcionários poderão gerir portas/quartos?
 - Haverá horários automáticos? Não estão incluídos no pedido inicial.
 - Como ficam residências/comércios mistos e portas de passagem pública?

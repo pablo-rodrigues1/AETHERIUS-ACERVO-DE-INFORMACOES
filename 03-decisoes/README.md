@@ -9,3 +9,4 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0002](ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md) | Sincronização dos Cores com os repositórios oficiais | aceito | 2026-11-14 |
 | [ADR-0003](ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md) | O código prevalece sobre planilhas de design | aceito | 2026-11-14 |
 | [ADR-0004](ADR-0004-adaptacao-isolada-da-conjuracao.md) | Adaptação isolada da conjuração | aceito | 2026-11-15 |
+| [ADR-0005](ADR-0005-comercio-empresas-e-profissoes.md) | COMÉRCIO como empresas ligadas às profissões | aceito | 2026-11-15 |

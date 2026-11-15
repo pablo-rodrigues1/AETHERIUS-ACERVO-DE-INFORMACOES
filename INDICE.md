@@ -42,6 +42,7 @@
 - `02-sistemas/expansao-dos-paineis/README.md` — Cinco projetos para bancos, comércios, quartos, portões e ritual de coleta.
 - `02-sistemas/expansao-dos-paineis/diario.md` — Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 - `02-sistemas/expansao-dos-paineis/bancos-e-adm.md` — Empréstimos com juros para o Rei autorizado, com cobrança na conta institucional.
+- `02-sistemas/expansao-dos-paineis/comercio-empresas-e-profissoes.md` — Modelo aprovado do COMÉRCIO: empresas, profissões, salários, imposto mensal e consequências possíveis de RP; implementação planejada.
 - `02-sistemas/expansao-dos-paineis/alocar-comercio.md` — Cadastro de estabelecimentos, portas e responsável comercial.
 - `02-sistemas/expansao-dos-paineis/portoes-da-cidade.md` — Controle de portões municipais por jurisdição de Rei e Lorde.
 - `02-sistemas/expansao-dos-paineis/comercios-e-quartos.md` — Aluguel de quartos com direitos de entrada e uso do baú durante o contrato.
@@ -57,6 +58,8 @@
 - `03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md` — O que volta do servidor/cliente para os repos dos Cores e o que fica de fora.
 - `03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md` — Quando planilha de design e código divergem, vale o código.
 - `03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md` — Complemento restrito à conjuração, preservação da versão anterior e separação entre privado aprovado e oficial pendente.
+
+- `03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md` — Aprovação do modelo COMÉRCIO, com Residência como referência e políticas ainda pendentes.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.
@@ -97,3 +100,4 @@
 - `07-guia-da-staff/economia/casas-e-iptu.md` — O dono paga o imposto da casa em Septims a cada 15 dias e gerencia o acesso pelo TAB.
 - `07-guia-da-staff/economia/governos-e-castelos.md` — O Rei nomeado pode controlar as portas do castelo no painel de Casas.
 - `07-guia-da-staff/regras-de-roleplay/guildas.md` — Explicação simples das Guildas em desenvolvimento por Melekyy e dos limites da atuação da Staff.
+- `07-guia-da-staff/economia/comercio-empresas-e-profissoes.md` — Guia da Staff sobre o planejamento comercial e os limites do que já foi decidido.

@@ -15,6 +15,7 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 
 ## [Não lançado]
 ### Adicionado
+- Planejamento COMÉRCIO aprovado: estabelecimentos adquiríveis, contratação de profissionais, salários e Imposto de Comércio mensal definido pelo Rei; referência estrutural em Residência, consequências econômicas e políticas pendentes. Incluídos [texto completo](../02-sistemas/expansao-dos-paineis/comercio-empresas-e-profissoes.md), [ADR-0005](../03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md) e guia da Staff; sem implementação ou cobrança nova nesta publicação.
 - Conjuração: acompanhamento e duas criaturas instalados e confirmados no privado; complemento separado para v0.38, com backup e reversão, ainda pendente de integração/homologação oficial. [Estado e evidências](../02-sistemas/gameplay-core/conjuracao.md), [ADR-0004](../03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md).
 - Conciliação de feitiços: Classes - Progressão B23:F40 e fichas da Staff com os 164 registros de Classes, por tier; catálogo no Acervo e no GameplayCore, com divergências de authorizedSpells/allSpellsList documentadas. Apenas planilha e documentação, sem alteração de runtime. [Catálogo](../02-sistemas/gameplay-core/feiticos-por-classe.md).
 - Documentadas as entregas Loja 0.7.0, Residências 0.5.3, Painel ADM 2026.11.13.1 e governos ADM1/REIS1/TABFIX1, com as cinco expansões planejadas em 13/11. [Inventário das entregas](../06-referencias/inventario-aetherius.md).

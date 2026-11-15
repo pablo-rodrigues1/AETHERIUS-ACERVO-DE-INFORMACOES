@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15, impacto do planejamento COMÉRCIO (koy / Codex)
+
+- **Referência:** [empresas, profissões e imposto comercial](../expansao-dos-paineis/comercio-empresas-e-profissoes.md), aprovado pelo usuário após revisão e confirmação de publicação.
+- **Impacto em GameplayCore e profissões:** Empresas poderão contratar profissionais, mas emprego/titularidade não concedem profissão, rank ou receitas. A progressão permanece com os sistemas competentes; salários, vínculos e integração econômica ainda precisam de implementação. Nenhum código ou catálogo do Core foi alterado.
+- **Próximo:** combinar os contratos e responsáveis antes da implementação; esta entrada registra uma dependência de planejamento.
+- **Bloqueios:** nenhum para a referência documental; sem alteração da fase de implantação do sistema.
+
 ## 2026-11-15, escopo da publicação (Melekyy / Codex)
 
 - **Pedido do dev:** subir somente a documentação no acervo. Código, ZIP candidato e backup anterior permanecem locais; não criar repositório de código nem publicar release nesta etapa.

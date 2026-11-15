@@ -3,9 +3,9 @@ titulo: Painel de Comércios e hospedagem
 tipo: referencia
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [planejamento]
-relacionados: [README.md]
+relacionados: [README.md, comercio-empresas-e-profissoes.md]
 fonte: Planejamento dos painéis de 13/11/2026, revisão 3
 ---
 
@@ -14,6 +14,10 @@ fonte: Planejamento dos painéis de 13/11/2026, revisão 3
 ## Resumo
 
 Aluguel de quartos com direitos de entrada e uso do baú durante o contrato. O escopo é planejado. Os [contratos compartilhados](README.md) descrevem as dependências dos cinco projetos.
+
+## Relação com o modelo COMÉRCIO
+
+O [planejamento aprovado de empresas e profissões](comercio-empresas-e-profissoes.md) acrescenta titularidade comercial, contratação, salários e imposto mensal. Não resolve automaticamente os preços/prazos de quartos, o destinatário dos aluguéis ou direitos sobre bens dos hóspedes. Hospedagem continua limitada a estabelecimentos habilitados e exige preservação dos contratos na venda, no encerramento e em eventual inadimplência comercial. Nenhum mecanismo de salário ou cobrança foi implementado nesta publicação.
 
 ## Áreas do painel
 

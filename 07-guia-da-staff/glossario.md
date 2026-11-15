@@ -17,12 +17,14 @@ Palavras do jogo explicadas de forma simples. Ordem alfabética.
 |---|---|
 | Carga (de manutenção) | "Combustível" que mantém arma ou armadura de um material funcionando 100%. Vem dos kits e gasta lutando. |
 | Classe | A especialização de combate do personagem (ex.: Paladino). Define skills e perks. |
+| COMÉRCIO | Sistema planejado de estabelecimentos administrados por jogadores, com contratação de profissionais e tributação própria. |
 | Conjuração | Magia que pode chamar uma criatura para ajudar o personagem. |
 | Diademas | Saldo adquirido com dinheiro real e usado na Loja. |
 | Disciplina (vampiro) | Especialidade que o vampiro escolhe no design das maldições (ex.: Fortitude). |
 | Dungeon | Área com inimigos e recompensas, que "renasce" depois de um tempo. |
 | Fadiga (de XP) | Limite de XP por dia a partir do nível 15. Recomeça às 06:00. |
 | Geração (de masmorra) | A "leva" de inimigos de uma masmorra, igual para todos até o reset. |
+| Imposto de Comércio | Tributo mensal planejado para estabelecimentos; definido pelo Rei da jurisdição, com cálculo e calendário ainda pendentes. |
 | Instância | Uma versão separada de uma área, usada para manter certos jogadores ou atividades no mesmo ambiente. |
 | IPTU | Imposto periódico da residência, cobrado em Septims. |
 | Kit de manutenção | Item que dá 50 cargas de manutenção de um material. |

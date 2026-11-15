@@ -2,8 +2,8 @@
 titulo: Diário de Expansão dos painéis
 tipo: historico
 status: ativo
-responsaveis: []
-atualizado: 2026-11-14
+responsaveis: [koy]
+atualizado: 2026-11-15
 tags: [aetherius]
 relacionados: []
 ---
@@ -13,6 +13,16 @@ relacionados: []
 ## Resumo
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
+
+## 2026-11-15, COMÉRCIO aprovado para documentação (koy / Codex)
+
+- **Autorização:** o usuário revisou o texto, pediu trocar o nome do sistema de referência de Casas para Residência e confirmou expressamente a publicação no Acervo.
+- **Feito:** publicado o [texto completo aprovado](comercio-empresas-e-profissoes.md), com aquisição, empresas, contratação de profissionais, salários negociados e Imposto de Comércio mensal definido pelo Rei. Incluídas consequências possíveis para sindicatos, Casas Maiores/Menores, concorrência, abastecimento e política fiscal.
+- **Decisão:** [ADR-0005](../../03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md); pontos indefinidos preservados como pendências. koy consta como responsável pelo planejamento; implementação e responsáveis técnicos ainda a definir.
+- **Dependentes:** vinculados cadastro, hospedagem, Residência, Governos e profissões/GameplayCore; impacto documental registrado nos diários pertinentes. Guias, índices, quadros e changelog atualizados.
+- **Validação:** arquivos Markdown, links internos e preservação do texto aprovado; sem alteração de código ou implantação. Publicação pela conexão GitHub com releitura da main e condição pelo SHA atual, pois o git local não dispõe de acesso de rede nesta sessão.
+- **Próximo:** definir aquisição/arrendamento, preços/limites, calendário do mês, cálculo e vigência do imposto, salários, vínculos, acessos e inadimplência antes da implementação.
+- **Bloqueios:** nenhum para documentação; requisitos operacionais continuam pendentes.
 
 ## 2026-11-14
 

@@ -3,7 +3,7 @@ titulo: Diário de Governos, Jarl e castelos
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [aetherius]
 relacionados: []
 ---
@@ -13,6 +13,13 @@ relacionados: []
 ## Resumo
 
 Histórico documental de Governos, Jarl e castelos, com a base de integração e o próximo passo.
+
+## 2026-11-15, impacto do planejamento COMÉRCIO (koy / Codex)
+
+- **Referência:** [empresas, profissões e imposto comercial](../expansao-dos-paineis/comercio-empresas-e-profissoes.md), aprovado pelo usuário após revisão e confirmação de publicação.
+- **Impacto em Governos:** O modelo prevê Imposto de Comércio mensal definido pelo Rei da jurisdição e integração futura à arrecadação/tesouro oficiais. Significado de mês, cálculo, limites, vigência e inadimplência ainda serão definidos; não há cobrança implementada nesta publicação.
+- **Próximo:** combinar os contratos e responsáveis antes da implementação; esta entrada registra uma dependência de planejamento.
+- **Bloqueios:** nenhum para a referência documental; sem alteração da fase de implantação do sistema.
 
 ## 2026-11-14
 

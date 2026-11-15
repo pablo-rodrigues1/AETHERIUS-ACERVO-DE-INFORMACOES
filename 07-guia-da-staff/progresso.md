@@ -17,7 +17,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 4 · 🟡 14 · 📝 4 · ⚪ 1 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 4 · 🟡 14 · 📝 5 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -62,7 +62,8 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 | Maldições (vampirismo, licantropia, bruxaria) | 📝 | Progressão em 6 estágios desenhada na planilha; sem código (a transformação do lobisomem está em teste à parte) | 14/11/2026 |
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
-| [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Definir regras de crédito, comércio e ritual | 14/11/2026 |
+| [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
+| [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
 | [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Conectar as permissões da Staff e de Classes e testar no oficial | 14/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
@@ -71,6 +72,8 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
+
+- **15/11/2026:** Aprovado o planejamento COMÉRCIO: empresas, contratação, salários e imposto mensal; texto revisado usa Residência como referência. Sem implementação nesta publicação.
 
 - **15/11/2026:** Conjuração: duas criaturas acompanham no privado, confirmado pelo usuário; somente documentação publicada no acervo, com código/pacote locais e homologação oficial pendente.
 - **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
@@ -82,4 +85,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **14/11/2026:** Olhar dos jogadores: todo mundo vê para onde cada um olha, com a cabeça acompanhando a câmera de forma suave (em teste).
 - **14/11/2026:** Lobisomem visto em jogo e aprovado: tela vermelha no fim, grito de dor masculino/feminino que vira rosnado e coração acelerando. Pacote e mod entregues.
 - **14/11/2026:** Documentados Loja, IPTU, registro de compras, castelos e cinco projetos futuros. [Consultar entregas](../06-referencias/inventario-aetherius.md).
-- **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.
