@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, cronograma e contagem de bibliotecários solicitados (Melekyy / Codex)
+
+- **Visão geral:** substituir o contador de cargos dos Magos pelo total de bibliotecários nomeados. No espaço que mostrava os nomes dos bibliotecários, apresentar o cronograma de aulas.
+- **Autoridade:** só o Arquimago cadastra ou remove aulas. Os demais membros consultam escola, dia e horário. Oferecer dia semanal ou data específica, com horário de Brasília explícito e validação no servidor.
+- **Escopo acumulado:** continua a implementação dos dez quartos, baús nominais, controle geral de portas exclusivo do Arquimago e retirada de vínculo de escola exclusiva dele. A legenda indicada na tela de membros já foi retirada, sem alterar as restrições dos cargos.
+- **Próximo:** concluir testes nativos dos baús/quartos e de permissões, instalar a entrega conjunta com backup e atualizar o guia da Staff.
+
 ## 2026-11-15, dez quartos de alunos e retirada da escola iniciados (Melekyy / Codex)
 
 - **Pedido:** cadastrar os dez quartos com cama da instância atual, atribuir um aluno e um baú nominal por quarto, com acesso de porta por proximidade ao dono e à administração. Professores e líder atribuem os quartos.
