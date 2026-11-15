@@ -72,6 +72,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **15/11/2026:** Guildas: troca privada de liderança para professor da escola atual verificada, sem acúmulo de funções, sem reinício e com inventário/insígnia preservados. Nenhuma nova regra; oficial segue pendente.
 - **15/11/2026:** Guildas R25 aplicada sem reinício: dez quartos com móveis existentes, escola removida só pelo Arquimago e cronograma visível aos membros. Controle geral de portas só do Arquimago; professores operam portas por proximidade. 134 testes e ensaio nativo aprovados, cliente confirmou vinte nomes. Aceite humano e oficial pendentes.
 - **15/11/2026:** Conjuração separada dos arquivos e pacote atual de Guildas, com arquivos antigos preservados e hashes conferidos. Controlador privado segue no SkySync, sem reinício; candidato passou em 13 testes no novo projeto. Documentação publicada; validação global falha em 17 documentos de Sobrenatural. Oficial pendente.
 - **15/11/2026:** Guildas R23 instalada sem reinício: professor/bibliotecário sem cargos extras ou liderança, mantendo escola. Três cargos extras de teste retirados com registro; 117 testes e teste nativo isolado aprovados. Cliente confirmou R23; oficial pendente. Documentação publicada; validação global falha em 17 documentos de Sobrenatural.

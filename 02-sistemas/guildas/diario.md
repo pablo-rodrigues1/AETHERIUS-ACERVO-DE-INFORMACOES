@@ -14,6 +14,12 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, troca administrativa de função no privado (Melekyy / Codex)
+
+- **Pedido atendido:** personagem conectado definido como professor da própria escola. Liderança retirada na mesma gravação, respeitando exclusividade. A nomeação anterior daquela escola era um registro fictício de teste e foi substituída com auditoria; nenhum outro jogador real foi removido.
+- **Verificado:** permissão de professor/quartos ativa, sem gestão de líder, controle geral de portas ou fabricação. Vínculo de escola, inventário/insígnia, quartos, pertences e demais guildas preservados; estado vivo igual ao disco. Backup local, sem reinício e sem alteração de código ou regras do sistema.
+- **Limite:** operação administrativa privada; não representa homologação oficial ou novo aceite visual. Dados de jogadores e backups permanecem locais.
+
 ## 2026-11-15, entrega privada R25 e compartimentos existentes (Melekyy / Codex)
 
 - **Entregue:** dez quartos, atribuição por professores/Arquimago e acesso de porta por proximidade. Controle geral das portas exclusivo do Arquimago, conforme confirmação do dev. Troca/liberação é permitida com pertences, que permanecem no móvel para o novo dono.
