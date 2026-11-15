@@ -54,7 +54,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
 - A R21 instalada no privado restringe a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. O Elemental Vision II está ativo no cliente/servidor privado, com entrega automática e proteção de inventário/morte conectadas; cinco registros reais conferidos. A configuração de exemplo não habilita o mod automaticamente, e a implantação oficial ainda precisa conferir dependências e adaptadores.
 - A R22 acrescenta **Y → Portas do Colégio**, exclusiva do líder e dos professores atuais. Trancar/destrancar todas ou uma passagem controla 68 passagens/86 referências da instalação privada, incluindo os dois lados de 16 teleportes e quatro grupos de portão. A tranca impede entrada e saída para todos, inclusive o operador, até a liberação. Política persistente, guarda no servidor e aplicação nativa no cliente; instalação preserva o estado original, e três referências desativadas não são habilitadas. Não constitui barreira global de teleporte.
-- Professor e bibliotecário dos Magos não acumulam funções. O líder precisa revogar a função atual antes de nomear a outra; candidatos incompatíveis não aparecem no seletor, e o servidor também recusa. Um conflito de teste no privado foi corrigido preservando professor e revogando bibliotecário com registro.
+- A R23 amplia a exclusividade de professor e bibliotecário dos Magos: não acumulam cargos personalizados, liderança ou outra função. Professor ocupa um único posto de escola. O vínculo pessoal de escola permanece permitido e não é trocado automaticamente. Retirar cargos extras antes de nomear e revogar a função antes de atribuir cargos ou promover a líder; servidor, estado persistido e seletores validam a regra. Na migração privada, três cargos extras de dois integrantes fictícios foram retirados com registro, preservando funções e escolas.
 
 ## Parâmetros e fórmulas
 
@@ -92,6 +92,7 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 - [ADR-0010](../../03-decisoes/ADR-0010-registros-detalhados-de-guildas.md): registros históricos com nomes, IDs e detalhes da alteração.
 - [ADR-0011](../../03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md): bancada exclusiva, seleção de escola e insígnias vinculadas, incluindo morte.
 - [ADR-0012](../../03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md): portas nos dois sentidos, controle por líder/professores e exclusão entre professor/bibliotecário.
+- [ADR-0013](../../03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md): exclusividade dos especialistas dos Magos, preservando vínculo pessoal de escola.
 - O registro inicial não introduz nova decisão de design ou arquitetura.
 
 ## Diário
@@ -106,6 +107,8 @@ Ver [diario.md](diario.md).
 - Informar a URL do repositório do código.
 
 ## Base da verificação
+
+Atualização R23 de 15/11/2026: 117 testes completos e teste nativo isolado com quatro bots aprovados; pedidos pelo transporte foram recusados sem alteração persistida quando tentavam acúmulos proibidos. Atualização privada sem reinício, com três retiradas de cargos auditadas e preservação de funções, escolas, liderança, inventários e demais dados. Estado vivo corresponde ao disco e o cliente conectado confirmou R23. Prévia com dados fictícios; aceite visual humano e homologação oficial pendentes.
 
 Atualização R22 de 15/11/2026: 112 testes completos e seis rechecagens direcionadas após o último ajuste aprovados. Catálogo final de 68 passagens/86 referências validado no servidor nativo isolado; 166 pacotes recusados nas 83 referências ativas, três desativadas preservadas e teleporte destrancado testado nos dois sentidos. Instalada sem reiniciar jogo/servidor, com inventários e arquivos protegidos preservados; o cliente conectado confirmou fonte R22 e APIs. Não foram aplicadas trancas de teste no mundo privado real. Prévia de interface com dados fictícios; travessia humana e homologação oficial pendentes.
 

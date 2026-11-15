@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, R23 instalada: professor/bibliotecário sem cargos extras (Melekyy / Codex)
+
+- **Entrega:** especialistas dos Magos não acumulam cargos personalizados, liderança ou outra função; professor ocupa somente um posto de escola. O vínculo pessoal de escola permanece. Regra nos dois sentidos das ações, na validação persistente e nos seletores da interface. [ADR-0013](../../03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md).
+- **Migração:** projeção validada e backup antes de mudar dados. Três cargos personalizados foram retirados de dois integrantes fictícios pela ação normal do líder, cada retirada com nomes, IDs, cargo e autor nos Registros privados. Funções, escolas, liderança, inventários, portas e demais dados preservados. Nenhuma troca automática de escola ou insígnia; nenhum dado de jogador publicado.
+- **Verificação:** 117 testes completos aprovados; teste nativo isolado com quatro bots e nenhum cliente real confirmou recusas pelo transporte, persistência, escola preservada e inventários intactos. A prévia usa dados fictícios. Atualização aplicada sem reiniciar jogo/servidor nem sobrescrever bundles ativos; estado vivo corresponde ao disco e cliente conectado confirmou R23.
+- **Limites e próximo:** aceite visual humano e homologação oficial pendentes. Antes de instalar em outra base, conferir acúmulos antigos: a carga rejeita dados incompatíveis e não apaga cargos silenciosamente. Outras guildas, receita, insígnias, conjuração e portas não receberam novas regras.
+
 ## 2026-11-15, exclusividade dos cargos de professor e bibliotecário iniciada (Melekyy / Codex)
 
 - **Pedido:** quem for professor ou bibliotecário dos Magos não pode ter outros cargos; preservar apenas o vínculo com a escola.

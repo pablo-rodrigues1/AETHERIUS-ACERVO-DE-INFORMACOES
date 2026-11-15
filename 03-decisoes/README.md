@@ -17,3 +17,4 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0010](ADR-0010-registros-detalhados-de-guildas.md) | Registros detalhados e históricos de gestão das Guildas | aceito | 2026-11-15 |
 | [ADR-0011](ADR-0011-bancada-e-insignias-das-escolas.md) | Bancada exclusiva e insígnias vinculadas às escolas | aceito | 2026-11-15 |
 | [ADR-0012](ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md) | Portas do Colégio e funções incompatíveis nos Magos | aceito | 2026-11-15 |
+| [ADR-0013](ADR-0013-exclusividade-dos-cargos-dos-magos.md) | Exclusividade dos cargos de professor e bibliotecário dos Magos | aceito | 2026-11-15 |
