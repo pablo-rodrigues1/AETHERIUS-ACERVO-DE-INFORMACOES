@@ -14,6 +14,13 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, impacto do refinamento visual de Guildas (Melekyy / Codex)
+
+- **Registro:** [Guildas R18](../guildas/diario.md) recebeu acabamento visual inspirado em Grupo e Reis, sem alterar o código desses sistemas.
+- **Impacto:** nenhum contrato de filiação, classe, jurisdição ou participação do ritual de coleta foi modificado.
+- **Próximo:** preservar a validação autoritativa prevista no planejamento do ritual.
+- **Bloqueios:** requisitos e integração do ritual continuam pendentes.
+
 ## 2026-11-15, continuidade da navegação de Guildas (Melekyy / Codex)
 
 - **Registro:** Biblioteca R17 organiza a consulta primeiro por classe e depois por tomo; [ADR-0007](../../03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md).

@@ -14,6 +14,17 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, refinamento visual R18 entregue (Melekyy / Codex)
+
+- **Feito:** Magos, Alquimistas e Companions receberam molduras, brasões, marca d'água, cartões de informação e liderança, abas, botões e cartões de classes refinados. Azul, verde musgo e marrom escuro preservados, com referência nos painéis locais de Grupo e Reis.
+- **Decisão:** [ADR-0008](../../03-decisoes/ADR-0008-visual-dos-paineis-de-guildas.md). Biblioteca por classe, permissões, receitas, inventários e catálogo preservados.
+- **Verificado:** sete testes de interface aprovados, incluindo estabilidade das abas e retirada do estilo antigo durante a atualização. Oito capturas de prévia por revisão, com dados fictícios, cobrindo as três guildas, membros, professores, Biblioteca e janelas de 1366 × 768 e 390 × 844. Cores conferidas pelos valores computados.
+- **Privado:** atualização sem reinício, com backup, preservação dos arquivos protegidos e recepção da R18 no cliente. Painel dos Magos e navegação entre telas observados diretamente no Skyrim; Alquimistas e Companions conferidos nas prévias. Corrigidos a sobreposição do estilo antigo, o aviso de versão da apresentação e a barra de rolagem do cliente.
+- **Limites:** observação visual local não equivale a aceite explícito do usuário nem homologação oficial; a observação no jogo cobriu os Magos.
+- **Impacto:** alteração de apresentação, sem contrato novo para Core, Grupo, Reis ou ritual de coleta.
+- **Próximo:** colher o aceite visual do dev e seguir as integrações oficiais pendentes.
+- **Bloqueios:** nenhum de publicação.
+
 ## 2026-11-15, refinamento visual das três guildas iniciado (Melekyy / Codex)
 
 - **Pedido:** continuidade do desenvolvimento de Guildas: estilizar Magos, Alquimistas e Companions usando os painéis locais de Grupo e Reis como referência e conservando suas cores.

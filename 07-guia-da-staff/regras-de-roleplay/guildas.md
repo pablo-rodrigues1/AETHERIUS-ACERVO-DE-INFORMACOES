@@ -28,6 +28,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 5. O bibliotecário usa a **Biblioteca**, aberta pela bancada de fabricação. A antiga aba Biblioteca foi retirada. Os tomos continuam exigindo os mesmos materiais e permissões.
 6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
 7. A Biblioteca abre primeiro a escolha de classe. Ao clicar em uma classe, aparecem seus tomos. Use Todas as classes para voltar. Um tomo compartilhado pode aparecer em mais de uma classe.
+8. Os três painéis receberam o mesmo acabamento visual dos painéis de Grupo e Reis, mantendo suas cores: azul para Magos, verde musgo para Alquimistas e marrom escuro para Companions. Os botões e permissões continuam com as mesmas funções.
 
 ## Exemplo prático
 

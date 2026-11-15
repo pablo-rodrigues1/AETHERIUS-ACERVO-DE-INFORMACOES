@@ -46,6 +46,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - A aba de produção na bancada se chama **Biblioteca**; a antiga aba de consulta foi retirada. O bibliotecário pesquisa e fabrica tomos pelo mesmo catálogo autorizado. Cada tomo indica suas classes, categorias (Novato a Mestre) e efeito base disponível nos plugins; a busca reconhece classe e categoria. A liderança mantém a nomeação do bibliotecário na Biblioteca.
 - A receita vigente no código cobra **5 papéis e 1 pedra da alma** por tomo, com a mesma validação de acesso e proximidade. A descrição é informativa: não libera magias, não redefine requisitos de aprendizado e não altera seus efeitos.
 - Na R17, a Biblioteca apresenta primeiro as classes com suas quantidades de tomos. Escolher uma classe abre somente seus tomos; **Todas as classes** retorna à escolha. A classe é filtrada antes da paginação, e um tomo compartilhado aparece nas classes autorizadas correspondentes.
+- A R18 refina os três painéis com referência em Grupo e Reis: molduras, brasões, marca d'água, cartões, abas e botões. Magos mantêm azul; Alquimistas, verde musgo; Companions, marrom escuro. A disposição adapta-se a janelas menores e não altera ações ou permissões.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
 - Medalhões têm implementação de vínculo e proteção, mas dependem do mod e dos registros configurados. A configuração de exemplo não habilita os registros.
 
@@ -79,6 +80,7 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 - [ADR-0003](../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md): documentar o comportamento definido no código.
 - [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md): apresentação da Biblioteca e fonte das indicações de magias.
 - [ADR-0007](../../03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md): navegação por classe antes dos tomos.
+- [ADR-0008](../../03-decisoes/ADR-0008-visual-dos-paineis-de-guildas.md): acabamento visual das três guildas, preservando cores e comportamento.
 - O registro inicial não introduz nova decisão de design ou arquitetura.
 
 ## Diário
@@ -99,3 +101,5 @@ Levantamento de 14/11/2026 com leitura das fontes locais acima, de `README.md`, 
 Atualização de 15/11/2026: 12 testes de interface, catálogo e apresentação aprovados; 104 tomos autorizados e 103 descrições disponíveis no runtime privado. A fonte de interface R16 foi atualizada sem reinício. O personagem de teste estava desconectado; a confirmação visual em jogo permanece pendente. Nenhum teste no oficial foi executado nesta atualização.
 
 Continuação de 15/11/2026: R17 com seleção por classe instalada no privado, 22 testes direcionados aprovados e verificação adicional dos 11 testes de integração após acrescentar a persistência da escolha. O runtime confirma 12 classes e 104 tomos; o cliente conectado reportou renderização R17. A confirmação visual da navegação e a homologação oficial seguem pendentes.
+
+Refinamento R18 de 15/11/2026: sete testes de interface aprovados e oito capturas de prévia com dados fictícios por revisão. As três cores foram preservadas. A atualização foi aplicada sem reinício, e os Magos foram observados diretamente no Skyrim. As outras duas guildas foram conferidas nas prévias; não houve homologação oficial nem aceite explícito do usuário nesta etapa.
