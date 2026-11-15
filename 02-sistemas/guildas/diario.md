@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, refinamento visual das três guildas iniciado (Melekyy / Codex)
+
+- **Pedido:** continuidade do desenvolvimento de Guildas: estilizar Magos, Alquimistas e Companions usando os painéis locais de Grupo e Reis como referência e conservando suas cores.
+- **Direção:** fundo escuro, molduras e brasões, cartões e títulos mais legíveis; azul, verde musgo e marrom escuro mantidos.
+- **Escopo:** apresentação e organização visual; preservar navegação por classe da Biblioteca, funções, permissões, receitas e dados.
+- **Próximo:** comparar as três guildas em prévias renderizadas, verificar a navegação e aplicar a atualização privada sem reinício.
+- **Bloqueios:** nenhum nesta etapa; aceitação visual em jogo e integração oficial continuam pendentes.
+
 ## 2026-11-15, catálogo primeiro por classe entregue (Melekyy / Codex)
 
 - **Feito:** a Biblioteca R17 abre com as classes e suas quantidades de tomos. Ao escolher uma classe, mostra apenas os tomos associados; Todas as classes retorna ao início. Categorias e efeitos permanecem nos tomos.
