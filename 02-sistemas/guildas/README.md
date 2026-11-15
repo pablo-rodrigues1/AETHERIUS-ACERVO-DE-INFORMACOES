@@ -43,7 +43,8 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - A Staff nomeia ou remove o líder por API do servidor, após autorização real. Não há ação do navegador para se tornar líder.
 - O líder convida, remove membros e gerencia cargos e funções. O jogador precisa aceitar o convite para entrar.
 - Cargos personalizados não concedem gestão. Nos Magos, líder ou professor define uma escola por estudante; o código não permite trocar esse vínculo sem a saída por expulsão.
-- O bibliotecário pesquisa e obtém tomos pelo catálogo autorizado. A receita vigente no código cobra **5 papéis e 1 pedra da alma** por tomo, com validação de acesso e proximidade.
+- A aba de produção na bancada se chama **Biblioteca**; a antiga aba de consulta foi retirada. O bibliotecário pesquisa e fabrica tomos pelo mesmo catálogo autorizado. Cada tomo indica suas classes, categorias (Novato a Mestre) e efeito base disponível nos plugins; a busca reconhece classe e categoria. A liderança mantém a nomeação do bibliotecário na Biblioteca.
+- A receita vigente no código cobra **5 papéis e 1 pedra da alma** por tomo, com a mesma validação de acesso e proximidade. A descrição é informativa: não libera magias, não redefine requisitos de aprendizado e não altera seus efeitos.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
 - Medalhões têm implementação de vínculo e proteção, mas dependem do mod e dos registros configurados. A configuração de exemplo não habilita os registros.
 
@@ -75,6 +76,7 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 
 - [ADR-0001](../../03-decisoes/ADR-0001-integracao-continua-por-ia.md): documentação contínua.
 - [ADR-0003](../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md): documentar o comportamento definido no código.
+- [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md): apresentação da Biblioteca e fonte das indicações de magias.
 - O registro inicial não introduz nova decisão de design ou arquitetura.
 
 ## Diário
@@ -91,3 +93,5 @@ Ver [diario.md](diario.md).
 ## Base da verificação
 
 Levantamento de 14/11/2026 com leitura das fontes locais acima, de `README.md`, `docs/INTEGRACOES.md` e `docs/SISTEMAS-RETIRADOS.md`. A importação de `src/index.js` em Node.js foi verificada; a suíte de testes, o jogo e o servidor oficial não foram executados nesta sessão. Registros locais de implantação privada não comprovam homologação pública.
+
+Atualização de 15/11/2026: 12 testes de interface, catálogo e apresentação aprovados; 104 tomos autorizados e 103 descrições disponíveis no runtime privado. A fonte de interface R16 foi atualizada sem reinício. O personagem de teste estava desconectado; a confirmação visual em jogo permanece pendente. Nenhum teste no oficial foi executado nesta atualização.

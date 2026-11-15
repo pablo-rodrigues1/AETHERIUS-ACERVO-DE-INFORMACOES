@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, Biblioteca e indicações de magias entregues (Melekyy / Codex)
+
+- **Feito:** aba Biblioteca antiga retirada da interface; aba da produção renomeada para Biblioteca. Cada tomo mostra classes e categorias autorizadas e a descrição do efeito base, quando disponível. A liderança conserva a nomeação do bibliotecário na Biblioteca.
+- **Decisão:** [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md), usando a política vigente e os registros dos plugins; sem alterar o aprendizado, a receita ou os feitiços.
+- **Verificado:** 12 testes de interface, catálogo e apresentação aprovados. Atualização privada R16 aplicada sem reiniciar e com backup; 104 tomos autorizados, todos com associação de classe, e 103 com descrição de efeito disponível. Dados, catálogo de autorização e arquivos protegidos preservados.
+- **Limite:** o personagem de teste não estava conectado ao privado durante a aplicação; a nova fonte de interface está registrada para a próxima conexão. A confirmação visual em jogo e a homologação oficial continuam pendentes.
+- **Impacto:** nenhum ajuste de contrato no Core ou no ritual de coleta; a busca da Biblioteca também reconhece classe e categoria. A conjuração reativada permanece separada.
+- **Próximo:** confirmar a apresentação no jogo e seguir as integrações oficiais de Staff e Classes.
+- **Bloqueios:** nenhum de publicação; integração oficial segue pendente.
+
 ## 2026-11-15, início do ajuste da Biblioteca (Melekyy / Codex)
 
 - **Autorização:** o dev confirmou a continuidade de Guildas, já sob responsabilidade de Melekyy e em desenvolvimento, para esta alteração de interface.

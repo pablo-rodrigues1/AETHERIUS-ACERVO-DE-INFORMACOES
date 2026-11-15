@@ -14,6 +14,13 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, impacto da Biblioteca de Guildas (Melekyy / Codex)
+
+- **Registro:** Guildas atualizou a Biblioteca dos Magos no privado para indicar classes, categorias e efeitos dos tomos; ver [diário de Guildas](../guildas/diario.md) e [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md).
+- **Impacto no dependente:** nenhum contrato do ritual de coleta foi alterado. Os textos da Biblioteca não comprovam classe nem filiação ao clã Companion; a participação no ritual continua exigindo a validação autoritativa planejada.
+- **Próximo:** manter a integração do ritual separada desta apresentação de catálogo.
+- **Bloqueios:** permanecem as definições e integrações já registradas para o ritual.
+
 ## 2026-11-15, COMÉRCIO aprovado para documentação (koy / Codex)
 
 - **Autorização:** o usuário revisou o texto, pediu trocar o nome do sistema de referência de Casas para Residência e confirmou expressamente a publicação no Acervo.

@@ -60,6 +60,7 @@
 - `03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md` — Complemento restrito à conjuração, preservação da versão anterior e separação entre privado aprovado e oficial pendente.
 
 - `03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md` — Aprovação do modelo COMÉRCIO, com Residência como referência e políticas ainda pendentes.
+- `03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md` — Biblioteca na bancada dos Magos com classes, categorias e efeitos das fontes existentes.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.
