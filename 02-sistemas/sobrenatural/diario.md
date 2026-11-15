@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — servidor local de testes
+- **Feito:** ambiente local isolado (só loopback, PostgreSQL próprio, 16 módulos, bots autenticados, scripts start/stop/reset, overlays para kdu e Sobrenatural). Revisado e corrigido. Detalhes: ambiente-servidor-local.md e revisao-ambiente-servidor-local.md.
+- **Próximo:** Etapa 2 (servidor do Sobrenatural) sobre este ambiente.
+- **Bloqueios:** Alma/market_stalls sem migrations; capacidades UNSUPPORTED; addon v19 sem commit verificável (homologação parcial aceita).
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 1 encerrada
 - **Feito:** correções da revisão do redesenho (escopo de CSS, polling sem redesenho, foco e rolagem preservados); valores do lobisomem na tela (armadura 150–400, RM 10–35%, vida e vigor somados na fera). Revisão de Terra High: aprovado com ressalvas de integração (revisao-etapa-1-redesenho.md).
 - **Próximo:** Etapa 2 (servidor).
