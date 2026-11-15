@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, início da conciliação de feitiços (mercurius17 / Codex)
+- **Feito:** leitura ao vivo das abas Classes e Classes - Progressão, incluindo mesclagens de tier; identificadas 164 associações classe/feitiço em 12 classes. Trabalho solicitado pelo dono: completar a progressão e as listas documentais.
+- **Próximo:** espelhar os nomes e tiers de Classes na seção de feitiços da progressão e publicar catálogo documental com diferenças para authorizedSpells/allSpellsList.
+- **Bloqueios:** git local sem acesso de rede; leitura e publicação disponíveis pela conexão GitHub, com atualização condicionada ao SHA atual da main.
+- **Escopo:** documentação e planilha; sem alteração dos JSONs, grants, perks ou runtime, conforme ADR-0003. A frente de dano de kdu permanece independente.
+
 ## 2026-11-14, raças e invocação (kdu / Claude Opus 5.5)
 - **Raças:** todo personagem tinha a resistência ao frio e o Grito de Batalha do nórdico. O jogo carrega como Nórdico, e a aparência só troca o campo de raça da base. O cliente agora tira as habilidades das outras raças jogáveis e põe as da raça do personagem a cada aparência aplicada. Patch em `missoes/2026-11-14-bugs-akatosh`.
 - **Invocação:** conferida sem o jogo, com addon e load order reais e um bot. O servidor cria o Familiar e o Atronach e eles ficam vivos. O "aparece e some" relatado é a cópia local do jogo, que a limpeza do cliente descarta. Falta descobrir no cliente por que a do servidor não aparece; precisa do log do cliente de uma tentativa.
