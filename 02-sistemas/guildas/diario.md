@@ -14,6 +14,15 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, portas do Colégio e funções incompatíveis iniciadas (Melekyy / Codex)
+
+- **Pedido:** aba exclusiva de líder/professores para trancar/destrancar todas as portas do Colégio ou uma passagem por vez, bloqueando ambos os lados para todos até a liberação. Levantar as referências reais da instalação e os dois lados das portas com teleporte.
+- **Regra adicional:** professor e bibliotecário não podem acumular funções. Nomeações incompatíveis exigem revogação prévia; filtrar candidatos na interface e validar no servidor. Na migração privada, preservar professor e revogar bibliotecário quando houver conflito, com registro.
+- **Privado:** a pedido do dev, o personagem de teste foi nomeado líder pela ponte administrativa temporariamente autorizada; inventário e escola preservados. Um acúmulo incompatível de função de teste foi corrigido e registrado, preservando professor.
+- **Levantamento inicial:** registros vencedores da base instalada incluem o Colégio de JK. Foram localizadas 97 referências de tipo DOOR em 13 células e conexões, além de dois ativadores relacionados. Vitrines e algemas usam esse tipo internamente, mas não são passagens; classificá-las separadamente. Nenhuma referência irresolúvel encontrada no escopo do Colégio.
+- **Direção:** controle persistente por passagem, par de referências fechado em conjunto, validação autoritativa antes da ativação, estado sincronizado e registros detalhados. Não conceder passagem automática ao operador enquanto a porta estiver trancada. Preservar portas desativadas por missões e não trancar prédios vizinhos fora do Colégio.
+- **Próximo:** concluir catálogo, implementar, testar comandos e travessia nativa nos dois sentidos e aplicar por atualização suportada. Homologação oficial pendente.
+
 ## 2026-11-15, insígnias R21 ativadas no privado (Melekyy / Codex)
 
 - **Autorização e instalação:** o dev confirmou que fechou o Skyrim privado e o MO2. Fechamento verificado; foi criado backup dos dados do mundo e dos arquivos afetados. Somente o servidor privado foi parado e reiniciado.
