@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, seletores estáveis e bancada para o líder iniciados (Melekyy / Codex)
+
+- **Relato:** listas de opções não permanecem abertas ao escolher valores; o dev esclareceu que afeta todos os seletores, não apenas aluno/escola.
+- **Direção:** corrigir o componente comum para apresentar opções dentro da interface, preservar a lista durante atualizações e impedir escolhas que perderam validade. Testar clique, atualização, teclado e permissão.
+- **Pedido adicional:** o líder dos Magos deve receber o blip e acesso à fabricação sem acumular a função de bibliotecário. Membros comuns e professores sem essa autoridade continuam sem bancada.
+- **Próximo:** implementar, testar, aplicar atualização suportada e conferir a fonte no cliente privado. Responsável Melekyy, implantação oficial pendente.
+
 ## 2026-11-15, conjuração retirada da estrutura atual de Guildas (Melekyy / Codex)
 
 - **Constatação:** os painéis instalados já não carregavam o controlador. O complemento candidato e quatro ferramentas antigas de arquivamento/desativação conjunta ainda estavam junto do projeto; a separação física foi solicitada pelo dev.
