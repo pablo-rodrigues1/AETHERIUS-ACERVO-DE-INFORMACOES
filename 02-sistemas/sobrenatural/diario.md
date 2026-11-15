@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 1 encerrada
+- **Feito:** correções da revisão do redesenho (escopo de CSS, polling sem redesenho, foco e rolagem preservados); valores do lobisomem na tela (armadura 150–400, RM 10–35%, vida e vigor somados na fera). Revisão de Terra High: aprovado com ressalvas de integração (revisao-etapa-1-redesenho.md).
+- **Próximo:** Etapa 2 (servidor).
+- **Bloqueios:** nenhum. Homologação em Meridian/CEF pendente.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — redesenho aprovado
 - **Feito:** ícone do lobisomem refeito fiel à referência, Apoteótico como eclipse de sangue, layout em duas colunas com trilha de 6 marcos. Aprovado pelo dev. Relatório: etapa-1-redesenho.md.
 - **Próximo:** revisão técnica da 1.4; Etapa 2 (servidor).

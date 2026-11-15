@@ -163,3 +163,65 @@ preview/test-ordering.cjs (não editado)
 ## Ajuste final — folga do lobo no medalhão
 
 Em 15/11/2026, após aprovação da interface e dos ícones pelo dev, foi ajustada somente a regra do símbolo principal do Lobisomem para `left:26%; top:27%; width:54%; height:54%`. A proposta 24%/24% ainda deixava o focinho a aproximadamente 0,8 px do contorno interno no medalhão de 280 px. O deslocamento final foi inspecionado em 1920×1080 (280 px), 1280×900 (220 px), 900×800 (200 px), 1440×900 (245 px) e 1280×720 (160 px pela regra específica de altura). O lobo permanece inteiro, com folga visível e centralização óptica; a menor distância entre os contornos vetoriais ficou entre 6,2 e 10,8 px. As duas capturas `1920x1080-05-lobisomem-gama.png` e `1280x720-05-lobisomem-gama.png` foram substituídas. Gama/Alfa nos cartões não exigiram alteração. O SHA-256 vigente do CSS passa a ser `70e120f5ba88e2c481640c114b9abb00abd66234f3cd6041c8315b56c550b664`; o hash acima registra a versão anterior.
+
+## Correções 1.4
+
+**Data:** 15/11/2026. **Autor das correções:** Sol High. **Origem:** revisão de Terra High em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\REVISAO-1.4_terra.md`, itens 1–2 aceitos pela arbitragem de Opus 5.5. A confirmação posterior de Terra permanece com o orquestrador. A estética aprovada foi preservada, exceto pela atualização de conteúdo dos bônus de Lobisomem expressamente pedida pelo dev durante este despacho.
+
+### 1 — Escopo do CSS e restauração do shell
+
+O padding aprovado foi transferido do host do shell para `.aetherius-supernatural.module-mount`, raiz efetivamente criada pelo loader. A condição `.module-mount` evita acrescentar padding aos atlas/comparativos que reutilizam os estilos de ícones. Foram removidos os overrides redundantes de fundo de topline, conteúdo e rodapé, além do override de `overflow:auto`, que já pertence ao shell.
+
+As quatro exceções indispensáveis estão documentadas em `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\INTEGRACAO.md`: fundo de `.world-shade`; fundo/borda/sombra de `.workspace-frame`; ocultação de `.workspace-rule`; neutralização do padding e cor da barra do host `.module-content`. Todas usam `#aetherius-shell.is-supernatural-workspace`, sem `!important`. São elementos externos que a pintura de um descendente não substitui. As regras de movimento reduzido continuam restritas aos descendentes do módulo.
+
+A classe de integração agora é adicionada dentro do `try` de montagem. O `finally` reverte o caminho que não chegou a retornar `unmount`; o cleanup idempotente usa `finally` encadeados para limpar timer, subscription, listener, atributos/conteúdo e classe da raiz, além da classe própria do shell. A presença anterior da classe é preservada. Os testes cobrem falhas em subscribe, render e criação do timer, navegação simulada para outra raiz de módulo e cleanup mesmo quando unsubscribe lança erro. A fixture de DOM real verifica também a restauração dos estilos computados do host, moldura, shade e divisor.
+
+### 2 — Polling, foco e rolagem
+
+Pedidos não reconstruem a tela apenas para representar `busy`. A indisponibilidade temporária usa `aria-busy`/`aria-disabled`, mantendo os nós e o botão focado; a guarda `busy` continua impedindo pedidos sobrepostos. O transporte permanece `context.request('supernatural', action, payload)`, e as escolhas conservam `kind`, `id`, `grantId` e `revision`.
+
+O polling silencioso mantém o intervalo de 10 segundos. Uma resposta com revisão igual, sem recuperação de erro ou mudança de mensagem, não escreve em `innerHTML`. Push/revisão nova, mudança de mensagem/erro e recuperação válida ainda atualizam a tela. `receive` informa a recuperação sem chamar render internamente, evitando reconstruções duplicadas.
+
+Quando a reconstrução é necessária, o módulo captura o foco de Atualizar ou da escolha por `kind`/`id`, além da rolagem da raiz e de todos os ancestrais. Depois da troca, restaura somente um controle equivalente ainda disponível e repõe as posições de rolagem. Não captura nem rouba foco que esteja fora da raiz. Um controle que passou a ficar bloqueado não recebe foco artificialmente. Os achados menores 4–5 já adiados para a Etapa 2 não foram tratados como nova entrega de backend.
+
+### Adendos finais do dev — Lobisomem
+
+Os valores finais substituem os adendos intermediários. Os quatro arrays ficam em `modules\supernatural\supernatural-data.js`, propriedade `werewolfStats`; o módulo usa esses dados somente para apresentação:
+
+| Estágio | Vida/vigor na forma humana, mantidos na fera | Bônus exclusivo da fera | Total de vida/vigor na fera | Armadura na fera | Resistência mágica na fera |
+|---|---:|---:|---:|---:|---:|
+| Iniciado | +125 | +150 | +275 | +150 | +10% |
+| Ômega | +150 | +200 | +350 | +200 | +15% |
+| Beta | +175 | +250 | +425 | +250 | +20% |
+| Gama | +200 | +300 | +500 | +300 | +25% |
+| Delta | +225 | +350 | +575 | +350 | +30% |
+| Alfa | +250 | +400 | +650 | +400 | +35% |
+
+O total é calculado pela soma, sem outro array duplicado. No cartão comum **VIDA E VIGOR**, o Gama mostra `+200 FORMA HUMANA` e `+500 FORMA DA FERA (200 + 300)`. A mesma informação é aplicada aos dois atributos. O cartão mantém a linguagem visual aprovada e cabe em 1280×720; os dons continuam acessíveis pela rolagem já existente. Nenhum efeito foi aplicado no jogo e nenhum estado autoritativo foi modificado.
+
+### Evidências e comparação visual
+
+`node --check` passou nos três JS de runtime, em `preview\test-ordering.cjs`, `preview\test-interaction.js` e `preview\compare-captures.cjs`. `node ui-core-module\preview\test-ordering.cjs`, executado de `C:\Code\Aetherius - New Systems\Sobrenatural\`, passou nos sete grupos anteriores e em quatro novos grupos: polling igual sem render/scroll; rollback de montagem; navegação/restauração/erro de unsubscribe; valores finais nos seis estágios do Lobisomem.
+
+`preview\test-interaction.html` e `test-interaction.js` exercitam **DOM real** no navegador Orca. Os oito ensaios passaram em 1920×1080 e 1280×720: escopo/padding, polling com zero mutações de filhos e os mesmos nós, foco/rolagem após push novo, ausência de roubo de foco externo, Atualizar focado, acionamento com payload autoritativo e serialização, navegação/restauração e falhas de montagem. O teste usa uma fixture do shell e não substitui homologação no cliente/loader dentro do jogo. Seu console ficou vazio.
+
+Os sete cenários foram capturados antes e depois nas duas resoluções, com movimento reduzido. A captura-base já incorporava a armadura final autorizada; a apresentação dupla de vida/vigor foi acrescentada depois. As 14 capturas principais e os seis complementos `-dons` foram atualizados. Os consoles ficaram vazios e não houve transbordamento horizontal; os sete estados continuam cabendo integralmente em 1920×1080.
+
+As 14 capturas-base foram preservadas em `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\preview\screens\before-correcoes-1.4\`. `comparacao-correcoes-1.4.json` registra os pares e as métricas; `resultado-visual-correcoes-1.4.json` registra a comparação, reproduzível com `node ui-core-module\preview\compare-captures.cjs` a partir de `Sobrenatural\`. O comparador usa apenas módulos padrão do Node e lê pixels PNG, sem gerar ou editar imagens.
+
+Resultado: dez pares idênticos por pixel. Em Ancião e Alto Teurgo a 1280×720, houve somente três pixels por tela com diferença de 1/255 em um canal. No Lobisomem, as diferenças de conteúdo estão na linha dos fatos/notas e, em 720p, na barra de rolagem devido à altura dessa linha; houve ainda 33 pixels de variação de rasterização, no máximo 2/255 por canal. O comparador identifica esse ruído separadamente e não aceita diferenças superiores a 2/255 fora da área de bônus autorizada e da respectiva barra de rolagem. Não foi detectada mudança estética fora desses adendos. A inspeção visual confirmou o enquadramento aprovado do lobo e a leitura dos novos valores.
+
+As páginas/scripts de teste, comparador e baselines são exclusivos de verificação e não entram no manifesto. As exceções de integração e os novos testes estão descritos em `INTEGRACAO.md`. Não houve edição no cliente oficial, servidor, painel ou modpack; consolidação no acervo e confirmação da revisão continuam com o orquestrador.
+
+### Versão corrigida
+
+Os hashes anteriores deste relatório permanecem como histórico. SHA-256 vigente após as correções e todos os adendos finais:
+
+```text
+modules/supernatural/supernatural-module.js
+ae3c5188d2fb733c5dc8b9eb50e9030509540045049e114bf4d1aad5d5872640
+modules/supernatural/supernatural-module.css
+1ab610d5f54844b3e023ac2640419f4307864e76eff0867443e0211a0bd3a924
+modules/supernatural/supernatural-data.js
+e32d4ed697a8b5752f641ec2205f45d0ff040b54c38fa74282f09fde2c311d9f
+```
