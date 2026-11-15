@@ -39,7 +39,7 @@
 - `02-sistemas/fisica-de-cabelos-e-capas/diario.md` — Diário da Física de cabelos e capas.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
-- `02-sistemas/guildas/README.md` — Guildas (SkyGuilds) em desenvolvimento por Melekyy: Magos, Alquimistas e Companions, com integrações oficiais pendentes.
+- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R25 privada com dez quartos, compartimentos existentes, retirada de escola e cronograma; integrações oficiais pendentes.
 - `02-sistemas/guildas/diario.md` — Diário de Guildas, responsável Melekyy, registro inicial e pendências de publicação e integração.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
 - `02-sistemas/loja/diario.md` — Histórico documental de Loja e apoiadores, com a base de integração e o próximo passo.
@@ -75,6 +75,7 @@
 - `03-decisoes/ADR-0008-visual-dos-paineis-de-guildas.md` — Acabamento dos três painéis inspirado em Grupo e Reis, com as cores preservadas.
 - `03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md` — Vários bibliotecários, fabricação com duração e tradução da Biblioteca.
 - `03-decisoes/ADR-0010-registros-detalhados-de-guildas.md` — Registros com nomes, IDs e detalhes preservados no momento da ação.
+- `03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md` — Quartos existentes, controle geral e retirada de escola do Arquimago, cronograma de aulas.
 - `03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md` — Bancada só para bibliotecários, escolha de escola por líder/professores e insígnias protegidas.
 - `03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md` — Controle das passagens nos dois sentidos por líder/professores e exclusão entre professor e bibliotecário.
 - `03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md` — Professor/bibliotecário dos Magos sem cargos extras ou liderança, preservando o vínculo pessoal de escola.

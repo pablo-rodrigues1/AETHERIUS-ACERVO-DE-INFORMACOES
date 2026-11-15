@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15, retirada de escola no SkyGuilds R25 (Melekyy / Codex)
+
+- **Contrato:** só o Arquimago retira o vínculo de escola dos Magos sem expulsar o membro. A insígnia correspondente é revogada pelo journal; nova atribuição por professor/líder é possível após a retirada.
+- **Limite:** não altera filiação à guilda, keyword do vínculo, catálogo autorizado, magias ou controlador de conjuração. O cronograma é informativo. Integração e homologação no runtime oficial permanecem pendentes.
+- **Referência:** [Guildas](../guildas/README.md), [ADR-0016](../../03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md).
+
+
 ## 2026-11-15, separação física da conjuração e dos painéis (Melekyy / Codex)
 
 - **Pedido:** conferir e retirar scripts de conjuração que ainda estivessem junto do projeto de Guildas.

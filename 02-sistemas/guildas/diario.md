@@ -14,6 +14,21 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, entrega privada R25 e compartimentos existentes (Melekyy / Codex)
+
+- **Entregue:** dez quartos, atribuição por professores/Arquimago e acesso de porta por proximidade. Controle geral das portas exclusivo do Arquimago, conforme confirmação do dev. Troca/liberação é permitida com pertences, que permanecem no móvel para o novo dono.
+- **Nova regra de ocupação:** por pedido posterior do dev, permitir troca/liberação mesmo com itens e septins, mantendo o conteúdo no móvel e passando seu acesso ao novo dono. A proposta de exigir esvaziamento foi retirada.
++- **Revisão pedida:** aproveitar móveis existentes nos quartos sem baú. Catálogo final: seis baús, três estantes e um armário. Quatro baús recém-criados estavam vazios e foram desativados, com referências e backup preservados localmente. Nenhum conteúdo original foi apagado ou transferido.
+- **Escolas:** ação de retirada exclusiva do Arquimago, auditada, preservando membro/funções; revogação da insígnia pelo journal. Professores não podem retirar vínculo.
+- **Visão geral:** contador de bibliotecários no lugar de cargos; Cronograma de aulas no lugar dos nomes dos bibliotecários. Só Arquimago adiciona/remove escola, dia semanal/data e horário de Brasília; membros apenas leem. A aba Cargos e suas regras continuam.
+- **Interface:** removida somente a legenda indicada; deduplicação da R24 mantida. Inicialização do estado da animação corrigida para chaves ausentes do runtime; nomes de móveis resolvem os handles nativos em update e são propagados pela porta correspondente.
+- **Verificado:** 134 testes completos; ensaio nativo isolado com quatro bots/zero clientes humanos, 60 ativações e depósitos/retiradas autorizadas de septins em dez compartimentos. Guardas contra acesso alheio e troca com conteúdo preservado aprovadas. Um pacote malformado de retirada travou somente o ensaio isolado e não faz parte da certificação.
+- **Privado:** R25 recebida pelo cliente, 20 nomes aplicados sem erro na checagem final, estado vivo/disco e treze arquivos protegidos conferidos; inventários, grupos, Casas, escolas e histórico preservados. Sem reinício. Dados de teste reais permanecem locais.
+- **Decisão:** [ADR-0016](../../03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md). A conjuração permanece independente e não foi alterada.
+- **Documentação:** dez Markdown desta entrega passaram na checagem de frontmatter e links locais. A validação global segue falhando em vinte documentos de Sobrenatural já presentes no remoto, fora desta alteração; não confundir isso com os testes do sistema privado.
+- **Próximo:** aceite humano do cronograma, portas/compartimentos e cliques; teste com dois clientes e integração/homologação oficial. Código e backups não publicados no acervo.
+
+
 ## 2026-11-15, cronograma e contagem de bibliotecários solicitados (Melekyy / Codex)
 
 - **Visão geral:** substituir o contador de cargos dos Magos pelo total de bibliotecários nomeados. No espaço que mostrava os nomes dos bibliotecários, apresentar o cronograma de aulas.

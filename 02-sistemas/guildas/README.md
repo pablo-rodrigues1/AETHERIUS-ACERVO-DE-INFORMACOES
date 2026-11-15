@@ -35,6 +35,15 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 
 ## Funcionamento
 
+### Regras atuais R25
+
+- **Quartos:** dez quartos com cama do Hall of Attainment, atribuídos por professores/Arquimago. Cada aluno possui no máximo um. Acesso de porta por proximidade ao dono e professores/Arquimago; controle geral de portas exclusivo do Arquimago. Tranca geral impede passagem para todos até ser desfeita.
+- **Pertences:** seis baús, três estantes e um armário já existentes, com nome do dono. Não criar móveis. Inventário privado do ocupante; professores não recebem acesso automático. Trocar/liberar mesmo com conteúdo: itens e septins permanecem no móvel; novo dono acessa tudo e anterior perde acesso após a troca.
+- **Escolas:** professores/Arquimago atribuem a quem está sem escola; só Arquimago retira vínculo. Registros guardam a escola anterior; insígnia é revogada pelo journal quando disponível. Retirada não expulsa nem revoga funções.
+- **Visão geral:** total de bibliotecários substitui o contador de cargos; a aba Cargos permanece. Cronograma substitui o cartão com seus nomes. Todos os membros leem aulas por escola, dia e horário de Brasília; só Arquimago adiciona/remove. Até 100 entradas semanais ou por data, sem duplicatas. Aulas não alteram magias nem enviam alarmes.
+- **Interface/bancada:** seletores comuns e deduplicação de estados repetidos preservam cliques; líder e bibliotecários fabricam. A legenda redundante de função exclusiva foi retirada, com permissões preservadas.
+
+
 | Guilda | Líder | Funções específicas |
 |---|---|---|
 | Magos | Arquimago | Um professor por escola de magia e vários bibliotecários |
@@ -44,17 +53,17 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - A Staff nomeia ou remove o líder por API do servidor, após autorização real. Não há ação do navegador para se tornar líder.
 - O líder convida, remove membros e gerencia cargos e funções. O jogador precisa aceitar o convite para entrar.
 - Membros não podem sair voluntariamente nem remover o próprio perfil. A saída acontece pela remoção feita pelo líder e fica nos Registros. A liderança continua sendo alterada pela Staff.
-- Cargos personalizados não concedem gestão. Nos Magos, líder ou professor define uma escola por estudante; o código não permite trocar esse vínculo sem a saída por expulsão.
+- Cargos personalizados não concedem gestão. Nos Magos, líder ou professor define uma escola por estudante; na R25, somente o Arquimago pode retirar esse vínculo, sem expulsar o membro, e permitir uma nova atribuição.
 - A aba de produção na bancada se chama **Biblioteca**; a antiga aba de consulta foi retirada. O bibliotecário pesquisa e fabrica tomos pelo mesmo catálogo autorizado. Cada tomo indica suas classes, categorias (Novato a Mestre) e efeito base disponível nos plugins; a busca reconhece classe e categoria. A liderança mantém a nomeação do bibliotecário na Biblioteca.
 - A receita vigente no código cobra **5 papéis e 1 pedra da alma** por tomo, com a mesma validação de acesso e proximidade. A descrição é informativa: não libera magias, não redefine requisitos de aprendizado e não altera seus efeitos.
 - Na R17, a Biblioteca apresenta primeiro as classes com suas quantidades de tomos. Escolher uma classe abre somente seus tomos; **Todas as classes** retorna à escolha. A classe é filtrada antes da paginação, e um tomo compartilhado aparece nas classes autorizadas correspondentes.
 - A R18 refina os três painéis com referência em Grupo e Reis: molduras, brasões, marca d'água, cartões, abas e botões. Magos mantêm azul; Alquimistas, verde musgo; Companions, marrom escuro. A disposição adapta-se a janelas menores e não altera ações ou permissões.
-- A R19 permite nomear e revogar vários bibliotecários individualmente, preservando o anterior na migração. Somente eles fabricam; um Arquimago sem essa função não fabrica. Cada lote leva três segundos, com progresso, cancelamento e solicitação de animação nativa. Os materiais são cobrados apenas na conclusão validada pelo servidor. Fechar a bancada, perder a proximidade ou a função cancela sem débito.
+- A R19 permite nomear e revogar vários bibliotecários individualmente, preservando o anterior na migração. A exclusividade inicial foi substituída pela R24: líder e bibliotecários fabricam, sem acumular as funções. Cada lote leva três segundos, com progresso, cancelamento e solicitação de animação nativa. Os materiais são cobrados apenas na conclusão validada pelo servidor. Fechar a bancada, perder a proximidade ou a função cancela sem débito.
 - Os 104 tomos atuais têm título e descrição em português na Biblioteca, com busca também pelo original. A tradução preserva os registros nativos e não renomeia itens do inventário. Valores ausentes nos textos dos mods não são inventados. O título da classe recebeu espaçamento próprio junto ao retorno.
 - A R20 detalha a aba **Registros**, exclusiva da liderança: nomes e IDs de perfil de autor e envolvidos, cargo ou função, substituições, revogações e diferenças antes/depois quando aplicáveis. Os dados são salvos no momento da ação e preservados após renomeações ou expulsões. Registros anteriores permanecem intactos, com aviso sobre os detalhes históricos não gravados. O limite existente é de 100 registros recentes exibidos por guilda e 5.000 retidos no estado global.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
-- A R21 instalada no privado restringe a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. O Elemental Vision II está ativo no cliente/servidor privado, com entrega automática e proteção de inventário/morte conectadas; cinco registros reais conferidos. A configuração de exemplo não habilita o mod automaticamente, e a implantação oficial ainda precisa conferir dependências e adaptadores.
-- A R22 acrescenta **Y → Portas do Colégio**, exclusiva do líder e dos professores atuais. Trancar/destrancar todas ou uma passagem controla 68 passagens/86 referências da instalação privada, incluindo os dois lados de 16 teleportes e quatro grupos de portão. A tranca impede entrada e saída para todos, inclusive o operador, até a liberação. Política persistente, guarda no servidor e aplicação nativa no cliente; instalação preserva o estado original, e três referências desativadas não são habilitadas. Não constitui barreira global de teleporte.
+- A R21 inicialmente restringia a abertura da bancada aos bibliotecários; a R24 ampliou explicitamente o acesso ao líder. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. O Elemental Vision II está ativo no cliente/servidor privado, com entrega automática e proteção de inventário/morte conectadas; cinco registros reais conferidos. A configuração de exemplo não habilita o mod automaticamente, e a implantação oficial ainda precisa conferir dependências e adaptadores.
+- A R22 acrescentou **Y → Portas do Colégio**; na R25, a aba e seus comandos são exclusivos do Arquimago. Trancar/destrancar todas ou uma passagem controla 68 passagens/86 referências da instalação privada, incluindo os dois lados de 16 teleportes e quatro grupos de portão. A tranca impede entrada e saída para todos, inclusive o operador, até a liberação. Política persistente, guarda no servidor e aplicação nativa no cliente; instalação preserva o estado original, e três referências desativadas não são habilitadas. Não constitui barreira global de teleporte.
 - A R23 amplia a exclusividade de professor e bibliotecário dos Magos: não acumulam cargos personalizados, liderança ou outra função. Professor ocupa um único posto de escola. O vínculo pessoal de escola permanece permitido e não é trocado automaticamente. Retirar cargos extras antes de nomear e revogar a função antes de atribuir cargos ou promover a líder; servidor, estado persistido e seletores validam a regra. Na migração privada, três cargos extras de dois integrantes fictícios foram retirados com registro, preservando funções e escolas.
 
 ## Parâmetros e fórmulas
@@ -84,6 +93,9 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 
 ## Decisões relacionadas
 
+- [ADR-0016](../../03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md): dez quartos com compartimentos existentes, controle geral do Arquimago, retirada de escola e cronograma.
+- [ADR-0015 de Guildas](../../03-decisoes/ADR-0015-seletores-e-bancada-do-lider.md): seletores e bancada do líder.
+
 - [ADR-0001](../../03-decisoes/ADR-0001-integracao-continua-por-ia.md): documentação contínua.
 - [ADR-0003](../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md): documentar o comportamento definido no código.
 - [ADR-0006](../../03-decisoes/ADR-0006-biblioteca-e-indicacoes-de-magias.md): apresentação da Biblioteca e fonte das indicações de magias.
@@ -108,6 +120,9 @@ Ver [diario.md](diario.md).
 - Informar a URL do repositório do código.
 
 ## Base da verificação
+
+R25 de 15/11/2026: 134 testes completos aprovados; teste nativo isolado com quatro bots, sem clientes reais, confirmou 60 ativações e itens/septins nos dez compartimentos existentes. Cliente privado confirmou R25 e aplicação dos vinte nomes, com estado vivo igual ao disco e treze arquivos protegidos intactos. Quatro baús vazios criados na revisão inicial foram desativados por pedido posterior; nenhum compartimento original foi apagado ou esvaziado. Instalação sem reinício. Aceite humano do cronograma, travessia dos quartos, dois clientes reais e homologação oficial permanecem pendentes.
+
 
 Atualização R23 de 15/11/2026: 117 testes completos e teste nativo isolado com quatro bots aprovados; pedidos pelo transporte foram recusados sem alteração persistida quando tentavam acúmulos proibidos. Atualização privada sem reinício, com três retiradas de cargos auditadas e preservação de funções, escolas, liderança, inventários e demais dados. Estado vivo corresponde ao disco e o cliente conectado confirmou R23. Prévia com dados fictícios; aceite visual humano e homologação oficial pendentes.
 
