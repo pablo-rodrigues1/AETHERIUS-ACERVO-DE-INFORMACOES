@@ -98,3 +98,7 @@ Vertentes (feitiços liberados por estágio, em ordem):
 - **TENEBRAE (Umbramancia):** Draining Touch, Shadow Stride → Azra's Wrath, Gather Shadows → Darkness, Step Through Shadows → Possession, Pull Through Shadows → Draining Shroud, Nightfall → Draining Mist.
 
 > Mapeamento por estágio inferido da ordem das colunas; confirmar na planilha (células mescladas). `*` = marcado assim na planilha (significado a confirmar).
+
+## Decisão do dev (2026-11-15): poder do Lorde Vampiro
+
+Na versão final, o poder **Forma de Lorde Vampiro** (`DLC1VampireChange`) **não** vem com a maldição nem com o estágio: só é atribuído por uma **função específica do Painel Administrativo**. **Por enquanto, para os testes, fica como está** (liberado desde o Neófito, `VAMPIRE_LORD_MIN_STAGE = 0` em `vampire-grants.js`).
