@@ -1,0 +1,54 @@
+---
+titulo: Sobrenatural (Maldições e Pragas)
+tipo: sistema
+status: rascunho
+fase: em-desenvolvimento
+responsaveis: [pablo-rodrigues1, kdu]
+repositorio: "projeto local: C:\Code\Aetherius - New Systems\Sobrenatural (será compilado em pasta final)"
+depende_de: [../ui-core/README.md, ../painel-adm/README.md, ../gameplay-core/README.md, ../lobisomem/README.md]
+atualizado: 2026-11-15
+tags: [sobrenatural, maldicoes, vampirismo, licantropia, bruxaria, ui-core, servidor]
+relacionados: [diario.md, especificacao.md, direcao-de-arte.md, proposta-textos.md, ../lobisomem/README.md]
+---
+
+# Sobrenatural (Maldições e Pragas)
+
+## Resumo
+Três maldições externas a Classe e Profissão: Vampirismo, Licantropia e Bruxaria. Só a staff concede uma maldição, pelo Painel Administrativo. O jogador evolui por 6 estágios de XP de maldição (2.000.000 XP no total), e tudo aparece no módulo **Sobrenatural** do UI Core.
+
+## Onde está o código
+- Desenvolvimento local em `C:\Code\Aetherius - New Systems\Sobrenatural` (`AGENTS.md` e `RETOMADA.md` na pasta do projeto). Ainda não há repositório próprio; tudo será compilado em uma pasta final.
+- Lobisomem: construído **a partir do pacote de kdu** ([Lobisomem sincronizado](../lobisomem/README.md)), que é dono da forma da fera.
+- UI Core: módulo `supernatural` (rota `/supernatural`, slot radial 8) já presente no catálogo de navegação.
+
+## Escopo
+- Inclui: setagem/remoção pelo painel; keyword permanente só no servidor (`JogadorVampiro`, `JogadorLobisomem`, `JogadorBruxa`); reset de classe na setagem; XP e 6 estágios; Disciplinas (vampiro) e Vertentes (bruxa); atributos, perks e poderes por estágio; as 4 telas da UI.
+- Não inclui: animação, sincronização e efeitos da transformação em fera (sistema [lobisomem](../lobisomem/README.md)); permadeath (decisão de RP da staff).
+
+## Funcionamento
+```mermaid
+flowchart LR
+  P[Painel Admin] -->|setar/remover| S[Servidor: keyword + progresso]
+  S -->|reset de classe na setagem| C[Classe nível 1]
+  A[Ações que dão XP de classe] --> S
+  S -->|estado de apresentação, sem keyword| U[UI Core / Sobrenatural]
+```
+- A keyword nunca chega ao cliente. A remoção apaga todo o progresso da maldição.
+- A UI tem 4 telas: sem praga ("Você não é portador de nenhuma praga."), Vampiro, Lobisomem e Bruxa.
+
+## Parâmetros e fórmulas
+| Estágio | Custo | XP acumulada |
+|---|---|---|
+| 1 | — | 0 |
+| 2 | 20.000 | 20.000 |
+| 3 | 40.000 | 60.000 |
+| 4 | 130.000 | 190.000 |
+| 5 | 420.000 | 610.000 |
+| 6 | 1.390.000 | 2.000.000 |
+
+Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especificacao.md](especificacao.md).
+
+## Pendências
+- Aprovar os textos de Lobisomem e Bruxa ([proposta-textos.md](proposta-textos.md)).
+- Definir quando a Bruxa escolhe a Vertente e se Disciplina/Vertente podem ser trocadas.
+- Etapa 1 (telas do UI Core) ainda não iniciada.

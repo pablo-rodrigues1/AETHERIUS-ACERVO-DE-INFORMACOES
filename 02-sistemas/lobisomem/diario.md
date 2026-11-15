@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5)
+- **Feito:** o sistema [Sobrenatural](../sobrenatural/README.md) passa a usar este pacote como base do lobisomem. Ele acrescenta setagem pelo painel, keyword no servidor, progressão (6 estágios), perks e UI. A forma da fera continua sendo deste sistema.
+- **Próximo:** combinar com o kdu a integração dos patches com o Sobrenatural.
+- **Bloqueios:** nenhum
+
 ## 2026-11-14, Z não transformava (kdu / Claude Opus 5.5)
 - **Achado da YuYu:** com Beast Form equipado, o Z só tocava o som; a transformação só saía pelo Kadu.
 - **Causa:** o cliente avisava o servidor pelo evento `spellCast`, que não chega para poder usado pela voz.
