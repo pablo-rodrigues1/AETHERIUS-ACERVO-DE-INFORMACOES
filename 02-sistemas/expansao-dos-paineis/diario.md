@@ -14,6 +14,12 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, impacto da Biblioteca R19 de Guildas (Melekyy / Codex)
+
+- **Registro:** [Guildas R19](../guildas/diario.md) permite vários bibliotecários, fabricação com duração e tradução da Biblioteca no painel privado.
+- **Impacto:** nenhum contrato de filiação ou participação Companion do ritual foi alterado. Integrantes fictícios são exclusivos do teste privado.
+- **Próximo:** manter a validação real de vínculo na integração do ritual. Requisitos e homologação continuam pendentes.
+
 ## 2026-11-15, impacto do refinamento visual de Guildas (Melekyy / Codex)
 
 - **Registro:** [Guildas R18](../guildas/diario.md) recebeu acabamento visual inspirado em Grupo e Reis, sem alterar o código desses sistemas.

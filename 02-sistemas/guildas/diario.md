@@ -14,6 +14,18 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, Biblioteca R19 instalada no privado (Melekyy / Codex)
+
+- **Feito:** vários bibliotecários com nomeação e revogação individuais pelo líder; bibliotecário anterior preservado. Somente os nomeados fabricam. Três integrantes fictícios identificados foram adicionados exclusivamente ao painel privado, sem contas ou personagens no mundo.
+- **Fabricação:** lote de três segundos, livro animado, progresso e cancelamento na interface; animação nativa de leitura solicitada em atualização segura e distribuída ao dono e aos vizinhos. Sem chamadas de bloqueio de controles ou câmera.
+- **Servidor:** revalida sessão, identidade, acesso, bancada e materiais; só entrega e cobra na conclusão pelo diário de inventário. Fechar, cancelar, afastar, desconectar ou perder acesso interrompe sem consumo. Receita preservada: cinco papéis e uma pedra da alma por tomo.
+- **Apresentação:** título de classe separado do retorno. Os 104 tomos autorizados receberam nomes e descrições em português; busca pelo português e pelo original, sem alterar os itens nativos, a política de classes ou as magias. Textos com valores ausentes não receberam números inventados.
+- **Decisão:** [ADR-0009](../../03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md).
+- **Verificado:** 88 testes automatizados aprovados, incluindo interface e ausência de sobreposição em três larguras. Servidor nativo isolado com diário real confirmou fabricação simultânea, débito único, cancelamento por revogação e cobertura dos 104 tomos. Esse teste não teve clientes de jogo.
+- **Privado:** atualização sem reinício, com backup. Inventários, pertences, grupos, catálogo autorizado, núcleo nativo, conjuração e bundles do cliente preservados. Fonte R19 recebida e reportada pronta pelo cliente conectado.
+- **Limites:** usuário interrompeu a inspeção visual com Esc. Animação e disposição final no jogo, visão por outro jogador e homologação oficial permanecem sem confirmação nesta etapa.
+- **Próximo:** conferir a fabricação e as nomeações no cliente real; seguir integração oficial. Nenhum bloqueio de publicação.
+
 ## 2026-11-15, fabricação animada e vários bibliotecários iniciados (Melekyy / Codex)
 
 - **Pedido:** continuidade autorizada de Guildas: animação ao fabricar tomos, três membros fictícios no painel privado, vários bibliotecários e correção do título de classe próximo ao retorno.

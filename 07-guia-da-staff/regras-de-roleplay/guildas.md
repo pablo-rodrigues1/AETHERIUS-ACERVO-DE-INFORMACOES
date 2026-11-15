@@ -24,11 +24,13 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 1. A Staff escolhe o líder por uma integração autorizada, que ainda precisa ser conectada ao painel oficial.
 2. O líder convida os jogadores. Cada convidado precisa aceitar para entrar.
 3. O líder organiza membros, cargos e funções. Criar um cargo com um nome especial não dá poderes de líder.
-4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e um bibliotecário.
-5. O bibliotecário usa a **Biblioteca**, aberta pela bancada de fabricação. A antiga aba Biblioteca foi retirada. Os tomos continuam exigindo os mesmos materiais e permissões.
+4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e podem existir vários bibliotecários. Somente o líder nomeia ou revoga cada um.
+5. Somente bibliotecários nomeados fabricam pela **Biblioteca**, aberta pela bancada. O Arquimago também precisa ser nomeado bibliotecário para fabricar. Cada tomo exige 5 papéis e 1 pedra da alma.
 6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
 7. A Biblioteca abre primeiro a escolha de classe. Ao clicar em uma classe, aparecem seus tomos. Use Todas as classes para voltar. Um tomo compartilhado pode aparecer em mais de uma classe.
 8. Os três painéis receberam o mesmo acabamento visual dos painéis de Grupo e Reis, mantendo suas cores: azul para Magos, verde musgo para Alquimistas e marrom escuro para Companions. Os botões e permissões continuam com as mesmas funções.
+9. A fabricação leva três segundos por lote e mostra o progresso. Espere perto da bancada. Fechar, cancelar, afastar-se ou perder a função interrompe sem gastar os materiais; a cobrança acontece quando os tomos são entregues.
+10. Os 104 tomos atuais aparecem com nome e descrição em português na Biblioteca. A pesquisa aceita o nome traduzido e o original. Essa tradução é do painel; o nome nativo do item no inventário continua vindo do plugin.
 
 ## Exemplo prático
 
@@ -38,7 +40,7 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 
 | Grupo | Liderança | Funções específicas |
 |---|---|---|
-| Magos | Arquimago | Professores das cinco escolas e bibliotecário |
+| Magos | Arquimago | Professores das cinco escolas e vários bibliotecários |
 | Alquimistas | Mestre Alquimista | Professores alquímicos |
 | Companions | Chefe Mercenário | Instrutores e Forjador Mestre |
 | Fabricação de um tomo | Bibliotecário autorizado | 5 papéis e 1 pedra da alma |
@@ -51,7 +53,9 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 - **Os livros em branco estão disponíveis?** O registro local atual informa que esse sistema foi guardado. Os tomos de magia continuam sendo uma função separada.
 - **O novo ocupante de um cargo recebe os bens do anterior?** Não. Os pertences pessoais são preservados para seu dono.
 - **Posso buscar a magia pela classe?** Sim. A busca da Biblioteca também reconhece o nome da classe e sua categoria.
-- **Por que uma descrição não aparece?** O plugin pode não fornecer o texto de forma disponível ao catálogo. O painel mostra o nome do efeito ou informa que a descrição não está disponível.
+- **Por que algum número não aparece na descrição?** Alguns registros dos mods omitem alcance, percentual ou custo. O painel informa o que está disponível, sem inventar esses valores.
+- **Posso fabricar só por ser líder ou professor?** A fabricação dos tomos é exclusiva dos bibliotecários nomeados. Um título personalizado não substitui essa função.
+- **O que são os três integrantes fictícios?** São registros identificados de teste no privado. Não representam jogadores, contas ou personagens reais e não devem ser anunciados no oficial.
 
 ## O que a Staff pode e não pode fazer
 

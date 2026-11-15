@@ -33,7 +33,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Governos, Jarl e castelos](governos/README.md) | em-desenvolvimento | A confirmar | [aetherius-painel-jarl](https://github.com/eksmurf/aetherius-painel-jarl) | 2026-11-14 |
 | [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | koy (planejamento); implementação a definir | Planejamento dos painéis | 2026-11-15 |
 | [COMÉRCIO: empresas e profissões](expansao-dos-paineis/comercio-empresas-e-profissoes.md) | planejado | koy (planejamento); implementação a definir | Documentação no Acervo | 2026-11-15 |
-| [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | Projeto local; fabricação animada e vários bibliotecários em ajuste | 2026-11-15 |
+| [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | R19 no privado: vários bibliotecários, fabricação com duração e 104 tomos traduzidos; conferir no jogo | 2026-11-15 |
 
 Conciliação documental de feitiços concluída em 14/11/2026: 164 registros na planilha e nas fichas; [divergências dos JSONs](gameplay-core/feiticos-por-classe.md) permanecem pendentes de implementação. GameplayCore continua em desenvolvimento; ver [diário](gameplay-core/diario.md).
 
