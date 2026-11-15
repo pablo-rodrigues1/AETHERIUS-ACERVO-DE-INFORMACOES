@@ -20,7 +20,7 @@ Melekyy atua apenas na conjuração, com confirmação explícita do dev para co
 ## Onde está o código
 
 - Fontes privados: projeto `Sistema de Sync Geral`, `src/summons/`, `src/retire-summons.js`, configuração `config/summons.json` e `native/SkySummonAI.cpp`.
-- Complemento v0.38: projeto `Sistema de Guildas 2`, diretório `conjuracao/`, com adaptador de companheiro, instalador, reversão e testes.
+- Complemento v0.38: projeto local independente `SIstema de Summons`, diretório `conjuracao/`, com adaptador de companheiro, instalador, reversão e testes. Transferido de Guildas em 15/11/2026 com hashes conferidos; não integra o pacote atual dos painéis.
 - Por escolha explícita de Melekyy em 15/11/2026, somente a documentação é publicada no acervo. Código, pacote de distribuição e backup anterior permanecem locais; não foi criado repositório de código nem enviada uma release. O campo `repositorio` permanece `null`.
 - A base completa da v0.38 pura não foi encontrada na máquina nem entre os repositórios acessíveis; não confundir os fontes locais privados com essa base.
 
@@ -33,6 +33,8 @@ Antes da alteração foram salvos fontes, configuração, dados de conjuração,
 Veneno, reanimação, lobisomem, custos de magicka, catálogo de classes e livros autorais não foram alterados. As correções de amizade e o descarte/estacionamento do pacote anterior são preservados.
 
 ## Privado instalado
+
+Separação conferida em 15/11/2026: o controlador permanece no SkySync, habilitado em V5. Os módulos de Guildas retidos no runtime e seu entrypoint não carregam conjuração; o novo pacote dos painéis foi inspecionado sem esses scripts. Nenhum controlador, configuração ou bundle ativo foi movido ou reinstalado nesta organização. O complemento, seus ZIPs e o backup privado anterior ficam no projeto separado; quatro ferramentas antigas conjuntas e o pacote anterior de Guildas ficam no histórico, sem uso como instaladores atuais. Backups conjuntos de 14/11 continuam preservados fora da distribuição atual de Guildas.
 
 | Item | Estado |
 |---|---|
@@ -74,6 +76,7 @@ O instalador confere os pontos conhecidos do código e começa em modo de simula
 
 ## Evidências e limites
 
+- **Separação de arquivos:** 21 arquivos movidos com SHA-256 conferido; 13 testes do candidato aprovados na nova pasta. Inspeção de 31 dependências dos módulos de Guildas retidos no runtime não encontrou o controlador; pacote de Guildas com 151 entradas sem scripts de conjuração. Runtime R23 e 14 arquivos protegidos anteriores conferidos. A consulta registrou duas criaturas ativas no SkySync; não houve novo teste visual ou multiplayer nesta etapa.
 - **135/135 testes privados** de Sync aprovados após a alteração.
 - **Teste nativo isolado aprovado** com 179 magias catalogadas, portas/áreas, duas criaturas, substituição FIFO e validação de autoridade. Sem clientes humanos nem armazenamento persistente nesse teste.
 - **Usuário confirmou**: as duas criaturas permanecem e acompanham, após o roteiro de caminhada e porta/instância.

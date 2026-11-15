@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, conjuração retirada da estrutura atual de Guildas (Melekyy / Codex)
+
+- **Constatação:** os painéis instalados já não carregavam o controlador. O complemento candidato e quatro ferramentas antigas de arquivamento/desativação conjunta ainda estavam junto do projeto; a separação física foi solicitada pelo dev.
+- **Entrega:** pasta candidata, dois ZIPs candidatos e backup privado anterior movidos ao projeto independente `SIstema de Summons`. As quatro ferramentas e o ZIP anterior de Guildas foram preservados no histórico desse projeto. Os 21 arquivos movidos passaram na conferência SHA-256. Diagnósticos e uma pré-condição antigos do operador de livros que consultavam conjuração foram retirados.
+- **Pacote:** nova distribuição local de Guildas gerada e inspecionada: 151 entradas, nenhum script/controlador de conjuração nem ferramenta conjunta removida. Os backups conjuntos antigos em `archive` continuam intactos e excluídos da distribuição. Nomes da escola de Conjuração e tomos seguem como conteúdo legítimo do painel.
+- **Privado:** inspeção em leitura de 31 dependências dos módulos de Guildas retidos no runtime, junto do entrypoint instalado, confirmou ausência de controlador de conjuração. A instância ativa pertence ao SkySync e continua habilitada em V5, com duas criaturas registradas no momento da consulta. Fontes ativos dos painéis R23 e 14 arquivos protegidos da implantação anterior conferidos por hash. Nenhum reinício, reinstalação, mudança de configuração ou bundle ativo.
+- **Testes e limites:** 13 testes do candidato aprovados na nova pasta. A suíte de 117 testes de Guildas é da entrega R23 anterior; não foi repetida para a movimentação de arquivos. Esta inspeção não é novo teste visual de acompanhamento nem homologação oficial. Só documentação publicada; código, ZIPs e dados privados continuam locais. Aplica a separação prevista no [ADR-0004](../../03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md).
+
 ## 2026-11-15, separação dos arquivos de conjuração iniciada (Melekyy / Codex)
 
 - **Pedido:** conferir se os scripts de conjuração estão juntos aos painéis de Guildas e retirá-los desse projeto.

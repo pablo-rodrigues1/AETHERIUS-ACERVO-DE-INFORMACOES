@@ -31,6 +31,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - A ponte de autorização da Staff e o vínculo com o runtime oficial de Classes precisam ser conectados aos serviços efetivamente usados pelo servidor.
 - Livros autorais/em branco estão desativados na configuração de exemplo atual. O registro local de 14/11 informa que foram arquivados; a bancada de tomos de magia permanece.
 - A [conjuração](../gameplay-core/conjuracao.md) é uma frente separada: foi reativada no privado em 15/11, com duas criaturas e acompanhamento; a adaptação oficial continua pendente de homologação. Não faz parte da habilitação dos livros autorais.
+- Separação física conferida em 15/11: complemento candidato e seus pacotes transferidos para o projeto local independente `SIstema de Summons`; quatro ferramentas históricas que alteravam Guildas e conjuração em conjunto foram retiradas dos tools atuais. O controlador ativo continua no SkySync. A inspeção de 31 dependências dos módulos de Guildas retidos no runtime não encontrou o controlador, e o novo ZIP dos painéis não contém seus scripts. Backups conjuntos antigos permanecem intactos e fora da distribuição.
 
 ## Funcionamento
 

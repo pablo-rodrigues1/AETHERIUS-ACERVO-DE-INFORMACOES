@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15, separação física da conjuração e dos painéis (Melekyy / Codex)
+
+- **Pedido:** conferir e retirar scripts de conjuração que ainda estivessem junto do projeto de Guildas.
+- **Entrega:** complemento candidato, pacotes e backup anterior transferidos ao projeto local `SIstema de Summons`, com 21 arquivos conferidos por hash. Ferramentas históricas que operavam os dois sistemas foram retiradas da distribuição atual de Guildas e preservadas no histórico separado. Nenhum código ou ZIP publicado.
+- **Verificação:** 13 testes do candidato no destino aprovados. Dependências retidas e entrypoint de Guildas conferidos sem controlador de conjuração; novo pacote dos painéis inspecionado. Conjuração continua ativa no SkySync, com duas referências registradas na consulta, sem mudança de configuração ou reinício. Limites, duração, aparência e acompanhamento não foram alterados.
+- **Próximo:** permanece a integração/homologação da adaptação na base oficial completa. Esta checagem não substitui jogo com dois clientes humanos; ver [estado da conjuração](conjuracao.md).
+
 ## 2026-11-15, impacto do planejamento COMÉRCIO (koy / Codex)
 
 - **Referência:** [empresas, profissões e imposto comercial](../expansao-dos-paineis/comercio-empresas-e-profissoes.md), aprovado pelo usuário após revisão e confirmação de publicação.

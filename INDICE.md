@@ -16,7 +16,7 @@
 - `02-sistemas/gameplay-core/diario.md` — Diário do GameplayCore (sincronizações SYNC-1102 e SYNC-1114).
 - `02-sistemas/gameplay-core/feiticos-por-classe.md` — 164 registros de feitiços por classe, escola e tier; conciliação da planilha e divergências dos JSONs.
 - `02-sistemas/gameplay-core/correcoes-de-dano.md` — Correções de dano no servidor: chaves por fase, armadura, resistências, pendências.
-- `02-sistemas/gameplay-core/conjuracao.md` — Conjuração com acompanhamento e duas criaturas confirmada no privado; adaptação v0.38 e homologação oficial pendentes.
+- `02-sistemas/gameplay-core/conjuracao.md` — Conjuração separada dos painéis de Guildas, com acompanhamento e duas criaturas confirmada no privado; adaptação v0.38 e homologação oficial pendentes.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/sobrenatural/README.md` — Sobrenatural: maldições (vampiro, lobisomem, bruxa), setagem pelo painel, keyword no servidor, 6 estágios até 2M XP, UI.

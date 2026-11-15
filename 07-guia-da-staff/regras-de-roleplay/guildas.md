@@ -59,6 +59,7 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 - **Posso sair da guilda por conta própria?** Não. O líder precisa remover você. A ação fica registrada; uma tentativa recusada não conta como saída.
 - **Um cargo personalizado permite administrar a guilda?** Não. A administração pertence ao líder.
 - **Os livros em branco estão disponíveis?** O registro local atual informa que esse sistema foi guardado. Os tomos de magia continuam sendo uma função separada.
+- **A conjuração faz parte do painel?** Não. O controlador privado pertence ao SkySync. Os arquivos candidatos foram movidos para um projeto separado, e o pacote atual dos painéis não inclui seus scripts. A escola de Conjuração e seus tomos continuam no painel como conteúdo.
 - **O novo ocupante de um cargo recebe os bens do anterior?** Não. Os pertences pessoais são preservados para seu dono.
 - **Posso buscar a magia pela classe?** Sim. A busca da Biblioteca também reconhece o nome da classe e sua categoria.
 - **Por que algum número não aparece na descrição?** Alguns registros dos mods omitem alcance, percentual ou custo. O painel informa o que está disponível, sem inventar esses valores.
