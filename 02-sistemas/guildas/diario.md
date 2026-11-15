@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, fabricação animada e vários bibliotecários iniciados (Melekyy / Codex)
+
+- **Pedido:** continuidade autorizada de Guildas: animação ao fabricar tomos, três membros fictícios no painel privado, vários bibliotecários e correção do título de classe próximo ao retorno.
+- **Regra aprovada:** somente bibliotecários nomeados podem fabricar; liderança continua exclusiva na nomeação e revogação. Preservar o bibliotecário atual na migração.
+- **Direção técnica:** fabricação com conclusão validada pelo servidor, cancelamento sem consumo antes da entrega e animação executada em atualização segura do cliente. Identificar os membros fictícios como teste e restringir sua criação ao privado.
+- **Próximo:** conferir animações disponíveis no jogo, implementar, testar permissões e entrega e aplicar sem reinício quando suportado.
+- **Bloqueios:** nenhum nesta etapa; homologação oficial permanece pendente.
+
 ## 2026-11-15, refinamento visual R18 entregue (Melekyy / Codex)
 
 - **Feito:** Magos, Alquimistas e Companions receberam molduras, brasões, marca d'água, cartões de informação e liderança, abas, botões e cartões de classes refinados. Azul, verde musgo e marrom escuro preservados, com referência nos painéis locais de Grupo e Reis.
