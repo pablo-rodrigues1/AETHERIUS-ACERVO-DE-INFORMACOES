@@ -20,7 +20,7 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 - Ferramenta que gera tudo: `ferramentas/fisica-cabelos` (projeto local do kdu, C++ com nifly; simulador de bancada com Bullet).
 - Entrega: dois mods para o MO2, sem plugin `.esp`.
   - `AETHERIUS - FISICA - MOTOR FSMP 4.1.1`: Faster HDT-SMP 4.1.1 oficial (GPL-3.0), versão AVX.
-  - `AETHERIUS - FISICA DE CABELOS E CAPAS`: 577 modelos de cabelo, 6 de capa e 488 arquivos de física.
+  - `AETHERIUS - FISICA DE CABELOS E CAPAS`: 910 modelos de cabelo, 6 de capa e 742 arquivos de física.
 
 ## Escopo
 - Inclui: todos os cabelos do modpack que têm parte solta (Vanilla hair remake e addon, HammerHair, Apachii, KS Hairdos Lite, BeastHHBB, Khajiit) e as capas do Cloaks and Capes.
@@ -36,12 +36,12 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 ## Parâmetros e fórmulas
 | Parâmetro | Valor | Descrição |
 |---|---|---|
-| Folga da cabeça | 2,0 (4,5 na metade de cima) | Até essa distância o cabelo fica preso |
-| Fatias em volta da cabeça | 8 | Uma corrente por fatia com cabelo solto |
+| Folga da cabeça | 0,8 (2,0 na metade de cima) | Até essa distância o cabelo fica preso |
+| Fatias em volta da cabeça | 16 | Uma corrente por fatia com cabelo solto |
 | Ossos por corrente | 1 a 6 (trecho de 4,5 ou mais) | Máximo de 40 por cabelo; média de 12 |
-| Rigidez da junta | 40000 × r(r+1)/2 | r = ossos da junta até a ponta (a junta é tão firme quanto a carga que segura) |
+| Rigidez da junta | 25000 × r(r+1)/2 | r = ossos da junta até a ponta (a junta é tão firme quanto a carga que segura) |
 | Inércia do osso | rigidez / 250 (mínimo 20) | O Bullet limita a rigidez pela inércia |
-| Amortecimento da mola | 2 × 2,0 × raiz(rigidez × inércia) | Para o cabelo parar rápido |
+| Amortecimento da mola | 2 × 1,3 × raiz(rigidez × inércia) | Para o cabelo parar rápido |
 | Massa / gravidade | 1,0 / 0,4 | O modelo já foi feito "caído" |
 | Limites por junta | 57° para fora, 6° para dentro, 46° de lado, 11° de torção | Folgados; quem segura o cabelo fora do corpo são as barreiras |
 | Barreiras do cabelo | até 14 de alcance; plano a 3,5 da pele; correção de 80% por passo | 3.948 barreiras em 477 cabelos |

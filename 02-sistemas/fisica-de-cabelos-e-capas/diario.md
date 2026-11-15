@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-15, noite, mechas (kdu / Claude Opus 5.5)
+- **Pedido:** cabelos parados e movimento em bloco; fazer mechas como nos cabelos SMP do Dovahzul.
+- **Feito:** estudada a lógica (sem copiar arquivos): mechas por região, presas desde o couro cabeludo e leves. Ferramenta passou a 16 fatias (esquerda e direita independentes), mecha a partir de 0,8 da cabeça, rigidez 25.000 e freio 1,3. 910 cabelos com física (antes 577), média de 9 mechas e 19 ossos. 742 arquivos de física válidos no esquema do FSMP.
+- **Próximo:** ver em jogo; ajustar se ficar mole demais.
+- **Bloqueios:** nenhum
+
 ## 2026-11-15, noite (kdu / Claude Opus 5.5)
 - **Retorno da YuYu (17:25–17:34):** cabelo e roupas com física boa; alguns fios entram na armadura, principalmente a trança dentro do peitoral.
 - **Feito:** as barreiras do tronco e dos braços passaram a ficar 4 unidades mais longe do corpo (espessura de armadura); as da cabeça não mudaram. Kit v22 e zip da física refeitos.
