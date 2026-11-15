@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — painel F7
+- **Feito:** aba Sobrenatural no painel da staff (F7) com 7 ações (consultar, setar, remover, XP, Disciplina, Vertente, encerrar forma), com auditoria e revalidação de sessão. Revisado por Terra High e aprovado em jogo. Detalhes: etapa-2-painel-f7.md, revisao-etapa-2-painel-f7.md; investigação do F8 abandonada em investigacoes/.
+- **Próximo:** corrigir formas e poderes que falharam no teste em jogo (fera, Lorde, raça vampírica, morcego, névoa, enxame, visão; recarga de 30 min).
+- **Bloqueios:** nenhum.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — plugin e animação
 - **Feito:** plugin AETHERIUS - SOBRENATURAL.esp com os bônus numéricos (vampiro, disciplinas, lobisomem); animação do lobisomem do kdu ativada via Pandora no perfil LOCAL (saída isolada, mods compartilhados restaurados). Detalhes: etapa-2-plugin-e-animacao.md.
 - **Próximo:** teste em jogo; revisão cruzada.
