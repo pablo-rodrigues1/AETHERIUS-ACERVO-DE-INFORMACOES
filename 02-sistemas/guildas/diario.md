@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, bancada restrita e insígnias de escola iniciadas (Melekyy / Codex)
+
+- **Pedido confirmado:** membros comuns não abrem a bancada nem para consulta. Somente bibliotecários têm acesso. Líderes e professores selecionam um membro e sua escola no painel; o membro recebe automaticamente a insígnia correspondente do Elemental Vision no inventário.
+- **Proteção solicitada:** impedir descarte, armazenamento, troca, doação, roubo e perda na morte. Preservar o vínculo de uma escola por membro e a remoção da insígnia ao encerrar a filiação por expulsão.
+- **Diagnóstico:** Elemental Vision II está disponível na instalação privada, mas o plugin está desativado no perfil e ausente da ordem de carregamento do servidor; configuração de medalhões está vazia. Os IDs de cinco variantes Mondstadt já foram catalogados localmente e serão conferidos nos registros reais.
+- **Direção:** bloqueio da bancada no servidor e no cliente, seleção de membro/escola no painel e proteção autoritativa de inventário integrada à morte. Ativação do plugin deve preservar índices existentes, arquivos protegidos e dados, com backup e instalação segura fora da sessão ativa do jogo.
+- **Próximo:** implementar e testar as proteções, preparar a instalação e coordenar a reabertura do cliente privado. Integração e homologação oficial continuam pendentes.
+
 ## 2026-11-15, regra do membro comum e teste privado (Melekyy / Codex)
 
 - **Regra confirmada:** o membro não sai voluntariamente; só o líder pode removê-lo. Não criar botão nem ação de saída voluntária. A proposta de acrescentar essa ação foi cancelada pelo dev antes de ser implementada.
