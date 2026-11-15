@@ -17,7 +17,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 4 · 🟡 14 · 📝 5 · ⚪ 1 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 4 · 🟡 15 · 📝 4 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -61,7 +61,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido e capas balançando; 577 cabelos prontos, falta ver em jogo e medir o desempenho | 15/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
-| Maldições (vampirismo, licantropia, bruxaria) | 📝 | Progressão em 6 estágios desenhada na planilha; sem código (a transformação do lobisomem está em teste à parte) | 14/11/2026 |
+| [Maldições (vampirismo, licantropia, bruxaria)](../02-sistemas/sobrenatural/formas-e-poderes.md) | 🟡 | Revisar e testar formas e olhos no laboratório; decidir suporte restante de poderes | 15/11/2026 |
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |

@@ -42,3 +42,7 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Feito:** primeira versão a pedido do Mercurius: forma controlada pelo servidor, raça do Manbeast 50% maior, nome "Lobisomem" na forma de fera, +50% de dano de prata, restauração depois de reiniciar. Depois do 1º teste em jogo: troca de raça sincronizada com a animação e efeitos de sangue no lugar do clarão.
 - **Próximo:** mesclar com a versão de animação feita em paralelo.
 - **Bloqueios:** nenhum
+
+## 2026-11-15 (pablo-rodrigues1 / Sol High) — integração do Sobrenatural no laboratório
+- O lote Sobrenatural 3299cf1 adiciona entrada redundante cast/efeito e recarga real server-side (padrão 30 min, local 0), preservando a sessão autoritativa do kdu. 29 testes do kdu passaram; teste em jogo e revisão pendentes. Oficial não alterado; ver ../sobrenatural/formas-e-poderes.md e ADR-0014.
+

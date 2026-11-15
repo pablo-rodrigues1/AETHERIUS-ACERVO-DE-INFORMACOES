@@ -62,3 +62,9 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Feito:** início do sistema. Abas de maldições da planilha transcritas. Definidos: curva de XP (20k/40k fixos pelo dev; restante calculado até 2M), direção de arte (padrão do Class System; detalhes em Carmesim/Âmbar/Violeta), regras de setagem/remoção (o servidor reseta a classe; a remoção apaga o progresso), keyword só no servidor. Referências de UI do vampirismo analisadas (estágios e Disciplinas). Proposta de textos para Lobisomem e Bruxa. kdu entra como corresponsável: o lobisomem parte do pacote dele.
 - **Próximo:** Etapa 1, as 4 telas do módulo Sobrenatural no UI Core, com dados mock.
 - **Bloqueios:** nenhum
+
+## 2026-11-15 (pablo-rodrigues1 / Sol High) — formas e poderes, lote parcial
+- **Feito:** investigação dos dez itens relatados em jogo; lote local 3299cf1 prepara entrada das formas, recarga real, raça/olhos/login e candidato Aura Whisper. 29 testes kdu + 5 novos, serviço/F7, builds, boot e check estrutural passaram. Ver formas-e-poderes.md e ADR-0014.
+- **Próximo:** revisão Terra e reteste humano, depois observador; Etapa 2 aberta.
+- **Bloqueios:** regen magicka/vigor da Névoa e perk temporária da Força exigem decisão sobre integração ao host; nada nativo alterado. Papyrus global segue bloqueado.
+

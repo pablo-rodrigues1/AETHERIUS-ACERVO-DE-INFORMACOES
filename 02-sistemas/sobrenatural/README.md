@@ -51,4 +51,4 @@ Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especif
 ## Pendências
 - Aprovar os textos de Lobisomem e Bruxa ([proposta-textos.md](proposta-textos.md)).
 - ~~Vertente/troca~~: Vertente no estágio 1; nenhuma troca; 2ª Disciplina no Apoteótico.
-- Etapa 1 (telas do UI Core) ainda não iniciada.
+- Etapa 1 concluída; Etapa 2 com painel F7 e serviços locais. [Formas e poderes](formas-e-poderes.md): lote parcial para revisão/reteste, com limites de integração nativa na Névoa/Força. Nenhuma homologação oficial.
