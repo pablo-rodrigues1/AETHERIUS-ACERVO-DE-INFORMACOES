@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Bruxaria preparada; scripts não assinados
+- **Feito:** concessões da Bruxa por estágio e vertente, upgrades da TENEBRAE pelo servidor, parada do upgrade automático do Shadow Spell Package, pisos de habilidade (maior valor entre classe e maldição) no GameplayCore local, tela da Bruxa atualizada (etapa-2-bruxaria.md). Achada a causa de nenhum poder funcionar no servidor local: o cliente recusava os scripts do servidor por falta de assinatura (investigacoes/investigacao-15-11-scripts-nao-assinados.md); corrigido com chave de teste local.
+- **Próximo:** correção por origem (magias/perks) e ligar a Bruxa ao serviço; teste em jogo de Fera, Lorde e Bruxa.
+- **Bloqueios:** limite do Codex; correção por origem sem responsável definido.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — painel F7
 - **Feito:** aba Sobrenatural no painel da staff (F7) com 7 ações (consultar, setar, remover, XP, Disciplina, Vertente, encerrar forma), com auditoria e revalidação de sessão. Revisado por Terra High e aprovado em jogo. Detalhes: etapa-2-painel-f7.md, revisao-etapa-2-painel-f7.md; investigação do F8 abandonada em investigacoes/.
 - **Próximo:** corrigir formas e poderes que falharam no teste em jogo (fera, Lorde, raça vampírica, morcego, névoa, enxame, visão; recarga de 30 min).
