@@ -24,6 +24,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 1. A Staff escolhe o líder por uma integração autorizada, que ainda precisa ser conectada ao painel oficial.
 2. O líder convida os jogadores. Cada convidado precisa aceitar para entrar.
 3. O líder organiza membros, cargos e funções. Criar um cargo com um nome especial não dá poderes de líder.
+   O membro não pode sair sozinho: precisa ser removido pelo líder. Essa remoção fica nos Registros com o nome e o ID de quem removeu e de quem foi removido.
 4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e podem existir vários bibliotecários. Somente o líder nomeia ou revoga cada um.
 5. Somente bibliotecários nomeados fabricam pela **Biblioteca**, aberta pela bancada. O Arquimago também precisa ser nomeado bibliotecário para fabricar. Cada tomo exige 5 papéis e 1 pedra da alma.
 6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
@@ -50,6 +51,7 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 
 - **Já está disponível no servidor oficial?** Ainda depende da integração e dos testes no oficial.
 - **Posso me tornar líder pelo painel?** A escolha do líder cabe à Staff autorizada.
+- **Posso sair da guilda por conta própria?** Não. O líder precisa remover você. A ação fica registrada; uma tentativa recusada não conta como saída.
 - **Um cargo personalizado permite administrar a guilda?** Não. A administração pertence ao líder.
 - **Os livros em branco estão disponíveis?** O registro local atual informa que esse sistema foi guardado. Os tomos de magia continuam sendo uma função separada.
 - **O novo ocupante de um cargo recebe os bens do anterior?** Não. Os pertences pessoais são preservados para seu dono.

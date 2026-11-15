@@ -14,6 +14,12 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, permanência e remoção de membros de Guildas (Melekyy / Codex)
+
+- **Registro:** o dev confirmou que não existe saída voluntária; o líder remove o membro e a ação é registrada.
+- **Impacto:** a filiação Companion continua vindo do cadastro autoritativo de Guildas. A regra não conecta o ritual nem permite usar seu histórico como prova de filiação atual.
+- **Próximo:** manter a revalidação da participação prevista no planejamento.
+
 ## 2026-11-15, impacto dos registros R20 de Guildas (Melekyy / Codex)
 
 - **Registro:** [Guildas R20](../guildas/diario.md) detalha o histórico administrativo com nomes, IDs e mudanças preservados no momento da ação.

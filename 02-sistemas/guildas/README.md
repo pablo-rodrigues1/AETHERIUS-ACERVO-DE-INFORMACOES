@@ -42,6 +42,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 
 - A Staff nomeia ou remove o líder por API do servidor, após autorização real. Não há ação do navegador para se tornar líder.
 - O líder convida, remove membros e gerencia cargos e funções. O jogador precisa aceitar o convite para entrar.
+- Membros não podem sair voluntariamente nem remover o próprio perfil. A saída acontece pela remoção feita pelo líder e fica nos Registros. A liderança continua sendo alterada pela Staff.
 - Cargos personalizados não concedem gestão. Nos Magos, líder ou professor define uma escola por estudante; o código não permite trocar esse vínculo sem a saída por expulsão.
 - A aba de produção na bancada se chama **Biblioteca**; a antiga aba de consulta foi retirada. O bibliotecário pesquisa e fabrica tomos pelo mesmo catálogo autorizado. Cada tomo indica suas classes, categorias (Novato a Mestre) e efeito base disponível nos plugins; a busca reconhece classe e categoria. A liderança mantém a nomeação do bibliotecário na Biblioteca.
 - A receita vigente no código cobra **5 papéis e 1 pedra da alma** por tomo, com a mesma validação de acesso e proximidade. A descrição é informativa: não libera magias, não redefine requisitos de aprendizado e não altera seus efeitos.

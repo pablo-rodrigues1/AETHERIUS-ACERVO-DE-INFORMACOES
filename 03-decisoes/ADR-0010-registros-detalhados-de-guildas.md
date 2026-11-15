@@ -29,6 +29,7 @@ O dev pediu que a aba Registros indique, por exemplo, quem foi nomeado para qual
 5. Manter data e hora, restrição da aba à liderança, exibição dos 100 registros mais recentes por guilda e retenção existente de até 5.000 registros no estado global. A falha de persistência desfaz alteração e registro juntos.
 6. Registros anteriores continuam intactos e identificados como antigos. Não inferir a função ou os nomes históricos que não foram armazenados. Os IDs de perfil e demais dados originais continuam disponíveis.
 7. Renderizar nomes e mensagens como texto, com quebra de linhas longas. Não interpretar nomes ou mensagens dos jogadores como HTML.
+8. Conforme esclarecimento do dev, não existe saída voluntária: membros não podem abandonar a guilda nem remover o próprio perfil. Somente a remoção autorizada pelo líder encerra essa participação e gera o registro correspondente. A tentativa recusada não deve constar como uma saída efetiva.
 
 ## Consequências
 

@@ -14,6 +14,15 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, regra do membro comum e teste privado (Melekyy / Codex)
+
+- **Regra confirmada:** o membro não sai voluntariamente; só o líder pode removê-lo. Não criar botão nem ação de saída voluntária. A proposta de acrescentar essa ação foi cancelada pelo dev antes de ser implementada.
+- **Registros:** remoção pelo líder já registra autor, membro removido, nomes e IDs de perfil. Preservar esse histórico após a remoção. Uma tentativa de saída recusada não cria uma remoção fictícia.
+- **Privado:** a pedido do dev, o personagem de teste passou de líder/bibliotecário para membro comum. Usadas as operações de revogação existentes, com registro e backup; inventário, escola e outras guildas preservados, sem reinício. Os outros ocupantes mantêm suas funções. Nenhum jogador real foi removido da guilda nesta verificação.
+- **Verificado:** 11 testes direcionados de auditoria e política de membros aprovados. Incluem as três guildas, tentativa de saída e remoção do próprio perfil, rejeição pelo evento do cliente e remoção autorizada com registro. As fontes de regras e auditoria instaladas no privado têm os mesmos hashes das verificadas.
+- **Biblioteca:** a fabricação continua exclusiva dos bibliotecários. O dev relatou que o membro comum não abre o craft; solicitada a distinção entre permitir consulta sem produção e restringir a bancada inteira. Nenhuma ampliação de acesso foi aplicada enquanto essa preferência não foi esclarecida.
+- **Próximo:** esclarecer o acesso de consulta à Biblioteca; integração e homologação oficial continuam pendentes.
+
 ## 2026-11-15, registros detalhados R20 instalados (Melekyy / Codex)
 
 - **Feito:** a liderança vê nomes e IDs de perfil de quem realizou a ação e dos envolvidos, com cargo, função, escola, substituição ou revogação. Mudanças de mensagens mostram antes/depois; exclusão de cargos identifica os membros afetados; expulsão informa vínculos removidos.
