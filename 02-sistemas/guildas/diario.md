@@ -23,6 +23,7 @@ Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais 
 - **Evidências:** relatórios locais de instalação, reinício e verificação no runtime, além dos 104 testes e teste nativo isolado de entrega, transferência, morte/recuperação e expulsão. Servidor iniciou com os demais sistemas e voltou a responder ao canal privado.
 - **Limites:** esta entrega confirma os dados e a proteção no servidor real; o cliente estava fechado na verificação de entrega. Inspeção visual da insígnia, teste de morte no cliente real e homologação oficial permanecem pendentes. Não houve morte forçada do personagem do dev.
 - **Próximo:** reabrir o cliente para conferir visualmente a insígnia e seguir a homologação oficial. Nenhum bloqueio de instalação privada permanece.
+- **Publicação:** entrega enviada à `main` em `163c385`. A execução [Validar acervo](https://github.com/pablo-rodrigues1/AETHERIUS-ACERVO-DE-INFORMACOES/actions/runs/43755302609) continua falhando por ausência de frontmatter em documentos preexistentes de Sobrenatural; conferidos 14 arquivos, todos fora de Guildas. Essa falha documental global não impediu a instalação e a verificação privadas descritas acima.
 
 ## 2026-11-15, painel R21 aplicado e ativação das insígnias pendente (Melekyy / Codex)
 
