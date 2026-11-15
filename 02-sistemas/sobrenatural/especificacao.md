@@ -70,7 +70,7 @@ Mod: **Manbeast**. Atributos/resistências via SPELLs `MAG_WWLevelAbility15/20/2
 | Dano desarmado extra (humano e besta) | 5 | 10 | 15 | 20 | 25 | 30 |
 | Vida/Vigor extra (humano e besta) | 125 | 150 | 175 | 200 | 225 | 250 |
 | Vida/Vigor extra (só besta) | 150 | 200 | 250 | 300 | 350 | 400 |
-| Armadura / Resist. mágica (besta) | 150 / 10% | 200 / 15% | 250 / 20% | 300 / 25% | 350 / 25% | 400 / 25% |
+| Armadura / Resist. mágica (besta) | 150 / 10% | 200 / 15% | 250 / 20% | 300 / 25% | 350 / 30% | 400 / 35% |
 
 > Distribuição das perks por coluna transcrita pela ordem da planilha; confirmar visualmente (células mescladas).
 
