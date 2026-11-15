@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — redesenho aprovado
+- **Feito:** ícone do lobisomem refeito fiel à referência, Apoteótico como eclipse de sangue, layout em duas colunas com trilha de 6 marcos. Aprovado pelo dev. Relatório: etapa-1-redesenho.md.
+- **Próximo:** revisão técnica da 1.4; Etapa 2 (servidor).
+- **Bloqueios:** nenhum
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 1 concluída
 - **Feito:** módulo `supernatural` do UI Core com 4 telas, 38 ícones estilizados, fonte Sovngarde Bold, versão de estado (`revision`), identificador de setagem (`grantId`), atualização a cada 10 s + botão Atualizar e validação dos dados. Revisão cruzada de Sol High: reprovado → corrigido → aprovado com ressalvas. Documentos: etapa-1-telas.md, etapa-1-correcoes.md, etapa-1-icones-fonte.md, revisao-etapa-1.md, integracao-ui-core.md.
 - **Próximo:** Etapa 2, servidor (handlers snapshot/choose, persistência, setagem pelo painel, push).
