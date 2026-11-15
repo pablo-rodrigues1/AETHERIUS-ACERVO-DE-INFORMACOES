@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 2: lobisomem no servidor
+- **Feito:** base do kdu aplicada no servidor local; serviço Sobrenatural (estado autoritativo, keyword só no servidor, revision/grantId, UI snapshot/choose + push, comando /maldicao); perks e magias do Manbeast por estágio. Detalhes: etapa-2-lobisomem.md.
+- **Próximo:** teste em jogo; lado cliente do kdu; bônus que exigem plugin; revisão cruzada.
+- **Bloqueios:** bônus sem record (exigem plugin); rebuild do cliente para o kdu.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — servidor local de testes
 - **Feito:** ambiente local isolado (só loopback, PostgreSQL próprio, 16 módulos, bots autenticados, scripts start/stop/reset, overlays para kdu e Sobrenatural). Revisado e corrigido. Detalhes: ambiente-servidor-local.md e revisao-ambiente-servidor-local.md.
 - **Próximo:** Etapa 2 (servidor do Sobrenatural) sobre este ambiente.
