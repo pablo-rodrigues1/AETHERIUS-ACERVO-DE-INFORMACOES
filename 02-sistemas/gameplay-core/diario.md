@@ -3,7 +3,7 @@ titulo: Diário do AetheriusGameplayCore
 tipo: historico
 status: ativo
 responsaveis: [mercurius17, kdu, Melekyy]
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [diario, gameplay]
 relacionados: [README.md]
 ---
@@ -12,6 +12,17 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+
+## 2026-11-15, conjuração no privado e complemento v0.38 (Melekyy / Codex)
+
+- **Feito:** backup do pacote original e dos fontes/configuração/dados/arquivos privados anteriores. Conjuração reativada em execução com `skySummonActorV5`, limite de duas e acompanhamento nativo. A definição V4 arquivada foi preservada. Nenhum bundle/binário foi substituído, sem reiniciar jogo/servidor.
+- **Confirmação do usuário:** as duas criaturas permanecem e acompanham após o roteiro de caminhar e atravessar porta/instância. A leitura seguinte encontrou duas referências ativas e duas cópias carregadas seguindo por `native-package-v2`, sem erros; houve substituições registradas por novas conjurações.
+- **Adaptação oficial:** complemento separado com criação normal do modelo de conjuração, ordenação segura do callback, preservação do acompanhamento pelo host e opção explícita de duas criaturas. O código anterior das funções e o ZIP acumulado foram preservados. Os fontes completos puros não foram localizados; o código recuperado do mapa do cliente é pós-loader e não certifica a revisão pura.
+- **Verificado:** 135/135 testes de Sync; teste isolado do addon com 179 magias, áreas/portas e FIFO; 13/13 testes do complemento, incluindo os quatro de amizade do pacotão e a recriação local com contexto novo; simulação/aplicação em cópia do bundle e reversão exata. O teste do instalador usou fixture de servidor, sem comprovar aplicação à base oficial completa.
+- **Próximo:** integrar e compilar sobre os fontes completos oficiais e homologar com dois jogadores humanos, troca de host, instâncias, expiração e reconexão.
+- **Bloqueios:** base completa v0.38 indisponível para build/suíte integral e homologação oficial. A parte privada foi instalada e confirmada.
+- **Dependentes:** Guildas e NPCs informados nos diários; sem mudança em catálogo, magicka, veneno, reanimação, lobisomem ou livros autorais.
+- **Decisão:** [ADR-0004](../../03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md); detalhes em [conjuracao.md](conjuracao.md).
 
 ## 2026-11-14, início da frente de conjuração (Melekyy / Codex)
 

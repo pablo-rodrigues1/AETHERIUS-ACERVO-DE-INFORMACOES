@@ -3,7 +3,7 @@ titulo: Progresso do desenvolvimento
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [staff, progresso, status]
 relacionados: [../02-sistemas/README.md]
 ---
@@ -13,10 +13,11 @@ relacionados: [../02-sistemas/README.md]
 ## Resumo
 Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio (REGRAS 11.4).
 Última revisão: **14/11/2026**, feita a partir do código do servidor (`aetherius-server`). Ela mostra o que existe no código. Se cada sistema está ligado no servidor oficial não foi verificado.
+Conjuração revisada em **15/11/2026** no privado; a integração oficial permanece pendente.
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 4 · 🟡 13 · 📝 4 · ⚪ 1 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 4 · 🟡 14 · 📝 4 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -63,6 +64,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Definir regras de crédito, comércio e ritual | 14/11/2026 |
 | [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Conectar as permissões da Staff e de Classes e testar no oficial | 14/11/2026 |
+| [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Integrar os fontes completos e testar com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
@@ -70,6 +72,7 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **15/11/2026:** Conjuração no privado: duas criaturas permanecem e acompanham, confirmado pelo usuário; complemento oficial separado, com versão anterior preservada e homologação pendente.
 - **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
 - **14/11/2026:** Planilha e fichas completadas com os 164 registros de feitiços de Classes; diferenças do resumo do código documentadas, sem mudança no servidor.
 
@@ -80,4 +83,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **14/11/2026:** Lobisomem visto em jogo e aprovado: tela vermelha no fim, grito de dor masculino/feminino que vira rosnado e coração acelerando. Pacote e mod entregues.
 - **14/11/2026:** Documentados Loja, IPTU, registro de compras, castelos e cinco projetos futuros. [Consultar entregas](../06-referencias/inventario-aetherius.md).
 - **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.
-- **14/11/2026:** Correções de dano do servidor documentadas (kdu entra no GameplayCore pela frente de dano).

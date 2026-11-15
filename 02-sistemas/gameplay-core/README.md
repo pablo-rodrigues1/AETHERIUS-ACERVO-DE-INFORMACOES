@@ -6,9 +6,9 @@ fase: em-desenvolvimento
 responsaveis: [mercurius17, kdu, Melekyy]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [gameplay, classes, combate, leveling, persistencia, servidor]
-relacionados: [diario.md, feiticos-por-classe.md, correcoes-de-dano.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
+relacionados: [diario.md, feiticos-por-classe.md, correcoes-de-dano.md, conjuracao.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
 
 # AetheriusGameplayCore
@@ -71,7 +71,7 @@ A [lista completa por classe, escola e tier](feiticos-por-classe.md) transcreve 
 
 ## Frente de conjuração
 
-Melekyy iniciou, com confirmação explícita do dev em 14/11/2026, uma frente limitada à conjuração: investigar o desaparecimento no cliente da v0.38, adaptar o acompanhamento normal e entre instâncias usado no privado e avaliar duas criaturas simultâneas. A versão anterior e o pacote acumulado de correções devem ser preservados. O encaixe no privado também foi solicitado. Esta entrada registra o início; não declara correção nem implantação concluída.
+Melekyy atua apenas na [conjuração](conjuracao.md), com confirmação explícita do dev e preservação da versão anterior. Em 15/11/2026, o privado recebeu acompanhamento normal/entre áreas e limite de duas, confirmados pelo usuário. O complemento v0.38 é candidato para integração; a homologação oficial permanece pendente. Ver [ADR-0004](../../03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md).
 
 ## Diário
 Ver [`diario.md`](diario.md).

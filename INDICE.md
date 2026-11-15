@@ -16,6 +16,7 @@
 - `02-sistemas/gameplay-core/diario.md` — Diário do GameplayCore (sincronizações SYNC-1102 e SYNC-1114).
 - `02-sistemas/gameplay-core/feiticos-por-classe.md` — 164 registros de feitiços por classe, escola e tier; conciliação da planilha e divergências dos JSONs.
 - `02-sistemas/gameplay-core/correcoes-de-dano.md` — Correções de dano no servidor: chaves por fase, armadura, resistências, pendências.
+- `02-sistemas/gameplay-core/conjuracao.md` — Conjuração com acompanhamento e duas criaturas confirmada no privado; adaptação v0.38 e homologação oficial pendentes.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/lobisomem/README.md` — Lobisomem sincronizado: forma controlada pelo servidor, animação própria, dano de prata.
@@ -55,6 +56,7 @@
 - `03-decisoes/ADR-0001-integracao-continua-por-ia.md` — IAs documentam o desenvolvimento continuamente via commit na main.
 - `03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md` — O que volta do servidor/cliente para os repos dos Cores e o que fica de fora.
 - `03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md` — Quando planilha de design e código divergem, vale o código.
+- `03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md` — Complemento restrito à conjuração, preservação da versão anterior e separação entre privado aprovado e oficial pendente.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.
@@ -77,6 +79,7 @@
 - `07-guia-da-staff/progresso.md` — Painel com a situação atual de cada sistema.
 - `07-guia-da-staff/glossario.md` — Termos do jogo em linguagem leiga.
 - `07-guia-da-staff/classes/como-funcionam-as-classes.md` — As 18 classes, marcos, troca de classe, Winterhold e ações da Staff.
+- `07-guia-da-staff/classes/conjuracao.md` — Criaturas que acompanham o dono, limite de duas no privado e integração oficial ainda em teste.
 - `07-guia-da-staff/progressao/nivel-xp-e-atributos.md` — XP, XP em grupo, fadiga diária e pontos de atributo.
 - `07-guia-da-staff/dungeons/inimigos-e-masmorras.md` — Respawn no mundo aberto e gerações/reset das masmorras.
 - `07-guia-da-staff/itens/manutencao-de-equipamentos.md` — Kits de manutenção, cargas, penalidade e /manutencao.

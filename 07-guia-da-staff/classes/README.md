@@ -10,6 +10,7 @@ As fichas abaixo passam a listar todos os feitiços da aba Classes, por tier, co
 
 - [Como funcionam as classes](como-funcionam-as-classes.md) — as 18 classes, marcos, troca de classe, classes de Winterhold e o que a Staff pode fazer.
 - [Ficha: Conjuradores](ficha-conjuradores.md) — skills e perks por marco; feitiços da planilha por tier.
+- [Criaturas conjuradas](conjuracao.md) — acompanhamento e duas criaturas confirmados no privado; integração oficial pendente.
 - [Ficha: Guerreiros](ficha-guerreiros.md) — skills e perks por marco; feitiços da planilha por tier.
 - [Ficha: Especialistas](ficha-especialistas.md) — skills e perks por marco; feitiços da planilha por tier.
 

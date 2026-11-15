@@ -6,7 +6,7 @@ fase: em-desenvolvimento
 responsaveis: [Melekyy]
 repositorio: null
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [guildas, skyguilds, magos, alquimistas, companions]
 relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expansao-dos-paineis/ritual-de-coleta.md, ../../07-guia-da-staff/regras-de-roleplay/guildas.md]
 ---
@@ -30,7 +30,7 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - Inclui membros, convites com aceite, liderança, cargos, professores, funções especiais, vínculo para Classes, biblioteca e acesso a pertences.
 - A ponte de autorização da Staff e o vínculo com o runtime oficial de Classes precisam ser conectados aos serviços efetivamente usados pelo servidor.
 - Livros autorais/em branco estão desativados na configuração de exemplo atual. O registro local de 14/11 informa que foram arquivados; a bancada de tomos de magia permanece.
-- O controlador de conjurações arquivado é uma frente separada; não faz parte da habilitação das Guildas.
+- A [conjuração](../gameplay-core/conjuracao.md) é uma frente separada: foi reativada no privado em 15/11, com duas criaturas e acompanhamento; a adaptação oficial continua pendente de homologação. Não faz parte da habilitação dos livros autorais.
 
 ## Funcionamento
 

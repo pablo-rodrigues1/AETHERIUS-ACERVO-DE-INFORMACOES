@@ -3,7 +3,7 @@ titulo: Changelog
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [changelog]
 relacionados: []
 ---
@@ -15,6 +15,7 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 
 ## [Não lançado]
 ### Adicionado
+- Conjuração: acompanhamento e duas criaturas instalados e confirmados no privado; complemento separado para v0.38, com backup e reversão, ainda pendente de integração/homologação oficial. [Estado e evidências](../02-sistemas/gameplay-core/conjuracao.md), [ADR-0004](../03-decisoes/ADR-0004-adaptacao-isolada-da-conjuracao.md).
 - Conciliação de feitiços: Classes - Progressão B23:F40 e fichas da Staff com os 164 registros de Classes, por tier; catálogo no Acervo e no GameplayCore, com divergências de authorizedSpells/allSpellsList documentadas. Apenas planilha e documentação, sem alteração de runtime. [Catálogo](../02-sistemas/gameplay-core/feiticos-por-classe.md).
 - Documentadas as entregas Loja 0.7.0, Residências 0.5.3, Painel ADM 2026.11.13.1 e governos ADM1/REIS1/TABFIX1, com as cinco expansões planejadas em 13/11. [Inventário das entregas](../06-referencias/inventario-aetherius.md).
 - Criação do acervo de informações ([ADR-0000](../03-decisoes/ADR-0000-adocao-do-acervo.md)).

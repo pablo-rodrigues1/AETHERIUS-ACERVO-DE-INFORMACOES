@@ -3,7 +3,7 @@ titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-15, impacto da conjuração (Melekyy / Codex)
+
+- **Feito:** [conjuração](../gameplay-core/conjuracao.md) reativada no privado, com acompanhamento e duas criaturas confirmados pelo usuário; complemento v0.38 separado e ainda candidato.
+- **Impacto:** biblioteca, tomos, permissões, catálogo de Classes, custos de magicka e livros autorais não foram alterados. Não interpretar o limite privado de duas como mudança automática da capacidade oficial do Core.
+- **Próximo:** homologar o complemento sobre a revisão oficial e manter as integrações de Guildas alinhadas ao runtime real.
+- **Bloqueios:** fontes completos/homologação oficial pendentes; parte privada confirmada.
 
 ## 2026-11-14, referência de feitiços das classes (mercurius17 / Codex)
 
