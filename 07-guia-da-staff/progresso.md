@@ -16,7 +16,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 4 · 🟡 12 · 📝 4 · ⚪ 1 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 4 · 🟡 13 · 📝 4 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -62,6 +62,7 @@ Onde está cada sistema do Aetherius. Atualizado pelas IAs dos devs a cada envio
 | Maldições (vampirismo, licantropia, bruxaria) | 📝 | Progressão em 6 estágios desenhada na planilha; sem código (a transformação do lobisomem está em teste à parte) | 14/11/2026 |
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Definir regras de crédito, comércio e ritual | 14/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Conectar as permissões da Staff e de Classes e testar no oficial | 14/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
@@ -69,8 +70,8 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
+- **14/11/2026:** Melekyy está desenvolvendo Guildas (SkyGuilds); registrados Magos, Alquimistas e Companions, com integração oficial pendente.
 - **14/11/2026:** Iniciada a conferência dos feitiços entre Classes, Classes - Progressão e as listas do GameplayCore; código permanece como referência do comportamento implementado.
-
 - **14/11/2026:** Relatos de 13/11 corrigidos em pacote: ícone girando no loading, `;` sem abrir a constelação, magia que desequipa, L/R legível, nórdico só para nórdicos e controle travando após trocar aparência. Invocação em análise.
 - **14/11/2026:** Ocarina (só música, item novo) e Túnica do Herói (roupas do alfaiate) em teste.
 - **14/11/2026:** Olhar dos jogadores: todo mundo vê para onde cada um olha, com a cabeça acompanhando a câmera de forma suave (em teste).
@@ -79,4 +80,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **14/11/2026:** Planilha de classes, leveling, raças, poções, encantamentos e maldições conferida com o código e levada ao guia; onde diverge, vale o código.
 - **14/11/2026:** Correções de dano do servidor documentadas (kdu entra no GameplayCore pela frente de dano).
 - **14/11/2026:** Lobisomem sincronizado e investigação dos NPCs travando entram no acervo; guia da Staff do lobisomem publicado.
-- **14/11/2026:** Classes: skills definidas pelo servidor, limite de invocações, ajuste de nível pelo painel da Staff e Anti-Mago com Maestria em Conjuração. Guias da Staff de classes, progressão, masmorras e manutenção publicados.

@@ -20,6 +20,7 @@ Situação atual de cada sistema, atualizada a cada mudança.
 | [`itens/`](itens/README.md) | Catálogo de itens: onde obter, para que servem e raridade. |
 | [`economia/`](economia/README.md) | Moeda, preços, comércio entre jogadores e lojas. |
 | [`regras-de-roleplay/`](regras-de-roleplay/README.md) | Regras de RP do servidor e como a Staff deve aplicá-las. |
+| [Guildas](regras-de-roleplay/guildas.md) | Magos, Alquimistas e Companions, em desenvolvimento por Melekyy. |
 | [`perguntas-frequentes/`](perguntas-frequentes/README.md) | Dúvidas comuns de jogadores e as respostas oficiais. |
 
 Novos temas são bem-vindos: crie uma subpasta e use o modelo [`_modelos/GUIA-STAFF.md`](../_modelos/GUIA-STAFF.md).

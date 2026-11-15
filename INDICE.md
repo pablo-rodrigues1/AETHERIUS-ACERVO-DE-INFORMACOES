@@ -27,6 +27,8 @@
 - `02-sistemas/tunica-do-heroi/diario.md` — Diário da Túnica do Herói.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
+- `02-sistemas/guildas/README.md` — Guildas (SkyGuilds) em desenvolvimento por Melekyy: Magos, Alquimistas e Companions, com integrações oficiais pendentes.
+- `02-sistemas/guildas/diario.md` — Diário de Guildas, responsável Melekyy, registro inicial e pendências de publicação e integração.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
 - `02-sistemas/loja/diario.md` — Histórico documental de Loja e apoiadores, com a base de integração e o próximo passo.
 - `02-sistemas/residencias/README.md` — Compra, acesso, revenda e imposto das propriedades residenciais.
@@ -90,3 +92,4 @@
 - `07-guia-da-staff/economia/loja-e-diademas.md` — O jogador usa Diademas na Loja do TAB e o Apoiador Beta pertence à conta.
 - `07-guia-da-staff/economia/casas-e-iptu.md` — O dono paga o imposto da casa em Septims a cada 15 dias e gerencia o acesso pelo TAB.
 - `07-guia-da-staff/economia/governos-e-castelos.md` — O Rei nomeado pode controlar as portas do castelo no painel de Casas.
+- `07-guia-da-staff/regras-de-roleplay/guildas.md` — Explicação simples das Guildas em desenvolvimento por Melekyy e dos limites da atuação da Staff.

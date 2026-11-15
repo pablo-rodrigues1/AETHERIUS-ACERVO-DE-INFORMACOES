@@ -29,6 +29,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Painel administrativo](painel-adm/README.md) | em-teste | A confirmar | [painel-oficial](https://github.com/eksmurf/painel-oficial) | 2026-11-14 |
 | [Governos, Jarl e castelos](governos/README.md) | em-desenvolvimento | A confirmar | [aetherius-painel-jarl](https://github.com/eksmurf/aetherius-painel-jarl) | 2026-11-14 |
 | [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | A confirmar | Planejamento dos painéis | 2026-11-14 |
+| [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | Projeto local; URL do código a informar | 2026-11-14 |
 
 Conciliação de feitiços de classes em andamento (14/11/2026): planilha e documentação; GameplayCore continua em desenvolvimento. Ver [diário](gameplay-core/diario.md).
 
@@ -43,6 +44,7 @@ flowchart LR
   painel --> residencias
   governos[Governos] --> residencias
   expansao[Expansão dos painéis] --> governos
+  guildas[Guildas / SkyGuilds] --> gameplay-core
   expansao --> painel
   expansao --> residencias
 ```
