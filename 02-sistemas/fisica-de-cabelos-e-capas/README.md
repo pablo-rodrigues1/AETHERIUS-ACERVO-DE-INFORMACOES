@@ -1,0 +1,64 @@
+---
+titulo: Física de cabelos e capas
+tipo: sistema
+status: rascunho
+fase: em-teste
+responsaveis: [kdu]
+repositorio: "pacote separado: mods AETHERIUS - FISICA DE CABELOS E CAPAS + AETHERIUS - FISICA - MOTOR FSMP 4.1.1 (sem plugin)"
+depende_de: []
+atualizado: 2026-11-15
+tags: [modpack, cabelo, capa, fisica, fsmp]
+relacionados: [diario.md]
+---
+
+# Física de cabelos e capas
+
+## Resumo
+Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É só visual e roda no jogo de cada jogador; o servidor não participa.
+
+## Onde está o código
+- Ferramenta que gera tudo: `ferramentas/fisica-cabelos` (projeto local do kdu, C++ com nifly; simulador de bancada com Bullet).
+- Entrega: dois mods para o MO2, sem plugin `.esp`.
+  - `AETHERIUS - FISICA - MOTOR FSMP 4.1.1`: Faster HDT-SMP 4.1.1 oficial (GPL-3.0), versão AVX.
+  - `AETHERIUS - FISICA DE CABELOS E CAPAS`: 577 modelos de cabelo, 6 de capa e 488 arquivos de física.
+
+## Escopo
+- Inclui: todos os cabelos do modpack que têm parte solta (Vanilla hair remake e addon, HammerHair, Apachii, KS Hairdos Lite, BeastHHBB, Khajiit) e as capas do Cloaks and Capes.
+- Não inclui: cabelos curtos ou presos (1.030 modelos, continuam parados); chifres, barbatanas e penas; perucas; colisão com o corpo; NPCs com rosto pré-gerado.
+
+## Funcionamento
+- Cabelo: a ferramenta separa o que está colado na cabeça do que está solto. O solto vira até 8 correntes de 1 a 6 ossos, penduradas no osso da cabeça. Os pesos da malha são refeitos; a posição dos vértices não muda.
+- Capa: os modelos já são presos a três ossos de saia traseira do esqueleto XPMSSE. A física solta esses três ossos; a malha não muda.
+- Nada foi copiado de mods de física de terceiros: ossos, pesos e arquivos de física saem da ferramenta.
+- Os dois mods andam juntos. O mod de cabelos sem o motor deixa os cabelos longos quebrados.
+
+## Parâmetros e fórmulas
+| Parâmetro | Valor | Descrição |
+|---|---|---|
+| Folga da cabeça | 2,0 (4,5 na metade de cima) | Até essa distância o cabelo fica preso |
+| Fatias em volta da cabeça | 8 | Uma corrente por fatia com cabelo solto |
+| Ossos por corrente | 1 a 6 (trecho de 4,5 ou mais) | Máximo de 40 por cabelo; média de 12 |
+| Rigidez da junta | 40000 × r(r+1)/2 | r = ossos da junta até a ponta (a junta é tão firme quanto a carga que segura) |
+| Inércia do osso | rigidez / 250 (mínimo 20) | O Bullet limita a rigidez pela inércia |
+| Amortecimento da mola | 2 × 2,0 × raiz(rigidez × inércia) | Para o cabelo parar rápido |
+| Massa / gravidade | 1,0 / 0,4 | O modelo já foi feito "caído" |
+| Limites por junta | 17° para fora, 3° para dentro, 14° de lado, 9° de torção | Faz o papel da colisão |
+| Capa | abre 31° para trás, 2° para o corpo, 13° de lado | Por junta, três juntas |
+| Personagens com física | 10 | Limite do motor, ajustado pelo desempenho |
+
+## Dependências
+| Depende de | Por quê |
+|---|---|
+| XPMSSE (já no modpack) | Ossos de saia usados pela capa |
+| Address Library (já no modpack) | Exigido pelo FSMP |
+
+## Decisões relacionadas
+- Sem colisão com o corpo, para ficar leve com muitos jogadores. Rever depois do teste em jogo.
+
+## Diário
+Ver [`diario.md`](diario.md).
+
+## Pendências conhecidas
+- Nunca foi visto em jogo. Falta conferir o registro do FSMP, o visual e o desempenho com vários jogadores.
+- Capa não passou pelo simulador; pode atravessar as pernas ao correr.
+- 19 modelos do addon do Vanilla hair remake já vêm quebrados do mod (pele sem ossos) e não foram tocados.

@@ -27,6 +27,8 @@
 - `02-sistemas/ocarina/diario.md` — Diário da Ocarina.
 - `02-sistemas/tunica-do-heroi/README.md` — Túnica do Herói: 16 peças para o alfaiate, gorro mostrando o cabelo.
 - `02-sistemas/tunica-do-heroi/diario.md` — Diário da Túnica do Herói.
+- `02-sistemas/fisica-de-cabelos-e-capas/README.md` — Física de cabelos e capas: cabelo comprido e capas balançando (FSMP), gerado por ferramenta própria.
+- `02-sistemas/fisica-de-cabelos-e-capas/diario.md` — Diário da Física de cabelos e capas.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
 - `02-sistemas/guildas/README.md` — Guildas (SkyGuilds) em desenvolvimento por Melekyy: Magos, Alquimistas e Companions, com integrações oficiais pendentes.
