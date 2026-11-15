@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-14, Z não transformava (kdu / Claude Opus 5.5)
+- **Achado da YuYu:** com Beast Form equipado, o Z só tocava o som; a transformação só saía pelo Kadu.
+- **Causa:** o cliente avisava o servidor pelo evento `spellCast`, que não chega para poder usado pela voz.
+- **Feito:** o cliente também ouve `actionVoiceFire`, e o servidor ignora o aviso repetido. Testes 29/29; patch do pacote e kit v21 atualizados.
+- **Pendente:** depois de voltar à forma humana o personagem fica menor. Provável causa: a raça Nórdico do SkyMP, que fica no ator em tempo de execução.
+
 ## 2026-11-14, tarde (kdu / Claude Opus 5.5)
 - **Feito:** visto em jogo pelo kdu e pelo Mercurius: a transformação funciona. Pedidos atendidos no mesmo dia:
   - tela toda vermelha no fim (aprovada em 9,5 s depois de testar 8,5 s) para esconder a pose final;
