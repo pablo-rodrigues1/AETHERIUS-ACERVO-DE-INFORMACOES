@@ -71,6 +71,9 @@ Mod: **Manbeast**. Atributos/resistências via SPELLs `MAG_WWLevelAbility15/20/2
 | Vida/Vigor extra (humano e besta) | 125 | 150 | 175 | 200 | 225 | 250 |
 | Vida/Vigor extra (só besta) | 150 | 200 | 250 | 300 | 350 | 400 |
 | Armadura / Resist. mágica (besta) | 150 / 10% | 200 / 15% | 250 / 20% | 300 / 25% | 350 / 30% | 400 / 35% |
+| **Total de vida/vigor na forma de fera** (humano + besta, somados) | 275 | 350 | 425 | 500 | 575 | 650 |
+
+> **Regra (dev, 2026-11-15):** os bônus "humano e besta" e "só besta" se **somam** na forma de fera. Ex.: Ômega na forma humana = +150 de vida e vigor; ao assumir a forma de fera recebe mais +200, total +350.
 
 > Distribuição das perks por coluna transcrita pela ordem da planilha; confirmar visualmente (células mescladas).
 
