@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, R22 instalada: portas do Colégio e funções incompatíveis (Melekyy / Codex)
+
+- **Entrega:** aba Portas do Colégio exclusiva do líder/professores, com busca, áreas, estado e trancar/destrancar individualmente ou em lote. Trancas valem para entrada e saída, inclusive líder, professor e NPC. Sessão, nonce, revisão e autoridade revalidados no servidor; política e registros detalhados persistidos juntos. [ADR-0012](../../03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md).
+- **Catálogo final:** 68 passagens/86 referências, incluindo 16 pares de teleporte e quatro grupos de portão. Foram excluídos 12 candidatos sem função de passagem do Colégio, como vitrines, algemas e porta do estábulo da cidade. O levantamento de limite encontrou ainda o portão principal da ponte fora da localização College modificada pelo mod da cidade; foi incluído explicitamente. Três referências originalmente desativadas permanecem assim.
+- **Funções e liderança:** nomeações incompatíveis recusadas nos dois sentidos e filtradas na interface; revogar a função anterior antes de nomear a outra. Um acúmulo de teste foi corrigido preservando professor e revogando bibliotecário com registro. A pedido do dev, a ponte administrativa autorizada nomeou o personagem de teste Arquimago, preservando escola e inventário; não concedeu as outras funções automaticamente.
+- **Testes:** 112 testes completos aprovados; após ajuste final do catálogo/reconfiguração, seis testes direcionados aprovados. O servidor nativo isolado, sem clientes reais, validou o catálogo e recusou 166 pacotes de ativação das 83 referências ativas; ao destrancar, a travessia Salão dos Elementos–Arcanaeum funcionou nos dois sentidos. As três referências desativadas não foram criadas/habilitadas.
+- **Implantação:** atualização suportada sem reiniciar jogo/servidor, com backup. Cliente conectado confirmou versão R22 e as APIs nativas necessárias; zero referências pendentes. Inventários, escola, catálogo/receita/traduções, insígnias, núcleo, Morte, conjuração e bundles ativos preservados. A instalação não trancou nenhuma passagem nem produziu ações de teste no histórico real.
+- **Limites:** prévia com dados fictícios e prova nativa isolada são distintas de travessia humana. Conferência no jogo, teste com dois clientes reais e homologação oficial continuam pendentes. O controle vale para as portas catalogadas, sem barreira global de teleporte e sem reverter transições já aceitas. Documentação publicada separadamente; código, relatórios privados e assets permanecem locais.
+- **Próximo:** confirmar uso da aba e travessia no cliente privado, depois adaptar catálogo/transporte ao oficial. Receita, baús, insígnias, Classes e ritual Companion não mudaram.
+
 ## 2026-11-15, portas do Colégio e funções incompatíveis iniciadas (Melekyy / Codex)
 
 - **Pedido:** aba exclusiva de líder/professores para trancar/destrancar todas as portas do Colégio ou uma passagem por vez, bloqueando ambos os lados para todos até a liberação. Levantar as referências reais da instalação e os dois lados das portas com teleporte.

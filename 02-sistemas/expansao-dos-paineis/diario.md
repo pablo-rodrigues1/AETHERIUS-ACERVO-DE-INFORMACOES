@@ -14,6 +14,12 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, portas do Colégio instaladas no privado (Melekyy / Codex)
+
+- **Registro:** Guildas R22 permite ao líder/professores trancar as passagens do Colégio nos dois sentidos para todos, inclusive o operador; catálogo privado e prova nativa isolada conferidos. Professor e bibliotecário não acumulam funções. Travessia humana e oficial pendentes.
+- **Impacto:** é uma política específica dos Magos. A proposta de portões municipais conserva sua regra própria de saída e não foi implementada ou modificada nesta entrega. Portas de castelos, Classes e contrato de filiação Companion no ritual continuam intactos.
+- **Próximo:** validar cada catálogo e autoridade no sistema responsável, sem presumir que o controle do Colégio substitui os portões municipais ou dos castelos.
+
 ## 2026-11-15, escolas e insígnias da Guilda dos Magos (Melekyy / Codex)
 
 - **Registro:** painel R21 dos Magos restringe bancada a bibliotecários e oferece escolha de membro/escola a líder e professores. Insígnias vinculadas e proteção na morte foram ativadas no privado; o servidor confirmou a entrega e persistência de uma unidade no personagem de teste. Homologação oficial continua pendente.

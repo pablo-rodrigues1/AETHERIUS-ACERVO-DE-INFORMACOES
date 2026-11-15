@@ -53,6 +53,8 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 - A R20 detalha a aba **Registros**, exclusiva da liderança: nomes e IDs de perfil de autor e envolvidos, cargo ou função, substituições, revogações e diferenças antes/depois quando aplicáveis. Os dados são salvos no momento da ação e preservados após renomeações ou expulsões. Registros anteriores permanecem intactos, com aviso sobre os detalhes históricos não gravados. O limite existente é de 100 registros recentes exibidos por guilda e 5.000 retidos no estado global.
 - O painel dos Magos recusa transferências pelo baú virtual. O acesso aos baús dos quartos passa pelo menu nativo e pelas permissões do servidor; antigos ocupantes preservam a retirada dos próprios pertences.
 - A R21 instalada no privado restringe a abertura da bancada aos bibliotecários. Líderes administram essas nomeações em Professores. Nessa mesma aba, líder e professores selecionam membro/escola. O Elemental Vision II está ativo no cliente/servidor privado, com entrega automática e proteção de inventário/morte conectadas; cinco registros reais conferidos. A configuração de exemplo não habilita o mod automaticamente, e a implantação oficial ainda precisa conferir dependências e adaptadores.
+- A R22 acrescenta **Y → Portas do Colégio**, exclusiva do líder e dos professores atuais. Trancar/destrancar todas ou uma passagem controla 68 passagens/86 referências da instalação privada, incluindo os dois lados de 16 teleportes e quatro grupos de portão. A tranca impede entrada e saída para todos, inclusive o operador, até a liberação. Política persistente, guarda no servidor e aplicação nativa no cliente; instalação preserva o estado original, e três referências desativadas não são habilitadas. Não constitui barreira global de teleporte.
+- Professor e bibliotecário dos Magos não acumulam funções. O líder precisa revogar a função atual antes de nomear a outra; candidatos incompatíveis não aparecem no seletor, e o servidor também recusa. Um conflito de teste no privado foi corrigido preservando professor e revogando bibliotecário com registro.
 
 ## Parâmetros e fórmulas
 
@@ -89,6 +91,7 @@ O [ritual de coleta planejado](../expansao-dos-paineis/ritual-de-coleta.md) exig
 - [ADR-0009](../../03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md): vários bibliotecários, fabricação com duração e tradução da Biblioteca.
 - [ADR-0010](../../03-decisoes/ADR-0010-registros-detalhados-de-guildas.md): registros históricos com nomes, IDs e detalhes da alteração.
 - [ADR-0011](../../03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md): bancada exclusiva, seleção de escola e insígnias vinculadas, incluindo morte.
+- [ADR-0012](../../03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md): portas nos dois sentidos, controle por líder/professores e exclusão entre professor/bibliotecário.
 - O registro inicial não introduz nova decisão de design ou arquitetura.
 
 ## Diário
@@ -103,6 +106,8 @@ Ver [diario.md](diario.md).
 - Informar a URL do repositório do código.
 
 ## Base da verificação
+
+Atualização R22 de 15/11/2026: 112 testes completos e seis rechecagens direcionadas após o último ajuste aprovados. Catálogo final de 68 passagens/86 referências validado no servidor nativo isolado; 166 pacotes recusados nas 83 referências ativas, três desativadas preservadas e teleporte destrancado testado nos dois sentidos. Instalada sem reiniciar jogo/servidor, com inventários e arquivos protegidos preservados; o cliente conectado confirmou fonte R22 e APIs. Não foram aplicadas trancas de teste no mundo privado real. Prévia de interface com dados fictícios; travessia humana e homologação oficial pendentes.
 
 Levantamento de 14/11/2026 com leitura das fontes locais acima, de `README.md`, `docs/INTEGRACOES.md` e `docs/SISTEMAS-RETIRADOS.md`. A importação de `src/index.js` em Node.js foi verificada; a suíte de testes, o jogo e o servidor oficial não foram executados nesta sessão. Registros locais de implantação privada não comprovam homologação pública.
 
