@@ -78,6 +78,7 @@
 - `03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md` — Bancada só para bibliotecários, escolha de escola por líder/professores e insígnias protegidas.
 - `03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md` — Controle das passagens nos dois sentidos por líder/professores e exclusão entre professor e bibliotecário.
 - `03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md` — Professor/bibliotecário dos Magos sem cargos extras ou liderança, preservando o vínculo pessoal de escola.
+- `03-decisoes/ADR-0015-seletores-e-bancada-do-lider.md` — Listas de opções estáveis para todos os seletores e fabricação de tomos autorizada ao líder sem acumular funções.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

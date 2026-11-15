@@ -14,6 +14,22 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, dez quartos de alunos e retirada da escola iniciados (Melekyy / Codex)
+
+- **Pedido:** cadastrar os dez quartos com cama da instância atual, atribuir um aluno e um baú nominal por quarto, com acesso de porta por proximidade ao dono e à administração. Professores e líder atribuem os quartos.
+- **Esclarecimento confirmado:** apenas Arquimago conserva o controle geral remoto das portas. Professores abrem as portas dos quartos por proximidade. A referência à direção é tratada como liderança atual.
+- **Levantamento:** personagem localizado no Hall of Attainment; dez camas reais nos registros vencedores, seis no andar de entrada e quatro no inferior. Conferir porta/compartimento de cada quarto; excluir estoques de comerciantes e ambientes sem cama. Não há baús físicos já vinculados no cadastro privado consultado.
+- **Escola:** acrescentar retirada de vínculo exclusiva do Arquimago, com auditoria e revogação da insígnia pelo diário de inventário. Professores continuam podendo definir vínculo, sem poder retirá-lo.
+- **Apresentação:** retirar somente a legenda de função exclusiva indicada na imagem, preservando todas as regras de cargos. Alteração já enviada à interface privada.
+- **Próximo:** concluir catálogo dos quartos, implementar persistência/permissões, testar e instalar com backup. Código e dados privados permanecem locais.
+
+## 2026-11-15, R24 aplicada e reconstrução repetida corrigida (Melekyy / Codex)
+
+- **Entrega:** componente de opções dentro do painel usado por todos os seletores, com contexto, opções e escolhas preservados; líder dos Magos recebe marcador e fabricação sem função de bibliotecário. Custo, duração e proximidade mantidos; membro comum/professor sem autoridade continua recusado.
+- **Causa observada dos cliques:** uma repetição idêntica do estado de fabricação forçava reconstrução do conteúdo. Foram medidas 31 reconstruções em 1,2 s sem mudança desse estado; pressionar/soltar o mouse perdia o controle original. A interface agora ignora repetições idênticas e não força invalidação desnecessária. Na inspeção posterior houve zero reconstruções no mesmo intervalo.
+- **Verificação:** 119 testes completos e 16 rechecagens de interface aprovados, incluindo repetição de 60 callbacks durante clique. Teste nativo isolado confirmou fabricação pelo líder com receita real e cancelamento por revogação. Cliente confirmou R24 e marcador no local. Lista aberta por chamada direta permaneceu estável; evento de mouse sintetizado não equivale ao clique físico. Imagem posterior do dev mostra a aba Membros, sem comprovar todos os seletores.
+- **Recuperação:** o rastreamento temporário interferiu no encadeamento durante uma atualização e foi removido. O módulo de Guildas foi recarregado sem reiniciar jogo/servidor; estado, inventários, Casas e grupos preservados. A rota voltou a aceitar abertura e troca de aba. Nenhum controle de conjuração alterado.
+
 ## 2026-11-15, seletores estáveis e bancada para o líder iniciados (Melekyy / Codex)
 
 - **Relato:** listas de opções não permanecem abertas ao escolher valores; o dev esclareceu que afeta todos os seletores, não apenas aluno/escola.
