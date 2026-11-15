@@ -72,7 +72,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
-- **15/11/2026:** Conjuração separada dos arquivos e pacote atual de Guildas, com arquivos antigos preservados e hashes conferidos. O controlador privado segue no SkySync; dependências e pacote dos painéis inspecionados, sem reinício. Candidato passou em 13 testes no novo projeto; oficial pendente.
+- **15/11/2026:** Conjuração separada dos arquivos e pacote atual de Guildas, com arquivos antigos preservados e hashes conferidos. Controlador privado segue no SkySync, sem reinício; candidato passou em 13 testes no novo projeto. Documentação publicada; validação global falha em 17 documentos de Sobrenatural. Oficial pendente.
 - **15/11/2026:** Guildas R23 instalada sem reinício: professor/bibliotecário sem cargos extras ou liderança, mantendo escola. Três cargos extras de teste retirados com registro; 117 testes e teste nativo isolado aprovados. Cliente confirmou R23; oficial pendente. Documentação publicada; validação global falha em 17 documentos de Sobrenatural.
 - **15/11/2026:** Guildas R22 privada: líder/professores controlam 68 passagens nos dois sentidos; professor e bibliotecário não acumulam funções. 112 testes e prova nativa isolada aprovados, cliente atualizado sem reinício; travessia humana e oficial pendentes. Documentação publicada; validação global ainda falha em 14 documentos antigos de Sobrenatural.
 - **15/11/2026:** Guildas R21 ativa no privado: bancada exclusiva, seleção de escola e insígnias protegidas. Plugin sincronizado nos dois lados; uma insígnia entregue e persistida no personagem de teste, com outros itens preservados. Conferência no cliente e oficial pendentes.
@@ -85,4 +85,3 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **15/11/2026:** Conjuração: duas criaturas acompanham no privado, confirmado pelo usuário; somente documentação publicada no acervo, com código/pacote locais e homologação oficial pendente.
 - **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
 - **14/11/2026:** Planilha e fichas completadas com os 164 registros de feitiços de Classes; diferenças do resumo do código documentadas, sem mudança no servidor.
-
