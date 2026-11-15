@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, início do ajuste da Biblioteca (Melekyy / Codex)
+
+- **Autorização:** o dev confirmou a continuidade de Guildas, já sob responsabilidade de Melekyy e em desenvolvimento, para esta alteração de interface.
+- **Escopo aprovado:** retirar a Biblioteca antiga; chamar a aba de produção de tomos de Biblioteca, mantendo o funcionamento; indicar classes, categorias e efeitos das magias.
+- **Fonte:** a associação de classe/categoria vem da política autorizada existente; efeitos serão consultados nos registros dos plugins carregados. A planilha não amplia o catálogo nem redefine o feitiço.
+- **Próximo:** implementar e verificar a apresentação no privado, preservar permissões e publicar o resultado.
+- **Bloqueios:** nenhum nesta etapa; integração e homologação oficiais continuam pendentes.
+
 ## 2026-11-15, impacto da conjuração (Melekyy / Codex)
 
 - **Feito:** [conjuração](../gameplay-core/conjuracao.md) reativada no privado, com acompanhamento e duas criaturas confirmados pelo usuário; complemento v0.38 separado e ainda candidato.
