@@ -14,6 +14,17 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, registros detalhados R20 instalados (Melekyy / Codex)
+
+- **Feito:** a liderança vê nomes e IDs de perfil de quem realizou a ação e dos envolvidos, com cargo, função, escola, substituição ou revogação. Mudanças de mensagens mostram antes/depois; exclusão de cargos identifica os membros afetados; expulsão informa vínculos removidos.
+- **Persistência:** nomes e detalhes são capturados pelo servidor junto da alteração; renomear cargos ou remover membros não altera os registros anteriores. Nomes de autor enviados pelo navegador são ignorados. Falha ao salvar reverte alteração e registro. Pedidos sem mudança efetiva são identificados.
+- **Histórico anterior:** preservado sem reconstrução de dados ausentes. A interface identifica registros antigos e mantém seus IDs e datas. Limites e permissão da aba foram preservados.
+- **Decisão:** [ADR-0010](../../03-decisoes/ADR-0010-registros-detalhados-de-guildas.md).
+- **Verificado:** 98 testes automatizados aprovados, incluindo persistência, permissões, nomes confiáveis, substituições, revogações, cargos, escolas e mensagens. Prévia com dados fictícios confirma texto literal seguro, quebra de linhas e restrição da tela; captura de interface em 1353 × 906 e conferência também em largura de 520.
+- **Privado:** aplicado com backup, sem reinício. Estado e registros existentes, inventários, catálogo, tradução, núcleo nativo, conjuração e bundles do cliente preservados. A captura instalada foi exercitada em cópia desconectada do estado; nenhum evento de teste foi inserido no histórico real. O cliente conectado confirmou a fonte R20 pronta, com inventário desbloqueado.
+- **Limites:** não houve inspeção visual desta revisão no Skyrim nem homologação oficial. A conferência de interface foi uma prévia automatizada. A validação documental global do acervo tinha falhas preexistentes de frontmatter de Sobrenatural; verificar o resultado deste envio separadamente.
+- **Próximo:** conferir novas ações na aba Registros no jogo e seguir as integrações oficiais pendentes.
+
 ## 2026-11-15, registros detalhados iniciados (Melekyy / Codex)
 
 - **Pedido:** continuidade de Guildas por Melekyy, em desenvolvimento, para detalhar quem alterou o quê e quem foi afetado: nomes, IDs de perfil, cargos e funções.

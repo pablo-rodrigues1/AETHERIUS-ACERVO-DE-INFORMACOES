@@ -14,6 +14,12 @@ relacionados: []
 
 Histórico documental de Expansão dos painéis, com a base de integração e o próximo passo.
 
+## 2026-11-15, impacto dos registros R20 de Guildas (Melekyy / Codex)
+
+- **Registro:** [Guildas R20](../guildas/diario.md) detalha o histórico administrativo com nomes, IDs e mudanças preservados no momento da ação.
+- **Impacto:** não altera filiação Companion, permissões ou o contrato de participação do ritual de coleta. O histórico de Guildas não substitui a validação autoritativa do ritual.
+- **Próximo:** preservar os contratos planejados e seguir a integração própria do ritual.
+
 ## 2026-11-15, impacto da Biblioteca R19 de Guildas (Melekyy / Codex)
 
 - **Registro:** [Guildas R19](../guildas/diario.md) permite vários bibliotecários, fabricação com duração e tradução da Biblioteca no painel privado.

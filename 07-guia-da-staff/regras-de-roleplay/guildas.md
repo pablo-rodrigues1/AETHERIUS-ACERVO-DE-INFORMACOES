@@ -31,6 +31,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 8. Os três painéis receberam o mesmo acabamento visual dos painéis de Grupo e Reis, mantendo suas cores: azul para Magos, verde musgo para Alquimistas e marrom escuro para Companions. Os botões e permissões continuam com as mesmas funções.
 9. A fabricação leva três segundos por lote e mostra o progresso. Espere perto da bancada. Fechar, cancelar, afastar-se ou perder a função interrompe sem gastar os materiais; a cobrança acontece quando os tomos são entregues.
 10. Os 104 tomos atuais aparecem com nome e descrição em português na Biblioteca. A pesquisa aceita o nome traduzido e o original. Essa tradução é do painel; o nome nativo do item no inventário continua vindo do plugin.
+11. Só a liderança acessa **Registros**. Nas novas ações, aparece quem fez, quem foi afetado e o que mudou, com nomes, IDs de perfil, data e hora. Nomeações informam a função; substituições identificam o ocupante anterior. Renomeações e mensagens mostram o antes e o depois. Excluir um cargo mostra de quais membros ele foi retirado.
 
 ## Exemplo prático
 
@@ -56,6 +57,8 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 - **Por que algum número não aparece na descrição?** Alguns registros dos mods omitem alcance, percentual ou custo. O painel informa o que está disponível, sem inventar esses valores.
 - **Posso fabricar só por ser líder ou professor?** A fabricação dos tomos é exclusiva dos bibliotecários nomeados. Um título personalizado não substitui essa função.
 - **O que são os três integrantes fictícios?** São registros identificados de teste no privado. Não representam jogadores, contas ou personagens reais e não devem ser anunciados no oficial.
+- **O que significa o ID nos Registros?** É o identificador do perfil do jogador. O registro guarda os nomes no momento da ação, mesmo se o cargo for renomeado ou o membro sair depois.
+- **Por que um registro antigo não mostra a função ou o nome?** O histórico anterior não gravava todos esses detalhes. A atualização preserva os dados existentes e informa a limitação; as novas ações passam a guardar o detalhamento completo.
 
 ## O que a Staff pode e não pode fazer
 

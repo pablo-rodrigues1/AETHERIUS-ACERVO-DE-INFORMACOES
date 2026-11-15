@@ -14,3 +14,4 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0007](ADR-0007-biblioteca-primeiro-a-classe.md) | Biblioteca primeiro por classe e depois por tomo | aceito | 2026-11-15 |
 | [ADR-0008](ADR-0008-visual-dos-paineis-de-guildas.md) | Visual dos painéis de Guildas com referência em Grupo e Reis | aceito | 2026-11-15 |
 | [ADR-0009](ADR-0009-bibliotecarios-fabricacao-e-traducao.md) | Vários bibliotecários, fabricação com duração e tradução | aceito | 2026-11-15 |
+| [ADR-0010](ADR-0010-registros-detalhados-de-guildas.md) | Registros detalhados e históricos de gestão das Guildas | aceito | 2026-11-15 |

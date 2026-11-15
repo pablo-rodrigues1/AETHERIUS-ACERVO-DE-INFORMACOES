@@ -74,6 +74,7 @@
 - `03-decisoes/ADR-0007-biblioteca-primeiro-a-classe.md` — Escolha da classe antes da lista de tomos na Biblioteca.
 - `03-decisoes/ADR-0008-visual-dos-paineis-de-guildas.md` — Acabamento dos três painéis inspirado em Grupo e Reis, com as cores preservadas.
 - `03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md` — Vários bibliotecários, fabricação com duração e tradução da Biblioteca.
+- `03-decisoes/ADR-0010-registros-detalhados-de-guildas.md` — Registros com nomes, IDs e detalhes preservados no momento da ação.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.
