@@ -58,7 +58,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: todo mundo vê para onde cada um olha (câmera, pessoas e até o vazio), sem encarar quem chega perto; falta teste com 2 jogadores | 14/11/2026 |
 | [Ocarina (só música)](../02-sistemas/ocarina/README.md) | 🟡 | Item novo: tocar notas e músicas da Zelda, sem poderes; falta testar em jogo | 14/11/2026 |
 | [Túnica do Herói](../02-sistemas/tunica-do-heroi/README.md) | 🟡 | Roupas para o alfaiate, gorro mostrando o cabelo; falta testar e colar as receitas | 14/11/2026 |
-| [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido e capas balançando; 577 cabelos prontos, falta ver em jogo e medir o desempenho | 15/11/2026 |
+| [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. A YuYu viu em jogo: física boa; trança entrando no peitoral já ajustada. Falta ver a versão com mechas | 15/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 | [Maldições (vampirismo, licantropia, bruxaria)](../02-sistemas/sobrenatural/formas-e-poderes.md) | 🟡 | Revisar e testar formas e olhos no laboratório; decidir suporte restante de poderes | 15/11/2026 |
@@ -72,6 +72,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **15/11/2026:** Cabelos e capas com física: 910 cabelos com mechas (franja, laterais, costas) e capas balançando, sem atravessar o corpo. Pergaminho que não ia para a mão corrigido. Ataque travando depois de trocar a aparência ainda em investigação.
 - **15/11/2026:** Baú dos aposentos do Arquimago exclusivo do cargo e nomeado Baú do Arquimago. Depósito, fechar/reabrir e retirada pelo cliente real conferidos, com o septim de teste devolvido. 136 testes completos e rechecagens aprovados; demais compartimentos reais e oficial seguem para homologação.
 - **15/11/2026:** Guildas: tag visual retirada, quatro membros de teste adicionados e interferência de uma instância antiga corrigida. O dev confirmou abertura do baú. 135 testes e ensaio nativo aprovados; relato de itens não permanecerem ainda em investigação no cliente real.
 - **15/11/2026:** Guildas: troca privada de liderança para professor da escola atual verificada, sem acúmulo de funções, sem reinício e com inventário/insígnia preservados. Nenhuma nova regra; oficial segue pendente.
@@ -81,7 +82,6 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 - **15/11/2026:** Guildas R22 privada: líder/professores controlam 68 passagens nos dois sentidos; professor e bibliotecário não acumulam funções. 112 testes e prova nativa isolada aprovados, cliente atualizado sem reinício; travessia humana e oficial pendentes. Documentação publicada; validação global ainda falha em 14 documentos antigos de Sobrenatural.
 - **15/11/2026:** Guildas R21 ativa no privado: bancada exclusiva, seleção de escola e insígnias protegidas. Plugin sincronizado nos dois lados; uma insígnia entregue e persistida no personagem de teste, com outros itens preservados. Conferência no cliente e oficial pendentes.
 - **15/11/2026:** Guildas R19 no privado com vários bibliotecários, fabricação de três segundos, três integrantes fictícios de teste e 104 tomos traduzidos no painel. 88 testes e servidor nativo isolado aprovados; inspeção visual interrompida por Esc, sem confirmação da animação em jogo nem homologação oficial.
-- **15/11/2026:** Guildas R18 com visual inspirado em Grupo e Reis, cores preservadas e Biblioteca por classe; aplicado no privado, com Magos observado no jogo e aceite visual pendente.
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
 
 - **15/11/2026:** Aprovado o planejamento COMÉRCIO: empresas, contratação, salários e imposto mensal; texto revisado usa Residência como referência. Sem implementação nesta publicação.

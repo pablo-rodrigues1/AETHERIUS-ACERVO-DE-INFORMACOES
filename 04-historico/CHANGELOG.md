@@ -15,6 +15,7 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 
 ## [Não lançado]
 ### Adicionado
+- Física de cabelos e capas (kdu): 910 cabelos com mechas por região e 6 capas do Cloaks and Capes balançando via FSMP 4.1.1, com barreiras contra o corpo e a armadura; ossos e física gerados por ferramenta própria, sem arquivos de física de terceiros. Dois mods sem plugin; em teste. [Sistema](../02-sistemas/fisica-de-cabelos-e-capas/README.md).
 - Guildas: Baú do Arquimago exclusivo do cargo, nome nativo persistente e conteúdo preservado. Depósito, fechar/reabrir e retirada de um septim pelo cliente real confirmados, sem reinício. 136 testes e rechecagens aprovados; oficial pendente. [Decisão](../03-decisoes/ADR-0018-bau-exclusivo-do-arquimago.md).
 - Guildas R26/R27: retirada a tag visual de fictício, quatro cadastros comuns privados acrescentados e interferência de instância antiga corrigida na abertura dos quartos. Abertura confirmada pelo dev; 135 testes aprovados. Relato posterior de persistência dos itens segue em investigação. [Decisão](../03-decisoes/ADR-0017-identificacao-interna-dos-membros-de-teste.md), [diário](../02-sistemas/guildas/diario.md).
 - Guildas R25 privada: dez quartos com compartimentos existentes e propriedade protegida, controle geral das portas exclusivo do Arquimago, retirada de escola por ele e cronograma de aulas na Visão geral. 134 testes, ensaio nativo e vinte nomes no cliente conferidos; aceite humano/oficial pendentes. [Decisão](../03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md), [diário](../02-sistemas/guildas/diario.md).
@@ -40,3 +41,6 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - Verificação de sistema já existente com confirmação do dev (REGRAS 10.5.1).
 - Pasta `07-guia-da-staff/` com guias didáticos para toda a Staff (REGRAS 11).
 - Painel de progresso `07-guia-da-staff/progresso.md` (REGRAS 11.4).
+
+### Corrigido
+- Pergaminho que não ia para a mão: o cliente não reconhecia o tipo "scrollitem" enviado pelo servidor (no SkyrimPlatform é "Scroll"). Correção no patch de cliente do pacotão v0.38; teste em jogo pendente. [Diário](../02-sistemas/gameplay-core/diario.md).

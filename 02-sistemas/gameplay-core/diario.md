@@ -13,7 +13,14 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
-## 2026-11-15, retirada de escola no SkyGuilds R25 (Melekyy / Codex)
+## 2026-11-15, pergaminho e ataque travando (kdu / Claude Opus 5.5)
+
+- **Pergaminho (corrigido):** o teste de 14/11 mostrou no log do jogo "deserializeArg - Class scrollitem not found". O servidor manda o tipo do Papyrus ("scrollitem") e no SkyrimPlatform a classe do pergaminho é "Scroll", então EquipItem e EquipItemEx de pergaminho estouravam no cliente e ele nunca ia para a mão. Correção em `client/src/services/services/spSnippetService.ts` (tabela PAPYRUS_PARA_SP), dentro do patch de cliente do pacotão v0.38. Não visto em jogo.
+- **Ataque/animação travando (em investigação):** no teste de 15/11, cada vez que a tela de aparência fechava o cliente reconectava e as sessões se sobrepunham. Durante 3,5 min o servidor recebeu "IdleForceDefaultState" 16 vezes por segundo (corta qualquer animação); os ataques só voltaram depois da reconexão seguinte. Origem exata do comando repetido não achada.
+- **Entrega:** "ENTREGA COMPLETA 15-11" junta pacotão, física de cabelos e capas, lobisomem, olhar, ocarina e Túnica. Os 7 patches aplicam em sequência na v0.38 pura e o cliente compila com todos juntos.
+- **Também pendente:** fogo sem dano contínuo; atronach invocada parada e atacando a dona (falta registro).
+- **Próximo:** achar quem manda o IdleForceDefaultState repetido; teste em jogo do pergaminho.
+
 
 - **Contrato:** só o Arquimago retira o vínculo de escola dos Magos sem expulsar o membro. A insígnia correspondente é revogada pelo journal; nova atribuição por professor/líder é possível após a retirada.
 - **Limite:** não altera filiação à guilda, keyword do vínculo, catálogo autorizado, magias ou controlador de conjuração. O cronograma é informativo. Integração e homologação no runtime oficial permanecem pendentes.
