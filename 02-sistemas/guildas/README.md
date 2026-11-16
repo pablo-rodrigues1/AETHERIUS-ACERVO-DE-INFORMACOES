@@ -35,6 +35,12 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 
 ## Funcionamento
 
+### Atualização R26/R27
+
+A tag visual de fictício foi retirada, mantendo `testOnly` internamente. Quatro cadastros comuns foram acrescentados apenas no privado, totalizando oito membros, sem contas/atores ou nomeações automáticas. [ADR-0017](../../03-decisoes/ADR-0017-identificacao-interna-dos-membros-de-teste.md).
+
+A abertura do baú foi corrigida ao retirar a interferência de uma instância antiga de Guildas retida na cadeia de callbacks de outros sistemas. Serviços aposentados deixam de vetar interações e sobrescrever modelos; o cadastro atual autoriza os dez compartimentos. Conteúdo e arquivos protegidos preservados, sem reinício. O dev confirmou que o baú abre. 135 testes completos e 60 ativações nativas isoladas aprovados. O relato posterior de itens não permanecerem está em investigação: ainda falta capturar o depósito aceito e conferir persistência pelo cliente real. Não anunciar esse fluxo como homologado.
+
 ### Regras atuais R25
 
 - **Quartos:** dez quartos com cama do Hall of Attainment, atribuídos por professores/Arquimago. Cada aluno possui no máximo um. Acesso de porta por proximidade ao dono e professores/Arquimago; controle geral de portas exclusivo do Arquimago. Tranca geral impede passagem para todos até ser desfeita.

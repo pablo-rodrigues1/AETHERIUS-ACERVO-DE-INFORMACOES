@@ -24,3 +24,4 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0015](ADR-0015-sobrenatural-lotes-js.md) | Sobrenatural em lotes locais e poderes parciais em JS | aceito | 2026-11-15 |
 
 | [ADR-0016](ADR-0016-quartos-escolas-e-cronograma-dos-magos.md) | Quartos, escolas e cronograma dos Magos | aceito | 2026-11-15 |
+| [ADR-0017](ADR-0017-identificacao-interna-dos-membros-de-teste.md) | Identificação interna dos membros de teste | aceito | 2026-11-15 |

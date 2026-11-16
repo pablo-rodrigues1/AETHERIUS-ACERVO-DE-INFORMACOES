@@ -76,6 +76,7 @@
 - `03-decisoes/ADR-0009-bibliotecarios-fabricacao-e-traducao.md` — Vários bibliotecários, fabricação com duração e tradução da Biblioteca.
 - `03-decisoes/ADR-0010-registros-detalhados-de-guildas.md` — Registros com nomes, IDs e detalhes preservados no momento da ação.
 - `03-decisoes/ADR-0016-quartos-escolas-e-cronograma-dos-magos.md` — Quartos existentes, controle geral e retirada de escola do Arquimago, cronograma de aulas.
+- `03-decisoes/ADR-0017-identificacao-interna-dos-membros-de-teste.md` — Tag visual retirada e identificação interna preservada, com quatro novos cadastros privados de teste.
 - `03-decisoes/ADR-0011-bancada-e-insignias-das-escolas.md` — Bancada só para bibliotecários, escolha de escola por líder/professores e insígnias protegidas.
 - `03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md` — Controle das passagens nos dois sentidos por líder/professores e exclusão entre professor e bibliotecário.
 - `03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md` — Professor/bibliotecário dos Magos sem cargos extras ou liderança, preservando o vínculo pessoal de escola.
