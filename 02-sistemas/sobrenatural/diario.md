@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — início das mecânicas de vampirismo
+- **Feito:** levantamento (Terra High) do que é viável para cura/comida, alimentação, sol e passivas (etapa-3-vampirismo-mecanicas.md). Valores provisórios de teste aprovados pelo dev: sol 5/s das 7h às 19h; mordida em NPC 25/25/60 s/+25 sangue; Poção de Sangue cura 100 e +50 sangue; mordida em jogador cura 200 e +100 sangue; só itens de cura pura são recusados ao vampiro.
+- **Próximo:** implementação (Terra High) e teste em jogo.
+- **Bloqueios:** recusar só o efeito de cura de itens mistos exigiria código nativo (fora do escopo).
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Bruxaria preparada; scripts não assinados
 - **Feito:** concessões da Bruxa por estágio e vertente, upgrades da TENEBRAE pelo servidor, parada do upgrade automático do Shadow Spell Package, pisos de habilidade (maior valor entre classe e maldição) no GameplayCore local, tela da Bruxa atualizada (etapa-2-bruxaria.md). Achada a causa de nenhum poder funcionar no servidor local: o cliente recusava os scripts do servidor por falta de assinatura (investigacoes/investigacao-15-11-scripts-nao-assinados.md); corrigido com chave de teste local.
 - **Próximo:** correção por origem (magias/perks) e ligar a Bruxa ao serviço; teste em jogo de Fera, Lorde e Bruxa.
