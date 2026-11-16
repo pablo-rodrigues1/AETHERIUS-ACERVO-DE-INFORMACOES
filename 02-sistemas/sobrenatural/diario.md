@@ -96,3 +96,8 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Feito:** registro estável de spells por personagem, claims/ACK de perks com Core, catálogo Argon ligado e upgrades TENEBRAE preservando magias próprias. Revisão crítica documentada. Poderes JS e Visão própria; overrides 40/60 nos quatro temporários, Morcego 1/0, custo pelo contrato de sangue Terra e flag solar preparada/desligada.
 - **Validação:** 122 testes, scripts serviço/F7, builds sem addon e estrutura houseCARL passaram; boot 435 plugins/162 forms/16 ativos/0 falhas. Ver formas-e-poderes.md, etapa-2-bruxaria.md e ADR-0019.
 - **Próximo:** revisão independente Terra e teste humano posterior (dev decidiu não testar hoje); nova transformação forçada 72 h online/noite em lote separado. Sem homologação oficial.
+
+
+## 2026-11-16 (Sol High) — início da transformação forçada
+- **Decisão do dev:** substituir os antigos 7 dias por 72 h reais online por personagem, zeradas só na transformação confirmada. Ao vencer, aguardar noite do relógio autoritativo (20h–5h) e executar avisos/efeitos privados de 20 s antes da animação normal do kdu.
+- **Em implementação:** contador monotônico persistido, cancelamento/limpeza, comprovação de raça e reaproveitamento dos assets kdu sem editar modpack. Testes Node e roteiro posterior; sem teste em jogo hoje.
