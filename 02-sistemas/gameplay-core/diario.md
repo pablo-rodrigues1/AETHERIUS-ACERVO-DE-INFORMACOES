@@ -13,6 +13,14 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-16, causa do ataque travando e kit atualizado (kdu / Claude Opus 5.5)
+
+- **Ataque/animação travando depois da tela de aparência (causa achada):** ao fechar a tela, o cliente segura os controles até a sessão nova chegar (holdControlsUntilSession). O código antigo chamava disablePlayerControls a cada quadro em que algo religava os controles, por até 90 s; o jogo forçava o estado padrão sem parar e nenhum ataque passava. Bate com o teste de 15/11 (IdleForceDefaultState ~12 vezes por segundo de 17:10:15 a 17:13:49). A correção de 14/11 (desligar uma vez e soltar 8 s depois do personagem recarregar) estava no patch do pacotão, mas **nunca tinha entrado no cliente do kit de teste**. Simulador com as funções tiradas do próprio cliente: antes 1.408 bloqueios em 2 min e 90 s preso; depois 2 bloqueios e 10 s.
+- **Kit de teste:** o cliente do kit é de uma linhagem mais antiga que a v0.38 e não recebia o patch de cliente do pacotão. Aplicadas no cliente compilado do kit as correções de: controles (acima), pergaminho (scrollitem), habilidades raciais (Nórdico em qualquer raça, distorcia teste de gelo) e pacote de propriedade de ator inexistente (exceção cortava os pacotes do quadro). Ficam de fora no kit: tecla de voz no mouse (depende do launcher) e L/R (interface). Servidor do kit já tinha as correções de servidor.
+- **Fogo sem dano contínuo:** não é bug. No modpack (Mysticism) o Firebolt é dano de impacto (20, duração 0); o Flames é que dá dano por segundo.
+- **Atronach parada e atacando a dona:** sem registro; o código não mostra caminho para isso (servidor recusa dano da invocação na dona, cliente encerra briga com amigos, Dovahzul não tem lógica de invocação para comparar). Kit ganhou diagnóstico: linhas [magic] no servidor e Platform/Logs/aetherius-invocacao-logs.txt no cliente, recolhidos pelo MANDAR-RESULTADOS.
+- **Comparação com o Dovahzul:** eles não reconectam depois da tela de criação; o nosso cliente reconecta e segura os controles nesse intervalo, que é onde o travamento nascia.
+
 ## 2026-11-15, pergaminho e ataque travando (kdu / Claude Opus 5.5)
 
 - **Pergaminho (corrigido):** o teste de 14/11 mostrou no log do jogo "deserializeArg - Class scrollitem not found". O servidor manda o tipo do Papyrus ("scrollitem") e no SkyrimPlatform a classe do pergaminho é "Scroll", então EquipItem e EquipItemEx de pergaminho estouravam no cliente e ele nunca ia para a mão. Correção em `client/src/services/services/spSnippetService.ts` (tabela PAPYRUS_PARA_SP), dentro do patch de cliente do pacotão v0.38. Não visto em jogo.
