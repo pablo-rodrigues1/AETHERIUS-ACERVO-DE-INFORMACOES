@@ -90,3 +90,9 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Iniciado:** registro estável por personagem das magias efetivamente concedidas, arbitragem das perks com GameplayCore e ligação do catálogo Bruxaria; revisão crítica do lote Argon e poderes restantes do vampiro.
 - **Contexto:** scripts de servidor sem assinatura foram recusados no cliente local; correção Ed25519 já preparada no laboratório pelo orquestrador, ainda sem teste em jogo. Testes anteriores não provam falha do código das formas.
 - **Próximo:** testes Node, builds e roteiro humano; revisão cruzada Terra após entrega. Oficial e mods compartilhados preservados.
+
+
+## 2026-11-16 (Sol High, despacho Opus) — origem, Bruxaria e poderes
+- **Feito:** registro estável de spells por personagem, claims/ACK de perks com Core, catálogo Argon ligado e upgrades TENEBRAE preservando magias próprias. Revisão crítica documentada. Poderes JS e Visão própria; overrides 40/60 nos quatro temporários, Morcego 1/0, custo pelo contrato de sangue Terra e flag solar preparada/desligada.
+- **Validação:** 122 testes, scripts serviço/F7, builds sem addon e estrutura houseCARL passaram; boot 435 plugins/162 forms/16 ativos/0 falhas. Ver formas-e-poderes.md, etapa-2-bruxaria.md e ADR-0019.
+- **Próximo:** revisão independente Terra e teste humano posterior (dev decidiu não testar hoje); nova transformação forçada 72 h online/noite em lote separado. Sem homologação oficial.

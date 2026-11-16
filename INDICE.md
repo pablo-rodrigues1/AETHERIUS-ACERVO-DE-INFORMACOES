@@ -129,3 +129,6 @@
 
 
 - `03-decisoes/ADR-0015-sobrenatural-lotes-js.md` — Lotes locais e Névoa/Força parciais sem extensão nativa.
+
+- `03-decisoes/ADR-0019-sobrenatural-origem-e-tempos.md` — origem conservadora e tempos 40/60 dos poderes; candidato local.
+- `02-sistemas/sobrenatural/investigacoes/investigacao-16-11-origem-grants-e-poderes.md` — causas e correções da autoria de grants e poderes COTV.

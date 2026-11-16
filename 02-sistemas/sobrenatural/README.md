@@ -52,3 +52,7 @@ Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especif
 - Aprovar os textos de Lobisomem e Bruxa ([proposta-textos.md](proposta-textos.md)).
 - ~~Vertente/troca~~: Vertente no estágio 1; nenhuma troca; 2ª Disciplina no Apoteótico.
 - Etapa 1 concluída; Etapa 2 com painel F7 e serviços locais. [Formas e poderes](formas-e-poderes.md): lote menor 4fc0034 (Fera/Lorde/raça/recarga) pronto para reteste; revisão de retorno e jogo pendentes, demais poderes adiados. Névoa/Força parciais sem nativo por decisão do dev ([ADR-0015](../../03-decisoes/ADR-0015-sobrenatural-lotes-js.md)). Nenhuma homologação oficial.
+
+
+## Candidato local de 16/11
+Origem de grants, integração Bruxaria e poderes JS foram implementados com 122 testes e builds sem addon. [Relatório e roteiro](formas-e-poderes.md), [Bruxaria](etapa-2-bruxaria.md) e [ADR-0019](../../03-decisoes/ADR-0019-sobrenatural-origem-e-tempos.md). Revisão Terra e teste humano pendentes; não aplicado ao oficial.

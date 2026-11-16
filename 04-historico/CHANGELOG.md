@@ -44,3 +44,5 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 
 ### Corrigido
 - Pergaminho que não ia para a mão: o cliente não reconhecia o tipo "scrollitem" enviado pelo servidor (no SkyrimPlatform é "Scroll"). Correção no patch de cliente do pacotão v0.38; teste em jogo pendente. [Diário](../02-sistemas/gameplay-core/diario.md).
+
+- **2026-11-16 — Sobrenatural (candidato local):** origem de grants, Bruxaria, poderes JS, tempos 40/60 e contrato de sangue, 122 testes; revisão e homologação pendentes.

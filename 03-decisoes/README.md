@@ -26,3 +26,5 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0016](ADR-0016-quartos-escolas-e-cronograma-dos-magos.md) | Quartos, escolas e cronograma dos Magos | aceito | 2026-11-15 |
 | [ADR-0017](ADR-0017-identificacao-interna-dos-membros-de-teste.md) | Identificação interna dos membros de teste | aceito | 2026-11-15 |
 | [ADR-0018](ADR-0018-bau-exclusivo-do-arquimago.md) | Baú exclusivo do Arquimago | aceito | 2026-11-15 |
+
+- [ADR-0019-sobrenatural-origem-e-tempos.md](ADR-0019-sobrenatural-origem-e-tempos.md) — autoria conservadora e duração/recarga dos poderes, 16/11.

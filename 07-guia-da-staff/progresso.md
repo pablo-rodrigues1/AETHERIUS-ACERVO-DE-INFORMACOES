@@ -61,7 +61,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. A YuYu viu em jogo: física boa; trança entrando no peitoral já ajustada. Falta ver a versão com mechas | 15/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
-| [Maldições (vampirismo, licantropia, bruxaria)](../02-sistemas/sobrenatural/formas-e-poderes.md) | 🟡 | Revisar e testar formas e olhos no laboratório; decidir suporte restante de poderes | 15/11/2026 |
+| [Maldições (vampirismo, licantropia, bruxaria)](../02-sistemas/sobrenatural/formas-e-poderes.md) | 🟡 | Revisar origem, Bruxaria e poderes no laboratório; testar em jogo depois | 16/11/2026 |
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |

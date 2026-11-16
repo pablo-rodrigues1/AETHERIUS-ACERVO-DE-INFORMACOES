@@ -1,4 +1,53 @@
+---
+titulo: Bruxaria - catalogo e integracao por origem
+tipo: sistema
+status: ativo
+responsaveis: [pablo-rodrigues1, kdu]
+atualizado: 2026-11-16
+tags: [sobrenatural, bruxaria]
+relacionados: [README.md, formas-e-poderes.md]
+---
+
 # Etapa 2 — Bruxaria (Catálogo de Records, Auditoria do Modpack e Projeto da Fase 2)
+
+## Resumo
+
+Catálogo Bruxaria integrado com autoria conservadora e pisos de habilidade do GameplayCore; candidato local sem homologação.
+
+## Atualização 16/11 — integração e revisão crítica por Sol High
+
+O catálogo de Argon (`603dea7`) foi ligado ao serviço em `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js` depois de substituir o reconciliador destrutivo por `supernatural/grant-origin.js`. O estado desta seção substitui a pendência de ligação descrita no histórico abaixo. Revisão final independente por Terra e homologação em jogo continuam pendentes; o dev adiou os testes humanos.
+
+### Achados aceitos e correções
+
+| Revisão de Sol sobre Argon | Tratamento |
+|---|---|
+| Catálogo isolado não concedia nada | Ligados spellsFor/perksFor/allSpells/allPerks; validação do boot inclui todos os 60 records Bruxa |
+| União de catálogos apagava magias pessoais | Origem persistida por personagem e plugin/id local; remoção apenas de adições confirmadas, sem adoção das preexistentes |
+| Perks previamente presentes eram registradas como próprias no cliente | Reconciliador compartilhado com GameplayGrantService, claims por fonte, proteção externa e ACK de autoria por nonce; manter proteção/verificação tardia original do Core |
+| Neutralização SSP marcava sucesso mesmo sem resolver quests/métodos; uma falha repetia todas | Conclusão individual das três quests e retry das que falham; só marca completo quando as três foram resolvidas/paradas |
+| Pisos de habilidade podiam ser sobrescritos por caminho paralelo | Confirmado uso de ClassSkillsProjection e patch 005 já existentes; novo teste executa receptor real compilado. Não acrescentado SetActorValue paralelo |
+| Descrição de isolamento usava `characterKey` como se fosse sempre UUID | Este host usa profile:N no Core; originScope usa UUID do diretório para separar os caches de perks. Banco de classes por perfil não foi migrado |
+| Inferência dos asteriscos da planilha | Mantida apenas como hipótese informativa; não foi tratada como regra nova de jogo |
+
+Não se rejeitaram os records nem o desenho dos pisos. Os IDs de Necromancy/Necromaster, duas variantes de Keeper, Dark Arts, Shadowbolt e Atronach Expert conferem com o catálogo previamente auditado; o boot real resolveu todos. A parada global das quests SSP continua uma decisão autorizada do dev e continua afetando personagens sem Bruxaria; não foi inventada neutralização seletiva de scripts neste lote. A correção de assinatura não remove o bloqueio global de Papyrus.
+
+### Comportamento integrado
+
+- Neófito recebe 4 Mastery e Eldritch Blast. Escolha de vertente continua exclusiva no estágio 1, no servidor.
+- TENEBRAE: Shadowbolt `002E2A` no estágio 1, `002E2C` nos 2..5 e `002E2F` no 6; Dark Arts `0028AE` a partir do 3; Atronach Expert `04F121` direto no 5. Remoção de versão antiga só se ela foi concedida pelo serviço; uma versão pessoal anterior é preservada, mesmo que coexistam duas versões nesse caso.
+- MORTUI/DAEMONES: acumulação dos grants do catálogo. Remover/trocar maldição retira somente adições próprias. Falha/no-op de remoção conserva o ledger para nova tentativa no login.
+- Pisos do patch 005: Math.max(classe, piso) nas quatro escolas, inclusive sem classe; restauração dos valores de classe na remoção. Nenhuma mudança no nativo.
+- Migração conservadora: portadores antigos sem ledger não têm toda a magia retroativamente adotada. Concessões de outras fontes feitas depois da mesma adição, sem declarar autoria, são inobserváveis; a união explícita de perks cobre o caminho GameplayCore.
+
+### Evidência
+
+Na raiz do servidor local, `node --test overlays/sobrenatural/teste-origem.cjs` cobre 13 cenários, incluindo personagens sem maldição com magias próprias, as três concessões sobre magias já conhecidas, remoção/troca/reconexão, progressão/redução TENEBRAE, falhas de persistência e claims de perks nas duas ordens. O conjunto maior tem 93 testes e o conjunto de transporte/perks/pisos do Core tem 29; os scripts de serviço/F7 passaram. Builds de cliente/servidor/Core sem addon passaram. Detalhes, comandos, hashes e roteiro em `ETAPA-2_formas-e-poderes.md`.
+
+Overlays: `files/server/gamemode/supernatural-service.js`, `supernatural/{witch-grants,grant-origin,perk-origin,client}.js`, patch 005 preservado e complemento `006-perk-origin-core.patch`; cliente em `overlays/cliente-local/003-perk-origins.patch`. A revisão original de Argon não equivale a aprovação deste lote; **Terra revisa depois**.
+
+---
+
 
 **Data:** 2026-11-15  
 **Autor:** Gemini 4 Argon (Fase 1 e Fase 2 concluídas; ligação de `witch-grants.js` ao `supernatural-service.js` **PENDENTE** do mecanismo por origem)  
