@@ -1,18 +1,4 @@
----
-titulo: Bruxaria - catalogo e integracao por origem
-tipo: sistema
-status: ativo
-responsaveis: [pablo-rodrigues1, kdu]
-atualizado: 2026-11-16
-tags: [sobrenatural, bruxaria]
-relacionados: [README.md, formas-e-poderes.md]
----
-
 # Etapa 2 — Bruxaria (Catálogo de Records, Auditoria do Modpack e Projeto da Fase 2)
-
-## Resumo
-
-Catálogo Bruxaria integrado com autoria conservadora e pisos de habilidade do GameplayCore; candidato local sem homologação.
 
 ## Atualização 16/11 — integração e revisão crítica por Sol High
 

@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — encerramento da sessão
+- **Feito:** correção por origem de magias/perks, Bruxa ligada ao serviço e poderes do vampiro (Sol High, commit local 79098ad); Reserva de Sangue parcial (Terra High); decisões do dev sobre a Reserva de Sangue e a transformação forçada do lobisomem. Estado completo e próximos passos em retomada.md.
+- **Próximo:** transformação forçada (Sol High), restante da Reserva de Sangue (Terra High), revisões cruzadas e rodada de testes em jogo.
+- **Bloqueios:** nenhum; nada testado em jogo nesta etapa.
+
 ## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — início das mecânicas de vampirismo
 - **Feito:** levantamento (Terra High) do que é viável para cura/comida, alimentação, sol e passivas (etapa-3-vampirismo-mecanicas.md). Valores provisórios de teste aprovados pelo dev: sol 5/s das 7h às 19h; mordida em NPC 25/25/60 s/+25 sangue; Poção de Sangue cura 100 e +50 sangue; mordida em jogador cura 200 e +100 sangue; só itens de cura pura são recusados ao vampiro.
 - **Próximo:** implementação (Terra High) e teste em jogo.
