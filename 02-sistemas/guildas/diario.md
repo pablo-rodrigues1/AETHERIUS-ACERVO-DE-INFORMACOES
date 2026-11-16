@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, membros de teste e abertura dos quartos R26/R27 (Melekyy / Codex)
+
+- **Membros:** tag visual de fictício retirada por pedido do dev. Quatro novos cadastros comuns de teste adicionados no privado, totalizando oito membros; preservada identificação interna `testOnly`, sem criar contas/atores ou dar funções/escolas automaticamente. Cada inclusão tem registro administrativo; dados individuais permanecem locais.
+- **Papéis privados:** após testar professor e membro comum, o dev pediu retorno a Arquimago. Operações verificadas sem reinício, com inventário, escola e quarto preservados. Não alteram as regras de exclusividade.
+- **Falha de abertura:** autorização do quarto aceitava o dono, mas a cadeia antiga de baús recusava. Inspeção das closures identificou uma instância anterior de Guildas ainda embutida sob outros sistemas. Seus callbacks foram desativados e as guardas antigas passam a não interferir; o cadastro atual decide o acesso. Mantidos hooks dos demais sistemas, pertences e arquivos protegidos.
+- **Portas:** reafirmada restrição por proximidade a dono, Arquimago e professores atuais; outros alunos e pessoas externas não abrem quartos atribuídos. Controle geral segue exclusivo do Arquimago.
+- **Evidência:** 135 testes completos, incluindo recarga com hook antigo retido e tag órfã; 60 ativações nativas isoladas e movimentos autorizados de septins aprovados. Cliente confirmou R27; o dev confirmou que o baú abriu normalmente. Treze arquivos protegidos e inventários preservados.
+- **Investigação ativa:** dev relatou que os itens não ficam no baú. No rastreamento posterior, houve ativações recusadas de estante sem dono, sem pacote de depósito observado. Persistência pelo cliente real ainda não confirmada; não afirmar correção nem repor/apagar itens sem identificar a transferência.
+- **Próximo:** reproduzir depósito no compartimento correto com transporte real e verificar fechar/reabrir. Homologação oficial permanece pendente.
+
 ## 2026-11-15, troca administrativa de função no privado (Melekyy / Codex)
 
 - **Pedido atendido:** personagem conectado definido como professor da própria escola. Liderança retirada na mesma gravação, respeitando exclusividade. A nomeação anterior daquela escola era um registro fictício de teste e foi substituída com auditoria; nenhum outro jogador real foi removido.

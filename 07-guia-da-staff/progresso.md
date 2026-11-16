@@ -65,13 +65,14 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
-| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R25 privada: quartos e cronograma prontos; aceite humano/oficial pendentes | 15/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R27: baú abre, persistência do depósito em investigação | 15/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **15/11/2026:** Guildas: tag visual retirada, quatro membros de teste adicionados e interferência de uma instância antiga corrigida. O dev confirmou abertura do baú. 135 testes e ensaio nativo aprovados; relato de itens não permanecerem ainda em investigação no cliente real.
 - **15/11/2026:** Guildas: troca privada de liderança para professor da escola atual verificada, sem acúmulo de funções, sem reinício e com inventário/insígnia preservados. Nenhuma nova regra; oficial segue pendente.
 - **15/11/2026:** Guildas R25 aplicada sem reinício: dez quartos com móveis existentes, escola removida só pelo Arquimago e cronograma visível aos membros. Controle geral de portas só do Arquimago; professores operam portas por proximidade. 134 testes e ensaio nativo aprovados, cliente confirmou vinte nomes. Aceite humano e oficial pendentes.
 - **15/11/2026:** Conjuração separada dos arquivos e pacote atual de Guildas, com arquivos antigos preservados e hashes conferidos. Controlador privado segue no SkySync, sem reinício; candidato passou em 13 testes no novo projeto. Documentação publicada; validação global falha em 17 documentos de Sobrenatural. Oficial pendente.

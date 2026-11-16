@@ -74,7 +74,7 @@ Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um profe
 - **Posso ser professor e bibliotecário ao mesmo tempo?** Não. O líder deve revogar a função anterior antes de nomear a outra.
 - **Posso ser professor/bibliotecário e receber outro cargo?** Não. Só pode manter a função e o vínculo com sua escola. Um cargo personalizado com nome de escola não é exceção. Para receber outros cargos, a função precisa ser revogada antes.
 - **Tranquei tudo e também fiquei sem passar. Isso é esperado?** Sim. Abra a aba Portas do Colégio e destranque a passagem ou todas. Não há liberação automática de saída para o operador.
-- **O que são os três integrantes fictícios?** São registros identificados de teste no privado. Não representam jogadores, contas ou personagens reais e não devem ser anunciados no oficial.
+- **O que são os integrantes fictícios?** São cadastros de teste apenas no privado. A tag visual foi retirada por pedido do dev; a identificação interna permanece. Quatro foram acrescentados aos três anteriores, sem contas ou atores reais. Não anunciar esses cadastros como jogadores do oficial.
 - **O que significa o ID nos Registros?** É o identificador do perfil do jogador. O registro guarda os nomes no momento da ação, mesmo se o cargo for renomeado ou o membro sair depois.
 - **Por que um registro antigo não mostra a função ou o nome?** O histórico anterior não gravava todos esses detalhes. A atualização preserva os dados existentes e informa a limitação; as novas ações passam a guardar o detalhamento completo.
 
