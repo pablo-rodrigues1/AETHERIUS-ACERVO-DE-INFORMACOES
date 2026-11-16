@@ -55,3 +55,5 @@ flowchart LR
   expansao --> residencias
   expansao --> gameplay-core
 ```
+
+<!-- Sobrenatural 15/11: continuação por origem, integração Bruxaria e poderes JS em desenvolvimento local; revisão Terra e teste humano pendentes. -->

@@ -79,3 +79,9 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Decisão:** poderes restantes adiados, patch Visão desativado, Predator Vision continua vencedor; Névoa/regen e Força/dano parciais sem nativo, baseline COTV só provisório local (ADR-0015). Bruxaria é de outro worker; Sol fará depois a correção transversal de origem para lobisomem/vampiro e contrato de extensão.
 - **Próximo:** coordenador encaminha roteiro de jogo; confirmação Terra e reteste humano ainda não ocorreram. Diário local do orquestrador registra exceção do dev para testar o lote menor antes da confirmação Terra. Ver [relatório](formas-e-poderes.md).
 - **Bloqueios:** nenhum para iniciar o teste menor; resultados do motor, observador e origem dos grants pendentes, sem homologação oficial.
+
+
+## 2026-11-15 (Sol High, despacho Opus) — continuação por origem
+- **Iniciado:** registro estável por personagem das magias efetivamente concedidas, arbitragem das perks com GameplayCore e ligação do catálogo Bruxaria; revisão crítica do lote Argon e poderes restantes do vampiro.
+- **Contexto:** scripts de servidor sem assinatura foram recusados no cliente local; correção Ed25519 já preparada no laboratório pelo orquestrador, ainda sem teste em jogo. Testes anteriores não provam falha do código das formas.
+- **Próximo:** testes Node, builds e roteiro humano; revisão cruzada Terra após entrega. Oficial e mods compartilhados preservados.
