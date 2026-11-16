@@ -42,6 +42,7 @@ Guildas são grupos de jogadores com líder, membros e funções próprias para 
 
 ### Quartos, escola e aulas na R25 privada
 
+- Nos aposentos do Arquimago, o **Baú do Arquimago** é exclusivo de quem ocupa o cargo: só essa pessoa abre, deposita e retira. Ao trocar a liderança, o acesso acompanha a função, com os itens mantidos no móvel. Ele é separado dos baús de alunos e não concede acesso aos professores. Depósito e reabertura foram conferidos no cliente privado.
 - Em **Y → Quartos**, professor ou Arquimago escolhe um dos dez quartos e um aluno. Cada aluno pode ter apenas um quarto. O aluno abre somente sua porta e precisa estar perto; professores e Arquimago também abrem por perto. A tranca geral do Arquimago bloqueia a passagem até ser desfeita.
 - O compartimento particular já existe no quarto: baú, estante ou armário, com nome do dono. Só o dono acessa seus pertences. A troca ou liberação pode acontecer sem esvaziar: os itens e septins ficam no mesmo móvel, acessíveis ao novo dono. O anterior perde acesso após a troca. Não acrescentar baús nos quartos sem um.
 - Em **Professores**, somente o Arquimago vê a opção de retirar uma escola. O membro continua na guilda; a insígnia do vínculo é retirada quando o inventário estiver disponível. Professor pode definir escola para quem está sem uma, mas não retirá-la.

@@ -14,6 +14,15 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, Baú do Arquimago e depósito pelo cliente verificados (Melekyy / Codex)
+
+- **Identificação esclarecida:** o dev estava diante do Chest dos aposentos do Arquimago, não do compartimento do Quarto 01. A referência foi confirmada pelo cliente e servidor na célula correta.
+- **Entregue:** ponto físico com acesso exclusivo ao Arquimago atual para abrir, depositar e retirar. Não depende de reivindicar outro baú pessoal; mantém proximidade e bloqueios de inventário. Antigo líder perde acesso e novo líder recebe pela função, com conteúdo mantido no mesmo móvel.
+- **Nome:** Baú do Arquimago confirmado nativamente no cliente. Propriedade de apresentação e conexão na instalação garantem reaplicação em novas conexões/streaming, sem mexer em plugins ou controles.
+- **Persistência real:** transferência de um septim pelo cliente chegou ao servidor; o septim permaneceu após fechar/reabrir, e a retirada da mesma unidade foi confirmada. Saldos restaurados ao início do teste. Conteúdo, dados pessoais e backups permanecem locais; não houve reposição arbitrária de itens.
+- **Verificado:** 136 testes completos de autorização, quatro rechecagens após a conexão do nome, fonte instalada, configuração persistida e apresentação real. Sem reinício e com pertences/cadastro pessoais preservados.
+- **Decisão:** [ADR-0018](../../03-decisoes/ADR-0018-bau-exclusivo-do-arquimago.md). Homologação oficial, troca de liderança entre dois clientes e outros compartimentos reais permanecem pendentes.
+
 ## 2026-11-15, membros de teste e abertura dos quartos R26/R27 (Melekyy / Codex)
 
 - **Membros:** tag visual de fictício retirada por pedido do dev. Quatro novos cadastros comuns de teste adicionados no privado, totalizando oito membros; preservada identificação interna `testOnly`, sem criar contas/atores ou dar funções/escolas automaticamente. Cada inclusão tem registro administrativo; dados individuais permanecem locais.

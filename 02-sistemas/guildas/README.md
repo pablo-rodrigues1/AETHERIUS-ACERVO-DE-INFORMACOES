@@ -35,6 +35,12 @@ relacionados: [diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../expa
 
 ## Funcionamento
 
+### Baú do Arquimago
+
+O compartimento existente dos aposentos do Arquimago recebeu o nome **Baú do Arquimago** e autorização exclusiva do líder atual para abrir, depositar e retirar. Não cria outro baú nem muda o cadastro de pertences pessoais. Proximidade, mesma instância e bloqueios de inventário permanecem. Permissão acompanha a liderança; o conteúdo fica no mesmo móvel. [ADR-0018](../../03-decisoes/ADR-0018-bau-exclusivo-do-arquimago.md).
+
+O teste pelo cliente real confirmou depósito de um septim, permanência após fechar/reabrir e retirada da mesma unidade, restaurando os saldos. Nome confirmado no jogo; propriedade persistente reaplica a apresentação em novas conexões. 136 testes completos e quatro rechecagens após a conexão do nome aprovados. A validação é desse baú; demais compartimentos reais, troca de liderança entre dois clientes e oficial permanecem pendentes.
+
 ### Atualização R26/R27
 
 A tag visual de fictício foi retirada, mantendo `testOnly` internamente. Quatro cadastros comuns foram acrescentados apenas no privado, totalizando oito membros, sem contas/atores ou nomeações automáticas. [ADR-0017](../../03-decisoes/ADR-0017-identificacao-interna-dos-membros-de-teste.md).
