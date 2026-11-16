@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-15, preparação de integração SkyMP e escopo completo iniciados (Melekyy / Codex)
+
+- **Pedido:** preparar o sistema completo de Guildas para integração/sincronização SkyMP antes de consolidar seu escopo no Acervo Aetherius, conforme esclarecimento do dev.
+- **Plano em execução:** conferir o contrato do host e cliente, separar dependências do privado, acrescentar entrada/configuração verificável e preparar pacote local de Guildas com guia, reversão e checklist multiplayer. Corrigir referências nativas entre quadros e identificação configurável da propriedade de interface.
+- **Limite de publicação:** apenas Markdown no acervo; código, pacote e backups permanecem locais. Nenhuma alteração autorizada de conjuração ou sistemas alheios. Não presumir homologação oficial ou dois clientes reais.
+- **Próximo:** concluir implementação e verificações antes de atualizar o escopo final e os quadros.
+
 ## 2026-11-15, Baú do Arquimago e depósito pelo cliente verificados (Melekyy / Codex)
 
 - **Identificação esclarecida:** o dev estava diante do Chest dos aposentos do Arquimago, não do compartimento do Quarto 01. A referência foi confirmada pelo cliente e servidor na célula correta.
