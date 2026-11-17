@@ -23,6 +23,7 @@
 
 1. `../AGENTS.md` — papéis, regras, fluxo.
 1b. `docs/PENDENCIAS.md` — **o que falta, em detalhe (comece por aqui ao retomar)**.
+1c. `docs/DECISOES.md` — **todas as decisões de funcionamento das mecânicas** (regras, valores, prevalência).
 2. `docs/ESPECIFICACAO.md` — transcrição da planilha, regras fixas e curva de XP.
 3. `docs/DIRECAO-DE-ARTE.md` — padrão visual, cores e análise das referências (inclui Disciplinas).
 3b. `docs/PROPOSTA-TEXTOS.md` — textos de Lobisomem/Bruxa/tela vazia (aguardando aprovação).

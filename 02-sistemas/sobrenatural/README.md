@@ -48,6 +48,9 @@ flowchart LR
 
 Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especificacao.md](especificacao.md).
 
+## Decisões
+Todas as decisões de funcionamento estão em [decisoes.md](decisoes.md); o que falta, em [pendencias.md](pendencias.md); como retomar, em [retomada.md](retomada.md).
+
 ## Pendências
 - Aprovar os textos de Lobisomem e Bruxa ([proposta-textos.md](proposta-textos.md)).
 - ~~Vertente/troca~~: Vertente no estágio 1; nenhuma troca; 2ª Disciplina no Apoteótico.
