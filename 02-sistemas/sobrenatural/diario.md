@@ -106,3 +106,7 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 ## 2026-11-16 (Sol High) — início da transformação forçada
 - **Decisão do dev:** substituir os antigos 7 dias por 72 h reais online por personagem, zeradas só na transformação confirmada. Ao vencer, aguardar noite do relógio autoritativo (20h–5h) e executar avisos/efeitos privados de 20 s antes da animação normal do kdu.
 - **Em implementação:** contador monotônico persistido, cancelamento/limpeza, comprovação de raça e reaproveitamento dos assets kdu sem editar modpack. Testes Node e roteiro posterior; sem teste em jogo hoje.
+
+
+## 2026-11-16 — retomada da transformação forçada (Sol High)
+Continuação autorizada pelo dev/orquestrador: 72 h reais online por personagem, janela noturna 20h–5h e aviso de 20 s antes do fluxo normal do kdu. Teste inicial e fontes ignoradas recuperados; integração ao boot/F7, persistência e limpeza em andamento, sem teste em jogo. Revisão independente será feita pelo coordenador com outro modelo após a entrega.
