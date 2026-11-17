@@ -40,6 +40,8 @@ O JavaScript exige Node >=20. Ferramentas nativas devem usar **o mesmo Node/ABI 
 1. Em homologação, salve configuração, estado de Guildas e banco/mundo do SkyMP. Extraia para `systems/sky-guilds`. Não sobrescreva cliente carregado nem a instalação de produção.
 2. Copie `config/skymp-full.example.json` para sua configuração de operação. Caminhos de estado/catálogo/recibos/addon são relativos a `serverRoot`; `doors.configFile`, `studentRooms.configFile` e `medallionsFile` são relativos ao módulo. `serverRoot` é obrigatório. Use diretório persistente e gravável.
 3. Confira os plugins/mods e referências. O exemplo completo corresponde à instalação com JK's College of Winterhold, The Great City of Winterhold e Vision of Skyrim II. Os dez quartos são desse layout; não trate como configuração vanilla universal. Confira também plugins dos tomos, meshes/texturas, dependências e overrides. Clientes e servidor precisam dos mesmos plugins, ordem e versões/hashes. A checagem do servidor não compara os clientes automaticamente.
+   Em clientes privados que usam um helper de CRC/tamanho com lista limitada de plugins, atualize também essa lista ao habilitar novos ESP/ESM. O perfil e o servidor podem estar corretos, mas uma lista antiga interrompe a inicialização. Não desative verificação de ordem/arquivos. Teste uma entrada nova no jogo, além de atualização a quente.
+
 4. Gere o catálogo com os plugins reais. A política de Classes continua sendo aplicada no runtime; não altere o filtro para disponibilizar todos os BOOK.
 
 ```powershell

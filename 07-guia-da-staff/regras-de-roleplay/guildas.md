@@ -15,6 +15,8 @@ relacionados: [../progresso.md]
 
 Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado e preparada para integração com SkyMP. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
 
+**Reteste privado em 17/11:** foi relatado que nenhum painel abria ao entrar novamente. A lista de verificação dos plugins do cliente foi corrigida com o jogo fechado. A abertura de Guildas, Casas e Grupo ainda precisa ser confirmada no novo processo; a integração oficial continua pendente.
+
 ## Quem pode fazer o quê
 
 | Função | Permissões |

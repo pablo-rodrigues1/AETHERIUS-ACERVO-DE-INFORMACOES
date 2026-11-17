@@ -26,6 +26,7 @@ Resultado final: **149 testes do workspace e 106 testes da própria distribuiç�
 | Estante coletiva no cliente | Nome “Baú Coletivo do Colégio” aplicado na referência carregada; audit instalado sem alterar conteúdo | Operação manual por dois jogadores pendente |
 | Baú do Arquimago | Cliente real depositou um septim, fechou/reabriu e retirou, restaurando saldos | Prova desse compartimento; não de todos os quartos |
 | Dez quartos | Ensaio nativo anterior com 60 ativações e transferência nos dez compartimentos; dono trocado com conteúdo preservado | Revalidar manualmente todos no layout público |
+| Reentrada privada após R28 | Regressão reportada: nenhum painel abre; lista limitada de plugins corrigida com jogo fechado | Reteste humano/log do novo processo pendentes; testes anteriores não certificam esse caminho |
 | Oficial | Pacote e procedimento preparados | Build/fork de destino, adaptadores reais e dois clientes ainda sem homologação |
 
 O teste de recibos associa o relatório ao SHA-256 do addon executado. O arquivo de prova é diagnóstico do operador, não uma credencial de cliente. O módulo não supõe que um inventário sem recibo inicial tenha valor zero: verifica uma leitura nativa existente ou a prova isolada do addon exato.

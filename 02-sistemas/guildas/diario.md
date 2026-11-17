@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-17, regressão geral dos painéis após reentrada (Melekyy / Codex)
+
+- **Relato:** nenhum painel abre após nova entrada no Skyrim privado. Os 149/106 testes anteriores não cobriam esse caminho real de inicialização.
+- **Diagnóstico:** log do cliente registra Unlisted plugin basename for private file verification antes de erros de sincronização. Lista limitada do helper privado contém 113 plugins; perfil/servidor usam 115. Faltavam SkyGuilds.esp e Vision of Skyrim II.esp. Não desativar a verificação para contornar.
+- **Correção preparada/instalada:** alterar somente a lista limitada no bundle efetivamente usado pelo MO2. Compilação e teste isolado confirmam CRC/tamanho de ambos os nomes e recusa de quatro entradas inválidas. Dev fechou o Skyrim; instalação com backup, sem reiniciar servidor e oito arquivos protegidos preservados. Nenhuma alteração em inventários, cargos ou conjuração.
+- **Pendente:** dev reabrir o jogo e retestar Guildas, Casas e Grupo; conferir log do processo novo e investigar falhas adicionais se existirem. Não declarar recuperação completa antes dessa verificação.
+
 ## 2026-11-17, R28 preparada para SkyMP e escopo consolidado (Melekyy / Codex)
 
 - **Entrega:** bootstrap com verificação antes de registrar/gravar, presets portáteis, exportador de catálogo explícito, preflight estático e ensaios isolados de recibos/estoque coletivo. Pacote local de Guildas com guia, rollback, checklist multiplayer, hashes e testes executados na própria distribuição. Código/ZIP/relatórios privados não enviados ao acervo.

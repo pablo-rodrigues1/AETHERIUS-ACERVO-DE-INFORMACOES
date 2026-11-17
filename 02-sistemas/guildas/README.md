@@ -23,6 +23,10 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 - [Guia simples da Staff](../../07-guia-da-staff/regras-de-roleplay/guildas.md)
 - [Histórico de desenvolvimento](diario.md)
 
+## Regressão de entrada em investigação — 17/11/2026
+
+Após reabrir o cliente privado, o dev relatou que nenhum painel abria. O log mostrou a verificação local de arquivos rejeitando o plugin das insígnias: a lista limitada do cliente ainda tinha 113 entradas, enquanto o servidor/perfil passou a 115. Foram acrescentados somente os dois plugins de Guildas, preservando CRC/tamanho e a restrição de caminhos. Correção instalada com o jogo fechado e oito arquivos protegidos preservados. **Reteste humano de entrada e dos painéis está pendente; não considerar o relato resolvido apenas pelos testes anteriores.**
+
 ## Onde está o código
 
 Projeto local `Sistema de Guildas 2`, pacote CommonJS `sky-guilds` 1.1.0. Entrada recomendada: `bootstrap.cjs`; implementação em `src/`; presets `config/skymp-panel.example.json` e `config/skymp-full.example.json`. A URL de repositório do código ainda não foi informada/configurada. Preencher `repositorio` somente quando existir URL real.
