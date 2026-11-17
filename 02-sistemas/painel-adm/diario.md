@@ -26,3 +26,7 @@ Registrada a entrega **2026.11.13.1** no acervo. Operações de staff pelo F7, a
 Próximo passo: Conferir as versões do F7 e testar a consulta a compras históricas.
 
 [Documentação do sistema](README.md)
+
+
+## 2026-11-16 — impacto do Sobrenatural (Sol High)
+[Transformação forçada](../sobrenatural/etapa-2-transformacao-forcada.md), candidato local `856232a`: controlador 72 h online e sequência privada chama a animação normal kdu; serviço registra stamp privado de raça confirmada e cancela concessão/personagem obsoletos durante turning. F7 ganha Forçar transformação no alvo com a autorização/auditoria existentes, sem alterar o painel oficial nem o pacote kdu original. 122 testes Node e scripts F7 passaram; revisão independente e jogo pendentes, servidor local parado.

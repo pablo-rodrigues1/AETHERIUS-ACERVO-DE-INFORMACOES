@@ -46,3 +46,5 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - Pergaminho que não ia para a mão: o cliente não reconhecia o tipo "scrollitem" enviado pelo servidor (no SkyrimPlatform é "Scroll"). Correção no patch de cliente do pacotão v0.38; teste em jogo pendente. [Diário](../02-sistemas/gameplay-core/diario.md).
 
 - **2026-11-16 — Sobrenatural (candidato local):** origem de grants, Bruxaria, poderes JS, tempos 40/60 e contrato de sangue, 122 testes; revisão e homologação pendentes.
+
+- 2026-11-16 — Sobrenatural: transformação forçada 72 h reais online/noite, sequência privada de 20 s e atalho F7; candidato local 856232a, 122 testes Node, revisão e jogo pendentes. Corrigido status da integração Bruxa (79098ad).

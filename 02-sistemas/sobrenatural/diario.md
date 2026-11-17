@@ -110,3 +110,7 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 
 ## 2026-11-16 — retomada da transformação forçada (Sol High)
 Continuação autorizada pelo dev/orquestrador: 72 h reais online por personagem, janela noturna 20h–5h e aviso de 20 s antes do fluxo normal do kdu. Teste inicial e fontes ignoradas recuperados; integração ao boot/F7, persistência e limpeza em andamento, sem teste em jogo. Revisão independente será feita pelo coordenador com outro modelo após a entrega.
+
+
+## 2026-11-16 — entrega da transformação forçada (Sol High)
+Candidato no laboratório `856232aa0cc7474a50017e3382a86fe2d5c7f6aa`: 72 h reais online por personagem/concessão, noite 20h–5h, pré-aviso privado de 20 s e fluxo normal kdu. F7 antecipa só o contador no alvo; stamp privado zera apenas após readback da raça e protege o reset após queda; cancelamentos e IMAD finito tratados. 122/122 testes Node (29 novos), serviço/F7/revisão F7, parse/reverse-check passaram; runtime preparado, servidor permanece parado, nenhum teste humano/modpack/OFICIAL. [Relatório e roteiro](etapa-2-transformacao-forcada.md); [decisão](../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md); [investigação](investigacao-16-11-transformacao-forcada.md). Corrigido o quadro Bruxa: ligação por origem entregue em 79098ad, revisão independente e jogo pendentes. Próxima tarefa Sol: restante da Reserva de Sangue, reclassificada alta complexidade por Terra.

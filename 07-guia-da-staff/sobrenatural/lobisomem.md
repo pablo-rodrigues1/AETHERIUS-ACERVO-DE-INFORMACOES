@@ -3,9 +3,9 @@ titulo: Como funciona o lobisomem
 tipo: guia-staff
 status: rascunho
 responsaveis: [kdu]
-atualizado: 2026-11-14
+atualizado: 2026-11-16
 tags: [staff, sobrenatural, lobisomem]
-fonte_tecnica: [../../02-sistemas/lobisomem/README.md]
+fonte_tecnica: [../../02-sistemas/lobisomem/README.md, ../../02-sistemas/sobrenatural/etapa-2-transformacao-forcada.md]
 relacionados: [../progresso.md]
 ---
 
@@ -38,12 +38,16 @@ O jogador lobisomem pode virar uma fera grande, e todo mundo em volta vê a tran
 
 ## Perguntas comuns de jogadores
 - **Os outros jogadores me veem transformado?** Sim, a transformação é igual para todos.
-- **Se o servidor reiniciar, continuo fera?** Sim, a forma é restaurada.
+- **Se o servidor reiniciar, continuo fera?** A aparência humana é restaurada pela recuperação do servidor.
 - **A prata me mata mais rápido?** Causa 50% a mais de dano, mas o extra sozinho nunca dá o golpe final.
 
 ## O que a Staff pode e não pode fazer
 - **Pode:** pedir aos devs para mudar o dano de prata ou o tempo da transformação (são opções do servidor).
-- **Não pode:** mudar essas opções sozinha; ainda não há comando de Staff para o lobisomem.
+- **No laboratório:** o F7 permite encerrar a forma e testar a transformação forçada no jogador selecionado; exige noite, alvo vivo e sem outra forma. Revisão e teste em jogo pendentes; não está liberado no oficial.
 
 ## Quer o detalhe técnico?
 Veja [Lobisomem sincronizado](../../02-sistemas/lobisomem/README.md).
+
+
+## Transformação forçada (candidato no laboratório)
+Depois de 72 horas reais conectado sem transformar, o lobisomem precisa se transformar à noite, entre 20h e 5h do jogo. Se completar as horas de dia, espera a próxima noite conectado. O alvo recebe dois avisos, coração, tremor e vermelho na própria tela; após 20 segundos começa a animação normal, vista por quem está perto. Sair, morrer ou perder a maldição interrompe o aviso. Uma transformação real zera as horas; tempo desconectado não conta. Ainda precisa de revisão e teste no jogo. [Detalhes técnicos e roteiro](../../02-sistemas/sobrenatural/etapa-2-transformacao-forcada.md).

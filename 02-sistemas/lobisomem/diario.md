@@ -46,3 +46,7 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 ## 2026-11-15 (pablo-rodrigues1 / Sol High) — integração do Sobrenatural no laboratório
 - O lote Sobrenatural 3299cf1 adiciona entrada redundante cast/efeito e recarga real server-side (padrão 30 min, local 0), preservando a sessão autoritativa do kdu. 29 testes do kdu passaram; teste em jogo e revisão pendentes. Oficial não alterado; ver ../sobrenatural/formas-e-poderes.md e ADR-0014.
 
+
+
+## 2026-11-16 — impacto do Sobrenatural (Sol High)
+[Transformação forçada](../sobrenatural/etapa-2-transformacao-forcada.md), candidato local `856232a`: controlador 72 h online e sequência privada chama a animação normal kdu; serviço registra stamp privado de raça confirmada e cancela concessão/personagem obsoletos durante turning. F7 ganha Forçar transformação no alvo com a autorização/auditoria existentes, sem alterar o painel oficial nem o pacote kdu original. 122 testes Node e scripts F7 passaram; revisão independente e jogo pendentes, servidor local parado.

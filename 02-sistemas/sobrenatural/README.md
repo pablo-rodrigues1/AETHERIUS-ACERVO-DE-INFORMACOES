@@ -6,9 +6,9 @@ fase: em-desenvolvimento
 responsaveis: [pablo-rodrigues1, kdu]
 repositorio: "projeto local: C:\Code\Aetherius - New Systems\Sobrenatural (será compilado em pasta final)"
 depende_de: [../ui-core/README.md, ../painel-adm/README.md, ../gameplay-core/README.md, ../lobisomem/README.md]
-atualizado: 2026-11-15
+atualizado: 2026-11-16
 tags: [sobrenatural, maldicoes, vampirismo, licantropia, bruxaria, ui-core, servidor]
-relacionados: [diario.md, especificacao.md, direcao-de-arte.md, proposta-textos.md, ../lobisomem/README.md]
+relacionados: [etapa-2-transformacao-forcada.md, ../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md, diario.md, especificacao.md, direcao-de-arte.md, proposta-textos.md, ../lobisomem/README.md]
 ---
 
 # Sobrenatural (Maldições e Pragas)
@@ -56,3 +56,7 @@ Nível da Disciplina do vampiro = estágio − 1. Detalhes completos em [especif
 
 ## Candidato local de 16/11
 Origem de grants, integração Bruxaria e poderes JS foram implementados com 122 testes e builds sem addon. [Relatório e roteiro](formas-e-poderes.md), [Bruxaria](etapa-2-bruxaria.md) e [ADR-0019](../../03-decisoes/ADR-0019-sobrenatural-origem-e-tempos.md). Revisão Terra e teste humano pendentes; não aplicado ao oficial.
+
+
+## Transformação forçada — candidato de 16/11
+[Relatório e roteiro](etapa-2-transformacao-forcada.md): 72 h reais online, janela 20h–5h, aviso privado de 20 s e animação pública normal kdu; atalho F7 no alvo. 122 testes Node e scripts serviço/F7 passaram, runtime preparado com servidor parado. Revisão independente e jogo pendentes; [ADR-0020](../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md). O contador e a obrigação de transformar pertencem ao Sobrenatural; o serviço kdu conserva o domínio da forma/animação.

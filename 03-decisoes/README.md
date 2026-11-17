@@ -28,3 +28,5 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 | [ADR-0018](ADR-0018-bau-exclusivo-do-arquimago.md) | Baú exclusivo do Arquimago | aceito | 2026-11-15 |
 
 - [ADR-0019-sobrenatural-origem-e-tempos.md](ADR-0019-sobrenatural-origem-e-tempos.md) — autoria conservadora e duração/recarga dos poderes, 16/11.
+
+- [ADR-0020](ADR-0020-sobrenatural-transformacao-forcada.md) — 72 h reais online, noite e sequência da transformação forçada (16/11).

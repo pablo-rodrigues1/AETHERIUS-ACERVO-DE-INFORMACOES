@@ -1,8 +1,18 @@
+---
+titulo: Bruxaria - catálogo e integração
+tipo: referencia
+status: rascunho
+responsaveis: [pablo-rodrigues1, kdu]
+atualizado: 2026-11-16
+tags: [sobrenatural, lobisomem, servidor, testes]
+relacionados: [README.md, diario.md]
+---
+
 # Etapa 2 — Bruxaria (Catálogo de Records, Auditoria do Modpack e Projeto da Fase 2)
 
 ## Atualização 16/11 — integração e revisão crítica por Sol High
 
-O catálogo de Argon (`603dea7`) foi ligado ao serviço em `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js` depois de substituir o reconciliador destrutivo por `supernatural/grant-origin.js`. O estado desta seção substitui a pendência de ligação descrita no histórico abaixo. Revisão final independente por Terra e homologação em jogo continuam pendentes; o dev adiou os testes humanos.
+O catálogo de Argon (`603dea7`) foi ligado no commit raiz `79098ad` ao serviço em `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js` depois de substituir o reconciliador destrutivo por `supernatural/grant-origin.js`. O estado desta seção substitui a pendência de ligação descrita no histórico abaixo. Revisão final independente por Terra e homologação em jogo continuam pendentes; o dev adiou os testes humanos.
 
 ### Achados aceitos e correções
 
@@ -36,7 +46,7 @@ Overlays: `files/server/gamemode/supernatural-service.js`, `supernatural/{witch-
 
 
 **Data:** 2026-11-15  
-**Autor:** Gemini 4 Argon (Fase 1 e Fase 2 concluídas; ligação de `witch-grants.js` ao `supernatural-service.js` **PENDENTE** do mecanismo por origem)  
+**Autor original:** Gemini 4 Argon (catálogo/pisos); integração de `witch-grants.js` ao `supernatural-service.js` e mecanismo por origem concluídos por Sol High em `79098ad` (16/11). Revisão independente e jogo pendentes.
 **Fontes auditadas:**
 - Planilha oficial transcrita em [`Sobrenatural/docs/ESPECIFICACAO.md`](file:///C:/Code/Aetherius%20-%20New%20Systems/Sobrenatural/docs/ESPECIFICACAO.md) (§5 Bruxaria — tabela revisada prevalece sobre o resumo textual)
 - Auditoria de concorrência e origem em [`Sobrenatural/docs/investigacoes/INVESTIGACAO_15-11_bruxaria-concorrencia-grants.md`](file:///C:/Code/Aetherius%20-%20New%20Systems/Sobrenatural/docs/investigacoes/INVESTIGACAO_15-11_bruxaria-concorrencia-grants.md)
@@ -314,7 +324,7 @@ Na aba "Maldições - Progressão", cinco feitiços da Bruxaria são marcados co
 
 ---
 
-## 9. Arquivos Entregues nesta Etapa (e Pendência de Integração em `supernatural-service.js`)
+## 9. Arquivos entregues e integração concluída em `79098ad`
 
 | Arquivo | Status | Descrição |
 |---|---|---|
@@ -323,5 +333,5 @@ Na aba "Maldições - Progressão", cinco feitiços da Bruxaria são marcados co
 | `C:\Code\Aetherius - Servidor Local\source\server\gameplay\core\runtime\src\class-skills.ts`, `index.ts`, `tests\class-skills-delivery.test.mjs` e `dist\aetherius-gameplay-core.cjs` | **Concluído** | Pisos de habilidade `30/40/50/60/60/60` com `Math.max(classe, pisoBruxa)`, reversão na remoção, isolamento por personagem e testes automatizados. |
 | `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\modules\supernatural\supernatural-data.js` (+ cópia em `C:\modOrganizer\Mods\AETHERIUS - UI CORE (LOCAL)\MeridianUI\aetheriusui\modules\supernatural\supernatural-data.js`) | **Concluído** | Estágio 4 da Bruxa atualizado com `'Necromestre'` e listas de magias/perks por estágio nas 3 vertentes (`mortui`, `daemones`, `tenebrae`). |
 | `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\teste-servico.cjs` | **Concluído** | Testes Node cobrindo `witch-grants.js` e a neutralização das quests do `Shadow Spell Package` em `client.js`. |
-| `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js` (+ espelho no overlay) | **PENDENTE (mecanismo por origem)** | A ligação de `witch-grants.js` (`witch.spellsFor(stage, c.vertente)`, `witch.perksFor(stage, c.vertente)`, `witch.allSpells()`, `witch.allPerks()`) ao `supernatural-service.js` está **PENDENTE** do mecanismo de rastreamento por **origem** (o Sol High foi parado pelo limite do Codex e o mecanismo por origem ainda não foi entregue). |
+| `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js` (+ espelho no overlay) | **Concluído em `79098ad` (16/11)** | `witch.spellsFor(stage, c.vertente)` e `witch.perksFor(stage, c.vertente)` ligados ao reconciliador por origem; `witch.allSpells()`/`witch.allPerks()` incluídos na validação dos 60 records no boot. Entrega no commit raiz `79098ad`; revisão independente Terra e jogo seguem pendentes. A interrupção anterior é apenas histórica. |
 
