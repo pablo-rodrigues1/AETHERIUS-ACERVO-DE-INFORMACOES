@@ -25,7 +25,9 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 
 ## Regressão de entrada em investigação — 17/11/2026
 
-Após reabrir o cliente privado, o dev relatou que nenhum painel abria. O log mostrou a verificação local de arquivos rejeitando o plugin das insígnias: a lista limitada do cliente ainda tinha 113 entradas, enquanto o servidor/perfil passou a 115. Foram acrescentados somente os dois plugins de Guildas, preservando CRC/tamanho e a restrição de caminhos. Correção instalada com o jogo fechado e oito arquivos protegidos preservados. **Reteste humano de entrada e dos painéis está pendente; não considerar o relato resolvido apenas pelos testes anteriores.**
+A primeira correção da lista de plugins não resolveu sozinha. O transporte também interrompia um lote de pacotes ao receber propriedade de ator fora do streaming; agora ignora esse pacote sem criar ator falso nem interromper os seguintes. A R29 retira callbacks antigos exclusivamente das Guildas, preservando os outros painéis. Após carga fria, **Guildas e Casas foram observados abertos no Skyrim privado**, e o cliente confirmou R29. Convites agora mostram **ID do jogador**; nesta instalação a identidade pública foi conferida igual ao identificador persistente, sem migrar as chaves.
+
+A suíte passou em 150 testes antes da nova verificação visual por função. Ensaios nativos atuais aprovaram cargos, escolas, insígnias, receitas, cronograma, portas, dez quartos e baús coletivo/exclusivo. Grupo e depósito/reabertura manual no quarto ainda estão em reteste. Um diagnóstico antigo de renderização foi identificado como origem do erro periódico de IDs estáticos; sua retirada está preparada para instalação com o cliente fechado. **Não declarar todos os fluxos recuperados enquanto esses retestes estiverem pendentes.** [ADR-0023](../../03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md).
 
 ## Onde está o código
 

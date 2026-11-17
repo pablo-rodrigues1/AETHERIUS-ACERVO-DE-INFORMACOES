@@ -8,9 +8,39 @@ tags: [guildas, skymp, integracao]
 relacionados: [README.md, diario.md]
 ---
 
-# Validação e limites — Guildas R28
+# Validação e limites — Guildas R28 / recuperação R29
 
 Revisão: 17/11/2026. Responsável: Melekyy.
+
+## Recuperação R29 em conferência
+
+Guildas e Casas foram observados abertos no cliente real após carga fria. O cliente confirmou R29, com modelos de dono e entradas dos sistemas carregados. Lista de plugins e guarda de propriedade fora do streaming instaladas com o jogo fechado; dez callbacks antigos de Guildas aposentados. Convite apresentado por ID, com identidade pública conferida nesta instalação. Não houve alteração do controlador de conjuração.
+
+150 testes do workspace passaram antes de acrescentar a verificação de interface com os quatro modelos reais de permissão. Os ensaios nativos atuais usam o mesmo addon privado em processos isolados, **sem clientes humanos**:
+
+| Fluxo | Arquimago | Professor | Bibliotecário | Membro comum |
+|---|---|---|---|---|
+| Consultar painel/cronograma | Permitido | Permitido | Permitido | Permitido |
+| Convites, remoção, cargos e nomeações | Permitido | Recusado | Recusado | Recusado |
+| Definir escola de membro sem vínculo | Permitido | Permitido | Recusado | Recusado |
+| Retirar vínculo de escola | Permitido | Recusado | Recusado | Recusado |
+| Alterar aulas e consultar registros | Permitido | Recusado | Recusado | Recusado |
+| Abrir/consultar/fabricar na bancada | Permitido | Recusado | Permitido | Recusado |
+| Controle geral das portas | Permitido | Recusado | Recusado | Recusado |
+| Atribuir os dez quartos | Permitido | Permitido | Recusado | Recusado |
+| Abrir porta de quarto por proximidade | Permitido | Permitido | Só a sua | Só a sua |
+| Acessar compartimento de quarto atribuído | Só se dono | Só se dono | Só se dono | Só se dono |
+| Usar estoque coletivo | Permitido | Permitido | Permitido | Permitido |
+| Usar baú particular do Arquimago | Permitido | Recusado | Recusado | Recusado |
+| Sair voluntariamente | Indisponível | Indisponível | Indisponível | Indisponível |
+
+O Arquimago pode retirar qualquer membro elegível; a própria liderança é definida pela Staff. Trancas globais impedem passagem pelos dois lados inclusive dos administradores da guilda. O baú de quarto atribuído pertence ao dono, enquanto professores/Arquimago podem abrir sua porta: são permissões diferentes.
+
+Provas nativas revalidadas: exclusividade professor/bibliotecário, cinco insígnias e proteção de inventário/morte, uma escola por membro, cronograma/registros, fabricação concorrente e cancelamento sem cobrança dos 104 tomos, 68 passagens/86 referências e 166 ativações nos dois sentidos, dez quartos/60 ativações com persistência e troca de dono, estoque coletivo e baú exclusivo com troca de liderança. Erros de acesso não se tornam operações válidas por chamar diretamente o endpoint.
+
+**Pendências do cliente real:** Grupo, ações visuais por função e depósito/reabertura no quarto. A ativação do compartimento pelo servidor não prova transferência pelo cliente. Diagnóstico antigo de renderização identificado e remoção preparada, ainda sem instalação fria. Não extrapolar as provas nativas para declarar todos os fluxos privados ou o oficial concluídos.
+
+## Evidência da entrega R28 anterior
 
 Resultado final: **149 testes do workspace e 106 testes da própria distribuição aprovados**, sem falhas ou pulos. Pacote local SkyGuilds-SkyMP-2026.11.17-R28.zip, 78 arquivos, SHA-256 `1d8850eb5b831d10d1b3305f252012e976834159a5e081098b9f8248c3b66987`. ZIP e código permaneceram locais; somente os documentos foram preparados para publicação.
 

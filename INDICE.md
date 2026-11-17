@@ -42,7 +42,7 @@
 - `02-sistemas/fisica-de-cabelos-e-capas/diario.md` — Diário da Física de cabelos e capas.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
-- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R28 preparada para SkyMP, baú coletivo e escopo completo; oficial/dois clientes pendentes.
+- `02-sistemas/guildas/README.md` — Guildas de Melekyy: recuperação privada R29, escopo completo e validação por função; retestes em andamento, oficial/dois clientes pendentes.
 - `02-sistemas/guildas/escopo.md` — Regras atuais de Magos, Alquimistas e Companions, Biblioteca, escolas, quartos, portas e pertences.
 - `02-sistemas/guildas/integracao-skymp.md` — Instalação, dependências reais, sincronização, checklist multiplayer e rollback.
 - `02-sistemas/guildas/validacao-skymp.md` — Matriz de provas privadas/nativas e limites de homologação.
@@ -90,6 +90,8 @@
 - `03-decisoes/ADR-0015-seletores-e-bancada-do-lider.md` — Listas de opções estáveis para todos os seletores e fabricação de tomos autorizada ao líder sem acumular funções.
 
 - `03-decisoes/ADR-0021-bau-coletivo-do-colegio.md` — Estante coletiva dos Magos e logs confirmados exclusivos do Arquimago.
+- `03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md` — Guarda de streaming, aposentadoria de callbacks antigos e validação por função.
+
 - `03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md` — Bootstrap verificável, pacote ativo restrito e preparação de homologação SkyMP.
 
 ## 04 — Histórico

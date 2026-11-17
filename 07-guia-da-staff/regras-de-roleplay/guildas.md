@@ -15,7 +15,7 @@ relacionados: [../progresso.md]
 
 Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado e preparada para integração com SkyMP. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
 
-**Reteste privado em 17/11:** foi relatado que nenhum painel abria ao entrar novamente. A lista de verificação dos plugins do cliente foi corrigida com o jogo fechado. A abertura de Guildas, Casas e Grupo ainda precisa ser confirmada no novo processo; a integração oficial continua pendente.
+**Recuperação privada em 17/11:** Guildas e Casas voltaram a abrir no cliente observado após corrigir a verificação de plugins e o transporte de propriedades. A R29 elimina interferência de callbacks antigos das Guildas. Grupo e depósito manual no baú do quarto ainda estão em conferência. As permissões dos quatro perfis passaram nos testes nativos; isso não substitui a homologação oficial com dois jogadores reais.
 
 ## Quem pode fazer o quê
 
@@ -28,7 +28,7 @@ Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado 
 | Bibliotecários dos Magos | Abrem a Biblioteca e fabricam tomos na bancada |
 | Aluno/membro comum | Consulta seu painel, cronograma e informações permitidas; usa seu quarto e o baú coletivo |
 
-A entrada exige aceitar o convite. O membro não sai sozinho; o líder precisa removê-lo. Cargo com nome especial não dá poderes de gestão. Professor e bibliotecário dos Magos não acumulam um ao outro, liderança ou cargos extras. Cada professor ocupa uma escola; o vínculo pessoal de escola é separado.
+O Arquimago convida pelo **ID do jogador** no campo de Membros. A entrada exige aceitar o convite. O membro não sai sozinho; o líder precisa removê-lo. Cargo com nome especial não dá poderes de gestão. Professor e bibliotecário dos Magos não acumulam um ao outro, liderança ou cargos extras. Cada professor ocupa uma escola; o vínculo pessoal de escola é separado.
 
 ## Os três grupos
 

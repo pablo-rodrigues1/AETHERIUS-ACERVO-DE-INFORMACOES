@@ -65,7 +65,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
-| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Retestar entrada e painéis após corrigir verificação de plugins no cliente privado; oficial pendente | 17/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R29: Guildas e Casas observados no cliente real; permissões/quartos revalidados no nativo; Grupo e depósito manual em reteste; oficial pendente | 17/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
@@ -74,6 +74,8 @@ Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por
 ## Últimas mudanças
 - **15/11/2026:** Cabelos e capas com física: 910 cabelos com mechas (franja, laterais, costas) e capas balançando, sem atravessar o corpo. Pergaminho que não ia para a mão corrigido. Ataque travando depois de trocar a aparência ainda em investigação.
 - **15/11/2026:** Baú dos aposentos do Arquimago exclusivo do cargo e nomeado Baú do Arquimago. Depósito, fechar/reabrir e retirada pelo cliente real conferidos, com o septim de teste devolvido. 136 testes completos e rechecagens aprovados; demais compartimentos reais e oficial seguem para homologação.
+- **17/11/2026:** Guildas R29: Guildas/Casas observados no Skyrim; recuperação do transporte e retirada de callbacks antigos. Permissões dos quatro perfis e dez quartos aprovados no nativo. Grupo e operação manual do quarto em reteste.
+
 - **17/11/2026:** Guildas: R28 preparada para integração SkyMP, escopo completo e guia publicados. Estante coletiva dos Magos e logs confirmados de depósito/retirada instalados no privado. Preflight/nativo aprovados; oficial e dois clientes reais pendentes.
 - **15/11/2026:** Guildas: tag visual retirada, quatro membros de teste adicionados e interferência de uma instância antiga corrigida. O dev confirmou abertura do baú. 135 testes e ensaio nativo aprovados; relato de itens não permanecerem ainda em investigação no cliente real.
 - **15/11/2026:** Guildas: troca privada de liderança para professor da escola atual verificada, sem acúmulo de funções, sem reinício e com inventário/insígnia preservados. Nenhuma nova regra; oficial segue pendente.

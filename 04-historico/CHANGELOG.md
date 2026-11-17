@@ -10,6 +10,10 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-17 — Recuperação privada de Guildas R29 em conferência
+
+Correção do transporte para modelos fora do streaming e aposentadoria de callbacks legados de Guildas. Guildas e Casas observados abertos; testes nativos aprovam quatro perfis e dez quartos. Convites apresentados por ID. Grupo/depósito manual e limpeza do diagnóstico antigo seguem em reteste; oficial/dois humanos pendentes. [Diário](../02-sistemas/guildas/diario.md).
+
 ## Resumo
 Mudanças relevantes por versão, da mais recente para a mais antiga. Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/).
 

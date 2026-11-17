@@ -14,6 +14,17 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-17, recuperação R29 e revisão de todos os perfis em andamento (Melekyy / Codex)
+
+- **Pedido ampliado:** recuperar todos os painéis e conferir o sistema dos Magos como Arquimago, professor, bibliotecário e membro comum. Convite deve ser apresentado por ID do jogador.
+- **Diagnóstico/correção:** lista de arquivos corrigida não bastou. Propriedade recebida para ator sem modelo interrompia o lote nativo de rede. Guarda restrita ignora essa atualização e deixa criação/estado inicial para CreateActor; índice zero e recriação verificados. Callback antigo de Guildas podia reaplicar foco/modelo: R29 aposenta somente os nomes legados configurados das Guildas na entrada e na atualização do dono. Outros sistemas preservados.
+- **Privado:** duas correções do bundle instaladas com o jogo fechado e backup; fallback físico, estado, inventários, addons e controlador de conjuração preservados. Módulo R29 carregado em inicialização fria. Guildas e Casas observados abertos no processo real; cliente confirmou R29. Nenhum dado privado publicado.
+- **ID:** rótulos de convite de Guildas/Casas/Guardas e identificação de membros ajustados. A identidade pública desta instalação foi verificada igual à chave persistente; nenhuma migração de identificador nem novo contrato de Classes/Staff presumido.
+- **Verificação:** 150 testes do workspace aprovados antes da inclusão da matriz de interface por função. Addon nativo atual aprovou exclusividade de funções, cinco insígnias/proteção/morte, escola só removida pelo Arquimago, cronograma/registros, 104 tomos e cobrança/cancelamento, 68 passagens em ambos os sentidos, 10 quartos com 60 ativações e troca de dono com conteúdo, baú coletivo e baú exclusivo com troca de liderança. Esses ensaios usam bots, sem jogadores humanos simultâneos.
+- **Ainda em andamento:** Grupo no cliente, navegação/ações de todos os perfis e depósito/reabertura manual no quarto. Teste privado temporário restaura quarto/local/itens ao fim; não confundir ativação do servidor com depósito real do cliente. Inspeção do mouse/teclado interrompida pelo Esc físico, aguardando retomada explícita.
+- **Erro adicional identificado:** diagnóstico temporário antigo de renderização chamava tradutor de referências dinâmicas com IDs estáticos a cada dois segundos. Remoção somente desse diagnóstico preparada/testada, sem alterar renderer ou conjuração; instalação fria ainda pendente. [ADR-0023](../../03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md).
+- **Limite:** recuperação parcial observada não é declaração de tudo resolvido. Oficial, integração real Staff/Classes e dois clientes humanos continuam pendentes.
+
 ## 2026-11-17, regressão geral dos painéis após reentrada (Melekyy / Codex)
 
 - **Relato:** nenhum painel abre após nova entrada no Skyrim privado. Os 149/106 testes anteriores não cobriam esse caminho real de inicialização.
