@@ -13,6 +13,14 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-17, manhã, DLL nativa (kdu / Claude Opus 5.5)
+- **Decisão:** a pedido do kdu ("faça ser bom que nem o deles"), o olhar ganhou uma DLL SKSE própria, `AetheriusOlhar.dll`, opcional. Ela gira o osso do pescoço (40%) e o da cabeça (60%) depois da animação, a cada quadro, sem a IA. Assim o corpo nunca gira junto. Código nosso, nada copiado.
+- **Canal JS → DLL:** valores de ator do boneco remoto (só existem no PC local). `Variable07` = olhando, `Variable08/09/10` = ponto, e a DLL responde com `Variable06 = 4242`. Com resposta, o JS larga o modo antigo; sem a DLL, tudo continua como antes.
+- **Parâmetros:** 80° para os lados, 45° para cima, 40° para baixo; acima de 120° olha para a frente; suavização de 7/s.
+- **Entrega:** compilada para 1.6.1170 com CommonLibSSE NG (gancho `Character::UpdateAnimation`, vfunc 0x7D). Testes JS 14/14. Instalada no kit e no mod do MO2 de teste. Zip "OLHAR SINCRONIZADO 17-11" com as pastas servidor e modpack.
+- **Próximo:** ver em jogo. Se a cabeça não mexer, o jogo aplica a pose depois do gancho, e o gancho muda de lugar.
+- **Bloqueios:** nenhum
+
 ## 2026-11-17 (kdu / Claude Opus 5.5)
 - **Feito:** bug relatado em teste: em vez de virar só a cabeça, o boneco remoto girava o corpo inteiro (em 1ª e em 3ª pessoa). Causa: o cliente do SkyMP (`movementApply`) chama `setHeadTracking(false)` a cada quadro em todo boneco de jogador, e nós só religávamos a cada 2 s. Com o `SetLookAt` ativo e o head tracking desligado, a IA vira o corpo para encarar o marcador. Correção: enquanto o boneco olha para um ponto, o head tracking é religado a cada quadro, logo depois do SkyMP.
 - **Parâmetro:** limite do pescoço de 110° para 75°, porque acima disso a IA também vira o corpo.
