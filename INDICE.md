@@ -42,7 +42,10 @@
 - `02-sistemas/fisica-de-cabelos-e-capas/diario.md` — Diário da Física de cabelos e capas.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
-- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R25 privada com dez quartos, compartimentos existentes, retirada de escola e cronograma; integrações oficiais pendentes.
+- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R28 preparada para SkyMP, baú coletivo e escopo completo; oficial/dois clientes pendentes.
+- `02-sistemas/guildas/escopo.md` — Regras atuais de Magos, Alquimistas e Companions, Biblioteca, escolas, quartos, portas e pertences.
+- `02-sistemas/guildas/integracao-skymp.md` — Instalação, dependências reais, sincronização, checklist multiplayer e rollback.
+- `02-sistemas/guildas/validacao-skymp.md` — Matriz de provas privadas/nativas e limites de homologação.
 - `02-sistemas/guildas/diario.md` — Diário de Guildas, responsável Melekyy, registro inicial e pendências de publicação e integração.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
 - `02-sistemas/loja/diario.md` — Histórico documental de Loja e apoiadores, com a base de integração e o próximo passo.
@@ -85,6 +88,9 @@
 - `03-decisoes/ADR-0012-portas-do-colegio-e-funcoes-incompativeis.md` — Controle das passagens nos dois sentidos por líder/professores e exclusão entre professor e bibliotecário.
 - `03-decisoes/ADR-0013-exclusividade-dos-cargos-dos-magos.md` — Professor/bibliotecário dos Magos sem cargos extras ou liderança, preservando o vínculo pessoal de escola.
 - `03-decisoes/ADR-0015-seletores-e-bancada-do-lider.md` — Listas de opções estáveis para todos os seletores e fabricação de tomos autorizada ao líder sem acumular funções.
+
+- `03-decisoes/ADR-0021-bau-coletivo-do-colegio.md` — Estante coletiva dos Magos e logs confirmados exclusivos do Arquimago.
+- `03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md` — Bootstrap verificável, pacote ativo restrito e preparação de homologação SkyMP.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

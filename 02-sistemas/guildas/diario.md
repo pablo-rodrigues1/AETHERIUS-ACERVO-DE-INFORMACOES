@@ -3,7 +3,7 @@ titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-15
+atualizado: 2026-11-17
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,23 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-17, R28 preparada para SkyMP e escopo consolidado (Melekyy / Codex)
+
+- **Entrega:** bootstrap com verificação antes de registrar/gravar, presets portáteis, exportador de catálogo explícito, preflight estático e ensaios isolados de recibos/estoque coletivo. Pacote local de Guildas com guia, rollback, checklist multiplayer, hashes e testes executados na própria distribuição. Código/ZIP/relatórios privados não enviados ao acervo.
+- **Sincronização:** propriedade de painel configurável; leitura nativa por ID em update, selagem reaplicada após streaming, animação de fabricação tolerante à diferença de relógio, serviços aposentados sem permissões antigas. Domínio dos três grupos preservado.
+- **Suítes finais:** 149 testes no workspace e 106 executados na própria pasta distribuída, todos aprovados, sem pulos. ZIP local com 78 arquivos e hashes; nenhum código/binário/ZIP no acervo.
+- **Validação:** preflight privado com 115 plugins; host real aprovou 151 referências e 104 tomos. Recibos de inventário aprovados em processo isolado no mesmo addon. R28 recebida pelo cliente conectado, sem reinício; estado/inventários e nove arquivos protegidos preservados. Autorização Staff checada quanto ao formato, não como botão oficial conectado.
+- **Documentação:** [escopo completo](escopo.md), [instalação](integracao-skymp.md), [matriz](validacao-skymp.md) e guia Staff atualizados. Responsável Melekyy; fase em-teste no privado. Livros autorais continuam guardados e conjuração permanece independente.
+- **Validação documental:** os 13 Markdown alterados passaram no formato e links relativos. O verificador global encontra 28 documentos preexistentes de Sobrenatural sem o frontmatter exigido; nenhum deles faz parte desta alteração. Esse problema do acervo permanece separado da aprovação das Guildas.
+- **Limites:** SkyMP padrão não fornece os recibos adicionais do journal. Homologação no fork oficial, adaptadores reais, dois clientes humanos, recuperação após queda e conferência dos mods/clientes continuam pendentes. [ADR-0022](../../03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md).
+
+## 2026-11-17, estante coletiva e auditoria do Arquimago (Melekyy / Codex)
+
+- **Pedido:** transformar o Bookcase indicado no Arcanaeum em baú coletivo dos Magos e acrescentar suas movimentações nos Registros do Arquimago.
+- **Implementação:** referência existente, estoque nativo único, acesso a todos os membros atuais e revogação imediata na expulsão; proximidade/instância e locks mantidos. Nome Baú Coletivo do Colégio confirmado no cliente carregado, sem criar/limpar/migrar pertences.
+- **Registros:** depósitos/retiradas confirmados após os hooks, com nome/ID do jogador, item/variante, quantidade, horário e antes/depois. Recusas e pedidos sem efeito não são registrados como movimentações. Exclusivo da liderança e sem reconstrução retroativa.
+- **Evidência:** três testes novos de auditoria e ensaio nativo isolado com três bots, duas transferências e dois registros corretos. Estoque compartilhado, reabertura, outsider e expulso verificados. Instalado no privado sem reinício, preservando estado e inventários; dois clientes humanos pendentes. [ADR-0021](../../03-decisoes/ADR-0021-bau-coletivo-do-colegio.md).
 
 ## 2026-11-15, preparação de integração SkyMP e escopo completo iniciados (Melekyy / Codex)
 

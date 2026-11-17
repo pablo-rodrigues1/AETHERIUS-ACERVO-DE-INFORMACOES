@@ -1,9 +1,9 @@
 ---
-titulo: Guildas de Magos, Alquimistas e Companions
+titulo: Guildas de Magos Alquimistas e Companions
 tipo: guia-staff
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-15
+atualizado: 2026-11-17
 tags: [staff, guildas]
 fonte_tecnica: [../../02-sistemas/guildas/README.md]
 relacionados: [../progresso.md]
@@ -13,79 +13,72 @@ relacionados: [../progresso.md]
 
 ## Resumo
 
-Melekyy está desenvolvendo as Guildas. As regras abaixo descrevem a implementação local; a liberação no servidor oficial ainda precisa ser confirmada.
+Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado e preparada para integração com SkyMP. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
 
-## Em uma frase
+## Quem pode fazer o quê
 
-Guildas são grupos de jogadores com líder, membros e funções próprias para Magos, Alquimistas e Companions.
+| Função | Permissões |
+|---|---|
+| Staff autorizada | Nomeia ou retira os líderes pelo sistema administrativo conectado |
+| Líder de cada guilda | Convida/remove membros, organiza cargos e nomeia/revoga funções |
+| Arquimago | Também controla todas as portas do Colégio, retira escola e altera o cronograma |
+| Professores dos Magos | Definem escola e atribuem quartos; abrem portas de quartos por perto |
+| Bibliotecários dos Magos | Abrem a Biblioteca e fabricam tomos na bancada |
+| Aluno/membro comum | Consulta seu painel, cronograma e informações permitidas; usa seu quarto e o baú coletivo |
 
-## Como funciona
+A entrada exige aceitar o convite. O membro não sai sozinho; o líder precisa removê-lo. Cargo com nome especial não dá poderes de gestão. Professor e bibliotecário dos Magos não acumulam um ao outro, liderança ou cargos extras. Cada professor ocupa uma escola; o vínculo pessoal de escola é separado.
 
-1. A Staff escolhe o líder por uma integração autorizada, que ainda precisa ser conectada ao painel oficial.
-2. O líder convida os jogadores. Cada convidado precisa aceitar para entrar.
-3. O líder organiza membros, cargos e funções. Criar um cargo com um nome especial não dá poderes de líder.
-   O membro não pode sair sozinho: precisa ser removido pelo líder. Essa remoção fica nos Registros com o nome e o ID de quem removeu e de quem foi removido.
-4. Nos Magos, o líder ou um professor define a escola do estudante. Há um professor por escola e podem existir vários bibliotecários. Somente o líder nomeia ou revoga cada um.
-5. Arquimago e bibliotecários nomeados abrem e fabricam pela **Biblioteca** da bancada. Professor ou membro comum sem essa autoridade não recebe o blip nem abre para consultar. O Arquimago não precisa acumular bibliotecário. Cada tomo exige 5 papéis e 1 pedra da alma.
-6. Cada tomo indica a classe e sua categoria, como Aprendiz ou Mestre. Quando disponível, mostra também o efeito base da magia. Esses textos ajudam na consulta; não dão acesso automático à magia nem mudam seus requisitos.
-7. A Biblioteca abre primeiro a escolha de classe. Ao clicar em uma classe, aparecem seus tomos. Use Todas as classes para voltar. Um tomo compartilhado pode aparecer em mais de uma classe.
-8. Os três painéis receberam o mesmo acabamento visual dos painéis de Grupo e Reis, mantendo suas cores: azul para Magos, verde musgo para Alquimistas e marrom escuro para Companions. Os botões e permissões continuam com as mesmas funções.
-9. A fabricação leva três segundos por lote e mostra o progresso. Espere perto da bancada. Fechar, cancelar, afastar-se ou perder a função interrompe sem gastar os materiais; a cobrança acontece quando os tomos são entregues.
-10. Os 104 tomos atuais aparecem com nome e descrição em português na Biblioteca. A pesquisa aceita o nome traduzido e o original. Essa tradução é do painel; o nome nativo do item no inventário continua vindo do plugin.
-11. Só a liderança acessa **Registros**. Nas novas ações, aparece quem fez, quem foi afetado e o que mudou, com nomes, IDs de perfil, data e hora. Nomeações informam a função; substituições identificam o ocupante anterior. Renomeações e mensagens mostram o antes e o depois. Excluir um cargo mostra de quais membros ele foi retirado.
-12. Líder e professores selecionam um membro e sua escola em **Professores**. A R21 ativa no privado entrega automaticamente a insígnia correspondente do Elemental Vision quando o inventário do jogador estiver disponível. A insígnia é pessoal: não pode ser descartada, guardada, dada, trocada ou roubada e permanece na morte/recuperação. A expulsão encerra o vínculo e retira a insígnia. O servidor privado confirmou a entrega e a gravação de uma unidade no personagem de teste; a conferência visual e a homologação no oficial continuam pendentes.
-13. Professor e bibliotecário dos Magos não podem ser a mesma pessoa. Na R23, também não acumulam cargos personalizados ou liderança. Professor ocupa um único posto de escola. O vínculo pessoal com a escola e sua insígnia são preservados. Retire os cargos extras antes de nomear; para atribuir outros cargos ou promover a líder, revogue a função primeiro. A regra também vale fora da interface.
-14. Na R25 privada, somente o Arquimago acessa **Y → Portas do Colégio**. Pode trancar/destrancar todas ou uma passagem, procurar pelo nome e filtrar por área. Trancar impede entrar e sair pelos dois lados, inclusive o próprio líder e os professores; é preciso destrancar para atravessar. Professores, bibliotecários e membros comuns não têm essa aba de controle geral.
-15. São 68 passagens mapeadas no privado, incluindo o portão da ponte. Portas originalmente desativadas continuam assim. Os Registros mostram quem alterou, quais passagens e o antes/depois. A instalação manteve as portas no estado anterior; não tranca tudo automaticamente. Teste de travessia humana e liberação no oficial ainda precisam ser confirmados.
+## Os três grupos
 
-## Exemplo prático
+- **Magos:** azul, liderados pelo Arquimago. Cinco professores, um por Alteração, Conjuração, Destruição, Ilusão e Restauração. Podem existir vários bibliotecários.
+- **Alquimistas:** verde musgo, liderados pelo Mestre Alquimista. Podem existir vários professores alquímicos; não há bibliotecário.
+- **Companions:** marrom escuro, liderados pelo Chefe Mercenário. Podem existir vários instrutores e um Forjador Mestre. A forja configurada é exclusiva do Forjador Mestre.
 
-### Quartos, escola e aulas na R25 privada
+## Escolas e insígnias
 
-- Nos aposentos do Arquimago, o **Baú do Arquimago** é exclusivo de quem ocupa o cargo: só essa pessoa abre, deposita e retira. Ao trocar a liderança, o acesso acompanha a função, com os itens mantidos no móvel. Ele é separado dos baús de alunos e não concede acesso aos professores. Depósito e reabertura foram conferidos no cliente privado.
-- Em **Y → Quartos**, professor ou Arquimago escolhe um dos dez quartos e um aluno. Cada aluno pode ter apenas um quarto. O aluno abre somente sua porta e precisa estar perto; professores e Arquimago também abrem por perto. A tranca geral do Arquimago bloqueia a passagem até ser desfeita.
-- O compartimento particular já existe no quarto: baú, estante ou armário, com nome do dono. Só o dono acessa seus pertences. A troca ou liberação pode acontecer sem esvaziar: os itens e septins ficam no mesmo móvel, acessíveis ao novo dono. O anterior perde acesso após a troca. Não acrescentar baús nos quartos sem um.
-- Em **Professores**, somente o Arquimago vê a opção de retirar uma escola. O membro continua na guilda; a insígnia do vínculo é retirada quando o inventário estiver disponível. Professor pode definir escola para quem está sem uma, mas não retirá-la.
-- Em **Visão geral**, o contador mostra quantos bibliotecários existem. A aba Cargos continua. O cartão **Cronograma de aulas** mostra escola, dia e horário a todos os membros. Só Arquimago preenche e usa **Adicionar aula** ou **Remover aula**; pode escolher dia da semana ou data. Os horários são de Brasília. Não há alarmes automáticos.
+Em **Y → Professores**, professor ou Arquimago seleciona um membro sem escola e define seu vínculo. Só é permitida uma escola por pessoa. Só Arquimago retira o vínculo; para mudar de escola, retire antes.
 
+O membro recebe a insígnia correspondente do Elemental Vision II quando seu inventário estiver disponível. Não pode descartar, guardar, dar, trocar ou deixar roubar. A insígnia permanece na morte. Retirada da escola ou expulsão encerra o vínculo e remove o item pelo sistema de inventário. Essas proteções precisam estar integradas ao sistema de morte do servidor oficial.
 
-Um Arquimago convida uma jogadora para os Magos. Depois que ela aceita, um professor define sua escola. Receber um cargo personalizado, como um título de estudo, não permite que ela convide ou expulse outros membros.
+## Biblioteca
 
-## Tabela rápida
+Só Arquimago e bibliotecários atuais veem a interação da bancada no Arcanaeum, abrem e fabricam. Professor e membro comum sem essa permissão não abrem nem para consultar. O Arquimago não precisa receber outro cargo.
 
-| Grupo | Liderança | Funções específicas |
-|---|---|---|
-| Magos | Arquimago | Professores das cinco escolas e vários bibliotecários |
-| Alquimistas | Mestre Alquimista | Professores alquímicos |
-| Companions | Chefe Mercenário | Instrutores e Forjador Mestre |
-| Fabricação de um tomo | Arquimago ou bibliotecário autorizado | 5 papéis e 1 pedra da alma |
+Primeiro escolha a classe; dentro dela aparecem os tomos autorizados. A base privada atual tem 104 tomos em 12 classes. Há busca, filtro de plugin e indicação de classe, categoria e efeito. Nomes/descrições estão em português no painel; o nome do item no inventário continua dependendo do plugin.
 
-## Perguntas comuns de jogadores
+Cada tomo custa **5 papéis e 1 pedra da alma**, vazia ou preenchida. Pedras menores são usadas primeiro. O lote leva **3 segundos**, com progresso e animação. Cancelar, fechar, afastar-se ou perder a função interrompe; os materiais só são cobrados ao concluir com entrega validada. Os tomos seguem a leitura normal do jogo.
 
-- **Já está disponível no servidor oficial?** Ainda depende da integração e dos testes no oficial.
-- **Posso me tornar líder pelo painel?** A escolha do líder cabe à Staff autorizada.
-- **Posso sair da guilda por conta própria?** Não. O líder precisa remover você. A ação fica registrada; uma tentativa recusada não conta como saída.
-- **Um cargo personalizado permite administrar a guilda?** Não. A administração pertence ao líder.
-- **Os livros em branco estão disponíveis?** O registro local atual informa que esse sistema foi guardado. Os tomos de magia continuam sendo uma função separada.
-- **A conjuração faz parte do painel?** Não. O controlador privado pertence ao SkySync. Os arquivos candidatos foram movidos para um projeto separado, e o pacote atual dos painéis não inclui seus scripts. A escola de Conjuração e seus tomos continuam no painel como conteúdo.
-- **O novo ocupante de um cargo recebe os bens do anterior?** Não. Os pertences pessoais são preservados para seu dono.
-- **Posso buscar a magia pela classe?** Sim. A busca da Biblioteca também reconhece o nome da classe e sua categoria.
-- **Por que algum número não aparece na descrição?** Alguns registros dos mods omitem alcance, percentual ou custo. O painel informa o que está disponível, sem inventar esses valores.
-- **Posso fabricar só por ser líder ou professor?** O Arquimago pode; professor sem autoridade de líder não pode. Bibliotecários nomeados também podem. Um título personalizado não concede acesso.
-- **Posso ser professor e bibliotecário ao mesmo tempo?** Não. O líder deve revogar a função anterior antes de nomear a outra.
-- **Posso ser professor/bibliotecário e receber outro cargo?** Não. Só pode manter a função e o vínculo com sua escola. Um cargo personalizado com nome de escola não é exceção. Para receber outros cargos, a função precisa ser revogada antes.
-- **Tranquei tudo e também fiquei sem passar. Isso é esperado?** Sim. Abra a aba Portas do Colégio e destranque a passagem ou todas. Não há liberação automática de saída para o operador.
-- **O que são os integrantes fictícios?** São cadastros de teste apenas no privado. A tag visual foi retirada por pedido do dev; a identificação interna permanece. Quatro foram acrescentados aos três anteriores, sem contas ou atores reais. Não anunciar esses cadastros como jogadores do oficial.
-- **O que significa o ID nos Registros?** É o identificador do perfil do jogador. O registro guarda os nomes no momento da ação, mesmo se o cargo for renomeado ou o membro sair depois.
-- **Por que um registro antigo não mostra a função ou o nome?** O histórico anterior não gravava todos esses detalhes. A atualização preserva os dados existentes e informa a limitação; as novas ações passam a guardar o detalhamento completo.
+## Quartos e portas
 
-## O que a Staff pode e não pode fazer
+São **dez quartos** nos alojamentos. Professor ou Arquimago escolhe um quarto e um membro em **Y → Quartos**. Cada membro pode ter um; o dono abre apenas sua porta e precisa estar perto. Professores e Arquimago também abrem portas dos quartos por proximidade. Alunos não abrem quartos dos outros.
 
-- Nomear ou remover líderes quando a autorização estiver conectada ao sistema oficial.
-- Encaminhar relatos sobre convites, funções, tomos e pertences para Melekyy.
-- Anunciar a disponibilidade aos jogadores depois da confirmação da implantação oficial.
-- Respeitar os pertences pessoais na troca de liderança e de funções.
+Somente Arquimago controla **Portas do Colégio**, uma por vez ou todas. A tranca vale para entrar e sair pelos dois lados, inclusive para ele e para os professores. Destranque antes de atravessar. São 68 passagens mapeadas; o controle não bloqueia comandos administrativos de teleporte.
 
-## Quer o detalhe técnico?
+Os quartos usam os móveis que já existem: baú, estante ou armário. Não acrescentar baús onde não há. O compartimento recebe o nome do dono; somente ele acessa seus pertences quando atribuído. Livre, a administração pode acessá-lo. Trocar ou liberar quarto é permitido mesmo cheio: **os itens e septins ficam no móvel para o novo dono**, e o anterior perde acesso após a troca. Não há devolução automática. Ex-membro ainda cadastrado como dono pode retirar, sem novos depósitos, até trocar/liberar.
 
-Veja [Guildas (SkyGuilds)](../../02-sistemas/guildas/README.md).
+## Baú do Arquimago e baú coletivo
+
+Nos aposentos, o **Baú do Arquimago** só permite abrir/depositar/retirar a quem ocupa o cargo. Ao trocar o líder, o sucessor acessa o mesmo conteúdo. Professores e bibliotecários não ganham acesso a esse baú.
+
+No Arcanaeum, a estante indicada é o **Baú Coletivo do Colégio**. Todos os membros atuais dos Magos usam o mesmo estoque: aluno, professor, bibliotecário e Arquimago. Externos e expulsos não acessam. É preciso estar perto e na mesma área.
+
+Em **Registros**, somente o Arquimago vê quem depositou ou retirou, com nome e ID, item, quantidade, horário e quantidade anterior/final no baú. O log confirma a movimentação pelo servidor; pedidos recusados ou sem transferência não viram depósito/retirada. Começa na ativação do log, sem recuperar movimentos antigos. Faz parte do limite de 100 registros recentes exibidos por guilda e 5.000 guardados no sistema.
+
+## Cronograma e registros de gestão
+
+O cronograma fica na **Visão geral**, no lugar do antigo cartão com nomes de bibliotecários. Só Arquimago adiciona/remove aula, escolhendo escola, dia da semana ou data e horário de Brasília. Membros consultam. Não há avisos automáticos. O contador mostra o total de bibliotecários; a aba Cargos permanece.
+
+Os registros de gestão são exclusivos do líder: nome e ID de quem agiu e de quem foi afetado, função/cargo/escola/quarto, substituições e antes/depois quando aplicável. A remoção de um membro é registrada. Os nomes históricos não desaparecem quando a pessoa é renomeada ou removida.
+
+## Perguntas comuns
+
+- **Livros em branco estão disponíveis?** Não. O sistema autoral/editor foi guardado; esta entrega mantém os tomos de magia.
+- **Conjuração faz parte de Guildas?** Não. Tem projeto/runtime próprios e não é instalada pelo pacote de Guildas.
+- **Já foi homologado no oficial?** Não. Testes automatizados, bots nativos e um cliente privado dão evidências diferentes de dois jogadores reais no servidor de destino.
+- **Pode instalar em qualquer SkyMP sem conferir nada?** Não. O dev precisa conectar inventário, morte, Staff e Classes e conferir mods/ordem. O instalador recusa a versão completa quando faltam recursos.
+
+## Referências técnicas
+
+- [Escopo completo](../../02-sistemas/guildas/escopo.md)
+- [Instalação e checklist multiplayer](../../02-sistemas/guildas/integracao-skymp.md)
+- [Validação e pendências](../../02-sistemas/guildas/validacao-skymp.md)

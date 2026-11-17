@@ -3,7 +3,7 @@ titulo: Changelog
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-15
+atualizado: 2026-11-17
 tags: [changelog]
 relacionados: []
 ---
@@ -15,6 +15,7 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 
 ## [Não lançado]
 ### Adicionado
+- Guildas R28: preparação SkyMP com bootstrap verificável, configuração portátil, correções de sincronização e pacote local testado. Escopo completo, guia de integração/rollback e matriz de evidências publicados em Markdown. Estante coletiva para membros atuais dos Magos e log confirmado de depósitos/retiradas exclusivo do Arquimago, instalados sem reinício. Oficial/dois clientes humanos pendentes. [Escopo](../02-sistemas/guildas/escopo.md), [ADR-0021](../03-decisoes/ADR-0021-bau-coletivo-do-colegio.md), [ADR-0022](../03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md).
 - Física de cabelos e capas (kdu): 910 cabelos com mechas por região e 6 capas do Cloaks and Capes balançando via FSMP 4.1.1, com barreiras contra o corpo e a armadura; ossos e física gerados por ferramenta própria, sem arquivos de física de terceiros. Dois mods sem plugin; em teste. [Sistema](../02-sistemas/fisica-de-cabelos-e-capas/README.md).
 - Guildas: Baú do Arquimago exclusivo do cargo, nome nativo persistente e conteúdo preservado. Depósito, fechar/reabrir e retirada de um septim pelo cliente real confirmados, sem reinício. 136 testes e rechecagens aprovados; oficial pendente. [Decisão](../03-decisoes/ADR-0018-bau-exclusivo-do-arquimago.md).
 - Guildas R26/R27: retirada a tag visual de fictício, quatro cadastros comuns privados acrescentados e interferência de instância antiga corrigida na abertura dos quartos. Abertura confirmada pelo dev; 135 testes aprovados. Relato posterior de persistência dos itens segue em investigação. [Decisão](../03-decisoes/ADR-0017-identificacao-interna-dos-membros-de-teste.md), [diário](../02-sistemas/guildas/diario.md).

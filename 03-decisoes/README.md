@@ -30,3 +30,6 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 - [ADR-0019-sobrenatural-origem-e-tempos.md](ADR-0019-sobrenatural-origem-e-tempos.md) — autoria conservadora e duração/recarga dos poderes, 16/11.
 
 - [ADR-0020](ADR-0020-sobrenatural-transformacao-forcada.md) — 72 h reais online, noite e sequência da transformação forçada (16/11).
+
+- [ADR-0021](ADR-0021-bau-coletivo-do-colegio.md) — Baú coletivo do Colégio e seus registros, aceito em 17/11/2026.
+- [ADR-0022](ADR-0022-preparacao-skymp-das-guildas.md) — Preparação verificável das Guildas para SkyMP, aceito em 17/11/2026.
