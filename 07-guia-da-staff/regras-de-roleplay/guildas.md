@@ -13,9 +13,9 @@ relacionados: [../progresso.md]
 
 ## Resumo
 
-Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado e preparada para integração com SkyMP. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
+Melekyy desenvolve os três grupos. A R30 está instalada no ambiente privado, com gestão de quartos retirada e portas do Arquimago preservadas. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
 
-**Estado privado em 17/11:** o dev voltou a relatar painel e porta sem abrir. A retirada do diagnóstico antigo que gerava erro periódico foi instalada com o cliente fechado; a confirmação da abertura é do dev. Ele fará os testes no Skyrim; não há nova confirmação de funcionamento. A regra dos quartos agora bloqueia depósito de septins. Aprovações anteriores não certificam o relato atual nem o servidor oficial.
+**R30 privada em 17/11:** gestão de quartos retirada. O Arquimago mantém trancar/destrancar portas do Colégio, conforme esclarecimento do dev. Baú físico do cargo reposicionado e coletivo preservado, sem perder conteúdos. Os testes no Skyrim são feitos pelo próprio dev; não há novo aceite visual.
 
 ## Quem pode fazer o quê
 
@@ -24,9 +24,9 @@ Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado 
 | Staff autorizada | Nomeia ou retira os líderes pelo sistema administrativo conectado |
 | Líder de cada guilda | Convida/remove membros, organiza cargos e nomeia/revoga funções |
 | Arquimago | Também controla todas as portas do Colégio, retira escola e altera o cronograma |
-| Professores dos Magos | Definem escola e atribuem quartos; abrem portas de quartos por perto |
+| Professores dos Magos | Definem escola de membros sem vínculo; não gerenciam quartos |
 | Bibliotecários dos Magos | Abrem a Biblioteca e fabricam tomos na bancada |
-| Aluno/membro comum | Consulta seu painel, cronograma e informações permitidas; usa seu quarto e o baú coletivo |
+| Aluno/membro comum | Consulta seu painel, cronograma e informações permitidas; usa o baú coletivo |
 
 O Arquimago convida pelo **ID do jogador** no campo de Membros. A entrada exige aceitar o convite. O membro não sai sozinho; o líder precisa removê-lo. Cargo com nome especial não dá poderes de gestão. Professor e bibliotecário dos Magos não acumulam um ao outro, liderança ou cargos extras. Cada professor ocupa uma escola; o vínculo pessoal de escola é separado.
 
@@ -50,17 +50,16 @@ Primeiro escolha a classe; dentro dela aparecem os tomos autorizados. A base pri
 
 Cada tomo custa **5 papéis e 1 pedra da alma**, vazia ou preenchida. Pedras menores são usadas primeiro. O lote leva **3 segundos**, com progresso e animação. Cancelar, fechar, afastar-se ou perder a função interrompe; os materiais só são cobrados ao concluir com entrega validada. Os tomos seguem a leitura normal do jogo.
 
-## Quartos e portas
+## Portas do Colégio
 
-São **dez quartos** nos alojamentos. Professor ou Arquimago escolhe um quarto e um membro em **Y → Quartos**. Cada membro pode ter um; o dono abre apenas sua porta e precisa estar perto. Professores e Arquimago também abrem portas dos quartos por proximidade. Alunos não abrem quartos dos outros.
+Somente o **Arquimago** mantém a aba de trancar/destrancar portas, uma por vez ou todas. A tranca vale dos dois lados, inclusive para ele. São 68 passagens; professores, bibliotecários e alunos não controlam as trancas gerais.
 
-Somente Arquimago controla **Portas do Colégio**, uma por vez ou todas. A tranca vale para entrar e sair pelos dois lados, inclusive para ele e para os professores. Destranque antes de atravessar. São 68 passagens mapeadas; o controle não bloqueia comandos administrativos de teleporte.
+**O sistema de quartos foi retirado.** Não há aba Quartos, atribuição de aluno, professor administrando quartos nem baú particular por quarto. Não existe mais a restrição de septins dos quartos. Os móveis e seus conteúdos foram preservados e voltam às regras normais do jogo, respeitando as trancas gerais do Arquimago.
 
-Os quartos usam os móveis que já existem: baú, estante ou armário. Não acrescentar baús onde não há. O compartimento recebe o nome do dono; somente ele acessa seus pertences quando atribuído. Livre, a administração pode acessá-lo. **Não pode depositar septins nos quartos**, qualquer que seja o cargo. Itens comuns podem ser guardados. Moedas que já estavam lá são preservadas e podem ser retiradas por quem tem acesso. O baú coletivo e o Baú do Arquimago mantêm suas regras. Trocar ou liberar quarto é permitido mesmo cheio: **todo o conteúdo existente fica no móvel para o novo dono**, e o anterior perde acesso após a troca. Não há devolução automática. Ex-membro ainda cadastrado como dono pode retirar, sem novos depósitos, até trocar/liberar.
 
 ## Baú do Arquimago e baú coletivo
 
-Nos aposentos, o **Baú do Arquimago** só permite abrir/depositar/retirar a quem ocupa o cargo. Ao trocar o líder, o sucessor acessa o mesmo conteúdo. Professores e bibliotecários não ganham acesso a esse baú.
+Na lateral dos aposentos, o **Baú do Arquimago**, um baú físico reposicionado com seus pertences preservados, só permite abrir/depositar/retirar a quem ocupa o cargo. Ao trocar o líder, o sucessor acessa o mesmo conteúdo. Professores e bibliotecários não ganham acesso a esse baú.
 
 No Arcanaeum, a estante indicada é o **Baú Coletivo do Colégio**. Todos os membros atuais dos Magos usam o mesmo estoque: aluno, professor, bibliotecário e Arquimago. Externos e expulsos não acessam. É preciso estar perto e na mesma área.
 

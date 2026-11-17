@@ -14,6 +14,16 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-17, R30 sem gestão de quartos e com portas do Arquimago (Melekyy / Codex)
+
+- **Pedido final:** retirar quartos/baús por aluno e suas abas; o dev esclareceu que o Arquimago mantém trancar/destrancar portas. Preservar baú exclusivo e comunitário e reposicionar o do Arquimago na própria sala.
+- **Retirado:** StudentRooms, fontes/timers de nomes, configuração e testes antigos de quartos; comandos de atribuir/liberar, permissão/modelo/aba e vinculação dos baús de alunos. Limpeza de compatibilidade remove tags/nomes antigos sem criar novos controles de acesso. Código histórico guardado localmente.
+- **Preservado:** controle geral das 68 passagens e trancas anteriores exclusivo do Arquimago; demais funções, filiação/escolas/insígnias, fabricação/Biblioteca, cronograma, registros, coletivo e sistemas separados. Três referências de portas indisponíveis foram mantidas desativadas. [ADR-0025](../../03-decisoes/ADR-0025-retirada-dos-quartos-e-preservacao-das-portas.md).
+- **Baú:** mesma referência física CONT do cargo, reposicionada na lateral dos aposentos pelo SetPosition do SkyMP, com reaplicação de nome/posição no carregamento do cliente. Mesmo estoque, sem criação ou transferência. Coletivo e seus logs preservados.
+- **Instalação:** R30 aplicada no servidor privado sem reiniciá-lo ou sobrescrever bundle carregado. Durante a retirada foi necessário retomar o registro do módulo e usar a API Papyrus de posição própria para referências estáticas; o bootstrap privado original foi preservado. Após o esclarecimento, controle global e sua política anterior foram restaurados. Fonte instalado conferido; 18 inventários e cadastro de membros/cargos/escolas preservados.
+- **Validação:** 125 testes locais sem navegador aprovados, zero falhas/pulos; inclui autorização de portas, Biblioteca, cargos, escolas e baús. Nenhum novo teste no Skyrim pelo agente; dev fará abertura, navegação, travessia e conferência visual da nova posição. Não declarar esses testes humanos feitos.
+- **Limites:** ZIPs anteriores não incluem esta revisão. Não criar nova publicação de código/ZIP por inferência. Integração oficial, adaptadores reais e dois clientes humanos permanecem pendentes.
+
 ## 2026-11-17, quartos sem depósito de septins e testes em jogo pelo dev (Melekyy / Codex)
 
 - **Correção de regra:** ao responder ao teste do quarto, o dev determinou que não deve ser possível depositar septins. Aplicado aos dez compartimentos de quartos, sem estender a restrição a outros baús. Itens comuns permitidos; moedas existentes preservadas e retiradas autorizadas mantidas. [ADR-0024](../../03-decisoes/ADR-0024-quartos-sem-deposito-de-septins.md).

@@ -104,10 +104,10 @@ Guildas não cria outro painel administrativo. O handler revalida conexão, perf
 2. Professor/bibliotecário não acumulam funções; membro/professor sem permissão não recebe o blip da Biblioteca. Líder e bibliotecários fabricam; materiais entram/saem corretamente, inclusive dois fabricando simultaneamente e cancelamentos.
 3. Cada escola entrega uma insígnia; bloquear transferência/descarte/roubo e preservar após morte/reconexão. Retirar escola como Arquimago e expulsar remove o vínculo/item.
 4. Dois clientes veem a animação; diferença de relógio, troca de área e perda de função não liberam entrega duplicada. Verificar mouse, seletores, Esc e movimentação após fechar.
-5. Atribuir cada um dos dez quartos; dono/faculdade abrem porta só perto; outro aluno é bloqueado. Conferir baú/estante/armário, variantes e septins. Trocar quarto cheio mantém conteúdo para o novo dono.
+5. Confirmar ausência da aba/atribuições de quartos e que pedidos antigos são recusados. Conferir conteúdo dos móveis existentes; a retirada da gestão não apaga inventários.
 6. Trancar individual/em lote: tentar ambos os lados das portas, inclusive Arquimago; destrancar e atravessar. Verificar streaming e reconexão.
 7. Baú do Arquimago bloqueia demais funções e acompanha sucessão com conteúdo. Dois membros alternam depósito/retirada no coletivo e veem o mesmo estoque. Expulsão bloqueia na hora; Arquimago vê logs exatos e membro comum não.
-8. Reiniciar homologação com mundo e JSON persistidos; conferir funções, quartos, trancas, cronograma, auditoria e inventários. Testar recuperação do journal conforme seu contrato; testar inventário cheio, servidor indisponível e desconexão durante fabricação.
+8. Reiniciar homologação com mundo e JSON persistidos; conferir funções, trancas, cronograma, auditoria e inventários. Testar recuperação do journal conforme seu contrato; testar inventário cheio, servidor indisponível e desconexão durante fabricação.
 
 ## Rollback
 

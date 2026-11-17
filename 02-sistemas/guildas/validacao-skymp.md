@@ -12,7 +12,15 @@ relacionados: [README.md, diario.md]
 
 Revisão: 17/11/2026. Responsável: Melekyy.
 
-## Atualização posterior: regra de quartos e relato do dev
+## Revisão atual R30 — quartos retirados, portas mantidas
+
+125 testes locais sem navegador aprovados, zero falhas/pulos. Comandos antigos de quartos recusados para os quatro perfis; dados/configurações antigas não reinstalam StudentRooms. Controle geral de portas permanece exclusivo do Arquimago. Insígnias, escolas, cargos, cronograma, Biblioteca, receita e ambos os baús continuam cobertos pelos testes locais.
+
+Instalação privada conferiu os fontes ativos, bootstrap privado original, 18 inventários e cadastro de membros/escolas preservados. Mesmo baú CONT do Arquimago reposicionado no servidor, com reaplicação no carregamento do cliente. Conteúdo do coletivo e antigos móveis preservado. Fontes antigas de quartos foram arquivadas e não são carregadas.
+
+**Testes no Skyrim são do dev:** não houve abertura automática de painel, depósito, travessia ou confirmação visual do novo local pelo agente. Nenhum teste anterior de quarto é aceitação da revisão atual; gestão de quartos deixou de existir. Global de portas, baú do Arquimago e comunitário continuam ativos. Não há ZIP novo desta revisão, nem homologação oficial/dois humanos.
+
+## Histórico — atualização posterior: regra de quartos e relato do dev
 
 O dev rejeitou depósito de septins nos quartos e voltou a relatar painel/porta bloqueados. A regra de depósito foi corrigida no servidor e passou nos seis testes unitários de quartos, sem executar o Skyrim. Retirada do diagnóstico antigo do cliente instalada com jogo fechado. Testes no jogo serão feitos pelo próprio dev; não há nova aceitação de painel/porta. Conteúdo e cadastro originais do quarto temporário preservados/restaurados. Ensaios nativos anteriores de depósito de septins são evidência histórica da regra antiga, não aprovação da regra atual. ZIP R29 anterior não inclui esta mudança posterior.
 

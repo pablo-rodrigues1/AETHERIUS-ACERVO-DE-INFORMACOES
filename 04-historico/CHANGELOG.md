@@ -10,6 +10,10 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-17 — Guildas R30 sem gestão de quartos
+
+Quartos e baús particulares de alunos retirados; controle geral das portas do Arquimago mantido conforme esclarecimento do dev. Baú físico do cargo reposicionado com mesmo conteúdo e coletivo preservado. 125 testes locais aprovados; testes no Skyrim ficam com o dev. [ADR-0025](../03-decisoes/ADR-0025-retirada-dos-quartos-e-preservacao-das-portas.md).
+
 ## 2026-11-17 — Quartos dos Magos sem depósito de septins
 
 Guarda instalada no servidor, com itens e moedas existentes preservados. Diagnóstico antigo do cliente removido com jogo fechado. Dev voltou a relatar painel/porta bloqueados e fará os testes no Skyrim; não declarar recuperação completa. [ADR-0024](../03-decisoes/ADR-0024-quartos-sem-deposito-de-septins.md).
