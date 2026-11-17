@@ -14,6 +14,15 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-17, quartos sem depósito de septins e testes em jogo pelo dev (Melekyy / Codex)
+
+- **Correção de regra:** ao responder ao teste do quarto, o dev determinou que não deve ser possível depositar septins. Aplicado aos dez compartimentos de quartos, sem estender a restrição a outros baús. Itens comuns permitidos; moedas existentes preservadas e retiradas autorizadas mantidas. [ADR-0024](../../03-decisoes/ADR-0024-quartos-sem-deposito-de-septins.md).
+- **Instalação:** guarda do servidor recebe o ID real do item em onPutItem. Fonte atualizada e instância ativa corrigida sem reinício; os hooks antigos que omitiam argumentos receberam encaminhamento externo restrito. Estado/inventários e sete arquivos protegidos preservados. Seis testes unitários de quartos aprovados; nenhum novo ensaio nativo/in-game desta regra executado.
+- **Relato atual:** dev informou que não conseguia abrir painel nem porta. A observação anterior de Guildas/Casas abertas não encerra esse novo relato. Retirado somente o diagnóstico antigo anexado ao bundle, com jogo fechado, backup, CRC/caminhos e oito arquivos protegidos preservados. Não alterado o renderer funcional nem o controlador de conjuração.
+- **Quarto temporário:** cadastro e localização do teste anterior restaurados antes de a nova sessão ficar ativa, sem enviar comandos de interface. Inventário do personagem e todos os conteúdos atuais do móvel preservados; não apagar conteúdos que apareceram após a ativação do compartimento. Nenhum depósito manual foi certificado.
+- **Preferência explícita:** após autorizar inicialmente a retomada do mouse/teclado, o dev definiu “OS TESTES EU MESMO FAÇO”. Nenhum novo controle, abertura de menus, simulação de depósito ou lançamento do jogo pelo agente após essa instrução. Testes no Skyrim ficam com o dev.
+- **Pendente:** dev confirmar abertura, navegação, portas, acesso por função e persistência de itens comuns. Oficial/dois clientes continuam não homologados. ZIP R29 anterior é histórico e não inclui esta alteração posterior; não tratá-lo como pacote dessa correção.
+
 ## 2026-11-17, provas da R29 e pendências de retomada do cliente (Melekyy / Codex)
 
 - **Verificado:** os 19 testes HTML passaram, incluindo modelos reais de permissão para Arquimago, professor, bibliotecário e membro, rótulo/envio de convite por ID, ausência de saída voluntária, escolas, cronograma, gestão, registros e bancada. Nenhuma ação sem poder é liberada por exibir um painel antigo.

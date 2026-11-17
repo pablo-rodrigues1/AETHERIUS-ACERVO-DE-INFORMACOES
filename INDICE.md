@@ -90,6 +90,7 @@
 - `03-decisoes/ADR-0015-seletores-e-bancada-do-lider.md` — Listas de opções estáveis para todos os seletores e fabricação de tomos autorizada ao líder sem acumular funções.
 
 - `03-decisoes/ADR-0021-bau-coletivo-do-colegio.md` — Estante coletiva dos Magos e logs confirmados exclusivos do Arquimago.
+- `03-decisoes/ADR-0024-quartos-sem-deposito-de-septins.md` — Bloqueio de novos depósitos de moedas nos quartos, com estoque preservado.
 - `03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md` — Guarda de streaming, aposentadoria de callbacks antigos e validação por função.
 
 - `03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md` — Bootstrap verificável, pacote ativo restrito e preparação de homologação SkyMP.

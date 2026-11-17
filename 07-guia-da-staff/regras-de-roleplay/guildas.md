@@ -15,7 +15,7 @@ relacionados: [../progresso.md]
 
 Melekyy desenvolve os três grupos. A R28 está funcionando no ambiente privado e preparada para integração com SkyMP. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
 
-**Recuperação privada em 17/11:** Guildas e Casas voltaram a abrir no cliente observado após corrigir a verificação de plugins e o transporte de propriedades. A R29 elimina interferência de callbacks antigos das Guildas. Grupo e depósito manual no baú do quarto ainda estão em conferência. As permissões dos quatro perfis passaram nos testes nativos; isso não substitui a homologação oficial com dois jogadores reais.
+**Estado privado em 17/11:** o dev voltou a relatar painel e porta sem abrir. A retirada do diagnóstico antigo que gerava erro periódico foi instalada com o cliente fechado; a confirmação da abertura é do dev. Ele fará os testes no Skyrim; não há nova confirmação de funcionamento. A regra dos quartos agora bloqueia depósito de septins. Aprovações anteriores não certificam o relato atual nem o servidor oficial.
 
 ## Quem pode fazer o quê
 
@@ -56,7 +56,7 @@ São **dez quartos** nos alojamentos. Professor ou Arquimago escolhe um quarto e
 
 Somente Arquimago controla **Portas do Colégio**, uma por vez ou todas. A tranca vale para entrar e sair pelos dois lados, inclusive para ele e para os professores. Destranque antes de atravessar. São 68 passagens mapeadas; o controle não bloqueia comandos administrativos de teleporte.
 
-Os quartos usam os móveis que já existem: baú, estante ou armário. Não acrescentar baús onde não há. O compartimento recebe o nome do dono; somente ele acessa seus pertences quando atribuído. Livre, a administração pode acessá-lo. Trocar ou liberar quarto é permitido mesmo cheio: **os itens e septins ficam no móvel para o novo dono**, e o anterior perde acesso após a troca. Não há devolução automática. Ex-membro ainda cadastrado como dono pode retirar, sem novos depósitos, até trocar/liberar.
+Os quartos usam os móveis que já existem: baú, estante ou armário. Não acrescentar baús onde não há. O compartimento recebe o nome do dono; somente ele acessa seus pertences quando atribuído. Livre, a administração pode acessá-lo. **Não pode depositar septins nos quartos**, qualquer que seja o cargo. Itens comuns podem ser guardados. Moedas que já estavam lá são preservadas e podem ser retiradas por quem tem acesso. O baú coletivo e o Baú do Arquimago mantêm suas regras. Trocar ou liberar quarto é permitido mesmo cheio: **todo o conteúdo existente fica no móvel para o novo dono**, e o anterior perde acesso após a troca. Não há devolução automática. Ex-membro ainda cadastrado como dono pode retirar, sem novos depósitos, até trocar/liberar.
 
 ## Baú do Arquimago e baú coletivo
 

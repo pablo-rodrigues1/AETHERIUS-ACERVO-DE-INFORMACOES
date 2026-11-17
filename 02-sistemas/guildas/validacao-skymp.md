@@ -12,6 +12,10 @@ relacionados: [README.md, diario.md]
 
 Revisão: 17/11/2026. Responsável: Melekyy.
 
+## Atualização posterior: regra de quartos e relato do dev
+
+O dev rejeitou depósito de septins nos quartos e voltou a relatar painel/porta bloqueados. A regra de depósito foi corrigida no servidor e passou nos seis testes unitários de quartos, sem executar o Skyrim. Retirada do diagnóstico antigo do cliente instalada com jogo fechado. Testes no jogo serão feitos pelo próprio dev; não há nova aceitação de painel/porta. Conteúdo e cadastro originais do quarto temporário preservados/restaurados. Ensaios nativos anteriores de depósito de septins são evidência histórica da regra antiga, não aprovação da regra atual. ZIP R29 anterior não inclui esta mudança posterior.
+
 ## Recuperação R29 em conferência
 
 Guildas e Casas foram observados abertos no cliente real após carga fria. O cliente confirmou R29, com modelos de dono e entradas dos sistemas carregados. Lista de plugins e guarda de propriedade fora do streaming instaladas com o jogo fechado; dez callbacks antigos de Guildas aposentados. Convite apresentado por ID, com identidade pública conferida nesta instalação. Não houve alteração do controlador de conjuração.

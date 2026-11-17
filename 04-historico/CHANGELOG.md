@@ -10,6 +10,10 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-17 — Quartos dos Magos sem depósito de septins
+
+Guarda instalada no servidor, com itens e moedas existentes preservados. Diagnóstico antigo do cliente removido com jogo fechado. Dev voltou a relatar painel/porta bloqueados e fará os testes no Skyrim; não declarar recuperação completa. [ADR-0024](../03-decisoes/ADR-0024-quartos-sem-deposito-de-septins.md).
+
 ## 2026-11-17 — Recuperação privada de Guildas R29 em conferência
 
 Correção do transporte para modelos fora do streaming e aposentadoria de callbacks legados de Guildas. Guildas e Casas observados abertos; testes nativos aprovam quatro perfis e dez quartos. Convites apresentados por ID. Grupo/depósito manual e limpeza do diagnóstico antigo seguem em reteste; oficial/dois humanos pendentes. [Diário](../02-sistemas/guildas/diario.md).
