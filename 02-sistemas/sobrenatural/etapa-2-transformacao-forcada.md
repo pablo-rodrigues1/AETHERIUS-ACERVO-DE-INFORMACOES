@@ -1,12 +1,4 @@
----
-titulo: Transformação forçada do lobisomem
-tipo: referencia
-status: rascunho
-responsaveis: [pablo-rodrigues1, kdu]
-atualizado: 2026-11-16
-tags: [sobrenatural, lobisomem, servidor, testes]
-relacionados: [README.md, diario.md]
----
+> **Atualização posterior à revisão Terra 3 (16/11):** o stamp dinâmico não é prova de durabilidade. O candidato agora usa `aetherius-werewolf.json.transforms.json`, com intenção antes da raça e confirmação após readback; o contador consulta esse diário. Crash ambíguo entre intenção e confirmação recebe um reset conservador uma vez, mesmo se a raça não tiver chegado ao cliente. Reached vanilla é aceito apenas na sessão autorizada com UUID/seq e janela temporal. Detalhes, testes e limites em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\REVISAO-3_CORRECOES_sol.md`. **Confirmação independente Terra e jogo pendentes.**
 
 # Etapa 2 — transformação forçada do lobisomem
 
@@ -53,7 +45,7 @@ Todos os caminhos desta seção são relativos a `C:\Code\Aetherius - Servidor L
 
 Escrita via arquivo temporário e rename no mesmo diretório; checkpoint padrão a cada 30 s, e flush antes de iniciar aviso, na desconexão observada, reset e dispose. Até um intervalo de checkpoint pode ser perdido numa queda abrupta; desconexões são amostradas em até 250 ms. Reinício nunca usa timestamps absolutos para cobrar o intervalo offline. O `dispose` não inventa o intervalo depois do último tick. Os registros têm dados de personagem no runtime e **não** são enviados ao Git/acervo.
 
-`aetheriusBeastTransformStamp` contém `{grantId, stamp}` e é invisível ao cliente. Só é gravado após readback da raça de fera. Qualquer transformação real (voluntária ou forçada, inclusive de dia) notifica o contador; entrar em `turning`, falhar `mp.set(appearance)`, morrer ou cancelar não zeram horas. Se o arquivo de horas ficou atrasado em uma queda, o stamp durável da concessão permite reparar o reset no próximo vínculo. Não adota stamp de outra concessão. Este é o readback autoritativo do host; não afirma confirmação visual do motor em todos os clientes.
+`aetheriusBeastTransformStamp` contém `{grantId, stamp}` e é invisível ao cliente. Só é gravado após readback da raça de fera. Qualquer transformação real (voluntária ou forçada, inclusive de dia) notifica o contador; entrar em `turning`, falhar `mp.set(appearance)`, morrer ou cancelar não zeram horas. Se o arquivo de horas ficou atrasado em uma queda, a confirmação no diário independente permite reparar o reset no próximo vínculo. A propriedade dinâmica sozinha não comprova durabilidade; a atualização da revisão 3 acima substitui essa afirmação da versão inicial. Não adota stamp de outra concessão. Este é o readback autoritativo do host; não afirma confirmação visual do motor em todos os clientes.
 
 Falha de disco impede iniciar um aviso novo; o contador em memória permanece para retry. JSON corrompido aborta instalação, sem substituir silenciosamente o histórico. Remoção da maldição descarta o contador quando observada; nova concessão recebe `grantId` novo e começa em zero, mesmo se restou uma linha antiga no arquivo. As keywords permanecem exclusivamente no servidor.
 
@@ -129,6 +121,3 @@ Cobertura: limites noite/dia e autoridade real indisponível/pronta; tempo offli
 ## Revisão
 
 Autor: Sol High. Achados do autor tratados neste lote: fontes prévias ignoradas não versionadas; filtro kdu com duração finita; perda de maldição durante turning; troca de personagem durante turning. Esses achados não substituem revisão cruzada. Revisão independente por Terra/Luna e consolidação do Opus **pendentes**, conforme fluxo do projeto; registrar depois quem revisou, findings, tratamento e commit final. Testes em jogo foram explicitamente excluídos deste despacho.
-
-
-Entrega no git raiz do laboratório: `856232aa0cc7474a50017e3382a86fe2d5c7f6aa`. Revisão independente ainda pendente.

@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — revisão 3 e decisões
+- **Feito:** revisão do Terra High rejeitou origem/Bruxa/forçada com 5 achados (revisao-3-origem-bruxa-forcada-terra.md); Sol High corrigiu (revisao-3-correcoes-sol.md; 180 testes). Decisões do dev: Sedução e Reanimação sem custo de sangue; na remoção da maldição, remover tudo o que o Sobrenatural concedeu (limitação: magia ganha por outra fonte depois da concessão pode sair junto).
+- **Próximo:** confirmação do Terra High; Sol High segue a Reserva de Sangue.
+- **Bloqueios:** nenhum; sem testes em jogo nesta sessão.
+
 ## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — encerramento da sessão
 - **Feito:** correção por origem de magias/perks, Bruxa ligada ao serviço e poderes do vampiro (Sol High, commit local 79098ad); Reserva de Sangue parcial (Terra High); decisões do dev sobre a Reserva de Sangue e a transformação forçada do lobisomem. Estado completo e próximos passos em retomada.md.
 - **Próximo:** transformação forçada (Sol High), restante da Reserva de Sangue (Terra High), revisões cruzadas e rodada de testes em jogo.
