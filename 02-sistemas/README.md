@@ -22,7 +22,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
 | [Sobrenatural (Maldições)](sobrenatural/README.md) | em-desenvolvimento | pablo-rodrigues1, kdu | origem/Bruxaria/poderes e transformação forçada 72 h online no laboratório; revisão e jogo pendentes | 2026-11-16 |
 | [Lobisomem sincronizado](lobisomem/README.md) | em-teste | kdu | pacote separado (patches sobre aetherius-server v0.38) | 2026-11-14 |
-| [Olhar sincronizado](olhar-sincronizado/README.md) | em-teste | kdu | kit de teste local (gamemode/olhar-service.js) | 2026-11-14 |
+| [Olhar sincronizado](olhar-sincronizado/README.md) | em-teste | kdu | kit de teste local (gamemode/olhar-service.js) | 2026-11-17 |
 | [Ocarina (só música)](ocarina/README.md) | em-teste | kdu | pacote separado (mod + patch sobre aetherius-server v0.38) | 2026-11-14 |
 | [Túnica do Herói](tunica-do-heroi/README.md) | em-teste | kdu | pacote separado (mod com plugin próprio) | 2026-11-14 |
 | [Física de cabelos e capas](fisica-de-cabelos-e-capas/README.md) | em-teste | kdu | pacote separado (dois mods sem plugin) | 2026-11-15 |

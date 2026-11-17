@@ -55,7 +55,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | Sistema | Status | Próximo passo | Atualizado |
 |---|---|---|---|
 | Lobisomem sincronizado | 🟢 | Visto em jogo, com grito, coração e tela vermelha; falta teste com 2 jogadores e aplicar no oficial | 14/11/2026 |
-| [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: todo mundo vê para onde cada um olha (câmera, pessoas e até o vazio), sem encarar quem chega perto; falta teste com 2 jogadores | 14/11/2026 |
+| [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: todo mundo vê para onde cada um olha (câmera, pessoas e até o vazio), sem encarar quem chega perto. Corrigido em 17/11: o boneco girava o corpo inteiro em vez de só a cabeça. Falta teste com 2 jogadores | 17/11/2026 |
 | [Ocarina (só música)](../02-sistemas/ocarina/README.md) | 🟡 | Item novo: tocar notas e músicas da Zelda, sem poderes; falta testar em jogo | 14/11/2026 |
 | [Túnica do Herói](../02-sistemas/tunica-do-heroi/README.md) | 🟡 | Roupas para o alfaiate, gorro mostrando o cabelo; falta testar e colar as receitas | 14/11/2026 |
 | [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. A YuYu viu em jogo: física boa; trança entrando no peitoral já ajustada. Falta ver a versão com mechas | 15/11/2026 |

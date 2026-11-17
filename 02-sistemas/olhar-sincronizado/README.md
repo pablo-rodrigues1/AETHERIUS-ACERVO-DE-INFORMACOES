@@ -37,7 +37,7 @@ sequenceDiagram
   S->>S: confere (online, números válidos, no máximo 1 a cada 100 ms)
   S->>B: propriedade aetheriusOlhar = { s, p }
   B->>B: move um marcador invisível (XMarker) para o ponto e faz o boneco de A olhar para ele
-  B->>B: ponto atrás do corpo (mais de 110°) ou sem ponto: desliga o head tracking do boneco de A
+  B->>B: ponto fora do alcance do pescoço (mais de 75°) ou sem ponto: desliga o head tracking do boneco de A
 ```
 
 - Ponto da câmera: o PC projeta na tela pontos numa esfera de 800 unidades em volta da cabeça (busca grossa de 10° e fina de 2°) e fica com o que cai no centro.
@@ -52,7 +52,7 @@ sequenceDiagram
 | `OLHAR_SINCRONIZADO` | ligado (padrão) / `false` | desliga o sistema inteiro |
 | Distância do ponto da câmera | 800 unidades da cabeça | |
 | Pessoa no centro | até 2000 unidades, raio 0,06 da tela | vence o ponto da câmera |
-| Limite do pescoço | 110° da frente do corpo | além disso olha para a frente |
+| Limite do pescoço | 75° da frente do corpo | além disso olha para a frente |
 | Envio | no máximo a cada 200 ms, quando o ponto anda mais de 24 unidades; reforço a cada 5 s | |
 | Limite no servidor | 1 evento a cada 100 ms por jogador | |
 
