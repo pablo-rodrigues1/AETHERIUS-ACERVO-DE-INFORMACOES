@@ -26,6 +26,8 @@
 - `02-sistemas/sobrenatural/integracao-ui-core.md` — Manifesto do módulo e contrato snapshot/choose com o servidor.
 - `02-sistemas/sobrenatural/revisao-etapa-1.md` — Revisão cruzada da Etapa 1 e arbitragens.
 - `02-sistemas/sobrenatural/etapa-1-telas.md`, `etapa-1-correcoes.md`, `etapa-1-icones-fonte.md` — Relatórios da Etapa 1.
+- `02-sistemas/sobrenatural/pendencias.md` — Pendências detalhadas do Sobrenatural (revisões, desenvolvimento, decisões, testes em jogo).
+- `02-sistemas/sobrenatural/retomada.md` — Estado e passo a passo para retomar.
 - `02-sistemas/sobrenatural/diario.md` — Diário do Sobrenatural.
 - `02-sistemas/lobisomem/README.md` — Lobisomem sincronizado: forma controlada pelo servidor, animação própria, dano de prata.
 - `02-sistemas/lobisomem/diario.md` — Diário do Lobisomem sincronizado.

@@ -13,6 +13,11 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
 
+## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — encerramento: agentes parados
+- **Feito:** pendências A/B da confirmação da revisão 3 concluídas pelo Sol High e salvas como candidato (revisao-3ab-correcoes-sol.md). Pendências consolidadas em pendencias.md.
+- **Próximo:** confirmação do Terra (A/B), restante da Reserva de Sangue (Sol), rodada de testes em jogo.
+- **Bloqueios:** nenhum; todos os agentes parados por decisão do dev.
+
 ## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — revisão 3 e decisões
 - **Feito:** revisão do Terra High rejeitou origem/Bruxa/forçada com 5 achados (revisao-3-origem-bruxa-forcada-terra.md); Sol High corrigiu (revisao-3-correcoes-sol.md; 180 testes). Decisões do dev: Sedução e Reanimação sem custo de sangue; na remoção da maldição, remover tudo o que o Sobrenatural concedeu (limitação: magia ganha por outra fonte depois da concessão pode sair junto).
 - **Próximo:** confirmação do Terra High; Sol High segue a Reserva de Sangue.

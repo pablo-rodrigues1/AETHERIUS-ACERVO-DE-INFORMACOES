@@ -2,20 +2,13 @@
 
 > Leia este arquivo **primeiro** ao retomar o trabalho. Atualize-o ao fim de cada sessão/etapa (estado, próximo passo, pendências).
 
-**Última atualização:** 2026-11-16 (noite) — Opus 5.5: estado dos agentes verificado e registrado (seção abaixo).
+**Última atualização:** 2026-11-16 (noite) — Opus 5.5: agentes parados; pendências detalhadas em `docs/PENDENCIAS.md`.
 
-## Estado dos agentes — verificado pelo Opus em 16/11 (noite)
+## Estado dos agentes — encerramento de 16/11 (noite)
 
-| Agente | Dispatch / task | Situação | Onde atua |
-|---|---|---|---|
-| **Sol High** | `ctx_602fdd8f37f7` / `task_c0849b9f11bd` | **ATIVO (em andamento)**. Corrige as 2 pendências da confirmação do Terra (a: autoria durável na transferência de claims; b: intenção de transformação órfã após falha de confirmação/cancelamento). Depois retoma a Reserva de Sangue. | `C:\Code\Aetherius - Servidor Local` — arquivos **modificados SEM commit**: `overlays/sobrenatural/files/server/gamemode/{supernatural-service.js, supernatural/perk-origin.js, supernatural/werewolf-transform-journal.js, werewolf-service.js}`, `overlays/sobrenatural/{teste-origem.cjs, teste-revisao-3.cjs}`, `.gitattributes`; logs novos em `evidence/review3ab-*.log`. |
-| Terra High | — | Encerrado (confirmação da revisão 3 entregue: 5 itens confirmados, 2 pendências). | — |
-| Gemini Argon / Luna MAX | — | Encerrados (Bruxaria e levantamento de records). | — |
+**Todos os agentes PARADOS pelo dev.** O Sol High foi interrompido com as pendências A/B prontas mas sem commit; o Opus salvou esse trabalho como candidato no commit `88cbbd0` (servidor local), ainda **sem confirmação do Terra High**. Servidor local parado; cliente novo (`client-source 757c571`) **não instalado** no MO2.
 
-- **Último commit no servidor local:** `b6a3cf1` (docs) / `9b4230a` (código, correções da revisão 3). Antes: `856232a` (transformação forçada), `79098ad` (origem + Bruxa + poderes), `b756602`/`feae242`/`708f018` (Reserva de Sangue parcial, Terra).
-- **Servidor local:** PARADO (portas 7777/3000 livres). **MO2 aberto pelo dev** (ModOrganizer em execução); Skyrim fechado.
-- **Cliente novo** compilado pelo Sol (client-source `79303d5`), **não instalado** no MO2: instalar no mod `AETHERIUS - SERVIDOR LOCAL` antes de testar, junto com o servidor novo (o cliente antigo rejeita os claims).
-- **Ao retomar:** (1) ver se o Sol commitou as pendências a/b (se o worker tiver parado, o trabalho está nos arquivos listados acima, sem commit: revisar e commitar ou descartar com `git -C "C:\Code\Aetherius - Servidor Local" status`); (2) pedir nova confirmação ao Terra; (3) Sol segue a Reserva de Sangue (escopo no item 2 de "Próximo passo ao retomar"); (4) revisões e rodada de testes em jogo.
+**Leia `docs/PENDENCIAS.md`**: lista detalhada de revisões, desenvolvimento, decisões do dev e testes em jogo pendentes, com o passo a passo para retomar.
 
 ## Estado atual
 
@@ -29,6 +22,7 @@
 ## Leitura obrigatória (nesta ordem)
 
 1. `../AGENTS.md` — papéis, regras, fluxo.
+1b. `docs/PENDENCIAS.md` — **o que falta, em detalhe (comece por aqui ao retomar)**.
 2. `docs/ESPECIFICACAO.md` — transcrição da planilha, regras fixas e curva de XP.
 3. `docs/DIRECAO-DE-ARTE.md` — padrão visual, cores e análise das referências (inclui Disciplinas).
 3b. `docs/PROPOSTA-TEXTOS.md` — textos de Lobisomem/Bruxa/tela vazia (aguardando aprovação).
@@ -43,18 +37,18 @@
 **Atualizado em 16/11 (Opus).** Sem testes em jogo nesta sessão, por decisão do dev. Tudo abaixo fica registrado para uma rodada de testes posterior.
 
 ### Estado no encerramento (16/11)
-Sol High entregou as correções da revisão 3 e aguarda confirmação independente via coordenador. Servidor local PARADO; tasklist confirmou SkyrimSE/VR ausentes. Bundle novo no client-source ainda precisa de instalação no mod LOCAL após revisão; o runtime do servidor foi preparado sem reinício.
+Terra confirmou parcialmente o lote anterior e abriu A/B; Sol High preparou a segunda correção e aguarda nova confirmação independente via coordenador. Servidor local PARADO; tasklist confirmou SkyrimSE/VR ausentes. Bundle novo no client-source ainda precisa de instalação no mod LOCAL após revisão; o runtime do servidor foi preparado sem reinício.
 
 | Frente | Situação | Onde |
 |---|---|---|
 | Correção por origem (magias/perks) + Bruxa ligada ao serviço + poderes do vampiro (40 s/60 s; Morcego sem recarga) + ponto de custo de sangue | **Commitado** por Sol High: `79098ad` (git raiz do servidor local). Patches de cliente em `overlays/cliente-local/002` e `003`; checkpoint do client-source `057f855`. | `docs/ETAPA-2_formas-e-poderes.md`, `docs/ETAPA-2_bruxaria.md` (quadro final da ligação corrigido: concluída em `79098ad`) |
 | Transformação forçada do lobisomem | **Candidato implementado:** 72 h reais online, noite 20h–5h, sequência privada de 20 s, animação normal kdu, reset confirmado e F7. 122 testes Node + serviço/F7 passaram; revisão independente e jogo pendentes. | `docs/ETAPA-2_transformacao-forcada.md` |
-| Revisão Terra 3 (origem/Bruxa/formas/forçada) | **Candidato `9b4230a`:** barreira de snapshots, Sedução/Reanimação isentas, cobrados falham sem reserva, limitação de origem posterior aceita, diário antes da raça e marcador vanilla. 180 testes; confirmação Terra pendente. | `docs/REVISAO-3_CORRECOES_sol.md` |
+| Revisão Terra 3 (origem/Bruxa/formas/forçada) | Base confirmada parcialmente; pendências A/B corrigidas pelo autor em lote separado: autoria durável conservada e fila de intenções canceladas. **197 testes; nova confirmação Terra pendente.** | `docs/REVISAO-3AB_CORRECOES_sol.md` |
 | Reserva de Sangue | **Parcial** (Terra High): núcleo, drenagem, reserve/commit/cancel, crédito da poção, filtros de cura. Commits `708f018`, `feae242`, `b756602`. | `docs/ETAPA-3_vampirismo-mecanicas.md` |
 | Assinatura dos scripts (causa de nada rodar no cliente local) | **Corrigido no local** (`68a6e2b`), não testado em jogo. | `docs/investigacoes/INVESTIGACAO_15-11_scripts-nao-assinados.md` |
 
 ### Próximo passo ao retomar
-1. **PRIORIDADE — confirmação Terra da revisão 3:** ler `docs/REVISAO-3_CORRECOES_sol.md` e os patches 010 (Core)/004 (cliente). Após confirmação, instalar bundle cliente LOCAL compatível com o servidor preparado e retomar a Reserva de Sangue. Custo: sete poderes cobram 5; Sedução/Reanimação isentas. Origem externa posterior pode ser removida junto, decisão aceita do dev; crash entre intenção durável e raça recebe um reset conservador uma vez. **Transformação forçada segue candidata:** Relatório `docs/ETAPA-2_transformacao-forcada.md`, 122 testes Node e roteiro humano preparado. Especificação implementada: 72 h de tempo real ONLINE sem transformar (por personagem; zera a cada transformação) → forçada só à NOITE (20h–5h do jogo). Sequência: t=0 "A Besta clama pela caçada..."; t=5 s batimento (loop) e tremor de tela; t=10 s filtro vermelho; t=15 s "A Besta está prestes a rasgar sua carne..."; t=20 s transformação pelo werewolf-service (animação do kdu). Efeitos só na tela do jogador; transformação vista por todos; cancelar com limpeza (morte, desconexão, perda da maldição, já transformado). Atalho de teste no F7. O teste inicial e as fontes foram concluídos e versionados no overlay; runtime preparado sem reiniciar servidor.
+1. **PRIORIDADE — nova confirmação Terra das pendências A/B:** relatório `docs/REVISAO-3AB_CORRECOES_sol.md`; patch 011 do Core após 010 e 005 do cliente após 004. A autoria é mantida duravelmente com `CLAIM_RELEASED` até ausência/remoção; intenções canceladas têm fila de reconciliação em runtime. 158 + 39 = 197 testes passaram. Cliente novo no checkpoint `757c571`, compilado e NÃO instalado no MO2; servidor preparado/parado. Após retorno do coordenador, retomar a Reserva de Sangue; ele consolida o Acervo. Transformação 72 h/noite, F7 e demais regras continuam candidatas sem teste humano.
 2. **Restante da Reserva de Sangue: reclassificado alta complexidade por Terra; atribuído a Sol High pelo Opus em 16/11**, após entrega da transformação forçada: sol pelo servidor (`AETHERIUS_VAMPIRE_SERVER_SUN`), ligação do custo aos poderes (contrato reserve/commit/cancel já no dispatcher do Sol), suspensão de fome/sede/frio por personagem + HUD de sangue, "Beber Sangue" no menu X, efeitos (batimentos, visão, aura Feral, nome VAMPIRO FERAL), atomicidade da poção e precisão do relógio de sessão.
 3. **Revisões cruzadas** (lista abaixo) antes do teste em jogo.
 4. **Rodada de testes em jogo** (lista abaixo), começando pela assinatura dos scripts.
@@ -70,7 +64,7 @@ Sol High entregou as correções da revisão 3 e aguarda confirmação independe
 7. **Dois jogadores:** fera e Lorde vistos pelo outro jogador; alimentação entre jogadores.
 
 ### Revisões cruzadas pendentes
-- **Confirmação Terra 3:** parecer inicial rejeitado; autor tratou os cinco achados e registrou decisões do dev. Ver `REVISAO-3_CORRECOES_sol.md`; não presumir aprovação.
+- **Nova confirmação Terra 3 A/B:** os cinco itens anteriores foram parcialmente confirmados em 16/11; as duas pendências aceitas foram tratadas pelo autor. Ver `REVISAO-3AB_CORRECOES_sol.md`; não presumir aprovação desta segunda correção.
 - Transformação forçada (Sol): revisar contador/relógio, fronteiras da noite, cancelamento durante turning, privacidade e roteiro F7; nenhum teste humano executado.
 - Lote menor Fera/Lorde/raça (`4fc0034`): o dev dispensou a confirmação antes do teste; a revisão segue devida.
 - Correção por origem + Bruxa + poderes (Sol): revisão do Terra High.
