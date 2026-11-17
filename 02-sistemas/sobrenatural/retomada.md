@@ -2,7 +2,20 @@
 
 > Leia este arquivo **primeiro** ao retomar o trabalho. Atualize-o ao fim de cada sessão/etapa (estado, próximo passo, pendências).
 
-**Última atualização:** 2026-11-16 — Sol High, correções prioritárias da revisão Terra 3 em `9b4230a`, preparadas para confirmação. **180 testes Node; servidor parado; bundle cliente novo compilado, ainda não instalado no MO2. Reserva de Sangue permanece aberta.**
+**Última atualização:** 2026-11-16 (noite) — Opus 5.5: estado dos agentes verificado e registrado (seção abaixo).
+
+## Estado dos agentes — verificado pelo Opus em 16/11 (noite)
+
+| Agente | Dispatch / task | Situação | Onde atua |
+|---|---|---|---|
+| **Sol High** | `ctx_602fdd8f37f7` / `task_c0849b9f11bd` | **ATIVO (em andamento)**. Corrige as 2 pendências da confirmação do Terra (a: autoria durável na transferência de claims; b: intenção de transformação órfã após falha de confirmação/cancelamento). Depois retoma a Reserva de Sangue. | `C:\Code\Aetherius - Servidor Local` — arquivos **modificados SEM commit**: `overlays/sobrenatural/files/server/gamemode/{supernatural-service.js, supernatural/perk-origin.js, supernatural/werewolf-transform-journal.js, werewolf-service.js}`, `overlays/sobrenatural/{teste-origem.cjs, teste-revisao-3.cjs}`, `.gitattributes`; logs novos em `evidence/review3ab-*.log`. |
+| Terra High | — | Encerrado (confirmação da revisão 3 entregue: 5 itens confirmados, 2 pendências). | — |
+| Gemini Argon / Luna MAX | — | Encerrados (Bruxaria e levantamento de records). | — |
+
+- **Último commit no servidor local:** `b6a3cf1` (docs) / `9b4230a` (código, correções da revisão 3). Antes: `856232a` (transformação forçada), `79098ad` (origem + Bruxa + poderes), `b756602`/`feae242`/`708f018` (Reserva de Sangue parcial, Terra).
+- **Servidor local:** PARADO (portas 7777/3000 livres). **MO2 aberto pelo dev** (ModOrganizer em execução); Skyrim fechado.
+- **Cliente novo** compilado pelo Sol (client-source `79303d5`), **não instalado** no MO2: instalar no mod `AETHERIUS - SERVIDOR LOCAL` antes de testar, junto com o servidor novo (o cliente antigo rejeita os claims).
+- **Ao retomar:** (1) ver se o Sol commitou as pendências a/b (se o worker tiver parado, o trabalho está nos arquivos listados acima, sem commit: revisar e commitar ou descartar com `git -C "C:\Code\Aetherius - Servidor Local" status`); (2) pedir nova confirmação ao Terra; (3) Sol segue a Reserva de Sangue (escopo no item 2 de "Próximo passo ao retomar"); (4) revisões e rodada de testes em jogo.
 
 ## Estado atual
 
