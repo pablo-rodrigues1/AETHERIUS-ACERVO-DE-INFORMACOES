@@ -6,7 +6,7 @@ fase: em-teste
 responsaveis: [kdu]
 repositorio: "pacote separado: patch sobre aetherius-server v0.38 (ainda não integrado ao oficial)"
 depende_de: []
-atualizado: 2026-11-14
+atualizado: 2026-11-17
 tags: [multiplayer, head-tracking, olhar, cliente, servidor, jogadores]
 relacionados: [diario.md, ../../07-guia-da-staff/perguntas-frequentes/olhar-dos-jogadores.md]
 ---
