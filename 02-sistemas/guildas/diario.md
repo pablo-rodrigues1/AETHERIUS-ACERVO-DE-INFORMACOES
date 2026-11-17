@@ -14,6 +14,14 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-17, provas da R29 e pendências de retomada do cliente (Melekyy / Codex)
+
+- **Verificado:** os 19 testes HTML passaram, incluindo modelos reais de permissão para Arquimago, professor, bibliotecário e membro, rótulo/envio de convite por ID, ausência de saída voluntária, escolas, cronograma, gestão, registros e bancada. Nenhuma ação sem poder é liberada por exibir um painel antigo.
+- **Pacote local:** R29, 78 arquivos, 108 testes aprovados da própria distribuição, zero falhas/pulos. Extração e hashes conferidos. SHA-256 4f040e06412d7e894473bf8657b1ce4a5a99766dee34bc3468f095669c5cbcc2. Arquivos ativos instalados das dez áreas conferidas correspondem ao fonte local. Nenhum ZIP/código/binário foi enviado ao acervo.
+- **Aguardando dev:** retomar controle do Skyrim ou testar manualmente o depósito; para instalar a retirada do diagnóstico antigo do bundle, fechar somente o cliente. Servidor/MO2 podem continuar abertos. Não sobrescrever cliente carregado. Grupo, operação manual do quarto e aceite visual dos quatro perfis continuam pendentes.
+- **Preservação:** restauração do quarto temporário, inventários e localização original preparada com comparação exata; nenhum item será apagado para encerrar teste. Não declarar prova manual do quarto sem depósito real.
+- **Publicação:** registro anterior confirmado na main em 6cffbf5; a conferência dos nove documentos alterados aprovou frontmatter/links relativos. Validação global ainda encontra 28 documentos antigos de Sobrenatural fora desta alteração. Integração oficial e dois jogadores humanos não homologados.
+
 ## 2026-11-17, recuperação R29 e revisão de todos os perfis em andamento (Melekyy / Codex)
 
 - **Pedido ampliado:** recuperar todos os painéis e conferir o sistema dos Magos como Arquimago, professor, bibliotecário e membro comum. Convite deve ser apresentado por ID do jogador.

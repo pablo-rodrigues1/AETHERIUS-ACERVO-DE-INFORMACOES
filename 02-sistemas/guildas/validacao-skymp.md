@@ -16,7 +16,7 @@ Revisão: 17/11/2026. Responsável: Melekyy.
 
 Guildas e Casas foram observados abertos no cliente real após carga fria. O cliente confirmou R29, com modelos de dono e entradas dos sistemas carregados. Lista de plugins e guarda de propriedade fora do streaming instaladas com o jogo fechado; dez callbacks antigos de Guildas aposentados. Convite apresentado por ID, com identidade pública conferida nesta instalação. Não houve alteração do controlador de conjuração.
 
-150 testes do workspace passaram antes de acrescentar a verificação de interface com os quatro modelos reais de permissão. Os ensaios nativos atuais usam o mesmo addon privado em processos isolados, **sem clientes humanos**:
+150 testes do workspace passaram antes de acrescentar a verificação de interface com os quatro modelos reais de permissão. Depois, os 19 testes de interface, incluindo essa nova regressão, passaram. A distribuição R29 executou seus 108 testes com zero falhas/pulos; o ZIP local tem 78 arquivos, todos conferidos após extração, SHA-256 `4f040e06412d7e894473bf8657b1ce4a5a99766dee34bc3468f095669c5cbcc2`. Esses resultados são diferentes conjuntos de testes, não devem ser somados. Os ensaios nativos atuais usam o mesmo addon privado em processos isolados, **sem clientes humanos**:
 
 | Fluxo | Arquimago | Professor | Bibliotecário | Membro comum |
 |---|---|---|---|---|

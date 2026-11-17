@@ -27,13 +27,13 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 
 A primeira correção da lista de plugins não resolveu sozinha. O transporte também interrompia um lote de pacotes ao receber propriedade de ator fora do streaming; agora ignora esse pacote sem criar ator falso nem interromper os seguintes. A R29 retira callbacks antigos exclusivamente das Guildas, preservando os outros painéis. Após carga fria, **Guildas e Casas foram observados abertos no Skyrim privado**, e o cliente confirmou R29. Convites agora mostram **ID do jogador**; nesta instalação a identidade pública foi conferida igual ao identificador persistente, sem migrar as chaves.
 
-A suíte passou em 150 testes antes da nova verificação visual por função. Ensaios nativos atuais aprovaram cargos, escolas, insígnias, receitas, cronograma, portas, dez quartos e baús coletivo/exclusivo. Grupo e depósito/reabertura manual no quarto ainda estão em reteste. Um diagnóstico antigo de renderização foi identificado como origem do erro periódico de IDs estáticos; sua retirada está preparada para instalação com o cliente fechado. **Não declarar todos os fluxos recuperados enquanto esses retestes estiverem pendentes.** [ADR-0023](../../03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md).
+A suíte passou em 150 testes; depois, 19 testes de interface com os quatro perfis e 108 testes da própria distribuição R29 também passaram. Ensaios nativos atuais aprovaram cargos, escolas, insígnias, receitas, cronograma, portas, dez quartos e baús coletivo/exclusivo. Grupo e depósito/reabertura manual no quarto ainda estão em reteste. Um diagnóstico antigo de renderização foi identificado como origem do erro periódico de IDs estáticos; sua retirada está preparada para instalação com o cliente fechado. **Não declarar todos os fluxos recuperados enquanto esses retestes estiverem pendentes.** [ADR-0023](../../03-decisoes/ADR-0023-recuperacao-de-entrada-e-callbacks-das-guildas.md).
 
 ## Onde está o código
 
-Projeto local `Sistema de Guildas 2`, pacote CommonJS `sky-guilds` 1.1.0. Entrada recomendada: `bootstrap.cjs`; implementação em `src/`; presets `config/skymp-panel.example.json` e `config/skymp-full.example.json`. A URL de repositório do código ainda não foi informada/configurada. Preencher `repositorio` somente quando existir URL real.
+Projeto local `Sistema de Guildas 2`, pacote CommonJS `sky-guilds` 1.1.1. Entrada recomendada: `bootstrap.cjs`; implementação em `src/`; presets `config/skymp-panel.example.json` e `config/skymp-full.example.json`. A URL de repositório do código ainda não foi informada/configurada. Preencher `repositorio` somente quando existir URL real.
 
-O pacote de desenvolvedor R28 permanece local; somente Markdown é publicado neste acervo. Não se publicam código, ZIP, binários, backups ou dados de jogadores.
+Os pacotes de desenvolvedor R28 e R29 permanecem locais; somente Markdown é publicado neste acervo. Não se publicam código, ZIP, binários, backups ou dados de jogadores.
 
 ## Funcionalidades
 
