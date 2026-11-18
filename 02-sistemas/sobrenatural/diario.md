@@ -265,3 +265,8 @@ Sol High concluiu integração da UI, terror, ritual, Magicka e projeção públ
 ## 2026-11-18 — Aceite do Ritual e ganho visual
 
 O dev pediu fechar a tela no aceite do Ritual e apresentar a recuperação gradualmente no selo. A D7 continua um único crédito autoritativo e o contrato v1 continua com a mesma estrutura. A apresentação permanece em integração.
+
+
+## 2026-11-18 — Ligação do selo ao ganho e à drenagem
+
+`f75a57d` verificou que a ponte usa `setValue` para todas as projeções e `immediate` na restauração. O selo atualiza o alvo com a drenagem durante a subida. Nove testes de ponte e Ritual passaram.
