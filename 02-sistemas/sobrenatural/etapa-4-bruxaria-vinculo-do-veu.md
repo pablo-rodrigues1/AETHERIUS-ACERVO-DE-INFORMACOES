@@ -1,6 +1,6 @@
-# ETAPA 4 — Bruxaria: Vínculo do Véu (especificação confirmada, NÃO iniciada)
+# ETAPA 4 — Bruxaria: Vínculo do Véu e Sobrecarga
 
-**Data:** 18/11/2026 · **Autor:** Opus 5.5 (orquestrador) · **Status:** escopo confirmado pelo dev; implementação **não despachada** (aguarda ordem do dev).
+**Data:** 18/11/2026 · **Autor:** Opus 5.5 (orquestrador) · **Status:** candidato local entregue. Compilação do addon, revisão cruzada e jogo pendentes.
 
 **Fonte:** `C:\Code\Aetherius - New Systems\referencia\Aetherius_Sistema_Bruxaria_Vinculo_do_Veu.md` (especificação funcional), com as respostas do dev de 18/11 abaixo, que **prevalecem** sobre os itens marcados como "sugestão" na fonte.
 
@@ -201,3 +201,55 @@ Prévia interativa: `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\pr
 Teste `node --test overlays/sobrenatural/teste-visual-vinculo.cjs`: 5/5 (primeira projeção imediata, fronteiras e reversão, atualização fina sem escrita redundante, reconstrução explícita, acessibilidade/redução de movimento). Em Orca verificou-se slider 225 → abertura 0,25 e `transition:none` sob redução de movimento, além de transições CSS intermediárias quando a página de demonstração força movimento. Patch do selo `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\016-selo-transicoes.patch`, após 015, validado com `git apply --check --reverse`; prévia e testes no laboratório `94f4313`. Não houve teste no CEF do jogo, benchmark ou execução do Skyrim.
 
 **Autoria mista do commit cliente `8bcc121`:** o índice compartilhado já continha trabalho preparado por Sol quando Terra commitou os dois arquivos do selo; o commit foi mantido intacto por orientação do Opus, e não é uma entrega exclusiva de Terra. Além de `client/ui-core/modules/supernatural/veil-seal.js` e `veil-seal.css` (Terra), inclui trabalho de Sol em `client/index.html`, `client/src/services/services/aetheriusUiService.ts`, `client/src/services/services/spSnippetService.ts`, `client/src/services/services/veilEffects.ts`, `client/src/sync/actorvalues.ts`, `client/ui-core/modules.json` e, dentro de `client/ui-core/modules/supernatural/`, `icons.js`, `ritual-screen.css`, `ritual-screen.js`, `supernatural-data.js`, `supernatural-module.css`, `supernatural-module.js`, `veil-terror-presentation.css` e `veil-terror-presentation.js`. A revisão cruzada deve cobrir cada autoria; não se presume aprovação dos arquivos do Sol por este registro.
+
+## 18/11 — Integração da Etapa 4 para revisão cruzada
+
+Repositório local em `C:\Code\Aetherius - Servidor Local`. Terra High implementou a apresentação e as transições do selo. O commit de cliente `8bcc121` contém as alterações do selo do Terra e também os arquivos de integração que Sol High havia colocado no índice compartilhado. Os commits posteriores `480f19d` e `8d9fc09` são de Sol High. O patch de distribuição da integração é `overlays\cliente-local\017-veu-integracao.patch`, após o 016 do selo, com reverse-check conferido. No fechamento, o espelho de servidor está em `f69c438`. As mudanças são candidatas e aguardam revisão de outro modelo.
+
+### Pontos de integração
+
+- UI Core. `client-source\client\ui-core\modules\supernatural\supernatural-module.js:59` conecta o botão Ritual à tela Terra, consulta o servidor até 1 Hz com a tela aberta, ignora respostas após desmontagem ou troca de concessão e recebe os resultados do contrato v1. O manifesto local registra o módulo e a ordem dos scripts. `client-source\client\index.html:1347` aplica a primeira projeção e a restauração da HUD com `setValue(bond, {immediate:true})`, usa transição nas atualizações seguintes e oculta a barra de sangue enquanto o selo estiver ativo.
+- Efeitos privados. `client-source\client\src\services\services\veilEffects.ts:28` consome a caixa de terror v1, deduplica por ID, controla uma instância sonora por vez e preserva o handle quando o stop falha. O heartbeat nativo recebe uma janela de 10 s. A tela preta só inicia com contexto permitido, retorna pelo componente visual do Terra e limpa no cliente se houver combate, menu, salto, queda, cena, saída do estágio, morte, troca de célula, desconexão ou recarga. A respiração para no fim do retorno. Os sussurros alternam após 30–90 s e depois a cada 3–6 min, exclusivamente na sessão da bruxa.
+- Runa e animação, `1537e23`. `source\server\gamemode\supernatural\veil-ritual-fx.js:8,63` replica uma habilidade visual por propriedade SkyMP ao dono e aos vizinhos, incluindo entrada tardia. O cliente aplica a pose `MLh_SpellAimedConcentrationStart`, encerra com `MLh_Equipped_Event` e usa uma vigência curta para limpar se a publicação parar. Relatos locais de combate são positivos e complementam o gancho de hit do servidor. A qualidade da pose, a remoção da runa no cliente real e a entrega para vizinhos dependem de jogo.
+- Aura e identidade, `42d5832`. `source\server\gamemode\supernatural\veil-visuals.js:7` usa o mesmo ciclo da aura Feral com `000807:SkyDeath-Ghosts.esp` (`SkyDeathGhost_violet`). O SkyDeath efetivamente usa `103129:Skyrim.esm` para o próprio fantasma violeta. `source\server\gamemode\skysocial\src\identity.js:44` devolve “BRUXA” à identidade de apresentação dos vizinhos e o nameplate nativo usa tom violeta. O nome persistido do personagem continua vindo de sua ficha original.
+- Olhos. `source\server\gamemode\supernatural\veil-eyes.js:20,59` escolhe a variante pelo `raceId`, sexo e Vínculo projetado. A gravação antecipada do olho original e do último projetado permite restaurar só o headpart de autoria da mecânica, preservando o restante do rosto. O arquivo `data\aetherius-veil-eyes.json` usa descritores de FormID estáveis. O servidor replica a mudança pela propriedade nativa `appearance`, que o cliente existente aplica ao dono e aos vizinhos.
+- Magicka. `source\server\gamemode\supernatural\veil-magicka.js:4,16` projeta multiplicadores nos limiares. `overlays\sobrenatural\025-veu-magicka-nativa.patch` altera o addon em `source\server\cpp\server_guest_lib\aetherius_combat\DevAttributes.cpp:112`, `MpActor.cpp:1725` e `CropRegeneration.cpp:78`. O servidor aplica o máximo ao resultado de raça/classe e preserva a quantidade corrente absoluta ao mudar o máximo, limitada ao novo teto. No estágio V o máximo é zero e a taxa nominal mantém a penalidade de 50%. `client-source\client\src\services\services\spSnippetService.ts:68` aplica máximo, taxa e a quantidade corrente no mesmo update. Os modificadores são vinculados ao perfil, com remoção por sessão e ACK do cliente. O addon do kit existente precisa ser recompilado para reconhecer a propriedade.
+- Invocações, `3831f69`. `source\server\gamemode\magic-service.js:81,98,104,146` adiciona blocos ao limite de classe/perks, conta criaturas por dono e revalida antes de criar após o callback já agendado. Acima do novo limite, as criaturas mantêm seu ciclo e novas invocações são recusadas. Ao chegar ao limite, a substituição FIFO do serviço existente volta a valer. **R-ANIM** pertence a despacho próprio por decisão do Opus. As duas portas de conjuração existentes reconhecem apenas o arquétipo 18 `SummonCreature`. O produtor de reanimações de cadáver precisa registrar e expirar criaturas por autoridade nativa/servidor antes de preencher a contagem compartilhada.
+
+### Records criados no ESP
+
+Fonte de autoria `C:\modOrganizer\mods\AETHERIUS - SOBRENATURAL\AETHERIUS - SOBRENATURAL.esp`. Após o dev selecionar `AETHERIUS - LOCAL`, houseCARL criou e releu os nove records abaixo. Cópia idêntica no commit `a00899a` em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\plugin\AETHERIUS - SOBRENATURAL.esp`. SHA-256 `B9C4F8BF3EFBBDB1B730539118D31EE21C3FD8B879DA945443D3F5C99129F8E6`. O master `MasterSpellsRunes.esp` carrega antes do Sobrenatural no perfil LOCAL. A verificação de integridade do plugin retornou zero referências soltas, masters faltantes e falhas de parse.
+
+| FormID local no AETHERIUS - SOBRENATURAL.esp | Tipo | EditorID | Recurso |
+|---|---|---|---|
+| `00083A` | SPEL | `SN_Veu_RitualRune` | Ability, ConstantEffect, Self, `00000F:MasterSpellsRunes.esp` |
+| `00083B` | SNDR | `SN_Veu_BreathingSD` | `breathing_witch.wav` |
+| `00083C` | SNDR | `SN_Veu_ScreamSD` | `scream_witch.wav` |
+| `00083D` | SNDR | `SN_Veu_Whisper2SD` | `whisper2_witch.wav` |
+| `00083E` | SNDR | `SN_Veu_WhisperingSD` | `whispering_witch.wav` |
+| `00083F` | SOUN | `SN_Veu_Breathing` | `00083B` |
+| `000840` | SOUN | `SN_Veu_Scream` | `00083C` |
+| `000841` | SOUN | `SN_Veu_Whisper2` | `00083D` |
+| `000842` | SOUN | `SN_Veu_Whispering` | `00083E` |
+
+Todos os WAVs são da pasta `Sobrenatural\Bruxas\Audio\wav` e estão no overlay em `files\Sound\FX\Aetherius\Witch`. Os SNDR usam categoria e saída UI de `064451:Skyrim.esm` e `07EDCA:Skyrim.esm`, sem loop. Os sussurros têm atenuação estática de 12 dB, e os outros dois sons de 8 dB. O heartbeat é o SOUN vanilla `04DAAF:Skyrim.esm` com seu loop nativo.
+
+### Eye parts do Miggyluv v2.2
+
+FormIDs de `Miggyluv's Eyes.esp`, na ordem Light / Dark / Glow. A leitura das DDS humanas no arquivo do mod encontrou luminância média de 51,38 no conjunto de pixels violetas de Magic01 e 36,99 no mesmo critério de Magic02. Os Glow usam textura Magic01. A variante disponível mais próxima de Glow é Light. Se só existir uma variante compatível, ela atende às três faixas. Sem variante de raça/sexo compatível, a aparência original é preservada. No perfil LOCAL efetivamente reaberto, o mod foi observado desabilitado e o plugin ausente da ordem ativa. A implementação resolve os IDs com segurança quando o plugin está presente. A validação do perfil depende da reativação por quem controla o MO2.
+
+| Raça | Masculino | Feminino |
+|---|---|---|
+| Humanos (`0A8023:Skyrim.esm`) | `09D / 09E / 2D5` | `0F7 / 0F8 / 2D4` |
+| Bosmer | `1A9 / 1AA / 2DF` | `1D1 / 1D2 / 2DE` |
+| Altmer | `23A / 23B / 2E8` | `27E / 27F / 2E9` |
+| Dunmer | `260 / 261 / —` | `2A4 / 2A5 / 2EE` |
+| Orc | `0F6 / 0FB / —` | `2F9 / 2FA / —` |
+| Khajiit | `342 / 394 / —` | `3C6 / 3C7 / —` |
+| Argonian | `337 / — / —` | nenhuma |
+
+### Verificação e pendências
+
+- Bateria Node do gamemode/projeções e regressões do Sobrenatural **445/445** com `AETHERIUS_VAMPIRE_FEED_ENABLED=false` e **445/445** com true. A seleção de cinco arquivos Core usada nas revisões anteriores passou **39/39**. Serviço, painel F7 e revisão F7 deram OK. A execução suplementar de `npm test` integral do Core teve **184/205** no primeiro estágio, com casos que exigem o banco isolado `aetherius_test`, exports `gameplay\_work\exports` e load order de outra árvore, além de asserts dos fixtures reais. Essa execução não valida o Core inteiro no laboratório atual.
+- TypeScript do servidor e do cliente e webpack do cliente passaram sem deploy. Bundle em `client-source\build\dist\client\Data\Platform\Plugins\skymp5-client.js`, SHA-256 `F935C118CFFFC38FC138475266F4620239EBD3D3C884DCCA6D812259A532AB62`. Os sete patches 019–025 foram revertidos e reaplicados em cópia descartável, com igualdade de conteúdo de 17 arquivos e conferência SHA-256 dos 11 espelhos de módulos.
+- A configuração CMake offline encontrou MSVC e Windows SDK, mas parou em `find_package(CMakeRC)` em `source\server\CMakeLists.txt:9`. O addon novo não foi compilado. O arquivo de cache da tentativa foi retirado da pasta de build para não reutilizar `VCPKG_MANIFEST_INSTALL=OFF` em uma configuração posterior. Restam a compilação com as dependências presentes, revisão cruzada, reativação de Miggyluv no perfil de teste e a rodada em jogo/CEF com uma bruxa, um observador e um terceiro entrando depois. O servidor, o cliente de jogo e a instalação de ativos não foram executados.

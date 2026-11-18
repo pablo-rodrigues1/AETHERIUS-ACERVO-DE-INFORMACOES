@@ -255,3 +255,8 @@ Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo
 
 ## 2026-11-18 — Terra: transições do selo
 - Cliente `8bcc121` inclui autoria mista Terra/Sol, registrada na Etapa 4; laboratório `94f4313` e `949d882`, teste 5/5, slider e 15 quadros. HUD reutilizada precisa de `immediate:true`; revisão cruzada, CEF e jogo pendentes.
+
+
+## 2026-11-18 — Etapa 4 candidata para revisão cruzada
+
+Sol High concluiu integração da UI, terror, ritual, Magicka e projeção pública no candidato local `f69c438` (cliente `8d9fc09`); ESP `a00899a` contém nove records conferidos. Node 445/445 por modo e recorte Core 39/39. CMakeRC ausente bloqueia o addon novo, e Miggyluv está desabilitado no perfil LOCAL. Reanimações foram isoladas em R-ANIM. Revisão independente e jogo pendentes. [Relatório](etapa-4-bruxaria-vinculo-do-veu.md).
