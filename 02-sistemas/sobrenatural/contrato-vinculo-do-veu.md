@@ -67,6 +67,10 @@ As categorias são Coração Daedra, Pedra da Alma Negra cheia ou vazia, carne a
 
 `active.id` identifica a execução, `remainingMs` reflete o relógio autoritativo e `result.id` permite apresentar um resultado uma única vez. Pode-se animar a barra entre respostas, mas a conclusão depende da resposta autoritativa. `result` é um resultado transitório da sessão, preservado para reabertura da tela durante a sessão, até começar outro ritual. Desconectar encerra a execução e limpa o estado da UI; reconectar começa sem execução. Uma falha de confirmação de consumo resulta em `failed/uncertain` com crédito zero, conforme D7. Os efeitos públicos de runa/animação vêm da replicação do servidor; abrir/fechar o módulo não os altera.
 
+A resposta de aceite de `ritual.start` é `{ ok: true, ritual: { …, active: { id, … } } }`. A interface fecha ao receber esse aceite. Erro, timeout ou resposta sem `active.id` mantém a interface e recupera o estado por `ritual.status`; a presença de um ritual no status permite retomá-lo na apresentação mesmo se a resposta do início se perder. No jogo, a execução segue no servidor e pode ser interrompida pelas condições habituais. Reabrir a tela consulta a execução atual e disponibiliza o cancelamento pelo ID.
+
+O Ritual concluído credita o saldo autoritativo uma vez, após o consumo confirmado. O HUD mostra o ganho em passos de um ponto durante cerca de 5 s ao receber o aumento no mesmo personagem. O saldo, os olhos, a aura, os buffs e a capacidade de criaturas usam o valor já confirmado pelo servidor. A animação é visual, sem efeitos no crédito nem nos limiares de jogabilidade. Login, reconexão, recarga ou restauração do HUD mostram a projeção atual imediatamente, sem reproduzir um ganho anterior.
+
 ## Terror e sussurros
 
 O servidor agenda tentativas privadas no estágio IV a cada 12–20 min (incluindo 35% de tentativas sem envio) e no estágio V a cada 5 min com manifestação. Envio efêmero só ao dono, na propriedade SkyMP `aetheriusVeilTerror`, cuja atualização grava em `sp.storage.aetheriusVeilTerrorV1`. A projeção `aetheriusVeilPresentation` é a condição contínua para apresentar ou interromper o efeito. Formato:
@@ -91,3 +95,4 @@ type VeilTerror = null | {
 ## Histórico
 
 - 18/11/2026 — Opus ajustou a elegibilidade de início da Sobrecarga de `bond >= 100` para `bond > 99` com limiar configurável. A condição é autoritativa por `modes.overload.eligible`. O formato das mensagens e a versão v1 permanecem aplicáveis.
+- 18/11/2026 — O dev definiu fechamento da interface no aceite de `ritual.start` e ganho gradual apresentado pelo selo. O serviço continua creditando uma vez pela D7. As mesmas mensagens v1 já trazem o aceite e o novo saldo.

@@ -260,3 +260,8 @@ Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo
 ## 2026-11-18 — Etapa 4 candidata para revisão cruzada
 
 Sol High concluiu integração da UI, terror, ritual, Magicka e projeção pública no candidato local `f69c438` (cliente `8d9fc09`); ESP `a00899a` contém nove records conferidos. Node 445/445 por modo e recorte Core 39/39. CMakeRC ausente bloqueia o addon novo, e Miggyluv está desabilitado no perfil LOCAL. Reanimações foram isoladas em R-ANIM. Revisão independente e jogo pendentes. [Relatório](etapa-4-bruxaria-vinculo-do-veu.md).
+
+
+## 2026-11-18 — Aceite do Ritual e ganho visual
+
+O dev pediu fechar a tela no aceite do Ritual e apresentar a recuperação gradualmente no selo. A D7 continua um único crédito autoritativo e o contrato v1 continua com a mesma estrutura. A apresentação permanece em integração.
