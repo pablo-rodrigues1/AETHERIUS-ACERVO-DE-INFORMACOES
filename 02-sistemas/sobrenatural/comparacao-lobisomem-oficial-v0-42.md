@@ -1,5 +1,9 @@
 # Comparação — Lobisomem oficial v0.42.0, base kdu e Sobrenatural local
 
+> **Decisão posterior do dev, 17/11/2026:** não adotar o oficial como base; incrementar somente nossa solução com correções oficiais confirmadas. Essa decisão substitui a recomendação histórica de híbrido abaixo. Porte local implementado e testado, ainda sem revisão independente ou instalação: ver §12.
+
+> **Correção dos P1 de Terra, 17/11:** o porte do §12 foi reprovado; candidato corrigido em `b682f61` (dispatcher obrigatório) e `5d3c216` / cliente `33953e1` (autoria racial conservadora autorizada pelo Opus). Ver §13. Não presumir homologação: a reconfirmação independente continua pendente.
+
 Data: 17/11/2026. Autor: Codex, no papel **Sol High**, despachado pelo coordenador Opus. Tarefa `task_7d51aed72da0`, dispatch `ctx_ab2ced0331fa`. Análise de código e testes sem iniciar servidor ou jogo; houseCARL exclusivamente em leitura. **Este parecer ainda precisa de revisão por outro modelo pelo coordenador**; não equivale a homologação multiplayer.
 
 ## Resposta e recomendação única
@@ -307,6 +311,77 @@ Revisor independente deve confirmar o parecer e o diff final, em especial a lacu
 
 O relatório entrega a comparação e um caminho definido, não aplica integração. Permanecem revisão independente deste parecer, decisão do coordenador/dev sobre o lote de integração, atualização do Acervo e validação humana; nenhum desses itens foi marcado como concluído por testes Node.
 
+## 12. Porte para a solucao local
+
+Data: 17/11/2026, despacho `task_7a00b71870d2` / `ctx_6252ab51bea4`. Autor: Codex, papel Sol High. **Decisão executada: nossa solução permanece a base; não houve rebase sobre v0.42 nem substituição por arquivos oficiais inteiros.** As seções anteriores são o retrato comparativo anterior ao porte, inclusive seus hashes/linhas e recomendação histórica. Nada foi instalado no MO2/runtime, nenhum servidor/jogo foi iniciado e os espelhos oficiais foram apenas lidos.
+
+### Item 1 — actionVoiceFire com comando validado
+
+Commit do Git raiz L: **`cb84cade2361c87b204319393471af6c4c3cedd6`**.
+
+- Porte manual do listener oficial em `L-S/server/gamemode/werewolf/client.js:33–44`. Aceita somente ator local e Beast Form/Anel. Conserva leitor por geração, watchdog e marcador `{seq, marker}`. Esse canal `cast` permanece evidência quando o dispatcher está ativo.
+- Integração funcional de Z em `L-S/server/gamemode/supernatural/power-input.js:21–49`: `spellCast` e `actionVoiceFire` convergem no mesmo comando `activate` com geração/nonce/sequência. A voz só serve para os dois poderes da fera; não abre novos atalhos para poderes vampíricos. Deduplicação local de 250 ms impede que os dois eventos consumam um permit renovado para o mesmo uso; gates e cadência autoritativa de 1 s permanecem no servidor.
+- Sem proposta nativa correspondente em até 750 ms, sem poder conhecido/equipado ou com bloqueio social/morte/maldição incorreta, o comando não transforma. Não foi alterado o contrato `reached`, o diário B1, cooldown ou serviço de 403 linhas.
+- `source` e `overlays/sobrenatural/files` dos dois scripts foram conferidos byte a byte.
+- Oito testes novos em `L/overlays/sobrenatural/teste-porte-voz.cjs`: os dois poderes, proposta antes/depois, deduplicação nas duas ordens, leitor antigo/payload/ator incorreto, gates e marcador vanilla real encaminhado ao serviço. Primeiro recorte: **91/91**, incluindo os 29 kdu adaptados.
+
+### Item 2 — habilidades raciais mescladas à fila existente
+
+Commit cliente L-C: **`e1fdf9d9ae67c704e67a93b21360c07e5af2e8fd`**. Commit correspondente do Git raiz L (patch e testes): **`fefdf3b7f60570b53e633b397f577f334cde2781`**.
+
+Em `L-C/client/src/sync/appearance.ts:197–232`, foi portado manualmente o algoritmo oficial: enumerar spells da raça atual, retirar/dissipar habilidades das outras raças jogáveis e do Nórdico inicial, preservar spells compartilhadas e adicionar as ausentes da raça correta. A correção não usa uma lista global de todas as magias do personagem e não altera o ledger de origem do Sobrenatural/Core. A abrangência continua sendo o conjunto racial do oficial: não se inventou uma remoção de spells de criaturas/custom que não estejam naquele conjunto.
+
+A integração com nossa fila está em `appearance.ts:242–274`: callbacks só operam na geração corrente, com jogador presente e readback de raça correspondente. Humanoides mantêm espera do SetRace, rosto/olhos/tints e invalidação; criaturas não recebem partes de rosto humano e agora aguardam finalização de 62,5 ms antes do readback/sincronização/ACK. Um SetRace no-op não concede/remove habilidades nem declara conclusão dessa finalização. Erro de API na sincronização gera log, mantendo a política tolerante do oficial; não foi criado retry durável de spells raciais.
+
+O teste `L/overlays/sobrenatural/teste-aparencia.cjs` passou de 4 para **10 casos**: remoção/dissipação incorreta, preservação de spell compartilhada/pessoal, idempotência, criatura sem rosto humano, geração antiga/logout e no-op humanoide/criatura. TypeScript passou. APIs Race/Actor conferidas no corpus offline papyrus-reference e nas declarações locais do SkyrimPlatform; nenhuma consulta/escrita de records/MO2 neste porte.
+
+Patch incremental **`L/overlays/cliente-local/007-racial-spells.patch`**, depois de `006-reserva-sangue-hud.patch`, com reverse-check aprovado na árvore cliente.
+
+### Item 3 — proteção oficial de headparts antes de carregar save
+
+Commit cliente L-C: **`444bd6a0ff31617733c8732ea1513b4d13a7a56a`**. Commit correspondente do Git raiz L: **`87835ed39d1654679e8237e3b9333ce7f90dcd36`**.
+
+O delta adicional de aparência/reconexão em O-C `client/src/services/services/loadGameService.ts:3,12–15` estava ausente localmente. Foi portado em `L-C/client/src/services/services/loadGameService.ts:3,12–15`: antes de carregar o save, invalidar nossa geração de aparência e tentar liberar headparts alocados no CRT. Mantém o try/catch oficial da liberação e a segunda tentativa de load sem `ChangeFormNpc`. A invalidação é a adaptação à nossa fila, para callbacks antigos não recriarem a lista após o load.
+
+Quatro testes novos em `L/overlays/sobrenatural/teste-porte-loadgame.cjs` verificam ordem cancel→release→load, argumentos preservados, fallback e erro de release sem quebrar a emissão `gameLoad`. Não reproduzem nem homologam o CTD nativo `scalable_aligned_free`; se a liberação falhar, o comportamento continua tolerante como no oficial e há risco residual do motor.
+
+Patch incremental **`L/overlays/cliente-local/008-load-headparts.patch`**, depois de 007; reverse-check aprovado. As proteções já existentes de editor/snippet/helmet e nossa fila SetRace foram conservadas.
+
+### Deltas auditados que já estavam presentes
+
+Prata (`werewolf-service.js`), nome/plaquinha (`L-S/server/gamemode/skysocial/src/identity.js:40–41`), seis leitores `WEREWOLF_*`, duração e VFX já tinham a lógica oficial na nossa base K. **Não houve segunda aplicação de bônus, troca de nome de evento, alteração de `.env` ou importação de combate/SkySocial inteiros.** O serviço `L-S/server/gamemode/werewolf-service.js` permaneceu com SHA bruto `c785ccec45335ba797aee6392d0101dbbaf054a7861417117dbd7a1afd2df493`, igual ao espelho de overlay e ao candidato B1 anterior.
+
+### Validação final deste porte
+
+Na raiz L, seleção de todos os `overlays/sobrenatural/teste-*.cjs` que importam `node:test` (14 arquivos), mais `source/server/gamemode/werewolf/tests/werewolf.test.cjs` e `source/server/gamemode/magic/tests/magic.test.cjs`: **252/252, 0 falhas/cancelados/ignorados**, exit 0. A seleção inclui os **29 oficiais kdu adaptados** e os 18 casos novos deste porte (8 voz + 6 raciais + 4 load). Para reproduzir a seleção:
+
+```powershell
+# C:\Code\Aetherius - Servidor Local
+@'
+from pathlib import Path
+import subprocess
+root = Path.cwd()
+files = [str(p.relative_to(root)) for p in sorted((root/'overlays/sobrenatural').glob('teste-*.cjs'))
+         if "require('node:test')" in p.read_text(encoding='utf-8') or 'require("node:test")' in p.read_text(encoding='utf-8')]
+files += ['source/server/gamemode/werewolf/tests/werewolf.test.cjs', 'source/server/gamemode/magic/tests/magic.test.cjs']
+raise SystemExit(subprocess.call(['node', '--test', *files]))
+'@ | python -
+```
+
+Também executados, exit 0: os **39/39 testes Core** do §10; scripts serviço (com caminho explícito do gamemode), painel F7 e revisão F7; `tsc --noEmit --pretty false`; webpack **com `DEPLOY_PLUGIN=false` e `ZIP_PLUGIN=false` no ambiente exclusivo do subprocesso**, sem instalação; reverse-check 007/008; diff-check e igualdade byte a byte dos scripts `source`/overlay. O teste de serviço usa catálogo incompleto e continua avisando forms ausentes/reset de classe pendente na fixture; seu sucesso não comprova load order real.
+
+### Hashes finais dos artefatos novos
+
+| Artefato absoluto | SHA-256 bruto |
+|---|---|
+| `C:\Code\Aetherius - Servidor Local\source\server\gamemode\werewolf\client.js` | `24e5d2e502269fee4068fbe03231bc6c4da650a568263756a326621dd8ca23d2` |
+| `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural\power-input.js` | `d165f5015ad21d379cb4da5d6edacee80bdc7447371cf1aadcff25f3426d11d4` |
+| `C:\Code\Aetherius - Servidor Local\client-source\client\src\sync\appearance.ts` | `fb85747284d8581bd3e91c25fc3992e61c17ded9740e4ae784579cecaede770f` |
+| `C:\Code\Aetherius - Servidor Local\client-source\client\src\services\services\loadGameService.ts` | `909a1c8d13bfb12fb9f0d8d1a0bcb19c392a396c7fa7520a6a003a0eddb6a290` |
+| `C:\Code\Aetherius - Servidor Local\client-source\build\dist\client\Data\Platform\Plugins\skymp5-client.js` — compilado, **não instalado** | `faa4d24900f2490ec5d9c979499ddfc2c5b6cfb3480f2e7413e809be5e4307cd` |
+
+**Pendências:** revisão cruzada de outro modelo pelo coordenador, publicação/consolidação no Acervo e teste de motor/multiplayer posterior. Testar Z/Anel com spellCast ausente e duplicado, vanilla/aeth e retorno; login de raça não nórdica, vampiro e criatura preservando grants pessoais; reconexão após aparência/editor/helmet; verificar nome/prata com observadores. Nenhum passo exige adotar a base oficial. A integração no runtime e a instalação no MO2 não foram executadas neste despacho.
+
 ## Revisao Terra High
 
 Revisão independente por Codex, papel Terra High, em 17/11/2026; parecer original de Sol High acima. Examinei as árvores oficiais em `C:\Code\Aetherius - OFICIAL\aetherius-server-main` e `C:\Code\Aetherius - OFICIAL\aetherius-client-main` (versão declarada v0.42.0, sem atribuição adicional de commit), o pacote `C:\Code\Aetherius - New Systems\Sobrenatural\AETHERIUS - LOBISOMEM 14-11 - KDU`, e o laboratório `C:\Code\Aetherius - Servidor Local` HEAD `0e4dd84ee56a03e65ce637891ee00c069002bfbc` e `client-source` HEAD `f57ec7de9cbebd09c61acef78690efe0eaabd5b3`. Não iniciei jogo ou servidor; conclusões de código não demonstram renderização ou sincronização no motor.
@@ -324,3 +399,81 @@ Revisão independente por Codex, papel Terra High, em 17/11/2026; parecer origin
 **Testes repetidos:** em O-S `node --test server/gamemode/werewolf/tests/werewolf.test.cjs`: **29/29**, exit 0. Em `C:\Code\Aetherius - Servidor Local`, a seleção local de §10 (werewolf, formas, aparência, transformação forçada, revisão 3 e origem): **130/130**, exit 0. Ambos usam mocks, não validam nativo, visual, rede ou produção. Confirmei também SHA-256 bruto igual de `L-S\server\gamemode\werewolf-service.js` e seu overlay: `C785CCEC45335BA797AEE6392D0101DBBAF054A7861417117DBD7A1AFD2DF493`.
 
 A aprovação deste parecer não aprova a integração futura; faltam decisão do coordenador/dev, diff híbrido revisado e testes em jogo com dois ou mais jogadores. Nenhuma edição foi feita nos espelhos oficiais, servidor, cliente ou modpack; consolidação no Acervo fica com o coordenador.
+
+## Revisao Terra do porte
+
+Revisão independente por Codex/Terra High, 17/11/2026. Base local `C:\Code\Aetherius - Servidor Local` HEAD `60e991b`, commits de servidor `cb84cad`, `fefdf3b`, `87835ed` e docs `60e991b`; `C:\Code\Aetherius - Servidor Local\client-source` HEAD `444bd6a`, incluindo `e1fdf9d`. Referência oficial v0.42 nas árvores `C:\Code\Aetherius - OFICIAL\aetherius-server-main` e `aetherius-client-main`, sem commit verificável. A análise refere-se ao código/fixtures, não a resultado em jogo.
+
+**Veredito: REPROVADO para integração do porte como está.** A entrada Z passa pelo dispatcher quando ele está ativo, mas há caminho alternativo quando ausente; a sincronização racial também remove spells sem verificar outras origens. Os testes e o build passaram, porém não cobrem essas condições. A decisão de manter a base local continua válida; as correções exigem nova revisão independente.
+
+### Achados
+
+1. **P1 — evento de voz pode iniciar a fera sem dispatcher.** `source\server\gamemode\werewolf\client.js:33`–`:43` agora envia `cast` ao canal de fera no `actionVoiceFire`. Em `source\server\gamemode\werewolf-service.js:316`–`:325`, se `mp.__aetheriusPowerActions` estiver ausente, o mesmo `cast` cai no fallback e chama `start` diretamente, sem o nonce/sequência, proposta nativa pareada em 750 ms, checagem de equipamento e locks do dispatcher. A inicialização do serviço de fera está em `source\server\gamemode\phase0-basic.js:54`, enquanto o dispatcher é instalado depois no boot do Sobrenatural (`supernatural-service.js:287`–`:289` e `phase0-basic.js:427`–`:432`); não foi medido se a janela de boot é alcançável por jogador ou se falhas permitem runtime parcial. Reprodução independente em Node, sem disco: serviço com ator online/vivo, poder conhecido, keyword de lobisomem, `interval:false`, `registryFile:null` e dispatcher ausente; chamada `mp._aetheriusBeast(1,'cast',0x92c48)` retornou **true**, fase **turning**. Quando dispatcher está presente, a verificação de `:317` encaminha `cast` a `observe`, que não transforma, e `power-input.js:116`–`:128,145`–`:167` exige comando e proposta com gates. Corrigir ou delimitar explicitamente o modo fallback para garantir que a nova voz no produto completo falhe fechada quando o dispatcher obrigatório não está disponível; testar boot/falha e chamada forjada, além do fluxo ativo.
+2. **P1 — limpeza racial remove magia de outra origem quando o mesmo FormID é racial de outra raça.** `C:\Code\Aetherius - Servidor Local\client-source\client\src\sync\appearance.ts:214`–`:227` constrói `others` a partir das spells de outras raças e remove/dissipa toda spell possuída que não conste na raça atual; não consulta autoria ou se ela também foi recebida por classe, mod ou outra origem. O teste `overlays\sobrenatural\teste-aparencia.cjs` verifica preservação da spell pessoal 900 que *não* pertence a outra lista racial, e por isso não cobre colisão. Reproduzi carregando em memória a fixture real do teste: raça atual nórdica, magia 300 presente por fonte independente e também em outra raça jogável; `syncPlayerRacialSpells(0x13746)` retirou 300 (`removidas: [300]`). Isso prova a remoção pelo cliente sob o cenário de colisão, não que uma spell específica instalada no modpack tenha essa sobreposição. O requisito de conservar grants pessoais/origem impede assumir que todo ID dessa lista é descartável; é necessária uma política de autoria/compatibilidade revisada e teste com IDs sobrepostos, incluindo mudança para criatura e retorno. O código não remove perks diretamente; os testes de Core passaram, mas não provam proteção das spells de origem compartilhada.
+
+### Demais verificações
+
+- Em instalação completa, o novo `power-input.js:21`–`:49` limita `actionVoiceFire` a ator local e às duas formas da fera e envia `activate` usando permit; 250 ms de deduplicação local e gates do servidor permanecem. A evidência nativa ainda é entrada validada, não atestado criptográfico de uma tecla real. Confirmei igualdade SHA-256 entre `source` e overlay para `werewolf/client.js` (`24E5D2E5...8CA23D2`) e `supernatural/power-input.js` (`D165F501...26D11D4`).
+- A fila `appearance.ts:241`–`:271` mantém geração, readback, espera e ausência de rosto humano na criatura; `loadGameService.ts:9`–`:15` cancela geração e tenta liberar headparts antes do load, com fallback tolerante. Erro de sincronização racial ainda é logado e o callback recebe sucesso (`appearance.ts:247`–`:251`), portanto sucesso do ACK não prova que todas as spells foram reconciliadas. CTD nativo e atraso real continuam sem teste em motor.
+- Não houve alteração do serviço de fera/journal B1/forçada nos commits de código do porte, e as suítes correspondentes passaram. A igualdade de comportamento em runtime e grants/perks após sequência completa ainda requer teste humano; o achado 2 limita a alegação de preservação das origens de spells.
+- Não encontrei literais das três keywords nos quatro arquivos alterados inspecionados; payload de `activate` carrega geração, nonce, sequência e FormID, não keyword. Isso é conferência do delta, não auditoria de todos os canais.
+- Voz, sync racial e liberação antes do load são os deltas específicos identificados no parecer comparativo e foram portados; a afirmação de que *nada* oficial ficou de fora exige inventário de todos os módulos/release, não demonstrado aqui. O escopo do trabalho preserva a base local; não inferir equivalência integral com v0.42.
+
+### Testes e build independentes
+
+Na raiz `C:\Code\Aetherius - Servidor Local`, a seleção de §12 (`teste-*.cjs` com `node:test`, mais werewolf e magic) retornou exit 0: **252 testes, 252 pass, 0 fail/cancelled/skipped/todo**. Na raiz `source\server\gameplay\core`, os cinco arquivos Core de §10 retornaram exit 0: **39 testes, 39 pass, 0 fail/cancelled/skipped/todo**. `teste-servico.cjs` com diretório de gamemode, `teste-painel-f7.cjs` e `teste-revisao-f7.cjs` imprimiram `OK` e retornaram exit 0 individualmente.
+
+Em `client-source\client`, `npx tsc --noEmit --pretty false` terminou exit 0 e `npx webpack` com `DEPLOY_PLUGIN=false` e `ZIP_PLUGIN=false` terminou exit 0, `webpack 5.94.0 compiled successfully`; o bundle foi gerado no diretório de build local, sem deploy nem instalação no MO2. Os testes são mocks; nenhum servidor, jogo, PG ou runtime real foi iniciado. Permanecem correções/revisão dos achados, validação de Z e poderes raciais com observadores, e publicação pelo coordenador.
+
+
+## 13. Correção dos P1 da revisão Terra do porte — 17/11/2026
+
+Autor: Codex, papel Sol High. Despacho `task_4f372fcde583` / `ctx_2b0bbc745e54`; o parecer independente anterior da Terra foi **REPROVADO**, e ambos os achados foram aceitos. Este registro descreve o candidato posterior; sua confirmação cabe a outro modelo. Não houve adoção da base oficial, alteração de MO2, instalação/runtime ou jogo.
+
+### P1 voz: reprodução convertida em regressão e bloqueio fechado
+
+Commit raiz L **`b682f613d92f48d4d9d5775bbaef0f5574281ca4`**. Em `L-S/server/gamemode/werewolf-service.js:316`, o canal `_aetheriusBeast` agora só delega para um dispatcher com `observe` disponível; **não existe fallback de cast/race/reached no canal cliente**. Ausência ou instalação parcial devolve false, inclusive durante boot. APIs internas `start/finish` continuam para o servidor (compulsão/F7), e a antecipação vanilla continua no método `reached`, acessível pelo dispatcher ativo.
+
+Em `L-S/server/gamemode/supernatural/power-input.js:104,117,152,162,212`, o dispatcher exige ser a API atualmente registrada e não estar descartado. `dispose` invalida callbacks/requisições antigas, remove sua referência global e restaura o evento anterior somente se ainda for seu. Assim, até uma proposta nativa válida anterior à retirada do dispatcher deixa de autorizar um comando novo.
+
+Quatro regressões em `L/overlays/sobrenatural/teste-porte-voz.cjs:63`: dispatcher ausente, parcial, descartado e referência antiga tentando reabrir canal. Antes da correção, **3/12 falharam** (inclui o cast que iniciava turning e o callback que aceitava ready após dispose); depois, **12/12 passaram**. O recorte com formas/revisão 3/base kdu passou **95/95**. A suíte kdu continua com 29 casos, agora explicitamente adaptados: ciclo interno usa `start/reached/finish`; os antigos relatos de raça passaram a verificar recusa, e os testes reais de protocolo ficam na suíte de voz/dispatcher. Não se inseriu um dispatcher permissivo fictício para manter o fallback nos testes.
+
+### P1 origem racial: arbitragem e correção conservadora
+
+Pergunta ao Opus `msg_6a9bcde856f5`; resposta `msg_eedf9ea2c91b`: **preservar toda presença preexistente ou ambígua, inclusive legado nórdico do save; retirar somente adições comprovadas sem outra origem atestada; não ampliar contrato de origem/nativo**. A limpeza desses legados é pendência dependente de evidência, e fontes externas posteriores fora do protocolo mantêm a limitação já aceita pelo dev.
+
+Commit cliente L-C **`33953e1355d213ee119f7c27d96eb5a571f944d0`**; commit raiz L **`5d3c2164e5b3a8ac8b5f52f74f215d7c49c1627e`**, patch incremental `L/overlays/cliente-local/009-racial-origin-conservative.patch` após 008.
+
+- `L-C/client/src/sync/appearance.ts:197–245` substitui a varredura destrutiva de outras raças por ledger racial em memória. Autoria só é registrada quando a magia estava ausente, nosso `addSpell` retornou true e a leitura confirmou presença. Throw/false/no-op, presença anterior ou adição nativa já observada não viram autoria nossa.
+- Ao trocar raça, só se retira uma entrada desse ledger que não seja desejada pela raça atual e não tenha origem externa atestada. Só se dissipa depois de conferir ausência após a remoção. Habilidades compartilhadas entre duas raças são conservadas enquanto desejadas.
+- `noteExternalSpellGrant` retira a prova racial e protege a presença ao observar um AddSpell externo. `L-C/client/src/services/services/spSnippetService.ts:199–210` chama esse observador no **caminho existente** de AddSpell do servidor para o jogador local, incluindo os grants que vêm do ledger Sobrenatural. Reutiliza argumentos já desserializados; não adiciona mensagem, propriedade pública, keyword ou extensão nativa. Até resultado externo ambíguo é protegido conservadoramente.
+- Cancelamento de identidade/load/reconexão limpa a prova em memória. O que sobreviver passa a ambíguo e não é adotado no login; não se transporta ownership entre personagens nem se persiste FormID runtime como identidade durável. Legados continuam presentes até existir prova suficiente de origem.
+- Não existe visão universal das aquisições feitas diretamente por mods fora desse caminho. Uma aquisição duplicada posterior e não observável pode continuar indistinguível da adição racial, conforme limitação explicitamente aceita; não foi prometida proteção nativa universal.
+
+A reprodução da Terra foi adicionada antes da correção: **1/11 falhou**, pois a magia pessoal 300 também listada em outra raça era removida. Depois, **17/17 casos de aparência passaram**. Incluem 300 preservada sem remove/dispel, criatura→retorno retirando só 200/400 comprovadas, spell própria compartilhada, perda conservadora da prova no load, adição nativa/false ambígua e **AddSpell pelo SpSnippetService real** para a colisão adquirida depois da adição racial. A TypeScript inicialmente recusou iteração direta de Map no target existente; foi usada `Array.from`, sem mudar target/tsconfig.
+
+### Validação integrada e limites
+
+Após os dois P1 e a mudança D3 de alimentação recebida no mesmo trabalho, bateria ampla da raiz L: todos os `overlays/sobrenatural/teste-*.cjs` exceto os três scripts standalone, mais werewolf, magic, survival-service, survival-effects e skysocial-service: **381/381**, 18 suites, 0 fail/cancelled/skipped/todo, exit 0. Core: **39/39**, conforme os cinco comandos do §10. Serviço/F7/revisão F7 imprimiram OK; TypeScript e webpack sem deploy/zip passaram. Espelhos source/overlay byte-idênticos e reverse-check 009 aprovado.
+
+Uma execução intermediária retornou 352/353 porque o trabalho paralelo da HUD vertical ainda não tinha ajustado o teste da barra horizontal. O commit independente Terra `8060a10` atualizou o teste para height/0/feral; a bateria final de 381 passou com esse commit presente. Nenhuma expectativa da HUD foi editada por este autor para obter o resultado.
+
+Hashes finais (brutos):
+
+| Artefato | SHA-256 |
+|---|---|
+| `L-S/server/gamemode/werewolf-service.js` e espelho | `f30e53284dc9bef75935ff855951263ca74f5a533c89f6181cb4e51cbe4ba5d4` |
+| `L-S/server/gamemode/supernatural/power-input.js` e espelho | `a4477752fac48701e228f9147ec886fc0f10bc1f5a5009b92e9ba1873cda82e7` |
+| `L-C/client/src/sync/appearance.ts` | `1d39a461ad7d448064c04a675dd210ea5b10b85bb28e81c5d4868dadba395ca4` |
+| `L-C/client/src/services/services/spSnippetService.ts` | `3d26302acb84506223fb0670e894b6afd9c0f8a2b17f49fdf45db3c950846606` |
+| `L-C/build/dist/client/Data/Platform/Plugins/skymp5-client.js`, inclui também HUD Terra `7c5601a`, **não instalado** | `955b534355c38694860a123c45d721c15661987205636aaa0a8aff42309658c4` |
+
+Pendente: nova confirmação Terra destes dois P1, limpeza de legados raciais ambíguos quando houver evidência, consolidação no Acervo e roteiro de motor/multiplayer. A aprovação conservadora do Opus define a política; não substitui revisão independente do código. A investigação está em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\investigacoes\INVESTIGACAO_17-11_porte-voz-origem-racial.md`.
+
+## Reconfirmação Terra — P1 voz e P2 origem racial
+
+Revisão independente Terra High dos commits `b682f61` e `5d3c216`, cliente `33953e1`, com base atual do servidor `2a5434e` e posteriores `f4236da`/`1088d0b` de vinheta; não houve jogo ou instalação. **Veredito: confirmados no escopo dos testes, com limites em jogo e política conservadora registrada.**
+
+- P1: `source\server\gamemode\werewolf-service.js:316`–`:321` recusa quando dispatcher/observe ausente, e `supernatural\power-input.js:162`–`:163` recusa dispatcher obsoleto/descartado. Reexecutei minha reprodução anterior em memória com lobisomem online e poder conhecido: `dispatcher: false cast: false sessions: 0` (antes `true`, turning). As APIs internas do servidor continuam distintas; testes de voz, gates e referência descartada passaram.
+- P2: `client-source\client\src\sync\appearance.ts:201`–`:235` só remove adições raciais demonstradas, preserva presentes/ambíguas e protege concessão externa observada no caminho `spSnippetService.ts:198`–`:206`. Reexecutei minha reprodução anterior com magia 300 prévia também pertencente a outra raça: `permanece: true removidas: []` (antes era removida). Legados ficam preservados, e concessões posteriores fora do canal observável continuam limitação explicitamente aceita; não extrapolar para toda origem de mods.
+- A bateria ampliada após vinheta foi **384/384**, 18 suites, 0 falhas, e Core **39/39**; serviço/F7/revisão F7 retornaram 0 e OK. `tsc --noEmit --pretty false` e webpack 5.94.0 sem deploy/zip retornaram 0; bundle não instalado. Verificação em motor e reconexão reais continuam pendentes.

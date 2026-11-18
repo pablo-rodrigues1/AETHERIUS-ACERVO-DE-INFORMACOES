@@ -94,3 +94,11 @@ Opus arbitrou R2 como aprovada com ressalvas e aceitou correção de #2/#3/#4: `
 ### Residual R2 #2 — 17/11
 
 Terra reconfirmou #3/#4/retry e encontrou callback tardio extrapolando offlineAt. Arbitragem Opus implementada em `a35b0e8`: fechamento limitado a min(now, offlineAt), reentrada observada sem conservar o marcador antigo. **314/314 Node + serviço/F7/revisão-F7 exit 0**, incluindo três regressões novas. Falta confirmação independente apenas deste residual; D7, criaturas/jogo, decisões abertas e consolidação no Acervo continuam com o coordenador. Detalhes em ETAPA-3, seção residual R2; sem cliente/runtime/MO2/jogo nesta rodada.
+
+
+## 17/11 — pendências após os P1 do porte e D3
+
+- Reconfirmação Terra de `b682f61` (dispatcher obrigatório) e `5d3c216` / cliente `33953e1` (autoria racial). O candidato inicial do porte foi reprovado; não herda aprovação da comparação histórica.
+- **Legados raciais ambíguos:** Opus autorizou conservar toda presença preexistente/ambígua, inclusive habilidades nórdicas erradas do save. Não há remoção por mera lista de outra raça; limpeza depende de evidência de autoria. Aquisição externa posterior fora do caminho observado mantém a limitação aceita, sem contrato nativo ampliado.
+- Revisar alimentação `b4d161c` e testar menu direto sem consentimento, ambos sem elmo e capuzes de mods. Flag default false mantida, ativação depende do dev; D7/quarentena manual continuam.
+- HUD vertical Terra aprovada por Sol somente em código/prévias: falta avaliação visual do dev, CEF real, escalas e colisão com HUDs/cenas claras. Sem instalação neste lote. Detalhes/hashes em COMPARACAO §13 e ETAPA-3; consolidar Acervo.

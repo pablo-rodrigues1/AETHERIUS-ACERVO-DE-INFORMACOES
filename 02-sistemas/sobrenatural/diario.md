@@ -1,17 +1,5 @@
 # Diário — Sistema Sobrenatural
 
-## 2026-11-17 — Sol High, D7 candidata
-
-- Poção `0ec39d2`: recibo privado de EatItem por unidade, débito idempotente quando rastreada e descarte em falha PG/JSON. Consumo fora do ledger conserva +50 quando a consulta PG confirma a condição. Caiu durante o processamento, o boot não reaplica.
-- Alimentação `2088225`: HP e cooldown preservados, observações por ator, encerramento automático e crédito de sangue passando por último. Flag true só em `config/local.env` ignorado, default false. Runtime ainda precisa receber o gamemode candidato. Bateria 410/410 nos dois modos, Core 39/39 e scripts serviço/F7 OK. Revisão externa da D7 e teste em jogo pendentes.
-- Documentação local: `8225ac6`. [Etapa 3 e revisão](etapa-3-vampirismo-mecanicas.md).
-
-## 2026-11-17 — D7, decisão do dev e arbitragem de saúde
-
-- O dev aceitou perder item ou efeito se houver falha ou dúvida sobre o crédito de sangue. A ativação da alimentação foi autorizada só no laboratório, após a implementação da D7, com código desligado por padrão.
-- A triagem Sol High registrou que o ledger da poção pode concluir antes de confirmar a baixa nativa. Na alimentação, dano ou cura podem ocorrer antes de o journal registrar o resultado. Sessões legadas em SETTLING também podem ter gravado sangue sem recibo individual.
-- O destino das alterações de vida e do saldo legado foi encaminhado ao coordenador. O servidor local segue com o código anterior. Evidência e decisão registradas no commit local `2a5434e`.
-
 ## 2026-11-15 — Opus 5.5 (orquestrador)
 - Início do sistema. Lidas as abas "Maldições - Informações" e "Maldições - Progressão" da planilha; transcrição em `ESPECIFICACAO.md`.
 - Criados `AGENTS.md` (raiz), `RETOMADA.md`, `PLANO.md`.
@@ -200,3 +188,35 @@
 - Sol High comparou oficial v0.42.0 × base kdu 14/11 × nossa versão: o `werewolf-service.js` oficial é idêntico ao kdu; nossa versão é extensão endurecida. Oficial acrescenta só `actionVoiceFire` no client.js; fonte TS oficial sem `SetRace`. Recomendação: **híbrido** (base v0.42.0, serviço de fera único = nosso, porte seletivo, mescla manual do cliente).
 - Terra High revisou e **confirmou** (29 testes oficiais, 130 locais), com ressalvas: rebase revisado, validar entrada Z e testes em jogo; estimativa de horas não é garantia.
 - Integração aguarda autorização do dev. Relatório: `docs/COMPARACAO_lobisomem-oficial-v0.42.md`.
+
+## 2026-11-17 — Porte autorizado sem adotar base oficial
+
+- Decisão posterior do dev: manter **nossa solução** e portar apenas correções oficiais confirmadas; substitui a recomendação histórica de base híbrida. Sol High implementou voz Z no comando validado (`cb84cad`), habilidades raciais mescladas com fila/SetRace (`fefdf3b`, cliente `e1fdf9d`) e liberação de headparts antes do load com invalidação de callbacks (`87835ed`, cliente `444bd6a`).
+- Mantidos marker UUID/seq, nonce/geração/gates, serviço de 403 linhas, journal/B1, compulsão e F7. Prata/SkySocial/seis chaves comuns já coincidiam com a lógica oficial; nenhuma segunda aplicação nem mudança de `.env`.
+- Validação: **252/252 Node**, incluindo 29 kdu adaptados e 18 casos novos; **39/39 Core**; serviço/F7/revisão F7; TypeScript e webpack sem deploy; reverse-check 007/008 e igualdade dos scripts source/overlay. Bundle `faa4d24900f2490ec5d9c979499ddfc2c5b6cfb3480f2e7413e809be5e4307cd`, compilado e **não instalado**; sem servidor/jogo/MO2/runtime.
+- Revisão independente do porte e testes humanos permanecem pendentes. Comandos, hashes, caminhos e limites em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\COMPARACAO_lobisomem-oficial-v0.42.md`, §12; etapa/retomada atualizadas. Consolidação no Acervo pelo coordenador.
+
+
+## 2026-11-17 — Correções do porte, D3 e revisão independente da HUD
+
+- Sol aceitou os dois P1 da Terra. `b682f613d92f48d4d9d5775bbaef0f5574281ca4` remove fallback de eventos sem dispatcher e invalida referências antigas descartadas. `5d3c2164e5b3a8ac8b5f52f74f215d7c49c1627e` / cliente `33953e1355d213ee119f7c27d96eb5a571f944d0` introduz autoria racial conservadora, por arbitragem explícita do Opus: legados/ambiguidades preservados, só adições próprias comprovadas são removíveis; AddSpell pelo caminho já existente do servidor protege origem externa. Sem contrato nativo novo. Investigação em `docs/investigacoes/INVESTIGACAO_17-11_porte-voz-origem-racial.md`; relatório COMPARACAO §13.
+- Decisão do dev para D3: Beber Sangue sem consentimento, direto pelo menu X autenticado, ambos sem elmo; capuz permitido. `b4d161c8a63553f0dfeca9a3defd0d1ac7f0aae8` retira reply/UI de consentimento, cancela convites legados no boot e classifica equipamento server-side por records/keywords/EditorID, incluindo capuzes blindados conferidos via houseCARL somente leitura. Preserva flag false, 2 m, 60 min/vítima, PvP/zonas, exclusividade e journal/quarentena. Casos ambíguos e tabela de amostras documentados em ETAPA-3/DECISOES.
+- Sol revisou independentemente a HUD vertical Terra (`7c5601a`, raiz `8060a10`) somente em leitura: **aprovada em código/prévias**, sem bloqueante; contrato e pastas MeridianUI preservados, 0/30/100 em 1280×720 e 60 em 1920×1080 inspecionados, CEF/motor/colisões reais pendentes. Parecer próprio em ETAPA-3.
+- Bateria final **381/381**, Core **39/39**, serviço/F7/revisão F7, TypeScript e webpack sem deploy passaram. Bundle final `955b534355c38694860a123c45d721c15661987205636aaa0a8aff42309658c4`, compilado e não instalado. Oficial/MO2/runtime/jogo intactos. Restam reconfirmação Terra dos P1, revisão da alimentação, legados dependentes de evidência, Acervo pelo coordenador e testes humanos.
+
+## 2026-11-17 — D7, decisão do dev e arbitragem de saúde
+
+- O dev autorizou perder item/efeito para evitar crédito de sangue em qualquer dúvida. A flag de alimentação poderá ser habilitada só no laboratório após implementar a regra.
+- Triagem Sol High em `1088d0b`: hook da poção ocorre antes da baixa nativa e o ledger PG não comprova remoção daquele evento. Beber Sangue pode alterar a vida antes de o journal conseguir registrar o resultado. O legado também pode ter gravado sangue antes de SETTLED.
+- Em arbitragem com o coordenador: destino de dano/cura e crédito legado possivelmente aplicados. Ver `ETAPA-3_vampirismo-mecanicas.md`. Apenas documentação nesta triagem.
+
+## 2026-11-17 — Sol High, D7 candidata
+
+- Poção `0ec39d2`: recibo privado de EatItem por unidade, débito idempotente quando rastreada e descarte em falha PG/JSON. Consumo fora do ledger conserva +50 quando a consulta PG confirma a condição. Caiu durante o processamento, o boot não reaplica.
+- Alimentação `2088225`: HP e cooldown preservados, observações por ator, encerramento automático e crédito de sangue passando por último. Flag true só em `config/local.env` ignorado, default false. Runtime ainda precisa receber o gamemode candidato. Bateria 410/410 nos dois modos, Core 39/39 e scripts serviço/F7 OK. Revisão externa da D7 e teste em jogo pendentes.
+
+## 2026-11-17/18 — Opus 5.5: fechamento da rodada de código
+- Dev: não adotar o lobisomem oficial; portar só correções (feito e aprovado após 2 P1). Beber Sangue sem consentimento, exige ambos sem elmo (capuz ok). D7 decidida: "na dúvida não credita" (item pode sumir sem sangue; nunca sangue sem consumo). Barra de sangue vertical estilizada; vinheta vermelha em Sede Crítica (≤30 até >30); batimento = heartbeat vanilla `UIHealthHeartbeatALP` em loop contínuo.
+- Revisões: Terra aprovou D7 com ressalvas (PG/áudio reais em jogo); Sol reprovou o hot-reload `93d991a` (dois sons) → Terra `2fffaf9` → Sol aprovou. 415/415 por modo.
+- AGENTS.md: Sol High → `gpt-6.2-sol`.
+- Próximo: testes em jogo.

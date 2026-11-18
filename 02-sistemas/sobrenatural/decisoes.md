@@ -140,7 +140,7 @@ Detalhes de implementação e evidências ficam nos documentos de etapa (`ETAPA-
 
 - **D1 aberta:** `AETHERIUS_VAMPIRE_NEEDS_RESTORE=frozen` por padrão; alternativa `default`. Marcador PG conserva o retorno também offline. Não é decisão final do dev.
 - **D2 aberta:** `AETHERIUS_VAMPIRE_CRITICAL_EXIT=30` por padrão (entra ≤30, sai >30); alternativa de teste 35. Raio de visão 25 m; conversão configurável `AETHERIUS_SKYRIM_UNITS_PER_METER`, padrão aproximado 70/m, a validar em jogo.
-- **D3 aberta:** alimentação candidata com consentimento por padrão (`AETHERIUS_VAMPIRE_FEED_REQUIRE_CONSENT=true`), alternativa `false` apenas configurável. `AETHERIUS_VAMPIRE_FEED_ENABLED=false` por padrão; ativação depende de decisão do dev. Valores já definidos +100 sangue/+200 cura, −20% máxima não letal, 2 m e 60 min/vítima preservados.
+- **D3 parcialmente fechada pelo dev, 17/11 (via Opus):** alimentação **sem consentimento** da vítima. Vampiro seleciona Beber Sangue no menu X autenticado e inicia direto se **ambos estiverem sem elmo**; capuz permitido. Servidor valida equipamento/records no início, recusa elmo com aviso claro ao vampiro e falha fechada quando não consegue classificar. `AETHERIUS_VAMPIRE_FEED_REQUIRE_CONSENT` foi retirada do leitor; convites legados são cancelados no boot e não há feed-reply/UI de consentimento. `AETHERIUS_VAMPIRE_FEED_ENABLED=false` permanece, ativação depende do dev. +100 sangue/+200 cura, −20% máxima não letal, 2 m, 60 min/vítima, PvP/zonas, exclusividade e journal/quarentena preservados. Critério de capuz/elmo e ambiguidades documentados na seção D3 de ETAPA-3; não é regra por nome enviado pelo cliente.
 - **D7 — bloqueio aceito pelo Opus em nome do dev:** a Poção de Sangue não tem transação atômica entre JSON/reserva, baixa nativa e ledger PostgreSQL; não ampliar contrato nativo neste despacho e não aceitar garantia menor para ela. Alimentação compartilha a mesma fronteira Health/JSON; autorizado só o candidato desativado, com intenção durável, bloqueio conservador e reconciliação manual em falha/crash, SEM alegação de atomicidade. Ativar a flag depende do dev. Evidências, opções e limites em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\ETAPA-3_vampirismo-mecanicas.md`, seções de 17/11.
 
 
@@ -152,3 +152,15 @@ O crédito antigo **+50 da Poção de Sangue continua ativo sem flag**, instalad
 ## 17/11 — arbitragem Opus do instante de saída (residual R2 #2)
 
 Ao fechar a reserva, usar `min(now, offlineAt)` quando existe ausência observada; sem ela, now. Reaparecimento observado liquida o segmento anterior até esse limite e abre um novo relógio sem offlineAt; não cobrar o gap desconhecido. Correção `a35b0e8` no servidor local, blood-reserve.js:78, regressões com callback atrasado e reentrada via tick/get. Decisão não altera D7 nem presume precisão física do socket. Evidência e limites em ETAPA-3, seção residual R2.
+
+## 17/11 — D7 decidida pelo dev: descartar o crédito em caso de dúvida
+
+O dev autorizou perda do item ou do efeito quando houver falha, crash ou resultado ambíguo. A Poção de Sangue só pode render +50 com consumo confirmado e crédito idempotente. Uma sessão de Beber Sangue interrompida deve terminar automaticamente sem recompensa em sangue, com registro da vida observada e sem replay. O dev autorizou habilitar a flag apenas no laboratório depois de implementar a D7. O padrão do código continua false.
+
+Triagem Sol High sobre o servidor local `1088d0b`: a política está decidida. A aplicação ao caso de vida já alterada em Beber Sangue foi encaminhada ao coordenador antes de implementar. O ledger da poção não confirma por si só a baixa nativa daquele evento. Ver a análise de fronteiras no relatório da Etapa 3.
+
+## 17/11 — D7 implementada no candidato local
+
+A arbitragem do Opus confirmou o contrato da poção: o `EatItem` observado após a verificação de posse é evidência suficiente em processo vivo. Por evento, a poção rastreada exige a confirmação do débito com chave idempotente. Uma poção fora do estoque rastreado continua valendo após consulta PG bem-sucedida. Falha ou resultado incerto do PG ou da reserva descarta o crédito, sem replay. A cura continua sob o efeito do item.
+
+Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recuperação registra resultados confirmados ou desconhecidos e libera os participantes. O fluxo novo fecha o registro de HP e encerra a sessão antes do commit final do sangue. O dev autorizou a flag verdadeira em `config/local.env`; o código continua falso por padrão. Candidatos `0ec39d2` e `2088225`.
