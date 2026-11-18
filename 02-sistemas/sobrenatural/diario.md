@@ -254,3 +254,6 @@ O lote concluiu a integração do contrato v1, runa e sons no ESP (`a00899a`), i
 
 ## 2026-11-18 — Decisão do dev: entrega isolada do Aetherius UI
 - Registrada em DECISOES: a compilação final não leva nenhuma alteração do Aetherius UI fora do módulo Sobrenatural (HUD geral, menu radial, outros módulos). Auditoria das alterações fora de escopo (incl. 4 exceções de CSS da Etapa 1.4) fica como pré-requisito da compilação final.
+
+## 2026-11-18 — Terra: Ritual e ganho gradual
+- Cliente `b007e6e`, `82280b2`, `5589c91`, `c27afd4`; laboratório `ca52c0b`, `e081b52`, `a533441`. Tela no modelo da Bruxa, fechamento confirmado e ganho retargetável; testes 11/11 + 4/4. Revisão cruzada, CEF e jogo pendentes.
