@@ -42,7 +42,7 @@ Reaproveitar a infraestrutura da Reserva de Sangue (relógio de sessão `min(now
 
 ## 3. Selo (HUD)
 - **Centro inferior** da tela (exclusividade entre maldições: nunca coexiste com a barra de sangue).
-- ~48–56 px, baseado em `witch gauge.png`; **barra central em degradê** como na referência, enchendo de baixo para cima; violeta; segmentos apagados em cinza/branco/dourado; rachaduras e perda de brilho progressivas; pulsação sutil no crítico; **sem número nem tooltip**; só para Bruxa.
+- ~90 px em 1920×1080, proporcional à largura em 1280×720, baseado em `witch gauge.png`; **barra central em degradê** como na referência, enchendo de baixo para cima; violeta; segmentos apagados em cinza/branco/dourado; rachaduras e perda de brilho progressivas; pulsação sutil no crítico; **sem número nem tooltip**; só para Bruxa.
 - Interface apenas nas cópias `(LOCAL)` dos mods; nunca sobrepor pastas `MeridianUI`.
 
 ## 4. Nova tela: Ritual (TAB → Sobrenatural → Bruxa)
@@ -71,3 +71,8 @@ Sem instalação no MO2 e sem jogo até a rodada de testes.
 
 ## 7. Critérios de aceite
 Os da fonte §12, com: estágio V = −100% Magicka máx. e evento a cada 5 min; selo com degradê central; tela do Ritual com entidade e texto mínimo.
+
+
+## 18/11 — protótipo visual do selo
+
+Por solicitação do dev, foi preparado somente o componente visual baseado em `witch gauge.png`, sem integrar vínculo ou ritual. Em `C:\Code\Aetherius - Servidor Local\client-source`, o commit `e82ac03` ajusta para 90 px em 1920×1080 e 60 px em 1280×720, centro inferior com recuo 7vh; o patch 013 e 12 capturas estão no servidor local, commit raiz `f0bd86e`. O código usa um valor mock, preserva a arte e os estados, e não foi instalado no MO2. Teste visual automatizado 2/2; revisão cruzada e verificação em CEF/jogo da possível sobreposição com a HUD continuam pendentes.

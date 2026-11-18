@@ -1,5 +1,7 @@
 # RETOMADA — Sistema Sobrenatural
 
+> **18/11 — selo da Bruxa:** protótipo visual ajustado ao pedido do dev para 90 px em 1920×1080 e 7vh da borda inferior (`e82ac03`/`f0bd86e`); testes 2/2, revisão cruzada e jogo pendentes. Ainda não há mecânica de Vínculo implementada por este ajuste.
+
 > **18/11, Opus — Vínculo do Véu (Bruxaria) ESPECIFICADO E CONFIRMADO, NÃO INICIADO** por ordem do dev: ver `docs/ETAPA-4_bruxaria-vinculo-do-veu.md` (Sol: servidor/ritual/runa; Terra: selo, tela do Ritual, terror, áudio). Pendente só confirmar quem escolhe os ingredientes (suposição: servidor). Despachar apenas quando o dev mandar.
 
 > **18/11, Opus — RODADA DE CÓDIGO FECHADA; próximo passo = TESTES EM JOGO.** Todas as revisões cruzadas aprovadas (escopo de código): R1, R2, R3, porte v0.42 (P1/P2), Beber Sangue sem consentimento + regra elmo/capuz (D3), D7 "na dúvida não credita" (`0ec39d2`, `2088225`; flag ligada só em `config/local.env`), HUD vertical (`7c5601a`/`8060a10`), vinheta da Sede Crítica (`f4236da`, `1088d0b`), heartbeat vanilla `UIHealthHeartbeatALP 04DAAF:Skyrim.esm` em loop (`17ae47c`), hot-reload do storage (`93d991a` → `2fffaf9`, aprovado por Sol em `7e62f94`). Bateria: 415/415 em cada modo, Core 39/39, serviço/F7 OK. Sol High agora é **GPT-6.2** (`AGENTS.md`). Abertos: D1, D2, D4, D5, D6; XP de maldição, reset de classe, P10. Testes em jogo: instalar cliente novo no MO2, servidor local Stop→Build→Prepare→Start, cliente iniciado do zero, dois jogadores (roteiro em `docs/PENDENCIAS.md` §4 + áudio/vinheta/HUD/Beber Sangue).
