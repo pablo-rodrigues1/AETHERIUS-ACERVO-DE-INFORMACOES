@@ -244,3 +244,8 @@ Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo
 
 ## 2026-11-18 — Terra: apresentação do Vínculo
 - WAV PCM normalizado, Ritual mock v1, API visual de terror e selo sem anel preparados; integração e records com Sol. Cliente `ce281d6`; laboratório `8738b14`, `1561f68`, `0289e58`, `1159f11`. Testes 7/7; revisão cruzada, CEF e jogo pendentes. Detalhes e APIs em `etapa-4-bruxaria-vinculo-do-veu.md`.
+
+
+## 2026-11-18 — Ritual candidato e bloqueio de autoria
+
+`4b16eb5` implementa escolha e reserva das categorias, baixa nativa com conferência, transação PG e D7. O houseCARL recusou autoria in-place no perfil Qualidade por plugin inativo. Nenhuma escrita no ESP. O início do Ritual aguarda a runa.
