@@ -1,6 +1,6 @@
 # ETAPA 4 — Bruxaria: Vínculo do Véu e Sobrecarga
 
-**Data:** 18/11/2026 · **Autor:** Opus 5.5 (orquestrador) · **Status:** candidato local entregue. Compilação do addon, revisão cruzada e jogo pendentes.
+**Data:** 18/11/2026 · **Autor da especificação:** Opus 5.5 (orquestrador) · **Status:** candidato local de código entregue por Sol High e Terra High. Compilação do addon nativo, revisão cruzada e teste no jogo pendentes.
 
 **Fonte:** `C:\Code\Aetherius - New Systems\referencia\Aetherius_Sistema_Bruxaria_Vinculo_do_Veu.md` (especificação funcional), com as respostas do dev de 18/11 abaixo, que **prevalecem** sobre os itens marcados como "sugestão" na fonte.
 
@@ -51,7 +51,7 @@ Reaproveitar a infraestrutura da Reserva de Sangue (relógio de sessão `min(now
 - Texto **extremamente conciso**, ex.: "Ofereça 3 ingredientes diferentes. 5 minutos. +50 Vínculo."
 - 7 ingredientes como ícones: acesos se presentes no inventário, apagados se não.
 - Botão **Iniciar Ritual** ativo só com 3 categorias disponíveis; durante o ritual, progresso + **Cancelar**.
-- **Suposição registrada (não respondida pelo dev):** o servidor escolhe automaticamente as 3 categorias no inventário; sem seleção manual. Confirmar antes de implementar a UI.
+- **Decidido (18/11, S7):** o jogador escolhe as 3 categorias entre as que possui; o servidor valida.
 
 ## 5. Ritual (servidor)
 - Ingredientes — 3 **categorias** distintas: Coração Daedra; Pedra da Alma Negra (**cheia e vazia**); Carne animal (**todas as carnes cruas**); Pele animal (**todas as peles**); Livro de feitiço (**qualquer tomo**); Nightshade; Nirnroot. Mapear FormIDs via houseCARL (somente leitura).
@@ -96,7 +96,7 @@ Pedido do dev: aumentar de 80 para 90 px e baixar um pouco, preservando arte e e
 
 As doze capturas de `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo` foram regeneradas nos seis valores e ambas as resoluções; teste `node --test overlays/sobrenatural/teste-visual-vinculo.cjs` passou 2/2 e o reverse-check do patch passou. O fundo da prévia não contém a HUD do Skyrim: posição e eventual sobreposição das barras precisam de validação em jogo; não houve instalação no MO2 nem execução do jogo. Revisão independente pendente.
 
-## 8. Sobrecarga do Vínculo (adicionada ao plano em 18/11, NÃO iniciada)
+## 8. Sobrecarga do Vínculo
 
 **Fonte:** `C:\Code\Aetherius - New Systems\referencia\Aetherius_Implementacao_Sobrecarga_Bruxas.md`. Complementa as seções 1–7 sem alterar esgotamento, penalidades nem ritual normal.
 
@@ -136,10 +136,19 @@ As doze capturas de `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\pr
 ### 8.4 Distribuição planejada (acréscimo)
 Sol High: blocos/buffs/limite de criaturas, sacrifício de sobrecarga, olhos/nome/aura sincronizados. Terra High: estados de sobrecarga do selo (raios, capacete demoníaco), modo Sobrecarga na tela do Ritual, sussurros no cliente. Revisão cruzada.
 
+### 8.5 Decisões do dev sobre S1–S7 (18/11)
+- S1 ✅ mesma taxa linear acima de 100 (300→100 em 24 h online).
+- S2 ✅ blocos completos: `piso((vínculo−100)/50)`, limitado a 0–4.
+- S3 ✅ criaturas acima do novo limite permanecem até expirar; novas bloqueadas.
+- S4 ✅ sussurros = `whisper2_witch` + `whispering_witch`, só para a própria bruxa.
+- S5 ✅ mod de olhos não está no modpack: instalar **Miggyluv's Eyes v2.2 (Main Mod)**, Nexus 155332, e ativar nos perfis de teste. O autor bloqueou download direto (só via gerenciador/nxm): depende de o dev clicar "Mod Manager Download" no MO2; depois o orquestrador verifica (houseCARL) e ativa nos perfis.
+- S6 ✅ modo "Sobrecarga" na tela do Ritual com receita dobrada quando vínculo ≥100.
+- S7 ✅ **o jogador escolhe**: a tela do Ritual lista as categorias que ele possui (das 7) e ele seleciona quais 3 usar (na sobrecarga, as mesmas 3 categorias em dobro). Substitui a suposição "servidor automático"; o servidor valida a escolha.
+- **Olhos por raça (dev, 18/11):** quando a raça não tiver a variante pedida (ex.: Glow ausente para Orc/Khajiit/Argonian; Magic02 ausente para Argonian), usar a variante Magic mais próxima que existir para aquela raça. Detalhes do mod em `docs/INSTALACAO_olhos-miggyluv.md`.
 
 ### 8.6 Elegibilidade da Sobrecarga com drenagem fracionária
 
-Opus autorizou em 18/11 avaliar `99 < vínculo < 300` no início do ritual. O limiar inferior é configurável e resolve a janela instantânea do valor 100 em tempo online. A drenagem segue durante os 300 s e o resultado credita até 50 sobre o saldo projetado ao concluir, com teto 300. Blocos, bônus e apresentação continuam com as fronteiras fracionárias da §8.5. A UI usa `modes.overload.eligible` do [contrato v1](contrato-vinculo-do-veu.md).
+Opus autorizou em 18/11 avaliar `99 < vínculo < 300` no início do ritual. O limiar inferior é configurável e resolve a janela instantânea do valor 100 em tempo online. A drenagem segue durante os 300 s e o resultado credita até 50 sobre o saldo projetado ao concluir, com teto 300. Blocos, bônus e apresentação continuam com as fronteiras fracionárias da §8.5. A UI usa `modes.overload.eligible` do [contrato v1](CONTRATO_vinculo-do-veu.md).
 
 ## 18/11 — Servidor candidato, relógio e agenda de terror
 
@@ -149,6 +158,24 @@ Sol High implementou a base persistida `7dc6c23` e o agendamento `944b0c3` no re
 - `supernatural\veil-terror.js:24,61` agenda IV a cada 12–20 min online, com 35% sem evento, e V a cada 5 min, com evento. Guarda o último áudio e pensamento por sessão e grava o cooldown da tela preta antes de publicá-la. Uma gravação ambígua, cooldown vigente ou veto local da tela preta exige retorno seguro. A caixa de eventos é privada e transitória. A reprodução, a restauração da tela e os sussurros dependem da integração nativa do cliente.
 
 Resultados Node desta rodada: 24/24 de Reserva de Sangue, 4/4 de Vínculo e 3/3 do agendador. Os pontos de integração permanecem candidatos até revisão independente e rodadas de teste no jogo.
+
+## 18/11 — Ritual, inventário e bloqueio de autoria do plugin
+
+Candidato `4b16eb5` em `C:\Code\Aetherius - Servidor Local`. O patch 021 registra `ritual.status`, `ritual.start` e `ritual.cancel` em `source\server\ts\systems\aetheriusUiSystem.ts:153` e o serviço em `source\server\gamemode\supernatural-service.js:212`. `supernatural\veil-ritual.js:88,98,122,158` valida sessão, concessão, morte, movimentação (raio de 12 unidades a partir do início, incluindo troca de célula), combate observado e duração. Mantém uma reserva de FormIDs por execução, com nova verificação imediatamente antes da baixa. O limiar configurável `AETHERIUS_VEIL_OVERLOAD_START` começa em 99.
+
+Em `source\server\gamemode\supernatural\veil-materials.js:13`, os FormIDs estão qualificados pelo master `Skyrim.esm`: Coração Daedra `03AD5B`, pedras pretas `02E500` e `02E504`, Nightshade `02F44C`, Nirnroot `059B86`. houseCARL encontrou no perfil ativo 33 referências ALCH ao marcador `0A0E56:Skyrim.esm` e 28 MISC ao marcador `0914EA:Skyrim.esm`. O código resolve KWDA do vencedor e exclui leite, tiras de couro, couro refinado, placas de quitina e placas de pele. Exemplos conferidos: carne bovina `065C99:Skyrim.esm`, salmão `065C9F:Skyrim.esm`, javali `03BD14:Dragonborn.esm`, pele de lobo `03AD74:Skyrim.esm`, pele de cervo do vale `011999:Dawnguard.esm`. Tomos cobrem os BOOK que ensinam magia (`DATA` flag `0x04`, conforme `source\libespm\include\libespm\BOOK.h:18`), incluindo `0B3165:Skyrim.esm` e `000AF0:ccBGSSSE025-AdvDSGS.esm`. O catálogo não usa índices de runtime fixos para mods e CC.
+
+Em `veil-materials.js:86`, as baixas rastreadas usam uma transação PG e uma chave de ledger por Ritual e FormID. Uma única substituição de inventário nativo é conferida por leitura. Só a confirmação de baixa nativa **e** commit PG autoriza o crédito do Vínculo. PG, save nativo e JSON do Vínculo têm fronteiras de gravação distintas. Falha após a baixa pode perder material conforme D7, sem crédito nem replay. Cinco testes de Ritual invocam o serviço, incluindo disputas no mesmo Ritual, catálogo, fronteiras e resultado incerto.
+
+Runa apurada por houseCARL: `00000F:MasterSpellsRunes.esp` MGEF `FXSummonMassBodyHolderRune` aponta ao ARTO `00000E:MasterSpellsRunes.esp`, que usa `Magic\Runes\RuneConjuration02.nif`. É um efeito constante Self/Script sem VMAD. A criação da habilidade visual no ESP existente foi recusada antes de qualquer escrita. A sessão houseCARL está no perfil ativo `AETHERIUS - GRAFICO - QUALIDADE`, onde o plugin alvo não está ativo. Em `C:\modOrganizer\profiles\AETHERIUS - LOCAL\plugins.txt:255` et seq., o plugin alvo está marcado no perfil LOCAL. Nenhum record foi criado até aqui. O Ritual candidato registra as ações, mas recusa iniciar enquanto a runa estiver indisponível.
+
+## 18/11 — protótipo da sobrecarga do selo e decisão de cadência (Terra)
+
+Correção do dev: o capacete aberto deve evoluir de `witch gauge.png`, sem troca de sprite; placas, chifres e asas pertencem à mesma arte, com transições suaves em ambas as direções. A versão candidata em `C:\Code\Aetherius - Servidor Local\client-source\client\ui-core\modules\supernatural\veil-seal.js` e `veil-seal.css` separa a imagem original em duas metades e interpola deslocamento e expansão acima de 200, brilho violeta e raios acima de 100; `setValue` aceita 0–300. É protótipo visual: não está ligado à projeção v1, não foi aprovado em revisão nem em CEF/jogo e depende de validação artística quanto à abertura das placas e crescimento dos chifres. Commits do cliente: `850c082` (primeiro desenho, substituído), `d6ae059` (arte original em camadas). Patch incremental `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\014-selo-sobrecarga.patch`; capturas `vinculo-1920x1080-{100,150,200,250,300}.png` e sequência `transicao-00-100.png` a `transicao-16-100.png` em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo`. Teste `node --test overlays/sobrenatural/teste-visual-vinculo.cjs`: 3/3, cobrindo limites e reversão; os quadros são valores discretos, não uma prova visual de cada quadro interpolado. A prévia usa cenário simulado, sem jogo.
+
+Cadência inicial dos sussurros, decidida por Opus em resposta ao bloqueio e configurável para teste: primeiro após 30–90 s, depois a cada 3–6 min online, alternando `whisper2_witch` e `whispering_witch` sem repetir, volume baixo, somente a bruxa; adiar enquanto houver terror ou tela preta e parar ao chegar a ≤100, perder maldição ou encerrar sessão, sem acumular em reconexão. Ainda não implementado.
+
+O contrato `C:\Code\Aetherius - New Systems\Sobrenatural\docs\CONTRATO_vinculo-do-veu.md` v1 foi publicado por Sol após o início do protótipo. Conversão: FFmpeg disponível gera WAV PCM normalizado, mas seu formato xWMA é somente leitura (`D xwma`); tentativa de multiplexar retornou `Requested output format 'xwma' is not known`. Um WAV experimental `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\files\Sound\FX\Aetherius\Witch\whisper2_witch.wav` foi gerado; nenhum XWM ou record novo foi criado. houseCARL identificou `04DAAF:Skyrim.esm` como SoundMarker (SOUN), apontando para o SoundDescriptor `04DAAD:Skyrim.esm`; a reprodução e o encerramento não foram testados em jogo. Restam tela do Ritual, integração HUD/contrato, áudio, terror e sussurros; nenhuma integração funcional deve ser presumida.
 
 ## 18/11 — entrega de apresentação para integração (Terra; escopo reduzido por Opus)
 
@@ -170,17 +197,6 @@ O arquivo de respiração dura mais que a tela preta; sua interrupção ou dura�
 **API visual do terror:** `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\modules\supernatural\veil-terror-presentation.js:4`, CSS adjacente. `createVeilTerrorPresentation({notify, document?, container?})` devolve `thought(index)` (índice 0–9; chama `notify(texto)` para o integrador usar a notificação vanilla), `blackout(durationMs)` (1000–1500 ms preto e 1200 ms de retorno CSS), `clear()` (cancela timers e remove overlay) e `destroy()`; valores inválidos retornam `false`. O componente não toca som, não detecta contexto seguro e não recebe eventos de rede: Sol deve fazer as proteções, reproduzir e interromper sons, coordenar exclusão mútua, chamar limpeza em interrupção e implementar o retorno em caso de queda da página/sessão. A variante heartbeat de 10 s e a cadência dos sussurros também pertencem à integração.
 
 **Verificação:** `node --test overlays/sobrenatural/teste-visual-vinculo.cjs overlays/sobrenatural/teste-ritual-apresentacao.cjs` passou 7/7, cobrindo fronteiras/reversão, ausência de anel, seleção e quantidade dobrada, cancelamento, entrada inválida e limpeza de overlay. Prévia visual Orca em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo\`: valores 100/150/200/250/300 e 17 quadros 100→300→100, em 1280×720. O navegador local devolveu imagem corrompida quando solicitada captura maior; as capturas rotuladas 1920 foram retiradas, e o tamanho de 1920 não foi comprovado nesta rodada. As sequências são quadros de valores discretos, com transição CSS entre eles, não gravação contínua. `1561f68` contém tela, API de terror, prévia e testes. Revisão cruzada por outro modelo, verificação artística pelo dev, CEF real e testes em jogo ainda pendentes; não houve instalação nem jogo.
-
-
-## 18/11 — Ritual, inventário e bloqueio de autoria do plugin
-
-Candidato `4b16eb5` em `C:\Code\Aetherius - Servidor Local`. O patch 021 registra `ritual.status`, `ritual.start` e `ritual.cancel` em `source\server\ts\systems\aetheriusUiSystem.ts:153` e o serviço em `source\server\gamemode\supernatural-service.js:212`. `supernatural\veil-ritual.js:88,98,122,158` valida sessão, concessão, morte, movimentação (raio de 12 unidades a partir do início, incluindo troca de célula), combate observado e duração. Mantém uma reserva de FormIDs por execução, com nova verificação imediatamente antes da baixa. O limiar configurável `AETHERIUS_VEIL_OVERLOAD_START` começa em 99.
-
-Em `source\server\gamemode\supernatural\veil-materials.js:13`, os FormIDs estão qualificados pelo master `Skyrim.esm`: Coração Daedra `03AD5B`, pedras pretas `02E500` e `02E504`, Nightshade `02F44C`, Nirnroot `059B86`. houseCARL encontrou no perfil ativo 33 referências ALCH ao marcador `0A0E56:Skyrim.esm` e 28 MISC ao marcador `0914EA:Skyrim.esm`. O código resolve KWDA do vencedor e exclui leite, tiras de couro, couro refinado, placas de quitina e placas de pele. Exemplos conferidos: carne bovina `065C99:Skyrim.esm`, salmão `065C9F:Skyrim.esm`, javali `03BD14:Dragonborn.esm`, pele de lobo `03AD74:Skyrim.esm`, pele de cervo do vale `011999:Dawnguard.esm`. Tomos cobrem os BOOK que ensinam magia (`DATA` flag `0x04`, conforme `source\libespm\include\libespm\BOOK.h:18`), incluindo `0B3165:Skyrim.esm` e `000AF0:ccBGSSSE025-AdvDSGS.esm`. O catálogo não usa índices de runtime fixos para mods e CC.
-
-Em `veil-materials.js:86`, as baixas rastreadas usam uma transação PG e uma chave de ledger por Ritual e FormID. Uma única substituição de inventário nativo é conferida por leitura. Só a confirmação de baixa nativa **e** commit PG autoriza o crédito do Vínculo. PG, save nativo e JSON do Vínculo têm fronteiras de gravação distintas. Falha após a baixa pode perder material conforme D7, sem crédito nem replay. Cinco testes de Ritual invocam o serviço, incluindo disputas no mesmo Ritual, catálogo, fronteiras e resultado incerto.
-
-Runa apurada por houseCARL: `00000F:MasterSpellsRunes.esp` MGEF `FXSummonMassBodyHolderRune` aponta ao ARTO `00000E:MasterSpellsRunes.esp`, que usa `Magic\Runes\RuneConjuration02.nif`. É um efeito constante Self/Script sem VMAD. A criação da habilidade visual no ESP existente foi recusada antes de qualquer escrita. A sessão houseCARL está no perfil ativo `AETHERIUS - GRAFICO - QUALIDADE`, onde o plugin alvo não está ativo. Em `C:\modOrganizer\profiles\AETHERIUS - LOCAL\plugins.txt:255` et seq., o plugin alvo está marcado no perfil LOCAL. Nenhum record foi criado até aqui. O Ritual candidato registra as ações, mas recusa iniciar enquanto a runa estiver indisponível.
 
 ## 18/11 — sobrecarga visual intensificada (Terra, pedido do dev)
 
@@ -254,12 +270,11 @@ FormIDs de `Miggyluv's Eyes.esp`, na ordem Light / Dark / Glow. A leitura das DD
 - TypeScript do servidor e do cliente e webpack do cliente passaram sem deploy. Bundle em `client-source\build\dist\client\Data\Platform\Plugins\skymp5-client.js`, SHA-256 `F935C118CFFFC38FC138475266F4620239EBD3D3C884DCCA6D812259A532AB62`. Os sete patches 019–025 foram revertidos e reaplicados em cópia descartável, com igualdade de conteúdo de 17 arquivos e conferência SHA-256 dos 11 espelhos de módulos.
 - A configuração CMake offline encontrou MSVC e Windows SDK, mas parou em `find_package(CMakeRC)` em `source\server\CMakeLists.txt:9`. O addon novo não foi compilado. O arquivo de cache da tentativa foi retirado da pasta de build para não reutilizar `VCPKG_MANIFEST_INSTALL=OFF` em uma configuração posterior. Restam a compilação com as dependências presentes, revisão cruzada, reativação de Miggyluv no perfil de teste e a rodada em jogo/CEF com uma bruxa, um observador e um terceiro entrando depois. O servidor, o cliente de jogo e a instalação de ativos não foram executados.
 
-
 ## 18/11 — Fechamento após aceite e ganho gradual no selo
 
 Decisão do dev repassada por Opus. Somente `ritual.start` com `ok: true` e `ritual.active.id` autoriza a interface a fechar. A apresentação do Terra faz o fechamento. As interrupções e os 300 s seguem no servidor. A interface pode ser reaberta para consultar a execução. Erro ou timeout mantém a tela e consulta o status para recuperar o caso de resposta perdida.
 
-O servidor credita de uma vez depois de confirmar o consumo, preservando D7. O valor confirmado determina olhos, aura, Magicka e limite de criaturas desde o commit. A ligação do Sol continua em `C:\Code\Aetherius - Servidor Local\client-source\client\index.html:1347`. Cada novo alvo, inclusive cada fração da drenagem, usa `setValue(bond)`. A API do selo de Terra sobe em passos de 1 ponto quando o alvo supera o exibido em pelo menos 2 pontos, à velocidade inicial de cerca de 10 pontos/s. Durante os passos, atualizar o alvo mantém a subida enquanto ele superar o exibido. O primeiro snapshot e a restauração usam `setValue(bond, { immediate: true })` para cancelar qualquer animação e aplicar a projeção diretamente. O [contrato v1](contrato-vinculo-do-veu.md) mantém os mesmos campos.
+O servidor credita de uma vez depois de confirmar o consumo, preservando D7. O valor confirmado determina olhos, aura, Magicka e limite de criaturas desde o commit. A ligação do Sol continua em `C:\Code\Aetherius - Servidor Local\client-source\client\index.html:1347`. Cada novo alvo, inclusive cada fração da drenagem, usa `setValue(bond)`. A API do selo de Terra sobe em passos de 1 ponto quando o alvo supera o exibido em pelo menos 2 pontos, à velocidade inicial de cerca de 10 pontos/s. Durante os passos, atualizar o alvo mantém a subida enquanto ele superar o exibido. O primeiro snapshot e a restauração usam `setValue(bond, { immediate: true })` para cancelar qualquer animação e aplicar a projeção diretamente. O [contrato v1](CONTRATO_vinculo-do-veu.md) mantém os mesmos campos.
 
 O teste da ponte CEF passa os valores 260, 249, 299 e 298,997 ao mesmo selo. A sequência confirma que ganho e drenagem continuam pelo caminho comum, com aplicação imediata somente na hidratação inicial e na restauração. Os nove testes de `teste-efeitos-veu-cliente.cjs` e `teste-ritual-servidor.cjs` passaram. A curva e o fechamento são verificados no lote de apresentação de Terra.
 
@@ -272,3 +287,131 @@ O teste da ponte CEF passa os valores 260, 249, 299 e 298,997 ao mesmo selo. A s
 **Arquivos e revisão:** cliente `b007e6e` (ganho), `82280b2` (tela/fechamento), `5589c91` (botão), `c27afd4` (compatibilidade ao ocultar); patches locais `017-ganho-vinculo.patch`, `018-ritual-painel-bruxa.patch`, `019-botao-ritual.patch`, `020-ganho-hide-compat.patch` em `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\`, cada um validado com reverse-check. Laboratório `ca52c0b`, `e081b52`. Capturas lado a lado de Bruxa + normal/sobrecarga/recusa e `comparacao.html` em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-ritual\`. Quadros reais aproximados e um quadro final dos ganhos 80→130 e 180→230 em `overlays\sobrenatural\preview-vinculo\ganho\`; preview `animacao.html?value=80&zoom=4&forceMotion=1` força movimento apenas na prévia para o Windows local configurado com redução de movimento.
 
 **Verificação:** `node --test overlays/sobrenatural/teste-visual-vinculo.cjs overlays/sobrenatural/teste-ritual-apresentacao.cjs` passou 11/11, incluindo drenagem a cada segundo durante ganho, retarget, queda abaixo do exibido, cancelamento imediato, redução de movimento e ausência de Cancelar na tela; `node --test overlays/sobrenatural/teste-efeitos-veu-cliente.cjs` passou 4/4. Inicialmente um dublê do teste de integração não tinha `cancelGain`, gerando falha de teste; `c27afd4` tornou a chamada opcional e o teste passou, sem alegar falha em runtime. `npx tsc --noEmit` e `node --check` dos JS alterados passaram. No navegador Orca com servidor simulado, resposta negativa manteve a tela e exibiu motivo, resposta positiva chamou `close` uma vez; um teste isolado com o shell real confirmou workspace→gameplay, unmount e pedido de perda do foco. Revisão cruzada por outro modelo, benchmark/CEF, validação do contrato com servidor e jogo continuam pendentes; não houve instalação no MO2 nem execução do jogo.
+
+## Correções da revisão Opus (A1, B2, B3) e verificação C1 — 18/11/2026
+
+**Autor:** Opus 5.5 Low (contingência, `task_0890c3c11f2b`). **Revisão de referência:** `docs/REVISAO-ETAPA-4_opus.md`. Sem servidor, jogo ou MO2; houseCARL só em leitura. Commits: cliente `b7f92f1` em `C:\Code\Aetherius - Servidor Local\client-source` (sobre `c27afd4`) e laboratório `c65b1e7` em `C:\Code\Aetherius - Servidor Local` (sobre `a533441`). Commits feitos com pathspec explícito; o trabalho paralelo do Sol (addon 025) não foi tocado.
+
+### A1: isolamento do cliente
+- Novo `client/src/sobrenatural/`:
+  - `sobrenaturalService.ts` (ClientListener): é dono de `VeilEffects` e `VeilMagicka`. Ouve os próprios eventos (`update`, `loadGame`, `aetheriusUiFocusChanged`, `customPacketMessage` de sessão/`uiDisconnect`, `connectionDisconnect/Failed/Denied`) e reproduz os resets que antes ficavam no `aetheriusUiService`.
+  - `veilEffects.ts`: movido de `services/services/` sem mudança de lógica.
+  - `veilMagicka.ts`: o snippet `AetheriusVeil.ApplyMagicka`, mais B2 e B3.
+- Revertidos ao base `e82ac03`: `ui-core/frontend/shell.js` (sem `close()`), `src/sync/actorvalues.ts` (sem a proteção contra NaN) e `aetheriusUiService.ts` (sem nenhuma referência ao Véu).
+- Integração mínima que fica no núcleo (diff total contra `e82ac03`: 3 arquivos, +12/−1):
+  - `src/index.ts`: import e registro de `SobrenaturalService` (2 linhas).
+  - `spSnippetService.ts`: import e delegação `lookupListener(SobrenaturalService).runSnippet(...)` (3 linhas).
+  - `index.html`: 2 `<link>` e 3 `<script>` do módulo. O bloco inline foi para `ui-core/modules/supernatural/veil-hud.js`, e a regra `html.aetherius-browser-hidden .veil-seal` foi para `veil-seal.css`. A linha `aetheriusVeilHudActive` em `setBloodReserveHud` pertence à HUD de sangue, que também é do Sobrenatural (`f57ec7d`).
+  - `modules.json`: registro, sem alteração.
+- Fechamento do Ritual (`supernatural-module.js`): `closeShell()` local executa o `cleanup()` do próprio módulo, depois `AetheriusUI.nativeFocusChanged(false)` (API pública) e `window.aetheriusUiSetFocus("false")`. É o mesmo caminho da perda de foco nativa. Diferença em relação ao `close()` removido: o shell não chama o `unmount` (o módulo já se limpou, e `cleanup` é idempotente) e não há animação. **Validar no CEF.**
+- NaN no estágio V: sem `actorvalues.ts`, o cliente mantém um máximo efetivo de `EMPTY_MAXIMUM = 0.01`, com Magicka atual 0 e `MagickaRate` 0. O percentual fica finito (0) e a barra fica vazia. O descarte de NaN no `ActionListener.cpp` (patch 025) continua como defesa no servidor.
+
+### B2: base × Fortificar
+`VeilMagicka.enforce` define a base como `max(máximo do servidor, 0.01) − (getActorValueMax − getBaseActorValue)`. Assim, o máximo **efetivo** é igual ao do servidor, com qualquer Fortificar já compensado. A Magicka atual é ajustada só até o `current` enviado (restore/damage do delta), sem preenchimento. A cada 250 ms o valor é reforçado, para acompanhar a troca de equipamento. Quando o servidor devolve o perfil vanilla (máximo e taxa iguais aos valores capturados do cliente), a base e a taxa originais são restauradas e o Fortificar volta a somar. **Risco a validar em jogo:** com Fortificar no estágio V, a base fica negativa (ex.: 0.01 − 50). O Skyrim aceita AV base negativo, mas isso precisa ser conferido junto com a reprodução B2 da revisão.
+
+### B3: loadGame sem desconexão
+- **Magicka:** o alvo sobrevive ao `loadGame`. `onLoadGame` descarta a base vanilla capturada (o motor a restaura), e o `update` reaplica o alvo assim que o jogador carrega o 3D. Não é preciso nenhum reenvio do servidor nem mudança no C++. Uma sessão nova ou uma desconexão restaura a base e a taxa vanilla e limpa o alvo.
+- **Selo e efeitos:** o `updateOwner` do `veil-bond.js` regrava `aetheriusVeilPresentationV1` a cada frame e reenvia a HUD em até 1 s após o `reset` do `loadGame`. O terror também é regravado. O id do último evento é marcado como visto enquanto o 3D não carregou, então não há replay.
+- **Olhos:** são `appearance` do núcleo, reaplicada pelo carregamento do núcleo.
+- **Aura:** o `auraScript` repete o shader a cada 1,5 s.
+- Nenhuma alteração no servidor foi necessária.
+
+### C1: plugins (houseCARL, leitura)
+- `MasterSpellsRunes.esp`:
+  - **ativo** no perfil MO2 `AETHERIUS - LOCAL` (linha 133 de `plugins.txt`, antes de `AETHERIUS - SOBRENATURAL.esp`, que está na 255);
+  - presente e ativo também em `AETHERIUS - GRAFICO - QUALIDADE` e `AETHERIUS - PERFORMANCE` (linha 133), e nas cópias de `client-source/client/profiles/*/plugins.txt`;
+  - presente no servidor, em `runtime/server/data/aetherius-loadorder.json` (posição 149, antes do Sobrenatural na 271).
+- `SkyDeath-Ghosts.esp` está presente em todos os perfis e no servidor (linha 418). Não é master: é resolvido em runtime por `getFormFromFile`. Linhas: 418 nos `plugins.txt` do MO2, 416 nos espelhos QUALIDADE/PERFORMANCE do `client-source`, 434 no `aetherius-loadorder.json` do servidor (correção da revisão Neon R6).
+- **Nenhuma ação necessária.** Observação: os perfis oficiais ainda não listam `AETHERIUS - SOBRENATURAL.esp`, o que é esperado até a compilação final. Ao incluí-lo, ele deve ficar depois de `MasterSpellsRunes.esp`.
+
+### Testes (`C:\Code\Aetherius - Servidor Local`, Node v22.14.0)
+- Bateria da ETAPA-3 (todos os `overlays/sobrenatural/teste-*.cjs`, exceto serviço/F7/revisão F7, mais 5 Core):
+  - `AETHERIUS_VAMPIRE_FEED_ENABLED=false`: **454/454**;
+  - `=true`: **454/454**.
+- `teste-efeitos-veu-cliente.cjs`: **10/10**, sendo 4 antigos e 6 novos (B2 efetiva/Fortificar, estágio V finito, retorno ao vanilla, B3 `loadGame`, entradas inválidas, isolamento do núcleo).
+- Divergência de contagem: os outros arquivos somam 444. A base antes desta mudança seria, portanto, 448, e não os 449 da revisão. Essa diferença de 1 é anterior a esta tarefa e não foi investigada.
+- Os 5 arquivos Core sozinhos: **151/151**. O recorte "Core 39" citado em documentos antigos não corresponde a esses arquivos.
+- `teste-servico` (caminho absoluto), `teste-painel-f7` e `teste-revisao-f7`: exit 0.
+- `npx tsc --noEmit`: exit 0.
+- `node --check` de `supernatural-module.js` e `veil-hud.js`: OK.
+- Webpack não executado.
+
+### Pendente
+- Revisão cruzada por outro modelo.
+- Fechamento do Ritual pelo novo caminho, no CEF.
+- Reprodução B2 em jogo (anel de Fortificar nos estágios IV e V, base negativa).
+- B3 em jogo (carregar o save sem relogar).
+- Patch incremental: gerado depois como `021-isolamento-veu.patch` (`1ba58ee`).
+
+**Patch incremental (18/11/2026):** `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\021-isolamento-veu.patch` = `git diff --binary c27afd4 b7f92f1` no `client-source`, aplicado após o 020. Verificação feita num worktree descartável em `c27afd4`, já removido: `git apply --check` passou, e a árvore aplicada ficou idêntica a `b7f92f1` (diff vazio). `git apply --check --reverse` também passou no HEAD. Commit do laboratório `1ba58ee`.
+
+## Correções da revisão Neon (R1–R6) — 18/11/2026
+
+**Autor:** Opus 5.5 Low (`task_4d4adf415d9c`). **Revisão:** `docs/REVISAO-ETAPA-4_correcoes_neon.md` aprovou A1 e C1 e bloqueou B2/B3. Commits: cliente `7fb11d8` (sobre `b7f92f1`), laboratório `f4b9303` (testes e patch `overlays\cliente-local\022-veu-magicka-total.patch`). Sem servidor, sem jogo e sem MO2.
+
+### Premissa do dev: não existe save game
+Os personagens vêm do banco de dados. O único `loadGame` do cliente é o interno do spawn: `remoteServer.ts:786` (`onCreateActorMessage`) chama `LoadGameService.loadGame` (`loadGameService.ts:18/22`), ao conectar e ao reconectar. Não há outra chamada em `client/src` (busca por `loadGame(`).
+
+Consequência: B3, como "recarga de save sem desconexão", não tem caso real. O que existe é o spawn interno:
+- Antes do 3D, `apply` devolve `false`. Sem ACK, o servidor mantém `pending` e reenvia a cada 2 s.
+- O template carregado não traz o modificador do Véu, por isso `onLoadGame` zera a contagem aplicada. Esse código continua necessário e não é morto.
+
+A reaplicação por alvo guardado foi removida.
+
+### R4: política (decisão Opus)
+O Fortificar Magicka **nunca** é anulado. Os multiplicadores do Véu valem sobre o máximo **total** (base com bônus de classe, mais Fortificar). O estágio V mantém o máximo finito mínimo de 0,01, com regeneração 0.
+
+### Novo desenho (`client/src/sobrenatural/veilMagicka.ts`)
+- **Base:** pertence ao servidor/núcleo. `ApplyMagicka` define `base = maximum`, como fazia o código original, e `SendAttributeMaximumValues` também define a base. O Sobrenatural **nunca** reforça a base, o que resolve a sobrescrita apontada em R2.
+- **Fortificar:** é escalado por um **modificador permanente próprio** (`modActorValue`), igual a `(fator − 1) × Fortificar`, recalculado a cada frame.
+  - O fator vem de uma **fonte explícita do servidor**: a projeção do dono `aetheriusVeilPresentationV1` (`veil-bond.js` `updateOwner`), mapeada pela mesma tabela de `veil-magicka.js` (Sobrecarga 1,5; V 0; IV 0,5; demais 1).
+  - Não há mais heurística de base vanilla (R2).
+- **Estágio V:** o modificador leva o total a 0,01, a Magicka atual a 0 e a taxa a 0. O ACK exige `< 0.001` (R6.1).
+- **Magicka atual:** mantém a fração do servidor sobre o total do cliente, sem preencher.
+- **R3:** no estágio IV a base é sempre `0,5 × máximo do servidor`, que é maior que 0. Por isso `getMaximumActorValue` (`actorvalues.ts:28`) devolve um valor positivo com a Magicka em 0.
+  - Ao desequipar Fortificar no estágio V, o máximo pode ficar negativo por no máximo 1 frame, porque a correção agora roda a cada frame em vez de a cada 250 ms.
+
+### Sessão (`sobrenaturalService.ts`)
+- **R1:** só há reset quando uma sessão anterior troca por outra. O primeiro `PACKET_SESSION` não reseta mais.
+- **R5:** `connectionAccepted` agora reseta, o que cobre a reconexão do RaceMenu.
+- **R6.2:** um filtro de tamanho e de prefixo `aetherius-ui:v1:` roda antes do `JSON.parse`.
+- **R6.3:** corrigido o comentário de `closeShell()`.
+- **R6.4:** corrigidas as linhas citadas da C1 e a nota do patch 021.
+- **R6.5:** a auditoria de `.shell.is-supernatural-workspace` continua pendente para a compilação final.
+
+### Testes (cenários da revisão automatizados em `teste-efeitos-veu-cliente.cjs`: 15/15)
+- Tabela de fatores.
+- R4: estágio III mantém o Fortificar inteiro; estágio IV reduz o total à metade; Sobrecarga multiplica o total por 1,5; volta ao estágio II.
+- Fração atual sem preenchimento.
+- Estágio V finito, com regeneração 0 e ACK estrito.
+- R2: a base com bônus de classe enviada pelo núcleo não é sobrescrita, e o estágio I libera o Fortificar.
+- R2/B3: o spawn interno recalcula sem heurística.
+- R3: estágio IV com Fortificar maior que o máximo e `setActorValuePercentage` real de `actorvalues.ts`, partindo de 0.
+- Snippets inválidos.
+- R1: o primeiro pacote de sessão após o ACK não reseta, e a troca real de sessão reseta.
+- R5: `connectionAccepted` reseta, e pacotes de outros sistemas são ignorados.
+- Isolamento do núcleo.
+- `closeShell()` ainda não tem teste automatizado: depende do shell no CEF.
+
+Resultados:
+- Bateria: **459/459** com a flag false e com a flag true.
+- Core (5 arquivos): **151/151**.
+- `teste-servico`, `teste-painel-f7` e `teste-revisao-f7`: exit 0.
+- `tsc`: exit 0. `node --check` do módulo: OK.
+- Patch 022: `git apply --check` em worktree descartável em `b7f92f1` passou, e a árvore aplicada ficou idêntica a `7fb11d8`. `--reverse` no HEAD também passou.
+
+### Pendente
+- Nova revisão cruzada.
+- Validação em jogo de que `modActorValue` em Magicka se comporta como Fortificar e não vaza para o banco. A persistência é do servidor, que guarda percentuais e não os AVs do cliente.
+- Fechamento do Ritual no CEF.
+
+## Compilação nativa com o patch 025 (Opus 5.5 Low, 18/11/2026)
+
+- **Estado prévio:** o build do Sol (configure + `vcpkg install`, iniciado às 19:25) foi encerrado por ordem do dev no meio do CommonLibSSE Release. Não ficou nenhum processo cmake/vcpkg rodando; sobrou `vcpkg-running.lock`, que o vcpkg tratou sozinho. Nada foi apagado.
+- **Comando:** `X:\scripts\Build-Native.ps1 -AllowDependencyDownloads` (X: = `subst` de `C:\Code\Aetherius - Servidor Local`, para evitar espaços no caminho). Log em `C:\Code\Aetherius - Servidor Local\evidence\etapa4-build-native-opus.log`. Tempo total **3 min 58 s**, porque o vcpkg reaproveitou o cache binário da rodada anterior. Saída 0.
+- **Patch 025:** confirmado aplicado em `source\` com `git -C source apply --reverse --check ..\overlays\sobrenatural\025-veu-magicka-nativa.patch`. **Não houve erro de compilação**, então não foi preciso corrigir nada nem fazer commit, e source e overlay seguem idênticos.
+- **Warnings:** 0 linhas `warning` no log, inclusive em `DevAttributes.cpp`, `MpActor.cpp` e `CropRegeneration.cpp`.
+- **Artefato:** `C:\Code\Aetherius - Servidor Local\tools\native\scam_native.node` (cópia de `source\build\dist\server\scam_native.node`), 11 714 048 bytes, SHA-256 `77f28d98f4dda3a256a0a0e1bab0a1f4cea25cebaaa21336b0399475dd05c305`.
+- **Testes Node:** `node --test overlays/sobrenatural/*.cjs` deu 311/312. A única falha é `teste-servico.cjs`, que exige o diretório do gamemode em `argv[2]`. Rodado como documentado (`node overlays/sobrenatural/teste-servico.cjs 'C:/Code/Aetherius - Servidor Local/source/server/gamemode'`), deu `OK`, exit 0.
+- **Não feito:** Prepare/Start do servidor, jogo e MO2 (fora do escopo). O addon só vale em execução depois de `Prepare.ps1`.
+- **Alterações do Sol não commitadas (preservadas, nem commitadas nem descartadas):** `source\server\gamemode\phase0-basic.js` e `source\server\gamemode\magic\tests\magic.test.cjs`. Nenhuma alteração pendente em `veil-ritual-fx` foi encontrada em `.`, `source`, `client-source` ou `client-local-mod`.

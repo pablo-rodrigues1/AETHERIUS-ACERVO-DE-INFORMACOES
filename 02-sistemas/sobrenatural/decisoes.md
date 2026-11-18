@@ -186,3 +186,6 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 - **Permitido:** arquivos do módulo `supernatural` e componentes exclusivos do Sobrenatural; o mínimo de integração (registro do módulo e ponto de montagem da HUD própria), documentado como diff isolado.
 - As "4 exceções de CSS do shell" aceitas na Etapa 1.4 e qualquer alteração já feita fora do escopo (ex.: arquivos do UI Core tocados em `8bcc121`/`8d9fc09`) devem ser **auditadas e removidas ou reescritas** para ficar dentro do módulo antes da compilação final.
 - Critério de aceite da compilação final: diff do cliente/UI Core contra o oficial contendo **apenas** arquivos do Sobrenatural + integração mínima listada.
+
+## 18/11/2026 — Premissa (dev): não existe save game
+- Personagens são carregados do banco de dados e persistidos nele; não há save/load de jogo no servidor oficial. Cenários de 'carregar save' só valem para carregamentos internos do cliente SkyMP (conectar, reconectar, respawn, troca de personagem).

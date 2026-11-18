@@ -1,5 +1,9 @@
 # RETOMADA — Sistema Sobrenatural
 
+> **18/11 (noite), Opus — Etapa 4 (Vínculo do Véu + Sobrecarga) com CÓDIGO REVISADO E APROVADO** (Opus Low + Gemini Neon) e addon nativo compilado (`scam_native.node` 77f28d98…). **GPT/Codex BLOQUEADO até o dev autorizar** (usar Opus 5.5 Low e Gemini). Pendências: alterações não commitadas do Sol em `phase0-basic.js`/`magic.test.cjs` (decidir); reativar Miggyluv no perfil LOCAL (MO2); auditoria `.shell.is-supernatural-workspace`; R-ANIM; testes em jogo de todas as etapas.
+
+> **18/11 — Etapa 4 candidata:** servidor e integração em `f69c438` (cliente `8d9fc09`), nove records no ESP `a00899a`. Node 445/445 por modo de alimentação, Core selecionado 39/39, TypeScript e webpack aprovados. Validação nativa aguarda CMakeRC e recompilação do addon; Miggyluv voltou desabilitado ao abrir LOCAL e precisa de reativação. R-ANIM foi isolada em despacho próprio. Próximos passos: revisão cruzada e validação em jogo após a recompilação. Ver ETAPA-4 para FormIDs, testes e fronteiras.
+
 > **18/11 — selo da Bruxa:** protótipo visual ajustado para 90 px em 1920×1080, 60 px em 1280×720 e recuo inferior de 7vh, conforme pedido do dev; cliente `e82ac03`, patch/capturas `f0bd86e`, testes 2/2. Revisão cruzada, CEF e jogo pendentes; não há mecânica de Vínculo implementada por este ajuste.
 
 > **18/11, Opus — Vínculo do Véu (Bruxaria) ESPECIFICADO E CONFIRMADO, NÃO INICIADO** por ordem do dev: ver `docs/ETAPA-4_bruxaria-vinculo-do-veu.md` (Sol: servidor/ritual/runa; Terra: selo, tela do Ritual, terror, áudio). Pendente só confirmar quem escolhe os ingredientes (suposição: servidor). Despachar apenas quando o dev mandar.
@@ -106,3 +110,13 @@ Terra confirmou parcialmente o lote anterior e abriu A/B; Sol High preparou a se
 | P9 | Vertente/Disciplina | Usuário | ✅ Vertente no estágio 1; nenhuma troca; 2ª Disciplina no Apoteótico |
 | P8 | Ícones de estágio de Vampiro (gota, escudo, morcego, coroa, enxame, sol) e equivalentes de Lobisomem/Bruxa: produzir no estilo de `icones estilizados.png`. | Qualquer modelo (imagem) | aberta |
 | P10 | Poder do Lorde Vampiro só por função específica do painel administrativo | Implementação | **decidido, adiado**: para os testes segue liberado no Neófito (`VAMPIRE_LORD_MIN_STAGE`) |
+
+> **18/11 — Terra, prévia candidata:** selo de sobrecarga sobre a arte original no cliente `d6ae059`, capturas/teste no laboratório `973ea57`; contrato v1 ainda não integrado. Terror, Ritual, áudio XWM e records pendentes; ver ETAPA-4. Teste visual 3/3; sem revisão, CEF ou jogo.
+
+> **18/11 — apresentação Terra entregue:** WAV PCM, tela Ritual mock v1, API visual do terror e selo sem anel (cliente `ce281d6`, laboratório `8738b14`, `1561f68`, `0289e58`); testes 7/7. Sol integra o contrato, efeitos e records; revisão cruzada, CEF e jogo pendentes. Detalhes e previews na ETAPA-4.
+
+> **18/11 — selo mais intenso:** cliente `46d86b3`, laboratório `cfb896b`; 5/5 testes, prévias 1280 e 4×, revisão/CEF/jogo pendentes. Captura 1920 falhou no navegador; ver ETAPA-4.
+
+> **18/11 — animações do selo:** cliente `8bcc121` (autoria mista Terra/Sol), laboratório `94f4313`, testes 5/5 e prévia com slider; revisão/CEF/jogo pendentes e restauração de HUD reutilizada exige `immediate:true`. Ver ETAPA-4.
+
+> **18/11 — Ritual e ganho gradual:** cliente `b007e6e`, `82280b2`, `5589c91`, `c27afd4`; laboratório `ca52c0b`, `e081b52`; testes 11/11 + 4/4. Revisão cruzada, CEF e jogo pendentes; ver ETAPA-4.

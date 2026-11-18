@@ -1,13 +1,3 @@
----
-titulo: Contrato cliente-servidor do Vínculo do Véu
-tipo: referencia
-sistema: sobrenatural
-fase: em-desenvolvimento
-responsaveis: [pablo-rodrigues1, kdu]
-atualizado: 2026-11-18
-depende_de: [ui-core, gameplay-core, painel-adm]
----
-
 # Contrato cliente ↔ servidor — Vínculo do Véu v1
 
 Autor: Sol High. Base local `f0bd86e` em `C:\Code\Aetherius - Servidor Local`. Regras de `ETAPA-4_bruxaria-vinculo-do-veu.md`, incluindo as decisões da §8.5. O contrato usa o envelope autenticado do UI Core e a propriedade SkyMP de apresentação ao dono. A keyword, a identidade de persistência e as operações de inventário ficam no servidor.

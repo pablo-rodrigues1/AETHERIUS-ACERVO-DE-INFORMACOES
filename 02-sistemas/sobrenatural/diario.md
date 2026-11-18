@@ -255,5 +255,11 @@ O lote concluiu a integração do contrato v1, runa e sons no ESP (`a00899a`), i
 ## 2026-11-18 — Decisão do dev: entrega isolada do Aetherius UI
 - Registrada em DECISOES: a compilação final não leva nenhuma alteração do Aetherius UI fora do módulo Sobrenatural (HUD geral, menu radial, outros módulos). Auditoria das alterações fora de escopo (incl. 4 exceções de CSS da Etapa 1.4) fica como pré-requisito da compilação final.
 
-## 2026-11-18 — Terra: Ritual e ganho gradual
-- Cliente `b007e6e`, `82280b2`, `5589c91`, `c27afd4`; laboratório `ca52c0b`, `e081b52`, `a533441`. Tela no modelo da Bruxa, fechamento confirmado e ganho retargetável; testes 11/11 + 4/4. Revisão cruzada, CEF e jogo pendentes.
+## 18/11 — Ritual e ganho gradual (Terra)
+Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recusa; ganho ≥2 sobe gradualmente, retarget tolera dreno enquanto alvo fica acima do mostrado. Cliente `b007e6e`, `82280b2`, `5589c91`, `c27afd4`; laboratório `ca52c0b`, `e081b52`; testes 11/11 + 4/4 e TypeScript OK. Revisão cruzada, CEF e jogo pendentes; ver ETAPA-4.
+
+## 2026-11-18 — Opus 5.5: Etapa 4 com código revisado e addon compilado
+- Revisão Opus Low (REVISAO-ETAPA-4_opus.md) → correções A1/B2/B3 + R1–R6 (Opus Low; cliente 7fb11d8, lab f4b9303, patches 021/022) → Gemini Neon aprovou no escopo de código (459/459 por modo, Core 151/151). Política: Fortificar nunca anulado; multiplicadores sobre o máximo total. Premissa: não existe save game.
+- Addon nativo com patch 025 compilado por Opus Low (Build-Native, 0 erros/0 warnings), `scam_native.node` SHA-256 77f28d98….
+- Dev: Codex/GPT bloqueado até nova autorização; Sol encerrado. Alterações não commitadas do Sol preservadas em phase0-basic.js e magic.test.cjs (decisão pendente).
+- Pendente: teste em jogo/CEF, reativar Miggyluv no perfil LOCAL, auditoria .shell.is-supernatural-workspace, R-ANIM.
