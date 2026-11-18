@@ -3,7 +3,7 @@ titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-17
+atualizado: 2026-11-18
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-18, preparação de cenário no ambiente privado (Melekyy / Codex)
+
+- **Pedido separado:** instalar Ghostshelf Keep 1.5 no Skyrim/SkyMP privado usando os arquivos já presentes no Mod Organizer do Aetherius, sem alterar a origem. Não muda o escopo nem o código das Guildas.
+- **Decisão técnica:** copiar o cenário e o patch existente de desativação de renda/bônus/espelho; remover a marca light apenas da cópia privada do patch, após confirmar que contém somente sobrescritas dos masters. Acrescentar os plugins ao fim da ordem e à lista limitada de verificação do cliente, mantendo CRC/tamanho e os índices anteriores.
+- **Estado:** cópias, dependências e preparação em conferência; instalação ainda não concluída neste registro. Código das Guildas, dados e controlador separado de conjuração protegidos. Nada de mods, binários ou dados privados será publicado.
+- **Próximo:** verificar instalação, ordem cliente/servidor e preservação por hashes; testes no Skyrim pelo próprio dev. Sem certificação antecipada de scripts Papyrus ou multiplayer.
 
 ## 2026-11-17, R30 sem gestão de quartos e com portas do Arquimago (Melekyy / Codex)
 
