@@ -249,3 +249,6 @@ Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo
 ## 2026-11-18 — Ritual candidato e bloqueio de autoria
 
 `4b16eb5` implementa escolha e reserva das categorias, baixa nativa com conferência, transação PG e D7. O houseCARL recusou autoria in-place no perfil Qualidade por plugin inativo. Nenhuma escrita no ESP. O início do Ritual aguarda a runa.
+
+## 2026-11-18 — Terra: selo de sobrecarga intensificado
+- Cliente `46d86b3`, laboratório `cfb896b` e `f78ce0f`; teste visual 5/5, prévias 1280 e ampliadas 4×, 17 quadros. Captura 1920 corrompida no navegador; revisão, CEF e jogo pendentes.
