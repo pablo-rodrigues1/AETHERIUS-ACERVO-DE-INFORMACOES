@@ -1,5 +1,7 @@
 # Decisões (ADRs)
 
+- [ADR-0026](ADR-0026-cenario-ghostshelf-isolado-no-privado.md) — Cenário Ghostshelf isolado no privado, aceito em 18/11/2026; Guildas preservadas e jogo pelo dev.
+
 Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR que a substitua (ver `REGRAS.md`, seção 5).
 
 | ADR | Título | Status | Data |

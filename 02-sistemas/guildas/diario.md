@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-18, cenário privado instalado sem alterar Guildas (Melekyy / Codex)
+
+- **Entregue:** Ghostshelf Keep 1.5 e seu patch existente copiados para cliente e servidor privados. Origem somente para leitura, confirmada por hashes de quinze arquivos. Somente a cópia privada do patch perdeu a marca light; registros preservados. [ADR-0026](../../03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md).
+- **Integridade:** 117 plugins em ordem idêntica cliente/servidor, 115 índices anteriores preservados, dois BSA adicionados ao host. Verificador do cliente ampliado por dois nomes sem desligar CRC/tamanho/caminhos. Configurações anteriores guardadas em backup local; sete arquivos privados protegidos iguais.
+- **Prova nativa:** processo isolado carregou 117 plugins e 62 BSA; 212 registros conferidos, incluindo 180 overrides e as três células internas. Referências dos baús mantidos presentes. Mundo dos jogadores não carregado; nenhum Skyrim iniciado/controlado.
+- **Limites:** testes visuais, travessia de áreas, Papyrus e dois clientes ficam pendentes para o dev. Guildas R30, dados e conjuração independente preservados; nenhuma entrega oficial nem redistribuição dos arquivos do mod.
+
 ## 2026-11-18, preparação de cenário no ambiente privado (Melekyy / Codex)
 
 - **Pedido separado:** instalar Ghostshelf Keep 1.5 no Skyrim/SkyMP privado usando os arquivos já presentes no Mod Organizer do Aetherius, sem alterar a origem. Não muda o escopo nem o código das Guildas.

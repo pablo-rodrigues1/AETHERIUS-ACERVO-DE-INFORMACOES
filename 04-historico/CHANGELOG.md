@@ -10,6 +10,10 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-18 — Cenário privado Ghostshelf separado das Guildas
+
+Ghostshelf Keep 1.5 e patch existente copiados ao privado com origem intacta. Cliente/servidor alinhados em 117 plugins, índices anteriores preservados, carregamento nativo de 212 registros aprovado. Guildas R30 e conjuração independente preservadas; jogo/scripts/multiplayer pelo dev, sem implantação oficial ou publicação de assets. [ADR-0026](../03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md).
+
 ## 2026-11-18 — Documentação de Profissões do GameplayCore no Acervo
 
 Publicada em [`02-sistemas/profissoes/`](../02-sistemas/profissoes/README.md) a documentação consolidada de profissões, coleta, artesanato, refino por instância, encantamento (fora da Alpha), balanceamento configurável, Housecarl e persistência (`0013`/`0014`) vinda do `AetheriusGameplayCore`, acompanhada dos guias da Staff em [`07-guia-da-staff/profissoes/`](../07-guia-da-staff/profissoes/README.md). Apenas documentação, sem alteração de código.

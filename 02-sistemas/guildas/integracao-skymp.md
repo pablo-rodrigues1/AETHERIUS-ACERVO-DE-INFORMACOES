@@ -5,7 +5,7 @@ status: ativo
 responsaveis: [Melekyy]
 atualizado: 2026-11-18
 tags: [guildas, skymp, integracao]
-relacionados: [README.md, diario.md]
+relacionados: [README.md, diario.md, ../../03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md]
 ---
 
 # Instalação de SkyGuilds no SkyMP — R28
@@ -18,9 +18,9 @@ Módulo CommonJS com entrada `bootstrap.cjs`, configuração portátil, verifica
 
 Não há repositório remoto do código configurado; o acervo recebe documentação. O ZIP local contém somente Guildas ativas, testes e ferramentas portáteis. Não inclui estado de jogadores, mods, journal, adaptador de morte, addon SkyMP, pacotes cliente ou controladores de conjuração.
 
-## Cenário privado adicional — preparação em 18/11/2026
+## Cenário privado adicional — instalado em 18/11/2026
 
-Por pedido do dev, Ghostshelf Keep 1.5 está sendo preparado como cenário adicional no ambiente privado, copiando a instalação existente e seu patch de restrição de recursos. Não é dependência das Guildas nem implantação no servidor oficial. A origem permanece somente para leitura; os plugins novos entram depois dos existentes. A lista limitada de arquivos do cliente também deve receber os nomes, preservando as verificações de integridade. O patch privado precisa da marca light removida para o build SkyMP atual; essa adaptação não será aplicada à origem. Testes em jogo ficam com o dev. Assets e patch não são redistribuídos no acervo.
+Por pedido do dev, Ghostshelf Keep 1.5 foi instalado como cenário adicional no ambiente privado, copiando a instalação existente e seu patch de restrição de recursos. Não é dependência das Guildas nem implantação no servidor oficial. Quinze arquivos da origem permaneceram iguais por hashes. Os dois plugins foram acrescentados após os 115 anteriores: agora cliente e servidor têm 117 na mesma ordem, sem alterar índices anteriores. A lista limitada do cliente também recebeu os dois nomes, preservando CRC/tamanho/caminhos. Somente a cópia privada do patch teve a marca light removida; seus 180 registros são sobrescritas de masters. Dois BSA foram adicionados ao host. Carregamento nativo isolado de 117 plugins/62 BSA aprovado em 212 registros, com células internas e referências dos baús mantidos presentes. Testes visuais, de scripts e multiplayer ficam com o dev. Assets e patch não são redistribuídos no acervo. [ADR-0026](../../03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md).
 
 ## Dependências
 
