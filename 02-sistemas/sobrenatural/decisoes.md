@@ -164,3 +164,14 @@ Triagem Sol High sobre o servidor local `1088d0b`: a política está decidida. A
 A arbitragem do Opus confirmou o contrato da poção: o `EatItem` observado após a verificação de posse é evidência suficiente em processo vivo. Por evento, a poção rastreada exige a confirmação do débito com chave idempotente. Uma poção fora do estoque rastreado continua valendo após consulta PG bem-sucedida. Falha ou resultado incerto do PG ou da reserva descarta o crédito, sem replay. A cura continua sob o efeito do item.
 
 Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recuperação registra resultados confirmados ou desconhecidos e libera os participantes. O fluxo novo fecha o registro de HP e encerra a sessão antes do commit final do sangue. O dev autorizou a flag verdadeira em `config/local.env`; o código continua falso por padrão. Candidatos `0ec39d2` e `2088225`.
+
+## 18/11/2026 — Bruxaria: Vínculo do Véu (dev)
+- Vínculo inicial 100; 100→0 em 12 h online; sem consumo offline.
+- Estágio V (0): Magicka máxima −100% e evento de terror a cada 5 min (sempre com evento).
+- Ritual iniciado por botão na tela da Bruxa (TAB → Sobrenatural), que abre nova interface estilizada com entidade, explicação mínima e "Iniciar Ritual".
+- Pedra da Alma Negra cheia e vazia; carne = todas as carnes cruas; pele = todas as peles; livro = qualquer tomo.
+- Selo no centro inferior (maldições exclusivas entre si); barra central do gauge em degradê como a referência.
+- Demais parâmetros sugeridos da especificação aceitos como iniciais configuráveis.
+- Escrita no `AETHERIUS - SOBRENATURAL.esp` autorizada; runa = `MasterSpellsRunes.esp` (Conjuração).
+- Pendente: quem escolhe os 3 ingredientes (suposição: servidor automático).
+- Detalhe: `docs/ETAPA-4_bruxaria-vinculo-do-veu.md`. Implementação **não iniciada** por ordem do dev.

@@ -220,3 +220,6 @@
 - Revisões: Terra aprovou D7 com ressalvas (PG/áudio reais em jogo); Sol reprovou o hot-reload `93d991a` (dois sons) → Terra `2fffaf9` → Sol aprovou. 415/415 por modo.
 - AGENTS.md: Sol High → `gpt-6.2-sol`.
 - Próximo: testes em jogo.
+
+## 2026-11-18 — Opus 5.5: Vínculo do Véu especificado (não iniciado)
+- Especificação `referencia/Aetherius_Sistema_Bruxaria_Vinculo_do_Veu.md` lida; entendimento confirmado pelo dev com ajustes (estágio V −100% Magicka máx. + terror a cada 5 min; tela do Ritual nova com entidade; ingredientes; selo centro inferior com degradê; escrita no plugin autorizada; runa do MasterSpellsRunes.esp). Registrado em `docs/ETAPA-4_bruxaria-vinculo-do-veu.md` e DECISOES. Por ordem do dev, nada despachado.
