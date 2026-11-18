@@ -1,5 +1,11 @@
 # Diário — Sistema Sobrenatural
 
+## 2026-11-17 — D7, decisão do dev e arbitragem de saúde
+
+- O dev aceitou perder item ou efeito se houver falha ou dúvida sobre o crédito de sangue. A ativação da alimentação foi autorizada só no laboratório, após a implementação da D7, com código desligado por padrão.
+- A triagem Sol High registrou que o ledger da poção pode concluir antes de confirmar a baixa nativa. Na alimentação, dano ou cura podem ocorrer antes de o journal registrar o resultado. Sessões legadas em SETTLING também podem ter gravado sangue sem recibo individual.
+- O destino das alterações de vida e do saldo legado foi encaminhado ao coordenador. O servidor local segue com o código anterior. Evidência e decisão registradas no commit local `2a5434e`.
+
 ## 2026-11-15 — Opus 5.5 (orquestrador)
 - Início do sistema. Lidas as abas "Maldições - Informações" e "Maldições - Progressão" da planilha; transcrição em `ESPECIFICACAO.md`.
 - Criados `AGENTS.md` (raiz), `RETOMADA.md`, `PLANO.md`.
