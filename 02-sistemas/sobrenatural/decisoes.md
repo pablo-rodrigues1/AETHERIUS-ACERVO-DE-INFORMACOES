@@ -135,3 +135,20 @@ Detalhes de implementação e evidências ficam nos documentos de etapa (`ETAPA-
 ## 8. Processo
 - Fluxo do `AGENTS.md`: implementação por um modelo, **revisão cruzada** por outro, validação do Opus, documentação local + acervo.
 - Exceções autorizadas pelo dev: Bruxaria implementada pelo Gemini 4 Argon (records levantados pelo Luna MAX); lote Fera/Lorde/raça foi ao teste sem a confirmação do Terra (revisão feita depois).
+
+## 17/11 — parâmetros de candidato e bloqueio D7 (não substituem aprovação final)
+
+- **D1 aberta:** `AETHERIUS_VAMPIRE_NEEDS_RESTORE=frozen` por padrão; alternativa `default`. Marcador PG conserva o retorno também offline. Não é decisão final do dev.
+- **D2 aberta:** `AETHERIUS_VAMPIRE_CRITICAL_EXIT=30` por padrão (entra ≤30, sai >30); alternativa de teste 35. Raio de visão 25 m; conversão configurável `AETHERIUS_SKYRIM_UNITS_PER_METER`, padrão aproximado 70/m, a validar em jogo.
+- **D3 aberta:** alimentação candidata com consentimento por padrão (`AETHERIUS_VAMPIRE_FEED_REQUIRE_CONSENT=true`), alternativa `false` apenas configurável. `AETHERIUS_VAMPIRE_FEED_ENABLED=false` por padrão; ativação depende de decisão do dev. Valores já definidos +100 sangue/+200 cura, −20% máxima não letal, 2 m e 60 min/vítima preservados.
+- **D7 — bloqueio aceito pelo Opus em nome do dev:** a Poção de Sangue não tem transação atômica entre JSON/reserva, baixa nativa e ledger PostgreSQL; não ampliar contrato nativo neste despacho e não aceitar garantia menor para ela. Alimentação compartilha a mesma fronteira Health/JSON; autorizado só o candidato desativado, com intenção durável, bloqueio conservador e reconciliação manual em falha/crash, SEM alegação de atomicidade. Ativar a flag depende do dev. Evidências, opções e limites em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\ETAPA-3_vampirismo-mecanicas.md`, seções de 17/11.
+
+
+## 17/11 — D7, ressalva operacional confirmada na R2
+
+O crédito antigo **+50 da Poção de Sangue continua ativo sem flag**, instalado por `C:\Code\Aetherius - Servidor Local\source\server\gamemode\phase0-basic.js:434`, wrapper `supernatural\blood-reserve.js:166–176` (`api.add` em `:172`). As flags solar e `AETHERIUS_VAMPIRE_FEED_ENABLED=false` não desligam esse crédito. D7 bloqueia homologação/atomicidade, não representa desligamento do caminho antigo: JSON, remoção nativa e ledger PG continuam sem transação comum. O fsync/rename do lote R2 não altera esse limite; não houve autorização para remover/flaggear a poção nesta arbitragem. Alimentação permanece default false, com quarentena manual, e sua ativação depende da decisão do dev. Duas opções e evidências nativas permanecem em ETAPA-3; nenhuma garantia menor foi aceita como atomicidade.
+
+
+## 17/11 — arbitragem Opus do instante de saída (residual R2 #2)
+
+Ao fechar a reserva, usar `min(now, offlineAt)` quando existe ausência observada; sem ela, now. Reaparecimento observado liquida o segmento anterior até esse limite e abre um novo relógio sem offlineAt; não cobrar o gap desconhecido. Correção `a35b0e8` no servidor local, blood-reserve.js:78, regressões com callback atrasado e reentrada via tick/get. Decisão não altera D7 nem presume precisão física do socket. Evidência e limites em ETAPA-3, seção residual R2.

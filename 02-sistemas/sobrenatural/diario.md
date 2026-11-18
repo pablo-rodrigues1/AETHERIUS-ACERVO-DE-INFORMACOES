@@ -1,126 +1,185 @@
----
-titulo: Diário de Sobrenatural
-tipo: historico
-status: ativo
-responsaveis: [pablo-rodrigues1, kdu]
-atualizado: 2026-11-15
-tags: [diario]
-relacionados: [README.md]
----
+# Diário — Sistema Sobrenatural
 
-# Diário de Sobrenatural
+## 2026-11-15 — Opus 5.5 (orquestrador)
+- Início do sistema. Lidas as abas "Maldições - Informações" e "Maldições - Progressão" da planilha; transcrição em `ESPECIFICACAO.md`.
+- Criados `AGENTS.md` (raiz), `RETOMADA.md`, `PLANO.md`.
+- Mapeado: módulo `supernatural` já existe no catálogo do UI Core (rota `/supernatural`, slot 8), mas sem entrada em `modules.json`.
+- Encontrado no acervo o sistema `lobisomem` (kdu, em-teste) — cobre a forma da fera, não a setagem/progressão. Publicação no acervo aguardando confirmação do dev (REGRAS 10.5.1).
+- Achado: conflito na curva de XP da planilha (46.500 vs 2 milhões). Registrado como pendência P2.
 
-## Resumo
-Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+## 2026-11-15 (2) — Opus 5.5
+- Dev decidiu: vale o total de **2.000.000 XP**. Curva derivada (31x = 2M, x = 64.516). Confere exatamente com a referência de UI do vampirismo.
+- Dev definiu a direção de arte: padrão do Class System (GameplayCore), branco sobre preto transparente, ícones estilizados; detalhes em Carmesim (vampiro), Âmbar (lobisomem) e Violeta (bruxa).
+- Analisadas as 4 imagens de `referencia/`; resultado em `DIRECAO-DE-ARTE.md` (layout, textos dos 6 estágios do vampiro, estados dos cartões). Novo requisito: o servidor guarda a data da setagem.
 
-## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — encerramento: agentes parados
-- **Feito:** pendências A/B da confirmação da revisão 3 concluídas pelo Sol High e salvas como candidato (revisao-3ab-correcoes-sol.md). Pendências consolidadas em pendencias.md.
-- **Próximo:** confirmação do Terra (A/B), restante da Reserva de Sangue (Sol), rodada de testes em jogo.
-- **Bloqueios:** nenhum; todos os agentes parados por decisão do dev.
+## 2026-11-15 (3) — Opus 5.5
+- Curva de XP revisada pelo dev: 1→2 = 20.000, 2→3 = 40.000; o orquestrador calculou o restante até 2M: 130.000 / 420.000 / 1.390.000 (acumulados 190.000 / 610.000 / 2.000.000; razão ≈3,26). Os limiares da imagem de referência ficam obsoletos.
+- Decisões: trilha mostra só "Sobrenatural"; a remoção apaga todo o progresso; o servidor reseta a classe na setagem.
+- Base do lobisomem: pacote de kdu (`AETHERIUS - LOBISOMEM 14-11 - KDU/`); kdu adicionado como corresponsável.
+- Analisada `VAMPIRISMO - DISCIPLINAS.png`: nível da disciplina = estágio − 1; seção documentada em DIRECAO-DE-ARTE.
+- Proposta de textos de Lobisomem/Bruxa/tela vazia em PROPOSTA-TEXTOS.md.
+- Sistema publicado no acervo (`02-sistemas/sobrenatural/`).
 
-## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — revisão 3 e decisões
-- **Feito:** revisão do Terra High rejeitou origem/Bruxa/forçada com 5 achados (revisao-3-origem-bruxa-forcada-terra.md); Sol High corrigiu (revisao-3-correcoes-sol.md; 180 testes). Decisões do dev: Sedução e Reanimação sem custo de sangue; na remoção da maldição, remover tudo o que o Sobrenatural concedeu (limitação: magia ganha por outra fonte depois da concessão pode sair junto).
-- **Próximo:** confirmação do Terra High; Sol High segue a Reserva de Sangue.
-- **Bloqueios:** nenhum; sem testes em jogo nesta sessão.
+## 2026-11-15 (4) — Opus 5.5
+- Sobretítulos definidos: Corrupção do Sangue / da Lua / do Véu. Lemas novos: Lobisomem *"Sob a lua cheia, a carne esquece que um dia foi humana."*, Bruxa *"Quem rasga o véu jamais retorna inteiro do outro lado."*
+- Nomes de feitiços, perks e poderes traduzidos para português.
+- Vertente escolhida no estágio 1. Disciplina e Vertente não podem ser trocadas; a 2ª Disciplina vem no Apoteótico.
 
-## 2026-11-16 (pablo-rodrigues1 / Claude Opus 5.5) — encerramento da sessão
-- **Feito:** correção por origem de magias/perks, Bruxa ligada ao serviço e poderes do vampiro (Sol High, commit local 79098ad); Reserva de Sangue parcial (Terra High); decisões do dev sobre a Reserva de Sangue e a transformação forçada do lobisomem. Estado completo e próximos passos em retomada.md.
-- **Próximo:** transformação forçada (Sol High), restante da Reserva de Sangue (Terra High), revisões cruzadas e rodada de testes em jogo.
-- **Bloqueios:** nenhum; nada testado em jogo nesta etapa.
+## 2026-11-15 (5) — Opus 5.5
+- Coletas 1A (UI Core, Hydrogen) e 1B (estilo do Class System, Argon) concluídas.
+- Etapa 1.2: telas implementadas por Terra High (`ui-core-module/`). Revisão de Sol High: **reprovada** por ordenação de estado, mais 2 apontamentos. Todos aceitos; decisões (revision, grantId, push + polling de 10 s, validação) registradas em REVISAO-1.2_sol.md.
+- Dev definiu a fonte Sovngarde Bold (já em `ui-core/frontend/fonts/`) e pediu que todos os ícones sejam refeitos com prioridade. Etapa 1.3 em curso com Sol High.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — início das mecânicas de vampirismo
-- **Feito:** levantamento (Terra High) do que é viável para cura/comida, alimentação, sol e passivas (etapa-3-vampirismo-mecanicas.md). Valores provisórios de teste aprovados pelo dev: sol 5/s das 7h às 19h; mordida em NPC 25/25/60 s/+25 sangue; Poção de Sangue cura 100 e +50 sangue; mordida em jogador cura 200 e +100 sangue; só itens de cura pura são recusados ao vampiro.
-- **Próximo:** implementação (Terra High) e teste em jogo.
-- **Bloqueios:** recusar só o efeito de cura de itens mistos exigiria código nativo (fora do escopo).
+## 2026-11-15 (6) — Opus 5.5
+- 1.3: Sol High refez os 38 ícones (traço branco com pigmento por maldição) e aplicou a Sovngarde Bold herdada do shell; 14 capturas em preview/screens.
+- 1.2b: Terra High aplicou revision, grantId, polling de 10 s + Atualizar e validação. Confirmação de Sol High: aprovado com ressalvas; achados 4 e 5 adiados para a Etapa 2.
+- **Etapa 1 encerrada.** Próxima: Etapa 2 (servidor).
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Bruxaria preparada; scripts não assinados
-- **Feito:** concessões da Bruxa por estágio e vertente, upgrades da TENEBRAE pelo servidor, parada do upgrade automático do Shadow Spell Package, pisos de habilidade (maior valor entre classe e maldição) no GameplayCore local, tela da Bruxa atualizada (etapa-2-bruxaria.md). Achada a causa de nenhum poder funcionar no servidor local: o cliente recusava os scripts do servidor por falta de assinatura (investigacoes/investigacao-15-11-scripts-nao-assinados.md); corrigido com chave de teste local.
-- **Próximo:** correção por origem (magias/perks) e ligar a Bruxa ao serviço; teste em jogo de Fera, Lorde e Bruxa.
-- **Bloqueios:** limite do Codex; correção por origem sem responsável definido.
+## 2026-11-15 (7) — Opus 5.5
+- Etapa 1.4 (Sol High), pedida pelo dev: lobo principal redesenhado fiel à referência (perfil, mandíbula aberta, pelagem desfiada); Apoteótico virou "eclipse de sangue"; layout novo em duas colunas (hero + progresso com trilha de 6 marcos à esquerda; marcos e dons à direita). Lógica de estado inalterada (hashes iguais; test-ordering passa). 23 capturas em 1920×1080 e 1280×720. Relatório: ETAPA-1.4_redesenho.md.
+- Aguardando aprovação visual do dev. A revisão cruzada da 1.4 ainda não foi feita.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — painel F7
-- **Feito:** aba Sobrenatural no painel da staff (F7) com 7 ações (consultar, setar, remover, XP, Disciplina, Vertente, encerrar forma), com auditoria e revalidação de sessão. Revisado por Terra High e aprovado em jogo. Detalhes: etapa-2-painel-f7.md, revisao-etapa-2-painel-f7.md; investigação do F8 abandonada em investigacoes/.
-- **Próximo:** corrigir formas e poderes que falharam no teste em jogo (fera, Lorde, raça vampírica, morcego, névoa, enxame, visão; recarga de 30 min).
-- **Bloqueios:** nenhum.
+## 2026-11-15 (8) — Opus 5.5
+- O dev aprovou a interface e os ícones da 1.4. Ajuste final: lobo do hero em 54% (left 26%, top 27%), dentro do hexágono em todos os tamanhos (Sol High).
+- Revisão técnica da 1.4 enviada a Terra High.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — plugin e animação
-- **Feito:** plugin AETHERIUS - SOBRENATURAL.esp com os bônus numéricos (vampiro, disciplinas, lobisomem); animação do lobisomem do kdu ativada via Pandora no perfil LOCAL (saída isolada, mods compartilhados restaurados). Detalhes: etapa-2-plugin-e-animacao.md.
-- **Próximo:** teste em jogo; revisão cruzada.
-- **Bloqueios:** nenhum.
+## 2026-11-15 (9) — Opus 5.5
+- Buff do dev na armadura da forma de fera: 100/150/200/250/350/400 (antes 50/100/150/200/250/300). Resistência mágica inalterada (10/15/20/25/25/25%). Especificação atualizada; aplicação no módulo enviada ao Sol High junto com as correções 1.4.
+- Segundo buff do dev na armadura da forma de fera: **150/200/250/300/350/400** (substitui o anterior). Resistência mágica inalterada.
+- Terceiro buff do dev na forma de fera: resistência mágica **10/15/20/25/30/35%** (Delta e Alfa subiram). Armadura mantida em 150–400.
+- Regra do dev: na forma de fera, os bônus de vida/vigor "humano e besta" e "só besta" se SOMAM (totais 275/350/425/500/575/650).
+- Correções 1.4 + adendos do lobisomem aplicados (Sol High) e confirmados (Terra High). Exceções de CSS do shell aceitas. **Etapa 1 encerrada.** Etapa 2 aguarda o "pode iniciar" do dev.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 2: vampirismo e Lorde Vampiro
-- **Feito:** poderes e inatos do COTV por estágio; raça vampírica projetada; Lorde Vampiro sincronizado para todos (mesmo modelo da fera do kdu); cliente local com o patch de cliente do kdu; painel de teste F8. Detalhes: etapa-2-vampirismo.md.
-- **Próximo:** teste em jogo com 2 jogadores; estágio mínimo do Lorde; bônus numéricos via GameplayCore.
-- **Bloqueios:** bônus numéricos dependem do sistema de atributos do GameplayCore.
+## 2026-11-15 (10) — Opus 5.5
+- Servidor local de testes em `C:\Code\Aetherius - Servidor Local` (homologação parcial aceita pelo dev). Revisões: Terra High → correções (Opus Low) → confirmação (Opus Low, escalação temporária). Codex fora por limite: a escala passou a ser Opus 5.5 Low + Gemini.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 2: lobisomem no servidor
-- **Feito:** base do kdu aplicada no servidor local; serviço Sobrenatural (estado autoritativo, keyword só no servidor, revision/grantId, UI snapshot/choose + push, comando /maldicao); perks e magias do Manbeast por estágio. Detalhes: etapa-2-lobisomem.md.
-- **Próximo:** teste em jogo; lado cliente do kdu; bônus que exigem plugin; revisão cruzada.
-- **Bloqueios:** bônus sem record (exigem plugin); rebuild do cliente para o kdu.
+## 2026-11-15 (11) — Opus 5.5 (implementação própria, a pedido do dev)
+- Etapa 2 iniciada pelo lobisomem: overlay do kdu aplicado; supernatural-service (estado, keyword só no servidor, revision/grantId, snapshot/choose, push, /maldicao); perks e magias do Manbeast por estágio (houseCARL, 27/27 resolvidos no boot); UI instalada no perfil MO2 LOCAL. Teste simulado ok; servidor sobe sem erro. Pendências em ETAPA-2_lobisomem.md.
+- Painel de teste in-game (F8, só staff e só com AETHERIUS_SUPERNATURAL_TEST_PANEL=true no servidor local): botões para setar, remover e alterar XP; ação `test` no servidor. Script `supernatural-test.js` só no mod MO2 local. Commit local `525b2ab`.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — servidor local de testes
-- **Feito:** ambiente local isolado (só loopback, PostgreSQL próprio, 16 módulos, bots autenticados, scripts start/stop/reset, overlays para kdu e Sobrenatural). Revisado e corrigido. Detalhes: ambiente-servidor-local.md e revisao-ambiente-servidor-local.md.
-- **Próximo:** Etapa 2 (servidor do Sobrenatural) sobre este ambiente.
-- **Bloqueios:** Alma/market_stalls sem migrations; capacidades UNSUPPORTED; addon v19 sem commit verificável (homologação parcial aceita).
+## 2026-11-15 (12) — Opus 5.5 (implementação própria)
+- Vampirismo: inatos e poderes do COTV por estágio, raça vampírica projetada, Lorde Vampiro sincronizado (vampire-lord-service, mesmos preceitos do kdu), cliente local recompilado com o patch do kdu (build base idêntico ao MO2), painel F8 com disciplinas e vertentes. 65/65 records no boot. Ver ETAPA-2_vampirismo.md. O .md antigo do vampirismo foi analisado; as decisões desta pasta prevalecem.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 1 encerrada
-- **Feito:** correções da revisão do redesenho (escopo de CSS, polling sem redesenho, foco e rolagem preservados); valores do lobisomem na tela (armadura 150–400, RM 10–35%, vida e vigor somados na fera). Revisão de Terra High: aprovado com ressalvas de integração (revisao-etapa-1-redesenho.md).
-- **Próximo:** Etapa 2 (servidor).
-- **Bloqueios:** nenhum. Homologação em Meridian/CEF pendente.
+## 2026-11-15 (13) — Opus 5.5 (autorizado a escrever no modpack)
+- Plugin AETHERIUS - SOBRENATURAL.esp (45 records: bônus de estágio, disciplinas e lobisomem humano/fera). Mods do kdu (animação + plugin) só no perfil LOCAL; Pandora rodado pelo MO2; saída isolada em AETHERIUS - LOCAL - PANDORA, com os mods compartilhados restaurados. Servidor local com 435 plugins, animação aeth, 102/102 records. Ver ETAPA-2_plugin-e-animacao.md.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — redesenho aprovado
-- **Feito:** ícone do lobisomem refeito fiel à referência, Apoteótico como eclipse de sangue, layout em duas colunas com trilha de 6 marcos. Aprovado pelo dev. Relatório: etapa-1-redesenho.md.
-- **Próximo:** revisão técnica da 1.4; Etapa 2 (servidor).
-- **Bloqueios:** nenhum
+## 2026-11-15 (14) — Sol High, despachado por Opus 5.5
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — Etapa 1 concluída
-- **Feito:** módulo `supernatural` do UI Core com 4 telas, 38 ícones estilizados, fonte Sovngarde Bold, versão de estado (`revision`), identificador de setagem (`grantId`), atualização a cada 10 s + botão Atualizar e validação dos dados. Revisão cruzada de Sol High: reprovado → corrigido → aprovado com ressalvas. Documentos: etapa-1-telas.md, etapa-1-correcoes.md, etapa-1-icones-fonte.md, revisao-etapa-1.md, integracao-ui-core.md.
-- **Próximo:** Etapa 2, servidor (handlers snapshot/choose, persistência, setagem pelo painel, push).
-- **Bloqueios:** nenhum. Ainda não testado dentro do jogo.
+- F8 investigado: registro do evento confirmado no boot, mas nenhum ack ready/keyError nem F8 chegou no teste do dev; TAB e F7 funcionam. Prefixo, ordem de registro e padrão do kdu analisados; logger de mouse não cobre F8. Causa não confirmada; investigação abandonada em favor do F7 por decisão do dev. Relatório: `investigacoes/INVESTIGACAO_15-11_f8-painel-teste.md`.
+- F7 ganhou categoria Sobrenatural e sete ações no alvo selecionado: conceder/remover, XP assinado, disciplina, vertente, encerrar forma e consultar estado. Mesmo fluxo de autorização A+, sessão, requestId e auditoria do painel. API real preserva vagas/estágios; projeção não inclui keyword. F8 removido e flag local desligada.
+- Frontend isolado em `AETHERIUS - SERVIDOR LOCAL\Platform\UI`, sem editar o Data original. Overlays `003-admin-panel.patch`, `004-admin-panel-client.patch`, executor e teste versionáveis no servidor local. Testes Node e sintaxe passaram; servidor reiniciado com jogo fechado. Revisão cruzada e teste em jogo solicitados ao orquestrador, que consolida o acervo. Ver `ETAPA-2_painel-f7.md`.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5) — decisões de texto e escolhas
-- **Feito:** sobretítulos Corrupção do Sangue/da Lua/do Véu e lemas refeitos; nomes em português; Vertente da Bruxa no estágio 1; Disciplina e Vertente não podem ser trocadas (2ª Disciplina no Apoteótico).
-- **Próximo:** Etapa 1, as telas do UI Core.
-- **Bloqueios:** nenhum
+## 2026-11-15 (14) — Opus 5.5
+- Decisão do dev: o poder do Lorde Vampiro será dado só por uma função específica do painel administrativo. Implementação adiada; para os testes continua liberado desde o Neófito.
 
-## 2026-11-15 (pablo-rodrigues1 / Claude Opus 5.5)
-- **Feito:** início do sistema. Abas de maldições da planilha transcritas. Definidos: curva de XP (20k/40k fixos pelo dev; restante calculado até 2M), direção de arte (padrão do Class System; detalhes em Carmesim/Âmbar/Violeta), regras de setagem/remoção (o servidor reseta a classe; a remoção apaga o progresso), keyword só no servidor. Referências de UI do vampirismo analisadas (estágios e Disciplinas). Proposta de textos para Lobisomem e Bruxa. kdu entra como corresponsável: o lobisomem parte do pacote dele.
-- **Próximo:** Etapa 1, as 4 telas do módulo Sobrenatural no UI Core, com dados mock.
-- **Bloqueios:** nenhum
+## 2026-11-15 (15) — Sol High, correções da revisão e implantação F7
 
-## 2026-11-15 (pablo-rodrigues1 / Sol High) — formas e poderes, lote parcial
-- **Feito:** investigação dos dez itens relatados em jogo; lote local 3299cf1 prepara entrada das formas, recarga real, raça/olhos/login e candidato Aura Whisper. 29 testes kdu + 5 novos, serviço/F7, builds, boot e check estrutural passaram. Ver formas-e-poderes.md e ADR-0014.
-- **Próximo:** revisão Terra e reteste humano, depois observador; Etapa 2 aberta.
-- **Bloqueios:** regen magicka/vigor da Névoa e perk temporária da Força exigem decisão sobre integração ao host; nada nativo alterado. Papyrus global segue bloqueado.
+- Terra High não aprovou a primeira versão; Opus aceitou os quatro achados. Corrigidos: reautorização/identidade na fila e após reset, persistência só no personagem com efeitos adiados quando a sessão muda, restauração de Lorde/Fera verificável com recuperação preservada, parâmetros na reserva/auditoria e XP antes/depois, remoção da rota/flag/listener/projeção do teste antigo. Testes de concorrência/falha/auditoria passaram; novo build completo passou.
+- Primeiro teste F7: aba ausente, pois o frontend havia sido copiado para Platform/UI (árvore legada). Segunda tentativa em MeridianUI/aetherius-client, por sobreposição no mod SERVIDOR LOCAL, causou 404 e prendeu o dev na tela até fechar o jogo. Opus corrigiu com cópia COMPLETA COMPATIBILIDADE (LOCAL), original desabilitado, e removeu as árvores sobrepostas de SERVIDOR LOCAL. Perfil versionado no cliente `e39163c`. Instalador e documentação agora exigem raiz única na cópia completa; houseCARL confirma um único provedor ativo. Novo teste e confirmação Terra pendentes.
 
+## 2026-11-15 (16) — Sol High, encerramento do painel F7
 
-## 2026-11-15 (pablo-rodrigues1 / Sol High) — lote menor pronto para reteste
-- **Feito:** commit local 4fc0034 fecha somente Fera, Lorde, raça/olhos/login/reversão e recarga; resolve achados Terra 1/2/3/5 com comando validado, preservação durável da original, callbacks canceláveis e fase após aparência confirmada. 50/50 Node e scripts de serviço/F7 passaram, builds sem addon e boot com 435 plugins/16 ativos/0 falhas; jogo fechado durante reinício.
-- **Decisão:** poderes restantes adiados, patch Visão desativado, Predator Vision continua vencedor; Névoa/regen e Força/dano parciais sem nativo, baseline COTV só provisório local (ADR-0015). Bruxaria é de outro worker; Sol fará depois a correção transversal de origem para lobisomem/vampiro e contrato de extensão.
-- **Próximo:** coordenador encaminha roteiro de jogo; confirmação Terra e reteste humano ainda não ocorreram. Diário local do orquestrador registra exceção do dev para testar o lote menor antes da confirmação Terra. Ver [relatório](formas-e-poderes.md).
-- **Bloqueios:** nenhum para iniciar o teste menor; resultados do motor, observador e origem dos grants pendentes, sem homologação oficial.
+- Terra High confirmou as quatro correções para teste local com ressalvas, preservadas na revisão. O dev confirmou a interface F7 funcionando em jogo na instalação final COMPATIBILIDADE (LOCAL); Opus autorizou o commit e o encerramento. ETAPA-2_painel-f7.md e a investigação F8 finalizadas, com limites explícitos e espelhos versionados no overlay local. Acervo a consolidar pelo orquestrador.
+- O F8 permanece abandonado, causa não confirmada; seu caminho de teste foi removido. Formas/poderes e homologação ampliada de operações/PG/multiplayer são trabalho separado, a ser despachado depois.
+
+- Commit final no servidor local: `ec7d45529f40bcac5e2845262eaea9fda644af85`, árvore raiz limpa; documentação final espelhada em `overlays/sobrenatural/docs/`.
+
+## 2026-11-15 (15) — Opus 5.5
+- Painel F7 com a aba Sobrenatural (7 ações) concluído por Sol High; revisão de Terra High (reprovado → corrigido → confirmado); interface aprovada em jogo pelo dev. Commit local ec7d455. F8 abandonado (causa não confirmada). Lição: no Meridian, uma pasta MeridianUI nunca pode vir de dois mods (404 por raiz canônica): usar cópias (LOCAL) completas.
+- Teste do dev revelou falhas nas formas e poderes (fera, Lorde, raça vampírica, morcego, névoa, enxame, visão); tarefa enviada a Sol High (ETAPA-2_formas-e-poderes.md).
+
+## 15/11/2026 — Sol High: formas e poderes, lote parcial
+- Transporte redundante para fera/Lorde, recarga real padrão 30 min (local 0), SetRace/olhos/login e candidato Aura Whisper preparados. Testes Node/build/boot passaram; revisão cruzada e jogo pendentes.
+- Limites concretos do host em regen da Névoa e perk temporária de Força; implementação desses trechos pausada para consulta ao orquestrador conforme despacho. Relatório ETAPA-2_formas-e-poderes.md e dez investigações por item.
 
 
-## 2026-11-15 (Sol High, despacho Opus) — continuação por origem
-- **Iniciado:** registro estável por personagem das magias efetivamente concedidas, arbitragem das perks com GameplayCore e ligação do catálogo Bruxaria; revisão crítica do lote Argon e poderes restantes do vampiro.
-- **Contexto:** scripts de servidor sem assinatura foram recusados no cliente local; correção Ed25519 já preparada no laboratório pelo orquestrador, ainda sem teste em jogo. Testes anteriores não provam falha do código das formas.
-- **Próximo:** testes Node, builds e roteiro humano; revisão cruzada Terra após entrega. Oficial e mods compartilhados preservados.
+## 2026-11-15 (16) — Opus 5.5
+- Planilha revisada pelo dev (Bruxaria): Shadow Spell Package entra nos mods; a TENEBRAE foi refeita (Shadowbolt, Crushing Darkness, Shadow Stride, Curses, Shadowform, Shadow Atronach, Shadow Rend), com perks e upgrades por estágio. A seção 5 da especificação foi reescrita a partir das coordenadas das células, o que também corrige a distribuição por estágio de MORTUI, DAEMONES e dos perks globais (a versão anterior deduzia pela ordem das colunas).
+- Decisão do dev: o upgrade dos feitiços da TENEBRAE é feito pelo servidor (troca da versão anterior pela melhorada no estágio); o upgrade automático do mod não será usado.
+- Terra High investigou a Bruxaria e reclassificou para alta complexidade (investigacoes/INVESTIGACAO_15-11_bruxaria-concorrencia-grants.md): o reconciliador remove magias sem saber a origem e o cliente pode tomar perks de classe. A correção por origem (todas as maldições) e a Bruxaria foram para a fila do Sol High. Decisão do dev: pisos de habilidade via GameplayCore local (maior valor entre classe e maldição), sem nativo.
+
+## 15/11/2026 — Sol High: retorno da revisão de formas
+- Cinco achados Terra aceitos e implementados; Morcego, Enxame (baseline COTV LOCAL) e projeção pública da Névoa em JS. Névoa/regen e Força/dano permanecem parciais por decisão do dev; nenhum nativo alterado.
+- 50/50 testes e serviço/F7 passaram. Boot inicial revelou colisão de hook com SkyDeath; corrigido com instalação após bootAll e documentado. Boot final 16 ativos/0 falhas; revisão Terra e jogo pendentes.
+- Próxima tarefa recebida: Bruxaria e reconciliador por origem para todas as maldições; prioridade atual continua fechar revisão/teste das formas.
+
+- Decisão do dev: a Bruxaria vai para os modelos Gemini (exceção ao AGENTS.md, para poupar o limite do Codex). Gemini 4 Argon despachado (fase 1: levantamento de records; fase 2: implementação depois do mecanismo por origem do Sol High). O Sol High faz só a correção transversal por origem.
+- Decisão do dev: o lote menor (Fera, Lorde, raça e recarga) vai direto ao teste em jogo, SEM a confirmação do Terra High. Exceção registrada ao fluxo de revisão cruzada do AGENTS.md; a revisão desses itens continua pendente.
+
+## 15/11/2026 — Sol High: candidato menor para teste
+- Decisão posterior do dev: somente Fera/Lorde/raça/recarga agora; poderes e origem de grants depois, sem Bruxaria. Achados Terra 1/2/3/5 implementados e 4 adiado junto da Visão; nenhum novo hook mecânico/visual desses poderes instalado.
+- 50/50 Node + serviço/F7/revisão F7 passaram; builds completos sem addon; servidor reiniciado com Skyrim fechado. Boot server-20261115-191225.stdout.log, PID 21092, 435 plugins, 16 ativos/0 falhas. ESP 46 records e perfil anterior intacto.
+- Relatório/roteiro em ETAPA-2_formas-e-poderes.md; confirmação Terra e teste humano não executados pelo autor. Coordenador avisado por ask após commit. Material experimental preservado em backups/formas-proximo-lote-20261115 no laboratório.
+
+- Fechamento do candidato menor: commit raiz `4fc00349cbe8e75d62be962e687f98d544e9a182`; Acervo publicado na main em `3f711373b4b5be231682974a5cbbd54aedf991c2` (relatório, diário/status, ADR-0015 e índices). Nenhum teste humano ou confirmação Terra foi presumido.
+- Decisões da Bruxaria (dev): Necromancy = VKR_Con_030_Necromancer_Perk_WasNecromancy [PERK 000581DD]; Conjure Keeper = só Arqueiro e Guerreiro; Necromaster aparece como "Necromestre" na tela; Atronach entra direto na versão Expert no Alto Teurgo; o upgrade automático do SSP é parado no cliente para todos (servidor faz os upgrades); pisos de habilidade no GameplayCore local autorizados.
+- Dev: Sol High parado (limite do Codex não resetou). Pendências dele que ficam abertas: correção por origem (magias/perks) e o restante dos poderes (morcego, névoa, enxame, força, visão). O último trabalho dele está no commit 4fc0034; nada dele ficou sem commit.
+- Bruxaria preparada pelo Gemini 4 Argon (records do Luna MAX): witch-grants.js, parada das quests do SSP, pisos de habilidade no GameplayCore local, tela da Bruxa e testes; commit local 603dea7. Falta ligar ao serviço (depende da correção por origem). Investigação do orquestrador: scripts do servidor não assinados eram recusados pelo cliente (chave de teste aplicada no ambiente local, commit 68a6e2b; não testado em jogo).
+- Vampirismo (mecânicas do .md), Terra High: valores PROVISÓRIOS aprovados pelo dev — sol 5/s (07–19; chuva/neve/nevasca/interior/nado protegem), mordida em NPC 25 dano/25 cura/60 s/+25 sangue, sangue 0–100 começando em 100; Poção de Sangue cura 100 e +50 sangue; morder jogadores PERMITIDO (cura 200, +100 sangue; dano na vítima e regras pendentes). Cura/comida: só itens de cura pura são recusados ao vampiro (sem nativo).
+- Decisão do dev: poderes do COTV duram 40 s (+20 s) com recarga de 60 s a partir do uso (20 s de espera após o efeito); Forma de Morcego sem recarga. Dano solar confirmado em 5/s. Enviado ao Sol High.
+- 16/11 — Reserva de Sangue (referencia/Reserva_de_Sangue_Aetherius.md) adotada como mecânica principal do vampirismo e enviada ao Terra High. Decisões do dev: tempo real online (13h30 de 100 a 0), alimentação só em jogadores pelo menu X (+100 sangue, cura 200; vítima perde 20% da vida máxima sem morrer, 2 m, 60 min por vítima, regras de PvP existentes), alimentação em NPC cancelada, Poção de Sangue +50 sangue (cura 100), morte mantém a reserva. Poderes custam 5 de sangue (gate no dispatcher do Sol). Duração 40 s/recarga 60 s só para Força, Névoa, Celeridade e Enxame; Morcego mantém o dash de 1 s sem recarga; Sedução e Reanimação mantêm regras próprias (decisão do orquestrador, a confirmar).
+- 16/11: o dev decidiu não testar em jogo nesta sessão. RETOMADA ganhou a lista consolidada de testes em jogo e revisões pendentes.
+- Terra High encerrou parcialmente a Reserva de Sangue (núcleo + reserve/commit/cancel + crédito da poção + filtros de cura; commits 708f018, feae242, b756602). Restante registrado no RETOMADA.
+- Transformação forçada do lobisomem (dev): 72 h de tempo real online sem transformar → transformação forçada à noite (20h–5h do jogo), com sequência de 20 s (mensagens, batimento, tremor, filtro vermelho). Enfileirada para o Sol High.
 
 
-## 2026-11-16 (Sol High, despacho Opus) — origem, Bruxaria e poderes
-- **Feito:** registro estável de spells por personagem, claims/ACK de perks com Core, catálogo Argon ligado e upgrades TENEBRAE preservando magias próprias. Revisão crítica documentada. Poderes JS e Visão própria; overrides 40/60 nos quatro temporários, Morcego 1/0, custo pelo contrato de sangue Terra e flag solar preparada/desligada.
-- **Validação:** 122 testes, scripts serviço/F7, builds sem addon e estrutura houseCARL passaram; boot 435 plugins/162 forms/16 ativos/0 falhas. Ver formas-e-poderes.md, etapa-2-bruxaria.md e ADR-0019.
-- **Próximo:** revisão independente Terra e teste humano posterior (dev decidiu não testar hoje); nova transformação forçada 72 h online/noite em lote separado. Sem homologação oficial.
+## 2026-11-16 — Sol High, continuação origem/Bruxaria/poderes
+- Implementados ledger estável de spells por personagem, claims compartilhados de perks com Core e ACK, integração do catálogo Argon/pisos 005, upgrades TENEBRAE conservando magias pessoais. Revisão crítica do Argon registrada; revisão independente Terra pendente.
+- Poderes JS ligados após boot, Visão própria Aura Whisper imune ao conflito com Predator, tempos medidos e override 40/60 apenas para Força/Névoa/Celeridade/Enxame; Morcego 1 s sem recarga. Névoa/Força continuam parciais sem nativo. Reserva de Sangue integrada ao contrato Terra reserve/commit/cancel; Lorde só cobra na fase confirmada. Flag solar acordada permanece desligada, sem tick solar neste lote.
+- Corrigidos condição de cooldown do Enxame e conflito da Força com cura genérica. 122 testes + scripts serviço/F7 passaram, builds e estrutura do ESP conferidos. Documentos detalhados e investigação atualizados. Dev adiou testes em jogo; roteiro preparado, sem solicitar execução. Próximo lote: transformação forçada 72 h online/noite, em commit separado.
+
+- Fechamento do lote origem/poderes: boot final PID 7980, log server-20261116-001610.stdout.log; acervo main be29f35. Commit raiz local separado antes de iniciar transformação forçada.
+- 16/11 — Sessão encerrada pelo dev. Sol High parado após o commit 79098ad (origem + Bruxa + poderes); transformação forçada não implementada (só um teste sem commit). Servidor local parado. RETOMADA atualizado com estado, próximos passos e decisões pendentes.
+- 16/11 (retomada): Terra High reclassificou o restante da Reserva de Sangue como alta complexidade (sem alterações). Enfileirado para o Sol High depois da transformação forçada; o Terra High fará a revisão.
 
 
-## 2026-11-16 (Sol High) — início da transformação forçada
-- **Decisão do dev:** substituir os antigos 7 dias por 72 h reais online por personagem, zeradas só na transformação confirmada. Ao vencer, aguardar noite do relógio autoritativo (20h–5h) e executar avisos/efeitos privados de 20 s antes da animação normal do kdu.
-- **Em implementação:** contador monotônico persistido, cancelamento/limpeza, comprovação de raça e reaproveitamento dos assets kdu sem editar modpack. Testes Node e roteiro posterior; sem teste em jogo hoje.
+## 2026-11-16 — Sol High: transformação forçada do lobisomem
+- Recuperadas as fontes ignoradas e teste inicial; versão final no overlay: 72 h online por personagem/concessão, noite [20h,5h), sequência privada 0/5/5,25/10/15/20 s, animação kdu normal. Checkpoint monotônico, stamp privado após raça confirmada e limpeza por cancelamento/watchdog.
+- F7 ganhou Forçar transformação sobre o alvo, antecipando só as horas e mantendo noite/bloqueios, permissão, reautorização, sessão, requestId e auditoria. Fechados cancelamentos durante turning e troca de personagem sem sobrescrever o rosto substituto; filtro de 3 s renovado conforme leitura houseCARL.
+- 121/122 testes Node (29 novos), serviço/F7/revisão F7, parse e reverse-check passaram; runtime preparado sem sync de plugins e servidor permanece parado. Nenhum teste em jogo, modpack ou OFICIAL alterado. Revisão independente pendente do orquestrador; roteiro em docs/ETAPA-2_transformacao-forcada.md. Corrigida a pendência antiga de ligação Bruxa: concluída em 79098ad.
+- 16/11: transformação forçada entregue pelo Sol High (856232a, 122 testes; acervo bcdbd9e). Despachados: Sol High → restante da Reserva de Sangue; Terra High → revisão cruzada de 79098ad, 856232a e 4fc0034.
+- Decisões do dev (16/11): Sedução e Reanimação sem custo de sangue; na remoção da maldição, remover tudo o que o Sobrenatural concedeu (limitação: magia ganha por outra fonte depois da concessão pode sair junto).
 
 
-## 2026-11-16 — retomada da transformação forçada (Sol High)
-Continuação autorizada pelo dev/orquestrador: 72 h reais online por personagem, janela noturna 20h–5h e aviso de 20 s antes do fluxo normal do kdu. Teste inicial e fontes ignoradas recuperados; integração ao boot/F7, persistência e limpeza em andamento, sem teste em jogo. Revisão independente será feita pelo coordenador com outro modelo após a entrega.
+## 2026-11-16 — Sol High: correções prioritárias da revisão Terra 3
+
+- Reserva de Sangue pausada antes de alterar seu núcleo. Cinco achados sobre 79098ad/856232a/4fc0034 aceitos pelo orquestrador e tratados pelo autor; confirmação Terra ainda pendente.
+- Dev decidiu Sedução/Reanimação **isentas** e normais; sete poderes gerenciados cobram 5 e falham fechados sem API/commit válido. Na origem, retirar grants próprios e proteger preexistentes; aquisição externa posterior pode ser removida junto, limitação aceita sem nativo.
+- Barreira de snapshots completos GameplayCore/Sobrenatural antes de retirar perks; diário com fsync antes da raça, recuperação conservadora de intenção interrompida e vínculo personagem/concessão; reached vanilla novamente ligado à sessão autorizada por seq/UUID/janela. Prova do reset não depende da propriedade dinâmica.
+- 144 Node + 36 receptor/Core = **180/180**; serviço/F7/revisão F7, builds e reverse-check passaram. Dois testes PG recusaram execução sem AETHERIUS_TEST_DATABASE_URL; guard preservado. Runtime preparado sem restart; cliente compilado, **não instalado no MO2**. Nenhum addon/OFICIAL/modpack/jogo alterado.
+- Relatório detalhado, limites e roteiro: `REVISAO-3_CORRECOES_sol.md`; investigação `investigacoes/INVESTIGACAO_16-11_revisao-3-origem-e-transformacao.md`. Orquestrador recebe commit para confirmação Terra e consolidação no Acervo; depois retomar a Reserva de Sangue.
+
+- Fechamento da prioridade: código no commit raiz `9b4230a0b9e22d7631aae312da9977c53a062f83`; checkpoint cliente `79303d57cc0a75246f45ca2ff2c83ba95dceb824`. Árvore raiz limpa após commit; encaminhar confirmação Terra antes de presumir aprovação.
+- 16/11 (noite): estado verificado e registrado no RETOMADA. Sol High ativo nas pendências a/b da confirmação do Terra (alterações ainda sem commit no servidor local); Terra/Gemini/Luna encerrados; servidor local parado; MO2 aberto pelo dev; cliente novo não instalado.
 
 
-## 2026-11-16 — entrega da transformação forçada (Sol High)
-Candidato no laboratório `856232aa0cc7474a50017e3382a86fe2d5c7f6aa`: 72 h reais online por personagem/concessão, noite 20h–5h, pré-aviso privado de 20 s e fluxo normal kdu. F7 antecipa só o contador no alvo; stamp privado zera apenas após readback da raça e protege o reset após queda; cancelamentos e IMAD finito tratados. 122/122 testes Node (29 novos), serviço/F7/revisão F7, parse/reverse-check passaram; runtime preparado, servidor permanece parado, nenhum teste humano/modpack/OFICIAL. [Relatório e roteiro](etapa-2-transformacao-forcada.md); [decisão](../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md); [investigação](investigacao-16-11-transformacao-forcada.md). Corrigido o quadro Bruxa: ligação por origem entregue em 79098ad, revisão independente e jogo pendentes. Próxima tarefa Sol: restante da Reserva de Sangue, reclassificada alta complexidade por Terra.
+## 2026-11-16 — Sol High: retorno A/B da confirmação Terra
+
+- Terra confirmou parcialmente os cinco itens e abriu duas pendências aceitas; Reserva de Sangue novamente pausada antes de mudar seu núcleo. Autoria de perk deixa de ser descartada quando outro provider só publicou desejo: novo status `CLAIM_RELEASED`, prova durável conservada em ambos os backends até ausência/remoção e retirada ainda pendente no Core.
+- Intenção cancelada agora permanece sob fila própria até confirmar raça aplicada ou abortar no-op comprovado; tick recupera sem restart, e `start` recusa antes de turning enquanto há pending. Morte/saída/remoção/F7/troca de concessão/personagem cobertas.
+- **158 + 39 = 197/197** testes Node; serviço/F7/revisão F7, builds e patches incrementais 011/005 verificados. Teste novo do ACK Core usa executor SQL simulado com arquivo, não PG real. Runtime preparado e parado; bundle cliente `24284D9C...C3EDCC5`, checkpoint `757c571`, **não instalado no MO2** por instrução do coordenador.
+- Documentação: `REVISAO-3AB_CORRECOES_sol.md` e investigação atualizada; nova confirmação Terra e consolidação no Acervo pelo coordenador. Nenhum teste humano/nativo/OFICIAL/modpack alterado.
+- 16/11 (noite): dev pediu para parar os agentes. Sol High parado; o trabalho das pendências A/B (158 testes) foi salvo pelo Opus como candidato no commit 88cbbd0, sem confirmação. Pendências detalhadas em docs/PENDENCIAS.md.
+- 16/11: criado docs/DECISOES.md com todas as decisões de funcionamento (regras gerais, progressão, interface, vampirismo, Reserva de Sangue, licantropia, transformação forçada, bruxaria, ambiente local).
+
+- 17/11: correção candidata B1 da confirmação Terra: evidência de raça e ambiguidade de readback são conservadas entre retentativas; aborto somente sem evidência anterior e com no-op comprovado. Seis injeções novas, regressão 164/164; relatório REVISAO-3AB_CORRECOES_sol.md. Sem jogo; nova confirmação Terra e publicação do Acervo pelo coordenador.
+
+- **17/11 — Sol High (candidato):** corrigido B1 da confirmação Terra em `e86c0cb` (164/164 na rodada dedicada; nova confirmação pendente). Reserva: sol `4c631e1`; suspensão individual de necessidades/HUD `1f84be4`, cliente `f57ec7d`; Sede Crítica/Feral `6fb08d1`; relógio `f5a4593`; alimentação desativada `e4133ac` + guardas `3246967`. D1–D3 configuráveis, ainda abertas. D7 bloqueia atomicidade da poção e também delimita a alimentação não atômica: Opus autorizou somente candidato default false com journal, quarentena/manual e protótipo PlayIdleWithTarget, sem ativar flag. Validação final 298 testes Node + serviço/F7/revisão-F7, patches e preview de navegador; sem runtime, instalação MO2 ou jogo. Relatório autossuficiente ETAPA-3_vampirismo-mecanicas.md; acervo e revisão independente pelo coordenador.
+
+
+## 2026-11-17 — Sol High: correções arbitradas da revisão R2
+
+- Corrigida preservação da entrada/cauda até fechamento seguro (`3015b91`), persistência única por tick com rollback e fsync/rename (`34fac30`), projeção de HUD/efeitos nos limiares sem esperar 10 s (`7889be4`) e retry após dispose (`3a4b70e`). Uma injeção revelou iteração indefinida ao reconstruir Map durante dispose; teste local interrompido, iteração por snapshot corrigida e regressão passou com timeout. Sem execução de servidor/jogo.
+- 311/311 Node (13 casos R2 adicionais), serviço/F7/revisão-F7 exit 0. Benchmark real de arquivo temporário: N=50.000/V=2.000, uma escrita, tick 22,801 ms e projeção de 2.000 leituras 3,433 ms na rodada com projeção; sem promessa de SLA ou simulação de PG/nativo. Fonte/overlay idênticos; cliente continua f57ec7d.
+- Criaturas podem ser MpActor/neighbors no código do host; políticas de materialização/relevância impedem prometer toda criatura visível sem jogo. Matriz obrigatória documentada. D7 esclarecida: poção antiga +50 ativa sem flag; alimentação default false não desliga a poção nem resolve atomicidade. ETAPA-3/DECISOES/PENDENCIAS/RETOMADA e investigação atualizadas; confirmação Terra e publicação no Acervo pelo coordenador. Nenhuma mudança nativa, oficial, runtime, instalação MO2 ou jogo nesta R2.
+
+
+- **17/11 — Sol High, residual R2 #2:** reprodução com relógio injetado comprovou sangue 79,9944 após callback 1 h atrasado; arbitragem Opus aplicada em `a35b0e8` limita close a min(now, offlineAt), resultando em 99,9889 para apenas 2 s observados. Reaparecimento via tick/get fecha/reabre e limpa o limite antigo sem cobrar gap. Três regressões novas, 24/24 dedicados e **314/314 bateria completa**, serviço/F7/revisão-F7 todos exit 0. Terra já reconfirmou #3/#4/retry; confirmação residual e publicação Acervo pelo coordenador. ETAPA-3, investigação, DECISOES, RETOMADA e PENDENCIAS atualizados; sem jogo/runtime/nativo/MO2/cliente.
+
+## 2026-11-17 — Opus 5.5: consolidação das revisões R1/R2/R3
+
+- **R1 (Terra):** A confirmada; B reprovada (B1) → Sol `e86c0cb` → Terra reconfirmou **aprovado** (164/164 gamemode, 39/39 Core). `docs/REVISAO-3AB_CONFIRMACAO_terra.md`.
+- **R2 Reserva de Sangue (Terra):** 4 achados; arbitragem Opus aceitou #2/#3/#4 e tratou #1 (criaturas) como teste obrigatório em jogo. Sol corrigiu (`3015b91`, `34fac30`, `7889be4`, `3a4b70e`, residual `a35b0e8` com close em min(now, offlineAt)); Terra reconfirmou **aprovado no escopo dos testes** (314/314). `docs/REVISAO-R2_reserva-de-sangue_terra.md`.
+- **R3 bloqueio de cura (Sol revisando Terra):** reprovado (P1 Fortificar Vida tratado como cura pura; P2 roteamento de Magicka em área). Terra corrigiu (`66d42d5`, `190d4e7`, docs `0e4dd84`); Sol reconfirmou **aprovado** (324 + 14 suplementares). `docs/REVISAO-R3_bloqueio-cura_sol.md`.
+- **Decisão Opus:** alimentação implementada só como candidato atrás de flag default false, com journal e quarentena manual, sem declarar atomicidade.
+- **Aberto:** D7 (dev): ampliar contrato nativo ou aceitar garantia menor para poção/alimentação; poção antiga ativa sem flag. Rodada de testes em jogo inteira pendente; nada instalado no MO2.

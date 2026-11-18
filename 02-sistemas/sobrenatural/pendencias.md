@@ -74,3 +74,23 @@ Pré-requisito: instalar o cliente novo e preparar o servidor (`Stop` → `Build
 2. Despachar ao **Terra High** a revisão **R1** (commit `88cbbd0`).
 3. Despachar ao **Sol High** o restante da Reserva de Sangue (2.1), retomando a partir de `88cbbd0`.
 4. Depois das revisões, organizar a rodada de testes em jogo (seção 4) com o dev.
+
+## Atualização de 17/11 — entrega candidata Sol High
+
+Commits no servidor local: `e86c0cb` (B1), `4c631e1` (sol), `1f84be4` (necessidades/HUD), `6fb08d1` (Sede Crítica/Feral), `f5a4593` (relógio exato), `e4133ac` + `3246967` (alimentação default false e guardas). Cliente/template: `f57ec7d`. **298 testes Node**, scripts serviço/F7/revisão-F7 e composição de patches passaram; não houve instalação, runtime, servidor ou jogo.
+
+A lista de “falta” da seção 2.1 registra o estado de 16/11: agora os itens 1, 2, 4/5 (efeitos da enumeração antiga), relógio e menu X têm candidatos para revisão, não homologação. **Atomicidade da poção continua bloqueada (D7)**; alimentação compartilha a fronteira não atômica, foi autorizada só como candidato atrás de `AETHERIUS_VAMPIRE_FEED_ENABLED=false`, com journal e quarentena manual, e não pode ser ativada sem decisão do dev. D1–D3 continuam abertas e parametrizadas; áudio/pareamento/espectador, cobertura de criaturas e PG real seguem pendentes.
+
+Próximo passo do coordenador: nova confirmação Terra de B1 (`e86c0cb`) e revisão R2 dos candidatos até `3246967`; consolidar os .md no Acervo, decidir D7/flag e preparar futura instalação LOCAL/rodada de jogo. Relatório completo, arquivos:linhas, logs, hashes e roteiro em `ETAPA-3_vampirismo-mecanicas.md`. A origem de grants e keyword privada não mudou; nenhuma garantia atômica foi criada por estes candidatos.
+
+
+## Atualização R2 de 17/11 — correções candidatas entregues
+
+Opus arbitrou R2 como aprovada com ressalvas e aceitou correção de #2/#3/#4: `3015b91`, `34fac30`, `7889be4`, com complemento de dispose `3a4b70e`. **311/311 Node + serviço/F7/revisão-F7 passaram**; logs, benchmark e arquivo:linha em ETAPA-3, seção R2. R1 A/B já foi confirmada pelo Terra (substitui o pedido histórico de nova confirmação B1). Falta confirmação independente destas correções R2; criaturas não bloqueiam a entrega por arbitragem, mas sua cobertura real exige jogo (mundo + gerenciada/invocação, 24/25/26 m e transições). Caminho MpActor/neighbors foi comprovado estaticamente, sem provar materialização de toda criatura visível.
+
+**D7 explícita:** crédito antigo da poção +50 segue ativo sem flag; alimentação default false não o desliga. Atomicidade e decisão de ativação continuam pendentes; persistência em lote/fsync não cria transação com nativo/PG. D1–D3, PG real, sincronização owners/espectador e os roteiros humanos anteriores permanecem. Sem preparo/start de servidor, instalação MO2 ou jogo nesta rodada. Próximo passo do coordenador: confirmação Terra, publicação dos .md no Acervo e decisão do dev sobre D7 e rodada LOCAL.
+
+
+### Residual R2 #2 — 17/11
+
+Terra reconfirmou #3/#4/retry e encontrou callback tardio extrapolando offlineAt. Arbitragem Opus implementada em `a35b0e8`: fechamento limitado a min(now, offlineAt), reentrada observada sem conservar o marcador antigo. **314/314 Node + serviço/F7/revisão-F7 exit 0**, incluindo três regressões novas. Falta confirmação independente apenas deste residual; D7, criaturas/jogo, decisões abertas e consolidação no Acervo continuam com o coordenador. Detalhes em ETAPA-3, seção residual R2; sem cliente/runtime/MO2/jogo nesta rodada.

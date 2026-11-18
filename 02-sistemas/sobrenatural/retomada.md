@@ -1,8 +1,15 @@
 # RETOMADA — Sistema Sobrenatural
 
+> **Residual R2 #2 — 17/11/2026, Sol High:** callback atrasado limitado a `min(now, offlineAt)` em `a35b0e8`; reaparecimento observado fecha o segmento anterior e reabre sem o marcador antigo. **314/314 testes Node + serviço/F7/revisão-F7 passaram**. Terra já reconfirmou #3/#4/retry; **Terra reconfirmou o residual (17/11): R2 aprovada no escopo dos testes.** R3 (Sol revisa bloqueio de cura) em andamento. D7 permanece: crédito antigo da poção ativo sem flag e não atômico; alimentação default false. Criaturas e demais roteiros em jogo continuam obrigatórios, sem instalação, runtime ou jogo nesta rodada.
+
+
 > Leia este arquivo **primeiro** ao retomar o trabalho. Atualize-o ao fim de cada sessão/etapa (estado, próximo passo, pendências).
 
 **Última atualização:** 2026-11-16 (noite) — Opus 5.5: agentes parados; pendências detalhadas em `docs/PENDENCIAS.md`.
+
+## Atualização 17/11 (Opus)
+- **R1 concluída:** Terra reprovou B (achado B1); Sol corrigiu em `e86c0cb`; Terra reconfirmou: **A e B aprovados** (164/164 gamemode, 39/39 Core). Ver `docs/REVISAO-3AB_CONFIRMACAO_terra.md`.
+- **Reserva de Sangue (Sol, em andamento):** dano solar candidato `4c631e1` (sem revisão). Atomicidade da poção **bloqueada** → decisão do dev **D7** (ampliar contrato nativo ou aceitar garantia menor). Sol segue nos itens 2, 3 e 5.
 
 ## Estado dos agentes — encerramento de 16/11 (noite)
 
