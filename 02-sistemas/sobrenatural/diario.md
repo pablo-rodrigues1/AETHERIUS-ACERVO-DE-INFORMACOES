@@ -241,3 +241,6 @@ Sol High iniciou a integração de servidor e entregou o [contrato v1](contrato-
 ## 2026-11-18 — Relógio fracionário e agenda de terror da Bruxaria
 
 Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo de 300. No candidato local, Sol High registrou persistência e projeção em `7dc6c23` e agendamento privado em `944b0c3`. Testes Node de Vínculo, sangue e agenda aprovados. Movimentos de inventário, modificadores, efeitos e integração cliente ainda estão em execução.
+
+## 2026-11-18 — Terra: apresentação do Vínculo
+- WAV PCM normalizado, Ritual mock v1, API visual de terror e selo sem anel preparados; integração e records com Sol. Cliente `ce281d6`; laboratório `8738b14`, `1561f68`, `0289e58`, `1159f11`. Testes 7/7; revisão cruzada, CEF e jogo pendentes. Detalhes e APIs em `etapa-4-bruxaria-vinculo-do-veu.md`.
