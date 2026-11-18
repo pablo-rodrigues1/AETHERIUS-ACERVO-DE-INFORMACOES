@@ -1,5 +1,11 @@
 # Diário — Sistema Sobrenatural
 
+## 2026-11-17 — Sol High, D7 candidata
+
+- Poção `0ec39d2`: recibo privado de EatItem por unidade, débito idempotente quando rastreada e descarte em falha PG/JSON. Consumo fora do ledger conserva +50 quando a consulta PG confirma a condição. Caiu durante o processamento, o boot não reaplica.
+- Alimentação `2088225`: HP e cooldown preservados, observações por ator, encerramento automático e crédito de sangue passando por último. Flag true só em `config/local.env` ignorado, default false. Runtime ainda precisa receber o gamemode candidato. Bateria 410/410 nos dois modos, Core 39/39 e scripts serviço/F7 OK. Revisão externa da D7 e teste em jogo pendentes.
+- Documentação local: `8225ac6`. [Etapa 3 e revisão](etapa-3-vampirismo-mecanicas.md).
+
 ## 2026-11-17 — D7, decisão do dev e arbitragem de saúde
 
 - O dev aceitou perder item ou efeito se houver falha ou dúvida sobre o crédito de sangue. A ativação da alimentação foi autorizada só no laboratório, após a implementação da D7, com código desligado por padrão.
