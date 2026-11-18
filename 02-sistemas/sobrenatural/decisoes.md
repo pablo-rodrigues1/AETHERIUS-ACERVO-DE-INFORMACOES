@@ -178,3 +178,11 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 
 ## 18/11/2026 — Sobrecarga do Vínculo adicionada ao plano (dev)
 - Especificação `referencia/Aetherius_Implementacao_Sobrecarga_Bruxas.md` incorporada à ETAPA-4 §8 (teto 300, ritual de sobrecarga com receita dobrada, blocos de 50, +50% Magicka máx. fixo, olhos Dark/Light/Glow, BRUXA violeta, aura roxa, sussurros, selo com raios e capacete demoníaco). Não iniciada; pendências S1–S7 na ETAPA-4 §8.3.
+- 18/11 (dev): raça sem a variante de olho pedida usa a variante Magic disponível mais próxima.
+
+## 18/11/2026 — Isolamento da entrega em relação ao Aetherius UI (dev) — REGRA DE COMPILAÇÃO FINAL
+- O Sobrenatural é um sistema **isolado**. A compilação final **não pode conter nenhuma alteração** no Aetherius UI que não seja do próprio módulo Sobrenatural.
+- **Proibido na entrega:** mudanças visuais na HUD do Aetherius UI fora dos elementos do Sobrenatural (barra de sangue, selo do Vínculo, vinheta/efeitos próprios), no **menu radial** e em **qualquer outro módulo** do UI Core/Meridian (CSS/JS/HTML globais, temas, layout do shell, `modules.json` além do registro do próprio módulo, `index.html` além do ponto de montagem estritamente necessário).
+- **Permitido:** arquivos do módulo `supernatural` e componentes exclusivos do Sobrenatural; o mínimo de integração (registro do módulo e ponto de montagem da HUD própria), documentado como diff isolado.
+- As "4 exceções de CSS do shell" aceitas na Etapa 1.4 e qualquer alteração já feita fora do escopo (ex.: arquivos do UI Core tocados em `8bcc121`/`8d9fc09`) devem ser **auditadas e removidas ou reescritas** para ficar dentro do módulo antes da compilação final.
+- Critério de aceite da compilação final: diff do cliente/UI Core contra o oficial contendo **apenas** arquivos do Sobrenatural + integração mínima listada.

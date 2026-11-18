@@ -46,7 +46,7 @@ Falta:
 - **Névoa e Força Imensurável:** parciais por decisão do dev (zerar regeneração na Névoa e o bônus da Força no dano real exigem nativo).
 - **Lorde Vampiro só pelo painel** (P10): decidido, implementação adiada; para os testes continua liberado desde o Neófito (`VAMPIRE_LORD_MIN_STAGE`).
 - **Defeito do cliente oficial** em `settingsService.ts:121` (`publicKeys = {}` faz o cliente exigir assinatura): só contornado no ambiente local com chave de teste. Levar ao responsável pelo cliente/servidor oficial e verificar se o oficial tem `serverKey`.
-- **Compilação final** em pasta única para o oficial: plugin `AETHERIUS - SOBRENATURAL.esp`, mods do kdu, Pandora rodado no perfil oficial, perfis do cliente oficial, patches de servidor e cliente.
+- **Compilação final** em pasta única para o oficial: plugin `AETHERIUS - SOBRENATURAL.esp`, mods do kdu, Pandora rodado no perfil oficial, perfis do cliente oficial, patches de servidor e cliente. **Pré-requisito (dev, 18/11):** auditar e retirar do pacote qualquer alteração do Aetherius UI fora do módulo Sobrenatural (HUD geral, menu radial, outros módulos); ver DECISOES 18/11 "Isolamento da entrega".
 
 ## 3. Decisões que ainda dependem do dev
 | # | Decisão |

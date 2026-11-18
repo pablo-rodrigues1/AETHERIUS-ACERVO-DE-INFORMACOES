@@ -232,41 +232,25 @@ Ajustado apenas o visual conforme pedido do dev: 90 px em 1920×1080, 60 px em 1
 ## 2026-11-18 — Opus 5.5: Sobrecarga do Vínculo adicionada ao plano
 - Pedido do dev: incluir no plano da Etapa 4 a especificação `Aetherius_Implementacao_Sobrecarga_Bruxas.md`. Registrada em ETAPA-4 §8 com pendências S1–S7; nada despachado.
 
+## 18/11 — Terra: prévia candidata da sobrecarga
+Cliente `d6ae059` e laboratório `973ea57`: camadas da arte original, capturas e sequência de quadros; teste visual 3/3. Não está integrado ao contrato v1 nem revisado, CEF/jogo pendentes. Cadência dos sussurros foi decidida por Opus e registrada na ETAPA-4; FFmpeg não tem muxer xWMA e WAV experimental não constitui áudio pronto. Terror, Ritual, sons e records permanecem pendentes.
 
-## 2026-11-18 — Contrato do Vínculo do Véu
+## 18/11 — apresentação Terra entregue
+WAV PCM (sem XWM), tela do Ritual em mock v1, API visual de terror e selo sem anel concluídos no escopo de apresentação; integração com servidor e records transferida a Sol. Cliente `ce281d6`; laboratório `8738b14`, `1561f68`, `0289e58`; teste Node 7/7. Previews em 1280×720, revisão cruzada e CEF/jogo pendentes; detalhes e APIs na ETAPA-4.
 
-Sol High iniciou a integração de servidor e entregou o [contrato v1](contrato-vinculo-do-veu.md) ao coordenador para o cliente de Terra High. O contrato define a projeção privada, as mensagens do Ritual e as manifestações privadas. Implementação e revisão cruzada em andamento.
+## 18/11/2026 — Etapa 4 em execução (Sol High)
 
+Contrato cliente-servidor v1 entregue ao coordenador. Servidor local: relógio e projeção `7dc6c23`, agenda de terror `944b0c3`, Ritual e materiais `4b16eb5`. O modo Sobrecarga pode iniciar acima de 99, com a drenagem preservada. O perfil ativo Qualidade impediu a criação in-place no ESP pelo houseCARL. A área do Ritual permanece bloqueada para início até ter a runa. A integração nativa, a revisão cruzada e os testes em jogo permanecem pendentes.
 
-## 2026-11-18 — Relógio fracionário e agenda de terror da Bruxaria
+## 18/11 — Terra: sobrecarga visual intensificada
+Selo sem anel ganhou halo, raios longos e abertura mais evidente por pedido do dev; cliente `46d86b3`, laboratório `cfb896b`, 5/5 testes. Cinco capturas reais e cinco versões renderizadas a 4× em 1280×720 e 17 quadros; a tentativa 1920 saiu corrompida. Revisão, CEF e jogo pendentes; detalhes em ETAPA-4.
 
-Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo de 300. No candidato local, Sol High registrou persistência e projeção em `7dc6c23` e agendamento privado em `944b0c3`. Testes Node de Vínculo, sangue e agenda aprovados. Movimentos de inventário, modificadores, efeitos e integração cliente ainda estão em execução.
+## 18/11 — transições do selo
+Animações com easing e primeira projeção imediata, 15 quadros e slider; cliente `8bcc121` contém autoria mista Terra/Sol, laboratório `94f4313`. Teste 5/5; integração precisa chamar `immediate:true` na restauração de HUD reutilizada, revisão/CEF/jogo pendentes. Ver ETAPA-4.
 
-## 2026-11-18 — Terra: apresentação do Vínculo
-- WAV PCM normalizado, Ritual mock v1, API visual de terror e selo sem anel preparados; integração e records com Sol. Cliente `ce281d6`; laboratório `8738b14`, `1561f68`, `0289e58`, `1159f11`. Testes 7/7; revisão cruzada, CEF e jogo pendentes. Detalhes e APIs em `etapa-4-bruxaria-vinculo-do-veu.md`.
+## 18/11/2026 — Etapa 4 candidata para revisão (Sol High)
 
+O lote concluiu a integração do contrato v1, runa e sons no ESP (`a00899a`), invocações e blocos (`3831f69`), runa/pose replicadas (`1537e23`), aura, olhos e Magicka (`42d5832`) e integração empacotada (`f69c438`). O cliente usa o selo do Terra em `8bcc121`, com correções Sol em `480f19d` e `8d9fc09`. Foram 445/445 testes Node por modo e 39/39 do recorte Core. CMake offline parou por ausência de CMakeRC. Miggyluv está instalado, mas fora da ordem ativa do perfil LOCAL. R-ANIM ficou em despacho próprio. Revisão independente, recompilação do addon e teste humano estão pendentes.
 
-## 2026-11-18 — Ritual candidato e bloqueio de autoria
-
-`4b16eb5` implementa escolha e reserva das categorias, baixa nativa com conferência, transação PG e D7. O houseCARL recusou autoria in-place no perfil Qualidade por plugin inativo. Nenhuma escrita no ESP. O início do Ritual aguarda a runa.
-
-## 2026-11-18 — Terra: selo de sobrecarga intensificado
-- Cliente `46d86b3`, laboratório `cfb896b` e `f78ce0f`; teste visual 5/5, prévias 1280 e ampliadas 4×, 17 quadros. Captura 1920 corrompida no navegador; revisão, CEF e jogo pendentes.
-
-## 2026-11-18 — Terra: transições do selo
-- Cliente `8bcc121` inclui autoria mista Terra/Sol, registrada na Etapa 4; laboratório `94f4313` e `949d882`, teste 5/5, slider e 15 quadros. HUD reutilizada precisa de `immediate:true`; revisão cruzada, CEF e jogo pendentes.
-
-
-## 2026-11-18 — Etapa 4 candidata para revisão cruzada
-
-Sol High concluiu integração da UI, terror, ritual, Magicka e projeção pública no candidato local `f69c438` (cliente `8d9fc09`); ESP `a00899a` contém nove records conferidos. Node 445/445 por modo e recorte Core 39/39. CMakeRC ausente bloqueia o addon novo, e Miggyluv está desabilitado no perfil LOCAL. Reanimações foram isoladas em R-ANIM. Revisão independente e jogo pendentes. [Relatório](etapa-4-bruxaria-vinculo-do-veu.md).
-
-
-## 2026-11-18 — Aceite do Ritual e ganho visual
-
-O dev pediu fechar a tela no aceite do Ritual e apresentar a recuperação gradualmente no selo. A D7 continua um único crédito autoritativo e o contrato v1 continua com a mesma estrutura. A apresentação permanece em integração.
-
-
-## 2026-11-18 — Ligação do selo ao ganho e à drenagem
-
-`f75a57d` verificou que a ponte usa `setValue` para todas as projeções e `immediate` na restauração. O selo atualiza o alvo com a drenagem durante a subida. Nove testes de ponte e Ritual passaram.
+## 2026-11-18 — Decisão do dev: entrega isolada do Aetherius UI
+- Registrada em DECISOES: a compilação final não leva nenhuma alteração do Aetherius UI fora do módulo Sobrenatural (HUD geral, menu radial, outros módulos). Auditoria das alterações fora de escopo (incl. 4 exceções de CSS da Etapa 1.4) fica como pré-requisito da compilação final.
