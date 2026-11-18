@@ -183,3 +183,8 @@
 - **R3 bloqueio de cura (Sol revisando Terra):** reprovado (P1 Fortificar Vida tratado como cura pura; P2 roteamento de Magicka em área). Terra corrigiu (`66d42d5`, `190d4e7`, docs `0e4dd84`); Sol reconfirmou **aprovado** (324 + 14 suplementares). `docs/REVISAO-R3_bloqueio-cura_sol.md`.
 - **Decisão Opus:** alimentação implementada só como candidato atrás de flag default false, com journal e quarentena manual, sem declarar atomicidade.
 - **Aberto:** D7 (dev): ampliar contrato nativo ou aceitar garantia menor para poção/alimentação; poção antiga ativa sem flag. Rodada de testes em jogo inteira pendente; nada instalado no MO2.
+
+## 2026-11-17 — Comparação com o lobisomem oficial v0.42.0
+- Sol High comparou oficial v0.42.0 × base kdu 14/11 × nossa versão: o `werewolf-service.js` oficial é idêntico ao kdu; nossa versão é extensão endurecida. Oficial acrescenta só `actionVoiceFire` no client.js; fonte TS oficial sem `SetRace`. Recomendação: **híbrido** (base v0.42.0, serviço de fera único = nosso, porte seletivo, mescla manual do cliente).
+- Terra High revisou e **confirmou** (29 testes oficiais, 130 locais), com ressalvas: rebase revisado, validar entrada Z e testes em jogo; estimativa de horas não é garantia.
+- Integração aguarda autorização do dev. Relatório: `docs/COMPARACAO_lobisomem-oficial-v0.42.md`.
