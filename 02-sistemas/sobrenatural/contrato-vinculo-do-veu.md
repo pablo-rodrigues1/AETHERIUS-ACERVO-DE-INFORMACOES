@@ -63,7 +63,7 @@ type RitualView = {
 };
 ```
 
-As categorias são Coração Daedra, Pedra da Alma Negra cheia ou vazia, carne animal crua, pele animal, tomo de feitiço, Nightshade e Nirnroot. A disponibilidade usa o inventário ativo no servidor. A tela acende categorias conforme `count >= perCategory` e habilita o início se o modo estiver elegível, houver três selecionadas válidas e `active` for `null`. A receita exige 1 por categoria no ritual normal e 2 na sobrecarga. O estado de elegibilidade vem do servidor. Sobrecarga pode começar com `100 ≤ bond < 300`. Códigos do ritual: `NOT_WITCH`, `INVALID_REQUEST`, `MODE_UNAVAILABLE`, `MISSING_MATERIALS`, `RITUAL_ACTIVE`, `RITUAL_NOT_ACTIVE`, `UNSAFE_STATE`, `RITUAL_UNAVAILABLE`; erros de sessão já existentes do UI Core continuam possíveis.
+As categorias são Coração Daedra, Pedra da Alma Negra cheia ou vazia, carne animal crua, pele animal, tomo de feitiço, Nightshade e Nirnroot. A disponibilidade usa o inventário ativo no servidor. A tela acende categorias conforme `count >= perCategory` e habilita o início se o modo estiver elegível, houver três selecionadas válidas e `active` for `null`. A receita exige 1 por categoria no ritual normal e 2 na sobrecarga. O estado de elegibilidade vem do servidor. Sobrecarga pode começar com `99 < bond < 300` no ajuste inicial. A margem vale somente no início. A drenagem continua durante a execução e o teto de 300 se aplica ao saldo projetado mais 50 na conclusão. Códigos do ritual: `NOT_WITCH`, `INVALID_REQUEST`, `MODE_UNAVAILABLE`, `MISSING_MATERIALS`, `RITUAL_ACTIVE`, `RITUAL_NOT_ACTIVE`, `UNSAFE_STATE`, `RITUAL_UNAVAILABLE`; erros de sessão já existentes do UI Core continuam possíveis.
 
 `active.id` identifica a execução, `remainingMs` reflete o relógio autoritativo e `result.id` permite apresentar um resultado uma única vez. Pode-se animar a barra entre respostas, mas a conclusão depende da resposta autoritativa. `result` é um resultado transitório da sessão, preservado para reabertura da tela durante a sessão, até começar outro ritual. Desconectar encerra a execução e limpa o estado da UI; reconectar começa sem execução. Uma falha de confirmação de consumo resulta em `failed/uncertain` com crédito zero, conforme D7. Os efeitos públicos de runa/animação vêm da replicação do servidor; abrir/fechar o módulo não os altera.
 
@@ -87,3 +87,7 @@ type VeilTerror = null | {
 
 - Servidor local: `C:\Code\Aetherius - Servidor Local\source\server\gamemode\supernatural-service.js:207` (ações do módulo e operação autenticada); `supernatural\blood-presentation.js:2` (propriedade SkyMP privada e ligação com a HUD).
 - Cliente local: `C:\Code\Aetherius - Servidor Local\client-source\client\src\services\services\aetheriusUiService.ts:115` (encaminhamento autenticado do envelope); `client\ui-core\modules\supernatural\veil-seal.js` (selo existente).
+
+## Histórico
+
+- 18/11/2026 — Opus ajustou a elegibilidade de início da Sobrecarga de `bond >= 100` para `bond > 99` com limiar configurável. A condição é autoritativa por `modes.overload.eligible`. O formato das mensagens e a versão v1 permanecem aplicáveis.

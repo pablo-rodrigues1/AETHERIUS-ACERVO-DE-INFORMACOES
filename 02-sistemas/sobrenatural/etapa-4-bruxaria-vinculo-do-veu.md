@@ -135,3 +135,18 @@ As doze capturas de `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\pr
 
 ### 8.4 Distribuição planejada (acréscimo)
 Sol High: blocos/buffs/limite de criaturas, sacrifício de sobrecarga, olhos/nome/aura sincronizados. Terra High: estados de sobrecarga do selo (raios, capacete demoníaco), modo Sobrecarga na tela do Ritual, sussurros no cliente. Revisão cruzada.
+
+
+### 8.6 Elegibilidade da Sobrecarga com drenagem fracionária
+
+Opus autorizou em 18/11 avaliar `99 < vínculo < 300` no início do ritual. O limiar inferior é configurável e resolve a janela instantânea do valor 100 em tempo online. A drenagem segue durante os 300 s e o resultado credita até 50 sobre o saldo projetado ao concluir, com teto 300. Blocos, bônus e apresentação continuam com as fronteiras fracionárias da §8.5. A UI usa `modes.overload.eligible` do [contrato v1](contrato-vinculo-do-veu.md).
+
+## 18/11 — Servidor candidato, relógio e agenda de terror
+
+Sol High implementou a base persistida `7dc6c23` e o agendamento `944b0c3` no repositório `C:\Code\Aetherius - Servidor Local`. Os arquivos abaixo ficam em `source\server\gamemode`, com os módulos Sobrenatural espelhados em `overlays\sobrenatural\files\server\gamemode` e os pontos de entrada transferíveis pelos patches 019 e 020.
+
+- `supernatural\blood-reserve.js:26,52,75,149` permite um recurso adicional com as mesmas fronteiras de sessão, lote e confirmação de gravação. O esquema existente do sangue continua com `blood`. `supernatural\veil-bond.js:11,23,46` usa `bond` e grava `data\aetherius-veil-bond.json` por personagem e concessão. O projetor expõe um estado privado v1; `commands.js:25,46,67,75` e `supernatural-service.js:186,190` fazem o fechamento da sessão e a limpeza ao perder a concessão.
+- `supernatural\veil-terror.js:24,61` agenda IV a cada 12–20 min online, com 35% sem evento, e V a cada 5 min, com evento. Guarda o último áudio e pensamento por sessão e grava o cooldown da tela preta antes de publicá-la. Uma gravação ambígua, cooldown vigente ou veto local da tela preta exige retorno seguro. A caixa de eventos é privada e transitória. A reprodução, a restauração da tela e os sussurros dependem da integração nativa do cliente.
+
+Resultados Node desta rodada: 24/24 de Reserva de Sangue, 4/4 de Vínculo e 3/3 do agendador. Os pontos de integração permanecem candidatos até revisão independente e rodadas de teste no jogo.
+

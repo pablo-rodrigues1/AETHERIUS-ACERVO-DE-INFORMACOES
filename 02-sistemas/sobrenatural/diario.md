@@ -236,3 +236,8 @@ Ajustado apenas o visual conforme pedido do dev: 90 px em 1920×1080, 60 px em 1
 ## 2026-11-18 — Contrato do Vínculo do Véu
 
 Sol High iniciou a integração de servidor e entregou o [contrato v1](contrato-vinculo-do-veu.md) ao coordenador para o cliente de Terra High. O contrato define a projeção privada, as mensagens do Ritual e as manifestações privadas. Implementação e revisão cruzada em andamento.
+
+
+## 2026-11-18 — Relógio fracionário e agenda de terror da Bruxaria
+
+Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo de 300. No candidato local, Sol High registrou persistência e projeção em `7dc6c23` e agendamento privado em `944b0c3`. Testes Node de Vínculo, sangue e agenda aprovados. Movimentos de inventário, modificadores, efeitos e integração cliente ainda estão em execução.
