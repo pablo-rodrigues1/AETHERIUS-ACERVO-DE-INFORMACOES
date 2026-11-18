@@ -3,15 +3,19 @@ titulo: Diário do AetheriusGameplayCore
 tipo: historico
 status: ativo
 responsaveis: [mercurius17, kdu, Melekyy]
-atualizado: 2026-11-15
+atualizado: 2026-11-18
 tags: [diario, gameplay]
-relacionados: [README.md]
+relacionados: [README.md, ../profissoes/README.md]
 ---
 
 # Diário do AetheriusGameplayCore
 
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+
+## 2026-11-18, documentação de profissões consolidada no Acervo (Gemini)
+
+- **Feito:** Documentação dos módulos `profession-system`, `gathering-system`, `crafting-system`, `refinement-system` e `enchantment-system` (além de receitas de kits em `durability-system`, política de balanceamento configurável e migrations `0013`/`0014`) publicada em [Profissões](../profissoes/README.md), com guias da Staff correspondentes. Sem alteração de código.
 
 ## 2026-11-16, causa do ataque travando e kit atualizado (kdu / Claude Opus 5.5)
 

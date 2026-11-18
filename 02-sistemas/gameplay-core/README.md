@@ -6,9 +6,9 @@ fase: em-desenvolvimento
 responsaveis: [mercurius17, kdu, Melekyy]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: []
-atualizado: 2026-11-15
+atualizado: 2026-11-18
 tags: [gameplay, classes, combate, leveling, persistencia, servidor]
-relacionados: [diario.md, feiticos-por-classe.md, correcoes-de-dano.md, conjuracao.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
+relacionados: [diario.md, feiticos-por-classe.md, correcoes-de-dano.md, conjuracao.md, ../profissoes/README.md, ../ui-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
 
 # AetheriusGameplayCore
@@ -27,7 +27,7 @@ Monorepo TypeScript com a lógica autoritativa de gameplay do Aetherius (classes
   - `integrations/INSTALL.md`: guia de integração ao servidor oficial (DOC-2)
 
 ## Escopo
-- Inclui: classes e progressão (`class-progression-system`), XP/nível/fadiga (`leveling-system`), combate e dano (`damage-system`), composição de grants por origem (`actor-state-system`), inimigos e dungeons (`enemy-system`), durabilidade (`durability-system`), raças e pedras (`race-system`, `standing-stone-system`), documentação de profissões/coleta/artesanato/refino.
+- Inclui: classes e progressão (`class-progression-system`), XP/nível/fadiga (`leveling-system`), combate e dano (`damage-system`), composição de grants por origem (`actor-state-system`), inimigos e dungeons (`enemy-system`), durabilidade (`durability-system`), raças e pedras (`race-system`, `standing-stone-system`), documentação de [profissões/coleta/artesanato/refino](../profissoes/README.md).
 - Não inclui: código vivo do host e do cliente (fica em `AetheriusRP/aetherius-server` e `aetherius-client`); o módulo de execução de profissões do servidor (`server/gameplay/professions`); a interface (ver [UI Core](../ui-core/README.md)).
 
 ## Funcionamento

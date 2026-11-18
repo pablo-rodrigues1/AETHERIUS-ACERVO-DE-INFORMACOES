@@ -17,7 +17,8 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 
 | Sistema | Fase | Responsável | Repositório | Última atualização |
 |---|---|---|---|---|
-| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17, kdu, Melekyy (conjuração) | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-15 |
+| [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17, kdu, Melekyy (conjuração) | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-18 |
+| [Profissões (Coleta, Artesanato, Refino e Encantamento)](profissoes/README.md) | em-desenvolvimento | pablo-rodrigues1, mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-18 |
 | [Conjuração](gameplay-core/conjuracao.md) | em-teste | Melekyy | Documentação no acervo; código/pacote locais; oficial pendente | 2026-11-15 |
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
 | [Sobrenatural (Maldições)](sobrenatural/README.md) | em-desenvolvimento | pablo-rodrigues1, kdu | código da rodada fechado e revisado (Reserva de Sangue, D7, porte v0.42, HUD/vinheta/batimento); testes em jogo pendentes | 2026-11-18 |
@@ -54,6 +55,9 @@ flowchart LR
   expansao --> painel
   expansao --> residencias
   expansao --> gameplay-core
+  profissoes[Profissões] --> gameplay-core
+  profissoes --> ui-core
+  expansao --> profissoes
 ```
 
 <!-- Sobrenatural 15/11: continuação por origem, integração Bruxaria e poderes JS em desenvolvimento local; revisão Terra e teste humano pendentes. -->

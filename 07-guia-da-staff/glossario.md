@@ -3,7 +3,7 @@ titulo: Glossário da Staff
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-15
+atualizado: 2026-11-18
 tags: [glossario, staff]
 relacionados: [../00-guia/glossario.md]
 ---
@@ -15,8 +15,10 @@ Palavras do jogo explicadas de forma simples. Ordem alfabética.
 
 | Termo | O que significa |
 |---|---|
+| Artesão | Profissão de produção (Ferreiro, Curtidor, Cozinheiro, Artífice, Alfaiate, além de Encantador e Alquimista em definição). |
 | Carga (de manutenção) | "Combustível" que mantém arma ou armadura de um material funcionando 100%. Vem dos kits e gasta lutando. |
 | Classe | A especialização de combate do personagem (ex.: Paladino). Define skills e perks. |
+| Coletor | Profissão que extrai matérias-primas no mundo (Fazendeiro, Minerador, Caçador e Herbalista). |
 | COMÉRCIO | Sistema planejado de estabelecimentos administrados por jogadores, com contratação de profissionais e tributação própria. |
 | Conjuração | Magia que pode chamar uma criatura para ajudar o personagem. |
 | Diademas | Saldo adquirido com dinheiro real e usado na Loja. |
@@ -37,9 +39,11 @@ Palavras do jogo explicadas de forma simples. Ordem alfabética.
 | PD | Perda definitiva de personagem. |
 | Raid | Grupo grande, de 8 a 20 jogadores. |
 | Raça | Povo do personagem (Nórdico, Khajiit...). Cada uma tem uma habilidade fixa. |
+| Refino (Tier I–III) | Melhoria planejada de armas/armaduras já prontas (+25%/+50%/+75%) feita por Ferreiro ou Curtidor, com risco de regredir ao falhar. |
 | Respawn | Quando inimigos ou itens reaparecem depois de derrotados ou coletados. |
 | Setagem | Quando a Staff aplica algo ao personagem pelo painel (ex.: classe de Winterhold, maldição). |
 | Septims | Moeda do jogo. |
 | Skill | Habilidade do Skyrim (ex.: Uma Mão, Destruição). Na classe, o valor é definido pelo servidor. |
 | RP (roleplay) | Interpretar o personagem como se fosse real, dentro da história do servidor. |
 | Vertente (bruxaria) | Linha que o bruxo escolhe no design: Mortui, Daemones ou Tenebrae. |
+| Vigor Profissional | Barra própria de trabalho das profissões (não é a Stamina de combate) que limita ações seguidas e regenera com o tempo. |

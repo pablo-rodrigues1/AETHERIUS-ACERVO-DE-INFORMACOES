@@ -3,12 +3,16 @@ titulo: Changelog
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-17
+atualizado: 2026-11-18
 tags: [changelog]
 relacionados: []
 ---
 
 # Changelog
+
+## 2026-11-18 — Documentação de Profissões do GameplayCore no Acervo
+
+Publicada em [`02-sistemas/profissoes/`](../02-sistemas/profissoes/README.md) a documentação consolidada de profissões, coleta, artesanato, refino por instância, encantamento (fora da Alpha), balanceamento configurável, Housecarl e persistência (`0013`/`0014`) vinda do `AetheriusGameplayCore`, acompanhada dos guias da Staff em [`07-guia-da-staff/profissoes/`](../07-guia-da-staff/profissoes/README.md). Apenas documentação, sem alteração de código.
 
 ## 2026-11-17 — Guildas R30 sem gestão de quartos
 

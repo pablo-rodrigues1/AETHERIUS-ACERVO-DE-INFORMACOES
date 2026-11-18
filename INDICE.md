@@ -17,6 +17,13 @@
 - `02-sistemas/gameplay-core/feiticos-por-classe.md` — 164 registros de feitiços por classe, escola e tier; conciliação da planilha e divergências dos JSONs.
 - `02-sistemas/gameplay-core/correcoes-de-dano.md` — Correções de dano no servidor: chaves por fase, armadura, resistências, pendências.
 - `02-sistemas/gameplay-core/conjuracao.md` — Conjuração separada dos painéis de Guildas, com acompanhamento e duas criaturas confirmada no privado; adaptação v0.38 e homologação oficial pendentes.
+- `02-sistemas/profissoes/README.md` — Visão geral das profissões no AetheriusGameplayCore: governador, coleta, artesanato, refino, encantamento e persistência.
+- `02-sistemas/profissoes/diario.md` — Diário cronológico da documentação e sincronizações das profissões.
+- `02-sistemas/profissoes/catalogo-e-progressao.md` — Governador `profession-system`, 5 ranks, XP, Vigor Profissional, penalidade abaixo do rank e progressão das profissões.
+- `02-sistemas/profissoes/coleta.md` — `gathering-system`: Minerador, Herbalista, Caçador e Fazendeiro, estoques, cooldowns, carcaças, pools e sessões CEF.
+- `02-sistemas/profissoes/artesanato.md` — `crafting-system`: bancadas isoladas, workflows tolerantes de Ferreiro/Curtidor, conversões, sets, kits e diretrizes visuais CEF.
+- `02-sistemas/profissoes/refino-e-encantamento.md` — `refinement-system` (Tiers I–III por instância, risco/regressão) e `enchantment-system` (fora da release Alpha).
+- `02-sistemas/profissoes/housecarl-e-persistencia.md` — Housecarl/`StableFormKey`, política de balanceamento configurável, UI Core e migrations `0013`/`0014`.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/sobrenatural/README.md` — Sobrenatural: maldições (vampiro, lobisomem, bruxa), setagem pelo painel, keyword no servidor, 6 estágios até 2M XP, UI.
@@ -136,6 +143,10 @@
 - `07-guia-da-staff/economia/governos-e-castelos.md` — O Rei nomeado pode controlar as portas do castelo no painel de Casas.
 - `07-guia-da-staff/regras-de-roleplay/guildas.md` — Explicação simples das Guildas em desenvolvimento por Melekyy e dos limites da atuação da Staff.
 - `07-guia-da-staff/economia/comercio-empresas-e-profissoes.md` — Guia da Staff sobre o planejamento comercial e os limites do que já foi decidido.
+- `07-guia-da-staff/profissoes/README.md` — Índice do tema de profissões no Guia da Staff.
+- `07-guia-da-staff/profissoes/como-funcionam-as-profissoes.md` — Escolha única, 5 ranks, Vigor Profissional e regras gerais para a Staff.
+- `07-guia-da-staff/profissoes/coletores.md` — Guia simples para a Staff sobre Fazendeiro, Minerador, Caçador e Herbalista.
+- `07-guia-da-staff/profissoes/artesaos-e-refino.md` — Guia simples para a Staff sobre Artesãos (Ferreiro, Curtidor, Cozinheiro, Artífice, Alfaiate) e Refino.
 
 - `02-sistemas/sobrenatural/formas-e-poderes.md` — Lote menor Fera/Lorde/raça/recarga pronto para reteste; poderes e origem de grants adiados.
 - `03-decisoes/ADR-0014-forma-besta-recarga-real.md` — Forma da Besta LesserPower com recarga autoritativa de 30 minutos reais e zero no laboratório.

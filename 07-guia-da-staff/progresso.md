@@ -3,7 +3,7 @@ titulo: Progresso do desenvolvimento
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-17
+atualizado: 2026-11-18
 tags: [staff, progresso, status]
 relacionados: [../02-sistemas/README.md]
 ---
@@ -38,7 +38,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 |---|---|---|---|---|
 | 1 | [Painel de Admin (F7)](../02-sistemas/painel-adm/README.md) | 🟢 | Conferir a base do F7 e homologar o registro de compras | 14/11/2026 |
 | 2 | Classes, Leveling, Inimigos e Dungeons | 🟡 | Alinhar feitiços, XP por abate e conjuração; testar no oficial | 14/11/2026 |
-| 3 | Profissões | 🟡 | 9 profissões e 180 receitas no código; bloqueado até a nova interface | 14/11/2026 |
+| 3 | [Profissões](../02-sistemas/profissoes/README.md) | 🟡 | 9 profissões e 180 receitas no código; documentação do Core publicada; aguarda nova interface | 18/11/2026 |
 | 4 | Loot | ⚪ | Sem código identificado | 14/11/2026 |
 | 5 | Durabilidade de equipamentos | 🟡 | Funciona via `/manutencao`; falta aba na interface e teste em jogo | 14/11/2026 |
 | 6 | Trade | 📝 | Estacionado: só o convite existe; falta a troca de itens/ouro | 14/11/2026 |
@@ -72,23 +72,14 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **18/11/2026:** Profissões: documentação técnica completa do `AetheriusGameplayCore` (governador, coleta, artesanato, refino, encantamento fora da Alpha, balanceamento e migrations `0013`/`0014`) e guias simples da Staff publicados no Acervo.
 - **15/11/2026:** Cabelos e capas com física: 910 cabelos com mechas (franja, laterais, costas) e capas balançando, sem atravessar o corpo. Pergaminho que não ia para a mão corrigido. Ataque travando depois de trocar a aparência ainda em investigação.
 - **15/11/2026:** Baú dos aposentos do Arquimago exclusivo do cargo e nomeado Baú do Arquimago. Depósito, fechar/reabrir e retirada pelo cliente real conferidos, com o septim de teste devolvido. 136 testes completos e rechecagens aprovados; demais compartimentos reais e oficial seguem para homologação.
 - **17/11/2026:** Guildas R29: Guildas/Casas observados no Skyrim; recuperação do transporte e retirada de callbacks antigos. Permissões dos quatro perfis e dez quartos aprovados no nativo. Grupo e operação manual do quarto em reteste.
-
 - **17/11/2026:** Guildas: R28 preparada para integração SkyMP, escopo completo e guia publicados. Estante coletiva dos Magos e logs confirmados de depósito/retirada instalados no privado. Preflight/nativo aprovados; oficial e dois clientes reais pendentes.
 - **15/11/2026:** Guildas: tag visual retirada, quatro membros de teste adicionados e interferência de uma instância antiga corrigida. O dev confirmou abertura do baú. 135 testes e ensaio nativo aprovados; relato de itens não permanecerem ainda em investigação no cliente real.
 - **15/11/2026:** Guildas: troca privada de liderança para professor da escola atual verificada, sem acúmulo de funções, sem reinício e com inventário/insígnia preservados. Nenhuma nova regra; oficial segue pendente.
 - **15/11/2026:** Guildas R25 aplicada sem reinício: dez quartos com móveis existentes, escola removida só pelo Arquimago e cronograma visível aos membros. Controle geral de portas só do Arquimago; professores operam portas por proximidade. 134 testes e ensaio nativo aprovados, cliente confirmou vinte nomes. Aceite humano e oficial pendentes.
 - **15/11/2026:** Conjuração separada dos arquivos e pacote atual de Guildas, com arquivos antigos preservados e hashes conferidos. Controlador privado segue no SkySync, sem reinício; candidato passou em 13 testes no novo projeto. Documentação publicada; validação global falha em 17 documentos de Sobrenatural. Oficial pendente.
 - **15/11/2026:** Guildas R23 instalada sem reinício: professor/bibliotecário sem cargos extras ou liderança, mantendo escola. Três cargos extras de teste retirados com registro; 117 testes e teste nativo isolado aprovados. Cliente confirmou R23; oficial pendente. Documentação publicada; validação global falha em 17 documentos de Sobrenatural.
-- **15/11/2026:** Guildas R22 privada: líder/professores controlam 68 passagens nos dois sentidos; professor e bibliotecário não acumulam funções. 112 testes e prova nativa isolada aprovados, cliente atualizado sem reinício; travessia humana e oficial pendentes. Documentação publicada; validação global ainda falha em 14 documentos antigos de Sobrenatural.
-- **15/11/2026:** Guildas R21 ativa no privado: bancada exclusiva, seleção de escola e insígnias protegidas. Plugin sincronizado nos dois lados; uma insígnia entregue e persistida no personagem de teste, com outros itens preservados. Conferência no cliente e oficial pendentes.
-- **15/11/2026:** Guildas R19 no privado com vários bibliotecários, fabricação de três segundos, três integrantes fictícios de teste e 104 tomos traduzidos no painel. 88 testes e servidor nativo isolado aprovados; inspeção visual interrompida por Esc, sem confirmação da animação em jogo nem homologação oficial.
 *Máximo de 10 linhas; as mais antigas saem (o histórico completo fica no git e nos diários).*
-
-- **15/11/2026:** Aprovado o planejamento COMÉRCIO: empresas, contratação, salários e imposto mensal; texto revisado usa Residência como referência. Sem implementação nesta publicação.
-
-- **15/11/2026:** Conjuração: duas criaturas acompanham no privado, confirmado pelo usuário; somente documentação publicada no acervo, com código/pacote locais e homologação oficial pendente.
-- **14/11/2026:** Melekyy inicia a frente de conjuração: corrigir o desaparecimento e adaptar o acompanhamento do privado, preservando as correções anteriores.
-- **14/11/2026:** Planilha e fichas completadas com os 164 registros de feitiços de Classes; diferenças do resumo do código documentadas, sem mudança no servidor.
