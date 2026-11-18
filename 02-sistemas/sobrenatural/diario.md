@@ -252,3 +252,6 @@ Opus definiu elegibilidade de início da Sobrecarga acima de 99 com saldo abaixo
 
 ## 2026-11-18 — Terra: selo de sobrecarga intensificado
 - Cliente `46d86b3`, laboratório `cfb896b` e `f78ce0f`; teste visual 5/5, prévias 1280 e ampliadas 4×, 17 quadros. Captura 1920 corrompida no navegador; revisão, CEF e jogo pendentes.
+
+## 2026-11-18 — Terra: transições do selo
+- Cliente `8bcc121` inclui autoria mista Terra/Sol, registrada na Etapa 4; laboratório `94f4313` e `949d882`, teste 5/5, slider e 15 quadros. HUD reutilizada precisa de `immediate:true`; revisão cruzada, CEF e jogo pendentes.
