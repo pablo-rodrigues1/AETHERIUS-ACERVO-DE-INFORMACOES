@@ -175,3 +175,6 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 - Escrita no `AETHERIUS - SOBRENATURAL.esp` autorizada; runa = `MasterSpellsRunes.esp` (Conjuração).
 - Pendente: quem escolhe os 3 ingredientes (suposição: servidor automático).
 - Detalhe: `docs/ETAPA-4_bruxaria-vinculo-do-veu.md`. Implementação **não iniciada** por ordem do dev.
+
+## 18/11/2026 — Sobrecarga do Vínculo adicionada ao plano (dev)
+- Especificação `referencia/Aetherius_Implementacao_Sobrecarga_Bruxas.md` incorporada à ETAPA-4 §8 (teto 300, ritual de sobrecarga com receita dobrada, blocos de 50, +50% Magicka máx. fixo, olhos Dark/Light/Glow, BRUXA violeta, aura roxa, sussurros, selo com raios e capacete demoníaco). Não iniciada; pendências S1–S7 na ETAPA-4 §8.3.

@@ -225,7 +225,9 @@
 - Especificação `referencia/Aetherius_Sistema_Bruxaria_Vinculo_do_Veu.md` lida; entendimento confirmado pelo dev com ajustes (estágio V −100% Magicka máx. + terror a cada 5 min; tela do Ritual nova com entidade; ingredientes; selo centro inferior com degradê; escrita no plugin autorizada; runa do MasterSpellsRunes.esp). Registrado em `docs/ETAPA-4_bruxaria-vinculo-do-veu.md` e DECISOES. Por ordem do dev, nada despachado.
 
 
-## 2026-11-18 — Terra High: ajuste visual do selo
-- **Feito:** selo mock ampliado para 90 px em 1920×1080, 60 px em 1280×720 e deslocado para 7vh da borda inferior, conforme pedido do dev; cliente `e82ac03`, patch/capturas `f0bd86e`, testes 2/2.
-- **Próximo:** revisão cruzada e teste visual em jogo; servidor, vínculo, ritual e MO2 não foram alterados.
-- **Bloqueios:** a prévia não contém a HUD vanilla; não comprova ausência de sobreposição.
+## 18/11 — Terra High: selo da Bruxa aumentado e abaixado
+
+Ajustado apenas o visual conforme pedido do dev: 90 px em 1920×1080, 60 px em 1280×720 e posição 7vh acima da borda inferior. Cliente `e82ac03`, patch e doze capturas `f0bd86e`; teste visual 2/2. Revisão cruzada e verificação de sobreposição no jogo pendentes; não houve instalação no MO2. Ver `ETAPA-4_bruxaria-vinculo-do-veu.md`.
+
+## 2026-11-18 — Opus 5.5: Sobrecarga do Vínculo adicionada ao plano
+- Pedido do dev: incluir no plano da Etapa 4 a especificação `Aetherius_Implementacao_Sobrecarga_Bruxas.md`. Registrada em ETAPA-4 §8 com pendências S1–S7; nada despachado.

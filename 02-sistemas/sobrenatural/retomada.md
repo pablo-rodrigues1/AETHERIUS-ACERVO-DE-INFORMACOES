@@ -1,6 +1,6 @@
 # RETOMADA — Sistema Sobrenatural
 
-> **18/11 — selo da Bruxa:** protótipo visual ajustado ao pedido do dev para 90 px em 1920×1080 e 7vh da borda inferior (`e82ac03`/`f0bd86e`); testes 2/2, revisão cruzada e jogo pendentes. Ainda não há mecânica de Vínculo implementada por este ajuste.
+> **18/11 — selo da Bruxa:** protótipo visual ajustado para 90 px em 1920×1080, 60 px em 1280×720 e recuo inferior de 7vh, conforme pedido do dev; cliente `e82ac03`, patch/capturas `f0bd86e`, testes 2/2. Revisão cruzada, CEF e jogo pendentes; não há mecânica de Vínculo implementada por este ajuste.
 
 > **18/11, Opus — Vínculo do Véu (Bruxaria) ESPECIFICADO E CONFIRMADO, NÃO INICIADO** por ordem do dev: ver `docs/ETAPA-4_bruxaria-vinculo-do-veu.md` (Sol: servidor/ritual/runa; Terra: selo, tela do Ritual, terror, áudio). Pendente só confirmar quem escolhe os ingredientes (suposição: servidor). Despachar apenas quando o dev mandar.
 

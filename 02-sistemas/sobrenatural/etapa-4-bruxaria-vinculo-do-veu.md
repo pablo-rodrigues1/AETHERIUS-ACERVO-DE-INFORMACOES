@@ -72,7 +72,66 @@ Sem instalação no MO2 e sem jogo até a rodada de testes.
 ## 7. Critérios de aceite
 Os da fonte §12, com: estágio V = −100% Magicka máx. e evento a cada 5 min; selo com degradê central; tela do Ritual com entidade e texto mínimo.
 
+## 18/11 — protótipo visual do selo (sem mecânica)
 
-## 18/11 — protótipo visual do selo
+Autor Terra High. Pedido do dev neste despacho limitado ao visual; a seção inicial “não iniciado” continua válida para mecânicas e integração. Em `C:\Code\Aetherius - Servidor Local\client-source\client\ui-core\modules\supernatural\`, os arquivos `veil-seal.js`, `veil-seal.css` e `witch-gauge-reference.png` foram preparados no commit cliente `28383f9`. A imagem é cópia byte a byte da referência `C:\Code\Aetherius - New Systems\referencia\witch gauge.png` (SHA-256 `02E7ABFA2771AD99C8200D6E6E260E2BB3497DEDE0CF9EDD8CCC110D0A769CF7`); SVG a desenha em cinza, recorta o cristal colorido da mesma arte de baixo para cima e acrescenta rúnicos dourados, símbolo e rachaduras.
 
-Por solicitação do dev, foi preparado somente o componente visual baseado em `witch gauge.png`, sem integrar vínculo ou ritual. Em `C:\Code\Aetherius - Servidor Local\client-source`, o commit `e82ac03` ajusta para 90 px em 1920×1080 e 60 px em 1280×720, centro inferior com recuo 7vh; o patch 013 e 12 capturas estão no servidor local, commit raiz `f0bd86e`. O código usa um valor mock, preserva a arte e os estados, e não foi instalado no MO2. Teste visual automatizado 2/2; revisão cruzada e verificação em CEF/jogo da possível sobreposição com a HUD continuam pendentes.
+Na primeira versão, tamanho 56×56 px e centro inferior a 30 px; a decisão posterior de tamanho e posição está registrada na seção seguinte. Cinco classes de apresentação usam faixas >70, <=70, <=50, <=30 e 0; brilho diminui, rachaduras se destacam e os estágios 4/5 pulsam suavemente, respeitando `prefers-reduced-motion`. Não há texto, número ou tooltip no selo. `createVeilSeal(assetUrl).setValue(valor)` é **API de mock visual**, não é contrato de dados nem integração com maldição, servidor ou UI ativa. Não foram implementados persistência, seleção de bruxa, exclusividade com sangue, terror ou ritual; esses itens dependem de integração futura.
+
+Patch incremental CSS/JS de arquivos novos `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\011-selo-vinculo-visual.patch` após 010; o asset binário separado `overlays/cliente-local/assets/witch-gauge-reference.png` deve ser copiado junto ao CSS/JS na futura integração; nenhum arquivo em `MeridianUI` foi copiado ou modificado e nada foi instalado no MO2. Prévia em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo\index.html?value=60` (depende dos três arquivos do client-source; alterar `value` para cada valor). As doze capturas Orca usam `vinculo-<largura>x<altura>-<valor>.png` na mesma pasta, valores 100/80/60/40/20/0 em 1920×1080 e 1280×720; fundo é simulado, não jogo.
+
+Verificação: `node --test overlays/sobrenatural/teste-visual-vinculo.cjs` **2/2**, fronteiras/clamp, direção do preenchimento e ausência de texto/tooltip; renderização Orca conferiu largura 56, estágios e dimensão dos 12 PNGs; reverse-check do patch passou. Revisão independente e avaliação visual do dev pendentes; testar CEF real, contraste no cenário e sobreposição com HUDs antes de integrar. Nenhum servidor, cliente de jogo ou modpack foi iniciado/alterado nesta tarefa.
+
+
+## 18/11 — ajuste de escala do selo
+
+Por pedido do dev, `client-source/client/ui-core/modules/supernatural/veil-seal.css` usa `--veil-size:min(80px,4.1666667vw)` e `bottom:9vh`, permanecendo centrado e sem mudança de arte, valores ou estágios. O resultado no Orca foi **80×80 px** em 1920×1080 (borda inferior a 97,19 px) e **53,33×53,33 px** em 1280×720 (borda inferior a 64,80 px). O recuo inferior tenta preservar espaço para barras; a prévia não contém HUD vanilla, de modo que não comprova ausência de sobreposição com barras, bússola, outros HUDs ou escala de jogo. Validar no CEF e em jogo antes de instalar.
+
+Cliente `0432493` em `C:\Code\Aetherius - Servidor Local\client-source`; patch incremental `C:\Code\Aetherius - Servidor Local\overlays\cliente-local\012-selo-tamanho.patch` após 011. As doze capturas `vinculo-<largura>x<altura>-<valor>.png` em `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo` foram regeneradas; verificados dimensões dos PNGs, posição central, tamanho, estágios e preenchimento. `node --test overlays/sobrenatural/teste-visual-vinculo.cjs` passou 2/2; reverse-check do patch passou. São prévias de fundo simulado, sem instalação no MO2 ou execução do jogo; revisão cruzada pendente.
+
+
+## 18/11 — selo aumentado para 90 px e reposicionado
+
+Pedido do dev: aumentar de 80 para 90 px e baixar um pouco, preservando arte e estados. `client-source/client/ui-core/modules/supernatural/veil-seal.css` usa agora `--veil-size:min(90px,4.6875vw)` e `bottom:7vh`: no Orca, 90 px e recuo inferior 75,59 px em 1920×1080, 60 px e recuo 50,39 px em 1280×720. O centro horizontal permanece igual; o recuo é 2vh menor que antes. Cliente `e82ac03`; patch incremental `overlays/cliente-local/013-selo-90px.patch` após 012.
+
+As doze capturas de `C:\Code\Aetherius - Servidor Local\overlays\sobrenatural\preview-vinculo` foram regeneradas nos seis valores e ambas as resoluções; teste `node --test overlays/sobrenatural/teste-visual-vinculo.cjs` passou 2/2 e o reverse-check do patch passou. O fundo da prévia não contém a HUD do Skyrim: posição e eventual sobreposição das barras precisam de validação em jogo; não houve instalação no MO2 nem execução do jogo. Revisão independente pendente.
+
+## 8. Sobrecarga do Vínculo (adicionada ao plano em 18/11, NÃO iniciada)
+
+**Fonte:** `C:\Code\Aetherius - New Systems\referencia\Aetherius_Implementacao_Sobrecarga_Bruxas.md`. Complementa as seções 1–7 sem alterar esgotamento, penalidades nem ritual normal.
+
+### 8.1 Regras confirmadas pela fonte
+- Teto normal 100; **teto absoluto 300**. Com ≥100, a bruxa pode fazer **sacrifício de sobrecarga**: +50 por ritual, até 300.
+- Receita de sobrecarga = **dobro** das quantidades do ritual normal, mantendo 3 categorias distintas; mesmo tempo (300 s) e animação; regra D7. No teto, recusar sem consumir; sem ultrapassar 300 por chamadas concorrentes.
+- Sobrecarga = `vínculo > 100`. Ao chegar a ≤100, **todos** os buffs cessam imediatamente.
+
+| Vínculo | Blocos | Regeneração de Magicka | Criaturas extras (invocações + reanimações, compartilhado) | Magicka máxima |
+|---|---|---|---|---|
+| 100 | 0 | 0% | 0 | 0% |
+| 150 | 1 | +50% | +1 | +50% |
+| 200 | 2 | +100% | +2 | +50% |
+| 250 | 3 | +150% | +3 | +50% |
+| 300 | 4 | +200% | +4 | +50% (fixo) |
+
+- Modificadores identificáveis e removíveis; sem preencher Magicka atual ao ganhar o bônus; limite base de criaturas vem do sistema existente (classe/perks).
+
+### 8.2 Apresentação
+- **Olhos** (mod Nexus 155332, variantes **violetas**, não Multicolor): Magic **Dark** se `vínculo < 50`; Magic **Light** se `50 ≤ vínculo ≤ 100`; Magic **Glow** se `> 100`. Vale para **toda bruxa**, não só na sobrecarga. Visível a todos (inclusive entrada tardia); restaurar a aparência ao perder a maldição.
+- **Nome:** "BRUXA" em violeta acima do personagem (SkySocial identity, mesmo padrão do VAMPIRO FERAL), sem alterar o nome salvo.
+- **Aura roxa**, reutilizando a integração da aura Feral do vampiro.
+- **Sussurros** durante a sobrecarga, sem instâncias duplicadas; encerram ao sair da sobrecarga/maldição/sessão.
+- **Selo da HUD** (só para o próprio jogador): até 100 normal; `>100` até 200 barra central brilhante com raios violetas vazando para o suporte; `>200` até 300 símbolo inteiro vira **capacete aberto demoníaco**, violeta mais brilhante e progressivo; reversão ao cruzar 200 e 100; reconstrução correta ao reconectar.
+
+### 8.3 Pendências a decidir antes de implementar
+| # | Pendência |
+|---|---|
+| S1 | **Consumo acima de 100:** a fonte não define; proposta: mesma taxa linear (1 ponto/432 s), ou seja, 300→100 em 24 h online. |
+| S2 | **Blocos intermediários:** proposta da fonte `blocos = piso((vínculo−100)/50)`; com 101–149 há Glow/aura/BRUXA/sussurros/HUD e +50% Magicka máx., mas sem bônus de regeneração nem criatura extra. |
+| S3 | **Criaturas acima do novo limite** ao perder blocos: qual sai (ou manter até expirarem); sem política existente conhecida. |
+| S4 | **Sussurros:** a fonte cita `whisper_witch`, mas a pasta tem `whisper2_witch.mp3` e `whispering_witch.mp3`; definir qual(is), cadência e se outros jogadores ouvem (e alcance). |
+| S5 | **Olhos:** confirmar que o mod 155332 está no modpack (houseCARL) e se as variantes são textura/olho de raça ou headpart; troca precisa sincronizar via appearance. |
+| S6 | **Botão do ritual:** a tela do Ritual (seção 4) precisa de um modo "Sobrecarga" (receita dobrada) quando vínculo ≥100. |
+| S7 | Herdado: quem escolhe os ingredientes (suposição: servidor automático). |
+
+### 8.4 Distribuição planejada (acréscimo)
+Sol High: blocos/buffs/limite de criaturas, sacrifício de sobrecarga, olhos/nome/aura sincronizados. Terra High: estados de sobrecarga do selo (raios, capacete demoníaco), modo Sobrecarga na tela do Ritual, sussurros no cliente. Revisão cruzada.
