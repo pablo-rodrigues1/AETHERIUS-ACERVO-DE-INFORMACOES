@@ -231,3 +231,8 @@ Ajustado apenas o visual conforme pedido do dev: 90 px em 1920×1080, 60 px em 1
 
 ## 2026-11-18 — Opus 5.5: Sobrecarga do Vínculo adicionada ao plano
 - Pedido do dev: incluir no plano da Etapa 4 a especificação `Aetherius_Implementacao_Sobrecarga_Bruxas.md`. Registrada em ETAPA-4 §8 com pendências S1–S7; nada despachado.
+
+
+## 2026-11-18 — Contrato do Vínculo do Véu
+
+Sol High iniciou a integração de servidor e entregou o [contrato v1](contrato-vinculo-do-veu.md) ao coordenador para o cliente de Terra High. O contrato define a projeção privada, as mensagens do Ritual e as manifestações privadas. Implementação e revisão cruzada em andamento.
