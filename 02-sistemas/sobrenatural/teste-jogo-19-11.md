@@ -13,6 +13,7 @@
 - Vampiro: HUD da Reserva de Sangue apareceu.
 - Bruxa: selo (gauge) apareceu; HUD/timer do ritual apareceu; sussurros da Sobrecarga funcionando.
 - Lobisomem: transformação forçada pelo painel (F7) funcionou.
+- Vampiro: **Vampiric Vision** funcionou.
 
 ### Defeitos a corrigir
 | # | Sistema | Defeito | Observação / pista |
@@ -25,6 +26,7 @@
 | T6 | Lobisomem | Transformado com espada de duas mãos: a **espada fica na mão da fera**, ataca com uma mão só, sem combos, e o **Z não uiva**. | Dev atribui o ataque de uma mão ao **Precision Creatures** e **removeu o mod**. Também deve desequipar armas ao transformar e garantir o poder de uivo no Z da fera. |
 | T7 | Vampiro | **Aura não funciona** (Feral e afins). | Trocar para o mod de auras abaixo, **aura vermelha (Red)**. |
 | T8 | Bruxa | **Aura da Sobrecarga não funciona.** | Trocar para o mod de auras abaixo, **aura roxa (Purple)**. |
+| T10 | Vampiro | **Bat Form: o avanço (dash) não funcionou.** | Implementação nova de 09c7767/01056e2 (movimento no dono via eventos COTV + guarda nativa 026, limite 256 u, recarga 3 s). Conferir no log do servidor recusas da guarda/actionPolicy e se o evento de movimento chega; ver `REVISAO-PODERES-VAMPIRO_neon.md` e ETAPA-3. |
 | T9 | Bruxa | **Runa de Conjuração sumiu**: não aparece mais durante o ritual. | Regressão do lote B5/B7 (42315d1/65edf8c; ver `DADOS-HOUSECARL_19-11_ritual.md` e `REVISAO-BRUXA-HUD-RITUAL_neon.md`). Conferir se B7 (todo feitiço invocando a runa) segue corrigido junto. |
 
 ### Mudanças no modpack feitas pelo dev (19/11)
@@ -39,4 +41,5 @@
 - T4/T5/T6: Sol High (transformação, equipamento e raça da fera) + Luna MAX (houseCARL: SpeedMult da raça/kdu, poderes de uivo) + regerar Pandora.
 - T7/T8: Sol High (sincronização) + Luna MAX (records do Colored Magic Auras).
 - T9: Sol High (autor do lote do ritual).
+- T10: Sol High (autor do dash).
 - Revisão: Gemini 4 Neon (regra de revisão honesta).

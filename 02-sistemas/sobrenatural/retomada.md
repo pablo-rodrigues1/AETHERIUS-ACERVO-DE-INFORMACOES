@@ -1,10 +1,10 @@
 # RETOMADA — Sistema Sobrenatural
 
 > ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (19/11/2026, Opus)
-> 1. Leia **`docs/TESTE-JOGO_19-11.md`**: 9 defeitos do teste solo (T1–T9) + mudanças do dev no modpack. **Nada foi despachado** (pedido do dev: corrigir em sessão nova).
-> 2. Prioridades: **T1/T2** Z não transforma (Beast Form e Lorde) mesmo após a Opção A; **T3** `fx.cleanup is not a function` em loop (cliente da transformação forçada); **T4–T6** fera lenta (+50% velocidade?), não ataca com feitiços, espada 2H na mão da fera, Z sem uivo; **T7/T8** auras do vampiro (Red) e da Bruxa (Purple) pelo **Colored Magic Auras** (`C:\modOrganizer\mods\Colored Magic Auras\`, Nexus 25773); **T9** runa do ritual sumiu.
+> 1. Leia **`docs/TESTE-JOGO_19-11.md`**: 10 defeitos do teste solo (T1–T10) + mudanças do dev no modpack. **Nada foi despachado** (pedido do dev: corrigir em sessão nova).
+> 2. Prioridades: **T1/T2** Z não transforma (Beast Form e Lorde) mesmo após a Opção A; **T3** `fx.cleanup is not a function` em loop (cliente da transformação forçada); **T4–T6** fera lenta (+50% velocidade?), não ataca com feitiços, espada 2H na mão da fera, Z sem uivo; **T7/T8** auras do vampiro (Red) e da Bruxa (Purple) pelo **Colored Magic Auras** (`C:\modOrganizer\mods\Colored Magic Auras\`, Nexus 25773); **T9** runa do ritual sumiu; **T10** avanço do Morcego (Bat Form) não funcionou.
 > 3. Dev removeu **Precision Creatures** e adicionou **New Creature Animation - Werewolf** → **regerar o Pandora** no perfil LOCAL antes do próximo teste.
-> 4. OK no teste: HUD de sangue, selo e HUD do ritual, sussurros, transformação forçada pelo F7.
+> 4. OK no teste: HUD de sangue, selo e HUD do ritual, sussurros, transformação forçada pelo F7, Visão Vampírica.
 > 5. Regras vigentes no `AGENTS.md`: Codex liberado; revisão pelo **Gemini 4 Neon** com **revisão honesta**; Gemini sem houseCARL → **Luna MAX** coleta os dados; commits com pathspec explícito (vários workers no mesmo repo).
 > 6. Estado: laboratório HEAD `5effbd8`, client-source `295f02e`, addon `4f622a37…`, cliente `fd61c198…`. O servidor local pode ainda estar rodando (PID 7336): pare com `scripts\Stop.ps1` antes de preparar de novo.
 
