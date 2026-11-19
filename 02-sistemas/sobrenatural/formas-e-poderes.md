@@ -93,3 +93,22 @@ Boot confirmado em `logs/server-20261116-000848.stdout.log`: 16 ativos, 2 desati
 6. Com o módulo Terra instalado: saldo 10→5→0 em dois usos aceitos; saldo 4 recusa sem negativo; recarga/replay/interrupção não cobram. Lorde só cobra ao confirmar a transformação; cancelar durante turning libera a reserva. Sedução/Reanimação mantêm suas regras e devem ter aceitação/custo correlacionados no log.
 7. Repetir o roteiro anterior de Fera/Lorde/raça abaixo, agora com scripts assinados. Observador verifica apresentação de todos os efeitos públicos; proprietário verifica controles e limpeza. Registrar horário/poder/saldo/sintoma para correlacionar os logs.
 
+## 18/11 — Reteste de poderes após a rodada em jogo
+
+Candidato de Sol High no laboratório `415acde`, documentação `d8e5c94`. Os seis poderes próprios são SPEL `LesserPower` de alvo `Self`. O leitor usa o caminho de voz do servidor quando o poder está equipado no slot Z. O teste confirma aceitação e débito único do Enxame sem `SpellCast` nativo. Os relatórios do teste anterior trazem os efeitos observados pelo dono, mas o log só confirma o carregamento da definição do Enxame.
+
+Após a confirmação do custo, o servidor distribui o som de entrada aos clientes que veem o ator. Cada um usa `Sound.play` no ator e os modelos sonoros radiais existentes. Consulta houseCARL em `AETHERIUS - LOCAL`, somente leitura. Os marcadores vêm da propriedade `IntroSoundFX` do mod.
+
+| Poder | Marcador SOUN |
+|---|---|
+| Morcego | `019D82:Dawnguard.esm` |
+| Névoa | `010E09:Dawnguard.esm` |
+| Enxame | `013780:Dawnguard.esm` |
+| Força | `005902:Curse of the Vampire.esp` |
+| Celeridade | `010EC4:Dawnguard.esm` |
+
+O Enxame mantém 10 HP/s, 40 s e raio de 10 pés. Os testes de NPC e jogador cobrem golpe físico recente, raio e veto social. A cura usa apenas perda de HP confirmada por duas leituras válidas. A investigação fica em `INVESTIGACAO_18-11_enxame-readback.md` no laboratório e na documentação de desenvolvimento.
+
+V2 requer reteste com aceitação registrada e dois jogadores para medir posição e apresentação. O script COTV humano e o candidato disparam os mesmos eventos da animação. Se o movimento continuar ausente, revisar um caminho com colisão e sincronização. V3 exige confirmar a invisibilidade para o observador; V4, o áudio, a arte e o dreno contra NPC e jogador elegível; V5, a revelação de jogador e NPC no oficial autorizado. Visão e Lorde têm descritores SNDR sem SOUN correspondente localizado e o áudio para esses poderes segue pendente. Sedução e Reanimação seguem no caminho nativo com alvo, por validar em jogo.
+
+Node 39/39 no recorte, incluindo os callbacks do dono e do vizinho. A bateria ampliada obteve 457/457 por modo da flag de alimentação sem a suíte concorrente de HUD do Véu. A execução completa obteve 469/472 com três falhas de mock nessa suíte. Revisão cruzada e testes em jogo estão pendentes.

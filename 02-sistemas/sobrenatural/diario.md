@@ -263,3 +263,8 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 - Addon nativo com patch 025 compilado por Opus Low (Build-Native, 0 erros/0 warnings), `scam_native.node` SHA-256 77f28d98….
 - Dev: Codex/GPT bloqueado até nova autorização; Sol encerrado. Alterações não commitadas do Sol preservadas em phase0-basic.js e magic.test.cjs (decisão pendente).
 - Pendente: teste em jogo/CEF, reativar Miggyluv no perfil LOCAL, auditoria .shell.is-supernatural-workspace, R-ANIM.
+
+## 2026-11-18 — Sol High, reteste dos poderes vampíricos
+
+- `415acde` no laboratório aplica a Opção A de Z aos seis poderes próprios e projeta cinco sons de entrada COTV para dono e vizinhos após o débito. A cura do Enxame exige leitura válida da perda de HP em NPCs e jogadores.
+- `d8e5c94` registra vencedores, investigação do Enxame e roteiro com dois jogadores. Node 39/39 no recorte. Pendentes revisão cruzada, movimento V2 e reprodução dos descritores da Visão e do Lorde. Sem execução de jogo ou servidor. Ver [Formas e poderes](formas-e-poderes.md).
