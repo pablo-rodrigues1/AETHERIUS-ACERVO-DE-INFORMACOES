@@ -112,3 +112,17 @@ O Enxame mantém 10 HP/s, 40 s e raio de 10 pés. Os testes de NPC e jogador cob
 V2 requer reteste com aceitação registrada e dois jogadores para medir posição e apresentação. O script COTV humano e o candidato disparam os mesmos eventos da animação. Se o movimento continuar ausente, revisar um caminho com colisão e sincronização. V3 exige confirmar a invisibilidade para o observador; V4, o áudio, a arte e o dreno contra NPC e jogador elegível; V5, a revelação de jogador e NPC no oficial autorizado. Visão e Lorde têm descritores SNDR sem SOUN correspondente localizado e o áudio para esses poderes segue pendente. Sedução e Reanimação seguem no caminho nativo com alvo, por validar em jogo.
 
 Node 39/39 no recorte, incluindo os callbacks do dono e do vizinho. A bateria ampliada obteve 457/457 por modo da flag de alimentação sem a suíte concorrente de HUD do Véu. A execução completa obteve 469/472 com três falhas de mock nessa suíte. Revisão cruzada e testes em jogo estão pendentes.
+
+
+
+## 18/11 — Sincronização sem rodada multiplayer agora
+
+Por decisão do dev, o código e os testes Node simulam dono, vizinhos, entrada tardia, saída e retorno à relevância. A confirmação física fica para o servidor oficial. Candidato `827afe4` no laboratório e documentação `90ec13e` na Etapa 3.
+
+- **V2:** teleporte autoritativo de 128 unidades no rumo do ator após o débito. Morcegos e ocultação são públicos. Validar no servidor oficial o único deslocamento visto por B e a posição atual para C, que entra depois. Conferir `bat dash ... applied=true` no servidor. Testar obstáculos, desnível e retorno de posição. A operação não varre colisão.
+- **V3:** a réplica recebe arte e alpha 0 mesmo ao entrar durante a Névoa. Validar no servidor oficial ocultação, saída/retorno e reaparecimento no fim ou cancelamento. Conferir `accepted=true` e `[supernatural-visual]` nos consoles.
+- **V4:** seleciona atores por relevância e alcance, com hostilidade física recente e permissões sociais. O dreno confirmado de cada alvo é registrado uma vez por ativação. Validar no servidor oficial visual e som imediato para B, apenas visual para C tardio e HP antes/depois contra NPC e jogador elegíveis. Conferir `enxame ... drained=` e o HP de ambos.
+- **V5:** a Visão destaca jogadores e NPCs da mesma área em raio de 25 m, inclusive alvos invisíveis. Só o dono recebe os IDs para pulsos finitos de shader. Validar no servidor oficial o contorno privado, a entrada de jogador/NPC e a perda do destaque ao sair. Conferir `visão ... targets=` e `[supernatural-vision]`.
+- **V7:** cinco marcadores existentes tocam no dono e em vizinhos próximos presentes, uma vez por sequência. Vizinhos tardios recebem o visual e a retirada da réplica encerra a instância ativa. Validar no servidor oficial perto/longe, saída durante o som e recusa por saldo ou recarga. Conferir `accepted=`, `som de ativação` e `[supernatural-visual]`. Visão e Lorde ainda dependem de reprodução de SNDR. Sedução e Reanimação conservam a conjuração com alvo.
+
+Node **46/46** no recorte e **486/486** na bateria integral em cada modo da flag de alimentação. Revisão cruzada pendente. Nenhum servidor, cliente de jogo ou MO2 foi iniciado por este lote.

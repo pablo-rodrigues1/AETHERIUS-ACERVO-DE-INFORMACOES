@@ -268,3 +268,10 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 
 - `415acde` no laboratório aplica a Opção A de Z aos seis poderes próprios e projeta cinco sons de entrada COTV para dono e vizinhos após o débito. A cura do Enxame exige leitura válida da perda de HP em NPCs e jogadores.
 - `d8e5c94` registra vencedores, investigação do Enxame e roteiro com dois jogadores. Node 39/39 no recorte. Pendentes revisão cruzada, movimento V2 e reprodução dos descritores da Visão e do Lorde. Sem execução de jogo ou servidor. Ver [Formas e poderes](formas-e-poderes.md).
+
+
+
+## 2026-11-18 — Sol High, sincronização de Morcego, Névoa, Enxame e Visão
+
+- Candidato `827afe4` e documentação `90ec13e` entregam a simulação com observadores presentes, tardios e saindo da relevância. Node 486/486 por modo. Roteiro e logs no [relatório de formas e poderes](formas-e-poderes.md).
+- Validação no oficial e revisão cruzada pendentes. O dash de 128 unidades usa teleporte sem varredura de colisão. Resta a reprodução espacial dos SNDR de Visão/Lorde e confirmar o áudio nativo de Sedução/Reanimação.
