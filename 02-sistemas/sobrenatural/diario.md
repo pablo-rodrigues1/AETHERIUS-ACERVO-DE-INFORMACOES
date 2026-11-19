@@ -292,3 +292,20 @@ Decisão do dev aplicada em 65edf8c. O Charge toca no início autorizado e na co
 ## 2026-11-19 — Teste solo e encerramento da sessão (Opus)
 - Lotes do dia: Opção A (Z sem SpellCast nativo; 7435282/77ea350/850211c), poderes do vampiro (dash por movimento no dono + guarda nativa 026, Enxame com zonas seguras, sons COTV), Bruxa/HUD/ritual (HUDs, timer, cancelamento por movimento, contrato v2, som no início/conclusão, sussurros, pisos). Todos revisados e aprovados pelo Gemini Neon (Opus Medium como 2º revisor só em L1/V6). Decisões: Morcego com recarga de 3 s; som do ritual no início e na conclusão; sem teste com 2 jogadores (validar no oficial).
 - Teste solo do dev: HUDs e sussurros OK; 9 defeitos registrados em `docs/TESTE-JOGO_19-11.md` (T1–T9). Dev removeu Precision Creatures, adicionou New Creature Animation - Werewolf (regerar Pandora) e definiu as auras pelo Colored Magic Auras (Red vampiro, Purple Bruxa). Correção adiada para nova sessão.
+
+## 19/11/2026 — Diagnóstico da voz Z e do avanço do Morcego (T1/T2/T10)
+
+O teste solo registrou os efeitos de Fera, Lorde e Morcego, sem resolução de comando para esses três usos. `bcb0c02` acrescenta evidência dos callbacks de ação e do permit, além das recusas da guarda e da política do Morcego. Passaram 52 testes focados, 498 por modo de alimentação na cópia isolada e 503 por modo no laboratório integrado até `3e60b7f`. TypeScript e webpack passaram. Revisão Neon e reteste pendentes. [Investigação e roteiro](investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md).
+
+## 19/11/2026 — T9, Runa de Conjuração
+
+Laboratório `47835dc` restaura o acionamento da malha de Conjuração e limpa a Ability, o efeito e a pose com referências do frame atual. Baterias integradas 503/503 por modo de alimentação. Revisão Neon e validação de T9/B7 em jogo pendentes. [Investigação T9](investigacoes/INVESTIGACAO_19-11_runa-ritual.md)
+
+## 19/11/2026 (tarde) — Correções do teste solo T1–T10 consolidadas (Opus)
+- **T3** `fx.cleanup` em loop: storage versionado + migração (Terra, `632869b`/`e71771d`). Neon: **aprovado sem achados**.
+- **T9** runa do ritual: evento da malha restaurado, B5/B7 preservados (Sol, `47835dc`/`7a22c8e`). Neon: **aprovado sem achados**.
+- **T7/T8** auras: Colored Magic Auras Red `000D62` (Feral) e Purple `000801` (Sobrecarga), dono + observadores (Sol, `89d4b20`). Neon: **aprovado sem achados**. Luna (houseCARL): ESP light, 88 records novos (tomos/magias/anéis) sem listas/vendedores/overrides; desabilitado no LOCAL e fora do manifesto.
+- **T4/T5/T6** fera: +50% velocidade via MGEF `000844` (+60 SpeedMult, GetIsRace fera) nas seis abilities de estágio (`535c284`); limpeza dirigida das mãos + proteção autoritativa do equipamento (`509c0fe`, `340cf16`, `abccba5`). Neon: aprovado com ressalvas (escudo no dono, pergaminhos no host) → corrigidos em `95bec8d` e **reconfirmados**. Falha do teste legado UpdateEquipment é pré-existente na base oficial `310cb59`. Addon novo SHA-256 `23669DE2…`. ESP do overlay `C8B13207…` ≠ cópia ativa MO2/runtime `65BB3AAE…` (sem 000844).
+- **Decisões do dev:** sem uivo no Iniciado (Terror a partir do Ômega, Fúria a partir do Alfa; uivo isolado até corrigir o Z); velocidade +50% direto.
+- **T1/T2/T10** Z e dash do Morcego: **não corrigidos** — só instrumentação diagnóstica (`bcb0c02`; Neon aprovado). Log mostra efeitos locais sem comando resolvido nem envio COTV; hipótese: captura tardia do ponteiro ActionEvent no Skyrim Platform. Usar MagicEffect como gatilho exige arbitragem da Opção A.
+- Laboratório HEAD `876e0a8`.

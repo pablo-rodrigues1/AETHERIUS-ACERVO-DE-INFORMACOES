@@ -207,3 +207,9 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 ## 19/11/2026 — Som do ritual (dev)
 - O som do ritual (Fire Storm Charge, 3,35 s, sem loop) toca no início e na conclusão bem-sucedida, audível aos próximos; não toca em cancelamento.
 - Usar o SOUN 000843. Cada disparo tem janela de 3,351 s e pode chegar a quem entra nas proximidades durante a reprodução. A confirmação pertence ao servidor. A runa tem ciclo de vida separado. Implementação local em 65edf8c e roteiro da Etapa 4.
+
+## 19/11/2026 — Mãos, velocidade e Z da fera
+
+- **Mãos:** o servidor retira das mãos armas, escudo, tocha e feitiços ao confirmar a raça de fera e impede que um pacote antigo recoloque esse equipamento. O cliente dono limpa somente as mãos a partir da fase de fera e da raça efetiva. A entrada preserva peças fora das mãos e inventário. Na volta, o jogador volta a poder equipar normalmente.
+- **Velocidade (T4):** aplicar diretamente +50% em relação ao nominal do Manbeast. Com base 100 e Feral Speed de +20, a habilidade recebe +60 pontos de SpeedMult, resultando em 180 no cenário nominal. O modificador está no ESP do Sobrenatural, nas seis habilidades de estágio mutuamente exclusivas, condicionado à WerewolfBeastRace. A distância real e o valor efetivo após transformação ficam para o reteste em jogo.
+- **Uivos (T6):** Iniciado sem uivo. A partir do Ômega é liberado Uivo de Terror (`MAG_HowlofTerror`), e no Alfa é liberado Uivo de Fúria (`MAG_HowlofRage`), conforme a especificação. O Z obedece à progressão do Sobrenatural, sem consultar a escolha vanilla nem executar a quest de Companions. A ligação ao Z e a validação de cast no host ficam pendentes com T1/T2.
