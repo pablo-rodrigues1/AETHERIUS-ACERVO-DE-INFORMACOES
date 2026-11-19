@@ -282,3 +282,9 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 - O Ritual v2 aceita cancelamento autenticado por movimento e publica o motivo do fim. O servidor também cancela ao detectar deslocamento ou troca de célula. A runa e o Charge vanilla do Fire Storm são replicados ao dono e vizinhos, incluindo entrada tardia. O SOUN 000843 do plugin Sobrenatural referencia o SNDR 073FD9 de Skyrim.esm. A limpeza usa IDs nativos resolvidos no frame atual e o ritual deixa de forçar o grafo de feitiços.
 - UI CORE (LOCAL) sincronizada, 107 arquivos conferidos e quatro WAVs vencedores no mod SERVIDOR LOCAL. Os olhos usam a aparência autoritativa e o ledger aceita UUID. Os pisos 30/40/50/60/60/60 mantêm a fórmula e a barreira de spawn espera o 3D e a última aparência. A sessão anterior logou begin sem ready, mas o task que ficou pendente requer reteste real.
 - Overlay 335/335 e survival/magia 102/102 em cada modo. Core skills e entrega 13/13. Serviço, F7, TypeScript e webpack passaram. Revisão cruzada, instalação do bundle consolidado e Prepare pendentes. Por decisão do dev, retestar em solo no laboratório e validar os observadores posteriormente no servidor oficial. O roteiro completo está em ETAPA-4 e na investigação de 18/11 no laboratório.
+
+
+## 2026-11-19 — Sol High, correções após parecer Neon
+
+- `09c7767` e `01056e2` trocam o teleporte do Morcego pelos eventos COTV no dono, com verificação nativa da posição antes da replicação. A política de combate protege os dois lados do Enxame. O som de Morcego completa após o visual.
+- `da31fb8` documenta os achados, os resultados Node/nativo e o roteiro. Revisão do candidato pelo Neon e teste no motor ainda pendentes. Ver [Formas e poderes](formas-e-poderes.md).

@@ -126,3 +126,15 @@ Por decisão do dev, o código e os testes Node simulam dono, vizinhos, entrada 
 - **V7:** cinco marcadores existentes tocam no dono e em vizinhos próximos presentes, uma vez por sequência. Vizinhos tardios recebem o visual e a retirada da réplica encerra a instância ativa. Validar no servidor oficial perto/longe, saída durante o som e recusa por saldo ou recarga. Conferir `accepted=`, `som de ativação` e `[supernatural-visual]`. Visão e Lorde ainda dependem de reprodução de SNDR. Sedução e Reanimação conservam a conjuração com alvo.
 
 Node **46/46** no recorte e **486/486** na bateria integral em cada modo da flag de alimentação. Revisão cruzada pendente. Nenhum servidor, cliente de jogo ou MO2 foi iniciado por este lote.
+
+
+
+## 19/11 — Fechamento dos achados B1, M1 e M2
+
+O parecer Neon bloqueou o teleporte cego do Morcego e apontou a ausência de política de zonas no Enxame e o corte do áudio de Morcego. Candidato `09c7767` + `01056e2`, documentação de laboratório `da31fb8`. A correção volta ao Neon para revisão.
+
+- **B1:** o servidor autoriza o dono a disparar `ShoutStart` e `ShoutSprintLongStart`, eventos do script original COTV. Não escreve posição para executar a habilidade. A recarga provisória é de 3 s, configurável entre 2 e 60 por `VAMPIRE_BAT_COOLDOWN_SECONDS`, com efeito de 1 s. O patch nativo 026 checa a posição na janela de 1,5 s antes de retransmitir, com raio 3D de 256 unidades e mesma célula/mundo. Algemas, prisão e zonas com bloqueio de movimento/combate vedam a autorização.
+- **M1:** o Enxame aplica a política de combate ao agressor e ao alvo em cada pulso, antes do dano que serve de base à cura.
+- **M2:** o visual do Morcego termina aos 1 s e deixa o marcador de entrada tocar. A perda do 3D ou da referência continua encerrando a reprodução.
+
+Node 490/490 em cada modo da alimentação, 38/38 do Core de política e zonas e 50/50 no recorte de poderes e voz. `[BatDash]` passou com 11 asserções e `[NpcMovementCorrection]` com 72 em sete casos. Addon compilado, sem distribuição no runtime. A resposta física do grafo, alcance observado e colisões seguem no roteiro de validação oficial.

@@ -5,7 +5,7 @@ status: ativo
 decisao: aceito
 substitui: null
 responsaveis: [pablo-rodrigues1]
-atualizado: 2026-11-16
+atualizado: 2026-11-19
 tags: [sobrenatural, grants, poderes]
 relacionados: [../02-sistemas/sobrenatural/formas-e-poderes.md, ADR-0015-sobrenatural-lotes-js.md]
 ---
@@ -24,6 +24,10 @@ A união dos catálogos não prova autoria e removia magias pessoais; duas fonte
 3. Névoa/regeneração e Força/dano continuam parciais; nenhum nativo é alterado. Enxame conserva provisoriamente 10/s e raio 10 pés do COTV, agora pela janela de 40 s autorizada.
 4. Reserva de Sangue usa a API do lote Terra reserve/commit/cancel para 5 por uso aceito; a lista de poderes elegíveis é documentada para confirmação. Lorde comita após fase confirmada; módulo ausente mantém caminho sem custo com aviso único.
 5. AETHERIUS_VAMPIRE_SERVER_SUN permanece desligada; sua futura ativação suprime apenas o grant solar próprio. O dono do tick solar trata fontes externas antes de ativar.
+
+### Revisão de 19/11 após o achado B1
+
+O efeito de Morcego permanece em 1 s. A recarga agora é positiva, padrão 3 s e faixa 2–60 s em `VAMPIRE_BAT_COOLDOWN_SECONDS`. O avanço usa eventos COTV no cliente dono e um limite nativo de 256 unidades em 3D, na mesma célula/mundo e por 1,5 s, antes do relay do SkyMP. A mudança substitui o prazo sem recarga do item 2 e trata o bloqueio por teleporte sem colisão levantado na revisão. Ver [Formas e poderes](../02-sistemas/sobrenatural/formas-e-poderes.md).
 
 ## Consequências
 Revisão Terra e testes em jogo seguem pendentes. Nenhum efeito visual, dano ou replicação é considerado homologado apenas por teste Node; o roteiro fica preparado para depois por decisão do dev.
