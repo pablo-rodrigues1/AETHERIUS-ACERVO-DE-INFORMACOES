@@ -163,4 +163,4 @@
 - `02-sistemas/sobrenatural/investigacao-16-11-transformacao-forcada.md` — cancelamento durante animação e filtro finito do kdu.
 - `03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md` — regra do dev para transformação por tempo online.
 
-- `02-sistemas/sobrenatural/contrato-vinculo-do-veu.md` — Contrato v1 da projeção, Ritual e terror da Bruxaria.
+- `02-sistemas/sobrenatural/contrato-vinculo-do-veu.md` — Contrato da projeção e do terror, com revisão v2 do Ritual e motivos de término.

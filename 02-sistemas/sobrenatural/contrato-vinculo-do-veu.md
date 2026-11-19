@@ -1,4 +1,4 @@
-# Contrato cliente ↔ servidor — Vínculo do Véu v1
+# Contrato cliente ↔ servidor — Vínculo do Véu v2
 
 Autor: Sol High. Base local `f0bd86e` em `C:\Code\Aetherius - Servidor Local`. Regras de `ETAPA-4_bruxaria-vinculo-do-veu.md`, incluindo as decisões da §8.5. O contrato usa o envelope autenticado do UI Core e a propriedade SkyMP de apresentação ao dono. A keyword, a identidade de persistência e as operações de inventário ficam no servidor.
 
@@ -16,7 +16,7 @@ type VeilPresentation = {
 };
 ```
 
-Estágios: I `>70` (inclui sobrecarga), II `>50` até `70`, III `>30` até `50`, IV `>0` até `30` e V em `0`. `overloadBlocks = clamp(floor((bond − 100)/50), 0, 4)`. Para apresentação, usar os valores fracionários e as fronteiras `100` e `200` diretamente. A atualização em game-client entrega esta projeção à HUD CEF via `window.setVeilBondHud(value)` e à apresentação nativa do cliente via `sp.storage.aetheriusVeilPresentationV1 = value`. A HUD e os efeitos devem reconstruir-se da projeção atual, inclusive após recarga, e limpar em desconexão, troca de personagem ou versão inválida. O servidor volta a publicar a projeção em conexão nova. A UI não calcula drenagem, recompensa, buff ou progresso de XP a partir do relógio local.
+Estágios: I `>70` (inclui sobrecarga), II `>50` até `70`, III `>30` até `50`, IV `>0` até `30` e V em `0`. `overloadBlocks = clamp(floor((bond − 100)/50), 0, 4)`. Para apresentação, usar os valores fracionários e as fronteiras `100` e `200` diretamente. O update do dono grava `sp.storage.aetheriusVeilPresentationV1 = value`. O cliente projeta este estado em `hud.html` na view HUD da UI Core por `AetheriusUI.ToView`, que aciona `window.setVeilBondHud(value)`. A HUD e os efeitos devem reconstruir-se da projeção atual, inclusive após recarga, e limpar em desconexão, troca de personagem ou versão inválida. O servidor volta a publicar a projeção em conexão nova. A UI não calcula drenagem, recompensa, buff ou progresso de XP a partir do relógio local.
 
 ## Ritual no UI Core
 
@@ -26,7 +26,7 @@ Usar `moduleId: 'supernatural'` pelo envelope existente (o mesmo de `snapshot` e
 | --- | --- | --- |
 | `ritual.status` | `{}` | Disponibilidade dos modos, inventário por categoria, ritual ativo e último resultado da sessão. Pedir na abertura da tela e enquanto houver ritual ativo, até uma vez por segundo. |
 | `ritual.start` | `{ mode, categories }` | Três IDs distintos escolhidos pelo jogador; inicia uma única reserva e devolve o mesmo formato de estado. |
-| `ritual.cancel` | `{ ritualId }` | Cancela o ritual indicado; devolve o estado atual. Um identificador atrasado de outro ritual não cancela o atual. |
+| `ritual.cancel` | `{ ritualId, reason?: 'player' \| 'movement' }` | Cancela o ritual indicado e devolve o estado atual. Motivo ausente ou desconhecido equivale a `player`. Um identificador atrasado de outro ritual não cancela o atual. Cancelamento sempre tem crédito zero. |
 
 ```ts
 type Category = 'daedraHeart' | 'blackSoulGem' | 'rawMeat' | 'hide'
@@ -48,6 +48,8 @@ type RitualView = {
     outcome: 'completed' | 'interrupted' | 'failed';
     reason: null | 'cancelled' | 'moved' | 'combat' | 'disconnected'
                  | 'died' | 'curseLost' | 'materialsChanged' | 'uncertain';
+    endReason: 'completed' | 'player' | 'movement' | 'combat'
+             | 'disconnect' | 'death' | 'curseLost' | 'invalid';
     gained: number;  // crédito confirmado; 0 em interrupção/falha
   };
 };
@@ -55,7 +57,9 @@ type RitualView = {
 
 As categorias são Coração Daedra, Pedra da Alma Negra cheia ou vazia, carne animal crua, pele animal, tomo de feitiço, Nightshade e Nirnroot. A disponibilidade usa o inventário ativo no servidor. A tela acende categorias conforme `count >= perCategory` e habilita o início se o modo estiver elegível, houver três selecionadas válidas e `active` for `null`. A receita exige 1 por categoria no ritual normal e 2 na sobrecarga. O estado de elegibilidade vem do servidor. Sobrecarga pode começar com `99 < bond < 300` no ajuste inicial. A margem vale somente no início. A drenagem continua durante a execução e o teto de 300 se aplica ao saldo projetado mais 50 na conclusão. Códigos do ritual: `NOT_WITCH`, `INVALID_REQUEST`, `MODE_UNAVAILABLE`, `MISSING_MATERIALS`, `RITUAL_ACTIVE`, `RITUAL_NOT_ACTIVE`, `UNSAFE_STATE`, `RITUAL_UNAVAILABLE`; erros de sessão já existentes do UI Core continuam possíveis.
 
-`active.id` identifica a execução, `remainingMs` reflete o relógio autoritativo e `result.id` permite apresentar um resultado uma única vez. Pode-se animar a barra entre respostas, mas a conclusão depende da resposta autoritativa. `result` é um resultado transitório da sessão, preservado para reabertura da tela durante a sessão, até começar outro ritual. Desconectar encerra a execução e limpa o estado da UI; reconectar começa sem execução. Uma falha de confirmação de consumo resulta em `failed/uncertain` com crédito zero, conforme D7. Os efeitos públicos de runa/animação vêm da replicação do servidor; abrir/fechar o módulo não os altera.
+`active.id` identifica a execução, `remainingMs` reflete o relógio autoritativo e `result.id` permite apresentar um resultado uma única vez. Pode-se animar a barra entre respostas, mas a conclusão depende da resposta autoritativa. `result` é um resultado transitório da sessão, preservado para reabertura da tela durante a sessão, até começar outro ritual. Desconectar encerra a execução e limpa o estado da UI. Reconectar começa sem execução. Uma falha de confirmação de consumo resulta em `failed/uncertain` com crédito zero, conforme D7. O servidor replica a runa e o áudio aos observadores. Abrir ou fechar o módulo não altera esses efeitos.
+
+O servidor sempre preenche `endReason` ao encerrar, com `movement` também quando detecta deslocamento ou troca de célula. A HUD monta a mensagem a partir dele. Os campos legados `outcome` e `reason` e o discriminante `v: 1` preservam clientes anteriores. Durante o Ritual, a propriedade privada `aetheriusVeilRitualStatus` replica `{ v, active, result }` no início, a cada segundo e no fim. O cliente usa o temporizador fora do TAB e envia cancelamento com `reason: 'movement'` pelo envelope autenticado. Emotes na tecla K não são comandos de movimento. O cliente deduplica mensagens pelo ID observado. Uma sessão encerrada não recebe a notificação e a seguinte começa com a HUD limpa.
 
 A resposta de aceite de `ritual.start` é `{ ok: true, ritual: { …, active: { id, … } } }`. A interface fecha ao receber esse aceite. Erro, timeout ou resposta sem `active.id` mantém a interface e recupera o estado por `ritual.status`; a presença de um ritual no status permite retomá-lo na apresentação mesmo se a resposta do início se perder. A execução segue no jogo e pode ser interrompida pelas condições habituais. Reabrir a tela consulta a execução atual. O comando explícito de cancelamento permanece disponível no contrato e exige o ID da execução.
 
@@ -83,6 +87,8 @@ type VeilTerror = null | {
 - Cliente local: `C:\Code\Aetherius - Servidor Local\client-source\client\src\services\services\aetheriusUiService.ts:115` (encaminhamento autenticado do envelope); `client\ui-core\modules\supernatural\veil-seal.js` (selo existente).
 
 ## Histórico
+
+- 18/11/2026 — Contrato v2 decidido pelo Opus, com `ritual.cancel.reason`, `result.endReason` e projeção privada do Ritual ativo. Mantém `v: 1` no discriminante e aceita chamadas da revisão anterior. `VeilPresentation` e `VeilTerror` conservam o formato original.
 
 - 18/11/2026 — Opus ajustou a elegibilidade de início da Sobrecarga de `bond >= 100` para `bond > 99` com limiar configurável. A condição é autoritativa por `modes.overload.eligible`. O formato das mensagens e a versão v1 permanecem aplicáveis.
 - 18/11/2026 — O dev definiu fechamento da interface no aceite de `ritual.start` e ganho gradual apresentado pelo selo. O serviço continua creditando uma vez pela D7. As mesmas mensagens v1 já trazem o aceite e o novo saldo.
