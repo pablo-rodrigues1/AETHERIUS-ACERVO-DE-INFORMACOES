@@ -58,7 +58,7 @@ Detalhes de implementação e evidências ficam nos documentos de etapa (`ETAPA-
 - Inatos desde o Neófito (Curse of the Vampire): resistências base, veneno 100%, gelo 25%, fraqueza a fogo 25%, Supernatural Awareness, vigor acelerado, fraqueza ao sol, Visão Vampírica, Sedução, Forma de Morcego, Dreno, Reanimação.
 - Por estágio: Vampiro Pleno → Força Imensurável; Ancilla → Forma de Névoa; Ancião → Celeridade Não Natural; Suserano → Enxame Devorador.
 - **Duração 40 s** e **recarga de 60 s a partir do uso** (20 s de espera após o efeito) para **Força, Névoa, Celeridade e Enxame**.
-- **Forma de Morcego:** mantém o avanço/invisibilidade de 1 s, **sem recarga**.
+- **Forma de Morcego:** avanço pelo motor do dono e invisibilidade por 1 s. A correção B1 de 19/11 substituiu o prazo sem recarga por 3 s provisórios. A configuração VAMPIRE_BAT_COOLDOWN_SECONDS aceita 2–60 s e o host verifica a posição dos pacotes no avanço.
 - **Sedução e Reanimação:** mantêm as regras próprias de duração **(orquestrador)** e **não custam sangue**.
 - **Névoa** (zerar regeneração) e **Força** (bônus no dano real): **parciais** — exigem código nativo, fora do escopo.
 - **Enxame:** números do COTV como base **(provisório)**: dreno de 10/s por 15 s.
@@ -190,6 +190,20 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 ## 18/11/2026 — Premissa (dev): não existe save game
 - Personagens são carregados do banco de dados e persistidos nele; não há save/load de jogo no servidor oficial. Cenários de 'carregar save' só valem para carregamentos internos do cliente SkyMP (conectar, reconectar, respawn, troca de personagem).
 
-## 19/11/2026 — B4, som do Ritual (dev)
+## 18/11/2026 — Modelo de confiança P1 dos poderes: Opção A (orquestrador)
+- **Antes (P1 do porte, 17/11):** um poder gerenciado só era executado com o comando `activate` (nonce/geração/sequência) **e** a proposta nativa `SpellCast` (`mp.onSkySocialSpellCast`) do mesmo feitiço em até 750 ms.
+- **Problema medido em jogo (L1/V6):** o Z não emite `spellCast`; a proposta nativa nunca chega e Beast Form/Lorde nunca transformam. Ver `investigacoes/INVESTIGACAO_18-11_transformacoes.md`.
+- **Agora:** um `activate` vindo de `actionVoiceFire` (`via: 'voice'`) é executado **sem** proposta nativa quando o estado do servidor tem `equipment.voiceSpell === spell`. `via` é só uma dica; o servidor reconfere o slot. Mãos/instant continuam exigindo a proposta nativa.
+- **Continua autoritativo no servidor:** maldição certa, poder em `knownSpells` (concessão por estágio), `minXp` dos poderes de vampiro, slot de voz, vivo/SkyDeath, travas SkySocial/profissão, sem forma ativa (fera, Lorde, névoa), canal do personagem/ator, nonce de uso único + sequência (anti-replay), cadência de 1 s e a recarga/sangue de cada domínio. O cliente não decide resultado.
+- Ritual do Véu: exclusivo da Bruxa; a checagem de maldição (lobisomem/vampiro) já o exclui.
+- Implementação: `power-input.js` (`voiceOnly`, `complete`, `request`). Revisão cruzada: Gemini Neon.
 
-O SOUN 000843, Charge de Fire Storm, toca no início aceito e na conclusão bem-sucedida do Ritual. Cada disparo dura cerca de 3,35 s, sem loop e audível a jogadores próximos. Quem entra na área durante o trecho pode ouvir dentro da janela ativa. Cancelamento encerra a reprodução inicial em curso e não emite som de conclusão.
+## 18/11/2026 — Sem teste com 2 jogadores (dev)
+- Efeitos visíveis/audíveis a outros jogadores (poderes do vampiro, runa/som do ritual, BRUXA/aura/olhos) são implementados pela melhor solução de sincronização conhecida, cobertos por testes Node que simulam 2+ jogadores, e validados no servidor oficial após a integração, com roteiro documentado em cada item.
+
+## 19/11/2026 — Recarga do Morcego (dev)
+- Morcego (Bat Form) passa a ter recarga de **3 s** (configurável 2–60 s), substituindo a decisão anterior "Morcego sem recarga", para impedir encadear dashes. Limite nativo de 256 u por dash continua.
+
+## 19/11/2026 — Som do ritual (dev)
+- O som do ritual (Fire Storm Charge, 3,35 s, sem loop) toca no início e na conclusão bem-sucedida, audível aos próximos; não toca em cancelamento.
+- Usar o SOUN 000843. Cada disparo tem janela de 3,351 s e pode chegar a quem entra nas proximidades durante a reprodução. A confirmação pertence ao servidor. A runa tem ciclo de vida separado. Implementação local em 65edf8c e roteiro da Etapa 4.

@@ -1,0 +1,9 @@
+# Investigação 18/11 — Cura do Enxame com leitura de HP ausente
+
+Autor Sol High. Caso V4 em `C:/Code/Aetherius - New Systems/Sobrenatural/docs/TESTE-JOGO_18-11.md`. Base `77ea350` e candidato `415acde` em `C:/Code/Aetherius - Servidor Local`. Nenhum servidor ou jogo iniciado.
+
+Em `source/server/gamemode/supernatural/powers.js` na base, a função `health(id)` usava `|| 0` para o máximo e a fração de vida. A leitura nativa de uma chave pode lançar, situação que `get` converte em `null`. Se a segunda leitura falhasse depois de uma tentativa de dano e a primeira leitura tivesse retornado valor positivo, `before - health(target)` simulava perda de todo o HP anterior. A cura podia ser creditada até o dano nominal sem comprovação no servidor. O log do teste humano não contém uma ativação aceita do Enxame e não demonstra que este erro aconteceu naquela sessão.
+
+O candidato trata máximo ou fração indisponíveis como `null`, aceita zero observado como HP válido e calcula a cura só quando há leitura antes e depois. O dano que já tenha sido aplicado é conservado. A leitura do máximo passa por `source/server/cpp/addon/property_bindings/AttributeBonusesBinding.cpp:19` para NPCs e jogadores; `MpActor::DamageActorValue` usa o mesmo `GetMaximumValues` em `source/server/cpp/server_guest_lib/MpActor.cpp:1704`.
+
+A regressão `swarm damages either an NPC or a player and credits only a confirmed HP reduction` em `overlays/sobrenatural/teste-poderes.cjs` simula alvos NPC e jogador e injeta leitura ausente após aplicar 2,5 HP de dano. Nos controles, o vampiro recupera 2,5 HP; com leitura ausente, a vítima ainda perde 2,5 HP e o vampiro não recebe cura. O resultado prova a regra da aplicação JS; evidência de combate, HP, morte, visual e som reais seguem no roteiro com dois jogadores da [Etapa 3](../ETAPA-3_vampirismo-mecanicas.md). Revisão cruzada pendente.

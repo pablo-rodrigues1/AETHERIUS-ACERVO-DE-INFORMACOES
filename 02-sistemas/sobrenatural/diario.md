@@ -264,38 +264,31 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 - Dev: Codex/GPT bloqueado até nova autorização; Sol encerrado. Alterações não commitadas do Sol preservadas em phase0-basic.js e magic.test.cjs (decisão pendente).
 - Pendente: teste em jogo/CEF, reativar Miggyluv no perfil LOCAL, auditoria .shell.is-supernatural-workspace, R-ANIM.
 
-## 2026-11-18 — Sol High, reteste dos poderes vampíricos
+## 18/11 — Poderes vampíricos após o teste em jogo (Sol High)
 
-- `415acde` no laboratório aplica a Opção A de Z aos seis poderes próprios e projeta cinco sons de entrada COTV para dono e vizinhos após o débito. A cura do Enxame exige leitura válida da perda de HP em NPCs e jogadores.
-- `d8e5c94` registra vencedores, investigação do Enxame e roteiro com dois jogadores. Node 39/39 no recorte. Pendentes revisão cruzada, movimento V2 e reprodução dos descritores da Visão e do Lorde. Sem execução de jogo ou servidor. Ver [Formas e poderes](formas-e-poderes.md).
-
+Candidato local `415acde` estende o uso por Z aos seis poderes próprios e replica os cinco sons de entrada que têm marcador SOUN. O Enxame exige leitura válida de HP para creditar cura. Node 39/39 no recorte, revisão cruzada pendente. V2 precisa de reteste do movimento real; V7 de Visão/Lorde requer caminho para os descritores de som. Ver [Etapa 3](ETAPA-3_vampirismo-mecanicas.md) e roteiro V2–V5 com dois jogadores.
 
 
-## 2026-11-18 — Sol High, sincronização de Morcego, Névoa, Enxame e Visão
+## 18/11 — Sincronização de poderes sem teste multiplayer agora (Sol High)
 
-- Candidato `827afe4` e documentação `90ec13e` entregam a simulação com observadores presentes, tardios e saindo da relevância. Node 486/486 por modo. Roteiro e logs no [relatório de formas e poderes](formas-e-poderes.md).
-- Validação no oficial e revisão cruzada pendentes. O dash de 128 unidades usa teleporte sem varredura de colisão. Resta a reprodução espacial dos SNDR de Visão/Lorde e confirmar o áudio nativo de Sedução/Reanimação.
+`827afe4` prepara dash autoritativo de 128 unidades, visual público de Morcego/Névoa/Enxame, entrada de áudio apenas para presentes próximos e Visão privada de NPCs e jogadores. Node 46/46 no recorte e 486/486 em cada modo da flag de alimentação. O dash usa teleporte sem consulta de colisão. Os SNDR da Visão e do Lorde ainda precisam de caminho de reprodução. Revisão e roteiro V2–V5/V7 no oficial em [Etapa 3](ETAPA-3_vampirismo-mecanicas.md).
 
-## 18/11/2026 — Retorno do teste local e Ritual v2 (Sol High)
+## 18/11/2026 — correções de integração pós-jogo (Sol High)
 
-- Candidatos laboratório 42315d1, cliente 61d7547 e documentação cebb42c. Corrigida a montagem das HUDs de Sangue, Vínculo e contador na view HUD existente do Meridian. A proteção de CustomEvent conserva argsJsonDumps como strings e registra o nome de uma fonte que forneceu argumento sem representação.
-- O Ritual v2 aceita cancelamento autenticado por movimento e publica o motivo do fim. O servidor também cancela ao detectar deslocamento ou troca de célula. A runa e o Charge vanilla do Fire Storm são replicados ao dono e vizinhos, incluindo entrada tardia. O SOUN 000843 do plugin Sobrenatural referencia o SNDR 073FD9 de Skyrim.esm. A limpeza usa IDs nativos resolvidos no frame atual e o ritual deixa de forçar o grafo de feitiços.
-- UI CORE (LOCAL) sincronizada, 107 arquivos conferidos e quatro WAVs vencedores no mod SERVIDOR LOCAL. Os olhos usam a aparência autoritativa e o ledger aceita UUID. Os pisos 30/40/50/60/60/60 mantêm a fórmula e a barreira de spawn espera o 3D e a última aparência. A sessão anterior logou begin sem ready, mas o task que ficou pendente requer reteste real.
-- Overlay 335/335 e survival/magia 102/102 em cada modo. Core skills e entrega 13/13. Serviço, F7, TypeScript e webpack passaram. Revisão cruzada, instalação do bundle consolidado e Prepare pendentes. Por decisão do dev, retestar em solo no laboratório e validar os observadores posteriormente no servidor oficial. O roteiro completo está em ETAPA-4 e na investigação de 18/11 no laboratório.
+Laboratório 42315d1 e cliente 61d7547, com patch de cliente 030. HUD Meridian para sangue, selo e timer. Ritual v2 cancela movimento e apresenta motivo autoritativo. Runa e um trecho de som vanilla são replicados aos vizinhos, inclusive quem chega depois. A restauração dos olhos aceita UUID. A serialização protege argsJsonDumps e a barreira de spawn aceitou a aparência mais recente nos testes. HouseCARL confirmou SOUN 000843 e quatro WAVs do mod LOCAL. UI CORE (LOCAL) sincronizada em 107 arquivos verificados. Overlay 335/335 em cada modo, Core 13/13, serviço/F7, TypeScript e webpack passaram. Bundle e Prepare pendentes. Próxima ação é revisão cruzada, reteste local com um jogador e, depois, validação dos observadores no oficial pelo roteiro da ETAPA-4. Ver INVESTIGACAO_18-11_excecoes-hud-ritual-pisos.md para as causas ainda em validação.
 
+## 19/11 — Revisão Neon dos poderes (Sol High)
 
-## 2026-11-19 — Sol High, correções após parecer Neon
+Candidato `09c7767` + `01056e2` remove o teleporte do Morcego, usa os dois eventos COTV no dono e limita a posição no host antes de replicar. Alvos e agressor protegidos ficam fora do Enxame. A arte do Morcego encerra sem cortar o áudio. Node 490/490 nos dois modos e teste nativo com 11 asserções. Ver [Etapa 3](ETAPA-3_vampirismo-mecanicas.md). Próximo passo é reconfirmação Neon e verificação em jogo após atualizar addon/gamemode.
 
-- `09c7767` e `01056e2` trocam o teleporte do Morcego pelos eventos COTV no dono, com verificação nativa da posição antes da replicação. A política de combate protege os dois lados do Enxame. O som de Morcego completa após o visual.
-- `da31fb8` documenta os achados, os resultados Node/nativo e o roteiro. Revisão do candidato pelo Neon e teste no motor ainda pendentes. Ver [Formas e poderes](formas-e-poderes.md).
+## 19/11/2026 — R1 e R2 da revisão Neon da Bruxa (Sol High)
 
-## 19/11/2026 — Resposta à revisão Neon da HUD da Bruxa (Sol High)
+Cliente 295f02e, laboratório 1887fd0 e patch incremental 031. Blackout preserva duração e fade com a entrega atrasada. O Ritual descarta movimento capturado com chat ou menu focado. O cooldown de terror reabre o arquivo com UUID ou chave numérica legada. Testes 27/27 direcionados e 343/343 por modo de alimentação. TypeScript e webpack passaram. Reconfirmação Neon e distribuição em par de bundle e frontend da HUD pendentes. B4 aguarda decisão registrada em ETAPA-4.
 
-- Neon aprovou o lote com duas correções no cliente. Cliente 295f02e, laboratório 1887fd0, patch 031 e documentação e07feb3 aplicam as duas e a observação do UUID do terror.
-- O blackout preserva a duração nominal e o CEF conclui o fade de 1,2 s mesmo com atraso de entrega. O Ritual ignora movimento com foco do chat, Console ou outro menu nativo ou Meridian na captura e no envio. O cooldown do terror aceita UUID e chave numérica legada após reinício.
-- 27 testes direcionados e 343 testes overlay por modo passaram. TypeScript e webpack aprovados. Reconfirmar com Neon e distribuir juntos o bundle e o script da HUD antes do reteste. B4 aguarda decisão do dev.
+## 19/11/2026 — Som do Ritual B4 (Sol High)
 
-## 19/11/2026 — B4, Charge no início e na conclusão (Sol High)
+Decisão do dev aplicada em 65edf8c. O Charge toca no início autorizado e na conclusão com crédito confirmado, com janela para entrada tardia. O cancelamento corta o trecho inicial em curso. A apresentação da runa segue independente do som. Passaram 13 testes direcionados e 345 por modo no overlay. Revisão Neon e validação oficial pendentes. Ver ETAPA-4 e DECISOES.
 
-- Laboratório 65edf8c e documentação 5effbd8. Áudio usa propriedade distinta da runa e duas janelas de 3.351 ms autorizadas pelo servidor. A conclusão sonora exige consumo confirmado e crédito positivo. Heartbeats e montagem da runa fora da janela não repetem o som.
-- Passaram 13 testes direcionados e 345 testes de overlay por modo. Revisão Neon, Prepare e teste oficial com observadores pendentes. O roteiro consta na Etapa 4 do laboratório.
+## 2026-11-19 — Teste solo e encerramento da sessão (Opus)
+- Lotes do dia: Opção A (Z sem SpellCast nativo; 7435282/77ea350/850211c), poderes do vampiro (dash por movimento no dono + guarda nativa 026, Enxame com zonas seguras, sons COTV), Bruxa/HUD/ritual (HUDs, timer, cancelamento por movimento, contrato v2, som no início/conclusão, sussurros, pisos). Todos revisados e aprovados pelo Gemini Neon (Opus Medium como 2º revisor só em L1/V6). Decisões: Morcego com recarga de 3 s; som do ritual no início e na conclusão; sem teste com 2 jogadores (validar no oficial).
+- Teste solo do dev: HUDs e sussurros OK; 9 defeitos registrados em `docs/TESTE-JOGO_19-11.md` (T1–T9). Dev removeu Precision Creatures, adicionou New Creature Animation - Werewolf (regerar Pandora) e definiu as auras pelo Colored Magic Auras (Red vampiro, Purple Bruxa). Correção adiada para nova sessão.

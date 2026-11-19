@@ -1,5 +1,21 @@
 # RETOMADA — Sistema Sobrenatural
 
+> ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (19/11/2026, Opus)
+> 1. Leia **`docs/TESTE-JOGO_19-11.md`**: 9 defeitos do teste solo (T1–T9) + mudanças do dev no modpack. **Nada foi despachado** (pedido do dev: corrigir em sessão nova).
+> 2. Prioridades: **T1/T2** Z não transforma (Beast Form e Lorde) mesmo após a Opção A; **T3** `fx.cleanup is not a function` em loop (cliente da transformação forçada); **T4–T6** fera lenta (+50% velocidade?), não ataca com feitiços, espada 2H na mão da fera, Z sem uivo; **T7/T8** auras do vampiro (Red) e da Bruxa (Purple) pelo **Colored Magic Auras** (`C:\modOrganizer\mods\Colored Magic Auras\`, Nexus 25773); **T9** runa do ritual sumiu.
+> 3. Dev removeu **Precision Creatures** e adicionou **New Creature Animation - Werewolf** → **regerar o Pandora** no perfil LOCAL antes do próximo teste.
+> 4. OK no teste: HUD de sangue, selo e HUD do ritual, sussurros, transformação forçada pelo F7.
+> 5. Regras vigentes no `AGENTS.md`: Codex liberado; revisão pelo **Gemini 4 Neon** com **revisão honesta**; Gemini sem houseCARL → **Luna MAX** coleta os dados; commits com pathspec explícito (vários workers no mesmo repo).
+> 6. Estado: laboratório HEAD `5effbd8`, client-source `295f02e`, addon `4f622a37…`, cliente `fd61c198…`. O servidor local pode ainda estar rodando (PID 7336): pare com `scripts\Stop.ps1` antes de preparar de novo.
+
+> **19/11, Sol — B4 implementado:** laboratório 65edf8c toca o Charge no início e na conclusão confirmada, dentro de janelas de 3,351 s. 13 testes direcionados e 345 por modo. Reconfirmar com Neon e validar observadores no oficial segundo a ETAPA-4.
+
+> **19/11, Sol — retorno à revisão Neon da Bruxa:** cliente 295f02e e laboratório 1887fd0 corrigem fade do blackout, filtro de foco do Ritual e UUID do terror. Overlay 343/343 por modo, direcionados 27/27, build e TS OK. Reconfirmar com Neon e consolidar bundle e frontend HUD juntos para reteste. B4 aguarda decisão do dev.
+
+> **19/11 — poderes vampíricos após revisão Neon:** Candidato `09c7767` + `01056e2` remove o teleporte do Morcego, usa os dois eventos COTV no dono e limita a posição no host antes de replicar. Alvos e agressor protegidos ficam fora do Enxame. A arte do Morcego encerra sem cortar o áudio. Node 490/490 nos dois modos e teste nativo com 11 asserções. Ver [Etapa 3](docs/ETAPA-3_vampirismo-mecanicas.md). Próximo passo é reconfirmação Neon e verificação em jogo após atualizar addon/gamemode.
+
+> **18/11, Sol — correções pós-teste candidatas:** cliente 61d7547, laboratório 42315d1, contrato Ritual v2. HUD LOCAL e WAVs instalados, SOUN 000843 verificado, visão de vizinhos simulada. Overlay 335/335 por modo, Core 13/13, serviço/F7 e build OK. Próximos passos: revisão cruzada, instalar bundle após consolidar os workers, Prepare e reteste solo. Validação de observadores fica no servidor oficial, com roteiro na ETAPA-4.
+
 > **18/11 (noite), Opus — Etapa 4 (Vínculo do Véu + Sobrecarga) com CÓDIGO REVISADO E APROVADO** (Opus Low + Gemini Neon) e addon nativo compilado (`scam_native.node` 77f28d98…). **GPT/Codex BLOQUEADO até o dev autorizar** (usar Opus 5.5 Low e Gemini). Pendências: alterações não commitadas do Sol em `phase0-basic.js`/`magic.test.cjs` (decidir); reativar Miggyluv no perfil LOCAL (MO2); auditoria `.shell.is-supernatural-workspace`; R-ANIM; testes em jogo de todas as etapas.
 
 > **18/11 — Etapa 4 candidata:** servidor e integração em `f69c438` (cliente `8d9fc09`), nove records no ESP `a00899a`. Node 445/445 por modo de alimentação, Core selecionado 39/39, TypeScript e webpack aprovados. Validação nativa aguarda CMakeRC e recompilação do addon; Miggyluv voltou desabilitado ao abrir LOCAL e precisa de reativação. R-ANIM foi isolada em despacho próprio. Próximos passos: revisão cruzada e validação em jogo após a recompilação. Ver ETAPA-4 para FormIDs, testes e fronteiras.
@@ -120,3 +136,8 @@ Terra confirmou parcialmente o lote anterior e abriu A/B; Sol High preparou a se
 > **18/11 — animações do selo:** cliente `8bcc121` (autoria mista Terra/Sol), laboratório `94f4313`, testes 5/5 e prévia com slider; revisão/CEF/jogo pendentes e restauração de HUD reutilizada exige `immediate:true`. Ver ETAPA-4.
 
 > **18/11 — Ritual e ganho gradual:** cliente `b007e6e`, `82280b2`, `5589c91`, `c27afd4`; laboratório `ca52c0b`, `e081b52`; testes 11/11 + 4/4. Revisão cruzada, CEF e jogo pendentes; ver ETAPA-4.
+
+> **18/11 — poderes vampíricos (Sol High):** candidato local `415acde` com Z para seis poderes próprios, som de entrada para cinco e guarda de HP do Enxame. Node 39/39 no recorte. Pendentes revisão, verificação do dash real e cobertura restante de V7. Roteiro V2–V5 com dois jogadores em [Etapa 3](docs/ETAPA-3_vampirismo-mecanicas.md).
+
+
+> **18/11 — sincronização de poderes (Sol High):** `827afe4` implementa dash de 128 unidades, efeitos públicos para vizinhos e Visão privada. Node 486/486 nos dois modos. Revisão cruzada pendente, com colisão do dash e áudio dos dois SNDR ainda em aberto. Ver o roteiro de validação no servidor oficial em [Etapa 3](docs/ETAPA-3_vampirismo-mecanicas.md).
