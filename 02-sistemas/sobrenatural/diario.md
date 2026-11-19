@@ -288,3 +288,9 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 
 - `09c7767` e `01056e2` trocam o teleporte do Morcego pelos eventos COTV no dono, com verificação nativa da posição antes da replicação. A política de combate protege os dois lados do Enxame. O som de Morcego completa após o visual.
 - `da31fb8` documenta os achados, os resultados Node/nativo e o roteiro. Revisão do candidato pelo Neon e teste no motor ainda pendentes. Ver [Formas e poderes](formas-e-poderes.md).
+
+## 19/11/2026 — Resposta à revisão Neon da HUD da Bruxa (Sol High)
+
+- Neon aprovou o lote com duas correções no cliente. Cliente 295f02e, laboratório 1887fd0, patch 031 e documentação e07feb3 aplicam as duas e a observação do UUID do terror.
+- O blackout preserva a duração nominal e o CEF conclui o fade de 1,2 s mesmo com atraso de entrega. O Ritual ignora movimento com foco do chat, Console ou outro menu nativo ou Meridian na captura e no envio. O cooldown do terror aceita UUID e chave numérica legada após reinício.
+- 27 testes direcionados e 343 testes overlay por modo passaram. TypeScript e webpack aprovados. Reconfirmar com Neon e distribuir juntos o bundle e o script da HUD antes do reteste. B4 aguarda decisão do dev.
