@@ -294,3 +294,8 @@ Tela segue modelo da Bruxa, fecha após confirmação e permanece aberta em recu
 - Neon aprovou o lote com duas correções no cliente. Cliente 295f02e, laboratório 1887fd0, patch 031 e documentação e07feb3 aplicam as duas e a observação do UUID do terror.
 - O blackout preserva a duração nominal e o CEF conclui o fade de 1,2 s mesmo com atraso de entrega. O Ritual ignora movimento com foco do chat, Console ou outro menu nativo ou Meridian na captura e no envio. O cooldown do terror aceita UUID e chave numérica legada após reinício.
 - 27 testes direcionados e 343 testes overlay por modo passaram. TypeScript e webpack aprovados. Reconfirmar com Neon e distribuir juntos o bundle e o script da HUD antes do reteste. B4 aguarda decisão do dev.
+
+## 19/11/2026 — B4, Charge no início e na conclusão (Sol High)
+
+- Laboratório 65edf8c e documentação 5effbd8. Áudio usa propriedade distinta da runa e duas janelas de 3.351 ms autorizadas pelo servidor. A conclusão sonora exige consumo confirmado e crédito positivo. Heartbeats e montagem da runa fora da janela não repetem o som.
+- Passaram 13 testes direcionados e 345 testes de overlay por modo. Revisão Neon, Prepare e teste oficial com observadores pendentes. O roteiro consta na Etapa 4 do laboratório.

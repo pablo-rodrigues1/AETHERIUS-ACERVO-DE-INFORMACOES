@@ -189,3 +189,7 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 
 ## 18/11/2026 — Premissa (dev): não existe save game
 - Personagens são carregados do banco de dados e persistidos nele; não há save/load de jogo no servidor oficial. Cenários de 'carregar save' só valem para carregamentos internos do cliente SkyMP (conectar, reconectar, respawn, troca de personagem).
+
+## 19/11/2026 — B4, som do Ritual (dev)
+
+O SOUN 000843, Charge de Fire Storm, toca no início aceito e na conclusão bem-sucedida do Ritual. Cada disparo dura cerca de 3,35 s, sem loop e audível a jogadores próximos. Quem entra na área durante o trecho pode ouvir dentro da janela ativa. Cancelamento encerra a reprodução inicial em curso e não emite som de conclusão.
