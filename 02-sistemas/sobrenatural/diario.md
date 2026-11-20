@@ -328,3 +328,7 @@ Compilado em `C:\Code\Aetherius - New Systems\Entrega_Sobrenatural_19_11` (882 a
 
 ## 19/11/2026 (noite) — Pacote rebaseado para o oficial novo de 19/11 (Opus)
 Dev atualizou `C:\Code\Aetherius - OFICIAL`. Mesclagem 3 vias (base 310cb59/bc305e5 + pacote kdu; oficial novo × Sobrenatural): 7 conflitos resolvidos à mão (magic-service + teste, werewolf/client, loadGameService, remoteServer, appearance com import Keyword restaurado, app.js do F7 com aba Compras + Sobrenatural). Patches regerados sobre o oficial e validados com `git apply --check`. Testes na árvore mesclada: gamemode 142/142; Sobrenatural 319/319 por modo + 44 de cliente; tsc/webpack do cliente e tsc do backend OK; falhas de Meridian (7) e GameplayCore idênticas/ambientais ao oficial puro. Addon C++ não recompilado. Pontos para o dev: raciais conservadoras vs. remoção ampla do oficial; restore-over-time do MpActor × bloqueio de cura do vampiro. Ver `Entrega_Sobrenatural_19_11\REBASE_OFICIAL_19-11.md`.
+
+## 19/11/2026 (noite) — Fangs and Eyes (olhos vermelhos) no pacote (Opus)
+Nova versão do Fangs and Eyes (Nexus 6842, `Fangs and Eyes Red-6842-1-0.7z`) incluída em `03-mods-jogo` como substituição direta. `BVFE.esp` idêntico ao do runtime do servidor (`43205137…`); só os BSA mudaram, então o manifesto de plugins não muda.
+
