@@ -2,23 +2,15 @@
 
 A maldição **só** é concedida e removida pelo Painel Administrativo (F7 no jogo). Esta pasta reúne tudo do painel que diz respeito ao Sobrenatural. Os arquivos do servidor também estão no patch cumulativo (`01-servidor`); o patch do frontend F7 está **só aqui**, porque esse arquivo é distribuído pelo mod Meridian e não pelo bundle do cliente.
 
-Documentação completa: `../05-documentacao/ETAPA-2_painel-f7.md` e a revisão `../05-documentacao/REVISAO-2_painel-f7_terra.md`.
+Documentação completa: `../04-documentacao/ETAPA-2_painel-f7.md`.
 
 ## 1. Conteúdo
 ```
-06-painel-adm/
-├─ servidor/                         ← versões finais (servidor/gamemode/admin-panel/)
-│  ├─ supernatural-admin.cjs         ← NOVO: executa as ações supernatural.* (validação, autoridade, sessão)
-│  ├─ extension-catalog.cjs          ← registra as 10 ações na categoria "supernatural"
-│  ├─ aetherius-tools.cjs            ← liga supernaturalAdmin.ACTIONS ao despachante de ferramentas
-│  ├─ service.cjs                    ← cópia do operador/alvo e parâmetros para auditoria
-│  ├─ staff-policy.cjs               ← supernatural.* exige o escopo de staff "characters"
-│  ├─ audit-details.cjs              ← detalhes no log de auditoria (XP antes/depois, revisão, resultado da forma)
-│  └─ aetherius-store.cjs
-└─ cliente-f7/
-   ├─ 004-admin-panel-client.patch   ← patch do frontend F7 (client/admin-panel/app.js)
-   └─ app.js                         ← versão final testada (mod "AETHERIUS - MERIDIAN - COMPATIBILIDADE (LOCAL)")
+05-painel-adm/
+├─ LEIA-ME_PAINEL-ADM.md
+└─ cliente-f7/004-admin-panel-client.patch   ← patch do frontend F7 (client/admin-panel/app.js), sobre o oficial de 19/11
 ```
+Os arquivos do painel no servidor (`supernatural-admin.cjs`, `extension-catalog.cjs`, `aetherius-tools.cjs`, `service.cjs`, `staff-policy.cjs`, `audit-details.cjs`, `aetherius-store.cjs`) **já estão no** `01-servidor/sobrenatural-servidor.patch`.
 
 ## 2. Ações (aba "Sobrenatural" do F7)
 Todas são registradas com a permissão **`characters.class`** (`extension-catalog.cjs:74`) e mapeadas para o escopo de staff **`characters`**, o mesmo de `class.set`. Todas exigem também, um alvo selecionado e um motivo com pelo menos 5 caracteres. Todas são auditadas.
