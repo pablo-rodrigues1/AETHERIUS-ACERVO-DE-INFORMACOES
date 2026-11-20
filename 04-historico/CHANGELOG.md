@@ -70,3 +70,6 @@ Mudanças relevantes por versão, da mais recente para a mais antiga. Formato ba
 - **2026-11-16 — Sobrenatural (candidato local):** origem de grants, Bruxaria, poderes JS, tempos 40/60 e contrato de sangue, 122 testes; revisão e homologação pendentes.
 
 - 2026-11-16 — Sobrenatural: transformação forçada 72 h reais online/noite, sequência privada de 20 s e atalho F7; candidato local 856232a, 122 testes Node, revisão e jogo pendentes. Corrigido status da integração Bruxa (79098ad).
+
+
+- **2026-11-20 — Sobrenatural:** resposta aos seis achados Neon e candidato local de Garra, Ala de Sangue, Asas e sons do Lorde (`7658200`, `bb2510a`). Testes automatizados concluídos, reconfirmação e jogo pendentes. [Investigação](../02-sistemas/sobrenatural/investigacoes/investigacao-20-11-lorde-poderes.md).

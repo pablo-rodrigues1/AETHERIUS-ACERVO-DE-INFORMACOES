@@ -348,3 +348,12 @@ Laboratório `58c9db0` e `d757a8b`, cliente `307d39c`. P10 com F7 e TAB, forma d
 523 testes por modo de alimentação, 38 asserções nativas, TypeScript/webpack e addon compilados. Grip, Blood Ward e sinal autoritativo de levitação ficam em decisão técnica. Teste físico dos avanços e áudio com observadores fica para jogo. [Investigação, hashes e demais resultados](investigacoes/investigacao-20-11-lorde-poderes.md)
 
 O dev autorizou revisão imediata dos candidatos `58c9db0` e `d757a8b`, cliente `307d39c`. Vampiric Grip fica restrito a NPCs, com jogadores imunes ao efeito. Grip, Blood Ward e a imunidade a quedas durante levitação ficam para outro despacho. Registro do laboratório em `9ce6237`.
+
+
+## 20/11/2026 — Revisão Neon e poderes de concentração do Lorde
+
+- **Feito.** O laboratório `7658200` e o cliente `03a142e` corrigiram os seis achados do lote anterior. No bloqueador de entrada, `userEventName` é o campo do controle Shout no SkyrimPlatform. O fallback apareceu depois do primeiro teste de 19/11 e seu defeito explica o candidato posterior. O reteste de T1, T2 e T10 continua necessário.
+- **Feito.** Laboratório `bb2510a` e cliente `8e4b758` entregam Garra para NPCs pelo host, Ala de Sangue no dano mágico, Asas com imunidade durante levitação e a trilha em três faixas para jogadores próximos.
+- **Verificado.** 528/528 em cada modo de alimentação, 71 asserções nativas, 13 verificações da prévia TAB, TypeScript, webpack, Build-Native e leitura de 12 records.
+- **Próximo.** Reconfirmação dos seis achados e revisão do complemento. Homologar em jogo com dois jogadores, terreno, dano e áudio tardio. O perfil MO2 e o runtime local seguem como estavam.
+- **Decisões.** [Contratos, valores, hashes e limites](investigacoes/investigacao-20-11-lorde-poderes.md).

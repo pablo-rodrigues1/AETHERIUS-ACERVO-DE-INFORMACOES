@@ -229,3 +229,8 @@ O dev decidiu revisar agora o candidato `58c9db0` e `d757a8b` (cliente `307d39c`
 - **Vampiric Grip** afeta somente NPCs. Em jogadores, o poder não produz efeito.
 - **Blood Ward** precisa de tratamento autoritativo do `WardPower` mantido por concentração.
 - **Wings of the Night** precisa de imunidade a quedas somente durante a levitação. O perk COTV depende do global `015FC8:Dawnguard.esm` com valor 2.
+
+
+### 20/11 — Candidato de concentração, asas e áudio
+
+Garra para NPCs com 600 u de admissão, 160 u de dreno e 5 HP/s. Ala reduz até 100 do dano calculado por impacto na via mágica durante concentração. Asas alteram a gravidade no sprint. A imunidade de queda usa o perk COTV com levitação do dono. Os três WAVs da transformação são publicados pela mesma sessão para TAB e voz, no raio de 3.000 u. [Fontes e limites de homologação](investigacoes/investigacao-20-11-lorde-poderes.md).
