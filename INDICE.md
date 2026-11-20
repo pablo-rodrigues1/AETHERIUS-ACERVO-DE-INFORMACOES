@@ -44,6 +44,8 @@
 - `02-sistemas/olhar-sincronizado/diario.md` — Diário do Olhar sincronizado.
 - `02-sistemas/ocarina/README.md` — Ocarina só com música: notas, músicas, modo automático, sem poderes.
 - `02-sistemas/ocarina/diario.md` — Diário da Ocarina.
+- `02-sistemas/sons-das-telas/README.md` — Sons do Skyrim nos cliques das telas (UI Meridian e navegador do SkyMP).
+- `02-sistemas/sons-das-telas/diario.md` — Diário dos Sons nas telas.
 - `02-sistemas/tunica-do-heroi/README.md` — Túnica do Herói: 16 peças para o alfaiate, gorro mostrando o cabelo.
 - `02-sistemas/tunica-do-heroi/diario.md` — Diário da Túnica do Herói.
 - `02-sistemas/fisica-de-cabelos-e-capas/README.md` — Física de cabelos e capas: cabelo comprido e capas balançando (FSMP), gerado por ferramenta própria.

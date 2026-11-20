@@ -3,7 +3,7 @@ titulo: Progresso do desenvolvimento
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-18
+atualizado: 2026-11-20
 tags: [staff, progresso, status]
 relacionados: [../02-sistemas/README.md]
 ---
@@ -17,7 +17,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 
 **Legenda:** ✅ Concluído · 🟢 Quase pronto · 🟡 Em andamento · 📝 Planejado/estacionado · ⚪ Pendente · ⛔ Travado
 
-**Visão geral:** ✅ 4 · 🟢 4 · 🟡 15 · 📝 4 · ⚪ 1 · ⛔ 0
+**Visão geral:** ✅ 4 · 🟢 4 · 🟡 16 · 📝 4 · ⚪ 1 · ⛔ 0
 
 ## 🎯 Em foco agora
 - **Classes e Leveling:** ligar o XP ganho ao matar inimigos e testar no servidor oficial.
@@ -57,6 +57,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | Lobisomem sincronizado | 🟢 | Visto em jogo, com grito, coração e tela vermelha; falta teste com 2 jogadores e aplicar no oficial | 14/11/2026 |
 | [Olhar dos jogadores (head tracking)](perguntas-frequentes/olhar-dos-jogadores.md) | 🟡 | Feito no servidor de teste: todo mundo vê para onde cada um olha (câmera, pessoas e até o vazio), sem encarar quem chega perto. Corrigido em 17/11: o boneco girava o corpo inteiro em vez de só a cabeça. Falta teste com 2 jogadores | 17/11/2026 |
 | [Ocarina (só música)](../02-sistemas/ocarina/README.md) | 🟡 | Item novo: tocar notas e músicas da Zelda, sem poderes; falta testar em jogo | 14/11/2026 |
+| [Sons nas telas](../02-sistemas/sons-das-telas/README.md) | 🟡 | Os botões das nossas telas fazem barulho (sons do próprio Skyrim: clique, fechar, abas, moedas na compra, folhear páginas); falta ouvir em jogo | 20/11/2026 |
 | [Túnica do Herói](../02-sistemas/tunica-do-heroi/README.md) | 🟡 | Roupas para o alfaiate, gorro mostrando o cabelo; falta testar e colar as receitas | 14/11/2026 |
 | [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. A YuYu viu em jogo: física boa; trança entrando no peitoral já ajustada. Falta ver a versão com mechas | 15/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
