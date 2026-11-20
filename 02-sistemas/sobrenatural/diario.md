@@ -336,3 +336,7 @@ Nova versão do Fangs and Eyes (Nexus 6842, `Fangs and Eyes Red-6842-1-0.7z`) in
 ## 19/11/2026 (noite) — Repositório privado do sistema (Opus)
 Criado https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural (privado) com README, `docs/FUNCIONAMENTO.md`, pacote de integração rebaseado, mods próprios, módulo UI, testes e todo o histórico de desenvolvimento. Mods de terceiros não incluídos (licença/tamanho), listados em `mods/TERCEIROS.md`. Acervo aponta `repositorio:` para ele.
 
+
+## 20/11/2026 — Poderes vampíricos e escala do Lorde (início)
+
+O dev pediu escala de 1,25× para o Lorde, áudio do mod AETHERIUS - Vampire Lord and Werewolf SFX, dreno de 20 HP/s por 15 s, correção dos dois avanços do Morcego e aplicação da Força Imensurável no dano do servidor. Desenvolvimento no laboratório a partir de `147e84f`. Revisão independente e validação em jogo a seguir.
