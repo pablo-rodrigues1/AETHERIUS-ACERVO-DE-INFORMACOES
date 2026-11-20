@@ -340,3 +340,9 @@ Criado https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural (privado) com 
 ## 20/11/2026 — Poderes vampíricos e escala do Lorde (início)
 
 O dev pediu escala de 1,25× para o Lorde, áudio do mod AETHERIUS - Vampire Lord and Werewolf SFX, dreno de 20 HP/s por 15 s, correção dos dois avanços do Morcego e aplicação da Força Imensurável no dano do servidor. Desenvolvimento no laboratório a partir de `147e84f`. Revisão independente e validação em jogo a seguir.
+
+## 20/11/2026 — Candidato de Lorde Vampiro e poderes
+
+Laboratório `58c9db0` e `d757a8b`, cliente `307d39c`. P10 com F7 e TAB, forma de 10 min pelo botão, recarga persistida de 2 h, escala 1,25×, sons específicos e Enxame 20 HP/s por 15 s. A Força aplica o PERK no dano físico final. Q do UI Core projeta os favoritos do Lorde durante a forma; o ledger preserva os anteriores. Os bônus da forma foram exercitados no host.
+
+523 testes por modo de alimentação, 38 asserções nativas, TypeScript/webpack e addon compilados. Grip, Blood Ward e sinal autoritativo de levitação ficam em decisão técnica. Teste físico dos avanços e áudio com observadores fica para jogo. [Investigação, hashes e demais resultados](investigacoes/investigacao-20-11-lorde-poderes.md)
