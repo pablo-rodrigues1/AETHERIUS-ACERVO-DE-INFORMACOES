@@ -57,11 +57,11 @@ Detalhes de implementação e evidências ficam nos documentos de etapa (`ETAPA-
 ### 4.3 Inatos e poderes
 - Inatos desde o Neófito (Curse of the Vampire): resistências base, veneno 100%, gelo 25%, fraqueza a fogo 25%, Supernatural Awareness, vigor acelerado, fraqueza ao sol, Visão Vampírica, Sedução, Forma de Morcego, Dreno, Reanimação.
 - Por estágio: Vampiro Pleno → Força Imensurável; Ancilla → Forma de Névoa; Ancião → Celeridade Não Natural; Suserano → Enxame Devorador.
-- **Duração 40 s** e **recarga de 60 s a partir do uso** (20 s de espera após o efeito) para **Força, Névoa, Celeridade e Enxame**.
+- **Duração 40 s** e **recarga de 60 s a partir do uso** (20 s de espera após o efeito) para **Força, Névoa e Celeridade**. Enxame dura 15 s, com recarga de 60 s.
 - **Forma de Morcego:** avanço pelo motor do dono e invisibilidade por 1 s. A correção B1 de 19/11 substituiu o prazo sem recarga por 3 s provisórios. A configuração VAMPIRE_BAT_COOLDOWN_SECONDS aceita 2–60 s e o host verifica a posição dos pacotes no avanço.
 - **Sedução e Reanimação:** mantêm as regras próprias de duração **(orquestrador)** e **não custam sangue**.
-- **Névoa** (zerar regeneração) e **Força** (bônus no dano real): **parciais** — exigem código nativo, fora do escopo.
-- **Enxame:** números do COTV como base **(provisório)**: dreno de 10/s por 15 s.
+- **Névoa** (zerar regeneração) permanece parcial. Desde 20/11, a **Força** aplica o PERK do COTV ao dano físico no host.
+- **Enxame:** drena 20 HP/s por 15 s por decisão de 20/11, preservando as regras de alvo e zona.
 - **Visão Vampírica:** deve funcionar como o **Aura Whisper** (revelar criaturas e jogadores próximos), com prioridade sobre o Predator Vision.
 - Efeitos e invisibilidade dos poderes devem ser **vistos por todos** os jogadores.
 
@@ -222,6 +222,13 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 - **Velocidade (T4):** aplicar diretamente +50% em relação ao nominal do Manbeast. Com base 100 e Feral Speed de +20, a habilidade recebe +60 pontos de SpeedMult, resultando em 180 no cenário nominal. O modificador está no ESP do Sobrenatural, nas seis habilidades de estágio mutuamente exclusivas, condicionado à WerewolfBeastRace. A distância real e o valor efetivo após transformação ficam para o reteste em jogo.
 - **Uivos (T6):** Iniciado sem uivo. A partir do Ômega é liberado Uivo de Terror (`MAG_HowlofTerror`), e no Alfa é liberado Uivo de Fúria (`MAG_HowlofRage`), conforme a especificação. O Z obedece à progressão do Sobrenatural, sem consultar a escolha vanilla nem executar a quest de Companions. A ligação ao Z e a validação de cast no host ficam pendentes com T1/T2.
 
+## 20/11/2026 — Lorde pelo painel, efeitos e sons vampíricos
+
+- P10 resolvido. `lordGrant` e `lordRevoke` condicionam a concessão ao vampirismo da ficha e preservam as origens preexistentes. O botão do TAB dura 10 min e tem recarga persistida de 2 h. A voz Z é mantida com admissão própria. Escala do Lorde 1,25×, revertida no encerramento.
+- O Enxame usa 20 HP/s por 15 s, recarga 60 s. A Força preserva os multiplicadores do PERK COTV no dano físico aplicado. [Sons, IDs e detalhes](investigacoes/INVESTIGACAO_20-11_lorde-poderes.md).
+- O Q recebe automaticamente os poderes do Lorde durante a forma. Favoritos e atalhos persistidos do personagem são preservados.
+- A forma soma 200/250/300/350/400/450 em cada atributo, 100/150/200/250/300/350 de armadura e 20/25/30/35/40/45% de resistência mágica. As três perks sobrenaturais somam mais 50 a cada atributo na forma, acima dos bônus de vampiro existentes.
+
 ### 20/11 — Mecânicas do Lorde em despacho separado
 
 O dev decidiu revisar agora o candidato `58c9db0` e `d757a8b` (cliente `307d39c`). Três mecânicas ficam para um despacho posterior.
@@ -231,6 +238,9 @@ O dev decidiu revisar agora o candidato `58c9db0` e `d757a8b` (cliente `307d39c`
 - **Wings of the Night** precisa de imunidade a quedas somente durante a levitação. O perk COTV depende do global `015FC8:Dawnguard.esm` com valor 2.
 
 
-### 20/11 — Candidato de concentração, asas e áudio
+### 20/11 — Projeção da Garra, Ala, Asas e som do Lorde
 
-Garra para NPCs com 600 u de admissão, 160 u de dreno e 5 HP/s. Ala reduz até 100 do dano calculado por impacto na via mágica durante concentração. Asas alteram a gravidade no sprint. A imunidade de queda usa o perk COTV com levitação do dono. Os três WAVs da transformação são publicados pela mesma sessão para TAB e voz, no raio de 3.000 u. [Fontes e limites de homologação](investigacoes/investigacao-20-11-lorde-poderes.md).
+- Garra de NPC usa limites iniciais de laboratório de 600 u para selecionar, 160 u para drenar, 5 HP/s conforme o dreno original do Dawnguard. Nenhum efeito sobre personagem de jogador. [Evidência](investigacoes/INVESTIGACAO_20-11_lorde-poderes.md).
+- Ala reduz até 100 de dano mágico calculado por impacto enquanto a concentração é aceita, usando a magnitude do COTV. O record preserva os visuais existentes.
+- Asas alteram a gravidade no sprint. O perk existente calcula imunidade de queda apenas durante levitação. O servidor continua recebendo a vida resultante.
+- A transformação publica os três WAVs solicitados até 3.000 u, pela mesma sessão para TAB e Z. A projeção reaproveita a configuração dos três descritores Dawnguard e silencia seus disparos embutidos. Homologação acústica e física em jogo pendente.

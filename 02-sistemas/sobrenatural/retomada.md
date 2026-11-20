@@ -1,5 +1,27 @@
 # RETOMADA — Sistema Sobrenatural
 
+> ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (20/11/2026, Opus)
+> 1. **Pacote atual: `C:\Code\Aetherius - New Systems\Entrega_Sobrenatural_20_11`** (rebaseado no oficial de 19/11; guia `LEIA-ME_INTEGRACAO.md` §0.1 traz as novidades). Repositório privado: https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural.
+> 2. Lote de 20/11 revisado e aprovado (HUD Cálice; Lorde Vampiro pelo painel com botão, poderes, perks, bônus, sons, Grip/Ward/Asas; Enxame 20/s; Força no dano). ESP `7A1397FE…` instalado no MO2 LOCAL.
+> 3. **Ainda NÃO instalado no LOCAL para teste:** cliente/addon/gamemode do lote de 20/11 (Build/Prepare + bundle + UI CORE LOCAL) e o mod de SFX já está ativo no LOCAL. Fazer o deploy sem iniciar o servidor quando o dev pedir.
+> 4. Teste em jogo pendente: Z e dash do Morcego (correção `userEventName`), botões Forma da Besta e Lorde, Grip, levitação, áudio para observadores, HUD Cálice no CEF.
+
+> _(Blocos anteriores abaixo, histórico.)_
+> ## ▶ PRÓXIMA SESSÃO — 20/11/2026, resposta à revisão do complemento
+> 1. Reconfirmar o delta `d830ca7` no laboratório e `ae7c172` no cliente. Os patches 034 e 038 são um par. [Resposta ao Neon e hashes](docs/REVISAO-LORDE-COMPLEMENTO_neon.md#resposta-do-autor--2011).
+> 2. Testar em jogo a Garra vista por não-hoster, a quebra da Ala, as Asas e a trilha com observadores. Passaram 530 testes por modo, 81 asserções nativas e os builds. ESP com o mesmo hash, servidor parado e perfil MO2 sem instalação.
+
+
+> ## ▶ PRÓXIMA SESSÃO — 20/11/2026, correções e segundo lote do Lorde
+> 1. Reconfirmar os seis ajustes da revisão Neon, laboratório `7658200` e cliente `03a142e`. O fallback do controle Shout agora cobre Fera, Lorde e Morcego com `userEventName`. [Investigação de voz e dash](docs/investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md).
+> 2. Revisar o candidato separado de Garra/Ala/Asas/áudio (`bb2510a`, cliente `8e4b758`, 528 testes por modo e 71 asserções nativas) com o [roteiro da Etapa 3](docs/ETAPA-3_vampirismo-mecanicas.md). Testes em jogo pendentes. O ESP do overlay está atualizado, sem instalação no MO2 e com o servidor local parado.
+
+
+> ## ▶ PRÓXIMA SESSÃO — 20/11/2026
+> 1. Leia [a investigação dos poderes de Lorde](docs/investigacoes/INVESTIGACAO_20-11_lorde-poderes.md). O candidato inclui P10 pelo painel e TAB, escala do Lorde, sons, Enxame, Força aplicada, privilégios da forma e Q automático transitório.
+> 2. Revisar os patches após a decisão sobre Grip/Blood Ward e a passagem da levitação no modo multiplayer. Verificar áudio, Q e avanço de Morcego em jogo com dono, vizinho e observador tardio.
+> 3. Laboratório somente compilado e testado em mocks/nativo. Servidor parado e MO2 sem instalação.
+
 > ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (19/11/2026 noite, Opus)
 > 1. **Tudo instalado no perfil LOCAL e pronto para teste; servidor parado** (dev só dá Start). Inclui: botão **Forma da Besta** (10 min, recarga 2 h), T3, T4–T6 (mãos/+50% velocidade), T7/T8 (Colored Magic Auras Red/Purple), T9 (runa). Tudo revisado e aprovado pelo Neon. Ver `docs/diario.md` (19/11 tarde e noite).
 > 2. **Reteste solo:** botão Forma da Besta (uso, 10 min, recarga, relog transformado), fera (velocidade, mãos com 2 feitiços/2H/escudo), auras, runa/emote K, sem loop `fx.cleanup`; e o roteiro de diagnóstico de `docs/investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md` (Z Lorde/Fera e dash do Morcego) — **trazer o log**.

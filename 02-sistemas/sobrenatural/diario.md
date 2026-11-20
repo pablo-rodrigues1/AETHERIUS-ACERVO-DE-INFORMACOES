@@ -337,31 +337,28 @@ Nova versão do Fangs and Eyes (Nexus 6842, `Fangs and Eyes Red-6842-1-0.7z`) in
 Criado https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural (privado) com README, `docs/FUNCIONAMENTO.md`, pacote de integração rebaseado, mods próprios, módulo UI, testes e todo o histórico de desenvolvimento. Mods de terceiros não incluídos (licença/tamanho), listados em `mods/TERCEIROS.md`. Acervo aponta `repositorio:` para ele.
 
 
-## 20/11/2026 — Poderes vampíricos e escala do Lorde (início)
+## 20/11/2026 — Lorde e poderes vampíricos
 
-O dev pediu escala de 1,25× para o Lorde, áudio do mod AETHERIUS - Vampire Lord and Werewolf SFX, dreno de 20 HP/s por 15 s, correção dos dois avanços do Morcego e aplicação da Força Imensurável no dano do servidor. Desenvolvimento no laboratório a partir de `147e84f`. Revisão independente e validação em jogo a seguir.
-
-## 20/11/2026 — Candidato de Lorde Vampiro e poderes
-
-Laboratório `58c9db0` e `d757a8b`, cliente `307d39c`. P10 com F7 e TAB, forma de 10 min pelo botão, recarga persistida de 2 h, escala 1,25×, sons específicos e Enxame 20 HP/s por 15 s. A Força aplica o PERK no dano físico final. Q do UI Core projeta os favoritos do Lorde durante a forma; o ledger preserva os anteriores. Os bônus da forma foram exercitados no host.
-
-523 testes por modo de alimentação, 38 asserções nativas, TypeScript/webpack e addon compilados. Grip, Blood Ward e sinal autoritativo de levitação ficam em decisão técnica. Teste físico dos avanços e áudio com observadores fica para jogo. [Investigação, hashes e demais resultados](investigacoes/investigacao-20-11-lorde-poderes.md)
-
-O dev autorizou revisão imediata dos candidatos `58c9db0` e `d757a8b`, cliente `307d39c`. Vampiric Grip fica restrito a NPCs, com jogadores imunes ao efeito. Grip, Blood Ward e a imunidade a quedas durante levitação ficam para outro despacho. Registro do laboratório em `9ce6237`.
+Candidato no laboratório desde `58c9db0`, cliente `307d39c`. Duas formas de Morcego com autorização e guarda nativa, novo áudio, Enxame 20 HP/s por 15 s, Força aplicada no host e concessão P10. Ampliação inclui as 15 perks, Q automático temporário, míssil COTV na mão direita e habilidades de estágio. Passaram 523 por modo e 38 asserções nativas. A evidência das lacunas de Grip, Blood Ward e levitação e o roteiro em jogo estão na [investigação](investigacoes/INVESTIGACAO_20-11_lorde-poderes.md). Revisão independente e teste em sessão pendentes.
 
 
-## 20/11/2026 — Revisão Neon e poderes de concentração do Lorde
+## 20/11/2026 — Resposta aos seis achados Neon no lote do Lorde
 
-- **Feito.** O laboratório `7658200` e o cliente `03a142e` corrigiram os seis achados do lote anterior. No bloqueador de entrada, `userEventName` é o campo do controle Shout no SkyrimPlatform. O fallback apareceu depois do primeiro teste de 19/11 e seu defeito explica o candidato posterior. O reteste de T1, T2 e T10 continua necessário.
-- **Feito.** Laboratório `bb2510a` e cliente `8e4b758` entregam Garra para NPCs pelo host, Ala de Sangue no dano mágico, Asas com imunidade durante levitação e a trilha em três faixas para jogadores próximos.
-- **Verificado.** 528/528 em cada modo de alimentação, 71 asserções nativas, 13 verificações da prévia TAB, TypeScript, webpack, Build-Native e leitura de 12 records.
-- **Próximo.** Reconfirmação dos seis achados e revisão do complemento. Homologar em jogo com dois jogadores, terreno, dano e áudio tardio. O perfil MO2 e o runtime local seguem como estavam.
-- **Decisões.** [Contratos, valores, hashes e limites](investigacoes/investigacao-20-11-lorde-poderes.md).
+Corrigidos entrada pelo controle Shout, evidência de bash, equipar da mão esquerda pelo Q, projeção dos atributos base, guarda de aparência no relog/PD e atualização do botão do TAB. O erro no campo do botão pertence ao candidato de 20/11. A causa exata de ActionEvent não chegar ao dispatcher na versão de 19/11 precisa do reteste. [Evidência e arbitragens](REVISAO-LORDE-20-11_neon.md#resposta-do-autor-à-revisão-de-2011).
 
 
-## 20/11/2026 — Resposta à revisão do complemento do Lorde
+## 20/11/2026 — Candidato de mecânicas e áudio do Lorde
 
-- **Feito.** O cliente grava a posição autoritativa no modelo do NPC após teleporte indexado. A Garra preserva o último destino durante a suspensão do movimento. Atualizações antigas de ragdoll são invalidadas.
-- **Feito.** A Garra e a Ala renovam a concentração com margem e em canal ordenado. O dono recebe aviso de fim ligado à conjuração correspondente.
-- **Verificado.** Laboratório `d830ca7`, cliente `ae7c172`. 530 testes por modo, 81 asserções nativas, TypeScript, webpack e Build-Native. ESP inalterado com SHA-256 `7A1397FE2B1DE84016E9CE688C3F06DFC19E9F9143C144806FDE1972DF2CE110`.
-- **Próximo.** Reconfirmar o delta e validar a Garra com observador que não hospeda o NPC. Fazer reteste da Ala quebrada, da levitação e dos sons em jogo.
+Garra de NPC, Ala de Sangue autoritativa, Asas e áudio dos três WAVs na sequência comum. Áudio e estado da forma usam propriedades separadas. ESP candidato só no overlay. [Investigação e roteiro](investigacoes/INVESTIGACAO_20-11_lorde-poderes.md).
+
+
+## 20/11/2026 — Correções da revisão do complemento do Lorde
+
+O teleporte indexado acompanha o movimento do modelo dos observadores. A concentração usa renovação ordenada com margem e sinal de fim para o dono. Cliente `ae7c172`. Passaram 530 testes por modo, 81 asserções nativas, TypeScript, webpack e Build-Native. ESP conserva o hash do candidato. [Resposta ao Neon](REVISAO-LORDE-COMPLEMENTO_neon.md#resposta-do-autor--2011).
+
+## 20/11/2026 — Lote do Lorde Vampiro, HUD Cálice e pacote 20_11 (Opus)
+- **HUD Cálice da Noite** (Terra; aprovada pelo dev com brilho crescente ao esvaziar): cliente `afd96a0`/`9a96871`, laboratório `4c69023`/`e854259`/`8e87732` (patches 034/035). Neon: aprovada após 2 ajustes (movimento reduzido; quantização de 0,5 ponto).
+- **Lorde Vampiro** (Sol): P10 (`lordGrant`/`lordRevoke`, keyword `JogadorLordeVampiro` só no servidor, botão no TAB, 10 min/2 h); escala 1,25×; menu Q automático temporário; todas as 15 perks; Vampiric Drain do Lorde; bônus por estágio só na forma (200–450 / 100–350 / 20–45%); sons do mod AETHERIUS - Vampire Lord and Werewolf SFX (poderes + transformação para todos); Enxame 20/s por 15 s; Força no dano autoritativo; Grip só em NPCs; Blood Ward no host; Wings of the Night. Commits `58c9db0`, `d757a8b`, `7658200`, `bb2510a`, `d830ca7`; cliente `307d39c`, `03a142e`, `8e4b758`, `ae7c172`. Neon reprovou o 1º candidato (6 achados, incl. `userEvent`→`userEventName` no Z, introduzido em 20/11) e o complemento (2 achados); todos corrigidos e reconfirmados sem achados. Luna (houseCARL) conferiu o ESP `7A1397FE…`: sem erros.
+- ESP final instalado no MO2 LOCAL (backup `backups\esp-mo2-20261120`).
+- Pacote renomeado para `Entrega_Sobrenatural_20_11` e remesclado com o oficial de 19/11 (novo conflito: `magicSyncService.ts`, resolvido com os dois lados). Testes na árvore mesclada: 376/376 por modo, gamemode 142/142, tsc/webpack OK. Mod de SFX incluído e na §4.4 (releases).
+- Pendente: teste em jogo de todo o lote (Z/dash, Grip, levitação, áudio para observadores, perks em forma mortal via quest `306FBE`).
