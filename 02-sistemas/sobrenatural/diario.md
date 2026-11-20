@@ -357,3 +357,11 @@ O dev autorizou revisão imediata dos candidatos `58c9db0` e `d757a8b`, cliente 
 - **Verificado.** 528/528 em cada modo de alimentação, 71 asserções nativas, 13 verificações da prévia TAB, TypeScript, webpack, Build-Native e leitura de 12 records.
 - **Próximo.** Reconfirmação dos seis achados e revisão do complemento. Homologar em jogo com dois jogadores, terreno, dano e áudio tardio. O perfil MO2 e o runtime local seguem como estavam.
 - **Decisões.** [Contratos, valores, hashes e limites](investigacoes/investigacao-20-11-lorde-poderes.md).
+
+
+## 20/11/2026 — Resposta à revisão do complemento do Lorde
+
+- **Feito.** O cliente grava a posição autoritativa no modelo do NPC após teleporte indexado. A Garra preserva o último destino durante a suspensão do movimento. Atualizações antigas de ragdoll são invalidadas.
+- **Feito.** A Garra e a Ala renovam a concentração com margem e em canal ordenado. O dono recebe aviso de fim ligado à conjuração correspondente.
+- **Verificado.** Laboratório `d830ca7`, cliente `ae7c172`. 530 testes por modo, 81 asserções nativas, TypeScript, webpack e Build-Native. ESP inalterado com SHA-256 `7A1397FE2B1DE84016E9CE688C3F06DFC19E9F9143C144806FDE1972DF2CE110`.
+- **Próximo.** Reconfirmar o delta e validar a Garra com observador que não hospeda o NPC. Fazer reteste da Ala quebrada, da levitação e dos sons em jogo.
