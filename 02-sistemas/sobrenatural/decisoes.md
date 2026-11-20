@@ -110,8 +110,16 @@ Detalhes de implementação e evidências ficam nos documentos de etapa (`ETAPA-
 - Recarga de **30 min de tempo real** por padrão (o poder deixou de ser "uma vez por dia"; virou LesserPower); **sem recarga** nos testes locais.
 - Encerrar forma pelo F7 (testes).
 
+#### Forma da Besta no TAB (decisão do dev, 19/11)
+
+- O botão fica no topo da tela do Lobisomem. A intenção usa a mesma sequência do F7, com pré-aviso privado e animação sincronizada do kdu. A forma dura **10 min reais a partir da troca de raça** e encerra automaticamente.
+- A recarga do botão dura **2 h reais a partir do aceite**, por personagem e concessão. O relógio e o registro do servidor mantêm o prazo durante relog ou reinício. Morte, saída ou encerramento posterior ao aceite preservam a recarga. Nova concessão inicia seu próprio prazo.
+- O uso pelo botão mantém o contador como estava no momento do aceite. Depois disso, as horas online seguem sua contagem normal, inclusive durante a forma.
+- **Confirmado pelo dev (19/11):** o botão pode ser usado a qualquer hora. Uma sequência automática/F7 já iniciada bloqueia o botão. Se as 72 h vencerem durante o aviso, transformação ou retorno do botão, a compulsão aguarda o personagem voltar a humano e estar elegível à noite. A compulsão pode ocorrer durante as 2 h de recarga do botão.
+- **Confirmado pelo dev (19/11) — Z mantido junto com o botão:** mantém poder, duração, recarga e reset legados quando a transformação pelo Z é confirmada. Durante o aviso do botão, o serviço recusa o Z. As duas entradas compartilham uma única sessão de fera e têm recargas independentes. T1/T2 e os uivos seguem seu roteiro de diagnóstico.
+
 ### 5.4 Transformação forçada
-- Se passar **72 h de tempo real online** sem se transformar (contagem por personagem, zera a cada transformação), o servidor força a transformação, **só à noite no jogo (20h–5h)**; se vencer de dia, espera a próxima noite online.
+- O servidor força a transformação após **72 h de tempo real online**, **à noite no jogo (20h–5h)**. O contador por personagem zera na transformação automática, pelo F7 ou pelo Z legado quando a raça é confirmada. Se vencer de dia, espera a próxima noite online.
 - Sequência: t=0 mensagem **"A Besta clama pela caçada..."**; t=5 s batimento cardíaco em loop e tremor de tela; t=10 s filtro vermelho; t=15 s **"A Besta está prestes a rasgar sua carne..."**; t=20 s transformação pelo fluxo normal do kdu.
 - Efeitos só na tela do jogador; transformação vista por todos. Cancela com limpeza em morte, desconexão, perda da maldição ou se já estiver em forma. Atalho de teste no F7.
 

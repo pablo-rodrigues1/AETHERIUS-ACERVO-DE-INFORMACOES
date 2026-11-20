@@ -21,7 +21,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Profissões (Coleta, Artesanato, Refino e Encantamento)](profissoes/README.md) | em-desenvolvimento | pablo-rodrigues1, mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-18 |
 | [Conjuração](gameplay-core/conjuracao.md) | em-teste | Melekyy | Documentação no acervo; código/pacote locais; oficial pendente | 2026-11-15 |
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-14 |
-| [Sobrenatural (Maldições)](sobrenatural/README.md) | em-desenvolvimento | pablo-rodrigues1, kdu | Correções do teste solo de 19/11 revisadas (Neon): T3, T4–T6, T7/T8, T9 aprovados no código; T1/T2/T10 (Z e dash do Morcego) só com diagnóstico. Reteste solo pendente (Pandora, Colored Magic Auras e ESP novo no LOCAL) | 2026-11-19 |
+| [Sobrenatural (Maldições)](sobrenatural/README.md) | em-desenvolvimento | pablo-rodrigues1, kdu | Botão Forma da Besta (10 min/recarga 2 h) e correções T3–T9 revisados (Neon) e instalados no LOCAL; reteste solo pendente. Z do Lorde e dash do Morcego aguardam log de diagnóstico | 2026-11-19 |
 | [Lobisomem sincronizado](lobisomem/README.md) | em-teste | kdu | pacote separado (patches sobre aetherius-server v0.38) | 2026-11-14 |
 | [Olhar sincronizado](olhar-sincronizado/README.md) | em-teste | kdu | kit de teste local (gamemode/olhar-service.js) | 2026-11-17 |
 | [Ocarina (só música)](ocarina/README.md) | em-teste | kdu | pacote separado (mod + patch sobre aetherius-server v0.38) | 2026-11-14 |

@@ -1,5 +1,12 @@
 # RETOMADA — Sistema Sobrenatural
 
+> ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (19/11/2026 noite, Opus)
+> 1. **Tudo instalado no perfil LOCAL e pronto para teste; servidor parado** (dev só dá Start). Inclui: botão **Forma da Besta** (10 min, recarga 2 h), T3, T4–T6 (mãos/+50% velocidade), T7/T8 (Colored Magic Auras Red/Purple), T9 (runa). Tudo revisado e aprovado pelo Neon. Ver `docs/diario.md` (19/11 tarde e noite).
+> 2. **Reteste solo:** botão Forma da Besta (uso, 10 min, recarga, relog transformado), fera (velocidade, mãos com 2 feitiços/2H/escudo), auras, runa/emote K, sem loop `fx.cleanup`; e o roteiro de diagnóstico de `docs/investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md` (Z Lorde/Fera e dash do Morcego) — **trazer o log**.
+> 3. Pendentes: T1/T2/T10 (Z e dash do Morcego) só com diagnóstico; uivo por estágio (sem no Iniciado; Terror Ômega; Fúria Alfa) depende do Z.
+> 4. Laboratório `147e84f docs(sobrenatural): registra resposta ao Neon e hashes do deploy`.
+
+> _(Blocos anteriores abaixo, histórico.)_
 > ## ▶ PRÓXIMA SESSÃO — COMECE AQUI (19/11/2026 tarde, Opus)
 > 1. Correções do teste solo **consolidadas e revisadas** (ver `docs/diario.md`, 19/11 tarde): T3, T7/T8, T9, T4–T6 aprovados pelo Neon no escopo de código. **T1/T2/T10 (Z e dash do Morcego) NÃO corrigidos** — só diagnóstico (`bcb0c02`).
 > 2. **Ações do dev antes do reteste:** (a) ativar **Colored Magic Auras** (mod + ESP) no perfil LOCAL; (b) instalar o `AETHERIUS - SOBRENATURAL.esp` do overlay (SHA-256 `C8B13207…`, contém MGEF 000844) no perfil LOCAL; (c) regerar o **Pandora**; (d) Stop → Build → Prepare → Start com addon `23669DE2…` e cliente novo (instalar bundle).
@@ -149,4 +156,5 @@ Terra confirmou parcialmente o lote anterior e abriu A/B; Sol High preparou a se
 
 
 > **18/11 — sincronização de poderes (Sol High):** `827afe4` implementa dash de 128 unidades, efeitos públicos para vizinhos e Visão privada. Node 486/486 nos dois modos. Revisão cruzada pendente, com colisão do dash e áudio dos dois SNDR ainda em aberto. Ver o roteiro de validação no servidor oficial em [Etapa 3](docs/ETAPA-3_vampirismo-mecanicas.md).
+
 

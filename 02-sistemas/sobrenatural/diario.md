@@ -309,3 +309,16 @@ Laboratório `47835dc` restaura o acionamento da malha de Conjuração e limpa a
 - **Decisões do dev:** sem uivo no Iniciado (Terror a partir do Ômega, Fúria a partir do Alfa; uivo isolado até corrigir o Z); velocidade +50% direto.
 - **T1/T2/T10** Z e dash do Morcego: **não corrigidos** — só instrumentação diagnóstica (`bcb0c02`; Neon aprovado). Log mostra efeitos locais sem comando resolvido nem envio COTV; hipótese: captura tardia do ponteiro ActionEvent no Skyrim Platform. Usar MagicEffect como gatilho exige arbitragem da Opção A.
 - Laboratório HEAD `876e0a8`.
+
+## 19/11/2026 — Forma da Besta no TAB
+
+Botão no topo da tela do Lobisomem. O servidor reaproveita o gatilho do F7, dá 10 min na raça da fera e persiste 2 h de recarga sem interferir nas 72 h. Candidato `19a6b0f` (laboratório) e `5c1bb42` (cliente). Passaram 513 testes por modo de alimentação, serviço/F7, TypeScript, webpack e prévia. Runtime preparado com 439 plugins e MO2 LOCAL atualizado com backup. Servidor parado. Revisão Neon e teste em jogo pendentes. [Etapa 2, hashes e roteiro](ETAPA-2_transformacao-forcada.md#1911--forma-da-besta-pelo-tab)
+
+## 19/11/2026 — Resposta ao Neon sobre a Forma da Besta
+
+Neon aprovou o candidato original com duas ressalvas. Sol confirmou as duas e corrigiu a restauração da fera na desconexão, a sincronização da raça no relog e a limpeza da recusa antiga na UI. Laboratório `036678d`, cliente `5e8b491`. Passaram 517 testes por modo de alimentação e o LOCAL foi preparado e instalado com o servidor parado. Reconfirmação e jogo pendentes. [Relatório e hashes deste deploy](REVISAO-BOTAO-FERA_neon.md#5-resposta-do-autor--19112026)
+
+## 19/11/2026 (noite) — Botão Forma da Besta + deploy LOCAL (Opus)
+- Pedido do dev: botão **Forma da Besta** na 1ª tela do Lobisomem (TAB), mesmo gatilho da forçada 72 h (F7) sem mexer no contador; forma de 10 min; recarga 2 h persistente no servidor. Sol: `19a6b0f`, `5c1bb42`, `a7abb03`. Neon: aprovado com ressalvas (desconexão gravando raça de fera — pré-existente; mensagem antiga na UI) → corrigidas em `036678d`/`5e8b491` e **reconfirmadas sem achados**.
+- Dev confirmou: botão a qualquer hora; forçada pode ocorrer durante a recarga do botão; Z mantido (recargas independentes, sessão de fera única).
+- ESP novo `C8B13207…` instalado no MO2 pelo Opus (backup `backups\esp-mo2-20261119`). Dev ativou Colored Magic Auras e regerou o Pandora. Sol fez Build/Prepare (439 plugins) e instalou cliente + UI CORE no LOCAL; **servidor NÃO iniciado** (pedido do dev). Laboratório `147e84f docs(sobrenatural): registra resposta ao Neon e hashes do deploy`.

@@ -121,3 +121,49 @@ Cobertura: limites noite/dia e autoridade real indisponível/pronta; tempo offli
 ## Revisão
 
 Autor: Sol High. Achados do autor tratados neste lote: fontes prévias ignoradas não versionadas; filtro kdu com duração finita; perda de maldição durante turning; troca de personagem durante turning. Esses achados não substituem revisão cruzada. Revisão independente por Terra/Luna e consolidação do Opus **pendentes**, conforme fluxo do projeto; registrar depois quem revisou, findings, tratamento e commit final. Testes em jogo foram explicitamente excluídos deste despacho.
+
+
+## 16/11 — resolução de intenções canceladas sem restart
+
+A confirmação Terra encontrou falha de confirm seguida de cancelamento que deixava intenção órfã até o próximo boot. O lote A/B passa a reter a responsabilidade numa fila do serviço: confirmar raça observada ou abortar no-op/rollback comprovado, retentar no tick e recusar nova sessão antes de turning enquanto há pending. Com disco recuperado, volta a transformar no mesmo processo; personagem/concessão continuam delimitados. **197/197** testes agregados, nova confirmação pendente. Detalhes e limite de crash com volume ainda indisponível em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\REVISAO-3AB_CORRECOES_sol.md`.
+
+## 19/11 — T3: storage da compulsão
+
+Correção candidata no laboratório `632869b` versiona e migra o estado dos efeitos do dono, preservando retry de áudio legado; 31/31 testes específicos e 447/447 nos dois modos de alimentação, TypeScript e webpack sem deploy passaram. O erro relatado no console é compatível com objeto sem `cleanup`; origem exata não foi observada. Revisão independente e reteste em jogo pendentes. Evidência e limites em `investigacoes/INVESTIGACAO_19-11_compulsao-storage.md`.
+
+## 19/11 — Forma da Besta pelo TAB
+
+Pedido do dev de 19/11. Backend `19a6b0f` em `C:\Code\Aetherius - Servidor Local`, sobre `876e0a8` e fonte do servidor `310cb598fd382cf4d6598cb34eada5db1a3fa9f8`. UI em `C:\Code\Aetherius - Servidor Local\client-source` no commit `5c1bb42`. O Acervo foi consultado em `04e8bbc` (ADRs 0003, 0014 e 0020). As suposições sobre 72 h, Z e início da recarga estão em [DECISOES.md](DECISOES.md#53-forma-da-besta).
+
+- **Entrada e privacidade.** `source/server/ts/systems/aetheriusUiSystem.ts:153` registra `supernatural/beast.start` no roteador. O cliente envia somente `{grantId}`. A ponte resolve o ator autenticado e o serviço valida sessão/personagem ativo, maldição/concessão, vida, ausência de forma ou sequência, bloqueios e recarga. O resultado e o `snapshot` entregam `beastForm` somente como projeção de UI. Os efeitos de aviso continuam privados e a forma mantém o canal de vizinhos do kdu.
+- **Gatilho.** `source/server/gamemode/supernatural/forced-werewolf.js:103` concentra o início do pré-aviso usado pelo automático/F7 e pelo botão. Aos 20 s padrão, ambos chamam `werewolf.start(id, {animate:true, …})`. O modo do botão habilita o prazo de 600.000 ms após a troca de raça, conserva recuperação/saída e preserva a recarga antiga do Z. Com a animação padrão do kdu, o prazo de 10 min começa cerca de 30,5 s após o aceite. O servidor restaura a aparência no primeiro tick elegível após expirar, com a transição normal de saída.
+- **Durabilidade.** `runtime/server/data/aetherius-werewolf-compulsion.json` continua v1. `characters[characterId].buttonUntil` é um prazo UTC em milissegundos no relógio do servidor, gravado com flush do arquivo temporário e rename antes do aviso. Contadores gravados antes desta versão aceitam o campo ausente. Falha de gravação recusa o uso antes dos efeitos. Uma interrupção após aceite mantém o prazo e a rotina de recuperação do kdu restaura a forma mortal. `werewolf-transform-journal.js` guarda a aparência do botão e o último stamp anterior elegível para reset. Recuperar uma mutação ambígua do botão conserva esse stamp, inclusive após reinício.
+- **UI.** O botão fica logo após o cabeçalho da primeira tela do Lobisomem. A projeção usa `available` com `canStart`, `active` com fase `preparing` ou `beast` e `cooldown`, com `remainingMs`. O TAB consulta o servidor a cada 10 s aberto e interpola o mostrador usando um relógio monotônico local. O botão habilita só após confirmação do servidor. No aceite, o TAB libera o foco para a sequência. A vinculação por concessão descarta projeções entregues para uma maldição removida/trocada.
+- **Mãos e velocidade.** A troca usa o mesmo `appearance` e `aetheriusBeast` de antes. O addon validado após `95bec8d` e a habilidade de estágio do ESP `C8B13207…` (`535c284`, MGEF `000844`) valem para a mesma raça da fera. A validação desses efeitos no jogo permanece aberta.
+
+Os deltas para montar este lote são `overlays/sobrenatural/028-forma-besta-ui.patch`, os arquivos espelhados em `overlays/sobrenatural/files/server/gamemode/` e `overlays/cliente-local/032-forma-besta-ui.patch`, todos no laboratório. A confirmação independente pelo Gemini 4 Neon fica com o coordenador, e o teste em jogo fica para o próximo Start autorizado.
+
+### Validação local
+
+- **513/513 testes** em cada valor de `AETHERIUS_VAMPIRE_FEED_ENABLED` (`false` e `true`). Bateria `overlays/sobrenatural/teste-*.cjs` exceto os três scripts de serviço/F7, mais `werewolf.test.cjs`, `magic.test.cjs`, `survival-service.test.js`, `skysocial-service.test.js` e `survival-effects.test.js`. Serviço, F7 e revisão-F7 também executados com sucesso. Inclui recusa sem efeito, cronograma, expiração, sobreposição, relog, reinício e recuperação após tentativa de confirmação interrompida. Logs em `%TEMP%\aetherius-forma-besta-node-false.log`, `aetherius-forma-besta-node-true.log` e `aetherius-forma-besta-servico.log`.
+- TypeScript do servidor via `Build.ps1 -SkipInstall`, `tsc --noEmit` e webpack do cliente, verificação reversa dos patches e 12 cenários de interação no teste `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\preview\test-ordering.cjs`. Prévia no Orca confirmou os três estados e o payload simulado. Capturas `forma-besta-disponivel.png`, `forma-besta-em-uso.png` e `forma-besta-recarga.png` em `C:\Code\Aetherius - New Systems\Sobrenatural\ui-core-module\preview\screens`.
+- O lote alterou JS/CSS/TS. Usou o addon já compilado e verificado no lote de mãos da fera. O bundle do cliente foi recompilado e instalado, com SHA idêntico ao anterior porque os arquivos da tela são carregados separadamente pelo Meridian.
+
+### Deploy local parado
+
+`Stop.ps1` → `Build.ps1 -SkipInstall` → `Prepare.ps1 -PluginClient <cópia do perfil LOCAL>`. A cópia preserva os três arquivos do perfil em `C:\Code\Aetherius - Servidor Local\backups\forma-besta-20261119-205913\profile-snapshot`. O perfil versionado do cliente divergia do MO2. A sincronização usou os arquivos do MO2 e conferiu **439 plugins**, 128 regulares e 311 light, incluindo o ESP acima, `Werewolf_New_Anim.esp` e `Colored Magic Auras.esp`. A entrada do manifesto referente a revisão Git fica vazia para essa cópia do perfil. O backup também contém o bundle, a árvore anterior `aetheriusui`, os addons anteriores do kit e do runtime, o log do Prepare e `sha256.txt`.
+
+| Arquivo final | SHA-256 |
+|---|---|
+| `C:\modOrganizer\mods\AETHERIUS - SERVIDOR LOCAL\Platform\Plugins\skymp5-client.js` | `FD61C198FAA52E1A821106DFBCCC23CCBFCCA95F3B9A63AFFD9F900AD2935709` |
+| `supernatural-module.js` no mod `AETHERIUS - UI CORE (LOCAL)\MeridianUI\aetheriusui\modules\supernatural` | `0E3A41BCAF008BE6149C8E5922A8430988ACD8224F9A0691C65F61B097BA1A04` |
+| `supernatural-module.css` no mesmo mod | `E1F2B3BA44F5EB0065C14960761075130DFAB4E12F3EBCDFB29C3F7AEA42EBF8` |
+| `AETHERIUS - SOBRENATURAL.esp` no MO2 e em `runtime/server/data` do laboratório | `C8B1320710873AD2F8203498990B24305A28D274D8D4D6C4BB2264FC15B4B06A` |
+| `runtime/server/scam_native.node` do laboratório | `23669DE235A7A3B480B013326B1638A013C5DAC6D265FA86D51131D7C77F9F2B` |
+| `runtime/server/dist_back/skymp5-server.js` do laboratório | `6BD128FC275E173DD01C8E7EBA99783F64AB7CE97C17F95BE5067368DCD10E5C` |
+| `runtime/server/data/aetherius-loadorder.json` do laboratório | `7DCAB6262BB1CE7FEBF66C7417A94C9A3A811911B3DCD3B7DDD0BE873801D4DF` |
+
+O houseCARL confirmou que o perfil `AETHERIUS - LOCAL` resolve JS e CSS pelo mod `AETHERIUS - UI CORE (LOCAL)` e o bundle pelo mod `AETHERIUS - SERVIDOR LOCAL`. Servidor local e Skyrim terminaram parados. O próximo teste autorizado pode verificar o TAB, as transições de áudio/raça, os dez minutos, a limpeza das mãos e a velocidade com arma 2H, escudo e feitiços equipados antes de virar. O roteiro de Z e a confirmação independente permanecem pendentes.
+
+O Neon aprovou este candidato com duas ressalvas, tratadas no delta `036678d` do laboratório e `5e8b491` do cliente. Para os hashes e o backup do deploy LOCAL mais recente, consulte a [resposta ao Neon](REVISAO-BOTAO-FERA_neon.md#5-resposta-do-autor--19112026).
+
