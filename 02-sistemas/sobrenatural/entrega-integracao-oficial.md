@@ -14,9 +14,11 @@ Documentação viva: [Acervo → 02-sistemas/sobrenatural](https://github.com/pa
 | Laboratório (servidor) | `C:\Code\Aetherius - Servidor Local`, HEAD `147e84f` |
 | Base dos patches | **oficial de 19/11/2026** (`C:\Code\Aetherius - OFICIAL\aetherius-server-main` e `aetherius-client-main`, arquivos de 19/11 15:19). Aplicam **sem conflito**. Detalhes da mesclagem em **`REBASE_OFICIAL_19-11.md`** |
 | Origem do Sobrenatural | laboratório `147e84f` (servidor), client-source `5e8b491` |
+| Addon nativo de referência (laboratório) | `scam_native.node` SHA-256 `2A4E677911BE738A8EDE8563E05AB79AE0DF79B2B4341123167E6B4B2BC3DF37`. Compilado no laboratório (base 310cb59 + Sobrenatural), **sem** as mudanças nativas do oficial de 19/11: recompile no fluxo oficial |
+| Bundle do cliente de referência | `skymp5-client.js` SHA-256 `A65B9E3CD1E62F4F5A24A396D8619AC7BC6F2816365BABDFDDF05063790FDFDE`, compilado **sobre o oficial de 19/11 já mesclado** |
 | ESP do sistema | `AETHERIUS - SOBRENATURAL.esp` SHA-256 `7A1397FE2B1DE84016E9CE688C3F06DFC19E9F9143C144806FDE1972DF2CE110` |
 | Testes | No laboratório: 530 Node em cada modo de alimentação e 81 asserções Catch2. Na árvore mesclada com o oficial: 376/376 do Sobrenatural em cada modo, 142/142 do gamemode, `tsc` do servidor e do cliente OK, webpack OK |
-| Revisão | Toda entrega foi revisada pelo Gemini 4 Neon (revisão honesta); relatórios no repositório Aetherius_Sobrenatural (`docs/desenvolvimento/REVISAO-*.md`) |
+| Revisão | Toda entrega foi revisada pelo Gemini 4 Neon (revisão honesta); relatórios em `05-documentacao/REVISAO-*.md` |
 
 > ⚠️ **Releases do `aetherius-mods`:** os jogadores só recebem os mods novos se eles forem publicados como releases no `aetherius-mods`. Publique os 6 mods novos e as versões novas. **Apague** as releases dos mods que deixaram de ser usados (Precision Creatures e a versão antiga do Fangs and Eyes). O passo a passo completo está na **§4.4**.
 
@@ -58,30 +60,31 @@ Todos os itens foram revisados pelo Gemini 4 Neon e aprovados após correções.
 ## 1. Conteúdo do pacote
 
 ```
-Entrega_Sobrenatural_20_11/
-├─ LEIA-ME_INTEGRACAO.md            ← este guia
-├─ REBASE_OFICIAL_19-11.md          ← como o pacote foi mesclado com o oficial de 19/11 (conflitos e testes)
+Entrega_Sobrenatural_19_11/
+├─ LEIA-ME_INTEGRACAO.md            ← este arquivo
+├─ REBASE_OFICIAL_19-11.md          ← como o pacote foi mesclado com o oficial de 19/11 (conflitos, testes)
 ├─ 01-servidor/
-│  ├─ sobrenatural-servidor.patch   ← patch sobre o OFICIAL de 19/11 (87 arquivos)
-│  └─ LISTA-ARQUIVOS.txt
+│  ├─ sobrenatural-servidor.patch   ← patch cumulativo sobre o OFICIAL de 19/11
+│  ├─ LISTA-ARQUIVOS.txt            ← 81 arquivos tocados
+│  └─ arquivos/                     ← versão final completa de cada arquivo (referência / cópia direta)
 ├─ 02-cliente/
-│  ├─ sobrenatural-cliente.patch    ← patch sobre o OFICIAL de 19/11 (34 arquivos; sem perfis e sem o app.js do F7)
-│  └─ LISTA-ARQUIVOS.txt
-├─ 03-mods-jogo/                    ← mods para o MO2 e para as releases do aetherius-mods (§4)
-│  ├─ AETHERIUS - SOBRENATURAL/     ← ESP do sistema + VISOES.esp + sons da Bruxa
-│  ├─ AETHERIUS - LOBISOMEM TRANSFORMACAO/
-│  ├─ AETHERIUS - Vampire Lord and Werewolf SFX/   ← NOVO
-│  ├─ Colored Magic Auras/          ← NOVO
-│  ├─ New Creature Animation - Werewolf/   ← NOVO (substitui Precision Creatures)
-│  ├─ Miggyluv's Eyes/              ← NOVO
-│  └─ Fangs and Eyes - A Vampire Appearance Mod/   ← NOVA VERSÃO
-├─ 04-documentacao/                 ← FUNCIONAMENTO, DECISOES, ESPECIFICACAO, contratos e roteiros de teste
-└─ 05-painel-adm/                   ← patch do frontend F7 + contrato das 10 ações supernatural.*
+│  ├─ sobrenatural-cliente.patch    ← patch cumulativo sobre o OFICIAL de 19/11 (sem perfis LOCAL e sem o app.js do F7)
+│  ├─ LISTA-ARQUIVOS.txt            ← 31 arquivos (client/src + client/ui-core)
+│  └─ arquivos/
+├─ 03-mods-jogo/                    ← mods MO2 prontos para copiar em C:\modOrganizer\mods
+│  ├─ AETHERIUS - SOBRENATURAL/     ← ESP do sistema + VISOES.esp + sons da Bruxa + fontes .psc
+│  ├─ AETHERIUS - LOBISOMEM TRANSFORMACAO/  ← animação/OAR/sons da transformação (kdu)
+│  ├─ Colored Magic Auras/          ← NOVO (Nexus 25773) auras Red/Purple
+│  ├─ New Creature Animation - Werewolf/    ← NOVO (substitui Precision Creatures)
+│  ├─ Miggyluv's Eyes/              ← olhos do vampiro/bruxa (416 MB)
+│  ├─ Fangs and Eyes - A Vampire Appearance Mod/ ← NOVA VERSÃO (olhos mais vermelhos), substitui a antiga
+│  ├─ AETHERIUS - Vampire Lord and Werewolf SFX/ ← NOVO: sons do Lorde, dos poderes vampíricos e do lobisomem
+│  ├─ Pandora - Output/             ← OUTPUT REGERADO 19/11 20:13 (perfil LOCAL)
+│  └─ AETHERIUS - LOCAL - PANDORA/  ← OUTPUT REGERADO 19/11 20:13 (perfil LOCAL)
+├─ 04-binarios-referencia/          ← scam_native.node e skymp5-client.js usados no teste
+├─ 05-documentacao/                 ← todos os .md do sistema (especificação, decisões, etapas, revisões, investigações)
+└─ 06-painel-adm/                   ← painel administrativo: servidor, frontend F7 (patch 004 + app.js) e contrato das ações
 ```
-O pacote leva só o necessário para a integração:
-- O **Pandora** deve ser regerado no perfil oficial (§4.3).
-- O **addon nativo** e o **bundle** são compilados no fluxo oficial.
-- O histórico completo (revisões, investigações, diário) está no repositório privado https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural e no Acervo.
 
 ---
 
@@ -134,9 +137,9 @@ git checkout -b sobrenatural
 git apply --ignore-whitespace "<pacote>\01-servidor\sobrenatural-servidor.patch"
 git diff --stat
 ```
-O patch usa LF. Por isso, em repositório CRLF, use --ignore-whitespace.
+O patch usa LF. Por isso, em repositório CRLF, use --ignore-whitespace. Alternativa: copiar as versões finais de  1-servidor/arquivos/.
 Depois de aplicar:
-1. **Recompilar o addon nativo** (`scam_native.node`). Os patches nativos 026, 027 e 029 são obrigatórios para a guarda de movimento do Morcego e para a limpeza das mãos da fera. 
+1. **Recompilar o addon nativo** (`scam_native.node`). Os patches nativos 026, 027 e 029 são obrigatórios para a guarda de movimento do Morcego e para a limpeza das mãos da fera. Use o `scam_native.node` de `04-binarios-referencia` só para comparar.
 2. Build do backend e do GameplayCore (TypeScript), como no fluxo oficial.
 3. Rodar os testes: `node --test` em `server/gamemode/werewolf/tests`, `server/gamemode/magic/tests`, `survival-service.test.js` e nos testes do GameplayCore (`server/gameplay/core/runtime/tests`). O teste nativo `PartOne_UpdateEquipmentTest` (caso legado `UpdateEquipment`) **já falhava na base oficial `310cb59`**, por causa do fixture `PluginIndexMapping`. Isso não é regressão.
 
@@ -186,9 +189,9 @@ Distribuição: o `skymp5-client.js` gerado vai no mod do cliente oficial (Platf
 |---|---|---|---|
 | `AETHERIUS - SOBRENATURAL` | **novo no oficial** | `AETHERIUS - SOBRENATURAL.esp`, `AETHERIUS - SOBRENATURAL - VISOES.esp` | Perks, abilities por estágio, +50% de velocidade na fera (MGEF `000844`), records do Vínculo do Véu. Inclui `Sound\FX\Aetherius\Witch\*.wav` (sussurros e grito da Bruxa) e as fontes `.psc` só como referência. No LOCAL, o VISOES.esp e os sons ficavam no mod "AETHERIUS - SERVIDOR LOCAL" e foram reunidos aqui. |
 | `AETHERIUS - LOBISOMEM TRANSFORMACAO` | novo no oficial (pacote kdu) | — | Animação da transformação (FNIS/OAR `ww_howl`) e sons (coração, gritos). |
-| `Colored Magic Auras` | **NOVO** (Nexus 25773) | `Colored Magic Auras.esp` (ESL-flag) + BSA | Aura Red `000D62` (Vampiro Feral) e Purple `000801` (Sobrecarga da Bruxa). 88 records novos (tomos, magias, anéis), **sem** listas, vendedores ou overrides. Ver `04-documentacao/DADOS-HOUSECARL_19-11_colored-magic-auras.md`. |
+| `Colored Magic Auras` | **NOVO** (Nexus 25773) | `Colored Magic Auras.esp` (ESL-flag) + BSA | Aura Red `000D62` (Vampiro Feral) e Purple `000801` (Sobrecarga da Bruxa). 88 records novos (tomos, magias, anéis), **sem** listas, vendedores ou overrides. Ver `05-documentacao/DADOS-HOUSECARL_19-11_colored-magic-auras.md`. |
 | `New Creature Animation - Werewolf` | **NOVO** (substitui Precision Creatures) | `Werewolf_New_Anim.esp` | Exige regerar o Pandora. |
-| `Miggyluv's Eyes` | novo no oficial | `Miggyluv's Eyes.esp` | Olhos do vampiro e da Bruxa. Ver `04-documentacao/INSTALACAO_olhos-miggyluv.md`. |
+| `Miggyluv's Eyes` | novo no oficial | `Miggyluv's Eyes.esp` | Olhos do vampiro e da Bruxa. Ver `05-documentacao/INSTALACAO_olhos-miggyluv.md`. |
 | `Fangs and Eyes - A Vampire Appearance Mod` | **ATUALIZADO**: substituição direta da versão antiga (Nexus 6842, arquivo `Fangs and Eyes Red-6842-1-0.7z`, de 19/11) | `BVFE.esp` (posição inalterada) + `BVFE.bsa` + `BVFE - Textures.bsa` | Olhos do vampiro em vermelho mais intenso. O mod já está ativo nos perfis QUALIDADE e PERFORMANCE: **troque a pasta inteira**. O `BVFE.esp` é idêntico ao que o servidor já usa (SHA-256 `43205137…`); só mudaram as texturas nos BSA. Por isso **não altera o manifesto de plugins do servidor**. Os BSAs novos vão apenas para o cliente. |
 | `AETHERIUS - Vampire Lord and Werewolf SFX` | **NOVO** | — (só arquivos soltos em `sound\fx\...`) | São 62 WAVs: poderes do vampiro, Lorde (transformação, asas, ataques) e lobisomem. Os SOUN/SNDR que tocam esses arquivos estão no `AETHERIUS - SOBRENATURAL.esp`. Alguns arquivos substituem sons vanilla de mesmo caminho. |
 | ~~Precision Creatures~~ | **REMOVIDO** | — | Desativar e remover dos perfis oficiais. |
@@ -207,8 +210,10 @@ Distribuição: o `skymp5-client.js` gerado vai no mod do cliente oficial (Platf
 ```
 Atualize também `client/profiles/AETHERIUS - GRAFICO - QUALIDADE` e `AETHERIUS - PERFORMANCE` (modlist, plugins e loadorder) no repo do cliente. O `Prepare`/`sync-client-plugins.js` do servidor gera o `aetherius-loadorder.json` a partir desses perfis, e **o servidor precisa ter exatamente os mesmos plugins, na mesma ordem e com os mesmos bytes do cliente.** Sem isso, a validação do manifesto falha no boot.
 
-### 4.3 Pandora (output gerado)
-**Regere o Pandora em cada perfil oficial** (QUALIDADE e PERFORMANCE) depois de instalar os mods da §4.1 e remover o Precision Creatures. Publique o resultado como nova versão do `Pandora - Output` (§4.4-B). O pacote **não** leva output gerado: pela regra do projeto, ele nunca serve de base.
+### 4.3 Outputs regerados (Pandora)
+- `Pandora - Output` e `AETHERIUS - LOCAL - PANDORA` foram regerados em 19/11 às 20:13, depois da remoção do Precision Creatures e da entrada do New Creature Animation - Werewolf.
+- **Atenção:** os dois foram gerados sobre o perfil **LOCAL**, que não tem `AETHERIUS - FISICA`, `AETHERIUS - GHOSTSHELF` nem `Ghostshelf Keep`, que existem no QUALIDADE.
+- Use-os para comparar ou como solução provisória, mas o certo é **regerar o Pandora em cada perfil oficial**, depois de instalar os mods da §4.1. Pela regra do projeto, output gerado nunca é base de patch.
 
 ### 4.4 Releases do `aetherius-mods` (OBRIGATÓRIO para os jogadores receberem os mods)
 
@@ -223,7 +228,7 @@ Os jogadores **não** recebem mods pelo MO2 do servidor: quem instala é o **lau
 #### A) Publicar — mods NOVOS (não existem no `aetherius-mods-lock.json` atual)
 | Release (título = pasta) | Asset | Conteúdo (de `03-mods-jogo/`) |
 |---|---|---|
-| `AETHERIUS - SOBRENATURAL` | `AETHERIUS.-.SOBRENATURAL.zip` | `AETHERIUS - SOBRENATURAL.esp`, `AETHERIUS - SOBRENATURAL - VISOES.esp`, `Sound\FX\Aetherius\Witch\*.wav`,  |
+| `AETHERIUS - SOBRENATURAL` | `AETHERIUS.-.SOBRENATURAL.zip` | `AETHERIUS - SOBRENATURAL.esp`, `AETHERIUS - SOBRENATURAL - VISOES.esp`, `Sound\FX\Aetherius\Witch\*.wav`, `Source\Scripts\*.psc`. A pasta `Source` é opcional (são só fontes de referência). |
 | `AETHERIUS - LOBISOMEM TRANSFORMACAO` | `AETHERIUS.-.LOBISOMEM.TRANSFORMACAO.zip` | Animação da transformação (FNIS/OAR) e sons do kdu |
 | `Colored Magic Auras` | `Colored.Magic.Auras.zip` | ESP (ESL-flag) + BSA (Nexus 25773) |
 | `New Creature Animation - Werewolf` | `New.Creature.Animation.-.Werewolf.zip` | `Werewolf_New_Anim.esp` + animações. Substitui o Precision Creatures. |
@@ -234,9 +239,9 @@ Os jogadores **não** recebem mods pelo MO2 do servidor: quem instala é o **lau
 | Release | Por quê |
 |---|---|
 | `Fangs and Eyes - A Vampire Appearance Mod` | Versão nova com olhos mais vermelhos. Mudaram só os BSA; o `BVFE.esp` é idêntico. Publique uma release nova e **apague a antiga**. |
-| `Pandora - Output` | **Regere o Pandora no perfil oficial** depois de entrar o New Creature Animation e sair o Precision Creatures, e publique o resultado.  |
+| `Pandora - Output` | **Regere o Pandora no perfil oficial** depois de entrar o New Creature Animation e sair o Precision Creatures, e publique o resultado. **Não use** o `Pandora - Output` do pacote: ele foi gerado sobre o perfil LOCAL, sem FISICA nem Ghostshelf. Serve só para conferência. |
 | `AETHERIUS - UI CORE` | Módulo `supernatural` (TAB, telas, HUDs, selo, ritual, botão Forma da Besta), gerado a partir de `02-cliente` (`client/ui-core`). |
-| `AETHERIUS - MERIDIAN - COMPATIBILIDADE` | `MeridianUI\aetherius-client\admin-panel\app.js` com a aba Sobrenatural do F7 (`05-painel-adm`). Se essa pasta também levar o `Platform\Plugins\skymp5-client.js`, atualize o bundle gerado de `02-cliente`. |
+| `AETHERIUS - MERIDIAN - COMPATIBILIDADE` | `MeridianUI\aetherius-client\admin-panel\app.js` com a aba Sobrenatural do F7 (`06-painel-adm`). Se essa pasta também levar o `Platform\Plugins\skymp5-client.js`, atualize o bundle gerado de `02-cliente`. |
 | `AETHERIUS - LOBISOMEM` | **Sem mudança.** Continua como está (`AETHERIUS - LOBISOMEM.esp`). |
 
 O bundle do cliente (`skymp5-client.js`) segue o fluxo normal da release do **`aetherius-client`**, junto com os perfis atualizados.
@@ -260,13 +265,13 @@ O bundle do cliente (`skymp5-client.js`) segue o fluxo normal da release do **`a
 - **Teste de instalação limpa:** use o launcher num MO2 vazio. Ele deve baixar os 6 mods novos e as versões novas, e o jogo deve abrir com o perfil novo, sem o Precision Creatures.
 ---
 
-## 5. Painel administrativo (F7) — **ver `05-painel-adm/LEIA-ME_PAINEL-ADM.md`**
-A pasta `05-painel-adm/` traz:
+## 5. Painel administrativo (F7) — **ver `06-painel-adm/LEIA-ME_PAINEL-ADM.md`**
+A pasta `06-painel-adm/` traz:
 - os arquivos de servidor do painel;
 - o **patch do frontend F7** (`client/admin-panel/app.js`), que **não está** no patch do cliente porque o painel é distribuído pelo mod `AETHERIUS - MERIDIAN - COMPATIBILIDADE`;
 - o contrato das 10 ações `supernatural.*` (incluindo `lordGrant` e `lordRevoke`), para o painel web oficial (eksmurf).
 
-A maldição é concedida e removida **somente** pelo Painel Administrativo (`admin-panel/supernatural-admin.cjs`): setar maldição, vertente da Bruxa, estágio, transformação forçada e encerrar forma. Ao setar, o servidor grava **uma** keyword permanente (`JogadorVampiro`, `JogadorLobisomem` ou `JogadorBruxa`), só no servidor. O cliente recebe apenas o estado de apresentação (`curse` + progresso). Repositório do painel: https://github.com/eksmurf/Painel_Admin_Aetherius. Ver `04-documentacao/ETAPA-2_painel-f7.md`.
+A maldição é concedida e removida **somente** pelo Painel Administrativo (`admin-panel/supernatural-admin.cjs`): setar maldição, vertente da Bruxa, estágio, transformação forçada e encerrar forma. Ao setar, o servidor grava **uma** keyword permanente (`JogadorVampiro`, `JogadorLobisomem` ou `JogadorBruxa`), só no servidor. O cliente recebe apenas o estado de apresentação (`curse` + progresso). Repositório do painel: https://github.com/eksmurf/Painel_Admin_Aetherius. Ver `05-documentacao/ETAPA-2_painel-f7.md`.
 
 ---
 
@@ -286,16 +291,16 @@ A maldição é concedida e removida **somente** pelo Painel Administrativo (`ad
 - Fim do loop `fx.cleanup`.
 
 **Problemas conhecidos (NÃO resolvidos):**
-- **T1/T2:** o Z (Beast Form e Lorde Vampiro) não transforma. O comando de voz não chega ao servidor. Só há diagnóstico, no commit `bcb0c02`. Para o lobisomem, o botão Forma da Besta contorna o problema. Ver `04-documentacao/investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md`.
+- **T1/T2:** o Z (Beast Form e Lorde Vampiro) não transforma. O comando de voz não chega ao servidor. Só há diagnóstico, no commit `bcb0c02`. Para o lobisomem, o botão Forma da Besta contorna o problema. Ver `05-documentacao/investigacoes/INVESTIGACAO_19-11_voz-z-e-dash.md`.
 - **T10:** o avanço do Morcego não funciona (mesma investigação).
 - Uivo por estágio (Terror no Ômega, Fúria no Alfa, nenhum no Iniciado): decidido, mas depende do Z.
 - Pendentes: XP de maldição, P10 (Lorde só pelo painel; hoje liberado no Neófito para teste), teste com 2 ou mais jogadores (observadores, Beber Sangue).
 
 **Roteiro de validação no oficial:**
-- `04-documentacao/ETAPA-3_vampirismo-mecanicas.md`
-- `04-documentacao/ETAPA-4_bruxaria-vinculo-do-veu.md`
-- `04-documentacao/PENDENCIAS.md` §4
-- `04-documentacao/TESTE-JOGO_19-11.md`
+- `05-documentacao/ETAPA-3_vampirismo-mecanicas.md`
+- `05-documentacao/ETAPA-4_bruxaria-vinculo-do-veu.md`
+- `05-documentacao/PENDENCIAS.md` §4
+- `05-documentacao/TESTE-JOGO_19-11.md`
 
 ---
 
@@ -304,7 +309,7 @@ A maldição é concedida e removida **somente** pelo Painel Administrativo (`ad
 - [ ] Não aplicar `settings.ts`/`yarn.lock` (já excluídos).
 - [ ] Recompilar `scam_native.node`; build TS e GameplayCore; testes.
 - [ ] Branch nova no cliente; aplicar `sobrenatural-cliente.patch`; build do `skymp5-client.js` e da UI Core.
-- [ ] Painel ADM: aplicar o patch 004 no `client/admin-panel/app.js`, distribuir pelo mod MERIDIAN - COMPATIBILIDADE e seguir o checklist de `05-painel-adm/LEIA-ME_PAINEL-ADM.md`.
+- [ ] Painel ADM: aplicar o patch 004 no `client/admin-panel/app.js`, distribuir pelo mod MERIDIAN - COMPATIBILIDADE e seguir o checklist de `06-painel-adm/LEIA-ME_PAINEL-ADM.md`.
 - [ ] Substituir a pasta do **Fangs and Eyes** pela versão nova (§4.1).
 - [ ] **Releases do `aetherius-mods` (§4.4):** publicar os 6 mods novos e as versões novas (Fangs and Eyes, Pandora regerado, UI CORE, MERIDIAN - COMPATIBILIDADE); apagar as releases do **Precision Creatures** e do Fangs and Eyes antigo; atualizar os perfis no `aetherius-client`.
 - [ ] Instalar os mods da §4.1 e remover o **Precision Creatures**.
