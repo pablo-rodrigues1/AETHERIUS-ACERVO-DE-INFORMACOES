@@ -44,7 +44,7 @@ O patch 004 muda `client/admin-panel/app.js`:
 - campos numéricos com `min < 0` aceitam o sinal "-" (usado no XP);
 - rodapé do modo de jogo: "Sessão do jogo validada · ações de staff no servidor".
 
-**Verificado:** o patch aplica limpo (`git apply --check`) no `client/admin-panel/app.js` do `aetherius-client-main` atual.
+**Verificado:** o patch foi regerado sobre o `client/admin-panel/app.js` do **oficial de 19/11** e aplica limpo (`git apply --check`). O oficial trouxe a aba **Compras** (`purchases`), que convive com a aba Sobrenatural. A resolução está em `../REBASE_OFICIAL_19-11.md`.
 
 **Onde instalar:** o CEF carrega o painel de `MeridianUI\aetherius-client\admin-panel\app.js`, dentro do mod **`AETHERIUS - MERIDIAN - COMPATIBILIDADE`**, e não de `Platform/UI`. No teste foi usada uma cópia completa do mod, `(LOCAL)`. No oficial, aplique o patch no repositório do cliente e atualize o `app.js` do mod `AETHERIUS - MERIDIAN - COMPATIBILIDADE` original nos perfis oficiais.
 
@@ -52,7 +52,7 @@ O patch 004 muda `client/admin-panel/app.js`:
 O repositório https://github.com/eksmurf/Painel_Admin_Aetherius **não foi alterado**. O contrato acima (ids das ações, parâmetros, escopo `characters`, auditoria) é a referência para expor as mesmas ações no painel web. O servidor já valida tudo sozinho: autoridade, sessão, uma maldição por jogador, faixas de XP e janela noturna. O painel web só precisa enviar a ação, o alvo, os parâmetros e o motivo pela API administrativa existente.
 
 ## 5. Checklist
-- [ ] Arquivos do servidor aplicados (já vêm no `01-servidor/sobrenatural-servidor.patch`; `aetherius-tools.cjs` divergiu do oficial, mas a mesclagem automática resolveu: revisar).
+- [ ] Arquivos do servidor aplicados (já vêm no `01-servidor/sobrenatural-servidor.patch`, mesclado sobre o oficial de 19/11).
 - [ ] Patch 004 aplicado em `client/admin-panel/app.js` e distribuído no mod MERIDIAN - COMPATIBILIDADE.
 - [ ] Staff com o escopo `characters` vê a aba Sobrenatural; sem o escopo, não vê.
 - [ ] Testar grant → status → xp (+ e −) → vertente/disciplina → endForm → remove, conferindo o log de auditoria.
