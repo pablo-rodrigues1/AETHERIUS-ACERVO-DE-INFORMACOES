@@ -4,9 +4,9 @@ tipo: sistema
 status: rascunho
 fase: em-desenvolvimento
 responsaveis: [pablo-rodrigues1, kdu]
-repositorio: "projeto local: C:\Code\Aetherius - New Systems\Sobrenatural (será compilado em pasta final)"
+repositorio: https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural
 depende_de: [../ui-core/README.md, ../painel-adm/README.md, ../gameplay-core/README.md, ../lobisomem/README.md]
-atualizado: 2026-11-16
+atualizado: 2026-11-19
 tags: [sobrenatural, maldicoes, vampirismo, licantropia, bruxaria, ui-core, servidor]
 relacionados: [etapa-2-transformacao-forcada.md, ../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md, diario.md, especificacao.md, direcao-de-arte.md, proposta-textos.md, ../lobisomem/README.md]
 ---

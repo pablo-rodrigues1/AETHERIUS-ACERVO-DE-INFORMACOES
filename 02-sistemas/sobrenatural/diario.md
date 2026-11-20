@@ -332,3 +332,7 @@ Dev atualizou `C:\Code\Aetherius - OFICIAL`. Mesclagem 3 vias (base 310cb59/bc30
 ## 19/11/2026 (noite) — Fangs and Eyes (olhos vermelhos) no pacote (Opus)
 Nova versão do Fangs and Eyes (Nexus 6842, `Fangs and Eyes Red-6842-1-0.7z`) incluída em `03-mods-jogo` como substituição direta. `BVFE.esp` idêntico ao do runtime do servidor (`43205137…`); só os BSA mudaram, então o manifesto de plugins não muda.
 
+
+## 19/11/2026 (noite) — Repositório privado do sistema (Opus)
+Criado https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural (privado) com README, `docs/FUNCIONAMENTO.md`, pacote de integração rebaseado, mods próprios, módulo UI, testes e todo o histórico de desenvolvimento. Mods de terceiros não incluídos (licença/tamanho), listados em `mods/TERCEIROS.md`. Acervo aponta `repositorio:` para ele.
+
