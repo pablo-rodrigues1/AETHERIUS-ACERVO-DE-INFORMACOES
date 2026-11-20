@@ -48,7 +48,8 @@ Entrega_Sobrenatural_19_11/
 │  ├─ Pandora - Output/             ← OUTPUT REGERADO 19/11 20:13 (perfil LOCAL)
 │  └─ AETHERIUS - LOCAL - PANDORA/  ← OUTPUT REGERADO 19/11 20:13 (perfil LOCAL)
 ├─ 04-binarios-referencia/          ← scam_native.node e skymp5-client.js usados no teste
-└─ 05-documentacao/                 ← todos os .md do sistema (especificação, decisões, etapas, revisões, investigações)
+├─ 05-documentacao/                 ← todos os .md do sistema (especificação, decisões, etapas, revisões, investigações)
+└─ 06-painel-adm/                   ← painel administrativo: servidor, frontend F7 (patch 004 + app.js) e contrato das ações
 ```
 
 ---
@@ -183,7 +184,12 @@ Atualize também `client/profiles/AETHERIUS - GRAFICO - QUALIDADE` e `AETHERIUS 
 
 ---
 
-## 5. Painel administrativo (F7)
+## 5. Painel administrativo (F7) — **ver `06-painel-adm/LEIA-ME_PAINEL-ADM.md`**
+A pasta `06-painel-adm/` traz:
+- os arquivos de servidor do painel;
+- o **patch do frontend F7** (`client/admin-panel/app.js`), que **não está** no patch do cliente porque o painel é distribuído pelo mod `AETHERIUS - MERIDIAN - COMPATIBILIDADE`;
+- o contrato das 8 ações `supernatural.*`, para o painel web oficial (eksmurf).
+
 A maldição é concedida e removida **somente** pelo Painel Administrativo (`admin-panel/supernatural-admin.cjs`): setar maldição, vertente da Bruxa, estágio, transformação forçada e encerrar forma. Ao setar, o servidor grava **uma** keyword permanente (`JogadorVampiro`, `JogadorLobisomem` ou `JogadorBruxa`), só no servidor. O cliente recebe apenas o estado de apresentação (`curse` + progresso). Repositório do painel: https://github.com/eksmurf/Painel_Admin_Aetherius. Ver `05-documentacao/ETAPA-2_painel-f7.md`.
 
 ---
@@ -222,6 +228,7 @@ A maldição é concedida e removida **somente** pelo Painel Administrativo (`ad
 - [ ] Não aplicar `settings.ts`/`yarn.lock` (já excluídos).
 - [ ] Recompilar `scam_native.node`; build TS e GameplayCore; testes.
 - [ ] Branch nova no cliente; aplicar `sobrenatural-cliente.patch` e resolver os 2 conflitos; build do `skymp5-client.js` e da UI Core.
+- [ ] Painel ADM: aplicar o patch 004 no `client/admin-panel/app.js`, distribuir pelo mod MERIDIAN - COMPATIBILIDADE e seguir o checklist de `06-painel-adm/LEIA-ME_PAINEL-ADM.md`.
 - [ ] Instalar os mods da §4.1 e remover o **Precision Creatures**.
 - [ ] Ajustar o load order (§4.2) nos dois perfis oficiais e nos `client/profiles`.
 - [ ] Regerar o **Pandora** em cada perfil oficial.
