@@ -346,3 +346,5 @@ O dev pediu escala de 1,25× para o Lorde, áudio do mod AETHERIUS - Vampire Lor
 Laboratório `58c9db0` e `d757a8b`, cliente `307d39c`. P10 com F7 e TAB, forma de 10 min pelo botão, recarga persistida de 2 h, escala 1,25×, sons específicos e Enxame 20 HP/s por 15 s. A Força aplica o PERK no dano físico final. Q do UI Core projeta os favoritos do Lorde durante a forma; o ledger preserva os anteriores. Os bônus da forma foram exercitados no host.
 
 523 testes por modo de alimentação, 38 asserções nativas, TypeScript/webpack e addon compilados. Grip, Blood Ward e sinal autoritativo de levitação ficam em decisão técnica. Teste físico dos avanços e áudio com observadores fica para jogo. [Investigação, hashes e demais resultados](investigacoes/investigacao-20-11-lorde-poderes.md)
+
+O dev autorizou revisão imediata dos candidatos `58c9db0` e `d757a8b`, cliente `307d39c`. Vampiric Grip fica restrito a NPCs, com jogadores imunes ao efeito. Grip, Blood Ward e a imunidade a quedas durante levitação ficam para outro despacho. Registro do laboratório em `9ce6237`.

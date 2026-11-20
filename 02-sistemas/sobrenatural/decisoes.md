@@ -221,3 +221,11 @@ Beber Sangue preserva HP já alterado, saldo legado e cooldown gravado. A recupe
 - **Mãos:** o servidor retira das mãos armas, escudo, tocha e feitiços ao confirmar a raça de fera e impede que um pacote antigo recoloque esse equipamento. O cliente dono limpa somente as mãos a partir da fase de fera e da raça efetiva. A entrada preserva peças fora das mãos e inventário. Na volta, o jogador volta a poder equipar normalmente.
 - **Velocidade (T4):** aplicar diretamente +50% em relação ao nominal do Manbeast. Com base 100 e Feral Speed de +20, a habilidade recebe +60 pontos de SpeedMult, resultando em 180 no cenário nominal. O modificador está no ESP do Sobrenatural, nas seis habilidades de estágio mutuamente exclusivas, condicionado à WerewolfBeastRace. A distância real e o valor efetivo após transformação ficam para o reteste em jogo.
 - **Uivos (T6):** Iniciado sem uivo. A partir do Ômega é liberado Uivo de Terror (`MAG_HowlofTerror`), e no Alfa é liberado Uivo de Fúria (`MAG_HowlofRage`), conforme a especificação. O Z obedece à progressão do Sobrenatural, sem consultar a escolha vanilla nem executar a quest de Companions. A ligação ao Z e a validação de cast no host ficam pendentes com T1/T2.
+
+### 20/11 — Mecânicas do Lorde em despacho separado
+
+O dev decidiu revisar agora o candidato `58c9db0` e `d757a8b` (cliente `307d39c`). Três mecânicas ficam para um despacho posterior.
+
+- **Vampiric Grip** afeta somente NPCs. Em jogadores, o poder não produz efeito.
+- **Blood Ward** precisa de tratamento autoritativo do `WardPower` mantido por concentração.
+- **Wings of the Night** precisa de imunidade a quedas somente durante a levitação. O perk COTV depende do global `015FC8:Dawnguard.esm` com valor 2.
