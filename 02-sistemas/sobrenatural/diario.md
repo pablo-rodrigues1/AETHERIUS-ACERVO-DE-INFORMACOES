@@ -390,3 +390,7 @@ Fork mínimo do MoonMod v2.0.2 (powerof3, MIT, `4732799`) para AE 1.6.1170: fase
 - Dev autorizou a instalação. Sol instalou no perfil AETHERIUS - LOCAL: bundle do cliente e mod `AETHERIUS - Ceu Sincronizado (LOCAL)` acima do Moons and Stars (backups `*.bak-ceu-2111`). houseCARL: um único MoonMod efetivo, INI do Rudy com SHA correto, Address Library 1.6.1170. Passos da 2ª máquina na [etapa](etapa-2-ceu-sincronizado.md).
 - Terra auditou clima, horário e ações de ambiente do painel (antes × depois): nenhuma regressão comprovada; limite de evidência em F7/banco/jogo. [Auditoria](auditoria-clima-horario-21-11-terra.md).
 - Pendente: ensaio com dois jogadores, incluindo F7 de hora, pausa/retomada e clima regional.
+
+## 21/11/2026 — HUD da Lua e Cálice implantados no UI Core LOCAL
+
+Faltavam os ativos do UI Core no mod `AETHERIUS - UI CORE (LOCAL)`. Sol implantou os cinco arquivos de `8cfa553` (HUD da Lua e, por dependência do CSS, o Cálice da Noite aprovado em 20/11), com backups `*.bak-lua-2111`; diff/hashes/VFS conferidos. Servidor preparado confere byte a byte com o HEAD (Masser, olhos Bronze, compulsão). Lua de Masser completa no LOCAL; falta ensaio em jogo.
