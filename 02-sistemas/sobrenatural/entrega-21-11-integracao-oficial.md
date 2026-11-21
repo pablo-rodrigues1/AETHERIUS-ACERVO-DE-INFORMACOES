@@ -20,37 +20,25 @@ Compilado por Opus 5.5 (orquestrador) a partir do laboratório `C:\Code\Aetheriu
 | Bundle do cliente de referência | `04-binarios-referencia/skymp5-client.js`, compilado **sobre o oficial de 19/11 já mesclado**, SHA-256 `9d8e459936ab850c9e954284f2cef7bddb0850cf80637fb65b36b879564bffaa` |
 | Addon nativo de referência | `04-binarios-referencia/scam_native.node`, SHA-256 `2a4e677911be738a8ede8563e05ab79ae0df79b2b4341123167e6b4b2bc3df37` (sem mudança nativa desde 20/11; recompile no fluxo oficial) |
 | Testes na árvore mesclada (oficial 19/11 + patches) | Sobrenatural **391/391 em cada modo de alimentação** + F7 2/2 + serviço OK; gamemode **164/164** (werewolf, magic, records-ctda, summon-friends, survival, Masser); cliente 8/8 (HUD da Lua, TimeService); `tsc` servidor e cliente OK; webpack OK |
-| Revisão | Toda entrega revisada pelo Gemini 4 Neon (revisão honesta). Relatórios em `05-documentacao/REVISAO-*.md` e auditoria de clima/horário em `AUDITORIA-CLIMA-HORARIO_21-11_terra.md` |
+| Revisão | Toda entrega revisada pelo Gemini 4 Neon (revisão honesta). Relatórios no Acervo (`02-sistemas/sobrenatural/`) |
 
 > ⚠️ **Mudança estrutural de 21/11:** os plugins e pastas **nossos** do Sobrenatural foram unificados em **uma pasta de mod e um ESP leve**: `AETHERIUS - SOBRENATURAL`. Deixam de existir como entregáveis: `AETHERIUS - SOBRENATURAL - VISOES.esp`, `AETHERIUS - DVA Visuals` e a pasta `AETHERIUS - Vampire Lord and Werewolf SFX` (o conteúdo está dentro da pasta única). Como o Sobrenatural **ainda não está no oficial**, isso não desloca nenhum slot dos 437 plugins travados (§4.2).
 
 > ⚠️ **Releases do `aetherius-mods`:** os jogadores só recebem mods publicados como releases. Passo a passo em §4.4.
 
-## 0.1 Novidades de 21/11/2026
+## 0.1 Funcionalidades validadas em jogo
 
-Todos os itens abaixo foram revisados pelo Neon; os relatórios citados estão em `05-documentacao/`.
+Esta documentação descreve como funcionalidade **apenas o que foi validado em jogo** (teste solo de 19/11/2026; roteiro em `05-documentacao/SISTEMA_SOBRENATURAL.md`, §9):
 
-- **Lua de Masser** (`ETAPA-2_lua-de-masser.md`, `REVISAO-LUA-MASSER_neon.md`):
-  - fase calculada pelo servidor a partir do relógio autoritativo (`masser.js`), ciclo de 24 dias, 8 fases de 3 dias, 0 = Lua Cheia (mesma fórmula do `po3_MoonMod.ini` vigente do Rudy ENB);
-  - **transformação obrigatória dos lobisomens nas 3 noites de Lua Cheia** (20h–5h), uma por noite, pela mesma sequência da compulsão de 72 h; qualquer transformação confirmada na noite cumpre a noite;
-  - **olhos Bronze** (Miggyluv's Eyes): Light como padrão; **Glow** após 24 h online sem transformar ou durante os 3 dias de Lua Cheia; Argoniana feminina mantém os olhos originais (o mod não tem variante);
-  - **HUD da Lua** (proposta A aprovada pelo dev): ~56 px, acima da HUD de sobrevivência, só para lobisomens; propriedade privada `aetheriusMoon`.
-- **Céu sincronizado** (ADR-0027, `ETAPA-2_ceu-sincronizado.md`, `REVISAO-CEU-SINCRONIZADO_neon.md`):
-  - o servidor envia `skyDaysPassed` no `gameTime` v1 existente; o fork do Moons and Stars desenha Masser e Secunda iguais para todos;
-  - **o GameDaysPassed do jogo (`0x39`) nunca é escrito** fora do laboratório: escrever nele vencia prazos do Curse of the Vampire, da Fera e de quests (veto registrado no ADR);
-  - auditoria do Terra: sem regressão no clima, horário e ações de ambiente do painel.
-- **Aparência do Vampiro por estágio da Reserva** (Dynamic Vampire Appearance, `ETAPA-3_aparencia-vampiro.md`, `REVISAO-APARENCIA-VAMPIRO_neon.md`):
-  - rosto (TXST) e olhos por estágio: **1** = 100–70, **2** = 69–50, **3** = 49–31, **4** = 30–0;
-  - sangue na boca por **3 min reais** após alimentação validada pelo servidor (renova a cada alimentação);
-  - olhos de combate (Feral, Immeasurable Strength, Unnatural Celerity) > visão noturna (Vampiric Vision) > estágio;
-  - Argoniano e Khajiit mantêm a aparência racial; troca de olho/rosto aplicada no ator existente, sem recriar o ator remoto;
-  - só os assets do DVA entram (sem as quests, scripts e overrides de `DLC1VampireChangeEffect`/`DLC1RevertEffect` do mod original).
-- **Unificação** (`ETAPA-4_unificacao-esp.md`, `REVISAO-UNIFICAR-ESP_neon.md`): ESP + BSA + sons + DLL numa única pasta; mapa completo de FormIDs em `07-load-order-e-manifestos/form-map.json`.
-- O **Cálice da Noite** e o restante da entrega de 20/11 continuam incluídos (§0.2).
+| Funcionalidade | Maldição |
+|---|---|
+| HUD da Reserva de Sangue | Vampirismo |
+| Visão Vampírica | Vampirismo |
+| Raça vampírica | Vampirismo |
+| Selo do Vínculo do Véu e HUD/timer do Ritual, com sussurros | Bruxaria |
+| Transformação forçada do lobisomem pelo F7 | Licantropia |
 
-## 0.2 Herdado da entrega de 20/11 (continua valendo)
-
-HUD Cálice da Noite; Lorde Vampiro pelo painel (`supernatural.lordGrant`/`lordRevoke`, keyword `JogadorLordeVampiro` só no servidor, botão no TAB, 10 min / 2 h); forma de Lorde 1,25×, menu Q automático, 15 perks, bônus por estágio só na forma; sons do Lorde e dos poderes; Devouring Swarm 20 HP/s; Immeasurable Strength no motor de dano; dash do Morcego; correção `userEventName` do Z; Precision Creatures removido e substituído por New Creature Animation - Werewolf. Detalhes nos documentos de 20/11 em `05-documentacao/`.
+O código, os patches e os mods deste pacote contêm também funcionalidades **ainda não validadas em jogo**. Elas não estão descritas aqui; a documentação delas continua no laboratório (`C:\Code\Aetherius - New Systems\Sobrenatural\docs`) e no Acervo, e entra nesta entrega quando for validada.
 
 ---
 
@@ -74,12 +62,12 @@ Entrega_Sobrenatural_21_11/
 │  ├─ AETHERIUS - LOBISOMEM TRANSFORMACAO/   ← pacote kdu (separado, sem mudança)
 │  ├─ Colored Magic Auras/           ← terceiro (Nexus 25773)
 │  ├─ New Creature Animation - Werewolf/     ← terceiro (substitui Precision Creatures)
-│  ├─ Miggyluv's Eyes/               ← terceiro (olhos Bruxa e Bronze do lobisomem)
+│  ├─ Miggyluv's Eyes/               ← terceiro (olhos da Bruxa)
 │  ├─ Fangs and Eyes - A Vampire Appearance Mod/  ← terceiro (versão nova de 19/11)
 │  ├─ Pandora - Output/              ← referência (gerado sobre o perfil LOCAL; regere no oficial)
 │  └─ AETHERIUS - LOCAL - PANDORA/   ← referência
 ├─ 04-binarios-referencia/           ← scam_native.node e skymp5-client.js
-├─ 05-documentacao/                  ← todos os .md do sistema + prévias HTML das HUDs
+├─ 05-documentacao/                  ← SISTEMA_SOBRENATURAL.md: como o sistema funciona (técnico e conceitual)
 ├─ 06-painel-adm/                    ← painel F7: servidor, frontend (patch 004 + app.js), contrato (sem mudança desde 20/11)
 └─ 07-load-order-e-manifestos/       ← NOVO: proposta de load order/lock/perfis oficiais, delta do manifesto de segurança, form-map
 ```
@@ -91,9 +79,9 @@ Entrega_Sobrenatural_21_11/
 ### 2.1 O que muda
 Tudo o que a entrega de 20/11 trazia (serviço `supernatural-service.js`, pasta `supernatural/`, `werewolf-service.js` + `werewolf/`, `vampire-lord-service.js`, `admin-panel/supernatural-admin.cjs`, alterações em `phase0-basic.js`, `commands.js`, `magic-service.js`, `survival-service.js`, `whitelist.js`, SkySocial, painel, GameplayCore, `aetheriusUiSystem.ts` e o C++ nativo), mais em 21/11:
 
-- **Novos:** `supernatural/masser.js` (fase de Masser), `supernatural/vampire-appearance.js` (estágios DVA, boca, combate/visão), `supernatural/tests/masser.test.cjs`.
-- **Alterados:** `forced-werewolf.js` (Lua Cheia, olhos Bronze por 24 h/cheia, propriedade `aetheriusMoon`), `veil-eyes.js` e `veil-visuals.js` (precedência única de olhos Bruxa/Lobisomem/Vampiro, resolução por FormKey do ESP unificado), `supernatural-service.js`, `powers.js`, `power-input.js`, `feeding.js` (gatilho da boca só pelo crédito autoritativo), `werewolf-transform-journal.js`, `werewolf-service.js`.
-- **Clima/horário:** `server/ts/systems/environmentAuthority.ts` (`clockEpochMinutes()` e campo `skyDaysPassed` no snapshot) e `environmentSystem.ts` (expõe a época). `gameDaysPassed` continua `null` fora do laboratório.
+- **Novos:** `supernatural/masser.js`, `supernatural/vampire-appearance.js`, `supernatural/tests/masser.test.cjs`.
+- **Alterados:** `forced-werewolf.js`, `veil-eyes.js`, `veil-visuals.js`, `supernatural-service.js`, `powers.js`, `power-input.js`, `feeding.js`, `werewolf-transform-journal.js`, `werewolf-service.js`.
+- **Clima/horário:** `server/ts/systems/environmentAuthority.ts` (campo `skyDaysPassed` no snapshot) e `environmentSystem.ts`. `gameDaysPassed` continua `null` fora do laboratório.
 - **C++:** sem mudança desde 20/11 (as alterações nativas de 20/11 continuam no patch e exigem recompilar o addon).
 
 **Excluídos de propósito:** `server/ts/settings.ts` (só laboratório, `master: ""`) e `server/yarn.lock` (ruído de build).
@@ -120,13 +108,13 @@ O patch usa LF; em repositório CRLF use `--ignore-whitespace`. Alternativa: cop
 |---|---|---|
 | `AETHERIUS_VAMPIRE_FEED_ENABLED` | `true` no teste (padrão `false`) | "Beber Sangue" (menu X), regra D7. |
 | `AETHERIUS_VAMPIRE_SERVER_SUN` | padrão | Dano solar no servidor. |
-| `AETHERIUS_VAMPIRE_NEEDS_RESTORE`, `AETHERIUS_VAMPIRE_CRITICAL_EXIT`, `AETHERIUS_VEIL_OVERLOAD_START`, `AETHERIUS_SKYRIM_UNITS_PER_METER` | padrão | Ajustes finos (`DECISOES.md`). |
+| `AETHERIUS_VAMPIRE_NEEDS_RESTORE`, `AETHERIUS_VAMPIRE_CRITICAL_EXIT`, `AETHERIUS_VEIL_OVERLOAD_START`, `AETHERIUS_SKYRIM_UNITS_PER_METER` | padrão | Ajustes finos. |
 | `VAMPIRE_POWER_COOLDOWN_SECONDS` | `60` | Recarga dos poderes do vampiro. |
 | `VAMPIRE_BAT_COOLDOWN_SECONDS` | padrão (3 s) | Recarga do avanço do Morcego. |
-| `AETHERIUS_VAMPIRE_BLOODY_MOUTH_SECONDS` | padrão `180` | **Novo.** Duração do sangue na boca. |
+| `AETHERIUS_VAMPIRE_BLOODY_MOUTH_SECONDS` | padrão `180` | Configuração (funcionalidade não validada em jogo). |
 | `WEREWOLF_FORCE_ONLINE_HOURS` | `72` | Horas online até a compulsão (noite 20h–5h). |
-| `WEREWOLF_FORCE_NIGHT_START` / `_END` | `20` / `5` | Janela da noite (compulsão e Lua Cheia). |
-| `WEREWOLF_EYES_GLOW_HOURS` | padrão `24` | **Novo.** Horas online sem transformar até o olho Bronze Glow. |
+| `WEREWOLF_FORCE_NIGHT_START` / `_END` | `20` / `5` | Janela da noite da compulsão. |
+| `WEREWOLF_EYES_GLOW_HOURS` | padrão `24` | Configuração (funcionalidade não validada em jogo). |
 | `WEREWOLF_COOLDOWN_SECONDS` | `0` no teste | Recarga do Z da fera. **Defina o valor de produção.** |
 | `WEREWOLF_ANIMATION`, `WEREWOLF_NAME`, `WEREWOLF_REQUIRE_KNOWN_SPELL` | padrão | Lobisomem do kdu. |
 | `AETHERIUS_WEATHER_LAB_CALENDAR` | **não definir em produção** | Já existe no oficial. Com `1`, libera ajuste de data e o envio do GameDaysPassed (só laboratório, saves descartáveis). |
@@ -138,10 +126,8 @@ O patch usa LF; em repositório CRLF use `--ignore-whitespace`. Alternativa: cop
 ## 3. Cliente e UI Core (`02-cliente`)
 
 Tudo o que a entrega de 20/11 trazia (`client/src/sobrenatural/*`, serviços, `appearance.ts`, `formView.ts`, módulo `client/ui-core/modules/supernatural/*`, `modules.json`, `hud.html`/`hud.js`, `index.html`), mais em 21/11:
-- `client/src/services/services/timeService.ts`: projeta `skyDaysPassed` e envia ao fork do céu pelo evento local `AetheriusSkyClockSnapshot` (invalidação, reenvio pós-load/RaceSex, validade de 90 s); `0x39` segue reservado ao laboratório.
-- `client/src/sync/appearance.ts` e `client/src/view/formView.ts`: olhos e rosto DVA aplicados no ator existente (FormKeys do ESP unificado); mantida a mudança do oficial de 19/11 em `formView.ts` (facções hostis).
-- `client/ui-core/modules/supernatural/moon-hud.js` (novo), `supernatural-hud.js`, `supernatural-hud.css`, `frontend/hud.html`: HUD da Lua; a chamada `window.setMoonHud?.()` é protegida.
-- `client/src/sobrenatural/supernaturalHud.ts`.
+- `client/src/services/services/timeService.ts`, `client/src/sync/appearance.ts`, `client/src/view/formView.ts` (mantida a mudança do oficial de 19/11 sobre facções hostis), `client/src/sobrenatural/supernaturalHud.ts`.
+- `client/ui-core/modules/supernatural/moon-hud.js` (novo), `supernatural-hud.js`, `supernatural-hud.css`, `frontend/hud.html`.
 - Testes novos: `client/ui-core/tests/moon-hud.test.cjs`, `client/meridian/time-service.test.cjs`.
 
 **Não incluído:** perfis `client/profiles/AETHERIUS - LOCAL` (só teste). Os perfis oficiais propostos estão em `07-load-order-e-manifestos/primeira-publicacao/profiles/`.
@@ -160,16 +146,16 @@ Distribuição: `skymp5-client.js` no mod do cliente oficial (`Platform\Plugins`
 ### 4.1 Mods para instalar e ativar nos perfis oficiais (QUALIDADE **e** PERFORMANCE)
 | Mod | Situação | Plugin | Observação |
 |---|---|---|---|
-| `AETHERIUS - SOBRENATURAL` | **novo no oficial, pasta única** | `AETHERIUS - SOBRENATURAL.esp` (ESPFE) + `.bsa` | Spells, perks e estágios das 3 maldições, disciplinas, poderes do COTV adaptados, Visão Vampírica, visual DVA (36 TXST, 12 HDPT, 2 FLST), runa do Ritual, SOUN/SNDR. Soltos: 61 WAV de SFX (Lorde/vampiro/fera, em `sound\fx\...`, precisam vencer o Hypertrichosis) e 4 WAV da Bruxa. `SKSE\Plugins\po3_MoonMod.dll` (céu). `Docs\AetheriusCeu\` (licença MIT/créditos). **Prioridade no modlist: acima de Hypertrichosis e de Moons and Stars.** |
+| `AETHERIUS - SOBRENATURAL` | **novo no oficial, pasta única** | `AETHERIUS - SOBRENATURAL.esp` (ESPFE) + `.bsa` | ESPFE com 167 records (mapa em `07-load-order-e-manifestos/form-map.json`) e BSA. Soltos: 65 WAV em `sound\fx\...` (precisam vencer o Hypertrichosis), `SKSE\Plugins\po3_MoonMod.dll` e `Docs\AetheriusCeu\` (licença MIT/créditos). **Prioridade no modlist: acima de Hypertrichosis e de Moons and Stars.** |
 | `AETHERIUS - LOBISOMEM TRANSFORMACAO` | novo no oficial (kdu) | — | Animação/sons da transformação. |
-| `Colored Magic Auras` | novo (Nexus 25773) | `Colored Magic Auras.esp` (ESL) + BSA | Auras do Feral e da Sobrecarga. |
+| `Colored Magic Auras` | novo (Nexus 25773) | `Colored Magic Auras.esp` (ESL) + BSA | Dependência do Sobrenatural. |
 | `New Creature Animation - Werewolf` | novo (substitui Precision Creatures) | `Werewolf_New_Anim.esp` | Exige regerar o Pandora. |
-| `Miggyluv's Eyes` | novo no oficial | `Miggyluv's Eyes.esp` | Olhos violeta da Bruxa e Bronze do lobisomem. |
+| `Miggyluv's Eyes` | novo no oficial | `Miggyluv's Eyes.esp` | Dependência do Sobrenatural. |
 | `Fangs and Eyes - A Vampire Appearance Mod` | atualizado (19/11) | `BVFE.esp` (inalterado) + BSAs | Substituição direta da versão antiga. |
 | `Moons and Stars - Sky Overhaul SKSE` | **já existe** no oficial | `MoonsAndStars.esp` | Continua ativo (ESP e texturas); a DLL dele perde para a da pasta única. O `po3_MoonMod.ini` que vale é o do **Rudy ENB SE for Obsidian Weathers** (SHA-256 `07927BD2…C89B`). |
 | `AETHERIUS - LOBISOMEM` (kdu) | sem mudança | `AETHERIUS - LOBISOMEM.esp` | Continua separado. |
 | ~~`AETHERIUS - Vampire Lord and Werewolf SFX`~~, ~~`AETHERIUS - SOBRENATURAL - VISOES.esp`~~, ~~`AETHERIUS - DVA Visuals`~~ | **absorvidos** | — | Não instalar; conteúdo dentro de `AETHERIUS - SOBRENATURAL`. |
-| ~~`Dynamic Vampire Appearance`~~ (original) | **não usar** | — | Iniciaria 2 quests e sobrescreveria 2 MGEF do Lorde. |
+| ~~`Dynamic Vampire Appearance`~~ (original) | **não usar** | — | Iniciaria 2 quests e sobrescreveria 2 MGEF do Dawnguard. |
 | ~~Precision Creatures~~ | removido | — | Desativar e remover. |
 
 ### 4.2 Ordem dos plugins
@@ -198,7 +184,7 @@ Funcionamento do launcher (inalterado): uma release por mod, título = nome exat
 | `New Creature Animation - Werewolf` | `New.Creature.Animation.-.Werewolf.zip` | ESP + animações |
 | `Miggyluv's Eyes` | nome gerado pelo GitHub (confira o título **exato** `Miggyluv's Eyes`) | 416 MB |
 
-**B) Nova versão:** `Fangs and Eyes - A Vampire Appearance Mod` (apague a antiga), `Pandora - Output` (regerado no oficial), `AETHERIUS - UI CORE` (módulo `supernatural` com HUD da Lua, Cálice, selo, ritual, botões), `AETHERIUS - MERIDIAN - COMPATIBILIDADE` (aba Sobrenatural do F7, `06-painel-adm`).
+**B) Nova versão:** `Fangs and Eyes - A Vampire Appearance Mod` (apague a antiga), `Pandora - Output` (regerado no oficial), `AETHERIUS - UI CORE` (módulo `supernatural`, gerado de `02-cliente`), `AETHERIUS - MERIDIAN - COMPATIBILIDADE` (aba Sobrenatural do F7, `06-painel-adm`).
 
 **C) Remover/não publicar:** `Precision Creatures`; versão antiga do Fangs and Eyes; **não** publicar `AETHERIUS - Vampire Lord and Werewolf SFX` nem `AETHERIUS - DVA Visuals` (se algum chegou a ser publicado em teste, apague). O launcher não remove pastas antigas do disco do jogador; o que as desativa é o perfil.
 
@@ -216,23 +202,13 @@ Sem mudança desde 20/11. Ver `06-painel-adm/LEIA-ME_PAINEL-ADM.md`: arquivos de
 
 ## 6. Estado funcional (honesto)
 
-**Validado em jogo (solo, 19/11):** HUD da Reserva e Visão Vampírica; selo e Ritual da Bruxa; transformação forçada pelo F7; raça vampírica.
+**Validado em jogo (solo, 19/11):** HUD da Reserva de Sangue; Visão Vampírica; raça vampírica; selo do Vínculo do Véu e HUD/timer do Ritual da Bruxa, com sussurros; transformação forçada do lobisomem pelo F7.
 
-**Revisado, testado por automação e instalado no laboratório (perfil LOCAL, 21/11), ainda sem teste em jogo:**
-- Lua de Masser, HUD da Lua, olhos Bronze e transformação na Lua Cheia;
-- céu sincronizado (fork do Moons and Stars) — carga da DLL e céu com dois jogadores pendentes;
-- aparência do vampiro por estágio, boca, olhos de combate e visão;
-- ESP/pasta únicos (instalados também nos perfis locais GRAFICO e PERFORMANCE);
-- tudo o que a entrega de 20/11 listava como pendente de reteste (Forma da Besta, mãos da fera, auras, runa, Lorde, áudio para observadores, Grip).
+O restante do código desta entrega **não foi validado em jogo** e não está descrito nesta documentação.
 
-**Problemas conhecidos (herdados, NÃO resolvidos):** T1/T2 (o Z não transforma: comando de voz não chega ao servidor; o botão Forma da Besta contorna para o lobisomem); T10 (avanço do Morcego); uivo por estágio depende do Z; XP de maldição pendente.
+**Problemas conhecidos, observados em jogo e não resolvidos:** o Z não transforma (comando de voz não chega ao servidor); o avanço do Morcego não funciona; XP de maldição pendente.
 
-**Limites conhecidos de 21/11:**
-- A DLL do céu só carrega em **AE 1.6.1170** (recusa limpa com log em outra versão; o céu volta ao comportamento local).
-- Argoniana feminina sem olho Bronze; Argoniano/Khajiit sem visual DVA (decisões do dev).
-- O evento local do céu pode ser forjado por script no próprio cliente; o efeito é só visual naquele cliente (o servidor não usa o evento).
-
-**Roteiros de validação:** `05-documentacao/ETAPA-2_lua-de-masser.md`, `ETAPA-2_ceu-sincronizado.md` (dois jogadores, F7 de hora/pausa/clima regional), `ETAPA-3_aparencia-vampiro.md`, `ETAPA-4_unificacao-esp.md` (aceite), `ETAPA-3_vampirismo-mecanicas.md`, `ETAPA-4_bruxaria-vinculo-do-veu.md`, `PENDENCIAS.md`, `TESTE-JOGO_19-11.md`. Para chegar à Lua Cheia sem esperar, use `AETHERIUS_WEATHER_LAB_CALENDAR=1` **só em laboratório**, com saves descartáveis.
+**Como funciona e roteiro de validação:** `05-documentacao/SISTEMA_SOBRENATURAL.md`.
 
 ---
 

@@ -425,3 +425,10 @@ Neon aprovou o candidato sem achados. Instalado nos perfis LOCAL, GRAFICO e PERF
 ## 21/11/2026 — Entrega_Sobrenatural_21_11 (versão definitiva para integração oficial)
 
 Montada pelo Opus sobre a 20_11 com merge de 3 vias do delta de 21/11 (sem conflitos; oficial de 19/11 inalterado). Patches: servidor 92 arquivos, cliente 39. Na árvore oficial mesclada: Sobrenatural 391/391 por modo, gamemode 164/164, cliente 8/8, tsc e webpack OK. Pasta única `AETHERIUS - SOBRENATURAL`, perfis e manifestos oficiais propostos (437 slots preservados). Neon: 1 P1 (PNG corrompido no patch), 1 P2 (perfis) e 1 P3 corrigidos e reconfirmados; aprovado sem achados. [Guia](entrega-21-11-integracao-oficial.md) · [Revisão](revisao-entrega-21-11-neon.md).
+
+## 21/11/2026 — Repositório e documentação finais
+
+- Repositório `Aetherius_Sobrenatural` atualizado a partir da `Entrega_Sobrenatural_21_11` (commit `2c829d4`): patches, painel, load order e manifestos, mod próprio (ESP leve, DLL do céu, sons da Bruxa), `FUNCIONAMENTO.md` (só o validado em jogo), Códex das Pragas em PDF e histórico de desenvolvimento. O BSA com assets do DVA e os 61 WAV de SFX ficam fora do Git (estão na entrega e no `aetherius-mods`).
+- Documentação da entrega simplificada a pedido do dev: um documento técnico e conceitual ([funcionamento.md](funcionamento.md)) cobrindo a base e o que foi validado em jogo; o restante do histórico continua neste Acervo e em `docs/desenvolvimento/` do repositório.
+- Códex das Pragas refeito para jogadores (sem dados de administração nem números de bônus), com capa a partir das referências de arte, em PDF.
+- Status: pronto para integração pelo dev oficial; testes em jogo das funcionalidades de 20 e 21/11 pendentes.

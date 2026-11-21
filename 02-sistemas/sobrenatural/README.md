@@ -2,11 +2,11 @@
 titulo: Sobrenatural (Maldições e Pragas)
 tipo: sistema
 status: rascunho
-fase: em-desenvolvimento
+fase: pronto-para-integracao
 responsaveis: [pablo-rodrigues1, kdu]
 repositorio: https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural
 depende_de: [../ui-core/README.md, ../painel-adm/README.md, ../gameplay-core/README.md, ../lobisomem/README.md]
-atualizado: 2026-11-19
+atualizado: 2026-11-21
 tags: [sobrenatural, maldicoes, vampirismo, licantropia, bruxaria, ui-core, servidor]
 relacionados: [etapa-2-transformacao-forcada.md, ../../03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md, diario.md, especificacao.md, direcao-de-arte.md, proposta-textos.md, ../lobisomem/README.md]
 ---
@@ -17,9 +17,12 @@ relacionados: [etapa-2-transformacao-forcada.md, ../../03-decisoes/ADR-0020-sobr
 Três maldições externas a Classe e Profissão: Vampirismo, Licantropia e Bruxaria. Só a staff concede uma maldição, pelo Painel Administrativo. O jogador evolui por 6 estágios de XP de maldição (2.000.000 XP no total), e tudo aparece no módulo **Sobrenatural** do UI Core.
 
 ## Onde está o código
-- Desenvolvimento local em `C:\Code\Aetherius - New Systems\Sobrenatural` (`AGENTS.md` e `RETOMADA.md` na pasta do projeto). Ainda não há repositório próprio; tudo será compilado em uma pasta final.
+- **Repositório:** https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural (atualizado com a entrega de 21/11, commit `2c829d4`).
+- **Entrega definitiva para integração no oficial:** `Entrega_Sobrenatural_21_11` (guia em [entrega-21-11-integracao-oficial.md](entrega-21-11-integracao-oficial.md)). Patches sobre o oficial de 19/11, aplicando sem conflito; aprovada pelo Neon sem achados.
+- **Como funciona:** [funcionamento.md](funcionamento.md) (base do sistema e funcionalidades validadas em jogo).
+- **Códex das Pragas** (regras e roleplay para jogadores, PDF): `docs/Codex_das_Pragas.pdf` no repositório.
 - Lobisomem: construído **a partir do pacote de kdu** ([Lobisomem sincronizado](../lobisomem/README.md)), que é dono da forma da fera.
-- UI Core: módulo `supernatural` (rota `/supernatural`, slot radial 8) já presente no catálogo de navegação.
+- UI Core: módulo `supernatural` (rota `/supernatural`, slot radial 8).
 
 ## Escopo
 - Inclui: setagem/remoção pelo painel; keyword permanente só no servidor (`JogadorVampiro`, `JogadorLobisomem`, `JogadorBruxa`); reset de classe na setagem; XP e 6 estágios; Disciplinas (vampiro) e Vertentes (bruxa); atributos, perks e poderes por estágio; as 4 telas da UI.

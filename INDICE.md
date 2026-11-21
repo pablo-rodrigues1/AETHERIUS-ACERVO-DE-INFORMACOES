@@ -27,6 +27,8 @@
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
 - `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
 - `02-sistemas/sobrenatural/README.md` — Sobrenatural: maldições (vampiro, lobisomem, bruxa), setagem pelo painel, keyword no servidor, 6 estágios até 2M XP, UI.
+- `02-sistemas/sobrenatural/funcionamento.md` — Como o sistema funciona (técnico e conceitual), base e funcionalidades validadas em jogo.
+- `02-sistemas/sobrenatural/entrega-21-11-integracao-oficial.md` — Guia de integração da entrega definitiva de 21/11.
 - `02-sistemas/sobrenatural/especificacao.md` — Transcrição da planilha de maldições e regras do dev.
 - `02-sistemas/sobrenatural/direcao-de-arte.md` — Padrão visual e análise das referências de UI (estágios, Disciplinas).
 - `02-sistemas/sobrenatural/proposta-textos.md` — Proposta de textos de Lobisomem, Bruxa e tela vazia.
