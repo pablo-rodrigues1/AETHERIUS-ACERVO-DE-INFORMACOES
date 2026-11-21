@@ -3,7 +3,7 @@ titulo: Diário do Aetherius UI Core
 tipo: historico
 status: ativo
 responsaveis: [mercurius17]
-atualizado: 2026-11-14
+atualizado: 2026-11-20
 tags: [diario, interface]
 relacionados: [README.md]
 ---
@@ -12,6 +12,16 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico do desenvolvimento, do mais recente para o mais antigo. Entradas curtas.
+
+## 2026-11-20, performance dos menus (Meridian / Aetherius UI) (mercurius17 / Claude Opus 5.5)
+- **Feito:** investigação de performance com três modelos em paralelo (Sol High, Gemini 4 Argon High, Opus 5.5 Medium), revisão de código e segurança, benchmark cruzado num harness único e versão final integrada. Entregue em `ENTREGA_PERFORMANCE_UI_2026-11-20/` (patch de 13 arquivos, guia de integração, relatório PDF, testes e benchmarks), **não aplicado** no repositório.
+  - Causa do "Aguardando estado do servidor": todo menu abria do zero, as páginas do snapshot eram pedidas em série e o servidor reconstruía o modelo do inventário a cada página (paginação O(n²)).
+  - Versão final: cache entre aberturas com revalidação condicional (`knownRevision` → `notModified`), pré-carga no radial e após o login (itens e feitiços), páginas em paralelo, servidor com o modelo montado uma vez por abertura e paginação O(n), fila da ponte que não trava os outros menus enquanto o Papyrus lê escolas de magia, loader de módulos em paralelo, snapshot do baú no pacote de abertura, animações do radial e do workspace encurtadas (mesmo estilo). Desfoque e transparência mantidos.
+  - Segurança: cota geral mantida em 30/10 s; a cota de páginas vale só para continuação de inventário/feitiços com revisão e nunca reconstrói o modelo. As ações ficam travadas até o servidor confirmar o estado.
+  - Resultado (simulação Chrome/Node, 300 itens, RTT 40 ms): reabrir o inventário 1.060 → 34 ms até a lista; primeira abertura após o login 1.163 → 76 ms; CPU do servidor por abertura com 600 itens 64,9 → 13,0 ms.
+- **Testes:** suítes do projeto 50/51 (a falha restante, `armor-native-isolation`, exige o addon nativo e falha também no original); navegador 6/6; contrato do servidor 6/6. Nada medido em jogo; a DLL SKSE (`main.cpp`) não foi compilada.
+- **Próximo:** o mercurius17 decidir se aplica; compilar a DLL; seguir o roteiro de validação em jogo do guia (11 verificações).
+- **Bloqueios:** nenhum
 
 ## 2026-11-14, impacto da conciliação documental de feitiços (mercurius17 / Codex)
 - **Feito:** registrada a [lista de 164 feitiços por classe](../gameplay-core/feiticos-por-classe.md), sincronizada entre as duas abas da planilha e as fichas da Staff.

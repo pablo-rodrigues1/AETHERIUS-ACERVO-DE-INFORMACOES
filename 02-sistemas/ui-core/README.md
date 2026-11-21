@@ -6,7 +6,7 @@ fase: em-desenvolvimento
 responsaveis: [mercurius17]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusUI_Core
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-14
+atualizado: 2026-11-20
 tags: [interface, meridian, cef, skse, chargen, inventario]
 relacionados: [diario.md, ../gameplay-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
