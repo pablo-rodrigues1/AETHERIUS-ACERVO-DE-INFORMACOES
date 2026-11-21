@@ -4,7 +4,7 @@ Candidato do laboratório em 21/11/2026. O servidor publica o dia de Masser e Se
 
 ## Fontes, patches e artefatos
 
-A raiz do laboratório é `C:\Code\Aetherius - Servidor Local`. Os caminhos abaixo são relativos a ela. Os repositórios oficiais, o runtime de jogo e `C:\modOrganizer` ficaram fora da entrega.
+A raiz do laboratório é `C:\Code\Aetherius - Servidor Local`. Os caminhos abaixo são relativos a ela. O candidato foi construído fora do MO2. A instalação autorizada está registrada em [Instalação 21/11](#instalação-2111).
 
 | Parte | Base → candidato | Caminho de integração |
 |---|---|---|
@@ -86,4 +86,40 @@ node overlays/sobrenatural/teste-servico.cjs (Resolve-Path 'source/server/gamemo
 4. Exercitar Masser 7→0 e 0→1, Secunda na virada do inteiro e uma mudança de ângulo com escala 12. Preparar o estado inicial do relógio em um fixture separado do laboratório ou avançar usando `time.setHour`, que vai à próxima hora pedida sem habilitar ajuste de calendário. Observar os dois clientes na mesma amostra de fase. Medir a divergência imediatamente na virada e sua convergência. Testar entrada tardia, pausa/retomada `12→0→12`, carregar save, `RaceSex`, sair do jogo e reconectar em processo aberto. No ensaio de perda de transporte, reter **todos** os pacotes `gameTime`, inclusive respostas ao pedido de 60 s, por mais de 90 s, observar retorno ao calendário local e recuperar com um pacote novo.
 5. Repetir com aluguel e missão Missives em andamento e com efeito COTV ou uma Fera já em forma. Comparar deadlines locais com a execução sem o override e conferir que um salto visual não encerra esses estados. No servidor, exercitar três noites da Lua Cheia, compulsão, F7 e botão e comparar a fase com a HUD. Uma noite continua pertencendo ao dia em que começou mesmo após meia-noite. Anotar visibilidade das estrelas separadamente.
 
-A DLL e o bundle estão preparados fora do MO2. A aprovação de carga em Skyrim e a validação visual com dois jogadores ainda estão pendentes.
+A carga em Skyrim e a validação visual com dois jogadores ainda estão pendentes.
+
+## Instalação 21/11
+
+Instalação local autorizada pelo dev após a reconfirmação do Neon. Revisões conferidas em `source` `79ce921`, `client-source` `8cfa553` e overlay `81966c3`. Os patches 036 e 041 passaram novamente no reverse-check. O servidor LOCAL, o Skyrim e o MO2 permaneceram fechados.
+
+**Build e Prepare.** `scripts\Build.ps1 -SkipInstall` concluiu com as dependências já presentes. O primeiro Prepare detectou sete diferenças de mod/plugin entre o perfil versionado no cliente e o perfil LOCAL do MO2. O Prepare concluído usou `-PluginClient "C:\Code\Aetherius - Servidor Local\backups\ceu-2111\profile-snapshot" -PluginProfile "AETHERIUS - LOCAL"`, com cópias de `modlist.txt`, `plugins.txt` e `loadorder.txt` do MO2 verificadas por hash. Assim o runtime recebeu o perfil de teste efetivo sem alterar o espelho Git. Foram sincronizados 439 plugins, 128 regulares e 311 light. Os scripts rodaram com `-ExecutionPolicy Bypass` apenas no processo filho do PowerShell.
+
+| Arquivo nesta máquina | SHA-256 |
+|---|---|
+| `C:\Code\Aetherius - Servidor Local\runtime\server\dist_back\skymp5-server.js` | `0F94FC1B205450F9CF0ADAA8E69FE8EF278BFB39E21FA8E67FDE2C30F496D3A0` |
+| `C:\Code\Aetherius - Servidor Local\runtime\server\data\aetherius-loadorder.json` | `4D8515E2CFEB98B2EC982790BD2AB9B439131353CEEAE15F0C2F095FF998C0EA` |
+| `C:\modOrganizer\mods\AETHERIUS - SERVIDOR LOCAL\Platform\Plugins\skymp5-client.js` | `24EA076F2BC4BF0D95939D3B7581B8928D555ECA484F75EA8B8005769EE8AFAC` |
+| `C:\modOrganizer\mods\AETHERIUS - SERVIDOR LOCAL\Platform\Plugins\skymp5-client.js.bak-ceu-2111` | `FD61C198FAA52E1A821106DFBCCC23CCBFCCA95F3B9A63AFFD9F900AD2935709` |
+| `C:\modOrganizer\profiles\AETHERIUS - LOCAL\modlist.txt` | `04F7B184C682B996BB55DBBE01A3E1C35F7A3CE098D9160EECE8BC81DB3035AD` |
+| `C:\modOrganizer\profiles\AETHERIUS - LOCAL\modlist.txt.bak-ceu-2111` | `31D0F1D2AC605887E462DACCF1C106F7634D7102D2DE08D3DAD0659A34C8E3FA` |
+| `C:\modOrganizer\mods\AETHERIUS - Ceu Sincronizado (LOCAL)\SKSE\Plugins\po3_MoonMod.dll` | `7BAD2A4CFC59259420CE39DC9A2FEE07F42052C70276F714B8724EB4F6AC2E8B` |
+| `C:\modOrganizer\mods\AETHERIUS - Ceu Sincronizado (LOCAL)\Docs\AetheriusCeu\LICENSE` | `51E657EA7520301284BD80D64088F91063A37724DF36DD147CE6DF21CF00943D` |
+| `C:\modOrganizer\mods\AETHERIUS - Ceu Sincronizado (LOCAL)\Docs\AetheriusCeu\CREDITS.md` | `EDF7EB72CD097416E4E180355CD581201ACCEAF3D2C69E075885627DFDA509C6` |
+| `C:\modOrganizer\mods\Rudy ENB SE for Obsidian Weathers - LUX - ELFX\SKSE\Plugins\po3_MoonMod.ini` | `07927BD2D4A697F978D0FA741A71E3D3970DDD6585ADDCB529E677B16330C89B` |
+| `C:\modOrganizer\mods\Address Library for SKSE Plugins\SKSE\Plugins\versionlib-1-6-1170-0.bin` | `C4093C569A3C83B26587F4B9EA4C55DE9AE6E73B84A2AF9FB3FBD30E2FE0D452` |
+
+**Verificação.** No `modlist.txt`, `+AETHERIUS - Ceu Sincronizado (LOCAL)` entrou imediatamente antes de `+Moons and Stars - Sky Overhaul SKSE`, linhas 391–392. Os outros perfis e os arquivos `plugins.txt` e `loadorder.txt` do LOCAL mantiveram seus bytes. `MoonsAndStars.esp` segue ativo. A DLL original foi preservada no mod upstream (SHA-256 `979DBA0B8AB2ADA76D00F213ADEA3A25631E1F78CAE3D31594B19E5F421B5C24`). O houseCARL `2.0.0+5e3c744862bc17c85ebe850830603a9a3e6f0779`, com leitura explícita do perfil LOCAL, confirmou:
+
+- `Platform\Plugins\skymp5-client.js` vence em `AETHERIUS - SERVIDOR LOCAL`.
+- `SKSE\Plugins\po3_MoonMod.dll` tem dois provedores para o mesmo caminho. A única cópia efetiva é o fork 2.0.2.1, em `AETHERIUS - Ceu Sincronizado (LOCAL)`. A inspeção dos 117 caminhos de DLL efetivos encontrou uma única identidade MoonMod. O houseCARL também lista os 15 slots padrão `1.0.0` dos metadados. A leitura do PE confirmou esses slots e a entrada configurada `1.6.1170.0`. A trava em `SKSEPlugin_Load` só aceita `1.6.1170.0`.
+- O INI efetivo vem do Rudy, com o SHA-256 aprovado. `versionlib-1-6-1170-0.bin` vence em `Address Library for SKSE Plugins` e tem cabeçalho interno formato 2 para `1.6.1170.0`. O jogo instalado é `1.6.1170.0` com SKSE `2.2.6`.
+
+O bundle de servidor preparado contém `skyDaysPassed`. Fora de um servidor em execução, `EnvironmentSystem.sendTime` foi exercitado com autoridade real e transporte mockado, produzindo `gameTime` v1 com `skyDaysPassed: 3.25`, `gameDaysPassed: null`, `dateChangesEnabled: false` e fase de Masser 1. A suíte Masser passou **21/21**. A flag `AETHERIUS_WEATHER_LAB_CALENDAR` estava desativada na configuração local verificada. Os logs estão em `C:\Code\Aetherius - Servidor Local\evidence` com prefixo `ceu-2111-`, incluindo o inventário, o fixture do pacote, os SHA-256 e a saída do Build/Prepare. A conexão real, o log de carga SKSE e o céu ainda dependem do ensaio em jogo.
+
+### Segunda máquina do dev
+
+1. Transferir a partir de `C:\Code\Aetherius - Servidor Local` os quatro arquivos `tools\native\sky-moons-client\skymp5-client.js`, `tools\native\sky-moons\po3_MoonMod.dll`, `tools\native\sky-moons\LICENSE` e `tools\native\sky-moons\CREDITS.md`. Conferir `Get-FileHash -Algorithm SHA256` de cada um contra a tabela acima antes de instalar.
+2. Com Skyrim e MO2 fechados, conferir Steam AE `1.6.1170.0`, SKSE `2.2.6` e a presença de `SKSE\Plugins\versionlib-1-6-1170-0.bin` no VFS LOCAL. Usar a raiz do MO2 dessa máquina. Resolver o vencedor LOCAL de `Platform\Plugins\skymp5-client.js` com houseCARL. Se vencer `AETHERIUS - SERVIDOR LOCAL` como nesta máquina, o destino é `<MO2>\mods\AETHERIUS - SERVIDOR LOCAL\Platform\Plugins\skymp5-client.js`. Copiar o arquivo atual para `skymp5-client.js.bak-ceu-2111` ao lado e substituir o arquivo efetivo pelo bundle aprovado. Manter a configuração de conexão e assinatura já usada pelo LOCAL.
+3. Copiar `<MO2>\profiles\AETHERIUS - LOCAL\modlist.txt` para `modlist.txt.bak-ceu-2111` na mesma pasta. Criar `<MO2>\mods\AETHERIUS - Ceu Sincronizado (LOCAL)\SKSE\Plugins` e colocar ali `po3_MoonMod.dll` com esse nome. Colocar `LICENSE` e `CREDITS.md` em `<MO2>\mods\AETHERIUS - Ceu Sincronizado (LOCAL)\Docs\AetheriusCeu`. No `modlist.txt` LOCAL, inserir uma única linha `+AETHERIUS - Ceu Sincronizado (LOCAL)` imediatamente antes de `+Moons and Stars - Sky Overhaul SKSE`. No painel do MO2 com a coluna Prioridade em ordem crescente, isso corresponde a um número de prioridade maior que o do original. Manter o original habilitado para prover o ESP, texturas e demais recursos.
+4. Conferir pelo houseCARL os quatro caminhos VFS citados acima. A DLL efetiva deve ser o fork e o INI deve continuar vindo do Rudy. A versão da Address Library deve corresponder ao executável. Verificar os hashes no destino, o backup do bundle e o backup do perfil. Selecionar **AETHERIUS - LOCAL** no MO2 quando for iniciar o ensaio autorizado. O teste em jogo segue os passos 3–5 da seção anterior.
+5. Para reverter com o MO2 e jogo fechados, restaurar `skymp5-client.js.bak-ceu-2111` sobre o bundle e retirar só a linha do override no LOCAL. Se o `modlist.txt` ainda estiver no estado instalado, restaurar `modlist.txt.bak-ceu-2111` também reverte a ativação. O fornecedor da DLL original volta a vencer.
