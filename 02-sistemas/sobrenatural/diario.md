@@ -380,3 +380,7 @@ O servidor oficial não tem fases da lua. O Moons and Stars (powerof3) calcula f
 - ADR-0027 aceito: o servidor enviará o GameDaysPassed sempre, para a lua ser a mesma para todos. Implementação condicionada ao levantamento de quem lê esse global.
 - Miggyluv's Eyes ativado também nos perfis GRAFICO - QUALIDADE e PERFORMANCE (backups `*.bak-miggy-2111`).
 - Argoniana feminina fica sem olho Bronze (dev: não precisa fornecer).
+
+## 21/11/2026 — Céu sincronizado (ADR-0027, relógio visual isolado das luas)
+
+Fork mínimo do MoonMod v2.0.2 (powerof3, MIT, `4732799`) para AE 1.6.1170: fase e ângulo de Masser e Secunda leem `skyDaysPassed` do servidor; o GameDaysPassed (`0x39`) do jogo nunca é escrito. Servidor `79ce921`, cliente `8cfa553`, fork `18ef3eb`, overlay `81966c3`. Neon: viabilidade aprovada com 3 P2/2 P3, implementação aprovada sem achados (557/557 por modo, 112 direcionados, CTest; 19 falhas do Meridian confirmadas preexistentes na base). Pendente: autorização do dev para instalar a DLL no perfil LOCAL e teste com dois jogadores. [Etapa](etapa-2-ceu-sincronizado.md) · [Revisão](revisao-ceu-sincronizado-neon.md).
