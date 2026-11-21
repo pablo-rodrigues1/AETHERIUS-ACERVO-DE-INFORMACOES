@@ -2,7 +2,7 @@
 titulo: Sobrenatural (Maldições e Pragas)
 tipo: sistema
 status: rascunho
-fase: pronto-para-integracao
+fase: em-teste
 responsaveis: [pablo-rodrigues1, kdu]
 repositorio: https://github.com/pablo-rodrigues1/Aetherius_Sobrenatural
 depende_de: [../ui-core/README.md, ../painel-adm/README.md, ../gameplay-core/README.md, ../lobisomem/README.md]
