@@ -107,6 +107,7 @@
 - `03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md` — Bootstrap verificável, pacote ativo restrito e preparação de homologação SkyMP.
 
 - `03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md` — Ghostshelf copiado para o privado com origem intacta, patch isolado e carregamento nativo conferido, sem mudar Guildas.
+- `03-decisoes/ADR-0027-ceu-sincronizado-pelo-gamedayspassed.md` — Servidor envia GameDaysPassed sempre para lua e estrelas iguais a todos e coerentes com a Lua Cheia de Masser.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

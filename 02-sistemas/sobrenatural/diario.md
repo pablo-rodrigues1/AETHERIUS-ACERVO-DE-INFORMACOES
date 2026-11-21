@@ -374,3 +374,9 @@ O servidor oficial não tem fases da lua. O Moons and Stars (powerof3) calcula f
 - **Terra** (cliente): `7e175bb` + correção `6c78e250`, laboratório `3f3b9d8`, patches 039/040. [Detalhes](etapa-2-hud-lua.md).
 - **Neon:** aprovado com 1 P3 (fixtures sem mock + chamada sem guarda), corrigido e reconfirmado: 453/453 por modo. [Revisão](revisao-lua-masser-neon.md). 33 HDPT Bronze conferidos por coleta houseCARL (Luna).
 - Pendentes: teste em jogo/CEF; ADR do envio permanente do GameDaysPassed (lua visível sincronizada); Miggyluv's Eyes ativo só no perfil LOCAL (desativado em GRAFICO e PERFORMANCE).
+
+## 21/11/2026 — Decisões do dev: céu sincronizado e perfis
+
+- ADR-0027 aceito: o servidor enviará o GameDaysPassed sempre, para a lua ser a mesma para todos. Implementação condicionada ao levantamento de quem lê esse global.
+- Miggyluv's Eyes ativado também nos perfis GRAFICO - QUALIDADE e PERFORMANCE (backups `*.bak-miggy-2111`).
+- Argoniana feminina fica sem olho Bronze (dev: não precisa fornecer).
