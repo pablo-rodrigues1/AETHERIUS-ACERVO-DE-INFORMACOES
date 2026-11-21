@@ -40,3 +40,9 @@ Opção A, por decisão do dev ("precisamos que o céu seja sincronizado para os
 - (+) Base para outras mecânicas que dependam da lua ou de dias passados.
 - (−) Scripts que reagem ao GameDaysPassed podem disparar com o salto inicial; exige o levantamento da condição 1.
 - (−) A fórmula da fase no servidor depende do `po3_MoonMod.ini` do Rudy ENB; trocar o INI exige revisar o servidor.
+
+## Atualização 21/11/2026 — levantamento de impacto e escolha da opção A
+
+O levantamento (`02-sistemas/sobrenatural/investigacoes/`, Sol High) confirmou que o global GameDaysPassed (`000039`) é lido pelo Curse of the Vampire (marcos de 10–50 dias), pelo prazo de reversão da Fera e por quests com estágio de falha (ex.: Guerra Civil 205, Missives 103). A primeira escrita do relógio do servidor pode saltar de 0 a ~30.192 dias (ou o inverso) e vencer todos esses prazos, inclusive antes de `nativeReadyAt`. **O envio permanente do GameDaysPassed (opção A original) fica vetado.**
+
+Dev escolheu isolar o relógio visual das luas: o GameDaysPassed do jogo permanece intocado e apenas as luas recebem o dia do servidor, por plugin SKSE próprio ou fork do Moons and Stars. Etapa atual: estudo de viabilidade e protótipo no laboratório, sem instalação no modpack sem autorização do dev.

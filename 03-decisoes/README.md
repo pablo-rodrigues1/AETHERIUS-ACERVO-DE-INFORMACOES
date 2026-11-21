@@ -1,6 +1,6 @@
 # Decisões (ADRs)
 
-- [ADR-0027](ADR-0027-ceu-sincronizado-pelo-gamedayspassed.md) — Céu sincronizado pelo GameDaysPassed do servidor, aceito em 21/11/2026; implementação condicionada ao levantamento de impacto.
+- [ADR-0027](ADR-0027-ceu-sincronizado-pelo-gamedayspassed.md) — Céu sincronizado: GameDaysPassed do jogo intocado (risco a vampirismo, Fera e quests); luas recebem o dia do servidor por relógio visual isolado. Viabilidade em estudo (21/11/2026).
 - [ADR-0026](ADR-0026-cenario-ghostshelf-isolado-no-privado.md) — Cenário Ghostshelf isolado no privado, aceito em 18/11/2026; Guildas preservadas e jogo pelo dev.
 
 Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR que a substitua (ver `REGRAS.md`, seção 5).
