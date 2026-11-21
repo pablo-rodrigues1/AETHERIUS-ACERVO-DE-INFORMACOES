@@ -87,3 +87,21 @@ Enviar GameDaysPassed sempre (hoje só no laboratório). Mudança pequena no ser
 - Função de fase + campo no snapshot: baixa/média.
 - Envio permanente de GameDaysPassed: alta (Sol High), após ADR.
 - Gatilho de lua cheia no `forced-werewolf.js`: média (Terra High ou Sol, pela proximidade com a compulsão já feita pelo Sol), revisão Gemini 4 Neon.
+
+## 7. Decisões do dev (21/11)
+- **Masser governa:** na Lua Cheia de Masser os lobisomens são transformados obrigatoriamente (mesma sequência da compulsão de 72 h).
+- **HUD da Lua para lobisomens**, canto inferior direito ao lado de fome/sede/frio, como as HUDs de vampiro e bruxa. Três propostas em `C:\Code\Aetherius - New Systems\Sobrenatural\preview\hud-lua-propostas.html` (A Olho de Masser, B Garras da Lua, C Ciclo de Masser); aguardando escolha.
+- **Olhos amarelos** (Miggyluv's Eyes, Nexus 155332): **Bronze Light** como padrão para todo lobisomem; **Bronze Glow** à noite. Headparts encontrados no ESP: `MiggyEyesBronze01/02` (+`F`), `MiggyEyesBronzeGlow`/`MiggyEyesBronzeFGlow`, `MiggyEyesBronze01Glow`/`01FGlow`; texturas por raça (Alt, Arg, Bos, Dun, Kha, Orc). Confirmar pelas texturas qual de `01`/`02` é Light. Mesma regra de fallback da Bruxa para raças sem Glow.
+
+Ainda em aberto: itens 2, 3, 4 e 5 da seção 4.
+
+## 8. Decisões do dev (21/11, 2ª rodada)
+- **Olho Glow** só quando o lobisomem está há **≥ 24 h sem se transformar**; abaixo disso, Bronze Light. Implementação proposta: reaproveitar `row.onlineMs` da compulsão (`forced-werewolf.js`), comparando com um segundo limite (`WEREWOLF_EYES_GLOW_HOURS`, padrão 24). A aparência só é enviada na **borda** (cruzou 24 h → Glow; transformação confirmada zera o contador → Light), nunca a cada tick. Custo: uma comparação a mais por lobisomem online no tick de 250 ms já existente; sem timer, arquivo ou pacote novo. O contador é de tempo real **online**, como as 72 h.
+- **HUD: proposta A**, posicionada **acima da HUD de sobrevivência**, menor (~56 × 56 px a 1080p), sem fundo/anel externo, traço translúcido. Prévia atualizada no mesmo HTML (seção "A escolhida — versão integrada"). Posição exata a medir na HUD de sobrevivência real (seletor não localizado no cliente oficial nesta coleta).
+
+## 9. Decisões do dev (21/11, 3ª rodada) e premissas do orquestrador
+- Transformação obrigatória nas **3 noites** de Masser cheia (`floor(gameDaysPassed) % 24` em 0, 1, 2).
+- **Olho Glow durante todo o período de Lua Cheia** (os 3 dias inteiros), além da regra das 24 h sem transformar.
+- **HUD A aprovada** na versão integrada (~56 px, acima da sobrevivência).
+- Premissas do orquestrador (dev pode reverter): noite = 20h–5h, como a compulsão; a noite pertence ao dia em que começa (horas < 5 contam para o dia anterior); uma transformação por noite; transformação confirmada por qualquer via (compulsão, lua, F7, botão) dentro da noite cheia conta como cumprida; ADR do GameDaysPassed adiado — a mecânica é só servidor e não depende do céu.
+- Despacho: Sol High (servidor: fase, gatilho, olhos, propriedade da HUD), Terra High (HUD no cliente). Revisão: Gemini 4 Neon.

@@ -366,3 +366,11 @@ O teleporte indexado acompanha o movimento do modelo dos observadores. A concent
 ## 21/11/2026 — Fases da lua e lua cheia como gatilho da compulsão (análise)
 
 O servidor oficial não tem fases da lua. O Moons and Stars (powerof3) calcula fase e posição só a partir do GameDaysPassed; o INI que vale é o do Rudy ENB, cuja fase é igual à original (Masser 24 dias, Secunda 20). A lua cheia pode entrar como segundo critério no mesmo `tick()` das 72 h. Para o céu bater com a mecânica, o GameDaysPassed teria que ser enviado sempre (hoje só no laboratório), o que pede ADR. Nada implementado; decisões pendentes com o dev. [Investigação](investigacoes/INVESTIGACAO_21-11_fases-da-lua.md).
+
+## 21/11/2026 — Lua de Masser: compulsão na Lua Cheia, olhos Bronze e HUD da Lua
+
+- **Dev:** Masser governa; transformação obrigatória nas 3 noites de Lua Cheia (`floor(dias) % 24` ∈ {0,1,2}, noite 20h–5h, uma vez por noite, qualquer via cumpre). Olhos Bronze Light para todo lobisomem; Bronze Glow após 24 h online sem transformar ou nos 3 dias de cheia. HUD proposta A, acima da sobrevivência, ~56 px.
+- **Sol** (servidor): `48fb5fe`, `7dab4e2`, `a3ef672` sobre `9e313e4`, espelho `8b233e3`. Botão Forma da Besta continua sem zerar as 72 h (decisão de 19/11), mas cumpre a noite cheia por recibo separado. Argoniana feminina mantém olhos originais (sem HDPT Bronze feminino no mod; pendência do dev). [Detalhes](etapa-2-lua-de-masser.md).
+- **Terra** (cliente): `7e175bb` + correção `6c78e250`, laboratório `3f3b9d8`, patches 039/040. [Detalhes](etapa-2-hud-lua.md).
+- **Neon:** aprovado com 1 P3 (fixtures sem mock + chamada sem guarda), corrigido e reconfirmado: 453/453 por modo. [Revisão](revisao-lua-masser-neon.md). 33 HDPT Bronze conferidos por coleta houseCARL (Luna).
+- Pendentes: teste em jogo/CEF; ADR do envio permanente do GameDaysPassed (lua visível sincronizada); Miggyluv's Eyes ativo só no perfil LOCAL (desativado em GRAFICO e PERFORMANCE).
