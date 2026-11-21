@@ -1,6 +1,6 @@
 # Etapa 3 — Aparência vampírica por Reserva de Sangue
 
-Candidato de 21/11/2026, Sol High. Revisão cruzada pelo Gemini 4 Neon e ensaio em Skyrim pendentes. O levantamento original contém os IDs, a fonte Papyrus, os três perfis e as alternativas consideradas. [Investigação](investigacoes/INVESTIGACAO_21-11_aparencia-vampiro.md).
+Entrega de 21/11/2026, Sol High. Gemini 4 Neon aprovou sem achados em `C:\Code\Aetherius - New Systems\Sobrenatural\docs\REVISAO-APARENCIA-VAMPIRO_neon.md`. A instalação autorizada foi verificada nos perfis LOCAL e GRÁFICO – QUALIDADE. O ensaio em Skyrim segue pendente. [Investigação](investigacoes/INVESTIGACAO_21-11_aparencia-vampiro.md), [instalação](#instalação-2111).
 
 ## Regras aprovadas
 
@@ -46,7 +46,7 @@ Arquivos em `C:\Code\Aetherius - New Systems\Sobrenatural\entregas\AETHERIUS - D
 
 O ESPFE conserva os IDs locais e os masters Skyrim e Dawnguard do DVA 1.4. O descritor usa o novo nome de plugin. O houseCARL leu os 50 registros por caminho absoluto, fora da ordem ativa: 36 TXST, 12 HDPT e duas FLST. A filtragem preserva apenas esses três grupos visuais e verifica ausência de VMAD nos registros. As QUST/GLOB e os dois overrides do Lorde ficam fora. O BSA contém seis NIF e quarenta DDS, sem PEX, fonte Papyrus ou imagem do MCM. A extração por houseCARL confirmou SHA-256 idêntico ao BSA original em 46 de 46 arquivos.
 
-Para reproduzir, na raiz do laboratório execute `python overlays/sobrenatural/gerar-dva-visual.py 'C:\modOrganizer\mods\Dynamic Vampire Appearance' 'C:\Code\Aetherius - New Systems\Sobrenatural\entregas\AETHERIUS - DVA Visuals'`. O gerador verifica os hashes da versão original e preserva os arquivos locais de mídia fora do Git. A instalação do pacote e a desativação do DVA original em qualquer perfil dependem de nova autorização expressa.
+Para reproduzir, na raiz do laboratório execute `python overlays/sobrenatural/gerar-dva-visual.py 'C:\modOrganizer\mods\Dynamic Vampire Appearance' 'C:\Code\Aetherius - New Systems\Sobrenatural\entregas\AETHERIUS - DVA Visuals'`. O gerador verifica os hashes da versão original e preserva os arquivos locais de mídia fora do Git. A autorização de 21/11 cobriu LOCAL e GRÁFICO – QUALIDADE nesta máquina.
 
 ## Validação
 
@@ -78,8 +78,31 @@ node overlays/sobrenatural/teste-servico.cjs (Resolve-Path 'source/server/gamemo
 
 ## Roteiro em jogo
 
-1. Após autorização, aplicar o delta 037 ou copiar os sete módulos do overlay. Aplicar o delta 042 e gerar o bundle com `npm run build` em `C:\Code\Aetherius - Servidor Local\client-source\client`. Instalar o pacote nos perfis de teste do servidor e de todos os clientes. Comparar índice efetivo do ESPFE e FormIDs de exemplo, porque o wire usa IDs numéricos. No perfil gráfico, verificar o vencedor esperado em `00283C:Dawnguard.esm` e `00CD5B:Dawnguard.esm` e as texturas do BSA no VFS.
+1. Usar o LOCAL preparado nesta máquina. Para preparar outro ambiente autorizado, aplicar o delta 037 ou copiar os sete módulos do overlay, aplicar o delta 042 e gerar o bundle com `npm run build` em `C:\Code\Aetherius - Servidor Local\client-source\client`. Instalar o pacote nos perfis de teste do servidor e de todos os clientes. Comparar índice efetivo do ESPFE e FormIDs de exemplo, porque o wire usa IDs numéricos. Verificar `00283C:Dawnguard.esm` e `00CD5B:Dawnguard.esm` e as texturas do BSA no VFS.
 2. Preparar um vampiro humano A, vizinho B e observador tardio C. Anotar a aparência original antes do F7. Com a Reserva real e o controle de dados do laboratório, ensaiar 70/69, 50/49, 31/30 e zero. Observar olhos e pele por A, B e C. Usar Poção de Sangue para conferir a subida de Stage sem boca.
 3. Usar Visão, depois Força ou Celeridade, e conferir a troca e a volta ao visual anterior quando cada poder expira. Repetir em Feral. Testar movimento, ataque, arma e alvo durante as bordas, observando continuidade no vizinho. Verificar o Aura Whisper no dono.
 4. Com a alimentação habilitada, A se alimenta de B. Conferir boca após crédito, entrada de C durante o prazo, renovação com outro alvo, relog e retorno ao Stage ao fim dos 180 s. Repetir com alimentação interrompida e conferir ausência de boca. Testar a limpeza em morte, abatimento ou perda da maldição.
 5. Ensaiar humano, elfo e orc de ambos os sexos e o fallback racial de Argoniano e Khajiit. Testar ida e volta do Lorde durante um efeito. Retirar a maldição pelo F7 e verificar os originais após relog. Trocar entre Vampiro, Bruxa e Lobisomem, incluindo Bronze em Lua Cheia. Abrir o RaceMenu pelo F7 e verificar a reaplicação depois da edição e a restauração da nova base.
+
+## Instalação 21/11
+
+O dev autorizou a instalação após o parecer do Gemini 4 Neon, aprovado sem achados. Em `C:\Code\Aetherius - Servidor Local`, foram conferidos o servidor `9f01499`, o cliente `3c80c2c`, o overlay `f6e0092` e o reverse-check dos patches 037 e 042. Skyrim, MO2 e o servidor LOCAL estavam fechados antes e depois da instalação.
+
+| Perfil MO2 em `C:\modOrganizer\profiles` | Aetherius DVA Visuals | Dynamic Vampire Appearance original |
+|---|---|---|
+| `AETHERIUS - LOCAL` | Mod ativo e ESPFE acrescentado ao fim da ordem. 440 plugins ativos | Ausente de `modlist.txt`, `plugins.txt` e `loadorder.txt`, como antes |
+| `AETHERIUS - GRAFICO - QUALIDADE` | Mod ativo e ESPFE no lugar do plugin anterior. 439 plugins ativos | Mod desmarcado em `modlist.txt`; ESP removido de `plugins.txt` e `loadorder.txt` |
+
+Os dois perfis usam o pacote em `C:\modOrganizer\mods\AETHERIUS - DVA Visuals`. Os SHA-256 do ESPFE e do BSA correspondem à tabela do pacote. O bundle `93FD7C93DC3EA4C96A55B18B22B56A40A9823D43E2B8090984464874C64F4854` foi instalado em `C:\modOrganizer\mods\AETHERIUS - SERVIDOR LOCAL\Platform\Plugins\skymp5-client.js`, vencedor no VFS LOCAL. O bundle anterior `24EA076F2BC4BF0D95939D3B7581B8928D555ECA484F75EA8B8005769EE8AFAC` está no arquivo irmão `skymp5-client.js.bak-dva-2111`.
+
+O houseCARL `2.0.0+5e3c744862bc17c85ebe850830603a9a3e6f0779` conferiu os dois perfis. O LOCAL foi lido por uma instância isolada do houseCARL, com um INI temporário que seleciona o LOCAL e resolve os perfis reais via `base_directory`. A seleção do MO2 real permaneceu em GRÁFICO – QUALIDADE. [Implementação da resolução do perfil no houseCARL](https://github.com/Avick3110/houseCARL/blob/5e3c744862bc17c85ebe850830603a9a3e6f0779/src/housecarl-core/Mo2Instance.cs).
+
+- Em ambos, os 46 NIF/DDS do DVA vêm de `AETHERIUS - DVA Visuals.bsa`. O ESPFE visual é o vencedor de `000814` (HDPT `MaleEyesVampireDVA01`, runtime `FE137814`) e `000806` (TXST `SkinHeadFemaleVampireDVA01`, runtime `FE137806`).
+- `DLC1VampireChangeEffect` (`00283C:Dawnguard.esm`) e `DLC1RevertEffect` (`00CD5B:Dawnguard.esm`) têm `Dawnguard.esm` como único provedor. No GRÁFICO – QUALIDADE, isso foi conferido comparando o vencedor antes e depois da troca. No LOCAL, Dawnguard já era o vencedor.
+- As QUST `DVA_ControlQuest` (`000830`) e `DVA_ConfigQuest` (`000834`) ficaram fora da ordem ativa nos dois perfis. Os três PEX do DVA ficaram fora do VFS pesquisado. Os arquivos originais do mod permanecem no disco com os hashes da investigação.
+
+`scripts\Build.ps1 -SkipInstall` e webpack concluíram. `scripts\Prepare.ps1 -PluginClient 'C:\Code\Aetherius - Servidor Local\backups\dva-2111\profile-snapshot' -PluginProfile 'AETHERIUS - LOCAL'` usou cópias fiéis dos três arquivos do perfil LOCAL. A primeira execução herdou a revisão do repositório pai do snapshot. Uma segunda conferiu a revisão cliente `3c80c2c` no Git e registrou a mesma ordem, com **440 plugins**, 128 regulares e 312 light. O runtime recebeu o ESPFE visual com o SHA-256 aprovado, índice `FE137`, e os sete módulos de gamemode idênticos ao `source`. O addon nativo preparado permaneceu idêntico ao backup, SHA-256 `2A4E677911BE738A8EDE8563E05AB79AE0DF79B2B4341123167E6B4B2BC3DF37`.
+
+Os seis arquivos de perfil têm backups irmãos `modlist.txt.bak-dva-2111`, `plugins.txt.bak-dva-2111` e `loadorder.txt.bak-dva-2111` em cada perfil. O backup do laboratório está em `C:\Code\Aetherius - Servidor Local\backups\dva-2111\replaced` e preserva caminhos relativos com sufixo `.bak-dva-2111`. O inventário `runtime-backup-sha256.json` registra 1814 arquivos. Para reverter antes de iniciar o ensaio, restaurar esses arquivos de perfil e o bundle anterior com o MO2 fechado e preparar novamente o servidor com a ordem restaurada.
+
+Os recibos estão em `C:\Code\Aetherius - Servidor Local\evidence`, nos arquivos `dva-2111-install.json`, `dva-2111-runtime-verified.json`, `dva-2111-housecarl-local.json`, `dva-2111-housecarl-grafico.json` e nos logs `dva-2111-build.log`, `dva-2111-build-client.log`, `dva-2111-prepare.log` e `dva-2111-prepare-revision.log`. O resultado da instalação é estático. A aparência renderizada e a sincronização em jogo ainda precisam do ensaio.

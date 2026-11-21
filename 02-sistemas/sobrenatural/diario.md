@@ -401,3 +401,7 @@ Faltavam os ativos do UI Core no mod `AETHERIUS - UI CORE (LOCAL)`. Sol implanto
 - **Sol:** servidor `9f01499`, cliente `3c80c2c` (troca de olho/rosto in-place, sem recriar o ator remoto), overlay `f6e0092` (patches 037/042); ESPFE+BSA `AETHERIUS - DVA Visuals` (50 records, 46 assets idênticos ao original). 568/568 por modo.
 - **Neon:** aprovado sem achados. [Etapa](etapa-3-aparencia-vampiro.md) · [Revisão](revisao-aparencia-vampiro-neon.md).
 - Pendente: autorização para alterar perfis do MO2 e ensaio com dois jogadores.
+
+## 21/11/2026 — DVA Visuals instalado (LOCAL e GRAFICO)
+
+Pacote `AETHERIUS - DVA Visuals` ativo nos perfis LOCAL e GRAFICO - QUALIDADE; DVA original inativo nos dois (quests fora da ordem; Dawnguard volta a ser o único provedor de `DLC1VampireChangeEffect`/`DLC1RevertEffect`). Bundle do LOCAL trocado, Build/Prepare com 440 plugins, backups `*.bak-dva-2111`. Falta ensaio em jogo. Dev pediu unificar os plugins e pastas nossos do Sobrenatural (incl. Entrega_Sobrenatural_20_11) em um ESP e uma pasta, sem o Lobisomem do kdu e sem terceiros: análise em andamento.
