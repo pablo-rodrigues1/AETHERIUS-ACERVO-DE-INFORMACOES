@@ -417,3 +417,7 @@ Pacote `AETHERIUS - DVA Visuals` ativo nos perfis LOCAL e GRAFICO - QUALIDADE; D
 - Neon aprovou a análise com três ressalvas, incorporadas pelo autor. O UI Core mantém MeridianUI completo e os 16 assets de runtime. O LOCAL tem 34 deslocamentos regulares e a primeira publicação oficial preserva os 437 slots travados.
 - Candidato fora do MO2 com 167 registros, BSA SSE, 65 WAV soltos, DLL do céu e UI Core de teste completo. Passaram 569/569 Node por modo, 81 asserções nativas e CTest Lua 1/1. Decisões do dev em [ADR-0028](../../03-decisoes/ADR-0028-sobrenatural-esp-unificado.md).
 - Relatório e roteiro em Sobrenatural/docs/ETAPA-4_unificacao-esp.md na pasta de desenvolvimento. Pendente revisão Neon do candidato, autorização para instalar e backup/início limpo no LOCAL. Sem instalação ou reset nesta etapa.
+
+## 21/11/2026 — Unificação instalada (Opus, contingência do Sol)
+
+Neon aprovou o candidato sem achados. Instalado nos perfis LOCAL, GRAFICO e PERFORMANCE: pasta única `AETHERIUS - SOBRENATURAL` (ESPFE com 167 records, BSA, 65 WAV, DLL do céu). LOCAL com load order idêntico à proposta (438) e dados de teste arquivados (início limpo). Backup integral verificado. [Etapa 4](etapa-4-unificacao-esp.md).
