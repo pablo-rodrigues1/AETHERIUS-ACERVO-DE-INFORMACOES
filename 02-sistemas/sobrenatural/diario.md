@@ -405,3 +405,9 @@ Faltavam os ativos do UI Core no mod `AETHERIUS - UI CORE (LOCAL)`. Sol implanto
 ## 21/11/2026 — DVA Visuals instalado (LOCAL e GRAFICO)
 
 Pacote `AETHERIUS - DVA Visuals` ativo nos perfis LOCAL e GRAFICO - QUALIDADE; DVA original inativo nos dois (quests fora da ordem; Dawnguard volta a ser o único provedor de `DLC1VampireChangeEffect`/`DLC1RevertEffect`). Bundle do LOCAL trocado, Build/Prepare com 440 plugins, backups `*.bak-dva-2111`. Falta ensaio em jogo. Dev pediu unificar os plugins e pastas nossos do Sobrenatural (incl. Entrega_Sobrenatural_20_11) em um ESP e uma pasta, sem o Lobisomem do kdu e sem terceiros: análise em andamento.
+
+## 21/11/2026 — Unificação do ESP e da pasta, Fase 1 (Sol High)
+
+- Escopo confirmado pelo dev: uma pasta e um ESP próprios para o Sobrenatural, incluindo o derivado DVA Visuals, o fork do céu, o áudio e o módulo de UI. Lobisomem do kdu e mods de terceiros seguem separados.
+- Inventário do LOCAL, GRÁFICO e PERFORMANCE e comparação dos 18 overrides concluídos. Visões vem do mod SERVIDOR LOCAL. O ESPFE candidato comporta 149 records próprios. A proposta preserva os IDs locais do principal, move os 50 do DVA Visuals e desloca 34 outros slots regulares no LOCAL. A aprovação do corte depende de ensaiar o remapeamento dos dados e o rollback.
+- Relatório em `Sobrenatural/docs/investigacoes/INVESTIGACAO_21-11_unificar-esp.md` na pasta de desenvolvimento. Pendente revisão Neon e decisão do dev sobre o corte. Análise em leitura, sem alterações de MO2, código ou saves.
