@@ -394,3 +394,10 @@ Fork mínimo do MoonMod v2.0.2 (powerof3, MIT, `4732799`) para AE 1.6.1170: fase
 ## 21/11/2026 — HUD da Lua e Cálice implantados no UI Core LOCAL
 
 Faltavam os ativos do UI Core no mod `AETHERIUS - UI CORE (LOCAL)`. Sol implantou os cinco arquivos de `8cfa553` (HUD da Lua e, por dependência do CSS, o Cálice da Noite aprovado em 20/11), com backups `*.bak-lua-2111`; diff/hashes/VFS conferidos. Servidor preparado confere byte a byte com o HEAD (Masser, olhos Bronze, compulsão). Lua de Masser completa no LOCAL; falta ensaio em jogo.
+
+## 21/11/2026 — Aparência do Vampiro por estágio da Reserva (Dynamic Vampire Appearance)
+
+- **Dev:** Stage 1 (100–70), 2 (69–50), 3 (49–31), 4 (30–0) mudam rosto (TXST) e olhos; sangue na boca 3 min reais após alimentação validada; olhos de combate (Feral, Immensurable Strength, Unnatural Celerity) > visão noturna (Vampiric Vision) > estágio; Argoniano/Khajiit com aparência racial normal (DVA não cobre). Pacote só visual com nome próprio (alternativa A): o DVA original inicia 2 quests e sobrescreve `DLC1VampireChangeEffect`/`DLC1RevertEffect` usados pelo Lorde.
+- **Sol:** servidor `9f01499`, cliente `3c80c2c` (troca de olho/rosto in-place, sem recriar o ator remoto), overlay `f6e0092` (patches 037/042); ESPFE+BSA `AETHERIUS - DVA Visuals` (50 records, 46 assets idênticos ao original). 568/568 por modo.
+- **Neon:** aprovado sem achados. [Etapa](etapa-3-aparencia-vampiro.md) · [Revisão](revisao-aparencia-vampiro-neon.md).
+- Pendente: autorização para alterar perfis do MO2 e ensaio com dois jogadores.
