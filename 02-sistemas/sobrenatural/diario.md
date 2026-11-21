@@ -411,3 +411,9 @@ Pacote `AETHERIUS - DVA Visuals` ativo nos perfis LOCAL e GRAFICO - QUALIDADE; D
 - Escopo confirmado pelo dev: uma pasta e um ESP próprios para o Sobrenatural, incluindo o derivado DVA Visuals, o fork do céu, o áudio e o módulo de UI. Lobisomem do kdu e mods de terceiros seguem separados.
 - Inventário do LOCAL, GRÁFICO e PERFORMANCE e comparação dos 18 overrides concluídos. Visões vem do mod SERVIDOR LOCAL. O ESPFE candidato comporta 149 records próprios. A proposta preserva os IDs locais do principal, move os 50 do DVA Visuals e desloca 34 outros slots regulares no LOCAL. A aprovação do corte depende de ensaiar o remapeamento dos dados e o rollback.
 - Relatório em `Sobrenatural/docs/investigacoes/INVESTIGACAO_21-11_unificar-esp.md` na pasta de desenvolvimento. Pendente revisão Neon e decisão do dev sobre o corte. Análise em leitura, sem alterações de MO2, código ou saves.
+
+## 21/11/2026 — Unificação do ESP e da pasta, Fase 2 (Sol High)
+
+- Neon aprovou a análise com três ressalvas, incorporadas pelo autor. O UI Core mantém MeridianUI completo e os 16 assets de runtime. O LOCAL tem 34 deslocamentos regulares e a primeira publicação oficial preserva os 437 slots travados.
+- Candidato fora do MO2 com 167 registros, BSA SSE, 65 WAV soltos, DLL do céu e UI Core de teste completo. Passaram 569/569 Node por modo, 81 asserções nativas e CTest Lua 1/1. Decisões do dev em [ADR-0028](../../03-decisoes/ADR-0028-sobrenatural-esp-unificado.md).
+- Relatório e roteiro em Sobrenatural/docs/ETAPA-4_unificacao-esp.md na pasta de desenvolvimento. Pendente revisão Neon do candidato, autorização para instalar e backup/início limpo no LOCAL. Sem instalação ou reset nesta etapa.
