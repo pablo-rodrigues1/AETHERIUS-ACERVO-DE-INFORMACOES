@@ -421,3 +421,7 @@ Pacote `AETHERIUS - DVA Visuals` ativo nos perfis LOCAL e GRAFICO - QUALIDADE; D
 ## 21/11/2026 — Unificação instalada (Opus, contingência do Sol)
 
 Neon aprovou o candidato sem achados. Instalado nos perfis LOCAL, GRAFICO e PERFORMANCE: pasta única `AETHERIUS - SOBRENATURAL` (ESPFE com 167 records, BSA, 65 WAV, DLL do céu). LOCAL com load order idêntico à proposta (438) e dados de teste arquivados (início limpo). Backup integral verificado. [Etapa 4](etapa-4-unificacao-esp.md).
+
+## 21/11/2026 — Entrega_Sobrenatural_21_11 (versão definitiva para integração oficial)
+
+Montada pelo Opus sobre a 20_11 com merge de 3 vias do delta de 21/11 (sem conflitos; oficial de 19/11 inalterado). Patches: servidor 92 arquivos, cliente 39. Na árvore oficial mesclada: Sobrenatural 391/391 por modo, gamemode 164/164, cliente 8/8, tsc e webpack OK. Pasta única `AETHERIUS - SOBRENATURAL`, perfis e manifestos oficiais propostos (437 slots preservados). Neon: 1 P1 (PNG corrompido no patch), 1 P2 (perfis) e 1 P3 corrigidos e reconfirmados; aprovado sem achados. [Guia](entrega-21-11-integracao-oficial.md) · [Revisão](revisao-entrega-21-11-neon.md).
