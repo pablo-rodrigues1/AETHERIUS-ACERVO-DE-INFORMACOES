@@ -362,3 +362,7 @@ O teleporte indexado acompanha o movimento do modelo dos observadores. A concent
 - ESP final instalado no MO2 LOCAL (backup `backups\esp-mo2-20261120`).
 - Pacote renomeado para `Entrega_Sobrenatural_20_11` e remesclado com o oficial de 19/11 (novo conflito: `magicSyncService.ts`, resolvido com os dois lados). Testes na árvore mesclada: 376/376 por modo, gamemode 142/142, tsc/webpack OK. Mod de SFX incluído e na §4.4 (releases).
 - Pendente: teste em jogo de todo o lote (Z/dash, Grip, levitação, áudio para observadores, perks em forma mortal via quest `306FBE`).
+
+## 21/11/2026 — Fases da lua e lua cheia como gatilho da compulsão (análise)
+
+O servidor oficial não tem fases da lua. O Moons and Stars (powerof3) calcula fase e posição só a partir do GameDaysPassed; o INI que vale é o do Rudy ENB, cuja fase é igual à original (Masser 24 dias, Secunda 20). A lua cheia pode entrar como segundo critério no mesmo `tick()` das 72 h. Para o céu bater com a mecânica, o GameDaysPassed teria que ser enviado sempre (hoje só no laboratório), o que pede ADR. Nada implementado; decisões pendentes com o dev. [Investigação](investigacoes/INVESTIGACAO_21-11_fases-da-lua.md).
