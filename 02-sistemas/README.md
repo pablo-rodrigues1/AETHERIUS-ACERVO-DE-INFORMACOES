@@ -35,7 +35,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Governos, Jarl e castelos](governos/README.md) | em-desenvolvimento | A confirmar | [aetherius-painel-jarl](https://github.com/eksmurf/aetherius-painel-jarl) | 2026-11-14 |
 | [Expansão dos painéis](expansao-dos-paineis/README.md) | planejado | koy (planejamento); implementação a definir | Planejamento dos painéis | 2026-11-15 |
 | [COMÉRCIO: empresas e profissões](expansao-dos-paineis/comercio-empresas-e-profissoes.md) | planejado | koy (planejamento); implementação a definir | Documentação no Acervo | 2026-11-15 |
-| [Guildas (SkyGuilds)](guildas/README.md) | em-teste | Melekyy | R30 preservada; Ghostshelf separado instalado no privado e carregamento nativo conferido; Skyrim pelo dev | 2026-11-18 |
+| [Guildas (SkyGuilds)](guildas/README.md) | em-desenvolvimento | Melekyy | Sede alquímica e livros comuns em preparação; catálogo mágico só de bibliotecários; testes no Skyrim pelo dev | 2026-11-23 |
 
 Conciliação documental de feitiços concluída em 14/11/2026: 164 registros na planilha e nas fichas; [divergências dos JSONs](gameplay-core/feiticos-por-classe.md) permanecem pendentes de implementação. GameplayCore continua em desenvolvimento; ver [diário](gameplay-core/diario.md).
 

@@ -3,7 +3,7 @@ titulo: Progresso do desenvolvimento
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-20
+atualizado: 2026-11-23
 tags: [staff, progresso, status]
 relacionados: [../02-sistemas/README.md]
 ---
@@ -66,7 +66,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
-| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R30 mantida; cenário adicional instalado só no privado, sem mudar regras das Guildas; teste no Skyrim pelo dev | 18/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | Preparar sede alquímica e livros comuns; catálogo mágico só de bibliotecários; testes no Skyrim pelo dev | 23/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código

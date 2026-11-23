@@ -3,7 +3,7 @@ titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-18
+atualizado: 2026-11-23
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,13 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-23, sede dos Alquimistas e retorno dos livros iniciados (Melekyy / Codex)
+
+- **Escopo autorizado:** integrar Ghostshelf ao painel dos Alquimistas: portas, baú coletivo para membros, baú do Mestre e ponte controlada pelo líder. Usar objetos existentes; preservar Aetherius/Steam e os Magos.
+- **Magos:** reativar livros comuns na Biblioteca da bancada para todos os membros. Só bibliotecários recebem classes/tomos mágicos; professores, membros e Arquimago sem essa função não recebem catálogo mágico. Preservar autoria/assinatura e receita anterior dos comuns; conjuração independente.
+- **Preparação:** conferir referências reais e scripts da ponte, inicialização dos painéis e a falha de inicialização de 19/11. Nenhum aceite humano ocorreu naquela tentativa. Inspeções e ensaios nativos não certificam visual ou dois clientes humanos.
+- **Próximo:** implementar, validar permissões/persistência e instalar com backup. Testes no Skyrim continuam com o dev.
 
 ## 2026-11-18, cenário privado instalado sem alterar Guildas (Melekyy / Codex)
 
