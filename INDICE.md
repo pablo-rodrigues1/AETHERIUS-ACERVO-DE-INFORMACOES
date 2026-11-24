@@ -111,6 +111,9 @@
 - `03-decisoes/ADR-0026-cenario-ghostshelf-isolado-no-privado.md` — Ghostshelf copiado para o privado com origem intacta, patch isolado e carregamento nativo conferido, sem mudar Guildas.
 - `03-decisoes/ADR-0027-ceu-sincronizado-pelo-gamedayspassed.md` — Servidor envia GameDaysPassed sempre para lua e estrelas iguais a todos e coerentes com a Lua Cheia de Masser.
 - `03-decisoes/ADR-0028-sobrenatural-esp-unificado.md` — ESPFE e pasta de jogo únicos do Sobrenatural, com ordem oficial preservada.
+- `03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md` — Cada estação só para a profissão certa; Forja/Curtume compartilhados abrem a oficina da profissão do jogador.
+- `03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md` — Fundição do Minerador como serviço próprio, 3 de cada minério por lingote.
+- `03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md` — Fazendas por raio, pools por posse editáveis sem recompilar e adaptador de posse dinâmica.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

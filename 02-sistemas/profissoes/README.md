@@ -6,9 +6,9 @@ fase: em-desenvolvimento
 responsaveis: [pablo-rodrigues1, mercurius17]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusGameplayCore
 depende_de: [../gameplay-core/README.md, ../ui-core/README.md]
-atualizado: 2026-11-18
+atualizado: 2026-11-24
 tags: [profissoes, coleta, artesanato, refino, encantamento, economia, housecarl]
-relacionados: [diario.md, catalogo-e-progressao.md, coleta.md, artesanato.md, refino-e-encantamento.md, housecarl-e-persistencia.md, ../gameplay-core/README.md, ../ui-core/README.md, ../expansao-dos-paineis/comercio-empresas-e-profissoes.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md, ../../03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md, ../../07-guia-da-staff/profissoes/README.md, ../../07-guia-da-staff/itens/manutencao-de-equipamentos.md]
+relacionados: [diario.md, ../../03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md, ../../03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md, ../../03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md, catalogo-e-progressao.md, coleta.md, artesanato.md, refino-e-encantamento.md, housecarl-e-persistencia.md, ../gameplay-core/README.md, ../ui-core/README.md, ../expansao-dos-paineis/comercio-empresas-e-profissoes.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../03-decisoes/ADR-0003-codigo-prevalece-sobre-planilhas-de-design.md, ../../03-decisoes/ADR-0005-comercio-empresas-e-profissoes.md, ../../07-guia-da-staff/profissoes/README.md, ../../07-guia-da-staff/itens/manutencao-de-equipamentos.md]
 ---
 
 # Profissões (Coleta, Artesanato, Refino e Encantamento)
@@ -19,6 +19,16 @@ Ecossistema econômico e de carreira profissional documentado no `AetheriusGamep
 
 > [!IMPORTANT]
 > **Documentação versus implementação:** os cinco módulos de profissões em `AetheriusGameplayCore/modules/` são **especificação normativa e de planejamento**. No Core existem apenas a documentação técnica e as migrations/helpers de persistência trazidos do servidor oficial no SYNC-1114 (`0013_gc_professions_uuid_v2.sql`, `0014_gc_profession_world.sql` e `professionPersistence`). O código executor atual do servidor (`server/gameplay/professions`, fora do Core) aguarda nova interface.
+
+## Estado no servidor oficial (v0.47.0, 23/11/2026)
+
+O executor roda no `aetherius-server` (`server/gamemode/professions`, `server/gameplay/professions`), fora do Core. Na v0.47.0:
+
+- **Estações:** Forja e Curtume para Ferreiro, Artífice, Alfaiate e Curtidor (abre a oficina da profissão do jogador); refino só Ferreiro/Curtidor; alquimia só Alquimista; encantamento só Encantador ([ADR-0029](../../03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md)).
+- **Fundição:** só Minerador, 3 de cada minério por lingote ([ADR-0030](../../03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md)).
+- **Fazendeiro:** forcado como ferramenta, 13 fazendas e pools por posse ([ADR-0031](../../03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md)).
+- **Carreira:** troca pelo jogador permitida (zera XP e grau); Encantador atribuível só pela staff.
+- Variáveis necessárias: `ENABLE_GAMEPLAY_CORE`, `AETHERIUS_PROFESSIONS_UI`, `AETHERIUS_PROFESSIONS_WORLD`, `AETHERIUS_PROFESSIONS_MODE=active`, `ENABLE_REFINEMENT`.
 
 ## Documentos deste sistema
 

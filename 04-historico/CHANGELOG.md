@@ -3,12 +3,16 @@ titulo: Changelog
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-18
+atualizado: 2026-11-24
 tags: [changelog]
 relacionados: []
 ---
 
 # Changelog
+
+## 2026-11-24 — Profissões: correções da staff no servidor oficial (v0.47.0)
+
+Estações por profissão e bancadas compartilhadas, fundição do Minerador, troca de profissão, fazendas com pools por posse, coleta animada, UI das oficinas e F7. Releases Server/Client v0.47.0, UI CORE 1.20.0 e COMPATIBILIDADE 2.16.0. [ADR-0029](../03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md), [ADR-0030](../03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md), [ADR-0031](../03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md).
 
 ## 2026-11-18 — Cenário privado Ghostshelf separado das Guildas
 

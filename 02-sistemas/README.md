@@ -18,7 +18,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | Sistema | Fase | Responsável | Repositório | Última atualização |
 |---|---|---|---|---|
 | [GameplayCore](gameplay-core/README.md) | em-desenvolvimento | mercurius17, kdu, Melekyy (conjuração) | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-18 |
-| [Profissões (Coleta, Artesanato, Refino e Encantamento)](profissoes/README.md) | em-desenvolvimento | pablo-rodrigues1, mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-18 |
+| [Profissões (Coleta, Artesanato, Refino e Encantamento)](profissoes/README.md) | em-desenvolvimento | pablo-rodrigues1, mercurius17 | [pablo-rodrigues1/AetheriusGameplayCore](https://github.com/pablo-rodrigues1/AetheriusGameplayCore) | 2026-11-24 |
 | [Conjuração](gameplay-core/conjuracao.md) | em-teste | Melekyy | Documentação no acervo; código/pacote locais; oficial pendente | 2026-11-15 |
 | [UI Core](ui-core/README.md) | em-desenvolvimento | mercurius17 | [pablo-rodrigues1/AetheriusUI_Core](https://github.com/pablo-rodrigues1/AetheriusUI_Core) | 2026-11-20 |
 | [Sobrenatural (Maldições)](sobrenatural/README.md) | em-teste | pablo-rodrigues1, kdu | Entrega_Sobrenatural_21_11 definitiva, aprovada pelo Neon; repositório atualizado. Pendentes: integração pelo dev oficial e testes em jogo das funcionalidades novas | 2026-11-21 |

@@ -36,3 +36,6 @@ Registros imutáveis de decisões. Para alterar uma decisão, crie um novo ADR q
 
 - [ADR-0021](ADR-0021-bau-coletivo-do-colegio.md) — Baú coletivo do Colégio e seus registros, aceito em 17/11/2026.
 - [ADR-0022](ADR-0022-preparacao-skymp-das-guildas.md) — Preparação verificável das Guildas para SkyMP, aceito em 17/11/2026.
+- [ADR-0029](ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md) — Estações por profissão e bancadas compartilhadas (24/11/2026).
+- [ADR-0030](ADR-0030-fundicao-do-minerador-fora-do-governador.md) — Fundição do Minerador como serviço próprio (24/11/2026).
+- [ADR-0031](ADR-0031-pools-do-fazendeiro-por-posse.md) — Pools do Fazendeiro por posse, editáveis sem recompilar (24/11/2026).

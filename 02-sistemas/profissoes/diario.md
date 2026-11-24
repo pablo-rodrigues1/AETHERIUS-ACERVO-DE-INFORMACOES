@@ -3,7 +3,7 @@ titulo: Diário de Profissões
 tipo: historico
 status: ativo
 responsaveis: [pablo-rodrigues1, mercurius17]
-atualizado: 2026-11-18
+atualizado: 2026-11-24
 tags: [diario, profissoes, coleta, artesanato, refino]
 relacionados: [README.md, ../gameplay-core/diario.md]
 ---
@@ -13,6 +13,22 @@ relacionados: [README.md, ../gameplay-core/diario.md]
 ## Resumo
 
 Registro cronológico da evolução documental, regras de balanceamento e sincronizações das profissões no `AetheriusGameplayCore` e no Acervo, do mais recente para o mais antigo.
+
+## 2026-11-24 — Correções da staff no servidor oficial, release v0.47.0 (pablo-rodrigues1 / Claude Opus 5.5)
+
+- **Feito:** Implementada no `aetherius-server`/`aetherius-client` a lista de correções da staff de 20/11 e publicadas as releases Server/Client v0.47.0, UI CORE 1.20.0 e COMPATIBILIDADE 2.16.0.
+  - Estações por profissão e bancadas compartilhadas (Forja/Curtume) — [ADR-0029](../../03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md).
+  - Fundição do Minerador como serviço próprio, 3 de cada minério por lingote — [ADR-0030](../../03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md).
+  - Fazendas (13, por raio), ferramenta = forcado, pools fixa/regional/rotação/importação por posse em `farm-pools.json` — [ADR-0031](../../03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md).
+  - Troca de profissão pelo jogador (zera XP/grau; recusada com carreira suspensa); Encantador atribuível pela staff.
+  - Coleta animada (picareta, ajoelhar, `IdleHoe`); colheita de plantas decidida só pelo servidor; alcance do herbalismo 300.
+  - UI: oficinas no tema padrão (véu 12% + moldura 73%), Alquimia sem desfoque, oficina desmontada corretamente.
+  - Nomes com acento (UTF-8 com fallback windows-1252) no inventário e no refino.
+- **Verificação:** testes de profissões (unit 64, contract 60), painel, fundição simulada; `tsc` completo do servidor e do client; builds da main reproduziram os artefatos da v0.46.0. Boot na VPS: `0 com falha`, refino, fundição e governador `active` ligados.
+- **Revisão:** Gemini 4 Neon, duas rodadas (5 altos e 6 médios corrigidos; depois 2 ressalvas corrigidas). Pools do Fazendeiro sem revisão cruzada (cota esgotada).
+- **Próximo:** teste em jogo no servidor oficial; revisão cruzada das pools; testes automatizados de craft em bancada compartilhada e de fazenda multi-cultura; confirmar Brighthorn em Falkreath.
+- **Bloqueios:** nenhum.
+- Detalhes técnicos: [`docs/mechanics/PROFISSOES_SERVIDOR_V0.47.0.md`](https://github.com/pablo-rodrigues1/AetheriusGameplayCore/blob/main/docs/mechanics/PROFISSOES_SERVIDOR_V0.47.0.md) no GameplayCore.
 
 ## 2026-11-18 — Consolidação no Acervo Aetherius (Gemini)
 

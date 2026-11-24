@@ -3,12 +3,17 @@ titulo: Diário de Painel administrativo
 tipo: historico
 status: ativo
 responsaveis: []
-atualizado: 2026-11-14
+atualizado: 2026-11-24
 tags: [aetherius]
 relacionados: []
 ---
 
 # Diário de Painel administrativo
+
+## 2026-11-24 — Profissão e Sobrenatural sempre disponíveis no F7 (v0.47.0)
+
+- **Feito:** ações de profissão (`profession.inspect/assign/progress.set`) deixaram de depender de `ENABLE_GAMEPLAY_CORE`; profissão e Sobrenatural entram em `enabledActions` mesmo com lista restrita; aba Sobrenatural sempre visível, com o motivo quando indisponível; Encantador na lista de profissões atribuíveis. Classe não foi alterada (pedido do dev).
+- **Relacionado:** [Profissões](../profissoes/diario.md).
 
 ## Resumo
 
