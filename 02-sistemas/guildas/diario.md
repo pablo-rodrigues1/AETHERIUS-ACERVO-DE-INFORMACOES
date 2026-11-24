@@ -3,7 +3,7 @@ titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-23
+atualizado: 2026-11-24
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,14 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-24, R31 validada em cópia isolada e falha BSA corrigida (Melekyy / Codex)
+
+- **Pedido do dev:** continuar e realizar testes, mantendo o Skyrim e o servidor principal fechados. Ajuste de título e destino do operador preparado para a próxima conexão; nenhum dado identificável é publicado.
+- **Diagnóstico:** o NPC antigo revelou o problema ao ativar uma área; a reconexão de um personagem salvo também reproduziu. Depurador/símbolos localizaram a falha em BsaArchiveScriptStorage::ListScripts, por BSA de texturas sem pasta scripts. A correção retira somente essa entrada da lista de fontes do servidor, de 62 para 61; mantém 117 plugins e todos os assets. Gamemode e NPC automático originais restaurados, sem tratar a desativação do teste como solução. [ADR-0034](../../03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md).
+- **Correções auxiliares instaladas:** posição do baú preparada offline, referências já indisponíveis não consultadas novamente e índice derivado das Tendas reconstruído para a lista atual. Baús, estoque, funções, insígnias e conjuração independente preservados.
+- **Testes finais:** 151/151 do workspace, zero falhas/pulos; quatro bots nativos e 128 ativações; inicialização dos oito serviços com o gamemode instalado, reconexão de um personagem copiado, Guildas/Casas abrindo e fechando e catálogo recusado para não bibliotecário. 954 arquivos originais iguais depois da cópia executada. [Matriz](validacao-skymp.md).
+- **Limites:** zero clientes humanos; colisão/visual da ponte, editor nativo/cursor e dois jogadores no destino ainda dependem de teste do dev. Dez transações antigas pendentes preservadas, sem bloqueio do personagem ensaiado. Nenhum novo ZIP, código ou asset publicado. Servidor principal e Skyrim não foram iniciados.
 
 ## 2026-11-23, R31 instalada e inicialização completa em diagnóstico (Melekyy / Codex)
 

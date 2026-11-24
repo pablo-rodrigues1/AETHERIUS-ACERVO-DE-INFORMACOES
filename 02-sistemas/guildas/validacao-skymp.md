@@ -1,18 +1,40 @@
 ---
-titulo: Validação de Guildas R28 e limites
+titulo: Validação de Guildas R31 e limites
 tipo: referencia
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-17
+atualizado: 2026-11-24
 tags: [guildas, skymp, integracao]
 relacionados: [README.md, diario.md]
 ---
 
-# Validação e limites — Guildas R28 / recuperação R29
+# Validação e limites — Guildas R31
 
-Revisão: 17/11/2026. Responsável: Melekyy.
+Revisão: 24/11/2026. Responsável: Melekyy.
 
-## Revisão atual R30 — quartos retirados, portas mantidas
+## Validação atual R31 — 24/11/2026
+
+**151 testes do workspace aprovados**, sem falhas ou pulos, incluindo interface em navegador headless e regressão do índice BSA. Ensaio nativo isolado com quatro bots aprovou 128 ativações de portas, teleporte, ponte via painel e controle físico, depósito/reabertura/retirada por outro membro, bloqueio de externos, troca de liderança com estoque preservado e fabricação/autoria/assinatura de livros.
+
+Uma cópia do mundo e do gamemode instalado carregou os oito serviços juntos: Guildas, Casas, Grupo/Negociação, Murais, Inventário, Tendas, Transformações e Sync. Também conectou um bot à cópia do personagem salvo: abriu/fechou Guildas e Casas, selecionou a sede alquímica, recebeu o modelo de Grupo e recusou catálogo mágico para membro comum. Encerramento normal, zero alterações nos **954 arquivos originais** conferidos. O servidor principal e o Skyrim permaneceram fechados. O NPC automático de teste e o gamemode original foram preservados na execução final.
+
+| Verificação | Resultado atual | Limite |
+|---|---|---|
+| Inicialização e reconexão | Aprovadas com os sistemas instalados numa cópia isolada | Um bot conectado ao personagem copiado, sem cliente Skyrim |
+| Permissões dos Magos | Arquimago/professor/bibliotecário/membro cobertos nos testes; tomos/classes só para bibliotecário | Interface headless e regras de servidor, sem aceite visual no jogo |
+| Livros comuns | Membros fabricam por 5 papéis + 1 carvão; título/texto/assinatura preservados no inventário nativo | Editor, paginação, câmera e controles ainda precisam de observação no Skyrim |
+| Livros mágicos e cópias | Tomo: 5 papéis + 1 pedra da alma; cópia assinada por bibliotecário: 5 papéis + 2 septins | Não certifica animações de todas as magias |
+| Sede alquímica | 13 passagens/16 referências, permissões, baús e logs aprovados no transporte nativo | Ponte STAT conferida na mensagem de estado; colisão/streaming/visual e dois humanos pendentes |
+| Fontes de scripts | 61 BSA com pasta scripts; 117 plugins mantidos | Arquivos visuais continuam instalados; não é remoção do mod |
+| Inventários e recibos | Mundo original preservado, personagem de teste sem bloqueio de journal | Dez transações históricas pendentes foram preservadas; não houve reescrita forçada de inventários |
+
+O depurador identificou o acesso inválido em `BsaArchiveScriptStorage::ListScripts`: este build desreferencia a pasta `scripts` sem conferir sua existência. `EnemyModsGhostshelfKeep - Textures.bsa` tinha sido incluído na lista `archives` usada para scripts, embora seja somente textura. Retirada apenas essa entrada; BSA, plugins, arquivos do cliente e addon nativo continuam intactos. A checagem prévia agora recusa esse caso. [ADR-0034](../../03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md).
+
+Também corrigidos: movimento nativo do baú do Arquimago durante carga fria (posição preparada offline, reaplicação do cliente mantida), consultas a três referências do Colégio já configuradas como indisponíveis e índice derivado de terreno das Tendas reconstruído para os 117 plugins. Não foi reinstalado o sistema de quartos nem incorporada conjuração em Guildas.
+
+**Pendente:** teste visual pelo dev no Skyrim e homologação oficial com dois clientes humanos. Não há novo ZIP R31, distribuição de assets ou código publicado no acervo. Os resultados históricos abaixo não representam as permissões atuais.
+
+## Histórico R30 — quartos retirados, portas mantidas
 
 125 testes locais sem navegador aprovados, zero falhas/pulos. Comandos antigos de quartos recusados para os quatro perfis; dados/configurações antigas não reinstalam StudentRooms. Controle geral de portas permanece exclusivo do Arquimago. Insígnias, escolas, cargos, cronograma, Biblioteca, receita e ambos os baús continuam cobertos pelos testes locais.
 

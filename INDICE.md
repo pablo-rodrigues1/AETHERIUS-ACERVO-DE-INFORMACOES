@@ -54,7 +54,7 @@
 - `02-sistemas/fisica-de-cabelos-e-capas/diario.md` — Diário da Física de cabelos e capas.
 - `02-sistemas/sincronizacao-de-npcs/README.md` — Investigação da IA de NPCs travada (NPC recriado em laço no cliente).
 - `02-sistemas/sincronizacao-de-npcs/diario.md` — Diário da Sincronização de NPCs.
-- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R30 sem gestão de quartos; portas do Arquimago e baús exclusivo/coletivo preservados; testes no Skyrim pelo dev.
+- `02-sistemas/guildas/README.md` — Guildas de Melekyy: R31, sede alquímica e livros; 151 testes e inicialização/reconexão em cópia aprovados; Skyrim pelo dev.
 - `02-sistemas/guildas/escopo.md` — Regras atuais de Magos, Alquimistas e Companions, Biblioteca, escolas, portas e dois baús mantidos; quartos retirados.
 - `02-sistemas/guildas/integracao-skymp.md` — Instalação, dependências reais, sincronização, checklist multiplayer e rollback.
 - `02-sistemas/guildas/validacao-skymp.md` — Matriz de provas privadas/nativas e limites de homologação.
@@ -118,6 +118,7 @@
 
 - `03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md` — Sede dos Alquimistas no mapa privado, controle do Mestre, baús físicos e ponte replicada.
 - `03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md` — Livros comuns para todos os membros na bancada; tomos/classes só para bibliotecários.
+- `03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md` — Fontes BSA com pasta scripts e teste de inicialização/reconexão protegido.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

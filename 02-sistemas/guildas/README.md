@@ -6,7 +6,7 @@ fase: em-desenvolvimento
 responsaveis: [Melekyy]
 repositorio: null
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-23
+atualizado: 2026-11-24
 tags: [guildas, skyguilds, magos, alquimistas, companions]
 relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../../03-decisoes/ADR-0021-bau-coletivo-do-colegio.md, ../../03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md, ../../07-guia-da-staff/regras-de-roleplay/guildas.md]
 ---
@@ -15,7 +15,7 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 
 ## Resumo
 
-**Melekyy** desenvolve Magos, Alquimistas e Companions. A R31 privada integra a sede alquímica em Ghostshelf e reativa livros comuns para membros dos Magos; tomos/classes mágicos são exclusivos dos bibliotecários. Quartos continuam retirados. A retomada completa do servidor está em conferência; **integração oficial, visual no Skyrim e dois clientes humanos continuam pendentes.**
+**Melekyy** desenvolve Magos, Alquimistas e Companions. A R31 privada integra a sede alquímica em Ghostshelf e reativa livros comuns para membros dos Magos; tomos/classes mágicos são exclusivos dos bibliotecários. Quartos continuam retirados. Inicialização conjunta e reconexão foram aprovadas numa cópia isolada; **integração oficial, visual no Skyrim e dois clientes humanos continuam pendentes.**
 
 - [Escopo completo e permissões atuais](escopo.md)
 - [Instalação passo a passo, contratos, sincronização e rollback](integracao-skymp.md)
@@ -23,13 +23,13 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 - [Guia simples da Staff](../../07-guia-da-staff/regras-de-roleplay/guildas.md)
 - [Histórico de desenvolvimento](diario.md)
 
-## Revisão R31 — 23/11/2026
+## Revisão R31 — 24/11/2026
 
 Sede dos Alquimistas em Ghostshelf: 13 passagens/16 referências, ponte controlada pelo Mestre e baús físico coletivo/da liderança, com histórico separado. [Sede e permissões](alquimistas-ghostshelf.md), [ADR-0032](../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md).
 
 Nos Magos, todos os membros usam a Biblioteca da bancada para fabricar livros em branco; só bibliotecários recebem classes/tomos mágicos, inclusive excluindo o Arquimago sem essa função. Livros comuns usam o editor nativo, assinatura definitiva e cópia por bibliotecário. [ADR-0033](../../03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md).
 
-Instalação privada aplicada com backup, 918 arquivos privados protegidos e nove de origem preservados. 145 testes de regressão e cinco direcionados aprovados (com sobreposição); ensaio nativo isolado aprovado com quatro bots. A inicialização completa ainda reproduziu falha nativa e está em investigação. Não declarar os painéis liberados ou os fluxos visuais aprovados antes da retomada e teste do dev.
+Instalação privada aplicada com backup. 151 testes do workspace e ensaio nativo com quatro bots aprovados. Inicialização dos oito serviços e reconexão do personagem copiado aprovadas, com 954 arquivos originais preservados. Falha do carregador BSA corrigida sem remover texturas, plugins ou alterar o addon. Servidor principal e Skyrim permanecem fechados. [Validação e limites](validacao-skymp.md), [ADR-0034](../../03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md).
 
 ## Histórico R30 — 17/11/2026
 

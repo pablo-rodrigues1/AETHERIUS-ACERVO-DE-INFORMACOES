@@ -3,7 +3,7 @@ titulo: Guildas de Magos Alquimistas e Companions
 tipo: guia-staff
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-23
+atualizado: 2026-11-24
 tags: [staff, guildas]
 fonte_tecnica: [../../02-sistemas/guildas/README.md]
 relacionados: [../progresso.md]
@@ -13,7 +13,7 @@ relacionados: [../progresso.md]
 
 ## Resumo
 
-Melekyy desenvolve os três grupos. A R31 privada acrescenta a sede dos Alquimistas e os livros comuns dos Magos; tomos/classes ficam só com bibliotecários. Quartos continuam retirados. A retomada do servidor está em conferência; testes no Skyrim ficam com o dev e a liberação oficial continua pendente.
+Melekyy desenvolve os três grupos. A R31 privada acrescenta a sede dos Alquimistas e os livros comuns dos Magos; tomos/classes ficam só com bibliotecários. Quartos continuam retirados. A inicialização e a conexão foram aprovadas nos testes em uma cópia isolada; testes no Skyrim ficam com o dev e a liberação oficial continua pendente.
 
 **R30 privada em 17/11:** gestão de quartos retirada. O Arquimago mantém trancar/destrancar portas do Colégio, conforme esclarecimento do dev. Baú físico do cargo reposicionado e coletivo preservado, sem perder conteúdos. Os testes no Skyrim são feitos pelo próprio dev; não há novo aceite visual.
 
@@ -78,7 +78,7 @@ Os registros de gestão são exclusivos do líder: nome e ID de quem agiu e de q
 
 ## Perguntas comuns
 
-- **Livros em branco estão disponíveis?** Foram reativados na R31 privada, com a receita e as permissões acima. Inicialização completa e teste no Skyrim estão em conferência nesta sessão.
+- **Livros em branco estão disponíveis?** Foram reativados na R31 privada, com a receita e as permissões acima. Inicialização e conexão passaram numa cópia isolada; o teste visual no Skyrim ainda será feito pelo dev.
 - **Conjuração faz parte de Guildas?** Não. Tem projeto/runtime próprios e não é instalada pelo pacote de Guildas.
 - **Já foi homologado no oficial?** Não. Testes automatizados, bots nativos e um cliente privado dão evidências diferentes de dois jogadores reais no servidor de destino.
 - **Pode instalar em qualquer SkyMP sem conferir nada?** Não. O dev precisa conectar inventário, morte, Staff e Classes e conferir mods/ordem. O instalador recusa a versão completa quando faltam recursos.

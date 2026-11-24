@@ -3,7 +3,7 @@ titulo: Alquimistas em Ghostshelf Keep
 tipo: especificacao
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-23
+atualizado: 2026-11-24
 tags: [guildas, alquimistas, skymp, ponte]
 relacionados: [README.md, integracao-skymp.md, ../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md]
 ---
@@ -56,3 +56,7 @@ Nenhum móvel novo foi criado nem estoque transferido. O nome de cada baú é re
 Ensaio nativo isolado com quatro bots e 128 pacotes de ativação aprovou trancas nos dois sentidos, teleporte após abrir, controle da ponte, depósito/reabertura/retirada por outro membro, bloqueio de não membro e troca de liderança com estoque preservado. Estado das peças da ponte foi conferido na mensagem de cliente; controles ACTI foram acionados pelo transporte nativo.
 
 Testes de interface verificaram o tema, comandos com token/revisão atuais e ausência de controles do Mestre para membros. O teste visual não ocorreu no Skyrim: colisão, carregamento de área, cursor, baús e dois clientes humanos continuam pendentes para o dev. Registros/estado usados no ensaio são temporários e não são o mundo dos jogadores.
+
+## Inicialização conferida em 24/11
+
+Sede inicializa sem referências pendentes e permite ao Mestre abrir a aba de controle no ensaio de reconexão, junto aos outros sete serviços. As fontes de scripts excluem o BSA somente de texturas, mantendo esse arquivo instalado para o cliente. Teste em cópia, sem iniciar o servidor principal ou o Skyrim. [Validação atual](validacao-skymp.md).

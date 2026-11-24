@@ -10,6 +10,10 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-24 — Guildas R31: sede alquímica, livros e inicialização corrigida
+
+Ghostshelf integrado ao Mestre Alquimista com portas, ponte e baús. Livros comuns voltam para membros dos Magos; classes/tomos só para bibliotecários. Corrigida lista BSA que provocava acesso inválido, mantendo assets e 117 plugins. 151 testes e inicialização/reconexão em cópia aprovados; Skyrim/dois humanos pendentes, sem novo ZIP ou código publicado. [Validação](../02-sistemas/guildas/validacao-skymp.md), [ADR-0034](../03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md).
+
 ## 2026-11-24 — Profissões: correções da staff no servidor oficial (v0.47.0)
 
 Estações por profissão e bancadas compartilhadas, fundição do Minerador, troca de profissão, fazendas com pools por posse, coleta animada, UI das oficinas e F7. Releases Server/Client v0.47.0, UI CORE 1.20.0 e COMPATIBILIDADE 2.16.0. [ADR-0029](../03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md), [ADR-0030](../03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md), [ADR-0031](../03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md).

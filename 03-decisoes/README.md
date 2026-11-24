@@ -1,5 +1,7 @@
 # Decisões (ADRs)
 
+- [ADR-0034](ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md) — Fontes BSA com scripts e verificação de inicialização/reconexão em cópia, aceito em 24/11/2026.
+
 - [ADR-0032](ADR-0032-sede-alquimica-em-ghostshelf.md) — Sede dos Alquimistas, portas, baús e ponte, aceito em 23/11/2026.
 - [ADR-0033](ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md) — Livros comuns na Biblioteca e catálogo mágico exclusivo dos bibliotecários, aceito em 23/11/2026.
 
