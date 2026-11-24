@@ -14,6 +14,12 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-24, Companions e Irmandade Sombria iniciados (Melekyy / Codex)
+
+- Pedido autorizado: terminar a sede de Jorrvaskr em Whiterun com portas, baús e Skyforge especial para qualquer membro atual; sem fabricação de livros. A regra mais recente substitui a exclusividade do Forjador Mestre para essa fabricação.
+- Depois integrar Falkreath e Dawnstar ao novo painel da Irmandade Sombria, com respostas de acesso autorizadas por filiação, baús nas duas sedes e conversa da Mãe Noite exclusiva do Ouvinte. Preparar 200 falas originais em português, sem contratos ou recompensas nesta etapa.
+- Investigar registros vencedores da instalação, manter Magos/Alquimistas e os dados existentes, executar testes locais/nativos e de carga conjunta em cópia; servidor principal e Skyrim continuam fechados.
+
 ## 2026-11-24, R31 validada em cópia isolada e falha BSA corrigida (Melekyy / Codex)
 
 - **Pedido do dev:** continuar e realizar testes, mantendo o Skyrim e o servidor principal fechados. Ajuste de título e destino do operador preparado para a próxima conexão; nenhum dado identificável é publicado.

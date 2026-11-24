@@ -23,6 +23,10 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 - [Guia simples da Staff](../../07-guia-da-staff/regras-de-roleplay/guildas.md)
 - [Histórico de desenvolvimento](diario.md)
 
+## R32 em desenvolvimento — 24/11/2026
+
+Melekyy continua responsável. Escopo autorizado: Companions apenas em Jorrvaskr/Whiterun, portas, baús e fabricação especial da Skyforge para membros; novo painel da Irmandade Sombria em Falkreath/Dawnstar, portas por filiação, baús e Mãe Noite exclusiva do Ouvinte com 200 falas originais. Sem livros nessas duas guildas. Registros, permissões e sincronização serão ensaiados antes da entrega privada.
+
 ## Revisão R31 — 24/11/2026
 
 Sede dos Alquimistas em Ghostshelf: 13 passagens/16 referências, ponte controlada pelo Mestre e baús físico coletivo/da liderança, com histórico separado. [Sede e permissões](alquimistas-ghostshelf.md), [ADR-0032](../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md).
