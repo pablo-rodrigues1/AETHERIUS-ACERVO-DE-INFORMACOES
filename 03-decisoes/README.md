@@ -1,5 +1,8 @@
 # Decisões (ADRs)
 
+- [ADR-0032](ADR-0032-sede-alquimica-em-ghostshelf.md) — Sede dos Alquimistas, portas, baús e ponte, aceito em 23/11/2026.
+- [ADR-0033](ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md) — Livros comuns na Biblioteca e catálogo mágico exclusivo dos bibliotecários, aceito em 23/11/2026.
+
 - [ADR-0027](ADR-0027-ceu-sincronizado-pelo-gamedayspassed.md) — Céu sincronizado: GameDaysPassed do jogo intocado (risco a vampirismo, Fera e quests); luas recebem o dia do servidor por relógio visual isolado. Viabilidade em estudo (21/11/2026).
 - [ADR-0026](ADR-0026-cenario-ghostshelf-isolado-no-privado.md) — Cenário Ghostshelf isolado no privado, aceito em 18/11/2026; Guildas preservadas e jogo pelo dev.
 

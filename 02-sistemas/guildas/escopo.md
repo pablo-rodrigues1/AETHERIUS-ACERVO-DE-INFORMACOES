@@ -1,16 +1,16 @@
 ---
-titulo: Escopo completo de Guildas R28
+titulo: Escopo completo de Guildas R31
 tipo: especificacao
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-17
+atualizado: 2026-11-23
 tags: [guildas, skymp, integracao]
 relacionados: [README.md, diario.md]
 ---
 
-# Escopo atual de Guildas — R28
+# Escopo atual de Guildas — R31
 
-Responsável: **Melekyy**. Revisão: **17/11/2026**. Implementação privada e pacote de integração; homologação oficial e conferência com dois clientes humanos pendentes.
+Responsável: **Melekyy**. Revisão: **23/11/2026**. Implementação privada; inicialização completa em conferência, homologação oficial e testes visuais/dois clientes humanos pendentes.
 
 ## Guildas e permissões
 
@@ -34,14 +34,19 @@ Na Visão geral, o terceiro contador mostra bibliotecários. O cartão de cronog
 
 ## Biblioteca e fabricação
 
-- A Biblioteca existe na bancada/blip do Arcanaeum. Apenas Arquimago e bibliotecários atuais recebem a interação, abrem, consultam e fabricam. Professor ou membro comum sem essa autoridade não abre nem consulta. Não existe Biblioteca de consulta separada no painel Y comum.
+- A Biblioteca existe na bancada/blip do Arcanaeum e abre para todos os membros atuais dos Magos. A aba Biblioteca fabrica livros comuns. Só bibliotecários recebem a aba de livros mágicos e seu catálogo de classes; Arquimago, professor ou membro sem essa função não consultam nem fabricam tomos. Fora da bancada não há aba de fabricação no painel Y.
+- Um livro em branco custa **5 papéis e 1 carvão**. Abre pelo inventário, sem prévia/editor no painel. Primeiro leitor pode escrever; título/assinatura tornam a obra definitiva. Enter alterna cursor/escrita; páginas usam navegação nativa, sem botão Nova página. Identidade própria dos originais; cópias da mesma obra podem agrupar. Só bibliotecário faz cópia assinada, por **5 papéis e 2 septins**. [ADR-0033](../../03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md).
 - Primeiro escolhe-se a classe; dentro dela aparecem os tomos. Há busca por nome traduzido/original, filtro de plugin e retorno à seleção de classes.
 - O exportador varre os plugins carregados, respeitando overrides, e identifica BOOK que ensina SPEL. O servidor aplica a política das classes/facções do GameplayCore em `config/spell-policy.json`; não disponibiliza todos os livros instalados indiscriminadamente. A base privada atual contém **104 tomos autorizados em 12 classes**.
 - Nomes e descrições do catálogo atual estão traduzidos no painel, com classe, categoria/tier e efeito base disponível. A tradução não renomeia o item nativo do inventário. Uma mudança na lista de magias do GameplayCore exige revisar política e traduções e regenerar o catálogo.
 - Cada tomo custa **5 papéis e 1 pedra da alma**, vazia ou preenchida. Pedras menores são usadas primeiro. Fabricação leva **3 segundos por lote**, com progresso/animação e cancelamento. Fechar, afastar-se, cancelar ou perder a função interrompe; o servidor revalida materiais, função e proximidade antes de cobrar e entregar pelo journal.
 - A leitura/consumo dos tomos segue o jogo. Não se depende de mod de leitura por mana, nem se implementa outro sistema de aprendizado nesta entrega.
 
-## Portas e dois baús mantidos
+## Sede dos Alquimistas
+
+Ghostshelf Keep usa o painel verde musgo, membros/cargos, vários professores alquímicos e registros próprios. O Mestre controla 13 passagens/16 referências e a ponte. Só membros usam portas destrancadas e o baú coletivo; baú particular é do ocupante atual da liderança. Trancar bloqueia ambos os sentidos, inclusive o Mestre. Estoque não é transferido nem apagado ao trocar o líder. [Catálogo, sincronização e limites](alquimistas-ghostshelf.md), [ADR-0032](../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md).
+
+## Portas e dois baús dos Magos mantidos
 
 Somente o Arquimago usa **Portas do Colégio** para trancar/destrancar uma passagem ou todas. Preservado o catálogo de 68 passagens/86 referências e a política nos dois sentidos, inclusive para o operador. Professores, bibliotecários e membros não recebem controle geral. Três referências originalmente desativadas permanecem preservadas.
 
@@ -64,6 +69,6 @@ Só o líder lê Registros de sua guilda: nomes e IDs confiáveis de autor/envol
 
 ## Fora da entrega ativa
 
-Livros autorais/em branco, editor, assinatura, cópias e posicionamento estão guardados no arquivo local e desativados. Não acompanham este pacote. Conjuração pertence a outro projeto/runtime e não é importada, instalada ou modificada por Guildas. Casas, bancos, impostos, murais e seus operadores privados também ficam fora. Não ativar funcionalidades arquivadas pelo instalador atual.
+Livros comuns foram reativados na configuração privada R31 conforme ADR-0030; dependem do adaptador nativo e dos contratos de inventário. Quartos de alunos seguem retirados. Conjuração pertence a outro projeto/runtime e não é importada, instalada ou modificada por Guildas. Casas, bancos, impostos, murais e seus operadores privados também ficam fora do módulo de Guildas; sua inicialização está sendo conferida sem reinstalar seus códigos.
 
 Documentação central: [Guildas no Acervo Aetherius](https://github.com/pablo-rodrigues1/AETHERIUS-ACERVO-DE-INFORMACOES/blob/main/02-sistemas/guildas/README.md).

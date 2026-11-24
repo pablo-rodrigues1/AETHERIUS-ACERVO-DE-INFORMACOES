@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-23, R31 instalada e inicialização completa em diagnóstico (Melekyy / Codex)
+
+- **Implementado e instalado:** sede alquímica com 13 passagens/16 referências, dois baús existentes, ponte, permissões, UI verde musgo e logs da guilda. Livros comuns reativados na bancada dos Magos para todos os membros; catálogo mágico exclusivo dos bibliotecários. [ADR-0032](../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md), [ADR-0033](../../03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md).
+- **Provas:** 145 testes de regressão e cinco direcionados aprovados, com sobreposição. Ensaio nativo temporário com quatro bots aprovou 128 ativações, teleporte, ponte via painel/controle, coletivo com dois movimentos confirmados, baú da liderança com estoque preservado e livros em branco/nome/texto/assinatura. Geometria STAT da ponte é replicada ao cliente; não é um objeto nativo gerenciável neste build.
+- **Instalação:** fontes/configuração privados atualizados com backup; 918 arquivos privados protegidos e nove de origem iguais no momento da aplicação. Bootstrap privado, bundle, adaptador nativo dos livros e outros sistemas preservados. Nenhum Skyrim aberto/controlado.
+- **Bloqueio em investigação:** inicialização completa encerrou com acesso inválido nativo (`0xC0000005`). Inspeção está isolando a etapa que falha; servidor com gamemode parcial não é considerado pronto. Não há declaração de todos os painéis funcionando nem aceite humano nesta etapa.
+
 ## 2026-11-23, sede dos Alquimistas e retorno dos livros iniciados (Melekyy / Codex)
 
 - **Escopo autorizado:** integrar Ghostshelf ao painel dos Alquimistas: portas, baú coletivo para membros, baú do Mestre e ponte controlada pelo líder. Usar objetos existentes; preservar Aetherius/Steam e os Magos.

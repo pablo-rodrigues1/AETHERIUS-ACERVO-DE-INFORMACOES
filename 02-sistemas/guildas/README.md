@@ -2,11 +2,11 @@
 titulo: Guildas (SkyGuilds)
 tipo: sistema
 status: ativo
-fase: em-teste
+fase: em-desenvolvimento
 responsaveis: [Melekyy]
 repositorio: null
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-17
+atualizado: 2026-11-23
 tags: [guildas, skyguilds, magos, alquimistas, companions]
 relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../../03-decisoes/ADR-0021-bau-coletivo-do-colegio.md, ../../03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md, ../../07-guia-da-staff/regras-de-roleplay/guildas.md]
 ---
@@ -15,7 +15,7 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 
 ## Resumo
 
-**Melekyy** desenvolve Magos, Alquimistas e Companions. A R30 privada remove a gestão dos quartos e seus baús particulares. O Arquimago mantém o controle geral das portas; o baú exclusivo foi reposicionado e o coletivo preservado. Atualização instalada sem reiniciar o servidor. **Integração no fork oficial e homologação com dois clientes humanos continuam pendentes.**
+**Melekyy** desenvolve Magos, Alquimistas e Companions. A R31 privada integra a sede alquímica em Ghostshelf e reativa livros comuns para membros dos Magos; tomos/classes mágicos são exclusivos dos bibliotecários. Quartos continuam retirados. A retomada completa do servidor está em conferência; **integração oficial, visual no Skyrim e dois clientes humanos continuam pendentes.**
 
 - [Escopo completo e permissões atuais](escopo.md)
 - [Instalação passo a passo, contratos, sincronização e rollback](integracao-skymp.md)
@@ -23,7 +23,15 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 - [Guia simples da Staff](../../07-guia-da-staff/regras-de-roleplay/guildas.md)
 - [Histórico de desenvolvimento](diario.md)
 
-## Estado atual — R30, 17/11/2026
+## Revisão R31 — 23/11/2026
+
+Sede dos Alquimistas em Ghostshelf: 13 passagens/16 referências, ponte controlada pelo Mestre e baús físico coletivo/da liderança, com histórico separado. [Sede e permissões](alquimistas-ghostshelf.md), [ADR-0032](../../03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md).
+
+Nos Magos, todos os membros usam a Biblioteca da bancada para fabricar livros em branco; só bibliotecários recebem classes/tomos mágicos, inclusive excluindo o Arquimago sem essa função. Livros comuns usam o editor nativo, assinatura definitiva e cópia por bibliotecário. [ADR-0033](../../03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md).
+
+Instalação privada aplicada com backup, 918 arquivos privados protegidos e nove de origem preservados. 145 testes de regressão e cinco direcionados aprovados (com sobreposição); ensaio nativo isolado aprovado com quatro bots. A inicialização completa ainda reproduziu falha nativa e está em investigação. Não declarar os painéis liberados ou os fluxos visuais aprovados antes da retomada e teste do dev.
+
+## Histórico R30 — 17/11/2026
 
 O dev retirou o sistema de quartos: não há aba, atribuições, donos, acesso por aluno/professor, nomes ou bloqueio de septins ligado aos quartos. Preservados membros, cargos, escolas/insígnias, Biblioteca, cronograma, registros e demais guildas. **Portas do Colégio permanece exclusiva do Arquimago**, conforme esclarecimento explícito, com as 68 passagens e políticas anteriores. O mesmo baú físico do Arquimago foi reposicionado na lateral da sala; conteúdos dos dois baús e dos antigos compartimentos preservados.
 
@@ -37,7 +45,7 @@ A suíte passou em 150 testes; depois, 19 testes de interface com os quatro perf
 
 ## Onde está o código
 
-Projeto local `Sistema de Guildas 2`, pacote CommonJS `sky-guilds` 1.1.2. Entrada recomendada: `bootstrap.cjs`; implementação em `src/`; presets `config/skymp-panel.example.json` e `config/skymp-full.example.json`. A URL de repositório do código ainda não foi informada/configurada. Preencher `repositorio` somente quando existir URL real.
+Projeto local `Sistema de Guildas 2`, pacote CommonJS `sky-guilds` 1.2.0. Entrada recomendada: `bootstrap.cjs`; implementação em `src/`; presets `config/skymp-panel.example.json` e `config/skymp-full.example.json`. A URL de repositório do código ainda não foi informada/configurada. Preencher `repositorio` somente quando existir URL real. O preset básico não ativa sede/livros; a instalação privada usa configuração própria e adaptador nativo já existente.
 
 Os pacotes de desenvolvedor R28 e R29 permanecem locais; somente Markdown é publicado neste acervo. Não se publicam código, ZIP, binários, backups ou dados de jogadores.
 
@@ -50,11 +58,12 @@ Os pacotes de desenvolvedor R28 e R29 permanecem locais; somente Markdown é pub
 | Funções | Cinco professores canônicos e vários bibliotecários nos Magos; professores alquímicos diversos; instrutores e um Forjador Mestre nos Companions |
 | Exclusividade | Professor/bibliotecário dos Magos não acumulam liderança, outros cargos ou outra função; escola pessoal permanece separada |
 | Classes | Três permissões virtuais de filiação, com consulta no servidor; integração real de Classes deve conectar os requisitos |
-| Biblioteca | Só Arquimago/bibliotecários, na bancada; primeiro classe, depois tomos autorizados; 104 tomos atuais em 12 classes, traduções no painel |
+| Biblioteca | Bancada para todos os membros; só bibliotecários veem classes/tomos mágicos, inclusive excluindo o Arquimago sem essa função |
 | Fabricação | 5 papéis + 1 pedra da alma por tomo, 3 segundos por lote, progresso/animação, cancelamento e cobrança validada pelo servidor |
+| Livros comuns | 5 papéis + 1 carvão; leitura/escrita no próprio livro, título e assinatura definitiva; cópia assinada só por bibliotecário, por 5 papéis + 2 septins |
 | Escolas | Uma por membro, definida por professor/Arquimago; só Arquimago retira; insígnia Elemental Vision II protegida e revogada ao encerrar vínculo |
-| Portas | Controle geral exclusivo do Arquimago; 68 passagens/86 referências, ambos os sentidos, inclusive operador |
-| Pertences | Baú físico exclusivo do Arquimago por cargo, reposicionado; estante coletiva para todos os membros atuais dos Magos |
+| Portas | Arquimago: Colégio, 68 passagens/86 referências; Mestre: Ghostshelf, 13 passagens/16 referências, mais ponte; controle exclusivo dos líderes |
+| Pertences | Cada sede tem coletivo dos membros e baú físico da liderança atual; conteúdos permanecem ao trocar o líder |
 | Cronograma | Escola, dia semanal/data e horário de Brasília; só Arquimago altera, membros consultam |
 | Registros | Apenas líder; nomes/IDs, mudanças detalhadas e depósitos/retiradas confirmados do coletivo; 100 exibidos por guilda/5.000 retidos globalmente |
 
@@ -68,7 +77,7 @@ Referência de API: SkyMP commit `2849e676fe008925384b26f34476e382a30bd877`, sem
 
 ## Fora do módulo ativo
 
-Livros autorais/em branco e editor continuam arquivados/desativados. [Conjuração](../gameplay-core/conjuracao.md) é independente e não integra o ZIP/importação das Guildas. Bancos, Casas, impostos, murais e seus operadores ficam fora. Não foi reinstalado nem alterado o controlador de conjuração nesta preparação.
+[Conjuração](../gameplay-core/conjuracao.md) continua independente. Quartos de alunos seguem retirados. Bancos, Casas, impostos, murais e seus operadores ficam fora do código de Guildas; sua inicialização está sendo conferida junto ao servidor, sem reinstalar seus sistemas.
 
 ## Próximo passo
 

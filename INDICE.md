@@ -59,6 +59,7 @@
 - `02-sistemas/guildas/integracao-skymp.md` — Instalação, dependências reais, sincronização, checklist multiplayer e rollback.
 - `02-sistemas/guildas/validacao-skymp.md` — Matriz de provas privadas/nativas e limites de homologação.
 - `02-sistemas/guildas/diario.md` — Diário de Guildas, responsável Melekyy, registro inicial e pendências de publicação e integração.
+- `02-sistemas/guildas/alquimistas-ghostshelf.md` — Sede alquímica: portas, ponte, dois baús, permissões, sincronização e limites dos testes.
 - `02-sistemas/loja/README.md` — Loja do TAB, carteira de Diademas e benefícios de apoiador.
 - `02-sistemas/loja/diario.md` — Histórico documental de Loja e apoiadores, com a base de integração e o próximo passo.
 - `02-sistemas/residencias/README.md` — Compra, acesso, revenda e imposto das propriedades residenciais.
@@ -114,6 +115,9 @@
 - `03-decisoes/ADR-0029-estacoes-por-profissao-e-bancadas-compartilhadas.md` — Cada estação só para a profissão certa; Forja/Curtume compartilhados abrem a oficina da profissão do jogador.
 - `03-decisoes/ADR-0030-fundicao-do-minerador-fora-do-governador.md` — Fundição do Minerador como serviço próprio, 3 de cada minério por lingote.
 - `03-decisoes/ADR-0031-pools-do-fazendeiro-por-posse.md` — Fazendas por raio, pools por posse editáveis sem recompilar e adaptador de posse dinâmica.
+
+- `03-decisoes/ADR-0032-sede-alquimica-em-ghostshelf.md` — Sede dos Alquimistas no mapa privado, controle do Mestre, baús físicos e ponte replicada.
+- `03-decisoes/ADR-0033-livros-comuns-e-catalogo-dos-bibliotecarios.md` — Livros comuns para todos os membros na bancada; tomos/classes só para bibliotecários.
 
 ## 04 — Histórico
 - `04-historico/CHANGELOG.md` — Mudanças consolidadas por versão.

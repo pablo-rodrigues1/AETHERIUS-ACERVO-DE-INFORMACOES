@@ -3,7 +3,7 @@ titulo: Guildas de Magos Alquimistas e Companions
 tipo: guia-staff
 status: ativo
 responsaveis: [Melekyy]
-atualizado: 2026-11-17
+atualizado: 2026-11-23
 tags: [staff, guildas]
 fonte_tecnica: [../../02-sistemas/guildas/README.md]
 relacionados: [../progresso.md]
@@ -13,7 +13,7 @@ relacionados: [../progresso.md]
 
 ## Resumo
 
-Melekyy desenvolve os três grupos. A R30 está instalada no ambiente privado, com gestão de quartos retirada e portas do Arquimago preservadas. A liberação no servidor oficial ainda depende dos adaptadores do servidor e dos testes com dois jogadores reais.
+Melekyy desenvolve os três grupos. A R31 privada acrescenta a sede dos Alquimistas e os livros comuns dos Magos; tomos/classes ficam só com bibliotecários. Quartos continuam retirados. A retomada do servidor está em conferência; testes no Skyrim ficam com o dev e a liberação oficial continua pendente.
 
 **R30 privada em 17/11:** gestão de quartos retirada. O Arquimago mantém trancar/destrancar portas do Colégio, conforme esclarecimento do dev. Baú físico do cargo reposicionado e coletivo preservado, sem perder conteúdos. Os testes no Skyrim são feitos pelo próprio dev; não há novo aceite visual.
 
@@ -24,9 +24,12 @@ Melekyy desenvolve os três grupos. A R30 está instalada no ambiente privado, c
 | Staff autorizada | Nomeia ou retira os líderes pelo sistema administrativo conectado |
 | Líder de cada guilda | Convida/remove membros, organiza cargos e nomeia/revoga funções |
 | Arquimago | Também controla todas as portas do Colégio, retira escola e altera o cronograma |
+| Mestre Alquimista | Também controla portas e ponte de Ghostshelf e usa o baú particular da liderança |
 | Professores dos Magos | Definem escola de membros sem vínculo; não gerenciam quartos |
 | Bibliotecários dos Magos | Abrem a Biblioteca e fabricam tomos na bancada |
 | Aluno/membro comum | Consulta seu painel, cronograma e informações permitidas; usa o baú coletivo |
+
+Na sede dos Alquimistas, membros e professores passam pelas portas destrancadas e usam o baú coletivo. Só o Mestre tranca/destranca uma passagem ou todas e ergue/baixa a ponte, pela aba **Portas e ponte** ou pelo controle próximo. Porta trancada bloqueia inclusive o Mestre até ele destrancar pelo painel. O baú particular acompanha o cargo, com os itens permanecendo nele. O histórico do coletivo fica nos registros dos Alquimistas, acessíveis ao Mestre. [Detalhes da sede](../../02-sistemas/guildas/alquimistas-ghostshelf.md).
 
 O Arquimago convida pelo **ID do jogador** no campo de Membros. A entrada exige aceitar o convite. O membro não sai sozinho; o líder precisa removê-lo. Cargo com nome especial não dá poderes de gestão. Professor e bibliotecário dos Magos não acumulam um ao outro, liderança ou cargos extras. Cada professor ocupa uma escola; o vínculo pessoal de escola é separado.
 
@@ -44,7 +47,9 @@ O membro recebe a insígnia correspondente do Elemental Vision II quando seu inv
 
 ## Biblioteca
 
-Só Arquimago e bibliotecários atuais veem a interação da bancada no Arcanaeum, abrem e fabricam. Professor e membro comum sem essa permissão não abrem nem para consultar. O Arquimago não precisa receber outro cargo.
+Todos os membros dos Magos podem abrir a bancada do Arcanaeum e fabricar livros em branco na Biblioteca por **5 papéis e 1 carvão**. Só bibliotecários veem as classes e os livros de magia. O Arquimago sem função de bibliotecário também fica apenas com os livros comuns. Fora da bancada não aparece a fabricação.
+
+O livro comum abre pelo inventário: primeiro leitor pode escrever, dar título e assinar. Depois da assinatura, ninguém altera o texto. Não há prévia no painel nem botão Nova página. Só bibliotecário pode fazer cópia de obra assinada, por **5 papéis e 2 septins**. A conferência de câmera/cursor/páginas no Skyrim continua com o dev.
 
 Primeiro escolha a classe; dentro dela aparecem os tomos autorizados. A base privada atual tem 104 tomos em 12 classes. Há busca, filtro de plugin e indicação de classe, categoria e efeito. Nomes/descrições estão em português no painel; o nome do item no inventário continua dependendo do plugin.
 
@@ -73,7 +78,7 @@ Os registros de gestão são exclusivos do líder: nome e ID de quem agiu e de q
 
 ## Perguntas comuns
 
-- **Livros em branco estão disponíveis?** Não. O sistema autoral/editor foi guardado; esta entrega mantém os tomos de magia.
+- **Livros em branco estão disponíveis?** Foram reativados na R31 privada, com a receita e as permissões acima. Inicialização completa e teste no Skyrim estão em conferência nesta sessão.
 - **Conjuração faz parte de Guildas?** Não. Tem projeto/runtime próprios e não é instalada pelo pacote de Guildas.
 - **Já foi homologado no oficial?** Não. Testes automatizados, bots nativos e um cliente privado dão evidências diferentes de dois jogadores reais no servidor de destino.
 - **Pode instalar em qualquer SkyMP sem conferir nada?** Não. O dev precisa conectar inventário, morte, Staff e Classes e conferir mods/ordem. O instalador recusa a versão completa quando faltam recursos.
