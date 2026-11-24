@@ -88,3 +88,11 @@ Os registros de gestão são exclusivos do líder: nome e ID de quem agiu e de q
 - [Escopo completo](../../02-sistemas/guildas/escopo.md)
 - [Instalação e checklist multiplayer](../../02-sistemas/guildas/integracao-skymp.md)
 - [Validação e pendências](../../02-sistemas/guildas/validacao-skymp.md)
+
+## Companions e Irmandade — R32 em preparação
+
+No painel dos Companions, o Arauto cuida das portas de Jorrvaskr e dos cargos. Qualquer Companheiro atual fabrica os itens especiais junto da Skyforge com os ingredientes indicados; só o Arauto abre o baú particular. O coletivo é de todos os membros. Não há livros nessa guilda.
+
+Na Irmandade, o Ouvinte controla Falkreath e Dawnstar. Membros recebem a resposta certa quando interagem perto da Porta Negra, mas a passagem precisa estar destrancada. Cada sede tem um coletivo e um baú exclusivo do Ouvinte. Somente ele ouve a Mãe Noite; são 200 textos ambientais, sem contratos/recompensas nesta fase.
+
+A revisão de nomes usa Arquimago, Mestre Alquimista, Arauto e Ouvinte, além dos nomes próprios das funções. Cargos criados continuam exatamente com seus nomes; nomes novos não dão permissões novas. Instalação/carga completa em preparação; os testes no Skyrim ficam com o dev.

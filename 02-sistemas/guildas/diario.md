@@ -14,6 +14,13 @@ relacionados: [README.md]
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
 
+## 2026-11-24, sedes e conversa ensaiadas; títulos de lore solicitados (Melekyy / Codex)
+
+- Implementados Jorrvaskr (13 passagens/18 referências) e os dois santuários (18/21), três coletivos e três baús de liderança. Novo coletivo físico de Falkreath registra/reusa a referência dinâmica; nenhum estoque de comerciante foi tomado.
+- Ensaios nativos com quatro bots: 296 ativações em 37 referências nativas, controle/manifesto de duas portas ocultas, entradas/saídas, todas as 12 receitas, seis movimentos de coletivo e liderança com estoque preservado. 200 falas únicas/ciclo persistente verificadas em teste local; conversa nativa recusada a não líderes nas duas sedes. Instalação/carga completa ainda pendentes.
+- Pedido adicional: somente nomes de apresentação conforme lore. Arquimago, Mestre Alquimista, Arauto e Ouvinte; funções e membros recebem rótulos próprios, incluindo mestre por escola. Não migrar IDs, não renomear cargos personalizados e não alterar autoridade nesta revisão de textos. Orador reapresenta a função de formação existente, sem criar sistema de contratos.
+- Decisões e referências: [Companions](companions-jorrvaskr.md), [Irmandade](irmandade-sombria.md), [200 falas](mae-noite-frases.md), [ADR-0035](../../03-decisoes/ADR-0035-jorrvaskr-e-skyforge-por-filiacao.md), [ADR-0036](../../03-decisoes/ADR-0036-irmandade-sedes-e-mae-noite.md).
+
 ## 2026-11-24, Companions e Irmandade Sombria iniciados (Melekyy / Codex)
 
 - Pedido autorizado: terminar a sede de Jorrvaskr em Whiterun com portas, baús e Skyforge especial para qualquer membro atual; sem fabricação de livros. A regra mais recente substitui a exclusividade do Forjador Mestre para essa fabricação.

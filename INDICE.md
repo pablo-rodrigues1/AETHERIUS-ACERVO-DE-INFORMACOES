@@ -179,3 +179,11 @@
 - `03-decisoes/ADR-0020-sobrenatural-transformacao-forcada.md` — regra do dev para transformação por tempo online.
 
 - `02-sistemas/sobrenatural/contrato-vinculo-do-veu.md` — Contrato da projeção e do terror, com revisão v2 do Ritual e motivos de término.
+
+## Guildas — extensão R32
+
+- `02-sistemas/guildas/companions-jorrvaskr.md` — Jorrvaskr, Arauto, baús e Skyforge por filiação.
+- `02-sistemas/guildas/irmandade-sombria.md` — Falkreath/Dawnstar, Portas Negras, compartimentos e Ouvinte.
+- `02-sistemas/guildas/mae-noite-frases.md` — Biblioteca de 200 falas originais da Mãe Noite.
+- `03-decisoes/ADR-0035-jorrvaskr-e-skyforge-por-filiacao.md` — Acesso dos membros aos 12 COBJ especiais da Skyforge.
+- `03-decisoes/ADR-0036-irmandade-sedes-e-mae-noite.md` — Santuários, respostas por filiação e conversa privada do Ouvinte.

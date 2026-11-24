@@ -1,5 +1,8 @@
 # Decisões (ADRs)
 
+- [ADR-0035](ADR-0035-jorrvaskr-e-skyforge-por-filiacao.md) — Jorrvaskr, baús e Skyforge por filiação, aceito em 24/11/2026.
+- [ADR-0036](ADR-0036-irmandade-sedes-e-mae-noite.md) — Duas sedes da Irmandade e Mãe Noite exclusiva do Ouvinte, aceito em 24/11/2026.
+
 - [ADR-0034](ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md) — Fontes BSA com scripts e verificação de inicialização/reconexão em cópia, aceito em 24/11/2026.
 
 - [ADR-0032](ADR-0032-sede-alquimica-em-ghostshelf.md) — Sede dos Alquimistas, portas, baús e ponte, aceito em 23/11/2026.

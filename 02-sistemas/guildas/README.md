@@ -25,6 +25,8 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 
 ## R32 em desenvolvimento — 24/11/2026
 
+[Companions/Jorrvaskr](companions-jorrvaskr.md), [Irmandade nas duas sedes](irmandade-sombria.md), [200 falas da Mãe Noite](mae-noite-frases.md). Ensaios nativos aprovados; instalação/carga conjunta em preparação. A nomenclatura é apenas apresentação, com cargos personalizados preservados.
+
 Melekyy continua responsável. Escopo autorizado: Companions apenas em Jorrvaskr/Whiterun, portas, baús e fabricação especial da Skyforge para membros; novo painel da Irmandade Sombria em Falkreath/Dawnstar, portas por filiação, baús e Mãe Noite exclusiva do Ouvinte com 200 falas originais. Sem livros nessas duas guildas. Registros, permissões e sincronização serão ensaiados antes da entrega privada.
 
 ## Revisão R31 — 24/11/2026
