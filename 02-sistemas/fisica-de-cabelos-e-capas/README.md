@@ -42,7 +42,7 @@ Programa com interface para criar cabelos exclusivos do Aetherius. Fonte em `fer
 - **Prévia de física:** simulação aproximada na própria tela (virar a cabeça, andar, correr, pular, girar, vento), com as mesmas barreiras de cabeça e corpo. No jogo quem simula é o FSMP.
 - **Exportar:** gera o mod `AETHERIUS - CABELOS EXCLUSIVOS` com o modelo, a física, as texturas (copiadas numa pasta só do cabelo, para não trocar a textura de outros cabelos) e o plugin `AETHERIUS - CABELOS EXCLUSIVOS.esp` (ESL, master Skyrim.esm), com um registro de cabelo jogável por cabelo.
 - **Limites:** cabelo juntado ou ajustado não leva o arquivo de formas do rosto (.tri), então não acompanha os ajustes de rosto da criação de personagem; não há linha de cabelo separada. Para aparecer no servidor, o plugin precisa entrar na ordem de carregamento do servidor e no modpack.
-- **Origem dos modelos:** cabelos de mods de terceiros só podem ir para o servidor como exclusivos se a permissão do autor deixar; conferir antes de publicar.
+- **Origem dos modelos:** o kdu pediu e recebeu permissão dos autores dos mods de cabelo para usar os modelos em cabelos exclusivos do servidor (25/11; os e-mails ficam com ele).
 
 ## Parâmetros e fórmulas
 | Parâmetro | Valor | Descrição |

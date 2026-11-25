@@ -19,6 +19,7 @@ Registro cronológico, do mais recente para o mais antigo.
 - **Conferido fora do jogo:** junção de dois cabelos (15 mechas, 61 ossos, 44 barreiras); plugin lido de volta (registro de cabelo jogável, sexo e lista de raças humanas); texturas copiadas para pasta própria e caminhos trocados no modelo; interface testada num navegador controlado (carregar, juntar, gerar, exportar, movimentos).
 - **Próximo:** gerar os primeiros cabelos exclusivos, testar em jogo e pôr o plugin no servidor.
 - **Bloqueios:** nenhum
+- **Permissões:** o kdu confirmou que todos os autores dos mods de cabelo liberaram o uso (e-mails guardados com ele).
 - **Decisões:** texturas de cabelos novos ficam em `textures/aetherius/cabelos/<nome>/`, nunca no caminho original, para não trocar a textura de outros cabelos.
 
 ## 2026-11-15, noite, mechas (kdu / Claude Opus 5.5)
