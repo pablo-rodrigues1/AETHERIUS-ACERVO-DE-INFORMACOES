@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, Estúdio v2.3: cores do Aetherius (kdu / Claude Opus 5.5)
+- **Pedido:** "só tem que estar nas cores do Aetherius".
+- **Feito:** a interface voltou ao verde, ouro e creme do launcher, sobre fundo verde-escuro. O acabamento Skyrim continua: cantos retos, cantoneiras, títulos em Sovngarde e losango no menu. Corrigida a raça de cada cabelo, que olhava só o caminho do arquivo: agora olha também o nome e o registro. Antes, o Mudzin chegou a escolher "Female Orc 10" para uma Dunmer; agora a biblioteca marca 370 cabelos de orc em vez de 290. Zip v2.3 refeito.
+- **Conferido fora do jogo:** "rainha élfica com coroa" duas vezes, saindo só cabelos de cabeça humana ou élfica, com coroa; exe real aberto nas cores novas.
+- **Bloqueios:** nenhum
+
 ## 2026-11-25, Estúdio v2.3: Deixa com o Mudzin e tema Skyrim (kdu / Claude Opus 5.5)
 - **Pedido:** cabelos "borrachudos"; um modo em que o Mudzin faz o cabelo sozinho, com níveis e nomes criativos, sempre perguntando a raça; visual com cara de Skyrim.
 - **Feito:**
