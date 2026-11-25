@@ -13,6 +13,17 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, Estúdio v2.3: Deixa com o Mudzin e tema Skyrim (kdu / Claude Opus 5.5)
+- **Pedido:** cabelos "borrachudos"; um modo em que o Mudzin faz o cabelo sozinho, com níveis e nomes criativos, sempre perguntando a raça; visual com cara de Skyrim.
+- **Feito:**
+  - Botão **Deixa com o Mudzin** (menu e Início) com 4 modos: Modo rápido (nível baixo, 4 perguntas), Tô criativo (médio, 7), TÔ QUERENDO FAZER ALGO EXTREMAMENTE ÉPICO (alto, 9, com camadas e drama) e Deixa com o Mudzin (ele faz sozinho; só sexo, raça e um tema escrito opcional).
+  - A raça é perguntada em todos os modos (as 10 de Skyrim). O tema escrito ("vampira nobre ruiva com trança") escolhe estilo, cor, comprimento, acessório e drama. Cada estilo tem nomes próprios para o cabelo pronto.
+  - Interface em fumaça, ouro velho e osso, com cantos retos, cantoneiras e títulos em Sovngarde.
+  - Cabelo menos borrachudo: sem contorno preto nas mechas, brilho alongado e luz de recorte quente no lugar da azul. Na prévia, cada trecho da mecha segue o anterior, em vez de voltar como elástico. Miniaturas refeitas em resolução dobrada.
+- **Conferido fora do jogo:** navegador automático fez o modo Deixa com o Mudzin até o fim, com dois temas: "vampira nobre ruiva com trança" deu cabelo ruivo trançado, "guerreiro do gelo épico" deu platinado com 2 camadas. A física em movimento ficou estável. O exe v2.3 foi aberto de verdade.
+- **Próximo:** ver em jogo um cabelo feito pelo Mudzin; Sanguine testar no PC dele.
+- **Bloqueios:** nenhum
+
 ## 2026-11-25, correção ao abrir (kdu / Claude Opus 5.5)
 - **Problema:** no programa (exe) o Mudzin não aparecia ao abrir e a janela se fechava sozinha: a busca dos BSAs dos mods travava o programa por uns 30 s.
 - **Feito:** cada pasta de mod passa a ser lida uma vez só (de 30 s para 2 s, mesmo resultado: 144 BSAs, 200.894 arquivos). O fechamento automático não conta mais como "janela fechada" quando o próprio programa estava ocupado. Zip v2.2 refeito.
