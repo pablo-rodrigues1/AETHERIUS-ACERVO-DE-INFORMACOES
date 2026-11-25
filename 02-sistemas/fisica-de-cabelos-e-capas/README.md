@@ -33,13 +33,14 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 - Nada foi copiado de mods de física de terceiros: ossos, pesos e arquivos de física saem da ferramenta.
 - Os dois mods andam juntos. O mod de cabelos sem o motor deixa os cabelos longos quebrados.
 
-## Estúdio de Cabelos (v2.0, 25/11)
+## Estúdio de Cabelos (v2.2, 25/11)
 Programa com interface para criar cabelos exclusivos do Aetherius. Fonte em `ferramentas/estudio-cabelos` (projeto local do kdu); abre por `Estudio de Cabelos.exe`, que roda em qualquer PC com Windows e Skyrim SE sem instalar nada.
 - **Leitura automática:** acha sozinho o Skyrim, o Mod Organizer 2 e o perfil ativo; lê os plugins ativos para dar nome, sexo e linha do cabelo; acha cada modelo como o MO2 (arquivo solto, pasta do jogo ou BSA). Primeira leitura ~30 s; depois fica guardada. Pode trocar tudo em Configurações.
 - **Telas:** Início, Biblioteca (1.234 cabelos hoje), Criar cabelo, Meus cabelos, Tutorial e Configurações. Visual no estilo do launcher do Aetherius.
 - **Mudzin:** mascote (um siri cinza piadista) que comenta o uso e guia o modo **Faça comigo**, um passo a passo com destaque na tela que avança quando a pessoa faz cada ação.
 - **Visualizador 3D:** cabeça, olhos e corpo do jogo; texturas reais; brilho de cabelo, sombras e reflexos; quatro luzes (estúdio, dia, taverna, noite); foto PNG.
 - **Criação:** junta peças de cabelos diferentes com ajuste de posição, tamanho e giro; a linha do cabelo vem junto. Mechas com os mesmos valores da ferramenta de física e física gerada sozinha a cada mudança. Prévia de movimento (cabeça, andar, correr, pular, girar, vento). "Ver mechas" pinta cada mecha de uma cor.
+- **Criar de verdade (v2.2):** tesoura por região (frente, lados, trás), desfiado das pontas, volume e corte por clique no cabelo; camadas duplicáveis; acessórios (tiaras, diademas, coroas, faixas) que saem parados junto da linha do cabelo; biblioteca com filtros e foto de cada cabelo.
 - **Exportar:** gera o mod `AETHERIUS - CABELOS EXCLUSIVOS` com o modelo, a física, a linha do cabelo como parte separada (como nos cabelos do jogo), as texturas numa pasta só do cabelo e o plugin `AETHERIUS - CABELOS EXCLUSIVOS.esp` (ESL). "Meus cabelos" reabre, apaga e gera o zip do mod.
 - **Limites:** a prévia de física é aproximada (no jogo quem simula é o FSMP); cabelo juntado ou ajustado sai sem o arquivo de formas do rosto (.tri). Para os jogadores verem, o plugin precisa entrar no modpack e na ordem de carregamento do servidor.
 - **Origem dos modelos:** o kdu pediu e recebeu permissão dos autores dos mods de cabelo para usar os modelos em cabelos exclusivos do servidor (25/11; os e-mails ficam com ele).

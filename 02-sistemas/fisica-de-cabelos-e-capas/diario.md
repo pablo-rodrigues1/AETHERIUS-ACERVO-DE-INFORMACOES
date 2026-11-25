@@ -13,6 +13,14 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, noite (kdu / Claude Opus 5.5)
+- **Pedido:** cabelos "borrachudos", Mudzin com defeitos, categorias clicáveis, ícones mais claros, criar cabelo de verdade (tesoura, camadas, acessórios, estilo criador de personagem) e fotos do Mudzin pelo Higgsfield.
+- **Feito:** Estúdio de Cabelos v2.2. Tesoura por região (frente, lados, trás em 8 direções), desfiado das pontas, volume e corte por clique no cabelo em 3D, com desfazer; camadas que podem ser duplicadas; aba de acessórios (50 tiaras, diademas, coroas e faixas do jogo e dos mods); biblioteca com filtros por comprimento, estilo, sexo e raça e foto de cada cabelo; ícones novos em toda a tela. Cabelo fosco com sombra de profundidade e prévia de movimento menos elástica. Mudzin redesenhado (cores que sumiam, pálpebras e elmo corrigidos). Olhos e sobrancelhas do jogo na cabeça de referência. Leitura dos mods em segundo plano (a janela abre na hora). O `aeth-cabelos` ganhou o comando `moldar` (tesoura, desfiado e volume).
+- **Conferido fora do jogo:** exportação com duas camadas (uma cortada e desfiada, outra com volume) e tiara: física pronta, tiara junto da linha do cabelo, texturas copiadas. Telas testadas num navegador controlado.
+- **Próximo:** ver em jogo um cabelo cortado; fotos do Mudzin pelo Higgsfield quando houver crédito (a conta estava com 0).
+- **Bloqueios:** nenhum
+- **Decisões:** acessórios ficam parados, junto da linha do cabelo; tesoura aplicada na camada antes de juntar.
+
 ## 2026-11-25, tarde (kdu / Claude Opus 5.5)
 - **Pedido:** ler tudo sozinho, zip para mandar ao Sanguine, uma área separada para criar cabelos, visualização caprichada, front no estilo do launcher do Aetherius com tutorial, modo "faça comigo" e um mascote piadista (Mudzin).
 - **Feito:** Estúdio de Cabelos v2.0. Detecção automática do Skyrim, do MO2 e do perfil; biblioteca lida dos plugins (1.234 cabelos, com linha do cabelo). Telas Início, Biblioteca, Criar cabelo, Meus cabelos, Tutorial e Configurações. Mudzin com várias expressões, voz de bipinhos e o passo a passo "Faça comigo". Visual com olhos, sombras, reflexos, brilho de cabelo e quatro luzes. Linha do cabelo exportada como parte separada no plugin; opção para a linha balançar junto. Executável sem dependências e zip "AETHERIUS - ESTUDIO DE CABELOS v2.0 (25-11)" (56 MB).
