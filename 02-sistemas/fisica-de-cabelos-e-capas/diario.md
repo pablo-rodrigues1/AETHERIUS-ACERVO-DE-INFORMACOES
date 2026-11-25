@@ -13,6 +13,14 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, tarde (kdu / Claude Opus 5.5)
+- **Pedido:** ler tudo sozinho, zip para mandar ao Sanguine, uma área separada para criar cabelos, visualização caprichada, front no estilo do launcher do Aetherius com tutorial, modo "faça comigo" e um mascote piadista (Mudzin).
+- **Feito:** Estúdio de Cabelos v2.0. Detecção automática do Skyrim, do MO2 e do perfil; biblioteca lida dos plugins (1.234 cabelos, com linha do cabelo). Telas Início, Biblioteca, Criar cabelo, Meus cabelos, Tutorial e Configurações. Mudzin com várias expressões, voz de bipinhos e o passo a passo "Faça comigo". Visual com olhos, sombras, reflexos, brilho de cabelo e quatro luzes. Linha do cabelo exportada como parte separada no plugin; opção para a linha balançar junto. Executável sem dependências e zip "AETHERIUS - ESTUDIO DE CABELOS v2.0 (25-11)" (56 MB).
+- **Conferido fora do jogo:** o executável empacotado, com pasta de dados nova, achou sozinho o MO2, o perfil e o Skyrim, montou a biblioteca, gerou prévia com física, exportou, fez o zip e apagou o cabelo de teste. Telas e passo a passo conferidos num navegador controlado.
+- **Próximo:** o Sanguine testar no PC dele; primeiros cabelos exclusivos em jogo; plugin no servidor.
+- **Bloqueios:** nenhum
+- **Decisões:** linha do cabelo como parte extra separada (mantém o .tri do cabelo principal quando é uma peça só).
+
 ## 2026-11-25 (kdu / Claude Opus 5.5)
 - **Pedido:** um programa para criar cabelos: ver o modelo bonito, entender os cabelos de mods, juntar cabelos, simular mechas separadas e gerar o arquivo do cabelo, para fazer cabelos exclusivos do servidor.
 - **Feito:** Estúdio de Cabelos (`ferramentas/estudio-cabelos`, executável `Estudio de Cabelos.exe`). Biblioteca com 942 cabelos (MO2, jogo base e pasta extra com o Vanilla Hair Remake SMP), visualizador 3D com cabeça e corpo do jogo, composição de várias peças, mechas com os mesmos valores da ferramenta de física, prévia de movimento e exportação para o mod `AETHERIUS - CABELOS EXCLUSIVOS` com plugin ESL. A ferramenta `aeth-cabelos` ganhou os comandos `exportar`, `juntar`, `converter` (com valores escolhidos) e `texturas`.
