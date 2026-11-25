@@ -6,8 +6,8 @@ fase: em-teste
 responsaveis: [kdu]
 repositorio: "pacote separado: mods AETHERIUS - FISICA DE CABELOS E CAPAS + AETHERIUS - FISICA - MOTOR FSMP 4.1.1 (sem plugin)"
 depende_de: []
-atualizado: 2026-11-15
-tags: [modpack, cabelo, capa, fisica, fsmp]
+atualizado: 2026-11-25
+tags: [modpack, cabelo, capa, fisica, fsmp, estudio-de-cabelos]
 relacionados: [diario.md]
 ---
 
@@ -32,6 +32,17 @@ Faz o cabelo comprido e as capas balançarem com o movimento do personagem. É s
 - Barreiras: cada osso solto tem um plano preso à parte do corpo mais próxima (cabeça, costas, ombro; na capa, quadril, coxas e panturrilhas). O osso não passa do plano. Faz o papel da colisão com custo de uma conta por osso.
 - Nada foi copiado de mods de física de terceiros: ossos, pesos e arquivos de física saem da ferramenta.
 - Os dois mods andam juntos. O mod de cabelos sem o motor deixa os cabelos longos quebrados.
+
+## Estúdio de Cabelos (25/11)
+Programa com interface para criar cabelos exclusivos do Aetherius. Fonte em `ferramentas/estudio-cabelos` (projeto local do kdu); abre por `Estudio de Cabelos.exe`.
+- **Biblioteca:** os cabelos do perfil do MO2, do jogo base e de pastas extras (942 modelos hoje), com busca por nome, pasta e mod.
+- **Visualizador 3D:** cabeça e corpo do jogo (feminino ou masculino), texturas reais do cabelo e escolha da cor.
+- **Composição:** junta peças de cabelos diferentes num modelo só (franja de um, rabo de outro), com ajuste de posição, tamanho e giro.
+- **Mechas:** usa a mesma conversão dos cabelos do modpack, com os valores escolhidos na tela (quantidade de mechas, tamanho dos trechos, ossos). "Ver mechas" pinta cada mecha de uma cor.
+- **Prévia de física:** simulação aproximada na própria tela (virar a cabeça, andar, correr, pular, girar, vento), com as mesmas barreiras de cabeça e corpo. No jogo quem simula é o FSMP.
+- **Exportar:** gera o mod `AETHERIUS - CABELOS EXCLUSIVOS` com o modelo, a física, as texturas (copiadas numa pasta só do cabelo, para não trocar a textura de outros cabelos) e o plugin `AETHERIUS - CABELOS EXCLUSIVOS.esp` (ESL, master Skyrim.esm), com um registro de cabelo jogável por cabelo.
+- **Limites:** cabelo juntado ou ajustado não leva o arquivo de formas do rosto (.tri), então não acompanha os ajustes de rosto da criação de personagem; não há linha de cabelo separada. Para aparecer no servidor, o plugin precisa entrar na ordem de carregamento do servidor e no modpack.
+- **Origem dos modelos:** cabelos de mods de terceiros só podem ir para o servidor como exclusivos se a permissão do autor deixar; conferir antes de publicar.
 
 ## Parâmetros e fórmulas
 | Parâmetro | Valor | Descrição |
@@ -65,3 +76,4 @@ Ver [`diario.md`](diario.md).
 - Capa não passou pelo simulador; falta ver sentado, agachado e correndo.
 - As barreiras seguram os ossos; a malha entre eles e armaduras volumosas ainda podem raspar.
 - 19 modelos do addon do Vanilla hair remake já vêm quebrados do mod (pele sem ossos) e não foram tocados.
+- Estúdio de Cabelos: nenhum cabelo gerado por ele foi visto em jogo ainda; a prévia de física é aproximada.

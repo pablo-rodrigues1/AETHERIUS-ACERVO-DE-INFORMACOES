@@ -3,7 +3,7 @@ titulo: Diário da Física de cabelos e capas
 tipo: historico
 status: ativo
 responsaveis: [kdu]
-atualizado: 2026-11-15
+atualizado: 2026-11-25
 tags: [diario, modpack, fisica]
 relacionados: [README.md]
 ---
@@ -12,6 +12,14 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
+
+## 2026-11-25 (kdu / Claude Opus 5.5)
+- **Pedido:** um programa para criar cabelos: ver o modelo bonito, entender os cabelos de mods, juntar cabelos, simular mechas separadas e gerar o arquivo do cabelo, para fazer cabelos exclusivos do servidor.
+- **Feito:** Estúdio de Cabelos (`ferramentas/estudio-cabelos`, executável `Estudio de Cabelos.exe`). Biblioteca com 942 cabelos (MO2, jogo base e pasta extra com o Vanilla Hair Remake SMP), visualizador 3D com cabeça e corpo do jogo, composição de várias peças, mechas com os mesmos valores da ferramenta de física, prévia de movimento e exportação para o mod `AETHERIUS - CABELOS EXCLUSIVOS` com plugin ESL. A ferramenta `aeth-cabelos` ganhou os comandos `exportar`, `juntar`, `converter` (com valores escolhidos) e `texturas`.
+- **Conferido fora do jogo:** junção de dois cabelos (15 mechas, 61 ossos, 44 barreiras); plugin lido de volta (registro de cabelo jogável, sexo e lista de raças humanas); texturas copiadas para pasta própria e caminhos trocados no modelo; interface testada num navegador controlado (carregar, juntar, gerar, exportar, movimentos).
+- **Próximo:** gerar os primeiros cabelos exclusivos, testar em jogo e pôr o plugin no servidor.
+- **Bloqueios:** nenhum
+- **Decisões:** texturas de cabelos novos ficam em `textures/aetherius/cabelos/<nome>/`, nunca no caminho original, para não trocar a textura de outros cabelos.
 
 ## 2026-11-15, noite, mechas (kdu / Claude Opus 5.5)
 - **Pedido:** cabelos parados e movimento em bloco; fazer mechas como nos cabelos SMP do Dovahzul.

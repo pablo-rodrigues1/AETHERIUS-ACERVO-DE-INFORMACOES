@@ -3,7 +3,7 @@ titulo: Progresso do desenvolvimento
 tipo: guia-staff
 status: ativo
 responsaveis: []
-atualizado: 2026-11-24
+atualizado: 2026-11-25
 tags: [staff, progresso, status]
 relacionados: [../02-sistemas/README.md]
 ---
@@ -59,7 +59,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Ocarina (só música)](../02-sistemas/ocarina/README.md) | 🟡 | Item novo: tocar notas e músicas da Zelda, sem poderes; falta testar em jogo | 14/11/2026 |
 | [Sons nas telas](../02-sistemas/sons-das-telas/README.md) | 🟡 | Todas as nossas telas fazem barulho, só com sons do próprio Skyrim: clique, fechar, abas, moedas na compra, folhear páginas, pegar e soltar itens no baú e no refino, barras e atalhos de teclado. A criação de personagem precisa da DLL nova; falta ouvir em jogo | 20/11/2026 |
 | [Túnica do Herói](../02-sistemas/tunica-do-heroi/README.md) | 🟡 | Roupas para o alfaiate, gorro mostrando o cabelo; falta testar e colar as receitas | 14/11/2026 |
-| [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. A YuYu viu em jogo: física boa; trança entrando no peitoral já ajustada. Falta ver a versão com mechas | 15/11/2026 |
+| [Física de cabelos e capas](../02-sistemas/fisica-de-cabelos-e-capas/README.md) | 🟡 | Cabelo comprido com mechas e capas balançando; 910 cabelos prontos. Novo: Estúdio de Cabelos, programa para criar cabelos exclusivos do servidor (juntar cabelos, ver as mechas balançando e gerar o mod). Falta ver em jogo | 25/11/2026 |
 | NPCs travando (IA quebrada) | 🟡 | Investigando: falta reproduzir com o kit de teste que registra a causa | 14/11/2026 |
 | Correções de dano (combate) | 🟢 | Pacote entregue; falta ligar no oficial por fases e testar em jogo | 14/11/2026 |
 | [Maldições (vampirismo, licantropia, bruxaria)](../02-sistemas/sobrenatural/formas-e-poderes.md) | 🟡 | Revisar e testar em jogo os poderes e sons da forma de Lorde Vampiro | 20/11/2026 |
