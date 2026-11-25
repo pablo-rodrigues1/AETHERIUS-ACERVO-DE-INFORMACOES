@@ -13,11 +13,17 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, Mudzin ilustrado (kdu / Claude Opus 5.5)
+- **Feito:** Mudzin ilustrado (7 desenhos feitos no Higgsfield: normal, rindo, convencido, surpreso, triste, dormindo e "gênio" com tesoura e pente), com olhos que seguem o mouse e piscam. O "gênio" aparece no tutorial, ao ligar a tesoura, no passo da tesoura do "Faça comigo" e enquanto o cabelo é gerado. O desenho antigo em SVG fica de reserva. Zip v2.2 refeito na área de trabalho.
+- **Conferido fora do jogo:** tutorial e tela inicial num navegador controlado, imagens carregando sem erro.
+- **Próximo:** o Sanguine testar no PC dele; ver em jogo um cabelo cortado.
+- **Bloqueios:** nenhum
+
 ## 2026-11-25, noite (kdu / Claude Opus 5.5)
 - **Pedido:** cabelos "borrachudos", Mudzin com defeitos, categorias clicáveis, ícones mais claros, criar cabelo de verdade (tesoura, camadas, acessórios, estilo criador de personagem) e fotos do Mudzin pelo Higgsfield.
 - **Feito:** Estúdio de Cabelos v2.2. Tesoura por região (frente, lados, trás em 8 direções), desfiado das pontas, volume e corte por clique no cabelo em 3D, com desfazer; camadas que podem ser duplicadas; aba de acessórios (50 tiaras, diademas, coroas e faixas do jogo e dos mods); biblioteca com filtros por comprimento, estilo, sexo e raça e foto de cada cabelo; ícones novos em toda a tela. Cabelo fosco com sombra de profundidade e prévia de movimento menos elástica. Mudzin redesenhado (cores que sumiam, pálpebras e elmo corrigidos). Olhos e sobrancelhas do jogo na cabeça de referência. Leitura dos mods em segundo plano (a janela abre na hora). O `aeth-cabelos` ganhou o comando `moldar` (tesoura, desfiado e volume).
 - **Conferido fora do jogo:** exportação com duas camadas (uma cortada e desfiada, outra com volume) e tiara: física pronta, tiara junto da linha do cabelo, texturas copiadas. Telas testadas num navegador controlado.
-- **Próximo:** ver em jogo um cabelo cortado; fotos do Mudzin pelo Higgsfield quando houver crédito (a conta estava com 0).
+- **Próximo:** ver em jogo um cabelo cortado. (Fotos do Mudzin: feitas depois, ver entrada acima.)
 - **Bloqueios:** nenhum
 - **Decisões:** acessórios ficam parados, junto da linha do cabelo; tesoura aplicada na camada antes de juntar.
 
