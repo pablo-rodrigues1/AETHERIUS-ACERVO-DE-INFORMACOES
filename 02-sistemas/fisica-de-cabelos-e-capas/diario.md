@@ -13,6 +13,12 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, correção ao abrir (kdu / Claude Opus 5.5)
+- **Problema:** no programa (exe) o Mudzin não aparecia ao abrir e a janela se fechava sozinha: a busca dos BSAs dos mods travava o programa por uns 30 s.
+- **Feito:** cada pasta de mod passa a ser lida uma vez só (de 30 s para 2 s, mesmo resultado: 144 BSAs, 200.894 arquivos). O fechamento automático não conta mais como "janela fechada" quando o próprio programa estava ocupado. Zip v2.2 refeito.
+- **Conferido fora do jogo:** exe aberto de verdade, Mudzin ilustrado na tela em 8 s, biblioteca lida em 7 s e a janela continua aberta.
+- **Bloqueios:** nenhum
+
 ## 2026-11-25, Mudzin ilustrado (kdu / Claude Opus 5.5)
 - **Feito:** Mudzin ilustrado (7 desenhos feitos no Higgsfield: normal, rindo, convencido, surpreso, triste, dormindo e "gênio" com tesoura e pente), com olhos que seguem o mouse e piscam. O "gênio" aparece no tutorial, ao ligar a tesoura, no passo da tesoura do "Faça comigo" e enquanto o cabelo é gerado. O desenho antigo em SVG fica de reserva. Zip v2.2 refeito na área de trabalho.
 - **Conferido fora do jogo:** tutorial e tela inicial num navegador controlado, imagens carregando sem erro.
