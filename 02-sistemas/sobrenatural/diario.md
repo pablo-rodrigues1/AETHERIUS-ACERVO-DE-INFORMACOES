@@ -432,3 +432,7 @@ Montada pelo Opus sobre a 20_11 com merge de 3 vias do delta de 21/11 (sem confl
 - Documentação da entrega simplificada a pedido do dev: um documento técnico e conceitual ([funcionamento.md](funcionamento.md)) cobrindo a base e o que foi validado em jogo; o restante do histórico continua neste Acervo e em `docs/desenvolvimento/` do repositório.
 - Códex das Pragas refeito para jogadores (sem dados de administração nem números de bônus), com capa a partir das referências de arte, em PDF.
 - Status: pronto para integração pelo dev oficial; testes em jogo das funcionalidades de 20 e 21/11 pendentes.
+
+## 25/11/2026 — Revisão 2 das correções de 24/11 (Opus, madrugada)
+
+Revisão das correções da 1ª rodada (pacote `INVESTIGACAO_E_SOLUCOES_24_11`). Bug sério no M4: o plano racial tirava o monitor racial de todo vampiro e todas as raciais durante a forma de fera. Provado com os records reais e corrigido. Também foram reforçados o N2 (garantia do Papyrus de volta), o M1 (desvio só no caso do bug, compilado) e o V3 (tentativas limitadas + ESP proposto, não instalado). Nada visto em jogo. [Revisão 2](investigacoes/revisao-2-correcoes-24-11-opus.md).

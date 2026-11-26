@@ -73,6 +73,7 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **25/11/2026:** Correções do bug search de 24/11 revisadas: a correção do "traço de nórdico" tiraria habilidades da própria raça de vampiros e lobisomens. Corrigido antes de ir ao ar. Magias contínuas, bordas pretas e visão duplicada do vampiro também reforçadas. Falta testar em jogo.
 - **18/11/2026:** Profissões: documentação técnica completa do `AetheriusGameplayCore` (governador, coleta, artesanato, refino, encantamento fora da Alpha, balanceamento e migrations `0013`/`0014`) e guias simples da Staff publicados no Acervo.
 - **15/11/2026:** Cabelos e capas com física: 910 cabelos com mechas (franja, laterais, costas) e capas balançando, sem atravessar o corpo. Pergaminho que não ia para a mão corrigido. Ataque travando depois de trocar a aparência ainda em investigação.
 - **15/11/2026:** Baú dos aposentos do Arquimago exclusivo do cargo e nomeado Baú do Arquimago. Depósito, fechar/reabrir e retirada pelo cliente real conferidos, com o septim de teste devolvido. 136 testes completos e rechecagens aprovados; demais compartimentos reais e oficial seguem para homologação.
