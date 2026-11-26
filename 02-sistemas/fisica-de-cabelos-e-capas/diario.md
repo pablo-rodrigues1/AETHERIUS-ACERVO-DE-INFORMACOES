@@ -19,9 +19,9 @@ Registro cronológico, do mais recente para o mais antigo.
 - **Feito na ferramenta (aeth-cabelos):**
   - mechas de trás só abrem para o próprio lado (0,8 rad para fora, 0,12 para o meio) e quase não giram para dentro (0,03);
   - franja com 1,8× a rigidez e sem giro para dentro;
-  - menos mistura entre mechas vizinhas ();
+  - menos mistura entre mechas vizinhas (`nitidez`);
   - fatias mais finas na frente;
-  - partes desligáveis ();
+  - partes desligáveis (`desligar=`);
   - região de cada mecha devolvida ao Estúdio;
   - "franja pendurada": abaixo da linha do cabelo o fio conta pelo quanto desceu, em correntes próprias. Touca e linha colada na pele ficam paradas.
 - **Pacote do modpack refeito** com tudo, menos a franja pendurada (no lote inteiro ela esticava a malha de cerca de 30% dos cabelos): 910 cabelos com física, 742 arquivos de física válidos no esquema do FSMP, esticamento igual ao anterior (mediana 1,27). Zip "AETHERIUS - FISICA DE CABELOS E CAPAS 25-11". MO2 atualizado; versão de 15/11 guardada fora do repositório.
