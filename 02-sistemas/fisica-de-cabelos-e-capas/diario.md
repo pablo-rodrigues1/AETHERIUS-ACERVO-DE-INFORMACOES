@@ -13,6 +13,29 @@ relacionados: [README.md]
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
 
+## 2026-11-25, noite: pescoço, franja separada, partes com física e mods do Aetherius (kdu / Claude Opus 5.5)
+- **Pedido:** alguns cabelos ficam colados no pescoço e as franjas não ficam separadas; aproveitar ao máximo o que funciona nos cabelos SMP de referência; parte de física onde se liga e desliga partes; ler os mods do Aetherius (mod novo chegando, editar cabelo que a gente criou); poder pular as falas do Mudzin.
+- **Referência estudada:** pacote de cabelos SMP (licença MIT, autor declarado no arquivo). Ele não usa colisão: segura o cabelo com limites de giro assimétricos e regiões separadas (franja, lados, costas, topo, tranças), mechas curtas e bem amortecidas.
+- **Feito na ferramenta (aeth-cabelos):**
+  - mechas de trás só abrem para o próprio lado (0,8 rad para fora, 0,12 para o meio) e quase não giram para dentro (0,03);
+  - franja com 1,8× a rigidez e sem giro para dentro;
+  - menos mistura entre mechas vizinhas ();
+  - fatias mais finas na frente;
+  - partes desligáveis ();
+  - região de cada mecha devolvida ao Estúdio;
+  - "franja pendurada": abaixo da linha do cabelo o fio conta pelo quanto desceu, em correntes próprias. Touca e linha colada na pele ficam paradas.
+- **Pacote do modpack refeito** com tudo, menos a franja pendurada (no lote inteiro ela esticava a malha de cerca de 30% dos cabelos): 910 cabelos com física, 742 arquivos de física válidos no esquema do FSMP, esticamento igual ao anterior (mediana 1,27). Zip "AETHERIUS - FISICA DE CABELOS E CAPAS 25-11". MO2 atualizado; versão de 15/11 guardada fora do repositório.
+- **Estúdio v2.4:**
+  - aba Física com mapa "Partes com física" (clicar liga ou desliga a mecha ou a região) e firmeza por região;
+  - franja pendurada ligada por padrão, refeita presa sozinha se esticar demais;
+  - prévia sem cabelo grudado no pescoço;
+  - mods do Aetherius como fonte, com o filtro "Só do Aetherius", os cabelos do MO2 em Meus cabelos ("Trazer o mod para editar") e releitura sozinha quando a lista de mods muda;
+  - clicar no balão pula a fala do Mudzin, com piadas para quem pula muito;
+  - corrigido o bug das cartas de cor na oficina.
+- **Conferido fora do jogo:** navegador automático e o exe real. A franja de um cabelo longo saiu em 9 mechas separadas; desligar e religar regiões funcionou; a oficina passou por todos os modos.
+- **Próximo:** ver em jogo (pescoço e franja); o Sanguine testar o Estúdio.
+- **Bloqueios:** nenhum
+
 ## 2026-11-25, Estúdio v2.3: cores do Aetherius (kdu / Claude Opus 5.5)
 - **Pedido:** "só tem que estar nas cores do Aetherius".
 - **Feito:** a interface voltou ao verde, ouro e creme do launcher, sobre fundo verde-escuro. O acabamento Skyrim continua: cantos retos, cantoneiras, títulos em Sovngarde e losango no menu. Corrigida a raça de cada cabelo, que olhava só o caminho do arquivo: agora olha também o nome e o registro. Antes, o Mudzin chegou a escolher "Female Orc 10" para uma Dunmer; agora a biblioteca marca 370 cabelos de orc em vez de 290. Zip v2.3 refeito.
