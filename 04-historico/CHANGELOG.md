@@ -10,6 +10,9 @@ relacionados: []
 
 # Changelog
 
+## 2026-11-26
+- UI Core: interfaces no CEF do Skyrim Platform; Meridian UI e Prisma UI removidos (ADR-0037). Servidor local de teste montado.
+
 ## 2026-11-24 — Guildas R31: sede alquímica, livros e inicialização corrigida
 
 Ghostshelf integrado ao Mestre Alquimista com portas, ponte e baús. Livros comuns voltam para membros dos Magos; classes/tomos só para bibliotecários. Corrigida lista BSA que provocava acesso inválido, mantendo assets e 117 plugins. 151 testes e inicialização/reconexão em cópia aprovados; Skyrim/dois humanos pendentes, sem novo ZIP ou código publicado. [Validação](../02-sistemas/guildas/validacao-skymp.md), [ADR-0034](../03-decisoes/ADR-0034-fontes-de-scripts-bsa-e-inicializacao-segura.md).

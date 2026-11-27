@@ -53,3 +53,15 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Bloqueios:** nenhum
 - **Decisões:** [ADR-0002](../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md)
 - **Nota completa no repositório:** `docs/SINCRONIZACAO_CLIENTE_20261114.md`
+
+## 2026-11-26 (pablo-rodrigues1 / Claude Opus 5.5)
+- **Feito:** UI inteira no CEF do Skyrim Platform; Meridian UI, Prisma UI e o mod de compatibilidade removidos dos perfis Qualidade e Performance ([ADR-0037](../../03-decisoes/ADR-0037-ui-no-cef-do-skyrim-platform-sem-meridian-e-prisma.md), detalhes em [migracao-cef-skyrim-platform.md](migracao-cef-skyrim-platform.md)).
+  - Bridge sem API do Meridian: camada `Host` sobre o IPC do SP; views viram iframes da página do SP; TweenMenu redirecionado como I/Q/P.
+  - Client: `AetheriusHostService`, `hostFocus.ts` no lugar do `MeridianUI_FocusMenu`; SP original (v0.8.1) com `BackendName=tilted`.
+  - MO2: mod novo `AETHERIUS - SKYRIM PLATFORM CEF`; `AETHERIUS - UI CORE` de ~600 MB para 15 MB.
+  - Servidor local montado e testado (boot sem falhas) em `servidor-local/`.
+  - Investigação do inventário do SkyUI com autoridade do servidor: [investigacao-inventario-skyui.md](investigacao-inventario-skyui.md).
+- **Testes:** tsc limpo; testes Node 181/188 (7 falhas pré-existentes); DLL compilada. Nada testado em jogo.
+- **Próximo:** testar em jogo nos dois perfis (login, chargen, TAB, inventário, mapa, voz); publicar releases de client/mods/servidor; assinar DLLs.
+- **Bloqueios:** nenhum. Responsável do sistema (mercurius17) deve revisar; o dev pediu execução sem confirmações.
+- **Perdas conhecidas:** prévia 3D de itens e atalho/navegação de gamepad do Meridian.

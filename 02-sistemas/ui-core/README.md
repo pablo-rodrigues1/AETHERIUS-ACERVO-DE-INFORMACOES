@@ -3,18 +3,18 @@ titulo: Aetherius UI Core
 tipo: sistema
 status: ativo
 fase: em-desenvolvimento
-responsaveis: [mercurius17]
+responsaveis: [mercurius17, pablo-rodrigues1]
 repositorio: https://github.com/pablo-rodrigues1/AetheriusUI_Core
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-20
-tags: [interface, meridian, cef, skse, chargen, inventario]
+atualizado: 2026-11-26
+tags: [interface, skyrim-platform, cef, skse, chargen, inventario]
 relacionados: [diario.md, ../gameplay-core/README.md, ../../03-decisoes/ADR-0002-sincronizacao-dos-cores-com-os-repositorios-oficiais.md, ../../05-processos/sincronizacao-dos-cores.md]
 ---
 
 # Aetherius UI Core
 
 ## Resumo
-Interface modular do Aetherius sobre o MeridianUI (CEF dentro do Skyrim): shell com radial TAB, criação de personagem, inventário/feitiços/mapa e uma bridge SKSE em C++. Roda dentro do cliente oficial como cópia em `client/ui-core`; este repositório é a fonte do framework e recebe de volta as mudanças feitas no cliente.
+Interface modular do Aetherius sobre o CEF do Skyrim Platform (desde 26/11/2026; antes MeridianUI, ver ADR-0037): shell com radial TAB, criação de personagem, inventário/feitiços/mapa e uma bridge SKSE em C++. Roda dentro do cliente oficial como cópia em `client/ui-core`; este repositório é a fonte do framework e recebe de volta as mudanças feitas no cliente.
 
 ## Onde está o código
 - Repositório: https://github.com/pablo-rodrigues1/AetheriusUI_Core (branch `main`)

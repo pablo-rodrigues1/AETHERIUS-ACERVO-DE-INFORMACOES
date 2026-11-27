@@ -25,7 +25,10 @@
 - `02-sistemas/profissoes/refino-e-encantamento.md` — `refinement-system` (Tiers I–III por instância, risco/regressão) e `enchantment-system` (fora da release Alpha).
 - `02-sistemas/profissoes/housecarl-e-persistencia.md` — Housecarl/`StableFormKey`, política de balanceamento configurável, UI Core e migrations `0013`/`0014`.
 - `02-sistemas/ui-core/README.md` — Aetherius UI Core: interface Meridian/CEF, bridge SKSE, mapeamento de pastas cliente↔repo.
-- `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114).
+- `02-sistemas/ui-core/diario.md` — Diário do UI Core (sincronização SYNC-1114; migração para o CEF do SP em 26/11).
+- `02-sistemas/ui-core/migracao-cef-skyrim-platform.md` — UI no CEF do Skyrim Platform (iframes + IPC), arquivos alterados e servidor local.
+- `02-sistemas/ui-core/investigacao-inventario-skyui.md` — Inventário/feitiços do SkyUI com autoridade do servidor (viabilidade e plano).
+- `03-decisoes/ADR-0037-ui-no-cef-do-skyrim-platform-sem-meridian-e-prisma.md` — Remoção do Meridian UI e Prisma UI.
 - `02-sistemas/sobrenatural/README.md` — Sobrenatural: maldições (vampiro, lobisomem, bruxa), setagem pelo painel, keyword no servidor, 6 estágios até 2M XP, UI.
 - `02-sistemas/sobrenatural/funcionamento.md` — Como o sistema funciona (técnico e conceitual), base e funcionalidades validadas em jogo.
 - `02-sistemas/sobrenatural/entrega-21-11-integracao-oficial.md` — Guia de integração da entrega definitiva de 21/11.
