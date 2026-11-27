@@ -65,3 +65,14 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
 - **Próximo:** testar em jogo nos dois perfis (login, chargen, TAB, inventário, mapa, voz); publicar releases de client/mods/servidor; assinar DLLs.
 - **Bloqueios:** nenhum. Responsável do sistema (mercurius17) deve revisar; o dev pediu execução sem confirmações.
 - **Perdas conhecidas:** prévia 3D de itens e atalho/navegação de gamepad do Meridian.
+
+## 2026-11-27 (pablo-rodrigues1 / Claude Opus 5.5)
+- **Corrigido:** mouse girando a câmera com a UI aberta.
+  - O hook de DirectInput do Skyrim Platform só zera os botões do mouse; a bridge agora desliga câmera, movimento e combate no ControlMap enquanto uma view tem o foco.
+  - TAB/I/P/Q saíram do controlmap do jogo e a bridge as escuta direto. O redirecionamento do TweenMenu falhava com o Skyrim Souls: o menu continuava no `menuStack` e a UI não abria por cima.
+  - O `shell.js` não usa mais `focus`/`blur` da janela quando roda em iframe.
+- **Feito:** design novo.
+  - Shell sem radial: barra lateral com todos os menus e abertura direta no último usado; TAB/ESC fecham.
+  - `theme.css` carregado por último em todas as views, e `page-theme.css` na página do SP (login, avisos, HUD, painel da Staff, residências). Visual sem molduras: seleção por realce de fundo, abas sublinhadas, botões fantasma.
+- **Testes:** testes Node 181/188 (7 já falhavam antes); shell renderizado no Chrome headless. Os módulos não foram vistos com dados reais; o teste em jogo continua pendente.
+- **Bloqueios:** nenhum.
