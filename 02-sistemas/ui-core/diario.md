@@ -76,3 +76,13 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
   - `theme.css` carregado por último em todas as views, e `page-theme.css` na página do SP (login, avisos, HUD, painel da Staff, residências). Visual sem molduras: seleção por realce de fundo, abas sublinhadas, botões fantasma.
 - **Testes:** testes Node 181/188 (7 já falhavam antes); shell renderizado no Chrome headless. Os módulos não foram vistos com dados reais; o teste em jogo continua pendente.
 - **Bloqueios:** nenhum.
+
+## 2026-11-27 (pablo-rodrigues1 / Claude Opus 5.5) — menus nativos
+- **Decisão do dev:** inventário, feitiços, favoritos, mapa, baú e o TAB voltam a ser os menus nativos, com o skin Norden UI e o Tween Menu Overhaul. A UI Core (CEF) fica só para as telas sem equivalente nativo.
+- **Feito:**
+  - Bridge sem redirecionar InventoryMenu/FavoritesMenu/MagicMenu/TweenMenu; controlmap original restaurado.
+  - Baú pelo ContainerMenu vanilla (`remoteServer`); a pose da mochila do SkyInventory segue o InventoryMenu.
+  - Opções do TMO em `client/ui-core/tweenoptions/aetherius-*.json` (instaladas em `interface/tweenoptions/`), com `papyrus_event` = `AetheriusTween_<Módulo>`. A bridge abre o módulo: Personagem, Classe, Sobrenatural (categoria Personagem); Grupo, Profissões (Diário); Propriedades, Casas, Loja (Mundo). A barra lateral da UI Core saiu.
+  - Mods de UI (Norden UI, TMO, Infinity UI, Character Menu SE, Show Player In Menus, Compass Navigation Overhaul, Map Menu Extension, Scaleform Translation++) nos dois perfis. Plugins novos `Character Menu SE.esp` e `ShowPlayerInMenus.esp` entraram no fim da trava de slots, sem mudar slot nenhum. Servidor local sincronizado e security-manifest refeito.
+- **Autoridade do servidor:** os menus nativos usam os fluxos originais do SkyMP (DropItem/PutItem/TakeItem/EatItem conferidos pelo servidor), com os ganchos do gamemode por cima.
+- **Pendente:** teste em jogo; favoritos marcados no menu nativo não são salvos no servidor (os antigos da UI ainda são reaplicados no login); release do servidor com os 2 plugins novos.
