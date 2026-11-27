@@ -86,3 +86,8 @@ Registro cronológico do desenvolvimento, do mais recente para o mais antigo. En
   - Mods de UI (Norden UI, TMO, Infinity UI, Character Menu SE, Show Player In Menus, Compass Navigation Overhaul, Map Menu Extension, Scaleform Translation++) nos dois perfis. Plugins novos `Character Menu SE.esp` e `ShowPlayerInMenus.esp` entraram no fim da trava de slots, sem mudar slot nenhum. Servidor local sincronizado e security-manifest refeito.
 - **Autoridade do servidor:** os menus nativos usam os fluxos originais do SkyMP (DropItem/PutItem/TakeItem/EatItem conferidos pelo servidor), com os ganchos do gamemode por cima.
 - **Pendente:** teste em jogo; favoritos marcados no menu nativo não são salvos no servidor (os antigos da UI ainda são reaplicados no login); release do servidor com os 2 plugins novos.
+
+## 2026-11-27 (pablo-rodrigues1 / Claude Opus 5.5) — opções do Tween sem efeito
+- **Bug:** as opções próprias do Tween não abriam nada. O TMO mandava o evento, mas a bridge tentava abrir com o TweenMenu ainda no `menuStack`; as novas tentativas por `AddTask` recursivo se esgotavam no mesmo quadro.
+- **Correção:** espera em tempo real (50 ms × 60) até o jogo liberar, mais log de cada pedido recebido ("Tween pediu ..."). Não testado em jogo.
+- **Avaliado:** trocar as telas CEF por SWF (Scaleform). É possível, mas é reescrita completa de cada módulo em ActionScript 2 e um menu nativo (IMenu) na bridge por tela. Proposto começar com um piloto (Sobrenatural).
