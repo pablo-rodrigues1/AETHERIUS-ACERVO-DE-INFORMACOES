@@ -2,8 +2,8 @@
 titulo: Diário de Guildas (SkyGuilds)
 tipo: historico
 status: ativo
-responsaveis: [Melekyy]
-atualizado: 2026-11-24
+responsaveis: [Melekyy, kdu]
+atualizado: 2026-11-28
 tags: [diario, guildas, skyguilds]
 relacionados: [README.md]
 ---
@@ -13,6 +13,26 @@ relacionados: [README.md]
 ## Resumo
 
 Registro do desenvolvimento de Guildas por Melekyy, do mais recente para o mais antigo.
+
+## 2026-11-28, painéis de guilda passam para o kdu; novas regras faladas (kdu / Claude)
+
+- **Origem:** call gravada de 27/11/2026 entre Melekyy e kdu (49 min, transcrita). Nada implementado nesta entrada; é registro de decisão e escopo.
+- **Responsável:** Melekyy passa os **painéis de guilda** para o kdu e fica com Casas/Reis, banco e Lords (ver [Governos](../governos/diario.md)). Melekyy enviará o pacote dos painéis e as diretrizes escritas. Visual dos painéis: seguir o padrão do novo HUD ([UI Core](../ui-core/README.md)).
+- **Estado dito na call:** Magos pronto, mas alterado depois e **não testado** (vira modelo dos outros); Alquimistas e Companions começados; faltam Irmandade Sombria, Guilda dos Ladrões, Vigilantes de Stendarr e Dawnguard.
+- **Alquimistas:** painel só com membros, baú público + baú do líder e portas; precisa de "erguer ponte" (ponte elevadiça de Ghostshelf) e opção de trancar só o portão. O craft já é da profissão.
+- **Stendarr e Dawnguard (novos):** painel simples, como Alquimistas: membros, portas e baús.
+- **Irmandade Sombria:** porta só abre para membro com a frase (variação das falas da Mãe Noite). Sistema especial ainda **não decidido**.
+- **Guilda dos Ladrões (nova):**
+  - roubo de jogador com mãos erguidas (animação hoje bugada);
+  - item roubado deve sair com a **marca de roubado**; o roubo atual não marca;
+  - sede com porta só para membros e um **cofre**: membro deposita item roubado e recebe 10/5/2 septims conforme a qualidade do item (valores baixos de propósito);
+  - cargo **Contrabandista** (vários, nomeados por ID pelo líder): só líder e contrabandistas abrem o cofre, e o item sai **sem a marca** (lavagem).
+- **Magia (RP):** quem usa magia sem a insígnia de escola não é da guilda e pode ser preso; expulso dos Magos mantém classe e feitiços, mas perde a permissão.
+- **Sanções (novo):** as três guildas oficiais (Magos, Companions, Alquimistas) ganham "Definir sanções": valor semanal que cada uma das nove capitais paga. Sem pagamento, a guilda entra em greve (não paga corpo docente, não abre treinamento, fecha as portas).
+- **Carroça das sanções (novo):** o Responsável da Moeda inicia "Pagar sanções" no banco, uma vez por semana, com até 8 guardas de escolta por ID. A carroça sai do estábulo e cobra ao passar em cada sede; registro "X pagou sua sanção". Cerca de 3 min depois, os Ladrões recebem alerta de "carroça valiosa" e podem assaltá-la. A parte dos guardas está com Alduin e aguarda os painéis de guilda.
+- **Em aberto:** sistema da Irmandade; critério bom/médio/ruim do cofre; quem define a sanção e se a greve bloqueia funções no código; rota e objeto da carroça no SkyMP; dono do código de roubo atual.
+- **Próximo:** receber o pacote e as diretrizes do Melekyy, testar o painel dos Magos e montar os painéis que faltam.
+- **Bloqueios:** pacote dos painéis ainda não recebido.
 
 ## 2026-11-24, sedes e conversa ensaiadas; títulos de lore solicitados (Melekyy / Codex)
 

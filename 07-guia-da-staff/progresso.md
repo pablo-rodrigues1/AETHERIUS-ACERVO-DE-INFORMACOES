@@ -66,13 +66,15 @@ Conjuração revisada em **15/11/2026** no privado; a integração oficial perma
 | [Governos e castelos](../02-sistemas/governos/README.md) | 🟡 | Validar as portas dos nove castelos | 14/11/2026 |
 | [Expansão dos painéis](../02-sistemas/expansao-dos-paineis/README.md) | 📝 | Detalhar os contratos dos projetos, incluindo COMÉRCIO | 15/11/2026 |
 | [COMÉRCIO: empresas e profissões](economia/comercio-empresas-e-profissoes.md) | 📝 | Definir aquisição, salários e parâmetros do imposto mensal | 15/11/2026 |
-| [Guildas (SkyGuilds) — Melekyy](regras-de-roleplay/guildas.md) | 🟡 | R32 ensaiada: sedes, Skyforge e Mãe Noite; instalação em preparação; visual pelo dev | 24/11/2026 |
+| [Guildas (SkyGuilds) — Melekyy e kdu](regras-de-roleplay/guildas.md) | 🟡 | Painéis com o kdu: montar Ladrões, Stendarr, Dawnguard e sanções; testar os Magos | 28/11/2026 |
 | [Conjuração — Melekyy](classes/conjuracao.md) | 🟡 | Obter a base completa e testar a integração com dois jogadores no oficial | 15/11/2026 |
 
 ## Outros sistemas encontrados no código
 Ainda fora da lista oficial. Status a confirmar com os devs: chat de RP, voz por proximidade (VoIP), bancas de mercado, economia regional, refino de equipamentos, sistema de almas, cavalos, marcadores de mapa, zonas seguras.
 
 ## Últimas mudanças
+- **28/11/2026:** Guildas: os painéis passam para o kdu; Melekyy segue com Casas, Reis e Lords. Novidades combinadas: Guilda dos Ladrões com cofre e contrabandista, Vigilantes de Stendarr, Dawnguard e sanções semanais pagas pelas capitais, levadas numa carroça escoltada que os Ladrões podem assaltar. Nada disso está pronto ainda.
+- **28/11/2026:** Casas e Reis (Melekyy): Casa passa a 20 membros (guarda segue 60), IPTU a cada 15 dias, "Registrar cidadão" (compra de construção após 7 dias) e painel do Lorde sem guarda, com baú público e do Lorde.
 - **25/11/2026:** Correções do bug search de 24/11 revisadas: a correção do "traço de nórdico" tiraria habilidades da própria raça de vampiros e lobisomens. Corrigido antes de ir ao ar. Magias contínuas, bordas pretas e visão duplicada do vampiro também reforçadas. Falta testar em jogo.
 - **18/11/2026:** Profissões: documentação técnica completa do `AetheriusGameplayCore` (governador, coleta, artesanato, refino, encantamento fora da Alpha, balanceamento e migrations `0013`/`0014`) e guias simples da Staff publicados no Acervo.
 - **15/11/2026:** Cabelos e capas com física: 910 cabelos com mechas (franja, laterais, costas) e capas balançando, sem atravessar o corpo. Pergaminho que não ia para a mão corrigido. Ataque travando depois de trocar a aparência ainda em investigação.

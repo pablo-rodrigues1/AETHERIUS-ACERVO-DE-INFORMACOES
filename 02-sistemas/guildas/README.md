@@ -3,10 +3,10 @@ titulo: Guildas (SkyGuilds)
 tipo: sistema
 status: ativo
 fase: em-desenvolvimento
-responsaveis: [Melekyy]
+responsaveis: [Melekyy, kdu]
 repositorio: null
 depende_de: [../gameplay-core/README.md]
-atualizado: 2026-11-24
+atualizado: 2026-11-28
 tags: [guildas, skyguilds, magos, alquimistas, companions]
 relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ../ui-core/README.md, ../painel-adm/README.md, ../../03-decisoes/ADR-0021-bau-coletivo-do-colegio.md, ../../03-decisoes/ADR-0022-preparacao-skymp-das-guildas.md, ../../07-guia-da-staff/regras-de-roleplay/guildas.md]
 ---
@@ -22,6 +22,10 @@ relacionados: [escopo.md, integracao-skymp.md, validacao-skymp.md, diario.md, ..
 - [Evidências e limites da validação](validacao-skymp.md)
 - [Guia simples da Staff](../../07-guia-da-staff/regras-de-roleplay/guildas.md)
 - [Histórico de desenvolvimento](diario.md)
+
+## Painéis de guilda com o kdu — 28/11/2026
+
+Na call de 27/11, Melekyy passou os **painéis de guilda** para o **kdu** e ficou com Casas/Reis/Lords. Entram no escopo: Guilda dos Ladrões (cofre, Contrabandista, marca de roubado), Vigilantes de Stendarr, Dawnguard, "Definir sanções" nas três guildas oficiais e a carroça escoltada das sanções. Detalhes e perguntas em aberto no [diário](diario.md).
 
 ## R32 em desenvolvimento — 24/11/2026
 
