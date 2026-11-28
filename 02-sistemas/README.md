@@ -27,7 +27,7 @@ Cada sistema tem sua própria pasta (`kebab-case`):
 | [Ocarina (só música)](ocarina/README.md) | em-teste | kdu | pacote separado (mod + patch sobre aetherius-server v0.38) | 2026-11-14 |
 | [Sons nas telas](sons-das-telas/README.md) | em-teste | kdu | pacote separado (patch sobre aetherius-client v0.38) | 2026-11-20 |
 | [Túnica do Herói](tunica-do-heroi/README.md) | em-teste | kdu | pacote separado (mod com plugin próprio) | 2026-11-14 |
-| [Física de cabelos e capas](fisica-de-cabelos-e-capas/README.md) | em-teste | kdu | pacote separado (dois mods sem plugin) + Estúdio de Cabelos | 2026-11-25 |
+| [Física de cabelos e capas](fisica-de-cabelos-e-capas/README.md) | em-teste | kdu | pacote separado (dois mods sem plugin) + Estúdio de Cabelos v2.5 | 2026-11-27 |
 | [Sincronização de NPCs](sincronizacao-de-npcs/README.md) | em-desenvolvimento | kdu | aetherius-client / aetherius-server | 2026-11-14 |
 | [Loja e apoiadores](loja/README.md) | em-desenvolvimento | A confirmar | [aetherius-loja](https://github.com/eksmurf/aetherius-loja) | 2026-11-14 |
 | [Residências e IPTU](residencias/README.md) | em-desenvolvimento | A confirmar | [aetherius-residencias](https://github.com/eksmurf/aetherius-residencias) | 2026-11-14 |

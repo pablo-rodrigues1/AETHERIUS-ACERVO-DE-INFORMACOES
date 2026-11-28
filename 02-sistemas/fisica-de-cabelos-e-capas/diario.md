@@ -3,7 +3,7 @@ titulo: Diário da Física de cabelos e capas
 tipo: historico
 status: ativo
 responsaveis: [kdu]
-atualizado: 2026-11-25
+atualizado: 2026-11-27
 tags: [diario, modpack, fisica]
 relacionados: [README.md]
 ---
@@ -12,6 +12,15 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
+
+## 2026-11-27, noite: Estúdio de Cabelos v2.5, retorno da YuYu (kdu / Claude Opus 5.5)
+- **Retorno da YuYu (27/11):** algumas camadas não se fundiam e o programa dizia que era por o cabelo ser curto; o olho do Mudzin ficava estranho; a tesoura cortava mas não respondia bem aos cliques.
+- **Causa e correção, camadas:** cabelos do Skyrim antigo (LE, por exemplo KS Hairdo's) juntados com cabelos SE perdiam triângulos e pesos: a camada sumia e a física dava erro. A tela mostrava a mesma frase de "cabelo curto" para qualquer falha. Agora o juntar converte toda peça LE para SE antes (a ordem dos vértices é mantida, o .tri continua valendo). A mensagem diz o motivo real e, quando uma camada vem quebrada do mod (19 cabelos do modpack), o programa testa uma por uma e diz qual é.
+- **Causa e correção, Mudzin:** o remendo que cobre a pupila da ilustração tinha uma cor fixa e aparecia como um disco; a pupila saía cortada pela borda do olho; o olho meio fechado era cortado em linha reta. O remendo agora usa a cor lida da própria imagem, com a borda esfumada, e a pupila não sai do olho. O Mudzin do canto voltou a mexer olhos e boca (um estilo da tela escondia).
+- **Causa e correção, tesoura:** a área de clique do cabelo era calculada só na pose parada; com o boneco andando ou girando, todos os cliques eram ignorados (medido: 0 acertos antes, todos depois). Agora é recalculada a cada clique, o boneco para ao ligar a tesoura e clicar fora do cabelo mostra um aviso.
+- **Conferido fora do jogo:** juntar LE+SE nas duas ordens, prévia de 3 camadas mistas com física, camada quebrada apontada pelo nome, olhos em 4 expressões com o mouse em várias posições, tesoura com cada movimento; tudo pelo exe empacotado.
+- **Próximo:** a YuYu testar a v2.5; ver os cabelos em jogo.
+- **Bloqueios:** nenhum
 
 ## 2026-11-25, noite: pescoço, franja separada, partes com física e mods do Aetherius (kdu / Claude Opus 5.5)
 - **Pedido:** alguns cabelos ficam colados no pescoço e as franjas não ficam separadas; aproveitar ao máximo o que funciona nos cabelos SMP de referência; parte de física onde se liga e desliga partes; ler os mods do Aetherius (mod novo chegando, editar cabelo que a gente criou); poder pular as falas do Mudzin.
