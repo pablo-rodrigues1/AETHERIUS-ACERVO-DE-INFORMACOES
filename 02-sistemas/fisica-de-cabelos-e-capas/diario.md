@@ -3,7 +3,7 @@ titulo: Diário da Física de cabelos e capas
 tipo: historico
 status: ativo
 responsaveis: [kdu]
-atualizado: 2026-11-27
+atualizado: 2026-11-28
 tags: [diario, modpack, fisica]
 relacionados: [README.md]
 ---
@@ -12,6 +12,19 @@ relacionados: [README.md]
 
 ## Resumo
 Registro cronológico, do mais recente para o mais antigo.
+
+## 2026-11-28: Estúdio de Cabelos v2.6, relatório de testes da YuYu e cor dos acessórios (kdu / Claude Opus 5.5)
+- **Pedidos:** relatório de testes da YuYu (v2.4); na exportação vieram 7 dos 13 cabelos e eles sumiam de "Meus cabelos"; o kdu pediu cor nos acessórios e viu o Mudzin "no modelo antigo".
+- **Cabelos sumindo:** exportar com nome repetido substituía o cabelo anterior sem avisar. O "Deixa com o Mudzin" sorteia nomes de listas curtas e o campo de nome fica preenchido entre um cabelo e outro. Agora ele pergunta se substitui ou salva como novo (sugere "Nome 2"); nomes diferentes que davam o mesmo código ganham número.
+- **Cor dos acessórios:** cores prontas (ouro, prata, bronze, ferro, vermelho, verde, azul, roxo, branco, rosa), cor livre, "Original" e intensidade. A textura é pintada na placa de vídeo (lê DXT e BC7) com uma conta que mantém o claro e escuro do original; o resultado vai para o mod como DDS de 32 bits com mipmaps, na pasta do próprio cabelo, e o modelo aponta para ele. A prévia mostra exatamente o que vai para o jogo.
+- **Raças (decisão):** os cabelos saíam só para Nord, Imperial, Breton e Redguard (lista HeadPartsHumansandVampires do Skyrim.esm). Agora a exportação tem "Raças que podem usar"; o padrão passou a ser todas menos Khajiit e Argoniano (HeadPartsAllRacesMinusBeast), e os cabelos antigos sem escolha também. Opções: só humanos, só elfos, só Orc, só Khajiit, só Argoniano.
+- **Deixa com o Mudzin:** o estilo pedido vale mais que o comprimento quando não existe cabelo com os dois (antes "cacheado longo" virava liso); pedido "longo" não leva mais corte da tesoura do clima; "curto" ou "médio" com cabelo maior é cortado. Acessório do sexo certo e, sem o tipo pedido, o mais parecido. O Mudzin diz o que não conseguiu cumprir.
+- **Outros:** biblioteca mostra "mostrando 300 de 1.234" com botão "Mostrar mais"; máximo de 12 camadas (30 duplicações travavam); o programa de física caía com acento no caminho (app em "Área de Trabalho": boneco não carregava, nada exportava) e agora lê os argumentos em Unicode.
+- **Mudzin no modelo antigo:** reproduzido. Se o servidor cai ou fica ocupado com a página aberta, a ilustração falha e o Mudzin trocava para o desenho antigo em SVG até fechar o programa. Agora ele tenta de novo até voltar e nunca troca depois de ter carregado uma vez (testado derrubando e subindo o servidor).
+- **Respondido à YuYu:** franja com pouco movimento depende do ajuste "Franja e mechas do rosto soltas" e precisa ser vista em jogo; cabelo criado à mão serve para todas as raças menos Khajiit e Argoniano (escolha na exportação).
+- **Conferido fora do jogo, pelo exe empacotado, numa pasta com acento:** exportar 3 vezes com o mesmo nome (substituir e salvar como novo), acessório vermelho na prévia e no DDS exportado, raças no .esp, Mudzin com o servidor caindo, receitas do Mudzin (cacheado longo com tiara, longo com coroa, trança curta com faixa).
+- **Próximo:** a YuYu testar a v2.6; ver em jogo os cabelos, a cor dos acessórios e as raças.
+- **Bloqueios:** nenhum
 
 ## 2026-11-27, noite: Estúdio de Cabelos v2.5, retorno da YuYu (kdu / Claude Opus 5.5)
 - **Retorno da YuYu (27/11):** algumas camadas não se fundiam e o programa dizia que era por o cabelo ser curto; o olho do Mudzin ficava estranho; a tesoura cortava mas não respondia bem aos cliques.
